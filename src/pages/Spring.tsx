@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout, LeftColumnLayout, SideBarLink } from "../components";
+import { GridLayout, SideBarLink, SideNavbar } from "../components";
 
 const Spring = () => {
   return (
     <GridLayout>
-      <LeftColumnLayout>
+      <SideNavbar>
         <SideBarLink pageName="Spring Home" internalLink="." />
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
         <SideBarLink pageName="JPA" internalLink="jpa" />
@@ -17,7 +17,7 @@ const Spring = () => {
         <SideBarLink pageName="Caching" internalLink="caching" />
         <SideBarLink pageName="Aop" internalLink="aop" />
         <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-      </LeftColumnLayout>
+      </SideNavbar>
       <article className="h-screen border-2 border-green-400">
         <Outlet />
       </article>

@@ -1,3 +1,5 @@
+// I use SideNavbar component instead
+
 const LeftColumnLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <article className="sticky top-[96px] max-h-[calc(100vh-6rem)] overflow-auto">

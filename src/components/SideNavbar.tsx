@@ -1,9 +1,12 @@
-
-
-const SideNavbar = () => {
+const SideNavbar = ({ children }: React.PropsWithChildren) => {
   return (
-    <div>SideNavbar</div>
-  )
-}
+    <article className="sticky top-[96px] max-h-[calc(100vh-6rem)] overflow-auto">
+      {/* Start gap divider   */}
+      <div className="h-3 bg-[#E7E9EB]"></div>
+      {/* End gap divider   */}
+      {children}
+    </article>
+  );
+};
 
-export default SideNavbar
+export default SideNavbar;
