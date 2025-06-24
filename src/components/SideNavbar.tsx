@@ -1,5 +1,9 @@
-const SideNavbar = () => {
-  return <div>side navbar ...</div>;
-};
 
-export default SideNavbar;
+
+const SideNavbar = () => {
+  return (
+    <div>SideNavbar</div>
+  )
+}
+
+export default SideNavbar
