@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  height: 29rem;
+  width: 100%;
+  background: linear-gradient(rgba(13, 111, 238, 0.774), rgba(71, 254, 132, 0.688)), url("./assets/banner.png");
+  background-position: center;
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  z-index: -1;
+}
+
+.css-developer {
+  background-image: url("./assets/developer.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
