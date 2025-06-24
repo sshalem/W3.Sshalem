@@ -1,0 +1,60 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainLayout } from "./components";
+import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, Python, ReactJS, Spring, SpringMicroServices, Sql } from "./pages";
+import { Aop, ApplicationProperties, Caching, ExceptionHandling, Jpa, OpenAI, Rest, SpringDoc, SpringHome, SpringSecurity, Swagger, TransactionManagement } from "./components/SpringComponents";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      errorElement: <Error />,
+      children: [
+        { index: true, element: <Home /> },
+        {
+          path: "spring",
+          element: <Spring />,
+          children: [
+            { index: true, element: <SpringHome /> },
+            { path: "application-properties", element: <ApplicationProperties /> },
+            { path: "jpa", element: <Jpa /> },
+            { path: "rest", element: <Rest /> },
+            { path: "spring-doc", element: <SpringDoc /> },
+            { path: "swagger", element: <Swagger /> },
+            { path: "open-AI", element: <OpenAI /> },
+            { path: "exception-handling", element: <ExceptionHandling /> },
+            { path: "transaction-management", element: <TransactionManagement /> },
+            { path: "caching", element: <Caching /> },
+            { path: "aop", element: <Aop /> },
+            { path: "spring-security", element: <SpringSecurity /> },
+          ],
+        },
+        { path: "micro-services", element: <SpringMicroServices /> },
+        { path: "reactJS", element: <ReactJS /> },
+        { path: "javascript", element: <JavaScript /> },
+        { path: "html_css", element: <HTML_CSS /> },
+        { path: "fullstack", element: <FullStack /> },
+        { path: "java", element: <Java /> },
+        { path: "sql", element: <Sql /> },
+        { path: "python", element: <Python /> },
+        { path: "devops", element: <DevOps /> },
+        { path: "git", element: <Git /> },
+      ],
+    },
+  ],
+  {
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  },
+);
+
+function App() {
+  return (
+    <div>
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
+    </div>
+  );
+}
+
+export default App;
