@@ -9,6 +9,7 @@ const Navbar = () => {
       <div className="mx-auto w-11/12">
         <nav className="flex flex-row">
           {links.map((subject, index) => {
+            // console.log(location);
             return (
               <NavLink to={`${subject}`} key={index} className={({ isActive }) => (isActive ? "bg-blue-600" : "")}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
