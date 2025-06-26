@@ -1,9 +1,11 @@
+import aboutImg from "../assets/header_banner.jpg";
+
 const AboutMe = () => {
   return (
-    <section className="about">
+    <section className="bg-white px-0 py-8">
       <div className="about__center">
         <article className="about-img">
-          <img src="./img/header-bcg.jpg" alt="about-img" className="about-img__photo" />
+          <img src={aboutImg} alt="about-img" className="about-img__photo" />
         </article>
         <article className="about-info">
           <div className="about-info__container">
