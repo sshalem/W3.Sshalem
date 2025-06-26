@@ -1,3 +1,5 @@
+import { AboutMe } from "../components";
+
 const Home = () => {
   return (
     <>
@@ -11,6 +13,7 @@ const Home = () => {
           <div className="self-center text-4xl">Full Stack Developer</div>
         </div>
       </div>
+      <AboutMe></AboutMe>
     </>
   );
 };
