@@ -3,6 +3,7 @@ import JavaHighlight from "../JavaHighlight";
 const ApplicationProperties = () => {
   return (
     <div>
+      <section className="mb-4 text-3xl capitalize text-zinc-500">H2 database configuration</section>
       <JavaHighlight javaCode={H2_properties} />
     </div>
   );
