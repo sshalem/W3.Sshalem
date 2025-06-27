@@ -3,7 +3,7 @@ import JavaHighlight from "../JavaHighlight";
 const ApplicationProperties = () => {
   return (
     <div>
-      <JavaHighlight javaCode={H2_properties}></JavaHighlight>
+      <JavaHighlight javaCode={H2_properties} />
     </div>
   );
 };
