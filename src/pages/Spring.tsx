@@ -19,7 +19,7 @@ const Spring = () => {
         <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
         <SideBarLink pageName="Logging" internalLink="logging" />
       </SideNavbar>
-      <article className="h-screen border-2 border-green-400">
+      <article className="h-screen">
         <Outlet />
       </article>
     </GridLayout>
