@@ -1,7 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, Python, ReactJS, Spring, SpringMicroServices, Sql } from "./pages";
-import { Aop, ApplicationProperties, Caching, ExceptionHandling, Jpa, OpenAI, Rest, SpringDoc, SpringHome, SpringSecurity, Swagger, TransactionManagement } from "./components/SpringComponents";
+import {
+  Aop,
+  ApplicationProperties,
+  Caching,
+  ExceptionHandling,
+  Jpa,
+  Logging,
+  OpenAI,
+  Rest,
+  SpringDoc,
+  SpringHome,
+  SpringSecurity,
+  Swagger,
+  TransactionManagement,
+} from "./components/SpringComponents";
 
 const router = createBrowserRouter(
   [
@@ -27,6 +41,7 @@ const router = createBrowserRouter(
             { path: "caching", element: <Caching /> },
             { path: "aop", element: <Aop /> },
             { path: "spring-security", element: <SpringSecurity /> },
+            { path: "logging", element: <Logging /> },
           ],
         },
         { path: "micro-services", element: <SpringMicroServices /> },

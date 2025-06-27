@@ -17,6 +17,7 @@ const Spring = () => {
         <SideBarLink pageName="Caching" internalLink="caching" />
         <SideBarLink pageName="Aop" internalLink="aop" />
         <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
+        <SideBarLink pageName="Logging" internalLink="logging" />
       </SideNavbar>
       <article className="h-screen border-2 border-green-400">
         <Outlet />
