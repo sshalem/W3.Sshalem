@@ -1,5 +1,5 @@
 const Title = ({ title }: { title: string }) => {
-  return <section></section>;
+  return <section>{title}</section>;
 };
 
 export default Title;

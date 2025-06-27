@@ -6,7 +6,7 @@ export { default as LeftColumnLayout } from "./LeftColumnLayout";
 export { default as SideBarLink } from "./SideBarLink";
 export { default as AboutMe } from "./AboutMe";
 export { default as Header } from "./Header";
-
+export { default as Title } from "./Title";
 // export { default as ApplicationProperties } from "./SpringComponents/ApplicationProperties";
 // export { default as SpringHome } from "./SpringComponents/SpringHome";
 // export { default as Jpa } from "./SpringComponents/Jpa";
