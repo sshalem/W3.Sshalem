@@ -3,7 +3,6 @@ import { MainLayout } from "./components";
 import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, Python, ReactJS, Spring, SpringMicroServices, Sql } from "./pages";
 import {
   Aop,
-  ApplicationProperties,
   Caching,
   ExceptionHandling,
   Jpa,
@@ -16,6 +15,8 @@ import {
   Swagger,
   TransactionManagement,
 } from "./components/SpringComponents";
+
+import { ApplicationProperties, H2, MySql, Postgresql } from "./components/SpringComponents/ApplicationProperties";
 
 const router = createBrowserRouter(
   [
@@ -30,7 +31,15 @@ const router = createBrowserRouter(
           element: <Spring />,
           children: [
             { index: true, element: <SpringHome /> },
-            { path: "application-properties", element: <ApplicationProperties /> },
+            {
+              path: "application-properties",
+              element: <ApplicationProperties />,
+              children: [
+                { path: "h2", element: <H2 /> },
+                { path: "postgresql", element: <Postgresql /> },
+                { path: "mysql", element: <MySql /> },
+              ],
+            },
             { path: "jpa", element: <Jpa /> },
             { path: "rest", element: <Rest /> },
             { path: "spring-doc", element: <SpringDoc /> },

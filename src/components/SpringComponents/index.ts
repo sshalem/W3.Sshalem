@@ -1,5 +1,4 @@
 export { default as SpringHome } from "./SpringHome";
-export { default as ApplicationProperties } from "./ApplicationProperties";
 export { default as Jpa } from "./Jpa";
 export { default as Rest } from "./Rest";
 export { default as SpringDoc } from "./SpringDoc";
