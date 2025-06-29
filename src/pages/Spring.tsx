@@ -9,8 +9,8 @@ const Spring = () => {
     <GridLayout>
       <SideNavbar>
         <SideBarLink pageName="Spring Home" internalLink="." />
-        <DropDownApplicationProperties></DropDownApplicationProperties>
-        <DropDownJpa></DropDownJpa>
+        <DropDownApplicationProperties />
+        <DropDownJpa />
 
         <SideBarLink pageName="Rest" internalLink="rest" />
         <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
@@ -31,3 +31,16 @@ const Spring = () => {
 };
 
 export default Spring;
+
+// {
+/* <SideBarLink pageName="Rest" internalLink="rest" />
+<SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
+<SideBarLink pageName="Swagger" internalLink="swagger" />
+<SideBarLink pageName="Open AI" internalLink="open-AI" />
+<SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
+<SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
+<SideBarLink pageName="Caching" internalLink="caching" />
+<SideBarLink pageName="Aop" internalLink="aop" />
+<SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
+<SideBarLink pageName="Logging" internalLink="logging" /> */
+// }
