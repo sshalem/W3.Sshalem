@@ -1,19 +1,20 @@
 import { useState } from "react";
-import SideDropdownLink from "./SideDropdownLink";
+import SideDropdownLink from "../SideDropdownLink";
+import SideBarLink from "../SideBarLink";
 
-const SideDropDown = () => {
-  const [openApList, setOpenApList] = useState<boolean>(false);
+const DropDownApplicationProperties = () => {
+  const [showApList, setShowApList] = useState<boolean>(false);
 
   const handleOpenList = () => {
-    setOpenApList(!openApList);
+    setShowApList(!showApList);
   };
 
   return (
     <section>
       <article onClick={handleOpenList}>
-        <SideDropdownLink pageName="Application properties" internalLink="application-properties" />
+        <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
-      {openApList && (
+      {showApList && (
         <>
           <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
           <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
@@ -24,4 +25,4 @@ const SideDropDown = () => {
   );
 };
 
-export default SideDropDown;
+export default DropDownApplicationProperties;

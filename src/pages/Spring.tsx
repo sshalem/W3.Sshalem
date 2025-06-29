@@ -1,33 +1,17 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink, SideDropdownLink, SideNavbar } from "../components";
-import { useState } from "react";
+import { GridLayout, SideBarLink, SideNavbar } from "../components";
+import { DropDownApplicationProperties, DropDownJpa } from "../components/DropDown";
 
 const Spring = () => {
-  const [openList, setOpenList] = useState<boolean>(false);
-
-  const handleOpenList = () => {
-    setOpenList(!openList);
-  };
+  // const { openList, handleOpenList } = useAppContext();
 
   return (
     <GridLayout>
       <SideNavbar>
-        <button className="" onClick={handleOpenList}>
-          Application properties
-        </button>
-        <SideBarLink pageName="Application properties" internalLink="application-properties" />
-        {openList && (
-          <>
-            <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
-            <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
-            <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />
-          </>
-        )}
-
-        {/*  */}
-        {/*  */}
         <SideBarLink pageName="Spring Home" internalLink="." />
-        <SideBarLink pageName="JPA" internalLink="jpa" />
+        <DropDownApplicationProperties></DropDownApplicationProperties>
+        <DropDownJpa></DropDownJpa>
+
         <SideBarLink pageName="Rest" internalLink="rest" />
         <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
         <SideBarLink pageName="Swagger" internalLink="swagger" />

@@ -5,7 +5,6 @@ import {
   Aop,
   Caching,
   ExceptionHandling,
-  Jpa,
   Logging,
   OpenAI,
   Rest,
@@ -17,6 +16,7 @@ import {
 } from "./components/SpringComponents";
 
 import { ApplicationProperties, H2, MySql, Postgresql } from "./components/SpringComponents/ApplicationProperties";
+import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./components/SpringComponents/JPA";
 
 const router = createBrowserRouter(
   [
@@ -40,7 +40,14 @@ const router = createBrowserRouter(
                 { path: "mysql", element: <MySql /> },
               ],
             },
-            { path: "jpa", element: <Jpa /> },
+            {
+              path: "jpa",
+              element: <Jpa />,
+              children: [
+                { path: "one2many-bi-eager", element: <One2ManyBiEager /> },
+                { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
+              ],
+            },
             { path: "rest", element: <Rest /> },
             { path: "spring-doc", element: <SpringDoc /> },
             { path: "swagger", element: <Swagger /> },
