@@ -1,14 +1,14 @@
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import xml from "react-syntax-highlighter/dist/esm/languages/prism/xml-doc";
 import {
-  prism as XML_STYLE,
-  vs,
-  atomDark,
+  // prism as XML_STYLE,
+  // vs,
+  // atomDark,
   ghcolors,
-  coy,
-  oneLight,
-  base16AteliersulphurpoolLight,
-  synthwave84,
+  // coy,
+  // oneLight,
+  // base16AteliersulphurpoolLight,
+  // synthwave84,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import { prism as XML_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
