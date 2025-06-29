@@ -15,10 +15,10 @@ const DropDownJpa = () => {
         <SideBarLink pageName="JPA" internalLink="jpa" />
       </article>
       {showJpaList && (
-        <>
+        <div>
           <SideDropdownLink pageName="One2Many Bi Eager" internalLink="jpa/one2many-bi-eager" />
           <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="jpa/one2many-bi-lazy" />
-        </>
+        </div>
       )}
     </section>
   );
