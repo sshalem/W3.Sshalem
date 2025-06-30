@@ -3,7 +3,10 @@
 
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import properties from "react-syntax-highlighter/dist/esm/languages/prism/properties";
-import { prism as JAVA_STYLE, coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  prism as JAVA_STYLE,
+  // coy
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
