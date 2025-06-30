@@ -23,7 +23,10 @@ const Spring = () => {
         <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
         <SideBarLink pageName="Logging" internalLink="logging" />
       </SideNavbar>
-      <article className="mt-4 h-screen">
+      {/* I use here max-h-full (And not , 100vh or 100%), so the my SideNavbar won't scroll with the outlet content
+       */}
+      {/* there is another solution , to set the Sidebar as fixed  */}
+      <article className="mt-4 max-h-full">
         <Outlet />
       </article>
     </GridLayout>
