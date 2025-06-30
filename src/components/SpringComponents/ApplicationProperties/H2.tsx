@@ -2,20 +2,24 @@ import { ApplicationPropertiesHighlight, XmlHighlight } from "../../Highlight";
 
 const H2 = () => {
   return (
-    <section className="">
+    <section>
       {/*       
-      <article className="my-2">
-        <div className="mb-8 text-2xl text-black underline">H2 Databse basic config </div>
-        <JavaHighlight javaCode={h2} />
-      </article> 
+      <article className="my-5">
+        <div className="mb-8 inline-block rounded-md bg-sky-600 p-2 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
+        <ApplicationPropertiesHighlight propertiesCode={h2} />
+      </article>
       */}
       <article className="my-5">
-        <div className="mb-8 text-2xl text-black underline">H2 Databse basic config </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
+          H2 Databse basic config{" "}
+        </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       {/*  */}
       <article className="my-5">
-        <div className="mb-8 text-2xl text-black underline">H2 DBeaver </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
+          H2 DBeaver{" "}
+        </div>
         <div>links for H2 DBeaver config</div>
         <ul className="list-disc pl-8">
           <li>
@@ -38,19 +42,10 @@ const H2 = () => {
       </article>
       {/*  */}
       <article className="my-2">
-        <div className="mb-8 text-2xl text-black underline">XML code </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">XML code </div>
         <XmlHighlight xmlCode={xmlCode} />
       </article>
 
-      <article className="my-2">
-        <div className="mb-8 text-2xl text-black underline">XML code </div>
-        <XmlHighlight xmlCode={xmlCode} />
-      </article>
-
-      <article className="my-2">
-        <div className="mb-8 text-2xl text-black underline">XML code </div>
-        <XmlHighlight xmlCode={xmlCode} />
-      </article>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
