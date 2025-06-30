@@ -3,10 +3,7 @@
 
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import properties from "react-syntax-highlighter/dist/esm/languages/prism/properties";
-import {
-  prism as JAVA_STYLE,
-  // coy
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { prism as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
@@ -15,7 +12,7 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
     <div>
       <PrismLightSyntaxHighlighter
         language="properties"
-        style={JAVA_STYLE}
+        style={PROPERTIES_STYLE}
         showLineNumbers={true}
         customStyle={{
           fontSize: "0.89rem",

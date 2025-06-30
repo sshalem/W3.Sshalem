@@ -41,6 +41,16 @@ const H2 = () => {
         <div className="mb-8 text-2xl text-black underline">XML code </div>
         <XmlHighlight xmlCode={xmlCode} />
       </article>
+
+      <article className="my-2">
+        <div className="mb-8 text-2xl text-black underline">XML code </div>
+        <XmlHighlight xmlCode={xmlCode} />
+      </article>
+
+      <article className="my-2">
+        <div className="mb-8 text-2xl text-black underline">XML code </div>
+        <XmlHighlight xmlCode={xmlCode} />
+      </article>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

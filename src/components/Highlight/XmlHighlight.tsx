@@ -1,10 +1,10 @@
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import xml from "react-syntax-highlighter/dist/esm/languages/prism/xml-doc";
 import {
-  // prism as XML_STYLE,
+  prism as XML_STYLE,
   // vs,
   // ghcolors,
-  coy,
+  // coy,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import { prism as XML_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -15,7 +15,7 @@ const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
     <div>
       <PrismLightSyntaxHighlighter
         language="xml"
-        style={coy}
+        style={XML_STYLE}
         // showLineNumbers={true}
         // customStyle={{ fontSize: "0.85rem", backgroundColor: "#fff", outlineStyle: "solid", outlineWidth: "1px", outlineColor: "#dddddd" }}
         customStyle={{ fontSize: "0.88rem", outlineStyle: "solid", outlineWidth: "1px", outlineColor: "#dddddd" }}
