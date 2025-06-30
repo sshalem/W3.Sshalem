@@ -1,4 +1,4 @@
-import { ApplicationPropertiesHighlight, JavaHighlight, XmlHighlight } from "../../Highlight";
+import { ApplicationPropertiesHighlight, XmlHighlight } from "../../Highlight";
 
 const H2 = () => {
   return (
@@ -11,7 +11,7 @@ const H2 = () => {
       */}
       <article className="my-5">
         <div className="mb-8 text-2xl text-black underline">H2 Databse basic config </div>
-        <ApplicationPropertiesHighlight javaCode={h2} />
+        <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       {/*  */}
       <article className="my-5">

@@ -10,7 +10,7 @@ import {
 
 PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
-const ApplicationPropertiesHighlight = ({ javaCode }: { javaCode: string }) => {
+const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: string }) => {
   return (
     <div>
       <PrismLightSyntaxHighlighter
@@ -25,7 +25,7 @@ const ApplicationPropertiesHighlight = ({ javaCode }: { javaCode: string }) => {
           outlineColor: "#dddddd",
         }}
       >
-        {javaCode}
+        {propertiesCode}
       </PrismLightSyntaxHighlighter>
     </div>
   );
