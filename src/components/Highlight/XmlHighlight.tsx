@@ -17,8 +17,14 @@ const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
         language="xml"
         style={XML_STYLE}
         // showLineNumbers={true}
-        // customStyle={{ fontSize: "0.85rem", backgroundColor: "#fff", outlineStyle: "solid", outlineWidth: "1px", outlineColor: "#dddddd" }}
-        customStyle={{ fontSize: "0.88rem", outlineStyle: "solid", outlineWidth: "1px", outlineColor: "#dddddd" }}
+        customStyle={{
+          fontSize: "0.85rem",
+          backgroundColor: "#fbfbfb",
+          outlineStyle: "solid",
+          outlineWidth: "1px",
+          outlineColor: "#dddddd",
+          width: "60rem",
+        }}
       >
         {xmlCode}
       </PrismLightSyntaxHighlighter>

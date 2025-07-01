@@ -15,11 +15,13 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
         style={PROPERTIES_STYLE}
         showLineNumbers={true}
         customStyle={{
-          fontSize: "0.89rem",
-          // backgroundColor: "#fff",
+          fontSize: "0.85rem",
+          backgroundColor: "#f9f9f9",
           outlineStyle: "solid",
           outlineWidth: "1px",
           outlineColor: "#dddddd",
+          width: "60rem",
+          // height: "20rem",
         }}
       >
         {propertiesCode}
