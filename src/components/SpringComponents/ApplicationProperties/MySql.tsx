@@ -1,4 +1,4 @@
-import { ApplicationPropertiesHighlight } from "../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
   return (
@@ -11,12 +11,20 @@ const MySql = () => {
       */}
       <article className="my-5">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql dialect{" "}
+          MySql dialect
         </div>
-        <div>When using java version JDK8 use with mysql dialect :</div>
-        <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
-        <div>When using java version JDK8 use with mysql dialect :</div>
-        <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
+        <div className="my-4">
+          When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
+          <p className="my-4">
+            <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
+          </p>
+        </div>
+        <div className="my-8">
+          When using java version <Span>JDK11</Span> use with <Span>mysql</Span> dialect :
+          <p className="my-4">
+            <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
+          </p>
+        </div>
       </article>
 
       {/*  */}
@@ -39,21 +47,28 @@ const MySql = () => {
         {/*  */}
         {/*  */}
 
-        <div>Question : </div>
-        <div>What is difference between spring.jpa.show-sql=true & logging.level.org.hibernate.SQL=debug ?</div>
-        <div>Answer :</div>
-        <div>spring.jpa.show-sql=true - show the the logging w/o the the time stamp and the package name</div>
-        <div>logging.level.org.hibernate.SQL=debug - shows the logging as below: with the time stamp and the package name</div>
-        <ApplicationPropertiesHighlight
-          propertiesCode={`2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer`}
-        />
+        <article>
+          <div className="text-xl font-semibold">Question : </div>
+          <p className="ml-4">
+            What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
+          </p>
+        </article>
+        <article>
+          <div className="text-xl font-semibold">Answer :</div>
+          <p className="my-2 ml-4">
+            <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
+          </p>
+          <p className="my-2 ml-4">
+            <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging as below: with the time stamp and the package name
+          </p>
+
+          <p className="my-6 ml-4">
+            <Span> 2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer</Span>
+          </p>
+        </article>
 
         <div>Better to use the following :</div>
-        <ApplicationPropertiesHighlight
-          propertiesCode="logging.level.org.hibernate.SQL=DEBUG
-logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
-spring.jpa.properties.hibernate.format_sql=true"
-        />
+        <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
         {/*  */}
         {/*  */}
         <div className="my-8 inline-block rounded-md bg-sky-400 px-2 py-1 text-xl font-semibold capitalize tracking-wider text-white">
@@ -218,3 +233,7 @@ server.error.include-exception=true
 server.error.include-message=always
 server.error.include-stacktrace=never
 server.error.whitelabel.enabled=true`;
+
+const propertiesCode = `logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+spring.jpa.properties.hibernate.format_sql=true`;
