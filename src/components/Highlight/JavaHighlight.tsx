@@ -16,7 +16,7 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
         showLineNumbers={true}
         customStyle={{
           fontSize: "0.85rem",
-          backgroundColor: "#f9f9f9",
+          backgroundColor: "#fbfbfb",
           outlineStyle: "solid",
           outlineWidth: "1px",
           outlineColor: "#dddddd",

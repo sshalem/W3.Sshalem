@@ -1,15 +1,43 @@
+import { useState } from "react";
 import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
+  const [content, setContent] = useState<boolean>(false);
+
+  const handleShowContent = () => {
+    setContent(!content);
+  };
+
   return (
     <section>
+      <article className="select-none">
+        <div className={`${content ? `w-2/5` : `w-56`} bg-[#f9f9f9] p-2 capitalize`}>
+          <span className="mx-2 font-semibold">contents</span>
+          <span className="font-extralight text-red-400" onClick={handleShowContent}>
+            [{content ? "hide" : "show"}]
+          </span>
+        </div>
+        <ul className="text-sm capitalize text-red-400">
+          <li>
+            <a href="#mysql_dialect">mysql dialect</a>
+          </li>
+          <li>
+            <a href="#mysql_basic_config">mysql basic config</a>
+          </li>
+          <li>
+            <a href="#MySql_comprehansive_properties_config">MySql comprehansive properties config</a>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </article>
       {/*       
       <article className="my-5">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
-      <article className="my-5">
+      <article className="my-5" id="mysql_dialect">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql dialect
         </div>
@@ -30,7 +58,7 @@ const MySql = () => {
       {/*  */}
       {/*  */}
 
-      <article className="my-5">
+      <article className="my-5" id="mysql_basic_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql basic config
         </div>
@@ -79,9 +107,9 @@ const MySql = () => {
 
       {/*  */}
       {/*  */}
-      <article className="my-5">
+      <article className="my-5" id="MySql_comprehansive_properties_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql comprehansive properties config{" "}
+          MySql comprehansive properties config
         </div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
       </article>
