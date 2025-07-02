@@ -10,25 +10,30 @@ const MySql = () => {
 
   return (
     <section>
-      <article className="select-none">
-        <div className={`${content ? `w-2/5` : `w-56`} bg-[#f9f9f9] p-2 capitalize`}>
-          <span className="mx-2 font-semibold">contents</span>
-          <span className="font-extralight text-red-400" onClick={handleShowContent}>
-            [{content ? "hide" : "show"}]
+      <article className="fixed right-2 top-28 mr-2 select-none">
+        <div className={`${content ? `right-8 w-[100%]` : `w-[9rem]`} mb-2 rounded-md bg-[#E7E9EB] px-2 py-2 capitalize`}>
+          <span className="ml-2 font-semibold">contents </span>
+          <span className="cursor-pointer text-sm text-red-400" onClick={handleShowContent}>
+            [{content ? " hide " : " show "}]
           </span>
         </div>
-        <ul className="text-sm capitalize text-red-400">
+
+        <ul className={`text-sm capitalize text-red-400 ${content ? `h-[5rem]` : `h-0 w-[0rem]`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
           <li>
-            <a href="#mysql_dialect">mysql dialect</a>
+            <a href="#mysql_dialect" className="hover:underline">
+              mysql dialect
+            </a>
           </li>
           <li>
-            <a href="#mysql_basic_config">mysql basic config</a>
+            <a href="#mysql_basic_config" className="hover:underline">
+              mysql basic config
+            </a>
           </li>
           <li>
-            <a href="#MySql_comprehansive_properties_config">MySql comprehansive properties config</a>
+            <a href="#MySql_comprehansive_properties_config" className="hover:underline">
+              MySql comprehansive properties config
+            </a>
           </li>
-          <li></li>
-          <li></li>
         </ul>
       </article>
       {/*       
@@ -38,9 +43,7 @@ const MySql = () => {
       </article>
       */}
       <article className="my-5 scroll-mt-[7rem]" id="mysql_dialect">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql dialect
-        </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql dialect</div>
         <div className="my-4">
           When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
           <p className="my-4">
@@ -59,9 +62,7 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[7rem]" id="mysql_basic_config">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql basic config
-        </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql basic config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
       </article>
 
@@ -69,9 +70,7 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[7rem]">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql detailes config
-        </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql detailes config</div>
         {/*  */}
         {/*  */}
 
@@ -100,18 +99,14 @@ const MySql = () => {
         {/*  */}
         {/*  */}
 
-        <div className="my-8 inline-block rounded-md bg-sky-400 px-2 py-1 text-xl font-semibold capitalize tracking-wider text-white">
-          MySql detailes config
-        </div>
+        <div className="my-8 inline-block rounded-md bg-sky-400 px-2 py-1 text-xl font-semibold capitalize tracking-wider text-white">MySql detailes config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
       </article>
 
       {/*  */}
       {/*  */}
       <article className="my-5 scroll-mt-[7rem]" id="MySql_comprehansive_properties_config">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
-          MySql comprehansive properties config
-        </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql comprehansive properties config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
       </article>
       {/*  */}
