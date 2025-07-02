@@ -8,6 +8,34 @@ const MySql = () => {
     setContent(!content);
   };
 
+  const handleAnchor = (e) => {
+    console.log(e);
+  };
+
+  // // select links
+  // const scrollLinks = document.querySelectorAll(".scroll-link");
+  // scrollLinks.forEach((link) => {
+  //   link.addEventListener("click", (e) => {
+  //     // prevent default
+  //     e.preventDefault();
+  //     links.classList.remove("show-links");
+
+  //     const id = e.target.getAttribute("href").slice(1);
+  //     const element = document.getElementById(id);
+
+  //     // 62 -is the navbar top offset,
+  //     // when I click on a link on navbar , I want to get to Section - the navbar height
+  //     let position = element.offsetTop - 62;
+
+  //     window.scrollTo({
+  //       left: 0,
+  //       // top: element.offsetTop,
+  //       top: position,
+  //       behavior: "smooth",
+  //     });
+  //   });
+  // });
+
   return (
     <section>
       <article className="select-none">
@@ -24,7 +52,7 @@ const MySql = () => {
           <li>
             <a href="#mysql_basic_config">mysql basic config</a>
           </li>
-          <li>
+          <li onClick={handleAnchor}>
             <a href="#MySql_comprehansive_properties_config">MySql comprehansive properties config</a>
           </li>
           <li></li>
@@ -43,15 +71,15 @@ const MySql = () => {
         </div>
         <div className="my-4">
           When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
-          <p className="my-4">
+          <div className="my-4">
             <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
-          </p>
+          </div>
         </div>
         <div className="my-8">
           When using java version <Span>JDK11</Span> use with <Span>mysql</Span> dialect :
-          <p className="my-4">
+          <div className="my-4">
             <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
-          </p>
+          </div>
         </div>
       </article>
 
