@@ -10,7 +10,7 @@ const MySql = () => {
 
   return (
     <section>
-      <article className="fixed right-32 top-28 mr-2 select-none">
+      <article className="sm:hidden xl:fixed xl:right-32 xl:top-28 xl:mr-2 xl:block xl:select-none">
         <div className="mb-2 w-[100%] rounded-md bg-gray-800 px-2 py-2 text-center capitalize">
           <span className="ml-2 font-semibold tracking-wider text-white">contents </span>
           <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-sm`} onClick={handleShowContent}>
