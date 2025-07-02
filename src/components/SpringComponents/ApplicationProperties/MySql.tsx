@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
   const [content, setContent] = useState<boolean>(false);
@@ -8,45 +8,16 @@ const MySql = () => {
     setContent(!content);
   };
 
-  const handleAnchor = (e) => {
-    console.log(e);
-  };
-
-  // // select links
-  // const scrollLinks = document.querySelectorAll(".scroll-link");
-  // scrollLinks.forEach((link) => {
-  //   link.addEventListener("click", (e) => {
-  //     // prevent default
-  //     e.preventDefault();
-  //     links.classList.remove("show-links");
-
-  //     const id = e.target.getAttribute("href").slice(1);
-  //     const element = document.getElementById(id);
-
-  //     // 62 -is the navbar top offset,
-  //     // when I click on a link on navbar , I want to get to Section - the navbar height
-  //     let position = element.offsetTop - 62;
-
-  //     window.scrollTo({
-  //       left: 0,
-  //       // top: element.offsetTop,
-  //       top: position,
-  //       behavior: "smooth",
-  //     });
-  //   });
-  // });
-
   return (
     <section>
-      <article className="fixed right-2 top-28 mr-2 select-none">
-        <div className={`${content ? `right-8 w-[100%]` : `w-[9rem]`} mb-2 rounded-md bg-[#E7E9EB] px-2 py-2 capitalize`}>
-          <span className="ml-2 font-semibold">contents </span>
-          <span className="cursor-pointer text-sm text-red-400" onClick={handleShowContent}>
+      <article className="fixed right-32 top-28 mr-2 select-none">
+        <div className="mb-2 w-[100%] rounded-md bg-gray-800 px-2 py-2 text-center capitalize">
+          <span className="ml-2 font-semibold tracking-wider text-white">contents </span>
+          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-sm`} onClick={handleShowContent}>
             [{content ? " hide " : " show "}]
           </span>
         </div>
-
-        <ul className={`text-sm capitalize text-red-400 ${content ? `h-[5rem]` : `h-0 w-[0rem]`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
+        <ul className={`text-sm capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
           <li>
             <a href="#mysql_dialect" className="hover:underline">
               mysql dialect
@@ -57,21 +28,24 @@ const MySql = () => {
               mysql basic config
             </a>
           </li>
-<<<<<<< HEAD
-          <li onClick={handleAnchor}>
-            <a href="#MySql_comprehansive_properties_config">MySql comprehansive properties config</a>
-=======
+          <li>
+            <a href="#MySql_detailed_config" className="hover:underline">
+              mysql detailed config
+            </a>
+          </li>
           <li>
             <a href="#MySql_comprehansive_properties_config" className="hover:underline">
-              MySql comprehansive properties config
+              mysql comprehansive properties config
             </a>
->>>>>>> 1c768e2497d19e7f2eb16b78b3fb081e37f66e2c
           </li>
+          <li></li>
+          <li></li>
         </ul>
       </article>
+
       {/*       
       <article className="my-5 scroll-mt-[7rem]">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
@@ -90,20 +64,16 @@ const MySql = () => {
           </div>
         </div>
       </article>
-
       {/*  */}
       {/*  */}
-
       <article className="my-5 scroll-mt-[7rem]" id="mysql_basic_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql basic config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
       </article>
-
       {/*  */}
       {/*  */}
-
-      <article className="my-5 scroll-mt-[7rem]">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql detailes config</div>
+      <article className="my-5 scroll-mt-[7rem]" id="MySql_detailed_config">
+        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
         {/*  */}
         {/*  */}
 
@@ -121,7 +91,6 @@ const MySql = () => {
           <p className="my-2 ml-4">
             <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging as below: with the time stamp and the package name
           </p>
-
           <p className="my-6 ml-4">
             <Span> 2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer</Span>
           </p>
@@ -129,118 +98,31 @@ const MySql = () => {
 
         <div>Better to use the following :</div>
         <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
-        {/*  */}
-        {/*  */}
 
-        <div className="my-8 inline-block rounded-md bg-sky-400 px-2 py-1 text-xl font-semibold capitalize tracking-wider text-white">MySql detailes config</div>
+        <div className="my-8">
+          <Span>application.properties</Span> with explaination
+        </div>
+
         <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
       </article>
 
       {/*  */}
       {/*  */}
+
       <article className="my-5 scroll-mt-[7rem]" id="MySql_comprehansive_properties_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql comprehansive properties config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
       </article>
+
       {/*  */}
       {/*  */}
 
-      <JavaHighlight javaCode={javaCode}></JavaHighlight>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
 export default MySql;
-
-const javaCode = `package com.bezkoder.spring.login.security.jwt;
-
-import java.security.Key;
-import java.util.Date;
-
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseCookie;
-import org.springframework.stereotype.Component;
-import org.springframework.web.util.WebUtils;
-
-import com.bezkoder.spring.login.security.services.UserDetailsImpl;
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
-
-@Component
-public class JwtUtils {
-  private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
-
-  @Value("$\{bezkoder.app.jwtSecret}")
-  private String jwtSecret;
-
-  @Value("$\{bezkoder.app.jwtExpirationMs}")
-  private int jwtExpirationMs;
-
-  @Value("$\{bezkoder.app.jwtCookieName}")
-  private String jwtCookie;
-
-  public String getJwtFromCookies(HttpServletRequest request) {
-    Cookie cookie = WebUtils.getCookie(request, jwtCookie);
-    if (cookie != null) {
-      return cookie.getValue();
-    } else {
-      return null;
-    }
-  }
-
-  public ResponseCookie generateJwtCookie(UserDetailsImpl userPrincipal) {
-    String jwt = generateTokenFromUsername(userPrincipal.getUsername());
-    ResponseCookie cookie = ResponseCookie.from(jwtCookie, jwt).path("/api").maxAge(24 * 60 * 60).httpOnly(true).build();
-    return cookie;
-  }
-
-  public ResponseCookie getCleanJwtCookie() {
-    ResponseCookie cookie = ResponseCookie.from(jwtCookie, null).path("/api").build();
-    return cookie;
-  }
-
-  public String getUserNameFromJwtToken(String token) {
-    return Jwts.parserBuilder().setSigningKey(key()).build()
-        .parseClaimsJws(token).getBody().getSubject();
-  }
-  
-  private Key key() {
-    return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
-  }
-
-  public boolean validateJwtToken(String authToken) {
-    try {
-      Jwts.parserBuilder().setSigningKey(key()).build().parse(authToken);
-      return true;
-    } catch (MalformedJwtException e) {
-      logger.error("Invalid JWT token: {}", e.getMessage());
-    } catch (ExpiredJwtException e) {
-      logger.error("JWT token is expired: {}", e.getMessage());
-    } catch (UnsupportedJwtException e) {
-      logger.error("JWT token is unsupported: {}", e.getMessage());
-    } catch (IllegalArgumentException e) {
-      logger.error("JWT claims string is empty: {}", e.getMessage());
-    }
-
-    return false;
-  }
-  
-  public String generateTokenFromUsername(String username) {   
-    return Jwts.builder()
-              .setSubject(username)
-              .setIssuedAt(new Date())
-              .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
-              .signWith(key(), SignatureAlgorithm.HS256)
-              .compact();
-  }
-}`;
 
 const mysql_jdk8 = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;
