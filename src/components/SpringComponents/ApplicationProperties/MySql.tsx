@@ -32,12 +32,12 @@ const MySql = () => {
         </ul>
       </article>
       {/*       
-      <article className="my-5">
+      <article className="my-5 scroll-mt-[7rem]">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
-      <article className="my-5" id="mysql_dialect">
+      <article className="my-5 scroll-mt-[7rem]" id="mysql_dialect">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql dialect
         </div>
@@ -58,7 +58,7 @@ const MySql = () => {
       {/*  */}
       {/*  */}
 
-      <article className="my-5" id="mysql_basic_config">
+      <article className="my-5 scroll-mt-[7rem]" id="mysql_basic_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql basic config
         </div>
@@ -68,20 +68,20 @@ const MySql = () => {
       {/*  */}
       {/*  */}
 
-      <article className="my-5">
+      <article className="my-5 scroll-mt-[7rem]">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql detailes config
         </div>
         {/*  */}
         {/*  */}
 
-        <article>
+        <div>
           <div className="text-xl font-semibold">Question : </div>
           <p className="ml-4">
             What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
           </p>
-        </article>
-        <article>
+        </div>
+        <div>
           <div className="text-xl font-semibold">Answer :</div>
           <p className="my-2 ml-4">
             <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
@@ -93,12 +93,13 @@ const MySql = () => {
           <p className="my-6 ml-4">
             <Span> 2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer</Span>
           </p>
-        </article>
+        </div>
 
         <div>Better to use the following :</div>
         <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
         {/*  */}
         {/*  */}
+
         <div className="my-8 inline-block rounded-md bg-sky-400 px-2 py-1 text-xl font-semibold capitalize tracking-wider text-white">
           MySql detailes config
         </div>
@@ -107,7 +108,7 @@ const MySql = () => {
 
       {/*  */}
       {/*  */}
-      <article className="my-5" id="MySql_comprehansive_properties_config">
+      <article className="my-5 scroll-mt-[7rem]" id="MySql_comprehansive_properties_config">
         <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">
           MySql comprehansive properties config
         </div>
