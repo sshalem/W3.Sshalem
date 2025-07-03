@@ -33,7 +33,7 @@ const Spring = () => {
       {/*  */}
       {/*  */}
       {/* <main className="mt-4 max-h-full"> */}
-      <main className="ml-64 mt-[90px] max-h-full min-w-[330px] border-r-[1px] border-solid border-[#f1f1f1] px-8 py-4 xl:w-3/4">
+      <main className="ml-64 mt-[50px] max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4">
         <Outlet />
       </main>
     </GridLayout>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ApplicationPropertiesHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
-  const [content, setContent] = useState<boolean>(false);
+  const [content, setContent] = useState<boolean>(true);
 
   const handleShowContent = () => {
     setContent(!content);
