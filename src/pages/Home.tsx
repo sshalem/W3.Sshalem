@@ -1,10 +1,11 @@
-import { AboutMe, Header } from "../components";
+import { AboutMe, Header, MyProjects } from "../components";
 
 const Home = () => {
   return (
-    <section>
-      <Header></Header>
-      <AboutMe></AboutMe>
+    <section className="">
+      <Header />
+      <AboutMe />
+      <MyProjects />
     </section>
   );
 };

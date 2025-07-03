@@ -5,7 +5,7 @@
 // Since I use GridLayout is a wrapper component
 // I want all children comnpnent to be able to be as child for it
 const GridLayout = ({ children }: React.PropsWithChildren) => {
-  return <section className="mx-auto grid w-11/12 grid-cols-[250px_auto] gap-4">{children}</section>;
+  return <section className="m-auto grid w-[1750px] grid-cols-[250px_auto] gap-4">{children}</section>;
 };
 
 export default GridLayout;
