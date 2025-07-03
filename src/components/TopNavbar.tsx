@@ -14,10 +14,10 @@ const TopNavbar = () => {
               </div>
             </div>
           </Link>
-          <a href="#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+          <a href="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
             about
           </a>
-          <a href="#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+          <a href="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
             MyProjects
           </a>
         </nav>
