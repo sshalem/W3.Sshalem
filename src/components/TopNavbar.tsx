@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DiVim } from "react-icons/di";
 import { SiStudyverse } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
 
