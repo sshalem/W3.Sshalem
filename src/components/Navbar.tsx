@@ -38,7 +38,7 @@ const Navbar = () => {
       }
 
       console.log(navRef.current.scrollLeft);
-      navRef.current.scrollLeft = navRef.current.scrollLeft + 120;
+      navRef.current.scrollLeft = navRef.current.scrollLeft + 150;
       console.log(navRef.current.scrollLeft);
     }
   };
@@ -47,7 +47,7 @@ const Navbar = () => {
     <div className="fixed top-14 h-[33px] w-full select-none bg-gray-800 uppercase tracking-wider text-white">
       <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {enableLeftScrolling && (
-          <button className="absolute left-0 top-0 h-[33px] w-5 bg-slate-400 px-1" onMouseDown={handleLeftScrollButton}>
+          <button className="absolute left-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500" onMouseDown={handleLeftScrollButton}>
             <FaAngleLeft />
           </button>
         )}
@@ -65,7 +65,7 @@ const Navbar = () => {
           })}
         </div>
 
-        <button className="absolute right-0 top-0 h-[33px] w-5 bg-slate-400 px-1" onMouseDown={handleRightScrollButton}>
+        <button className="absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500" onMouseDown={handleRightScrollButton}>
           <FaAngleRight />
         </button>
       </nav>
