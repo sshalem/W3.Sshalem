@@ -24,64 +24,8 @@ const Spring = () => {
         <SideBarLink pageName="Logging" internalLink="logging" />
         {/*  */}
         {/*  */}
-
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-        {/*  */}
-        {/*  */}
       </SideNavbar>
+
       {/* I use here max-h-full (And not , 100vh or 100%), so the my SideNavbar won't scroll with the outlet content */}
       {/* there is another solution , to set the Sidebar as fixed  */}
       {/*  */}
