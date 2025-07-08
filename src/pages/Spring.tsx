@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink, SideNavbar } from "../components";
 import { DropDownApplicationProperties, DropDownJpa } from "../components/DropDown";
+import { FaBars } from "react-icons/fa";
 
 const Spring = () => {
   // const { openList, handleOpenList } = useAppContext();
 
   return (
     <GridLayout>
+      <FaBars className="fixed left-6 top-16 z-50 bg-blue-950 text-white" />
       <SideNavbar>
         <SideBarLink pageName="Spring Home" internalLink="." />
         <DropDownApplicationProperties />
@@ -30,9 +32,12 @@ const Spring = () => {
       {/* there is another solution , to set the Sidebar as fixed  */}
       {/*  */}
       {/*  */}
+
+      {/* several options */}
       {/* <main className="mt-4 max-h-full"> */}
-      <main className="ml-64 max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1">
-        {/* <main className="sticky ml-64 mt-[50px] max-h-[500px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
+      {/* <main className="ml-64 max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1"> */}
+      <main className="ml-64 max-h-[650px] w-[1100px] min-w-[400px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1">
+        {/* <main className="ml-64 mt-[50px] max-h-[700px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
         <Outlet />
       </main>
     </GridLayout>
