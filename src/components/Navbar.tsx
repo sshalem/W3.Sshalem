@@ -47,7 +47,7 @@ const Navbar = () => {
     <div className="fixed top-14 h-[33px] w-full select-none bg-gray-800 uppercase tracking-wider text-white">
       <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {enableLeftScrolling && (
-          <button className="absolute left-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleLeftScrollButton}>
+          <button className="absolute left-0 top-0 h-[33px] w-5 bg-slate-400 px-1" onMouseDown={handleLeftScrollButton}>
             <FaAngleLeft />
           </button>
         )}
@@ -57,7 +57,7 @@ const Navbar = () => {
             return (
               <NavLink to={`${subject}`} key={index}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-                <div className={`${location.pathname === subject ? `bg-blue-600` : `hover:bg-slate-700`} inline-block h-full px-3`}>
+                <div className={`${location.pathname === subject ? `bg-blue-600` : `hover:bg-slate-700`} inline-block h-[33px] px-3`}>
                   <div className="inline-block align-sub">{subject.substring(1, 50)}</div>
                 </div>
               </NavLink>
@@ -65,7 +65,7 @@ const Navbar = () => {
           })}
         </div>
 
-        <button className="absolute right-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleRightScrollButton}>
+        <button className="absolute right-0 top-0 h-[33px] w-5 bg-slate-400 px-1" onMouseDown={handleRightScrollButton}>
           <FaAngleRight />
         </button>
       </nav>
