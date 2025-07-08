@@ -31,7 +31,7 @@ const Spring = () => {
       {/*  */}
       {/*  */}
       {/* <main className="mt-4 max-h-full"> */}
-      <main className="ml-64 mt-[50px] max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4">
+      <main className="ml-64 max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1">
         {/* <main className="sticky ml-64 mt-[50px] max-h-[500px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
         <Outlet />
       </main>
