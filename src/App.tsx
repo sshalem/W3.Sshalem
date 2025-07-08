@@ -48,7 +48,7 @@ const router = createBrowserRouter(
             { path: "logging", element: <Logging /> },
           ],
         },
-        { path: "micro-services", element: <SpringMicroServices /> },
+        { path: "microservices", element: <SpringMicroServices /> },
         { path: "reactJS", element: <ReactJS /> },
         { path: "javascript", element: <JavaScript /> },
         { path: "html_css", element: <HTML_CSS /> },

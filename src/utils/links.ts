@@ -5,7 +5,7 @@
 
 export const links: string[] = [
   "/spring",
-  "/micro-services",
+  "/microservices",
   "/reactJS",
   "/javascript",
   "/html_css",
