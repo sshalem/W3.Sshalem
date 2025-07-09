@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { SiStudyverse } from "react-icons/si";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TopNavbar = () => {
   const [showTopNavbar, setshowTopNavbar] = useState<boolean>(true);
 
-  const location = useLocation();
+  // const location = useLocation();
 
   const handleShowContent = () => {
     setshowTopNavbar(!showTopNavbar);

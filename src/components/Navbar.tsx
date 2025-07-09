@@ -5,7 +5,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [enableLeftScrolling, setEnableLeftScrolling] = useState<boolean>(false);
-  const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(false);
+  // const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(false);
 
   let location = useLocation();
 
