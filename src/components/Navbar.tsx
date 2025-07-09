@@ -39,10 +39,10 @@ const Navbar = () => {
   const startLeftScroll = () => {
     intervalRef.current = window.setInterval(function () {
       if (navRef.current !== null) {
-        // if (navRef.current.scrollLeft === 0) {
-        //   setEnableLeftScrolling(false);
-        // } else {
+        // if (navRef.current.scrollLeft !== 0) {
         //   setEnableLeftScrolling(true);
+        // } else {
+        //   setEnableLeftScrolling(false);
         // }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 10;
         console.log(navRef.current.scrollLeft);
@@ -71,7 +71,7 @@ const Navbar = () => {
             className="css-blur-bg-left absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500 sm:left-12 md:left-0"
             onMouseDown={startLeftScroll}
             onMouseUp={stopLeftScroll}
-            onMouseOut={stopLeftScroll}
+            onMouseLeave={stopLeftScroll}
           >
             <FaAngleLeft />
           </button>
@@ -93,7 +93,7 @@ const Navbar = () => {
             className="css-blur-bg-right absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500"
             onMouseDown={startRightScroll}
             onMouseUp={stopRightScroll}
-            onMouseOut={stopRightScroll}
+            onMouseLeave={stopRightScroll}
           >
             <FaAngleRight />
           </button>
@@ -104,71 +104,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// return (
-//   <section className="bg-gray-800 text-[14px]  ">
-//     <article className="relative mx-auto max-w-[1750px]">
-//       {/* <nav className="mx-auto flex h-[36px] max-w-[1750px] flex-row flex-wrap overflow-y-scroll"> */}
-//       {/* <nav className="mx-auto flex max-w-[1750px] overflow-x-auto"> */}
-
-//       {enableLeftScrolling && (
-//         <button className="absolute left-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleLeftScrollButton}>
-//           <FaAngleLeft />
-//         </button>
-//       )}
-
-//       <nav className="flex overflow-hidden" ref={navRef}>
-//         {links.map((subject, index) => {
-//           // console.log(location);
-//           return (
-//             <NavLink to={`${subject}`} key={index} className={({ isActive }) => (isActive ? "bg-blue-600" : "")}>
-//               {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-//               <div className={`${location.pathname === subject ? `` : `hover:bg-slate-700`} px-3 py-2`}>{subject.substring(1, 50)}</div>
-//             </NavLink>
-//           );
-//         })}
-//       </nav>
-//       <button className="absolute right-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleRightScrollButton}>
-//         <FaAngleRight />
-//       </button>
-//     </article>
-//   </section>
-// );
-// };
-
-// -----------------------------------------------------------------------
-// -----------------------------------------------------------------------
-// -----------------------------------------------------------------------
-// -----------------------------------------------------------------------
-// -----------------------------------------------------------------------
-
-// return (
-//   <section className="select-none bg-gray-800 text-[14px] uppercase tracking-wider text-white">
-//     <article className="relative mx-auto max-w-[1750px]">
-//       {/* <nav className="mx-auto flex h-[36px] max-w-[1750px] flex-row flex-wrap overflow-y-scroll"> */}
-//       {/* <nav className="mx-auto flex max-w-[1750px] overflow-x-auto"> */}
-
-//       {enableLeftScrolling && (
-//         <button className="absolute left-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleLeftScrollButton}>
-//           <FaAngleLeft />
-//         </button>
-//       )}
-
-//       <nav className="flex overflow-hidden" ref={navRef}>
-//         {links.map((subject, index) => {
-//           // console.log(location);
-//           return (
-//             <NavLink to={`${subject}`} key={index} className={({ isActive }) => (isActive ? "bg-blue-600" : "")}>
-//               {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-//               <div className={`${location.pathname === subject ? `` : `hover:bg-slate-700`} px-3 py-2`}>{subject.substring(1, 50)}</div>
-//             </NavLink>
-//           );
-//         })}
-//       </nav>
-//       <button className="absolute right-0 top-0 h-[37px] w-5 bg-slate-400 px-1" onMouseDown={handleRightScrollButton}>
-//         <FaAngleRight />
-//       </button>
-//     </article>
-//   </section>
-// );
-// };
