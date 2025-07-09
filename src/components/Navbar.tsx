@@ -30,7 +30,7 @@ const Navbar = () => {
   };
   // https://medium.com/@rexosariemen/implementing-horizontal-scroll-buttons-in-react-61e0bb431be
 
-  const handleRightScrollButton = () => {
+  const handleMoveRightScrollButton = () => {
     console.log(navRef);
 
     if (navRef.current !== null) {
@@ -43,6 +43,8 @@ const Navbar = () => {
       console.log(navRef.current.scrollLeft);
     }
   };
+
+  const handleStopRightScrollButton = () => {};
 
   return (
     <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-gray-800 text-[13px] uppercase tracking-wider text-white">
@@ -65,7 +67,12 @@ const Navbar = () => {
           })}
         </div>
         {/* Right Scroll button */}
-        <button className="absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500" onMouseDown={handleRightScrollButton}>
+        <button
+          className="absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500"
+          onMouseDown={handleMoveRightScrollButton}
+          onMouseUp={handleStopRightScrollButton}
+          onMouseLeave={handleStopRightScrollButton}
+        >
           <FaAngleRight />
         </button>
       </nav>

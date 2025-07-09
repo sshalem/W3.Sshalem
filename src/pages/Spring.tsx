@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const Spring = () => {
   // const { openList, handleOpenList } = useAppContext();
-  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
