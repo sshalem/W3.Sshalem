@@ -1,55 +1,56 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink, SideNavbar } from "../components";
+import { GridLayout, SideBarLink } from "../components";
 import { DropDownApplicationProperties, DropDownJpa } from "../components/DropDown";
 import { FaBars } from "react-icons/fa";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
 
 const Spring = () => {
   // const { openList, handleOpenList } = useAppContext();
-  const sideNavbar = useRef<HTMLDivElement>(null);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   const toggleSideNavbar = () => {
-    // sideNavbar.current.style.display = "block";
+    setShowSidebar(!showSidebar);
   };
+
+  const closeSidebar = () => {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      setShowSidebar(false);
+    } else {
+      setShowSidebar(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", closeSidebar);
+    return () => window.removeEventListener("resize", closeSidebar);
+  }, []);
 
   return (
     <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
-      <article className="fixed bottom-0 top-[89px] hidden w-64 overflow-auto bg-[#E7E9EB] sm:hidden md:block" ref={sideNavbar}>
-        <div className="relative h-full w-full">
-          <div className="h-3"></div>
-          <SideBarLink pageName="Spring Home" internalLink="." />
-          <DropDownApplicationProperties />
-          <DropDownJpa />
+      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
 
-          <SideBarLink pageName="Rest" internalLink="rest" />
-          <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-          <SideBarLink pageName="Swagger" internalLink="swagger" />
-          <SideBarLink pageName="Open AI" internalLink="open-AI" />
-          <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-          <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-          <SideBarLink pageName="Caching" internalLink="caching" />
-          <SideBarLink pageName="Aop" internalLink="aop" />
-          <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-          <SideBarLink pageName="Logging" internalLink="logging" />
-        </div>
-      </article>
-      {/* <SideNavbar>
-        <SideBarLink pageName="Spring Home" internalLink="." />
-        <DropDownApplicationProperties />
-        <DropDownJpa />
+      {showSidebar && (
+        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
+          <div className="relative h-full w-full">
+            <div className="h-3"></div>
+            <SideBarLink pageName="Spring Home" internalLink="." />
+            <DropDownApplicationProperties />
+            <DropDownJpa />
 
-        <SideBarLink pageName="Rest" internalLink="rest" />
-        <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
-        <SideBarLink pageName="Swagger" internalLink="swagger" />
-        <SideBarLink pageName="Open AI" internalLink="open-AI" />
-        <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
-        <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
-        <SideBarLink pageName="Caching" internalLink="caching" />
-        <SideBarLink pageName="Aop" internalLink="aop" />
-        <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-        <SideBarLink pageName="Logging" internalLink="logging" />
-      </SideNavbar> */}
+            <SideBarLink pageName="Rest" internalLink="rest" />
+            <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
+            <SideBarLink pageName="Swagger" internalLink="swagger" />
+            <SideBarLink pageName="Open AI" internalLink="open-AI" />
+            <SideBarLink pageName="Exception Handling" internalLink="exception-handling" />
+            <SideBarLink pageName="Transaction Management" internalLink="transaction-management" />
+            <SideBarLink pageName="Caching" internalLink="caching" />
+            <SideBarLink pageName="Aop" internalLink="aop" />
+            <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
+            <SideBarLink pageName="Logging" internalLink="logging" />
+          </div>
+        </article>
+      )}
 
       {/* I use here max-h-full (And not , 100vh or 100%), so the my SideNavbar won't scroll with the outlet content */}
       {/* there is another solution , to set the Sidebar as fixed  */}
