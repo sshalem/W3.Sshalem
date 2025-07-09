@@ -6,6 +6,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const Navbar = () => {
   const [enableLeftScrolling, setEnableLeftScrolling] = useState<boolean>(false);
   const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(false);
+
   let location = useLocation();
 
   const navRef = useRef<HTMLDivElement>(null);
@@ -52,7 +53,7 @@ const Navbar = () => {
             <FaAngleLeft />
           </button>
         )}
-        <div className="flex h-[33px] overflow-hidden" ref={navRef}>
+        <div className="flex h-[33px] overflow-hidden pl-14 sm:pl-14 md:pl-0 lg:pl-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             return (

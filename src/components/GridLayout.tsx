@@ -7,16 +7,16 @@
 const GridLayout = ({ children }: React.PropsWithChildren) => {
   // return <section className="m-auto grid w-[1750px] grid-cols-[250px_auto] gap-4">{children}</section>;
   // return <section className="m-auto grid grid-cols-[auto]">{children}</section>;
-  return (
-    <section className="m-auto max-w-[1750px]">
-      <section className="grid grid-cols-[auto]">{children}</section>
-    </section>
-  );
   // return (
   //   <section className="m-auto max-w-[1750px]">
-  //     <section className="flex flex-row">{children}</section>
+  //     <section className="grid grid-cols-[auto]">{children}</section>
   //   </section>
   // );
+  return (
+    <section className="m-auto max-w-[1750px]">
+      <section className="flex flex-row">{children}</section>
+    </section>
+  );
 };
 
 export default GridLayout;
