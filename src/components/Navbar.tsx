@@ -17,14 +17,15 @@ const Navbar = () => {
   const startRightScroll = () => {
     intervalRef.current = window.setInterval(function () {
       if (navRef.current !== null) {
-        if (navRef.current.scrollLeft === 0) {
+        if (navRef.current.scrollLeft !== 0) {
           setEnableRightScrolling(true);
         } else {
-          // setEnableRightScrolling(false);
           setEnableLeftScrolling(true);
+          stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 10;
         console.log(navRef.current.scrollLeft);
+        console.log(navRef.current.scrollWidth);
       }
     }, 10);
   };
@@ -39,11 +40,12 @@ const Navbar = () => {
   const startLeftScroll = () => {
     intervalRef.current = window.setInterval(function () {
       if (navRef.current !== null) {
-        // if (navRef.current.scrollLeft !== 0) {
-        //   setEnableLeftScrolling(true);
-        // } else {
-        //   setEnableLeftScrolling(false);
-        // }
+        if (navRef.current.scrollLeft !== 0) {
+          setEnableLeftScrolling(true);
+        } else {
+          setEnableLeftScrolling(false);
+          stopLeftScroll();
+        }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 10;
         console.log(navRef.current.scrollLeft);
       }
@@ -56,11 +58,6 @@ const Navbar = () => {
       intervalRef.current = null;
     }
   };
-
-  useEffect(() => {
-    if (navRef.current !== null) {
-    }
-  }, []);
 
   return (
     <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-gray-800 text-[13px] uppercase tracking-wider text-white">
