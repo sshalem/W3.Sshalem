@@ -9,7 +9,7 @@ const Spring = () => {
   const sideNavbar = useRef<HTMLDivElement>(null);
 
   const toggleSideNavbar = () => {
-    sideNavbar.current.style.display = "block";
+    // sideNavbar.current.style.display = "block";
   };
 
   return (
