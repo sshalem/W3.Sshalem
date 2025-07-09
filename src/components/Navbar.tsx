@@ -49,11 +49,11 @@ const Navbar = () => {
       <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
         {enableLeftScrolling && (
-          <button className="absolute left-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500" onMouseDown={handleLeftScrollButton}>
+          <button className="absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500 sm:left-12 md:left-0" onMouseDown={handleLeftScrollButton}>
             <FaAngleLeft />
           </button>
         )}
-        <div className="flex h-[33px] overflow-hidden pl-14 sm:pl-14 md:pl-0 lg:pl-0" ref={navRef}>
+        <div className="ml-14 flex h-[33px] overflow-hidden sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             return (
