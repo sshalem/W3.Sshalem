@@ -13,7 +13,7 @@ const Spring = () => {
   };
 
   const closeSidebar = () => {
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     if (window.innerWidth < 768) {
       setShowSidebar(false);
     } else {

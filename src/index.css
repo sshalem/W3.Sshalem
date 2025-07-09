@@ -34,6 +34,14 @@
   font-family: "Source Sans Pro Topnav", sans-serif;
 }
 
+.css-blur-bg-right {
+  background: linear-gradient(to left, #282a35 70%, transparent 100%);
+}
+
+.css-blur-bg-left {
+  background: linear-gradient(to right, #282a35 70%, transparent 100%);
+}
+
 .header {
   height: 33rem;
   width: 100%;

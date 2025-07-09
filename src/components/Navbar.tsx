@@ -1,57 +1,78 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { links } from "../utils/links";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+
+// https://medium.com/@rexosariemen/implementing-horizontal-scroll-buttons-in-react-61e0bb431be
 
 const Navbar = () => {
   const [enableLeftScrolling, setEnableLeftScrolling] = useState<boolean>(false);
-  // const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(false);
+  const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(true);
 
+  const intervalRef = useRef<number | null>(null);
   let location = useLocation();
 
-  const navRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
-  const handleLeftScrollButton = () => {
-    console.log(navRef);
-    // I must set a condition for `navRef.current !== null`
-    // otherwise I will get a type error by TypeScript
-
-    if (navRef.current !== null) {
-      if (navRef.current.scrollLeft === 0) {
-        setEnableLeftScrolling(false);
-      } else {
-        setEnableLeftScrolling(true);
+  const startRightScroll = () => {
+    intervalRef.current = window.setInterval(function () {
+      if (navRef.current !== null) {
+        if (navRef.current.scrollLeft === 0) {
+          setEnableRightScrolling(true);
+        } else {
+          // setEnableRightScrolling(false);
+          setEnableLeftScrolling(true);
+        }
+        navRef.current.scrollLeft = navRef.current.scrollLeft + 10;
+        console.log(navRef.current.scrollLeft);
       }
-
-      console.log(navRef.current.scrollLeft);
-      navRef.current.scrollLeft = navRef.current.scrollLeft - 120;
-      console.log(navRef.current.scrollLeft);
-    }
+    }, 10);
   };
-  // https://medium.com/@rexosariemen/implementing-horizontal-scroll-buttons-in-react-61e0bb431be
 
-  const handleMoveRightScrollButton = () => {
-    console.log(navRef);
-
-    if (navRef.current !== null) {
-      if (navRef.current.scrollLeft === 0) {
-        setEnableLeftScrolling(true);
-      }
-
-      console.log(navRef.current.scrollLeft);
-      navRef.current.scrollLeft = navRef.current.scrollLeft + 150;
-      console.log(navRef.current.scrollLeft);
+  const stopRightScroll = () => {
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
   };
 
-  const handleStopRightScrollButton = () => {};
+  const startLeftScroll = () => {
+    intervalRef.current = window.setInterval(function () {
+      if (navRef.current !== null) {
+        // if (navRef.current.scrollLeft === 0) {
+        //   setEnableLeftScrolling(false);
+        // } else {
+        //   setEnableLeftScrolling(true);
+        // }
+        navRef.current.scrollLeft = navRef.current.scrollLeft - 10;
+        console.log(navRef.current.scrollLeft);
+      }
+    }, 10);
+  };
+
+  const stopLeftScroll = () => {
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    if (navRef.current !== null) {
+    }
+  }, []);
 
   return (
     <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-gray-800 text-[13px] uppercase tracking-wider text-white">
       <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
         {enableLeftScrolling && (
-          <button className="absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500 sm:left-12 md:left-0" onMouseDown={handleLeftScrollButton}>
+          <button
+            className="css-blur-bg-left absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500 sm:left-12 md:left-0"
+            onMouseDown={startLeftScroll}
+            onMouseUp={stopLeftScroll}
+            onMouseOut={stopLeftScroll}
+          >
             <FaAngleLeft />
           </button>
         )}
@@ -67,14 +88,16 @@ const Navbar = () => {
           })}
         </div>
         {/* Right Scroll button */}
-        <button
-          className="absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500"
-          onMouseDown={handleMoveRightScrollButton}
-          onMouseUp={handleStopRightScrollButton}
-          onMouseLeave={handleStopRightScrollButton}
-        >
-          <FaAngleRight />
-        </button>
+        {enableRightScrolling && (
+          <button
+            className="css-blur-bg-right absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500"
+            onMouseDown={startRightScroll}
+            onMouseUp={stopRightScroll}
+            onMouseOut={stopRightScroll}
+          >
+            <FaAngleRight />
+          </button>
+        )}
       </nav>
     </div>
   );
