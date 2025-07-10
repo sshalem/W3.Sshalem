@@ -15,9 +15,13 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement | null>(null);
 
   const startRightScroll = () => {
-    intervalRef.current = window.setInterval(function () {
+    console.log(navRef);
+
+    intervalRef.current = setInterval(function () {
       if (navRef.current !== null) {
-        if (navRef.current.scrollLeft !== 633) {
+        // The maximum scrollLeft value is calculated by subtracting
+        // the (scrollWidth - clientWidth) = maxScrollLeft of the element.
+        if (navRef.current.scrollLeft !== navRef.current.scrollWidth - navRef.current.clientWidth) {
           setEnableRightScrolling(true);
           setEnableLeftScrolling(true);
         } else {
@@ -25,7 +29,6 @@ const Navbar = () => {
           stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 25;
-        console.log(navRef.current.scrollLeft);
       }
     }, 50);
   };
@@ -38,7 +41,7 @@ const Navbar = () => {
   };
 
   const startLeftScroll = () => {
-    intervalRef.current = window.setInterval(function () {
+    intervalRef.current = setInterval(function () {
       if (navRef.current !== null) {
         if (navRef.current.scrollLeft !== 0) {
           setEnableLeftScrolling(true);
@@ -48,7 +51,6 @@ const Navbar = () => {
           stopLeftScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 25;
-        console.log(navRef.current.scrollLeft);
       }
     }, 50);
   };
@@ -59,6 +61,16 @@ const Navbar = () => {
       intervalRef.current = null;
     }
   };
+
+  const determineScrollbar = () => {
+    console.log(window.innerWidth);
+    console.log(navRef);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", determineScrollbar);
+    return () => window.removeEventListener("resize", determineScrollbar);
+  }, []);
 
   return (
     <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-gray-800 text-[13px] uppercase tracking-wider text-white">
