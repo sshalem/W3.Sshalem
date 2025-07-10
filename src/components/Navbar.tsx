@@ -17,15 +17,15 @@ const Navbar = () => {
   const startRightScroll = () => {
     intervalRef.current = window.setInterval(function () {
       if (navRef.current !== null) {
-        if (navRef.current.scrollLeft !== 0) {
+        if (navRef.current.scrollLeft !== 633) {
           setEnableRightScrolling(true);
-        } else {
           setEnableLeftScrolling(true);
+        } else {
+          setEnableRightScrolling(false);
           stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 10;
         console.log(navRef.current.scrollLeft);
-        console.log(navRef.current.scrollWidth);
       }
     }, 10);
   };
@@ -42,6 +42,7 @@ const Navbar = () => {
       if (navRef.current !== null) {
         if (navRef.current.scrollLeft !== 0) {
           setEnableLeftScrolling(true);
+          setEnableRightScrolling(true);
         } else {
           setEnableLeftScrolling(false);
           stopLeftScroll();
