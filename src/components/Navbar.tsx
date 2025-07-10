@@ -24,10 +24,10 @@ const Navbar = () => {
           setEnableRightScrolling(false);
           stopRightScroll();
         }
-        navRef.current.scrollLeft = navRef.current.scrollLeft + 10;
+        navRef.current.scrollLeft = navRef.current.scrollLeft + 25;
         console.log(navRef.current.scrollLeft);
       }
-    }, 10);
+    }, 50);
   };
 
   const stopRightScroll = () => {
@@ -47,10 +47,10 @@ const Navbar = () => {
           setEnableLeftScrolling(false);
           stopLeftScroll();
         }
-        navRef.current.scrollLeft = navRef.current.scrollLeft - 10;
+        navRef.current.scrollLeft = navRef.current.scrollLeft - 25;
         console.log(navRef.current.scrollLeft);
       }
-    }, 10);
+    }, 50);
   };
 
   const stopLeftScroll = () => {
