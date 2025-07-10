@@ -7,16 +7,24 @@
     @apply bg-cover bg-fixed bg-center bg-no-repeat;
   }
 
-  .css-content-sm {
-    @apply sm:hidden;
+  .content-basic {
+    @apply fixed right-8 top-28 mr-2 block select-none;
   }
 
-  .css-content-md {
-    @apply md:fixed md:right-32 md:top-28 md:mr-2 md:block md:select-none;
+  .content-sm {
+    @apply sm:fixed sm:right-8 sm:top-28 sm:mr-2 sm:block sm:select-none;
   }
 
-  .css-content-xl {
-    @apply xl:fixed xl:right-32 xl:top-28 xl:mr-2 xl:block xl:select-none;
+  .content-md {
+    @apply md:fixed md:right-8 md:top-28 md:mr-2 md:block md:select-none;
+  }
+
+  .content-lg {
+    @apply lg:fixed lg:right-12 lg:top-28 lg:mr-2 lg:block lg:select-none;
+  }
+
+  .content-xl {
+    @apply xl:fixed xl:right-20 xl:top-28 xl:mr-2 xl:block xl:select-none;
   }
 }
 

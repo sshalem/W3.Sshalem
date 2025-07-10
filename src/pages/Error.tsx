@@ -11,7 +11,7 @@ const Error = () => {
 
   return (
     <section className="mx-auto max-w-[1750px]">
-      <article className="flex h-[90vh] max-h-[90vh] flex-col items-center justify-center border-2">
+      <article className="flex h-[90vh] max-h-[90vh] flex-col items-center justify-center">
         <div className="p-2 text-4xl">url is not familiar</div>
         <button
           className="text-3xl text-blue-400 underline"

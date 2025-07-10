@@ -10,14 +10,15 @@ const MySql = () => {
 
   return (
     <section>
-      <article className="css-content-sm css-content-md css-content-xl hidden">
-        <div className="mb-2 w-[100%] rounded-md bg-gray-800 px-2 py-2 text-center capitalize">
-          <span className="ml-2 font-semibold tracking-wider text-white">contents </span>
-          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-sm`} onClick={handleShowContent}>
+      {/* Start Contents */}
+      <article className="content-sm content-md content-lg content-xl content-basic">
+        <div className="mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize">
+          <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
+          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
             [{content ? " hide " : " show "}]
           </span>
         </div>
-        <ul className={`text-sm capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
+        <ul className={`px-1 text-xs capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}>
           <li>
             <a href="#mysql_dialect" className="hover:underline">
               mysql dialect
@@ -42,15 +43,16 @@ const MySql = () => {
           <li></li>
         </ul>
       </article>
+      {/* End Contents */}
 
       {/*       
-      <article className="my-5 scroll-mt-[7rem]">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">XXXX</div>
+      <article className="my-5 scroll-mt-[1.5rem]"> 
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
-      <article className="my-5 scroll-mt-[7rem]" id="mysql_dialect">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql dialect</div>
+      <article className="my-5 scroll-mt-[1.5rem]" id="mysql_dialect">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql dialect</div>
         <div className="my-4">
           When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
           <div className="my-4">
@@ -64,19 +66,20 @@ const MySql = () => {
           </div>
         </div>
       </article>
+
       {/*  */}
       {/*  */}
-      <article className="my-5 scroll-mt-[7rem]" id="mysql_basic_config">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql basic config</div>
+
+      <article className="my-5 scroll-mt-[1.5rem]" id="mysql_basic_config">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql basic config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
       </article>
-      {/*  */}
-      {/*  */}
-      <article className="my-5 scroll-mt-[7rem]" id="MySql_detailed_config">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
-        {/*  */}
-        {/*  */}
 
+      {/*  */}
+      {/*  */}
+
+      <article className="my-5 scroll-mt-[1.5rem]" id="MySql_detailed_config">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
         <div>
           <div className="text-xl font-semibold">Question : </div>
           <p className="ml-4">
@@ -100,7 +103,7 @@ const MySql = () => {
         <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
 
         <div className="my-8">
-          <Span>application.properties</Span> with explaination
+          here below , I give example of <Span>application.properties</Span> with explaination:
         </div>
 
         <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
@@ -109,8 +112,8 @@ const MySql = () => {
       {/*  */}
       {/*  */}
 
-      <article className="my-5 scroll-mt-[7rem]" id="MySql_comprehansive_properties_config">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">MySql comprehansive properties config</div>
+      <article className="my-5 scroll-mt-[1.5rem]" id="MySql_comprehansive_properties_config">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql comprehansive properties config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
       </article>
 
