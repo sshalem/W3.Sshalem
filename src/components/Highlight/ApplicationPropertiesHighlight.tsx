@@ -20,7 +20,7 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
           outlineStyle: "solid",
           outlineWidth: "1px",
           outlineColor: "#dddddd",
-          width: "45rem",
+          width: "60rem",
           // height: "20rem",
         }}
       >
