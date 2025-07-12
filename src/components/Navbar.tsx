@@ -16,7 +16,7 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement | null>(null);
 
   const startRightScroll = () => {
-    console.log(navRef);
+    // console.log(navRef);
 
     intervalRef.current = setInterval(function () {
       if (navRef.current !== null) {
@@ -26,7 +26,9 @@ const Navbar = () => {
           setEnableRightScrolling(true);
           setEnableLeftScrolling(true);
         } else {
-          setEnableRightScrolling(false);
+          // setEnableRightScrolling(false);
+          setEnableRightScrolling(true);
+          setEnableLeftScrolling(true);
           stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 25;
@@ -48,7 +50,9 @@ const Navbar = () => {
           setEnableLeftScrolling(true);
           setEnableRightScrolling(true);
         } else {
-          setEnableLeftScrolling(false);
+          // setEnableLeftScrolling(false);
+          setEnableRightScrolling(true);
+          setEnableLeftScrolling(true);
           stopLeftScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 25;
@@ -66,6 +70,8 @@ const Navbar = () => {
   useEffect(() => {
     const innerWidthCheck = () => {
       // console.log(navRef);
+      console.log("");
+
       console.log(window.innerWidth + " - window innerWidth");
       console.log(navRef.current?.clientWidth + " - clientWidth");
       console.log(navRef.current?.scrollWidth + " - scrollWidth");
@@ -76,15 +82,21 @@ const Navbar = () => {
       // But I loose the state of `showScrollIcons`
       // Thus , I keep the state of `showScrollIcons` in sessionStorage
       if (navRef.current !== null) {
+        // since I set the max-w -[1750px] ,
+        // thus If scrollWidth > 1750 always show the scroll bars
         if (navRef.current.scrollWidth > 1750) {
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
+          console.log(window.innerWidth - navRef.current.scrollWidth);
         } else if (navRef.current.scrollWidth - window.innerWidth > 0) {
           // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
+          console.log("setting true");
+
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
         } else {
           // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
+          console.log("setting false");
           sessionStorage.setItem("showScrollIcons", "false");
           setShowScrollIcons(false);
         }
@@ -104,6 +116,12 @@ const Navbar = () => {
       setShowScrollIcons(value);
     } else {
       console.log('sessionStorage.getItem("showScrollIcons") retruned null');
+      if (navRef.current !== null) {
+        console.log(navRef.current.scrollWidth);
+        if (navRef.current.scrollWidth > 1750) {
+          setShowScrollIcons(true);
+        }
+      }
     }
   }, []);
 
@@ -125,7 +143,7 @@ const Navbar = () => {
             )
           : ""}
 
-        <div className="ml-14 flex h-[33px] overflow-hidden sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
+        <div className="ml-14 flex h-[33px] overflow-hidden pl-6 pr-6 sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             return (
