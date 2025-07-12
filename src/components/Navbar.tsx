@@ -26,9 +26,9 @@ const Navbar = () => {
           setEnableRightScrolling(true);
           setEnableLeftScrolling(true);
         } else {
-          // setEnableRightScrolling(false);
-          setEnableRightScrolling(true);
-          setEnableLeftScrolling(true);
+          setEnableRightScrolling(false);
+          // setEnableRightScrolling(true);
+          // setEnableLeftScrolling(true);
           stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 25;
@@ -50,9 +50,9 @@ const Navbar = () => {
           setEnableLeftScrolling(true);
           setEnableRightScrolling(true);
         } else {
-          // setEnableLeftScrolling(false);
-          setEnableRightScrolling(true);
-          setEnableLeftScrolling(true);
+          setEnableLeftScrolling(false);
+          // setEnableRightScrolling(true);
+          // setEnableLeftScrolling(true);
           stopLeftScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 25;
@@ -111,6 +111,8 @@ const Navbar = () => {
   // loads from sessionStorage the showScrollIcons (Since I loose the state of it , once I land on the error page)
   // and set the original state of showScrollIcons
   useEffect(() => {
+    console.log(navRef.current?.scrollLeft);
+
     if (sessionStorage.getItem("showScrollIcons") !== null) {
       const value = JSON.parse(sessionStorage.getItem("showScrollIcons") as string);
       setShowScrollIcons(value);
@@ -118,7 +120,14 @@ const Navbar = () => {
       console.log('sessionStorage.getItem("showScrollIcons") retruned null');
       if (navRef.current !== null) {
         console.log(navRef.current.scrollWidth);
+        console.log();
+
+        if (navRef.current.scrollWidth - window.innerWidth) {
+          setShowScrollIcons(true);
+        }
         if (navRef.current.scrollWidth > 1750) {
+          // since I set the max-w -[1750px] ,
+          // thus If scrollWidth > 1750 always show the scroll bars
           setShowScrollIcons(true);
         }
       }
@@ -143,7 +152,7 @@ const Navbar = () => {
             )
           : ""}
 
-        <div className="ml-14 flex h-[33px] overflow-hidden pl-6 pr-6 sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
+        <div className="ml-14 flex h-[33px] overflow-hidden sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             return (
