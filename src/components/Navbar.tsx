@@ -121,8 +121,9 @@ const Navbar = () => {
       if (navRef.current !== null) {
         console.log(navRef.current.scrollWidth);
         console.log();
-
-        if (navRef.current.scrollWidth - window.innerWidth) {
+        // I want to show the scrollbar
+        // If I open broweser and window Wisth is navRef.current.scrollWidth - window.innerWidth > 0
+        if (navRef.current.scrollWidth - window.innerWidth > 0) {
           setShowScrollIcons(true);
         }
         if (navRef.current.scrollWidth > 1750) {
