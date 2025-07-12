@@ -66,22 +66,25 @@ const Navbar = () => {
   useEffect(() => {
     const innerWidthCheck = () => {
       // console.log(navRef);
-      // console.log(window.innerWidth + " - window innerWidth");
-      // console.log(navRef.current?.clientWidth + " - clientWidth");
-      // console.log(navRef.current?.scrollWidth + " - scrollWidth");
+      console.log(window.innerWidth + " - window innerWidth");
+      console.log(navRef.current?.clientWidth + " - clientWidth");
+      console.log(navRef.current?.scrollWidth + " - scrollWidth");
 
+      // I store in session storage the `showScrollIcons`
+      // beacuse , If i go to unkonwn url , I land on the error page
+      // When I pres go back on error page , I'm back to the navbar
+      // But I loose the state of `showScrollIcons`
+      // Thus , I keep the state of `showScrollIcons` in sessionStorage
       if (navRef.current !== null) {
-        if (navRef.current.scrollWidth - window.innerWidth > 0) {
-          console.log(navRef.current.scrollWidth - window.innerWidth > 0);
-          // I store in session storage the `showScrollIcons`
-          // beacuse , If i go to unkonwn url , I land on the error page
-          // When I pres go back on error page , I'm back to the navbar
-          // But I loose the state of `showScrollIcons`
-          // Thus , I keep the state of `showScrollIcons` in sessionStorage
+        if (navRef.current.scrollWidth > 1750) {
+          sessionStorage.setItem("showScrollIcons", "true");
+          setShowScrollIcons(true);
+        } else if (navRef.current.scrollWidth - window.innerWidth > 0) {
+          // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
         } else {
-          console.log(navRef.current.scrollWidth - window.innerWidth > 0);
+          // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
           sessionStorage.setItem("showScrollIcons", "false");
           setShowScrollIcons(false);
         }
