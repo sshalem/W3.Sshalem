@@ -15,10 +15,11 @@ const DropDownApplicationProperties = () => {
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
 
-      <div className={`${showApList ? `h-[5rem]` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
+      <div className={`${showApList ? `h-[7rem]` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
         <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
         <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
         <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />
+        <SideDropdownLink pageName="Logging Config" internalLink="application-properties/logging" />
       </div>
     </section>
   );

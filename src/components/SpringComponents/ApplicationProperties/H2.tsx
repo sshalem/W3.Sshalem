@@ -4,18 +4,18 @@ const H2 = () => {
   return (
     <section>
       {/*       
-      <article className="my-5">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 p-2 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
+      <article className="my-5 scroll-mt-[1.5rem]"> 
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
-      <article className="my-5">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
+      <article className="my-5 scroll-mt-[1.5rem]">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       {/*  */}
-      <article className="my-5">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
+      <article className="my-5 scroll-mt-[1.5rem]">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
         <div>links for H2 DBeaver config</div>
         <ul className="list-disc pl-8">
           <li>
@@ -37,8 +37,8 @@ const H2 = () => {
         </ul>
       </article>
       {/*  */}
-      <article className="my-2">
-        <div className="mb-8 inline-block rounded-md bg-sky-600 px-2 py-1 text-2xl font-semibold capitalize tracking-wider text-white">XML code </div>
+      <article className="my-5 scroll-mt-[1.5rem]">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XML code </div>
         <XmlHighlight xmlCode={xmlCode} />
       </article>
 

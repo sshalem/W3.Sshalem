@@ -3,7 +3,7 @@ import { MainLayout } from "./components";
 import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, Python, ReactJS, Spring, SpringMicroServices, Sql } from "./pages";
 import { Aop, Caching, ExceptionHandling, Logging, OpenAI, Rest, SpringDoc, SpringHome, SpringSecurity, Swagger, TransactionManagement } from "./components/SpringComponents";
 
-import { ApplicationProperties, H2, MySql, Postgresql } from "./components/SpringComponents/ApplicationProperties";
+import { ApplicationProperties, H2, LoggingConfig, MySql, Postgresql } from "./components/SpringComponents/ApplicationProperties";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./components/SpringComponents/JPA";
 
 const router = createBrowserRouter(
@@ -26,6 +26,7 @@ const router = createBrowserRouter(
                 { path: "h2", element: <H2 /> },
                 { path: "postgresql", element: <Postgresql /> },
                 { path: "mysql", element: <MySql /> },
+                { path: "logging", element: <LoggingConfig /> },
               ],
             },
             {

@@ -81,18 +81,18 @@ const MySql = () => {
       <article className="my-5 scroll-mt-[1.5rem]" id="MySql_detailed_config">
         <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
         <div>
-          <div className="text-xl font-semibold">Question : </div>
+          <div className="mb-4 text-xl font-semibold text-red-500 underline">Question : </div>
           <p className="ml-4">
             What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
           </p>
         </div>
         <div>
-          <div className="text-xl font-semibold">Answer :</div>
+          <div className="mb-4 text-xl font-semibold text-green-500 underline">Answer :</div>
           <p className="my-2 ml-4">
-            <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
+            1. <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
           </p>
           <p className="my-2 ml-4">
-            <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging as below: with the time stamp and the package name
+            2. <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging as below, with the time stamp and the package name
           </p>
           <p className="my-6 ml-4">
             <Span> 2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer</Span>
