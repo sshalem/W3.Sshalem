@@ -10,7 +10,6 @@ const DropDownApplicationProperties = () => {
 
   const handleOpenList = () => {
     setShowApList(!showApList);
-    console.log(divRef);
     if (divRef.current !== null) {
       setListHeight(divRef.current.scrollHeight);
     }

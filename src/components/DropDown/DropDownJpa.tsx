@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SideBarLink from "../SideBarLink";
 import SideDropdownLink from "../SideDropdownLink";
 
 const DropDownJpa = () => {
   const [showJpaList, setShowJpaList] = useState<boolean>(false);
+  const [listHeight, setListHeight] = useState<number>();
+
+  const divRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenList = () => {
     setShowJpaList(!showJpaList);
+    if (divRef.current !== null) {
+      setListHeight(divRef.current.scrollHeight);
+    }
   };
 
   return (
@@ -15,7 +21,7 @@ const DropDownJpa = () => {
         <SideBarLink pageName="JPA" internalLink="jpa" />
       </article>
 
-      <div className={`${showJpaList ? `h-[3.5rem]` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
+      <div className={`${showJpaList ? `h-${listHeight}px` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`}>
         <SideDropdownLink pageName="One2Many Bi Eager" internalLink="jpa/one2many-bi-eager" />
         <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="jpa/one2many-bi-lazy" />
       </div>
