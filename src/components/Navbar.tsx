@@ -20,15 +20,13 @@ const Navbar = () => {
 
     intervalRef.current = setInterval(function () {
       if (navRef.current !== null) {
-        // The maximum scrollLeft value is calculated by subtracting
-        // the (scrollWidth - clientWidth) = maxScrollLeft of the element.
+        // The maximum scrollLeft value is calculated by subtracting the
+        // (scrollWidth - clientWidth) = maxScrollLeft of the element.
         if (navRef.current.scrollLeft !== navRef.current.scrollWidth - navRef.current.clientWidth) {
           setEnableRightScrolling(true);
           setEnableLeftScrolling(true);
         } else {
           setEnableRightScrolling(false);
-          // setEnableRightScrolling(true);
-          // setEnableLeftScrolling(true);
           stopRightScroll();
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft + 25;
@@ -50,10 +48,16 @@ const Navbar = () => {
           setEnableLeftScrolling(true);
           setEnableRightScrolling(true);
         } else {
-          setEnableLeftScrolling(false);
-          // setEnableRightScrolling(true);
-          // setEnableLeftScrolling(true);
-          stopLeftScroll();
+          if (navRef.current.scrollWidth - window.innerWidth > 0) {
+            setEnableRightScrolling(true);
+            setEnableLeftScrolling(false);
+            console.log(navRef.current.scrollLeft);
+            stopLeftScroll();
+          } else {
+            setEnableLeftScrolling(false);
+            console.log(navRef.current.scrollLeft);
+            stopLeftScroll();
+          }
         }
         navRef.current.scrollLeft = navRef.current.scrollLeft - 25;
       }
@@ -82,6 +86,8 @@ const Navbar = () => {
       // But I loose the state of `showScrollIcons`
       // Thus , I keep the state of `showScrollIcons` in sessionStorage
       if (navRef.current !== null) {
+        // But, here , If I have links in the navabar that , eventually tkaes width more than 1750px,
+        // thus, I want always to show the scroll buttons
         // since I set the max-w -[1750px] ,
         // thus If scrollWidth > 1750 always show the scroll bars
         if (navRef.current.scrollWidth > 1750) {
