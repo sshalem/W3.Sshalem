@@ -51,11 +51,11 @@ const Navbar = () => {
           if (navRef.current.scrollWidth - window.innerWidth > 0) {
             setEnableRightScrolling(true);
             setEnableLeftScrolling(false);
-            console.log(navRef.current.scrollLeft);
+            // console.log(navRef.current.scrollLeft);
             stopLeftScroll();
           } else {
             setEnableLeftScrolling(false);
-            console.log(navRef.current.scrollLeft);
+            // console.log(navRef.current.scrollLeft);
             stopLeftScroll();
           }
         }
@@ -74,11 +74,11 @@ const Navbar = () => {
   useEffect(() => {
     const innerWidthCheck = () => {
       // console.log(navRef);
-      console.log("");
+      // console.log("");
 
-      console.log(window.innerWidth + " - window innerWidth");
-      console.log(navRef.current?.clientWidth + " - clientWidth");
-      console.log(navRef.current?.scrollWidth + " - scrollWidth");
+      // console.log(window.innerWidth + " - window innerWidth");
+      // console.log(navRef.current?.clientWidth + " - clientWidth");
+      // console.log(navRef.current?.scrollWidth + " - scrollWidth");
 
       // I store in session storage the `showScrollIcons`
       // beacuse , If i go to unkonwn url , I land on the error page
@@ -93,16 +93,16 @@ const Navbar = () => {
         if (navRef.current.scrollWidth > 1750) {
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
-          console.log(window.innerWidth - navRef.current.scrollWidth);
+          // console.log(window.innerWidth - navRef.current.scrollWidth);
         } else if (navRef.current.scrollWidth - window.innerWidth > 0) {
           // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
-          console.log("setting true");
+          // console.log("setting true");
 
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
         } else {
           // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
-          console.log("setting false");
+          // console.log("setting false");
           sessionStorage.setItem("showScrollIcons", "false");
           setShowScrollIcons(false);
         }
@@ -117,16 +117,16 @@ const Navbar = () => {
   // loads from sessionStorage the showScrollIcons (Since I loose the state of it , once I land on the error page)
   // and set the original state of showScrollIcons
   useEffect(() => {
-    console.log(navRef.current?.scrollLeft);
+    // console.log(navRef.current?.scrollLeft);
 
     if (sessionStorage.getItem("showScrollIcons") !== null) {
       const value = JSON.parse(sessionStorage.getItem("showScrollIcons") as string);
       setShowScrollIcons(value);
     } else {
-      console.log('sessionStorage.getItem("showScrollIcons") retruned null');
+      // console.log('sessionStorage.getItem("showScrollIcons") retruned null');
       if (navRef.current !== null) {
-        console.log(navRef.current.scrollWidth);
-        console.log();
+        // console.log(navRef.current.scrollWidth);
+        // console.log();
         // I want to show the scrollbar
         // If I open broweser and window Wisth is navRef.current.scrollWidth - window.innerWidth > 0
         if (navRef.current.scrollWidth - window.innerWidth > 0) {
