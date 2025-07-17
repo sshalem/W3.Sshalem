@@ -10,6 +10,8 @@ const AppContext = createContext<AppContextData>({
   handleOpenList: () => {},
 });
 
+let selectionProperties: { applicationProperties: boolean; jpa: boolean } = { applicationProperties: false, jpa: false };
+
 const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [openList, setOpenList] = useState<boolean>(false);
 
