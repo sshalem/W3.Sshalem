@@ -19,7 +19,7 @@ const H2 = () => {
           </span>
         </div>
         <ul
-          className={`px-1 text-xs capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}
+          className={`px-1 text-xs lowercase text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}
         >
           <li>
             <a href="#H2_Databse_basic_config" className="hover:underline">

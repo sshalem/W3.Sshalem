@@ -1,20 +1,32 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ApplicationPropertiesHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
-  const [contentHeight, setContentHeight] = useState<number>(0);
+  const [contentHeight, setContentHeight] = useState<number>();
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
   const handleShowContent = () => {
     setShowContent(!showContent);
+    if (sessionStorage.getItem("scrollHeight") !== null) {
+      const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
+      setContentHeight(value);
+    }
+
+    // if (ulRef.current !== null) {
+    //   console.log(ulRef.current.scrollHeight);
+    //   setContentHeight(ulRef.current.scrollHeight);
+    // }
+  };
+
+  useEffect(() => {
     if (ulRef.current !== null) {
       console.log(ulRef.current.scrollHeight);
-
-      setContentHeight(ulRef.current.scrollHeight);
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
+      setContentHeight(ulRef.current.scrollHeight + 16);
     }
-  };
+  }, []);
 
   return (
     <section>
@@ -28,9 +40,10 @@ const MySql = () => {
         </div>
 
         <ul
+          //
           ref={ulRef}
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-          className={`overflow-hidden bg-slate-200 px-1 text-xs capitalize text-teal-700 transition-[height] duration-150 ease-in-out`}
+          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-150 ease-in-out`}
         >
           <li>
             <a href="#mysql_dialect" className="hover:underline">
