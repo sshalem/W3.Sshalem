@@ -1,25 +1,42 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ApplicationPropertiesHighlight } from "../../Highlight";
 
 const H2 = () => {
-  const [content, setContent] = useState<boolean>(true);
+  const [showContent, setShowContent] = useState<boolean>(true);
+  const [contentHeight, setContentHeight] = useState<number>();
+
+  const ulRef = useRef<HTMLUListElement | null>(null);
 
   const handleShowContent = () => {
-    setContent(!content);
+    setShowContent(!showContent);
+    if (sessionStorage.getItem("scrollHeight") !== null) {
+      const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
+      setContentHeight(value);
+    }
   };
+
+  useEffect(() => {
+    if (ulRef.current !== null) {
+      console.log(ulRef.current.scrollHeight);
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
+      setContentHeight(ulRef.current.scrollHeight + 16);
+    }
+  }, []);
 
   return (
     <section>
       {/* Start Contents */}
       <article className="content-sm content-md content-lg content-xl content-basic">
-        <div className={`${content ? `rounded-b-none` : `rounded-b-md`} mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize`}>
+        <div className="mb-0 w-[100%] bg-gray-800 px-2 py-1 text-center capitalize">
           <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
-          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
-            [{content ? " hide " : " show "}]
+          <span className={`${showContent ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
+            [{showContent ? " hide " : " show "}]
           </span>
         </div>
         <ul
-          className={`px-1 text-xs lowercase text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}
+          ref={ulRef}
+          style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
+          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-150 ease-in-out`}
         >
           <li>
             <a href="#H2_Databse_basic_config" className="hover:underline">
@@ -36,21 +53,19 @@ const H2 = () => {
       {/* End Contents */}
       {/*       
       <article className="my-5 scroll-mt-[1.5rem]"> 
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
       <article className="my-5 scroll-mt-[1.5rem]" id="H2_Databse_basic_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-          H2 Databse basic config{" "}
-        </div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
 
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="H2_dbeaver">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
         <div>links for H2 DBeaver config</div>
         <ul className="list-disc pl-8">
           <li>

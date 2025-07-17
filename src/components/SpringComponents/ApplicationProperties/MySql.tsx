@@ -13,11 +13,6 @@ const MySql = () => {
       const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
       setContentHeight(value);
     }
-
-    // if (ulRef.current !== null) {
-    //   console.log(ulRef.current.scrollHeight);
-    //   setContentHeight(ulRef.current.scrollHeight);
-    // }
   };
 
   useEffect(() => {
@@ -32,7 +27,7 @@ const MySql = () => {
     <section>
       {/* Start Contents */}
       <article className="content-sm content-md content-lg content-xl content-basic">
-        <div className={`${showContent ? `rounded-b-none` : `rounded-b-md`} mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize`}>
+        <div className="mb-0 w-[100%] bg-gray-800 px-2 py-1 text-center capitalize">
           <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
           <span className={`${showContent ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
             [{showContent ? " hide " : " show "}]
@@ -40,7 +35,6 @@ const MySql = () => {
         </div>
 
         <ul
-          //
           ref={ulRef}
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-150 ease-in-out`}
@@ -73,12 +67,12 @@ const MySql = () => {
 
       {/*       
       <article className="my-5 scroll-mt-[1.5rem]"> 
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
       <article className="my-5 scroll-mt-[1.5rem]" id="mysql_dialect">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql dialect</div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql dialect</div>
         <div className="my-4">
           When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
           <div className="my-4">
@@ -97,9 +91,7 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="mysql_basic_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-          MySql basic config
-        </div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql basic config</div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
       </article>
 
@@ -107,9 +99,7 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="MySql_detailed_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-          MySql detailed config
-        </div>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
         <div>
           <div className="mb-4 text-xl font-semibold text-red-500 underline">Question : </div>
           <p className="ml-4">
@@ -143,7 +133,7 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="MySql_comprehansive_properties_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
           MySql comprehansive properties config
         </div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
