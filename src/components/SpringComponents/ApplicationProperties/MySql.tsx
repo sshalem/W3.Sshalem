@@ -1,24 +1,37 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ApplicationPropertiesHighlight, Span } from "../../Highlight";
 
 const MySql = () => {
-  const [content, setContent] = useState<boolean>(true);
+  const [showContent, setShowContent] = useState<boolean>(true);
+  const [contentHeight, setContentHeight] = useState<number>(0);
+
+  const ulRef = useRef<HTMLUListElement | null>(null);
 
   const handleShowContent = () => {
-    setContent(!content);
+    setShowContent(!showContent);
+    if (ulRef.current !== null) {
+      console.log(ulRef.current.scrollHeight);
+
+      setContentHeight(ulRef.current.scrollHeight);
+    }
   };
 
   return (
     <section>
       {/* Start Contents */}
       <article className="content-sm content-md content-lg content-xl content-basic">
-        <div className="mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize">
+        <div className={`${showContent ? `rounded-b-none` : `rounded-b-md`} mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize`}>
           <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
-          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
-            [{content ? " hide " : " show "}]
+          <span className={`${showContent ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
+            [{showContent ? " hide " : " show "}]
           </span>
         </div>
-        <ul className={`px-1 text-xs capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}>
+
+        <ul
+          ref={ulRef}
+          style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
+          className={`overflow-hidden bg-slate-200 px-1 text-xs capitalize text-teal-700 transition-[height] duration-150 ease-in-out`}
+        >
           <li>
             <a href="#mysql_dialect" className="hover:underline">
               mysql dialect
@@ -71,7 +84,9 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="mysql_basic_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql basic config</div>
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
+          MySql basic config
+        </div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
       </article>
 
@@ -79,7 +94,9 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="MySql_detailed_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
+          MySql detailed config
+        </div>
         <div>
           <div className="mb-4 text-xl font-semibold text-red-500 underline">Question : </div>
           <p className="ml-4">
@@ -113,7 +130,9 @@ const MySql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="MySql_comprehansive_properties_config">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql comprehansive properties config</div>
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
+          MySql comprehansive properties config
+        </div>
         <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
       </article>
 

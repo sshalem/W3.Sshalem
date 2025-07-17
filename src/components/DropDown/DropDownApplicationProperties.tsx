@@ -20,8 +20,13 @@ const DropDownApplicationProperties = () => {
       <article onClick={handleOpenList}>
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
-
-      <div className={`${showApList ? `h-${listHeight}px` : `h-0`} overflow-hidden bg-white transition-[height] duration-150 ease-in-out`} ref={divRef}>
+      <div
+        style={showApList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}
+        ref={divRef}
+      >
+        {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
+        {/* <div className={`${showApList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
         <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
         <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
         <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />

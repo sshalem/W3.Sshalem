@@ -1,20 +1,55 @@
-import { ApplicationPropertiesHighlight, XmlHighlight } from "../../Highlight";
+import { useState } from "react";
+import { ApplicationPropertiesHighlight } from "../../Highlight";
 
 const H2 = () => {
+  const [content, setContent] = useState<boolean>(true);
+
+  const handleShowContent = () => {
+    setContent(!content);
+  };
+
   return (
     <section>
+      {/* Start Contents */}
+      <article className="content-sm content-md content-lg content-xl content-basic">
+        <div className={`${content ? `rounded-b-none` : `rounded-b-md`} mb-0 w-[100%] rounded-t-md bg-gray-800 px-2 py-1 text-center capitalize`}>
+          <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
+          <span className={`${content ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
+            [{content ? " hide " : " show "}]
+          </span>
+        </div>
+        <ul
+          className={`px-1 text-xs capitalize text-teal-700 ${content ? `h-[5rem]` : `h-0`} overflow-hidden bg-slate-200 transition-[height] duration-150 ease-in-out`}
+        >
+          <li>
+            <a href="#H2_Databse_basic_config" className="hover:underline">
+              H2 Databse basic config
+            </a>
+          </li>
+          <li>
+            <a href="#H2_dbeaver" className="hover:underline">
+              H2 DBeaver
+            </a>
+          </li>
+        </ul>
+      </article>
+      {/* End Contents */}
       {/*       
       <article className="my-5 scroll-mt-[1.5rem]"> 
         <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
-      <article className="my-5 scroll-mt-[1.5rem]">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
+      <article className="my-5 scroll-mt-[1.5rem]" id="H2_Databse_basic_config">
+        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
+          H2 Databse basic config{" "}
+        </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
+
       {/*  */}
-      <article className="my-5 scroll-mt-[1.5rem]">
+
+      <article className="my-5 scroll-mt-[1.5rem]" id="H2_dbeaver">
         <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
         <div>links for H2 DBeaver config</div>
         <ul className="list-disc pl-8">
@@ -37,10 +72,6 @@ const H2 = () => {
         </ul>
       </article>
       {/*  */}
-      <article className="my-5 scroll-mt-[1.5rem]">
-        <div className="mb-8 inline-block rounded-md bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XML code </div>
-        <XmlHighlight xmlCode={xmlCode} />
-      </article>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
