@@ -38,7 +38,7 @@ const Spring = () => {
             <DropDownApplicationProperties />
             <DropDownJpa />
 
-            <SideBarLink pageName="Rest" internalLink="rest" />
+            {/* <SideBarLink pageName="Rest" internalLink="rest" />
             <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
             <SideBarLink pageName="Swagger" internalLink="swagger" />
             <SideBarLink pageName="Open AI" internalLink="open-AI" />
@@ -47,7 +47,7 @@ const Spring = () => {
             <SideBarLink pageName="Caching" internalLink="caching" />
             <SideBarLink pageName="Aop" internalLink="aop" />
             <SideBarLink pageName="SpringSecurity" internalLink="spring-security" />
-            <SideBarLink pageName="Logging" internalLink="logging" />
+            <SideBarLink pageName="Logging" internalLink="logging" /> */}
           </div>
         </article>
       )}

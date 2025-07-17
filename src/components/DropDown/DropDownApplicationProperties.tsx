@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import SideDropdownLink from "../SideDropdownLink";
 import SideBarLink from "../SideBarLink";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
 const DropDownApplicationProperties = () => {
   const [showApList, setShowApList] = useState<boolean>(false);
@@ -17,7 +18,16 @@ const DropDownApplicationProperties = () => {
 
   return (
     <section>
-      <article onClick={handleOpenList}>
+      <article onClick={handleOpenList} className="relative">
+        {showApList ? (
+          <div className="absolute left-2 top-1 text-slate-400">
+            <AiFillCaretDown />
+          </div>
+        ) : (
+          <div className="absolute left-2 top-1 text-slate-400">
+            <AiFillCaretUp />
+          </div>
+        )}
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
       <div

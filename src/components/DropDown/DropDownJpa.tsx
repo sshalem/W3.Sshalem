@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import SideBarLink from "../SideBarLink";
 import SideDropdownLink from "../SideDropdownLink";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
 const DropDownJpa = () => {
   const [showJpaList, setShowJpaList] = useState<boolean>(false);
@@ -17,7 +18,16 @@ const DropDownJpa = () => {
 
   return (
     <section>
-      <article onClick={handleOpenList}>
+      <article onClick={handleOpenList} className="relative">
+        {showJpaList ? (
+          <div className="absolute left-2 top-1 text-slate-400">
+            <AiFillCaretDown />
+          </div>
+        ) : (
+          <div className="absolute left-2 top-1 text-slate-400">
+            <AiFillCaretUp />
+          </div>
+        )}
         <SideBarLink pageName="JPA" internalLink="jpa" />
       </article>
 
