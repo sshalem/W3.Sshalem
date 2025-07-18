@@ -165,7 +165,9 @@ const Navbar = () => {
             return (
               <NavLink to={`${subject}`} key={index}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-                <div className={`${location.pathname === subject ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}>{subject.substring(1, 50)}</div>
+                <div className={`${location.pathname.includes(subject) ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}>
+                  {subject.substring(1, 50)}
+                </div>
               </NavLink>
             );
           })}
