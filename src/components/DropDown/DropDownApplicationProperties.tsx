@@ -44,7 +44,7 @@ const DropDownApplicationProperties = () => {
       </article>
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
-        className={`overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
         {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}

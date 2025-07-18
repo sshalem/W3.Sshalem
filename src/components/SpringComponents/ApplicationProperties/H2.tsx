@@ -36,7 +36,7 @@ const H2 = () => {
         <ul
           ref={ulRef}
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-150 ease-in-out`}
+          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
           <li>
             <a href="#H2_Databse_basic_config" className="hover:underline">

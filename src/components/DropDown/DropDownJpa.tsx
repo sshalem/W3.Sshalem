@@ -45,7 +45,7 @@ const DropDownJpa = () => {
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
-        className={`overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
         <SideDropdownLink pageName="One2Many Bi Eager" internalLink="jpa/one2many-bi-eager" />
