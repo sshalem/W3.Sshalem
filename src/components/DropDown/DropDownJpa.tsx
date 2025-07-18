@@ -1,25 +1,37 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SideBarLink from "../SideBarLink";
 import SideDropdownLink from "../SideDropdownLink";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { useLocation } from "react-router-dom";
 
 const DropDownJpa = () => {
-  const [showJpaList, setShowJpaList] = useState<boolean>(false);
+  const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
+
+  let location = useLocation();
 
   const divRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenList = () => {
-    setShowJpaList(!showJpaList);
+    setShowList(!showList);
     if (divRef.current !== null) {
       setListHeight(divRef.current.scrollHeight);
     }
   };
 
+  useEffect(() => {
+    if (location.pathname.substring(8).includes("jpa")) {
+      setShowList(true);
+      if (divRef.current !== null) {
+        setListHeight(divRef.current.scrollHeight);
+      }
+    }
+  }, []);
+
   return (
     <section>
       <article onClick={handleOpenList} className="relative">
-        {showJpaList ? (
+        {showList ? (
           <div className="absolute left-2 top-1 text-slate-400">
             <AiFillCaretDown />
           </div>
@@ -32,7 +44,7 @@ const DropDownJpa = () => {
       </article>
 
       <div
-        style={showJpaList ? { height: `${listHeight}px` } : { height: "0px" }}
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}
         ref={divRef}
       >
@@ -41,7 +53,7 @@ const DropDownJpa = () => {
       </div>
       {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
       {/* <div className={`${showApList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
-      {/* <div className={`${showJpaList ? `h-${listHeight}px` : `h-[0px]`} overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}>
+      {/* <div className={`${showList ? `h-${listHeight}px` : `h-[0px]`} overflow-hidden bg-white transition-[height] duration-200 ease-in-out`}>
         <SideDropdownLink pageName="One2Many Bi Eager" internalLink="jpa/one2many-bi-eager" />
         <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="jpa/one2many-bi-lazy" />
       </div> */}
