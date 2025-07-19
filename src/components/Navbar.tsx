@@ -153,15 +153,11 @@ const Navbar = () => {
         <div className="ml-14 flex h-[33px] overflow-hidden sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
+            let splitPathname: string[] = location.pathname.split("/");
             return (
               <NavLink to={`${subject}`} key={index}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-                {/* I also check condition of location.pathname.length === subject.length */}
-                {/* because of JAVA and JAVASCRIPT */}
-                {/* Since if subject includes 'JAVA' , it can set bg-ble for both JAVA and JAVASCRIPT */}
-                <div
-                  className={`${location.pathname.includes(subject) && location.pathname.length === subject.length ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}
-                >
+                <div className={`${splitPathname[1] === subject.slice(1) ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}>
                   {subject.substring(1, 50)}
                 </div>
               </NavLink>
