@@ -25,8 +25,10 @@ const DropDownJpa = () => {
       if (divRef.current !== null) {
         setListHeight(divRef.current.scrollHeight);
       }
+    } else {
+      setShowList(false);
     }
-  }, []);
+  }, [location.pathname]);
 
   return (
     <section>

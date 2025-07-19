@@ -25,8 +25,10 @@ const DropDownApplicationProperties = () => {
       if (divRef.current !== null) {
         setListHeight(divRef.current.scrollHeight);
       }
+    } else {
+      setShowList(false);
     }
-  }, []);
+  }, [location.pathname]);
 
   return (
     <section>
