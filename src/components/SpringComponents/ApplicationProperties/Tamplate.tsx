@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ApplicationPropertiesHighlight } from "../../Highlight";
 
-const Postgresql = () => {
+const Tamplate = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -40,8 +40,8 @@ const Postgresql = () => {
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
           <li>
-            <a href="#Install PostgreSql standalone on windows" className="hover:underline">
-              Install PostgreSql standalone on windows
+            <a href="#OSIV" className="hover:underline">
+              mysql dialect
             </a>
           </li>
         </ul>
@@ -52,14 +52,8 @@ const Postgresql = () => {
       {/*  */}
 
       <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-          Install PostgreSql standalone on windows
-        </div>
-        <div className="my-4">Links :</div>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">OSIV</div>
+        <ApplicationPropertiesHighlight propertiesCode={osiv} />
       </article>
 
       {/*  */}
@@ -70,7 +64,7 @@ const Postgresql = () => {
   );
 };
 
-export default Postgresql;
+export default Tamplate;
 
 const osiv = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;
