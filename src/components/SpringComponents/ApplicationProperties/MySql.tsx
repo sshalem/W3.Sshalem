@@ -112,10 +112,7 @@ const MySql = () => {
             1. <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
           </p>
           <p className="my-2 ml-4">
-            2. <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging as below, with the time stamp and the package name
-          </p>
-          <p className="my-6 ml-4">
-            <Span> 2021-04-21 12:02:27.553 DEBUG 496 --- [ restartedMain] org.hibernate.SQL : drop table if exists customer</Span>
+            2. <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging with the time stamp and the package name
           </p>
         </div>
 
@@ -290,5 +287,6 @@ server.error.include-stacktrace=never
 server.error.whitelabel.enabled=true`;
 
 const propertiesCode = `logging.level.org.hibernate.SQL=DEBUG
+# Once I insert Data to DB , it will show the meta data inserted
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 spring.jpa.properties.hibernate.format_sql=true`;
