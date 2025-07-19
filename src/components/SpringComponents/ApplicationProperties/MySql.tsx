@@ -45,6 +45,11 @@ const MySql = () => {
             </a>
           </li>
           <li>
+            <a href="#OSIV" className="hover:underline">
+              osiv
+            </a>
+          </li>
+          <li>
             <a href="#mysql_basic_config" className="hover:underline">
               mysql basic config
             </a>
@@ -71,6 +76,7 @@ const MySql = () => {
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
       */}
+
       <article className="my-5 scroll-mt-[1.5rem]" id="mysql_dialect">
         <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql dialect</div>
         <div className="my-4">
@@ -85,6 +91,15 @@ const MySql = () => {
             <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
           </div>
         </div>
+      </article>
+
+      {/*  */}
+      {/*  */}
+
+      <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">OSIV</div>
+        <div className="my-4">Regarding this property , see the project of LAZY Loading, I explain it there</div>
+        <ApplicationPropertiesHighlight propertiesCode={osiv} />
       </article>
 
       {/*  */}
@@ -290,3 +305,6 @@ const propertiesCode = `logging.level.org.hibernate.SQL=DEBUG
 # Once I insert Data to DB , it will show the meta data inserted
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 spring.jpa.properties.hibernate.format_sql=true`;
+
+const osiv = `# Disable OSIV
+spring.jpa.open-in-view=false`;

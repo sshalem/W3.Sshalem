@@ -44,6 +44,11 @@ const H2 = () => {
             </a>
           </li>
           <li>
+            <a href="#OSIV" className="hover:underline">
+              osiv
+            </a>
+          </li>
+          <li>
             <a href="#H2_dbeaver" className="hover:underline">
               H2 DBeaver
             </a>
@@ -61,9 +66,17 @@ const H2 = () => {
         <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
         <ApplicationPropertiesHighlight propertiesCode={h2} />
       </article>
-
       {/*  */}
-
+      {/*  */}
+      {/*  */}
+      <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
+        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">OSIV</div>
+        <div className="my-4">Regarding this property , see the project of LAZY Loading, I explain it there</div>
+        <ApplicationPropertiesHighlight propertiesCode={osiv} />
+      </article>
+      {/*  */}
+      {/*  */}
+      {/*  */}
       <article className="my-5 scroll-mt-[1.5rem]" id="H2_dbeaver">
         <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
         <div>links for H2 DBeaver config</div>
@@ -87,7 +100,8 @@ const H2 = () => {
         </ul>
       </article>
       {/*  */}
-
+      {/*  */}
+      {/*  */}
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
@@ -109,3 +123,6 @@ spring.h2.console.path=/h2
 
 # console color enabled
 spring.output.ansi.enabled=always`;
+
+const osiv = `# Disable OSIV
+spring.jpa.open-in-view=false`;
