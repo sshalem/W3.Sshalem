@@ -93,16 +93,10 @@ const Navbar = () => {
         if (navRef.current.scrollWidth > 1750) {
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
-          // console.log(window.innerWidth - navRef.current.scrollWidth);
         } else if (navRef.current.scrollWidth - window.innerWidth > 0) {
-          // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
-          // console.log("setting true");
-
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
         } else {
-          // console.log(navRef.current.scrollWidth - window.innerWidth > 0);
-          // console.log("setting false");
           sessionStorage.setItem("showScrollIcons", "false");
           setShowScrollIcons(false);
         }
@@ -123,10 +117,7 @@ const Navbar = () => {
       const value = JSON.parse(sessionStorage.getItem("showScrollIcons") as string);
       setShowScrollIcons(value);
     } else {
-      // console.log('sessionStorage.getItem("showScrollIcons") retruned null');
       if (navRef.current !== null) {
-        // console.log(navRef.current.scrollWidth);
-        // console.log();
         // I want to show the scrollbar
         // If I open broweser and window Wisth is navRef.current.scrollWidth - window.innerWidth > 0
         if (navRef.current.scrollWidth - window.innerWidth > 0) {
@@ -165,7 +156,12 @@ const Navbar = () => {
             return (
               <NavLink to={`${subject}`} key={index}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-                <div className={`${location.pathname.includes(subject) ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}>
+                {/* I also check condition of location.pathname.length === subject.length */}
+                {/* because of JAVA and JAVASCRIPT */}
+                {/* Since if subject includes 'JAVA' , it can set bg-ble for both JAVA and JAVASCRIPT */}
+                <div
+                  className={`${location.pathname.includes(subject) && location.pathname.length === subject.length ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}
+                >
                   {subject.substring(1, 50)}
                 </div>
               </NavLink>
