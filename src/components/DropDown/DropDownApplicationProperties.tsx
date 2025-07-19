@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import SideDropdownLink from "../SideDropdownLink";
 import SideBarLink from "../SideBarLink";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { useLocation } from "react-router-dom";
+import { CaretDown, CaretUp } from "../../components";
 
 const DropDownApplicationProperties = () => {
   const [showList, setShowList] = useState<boolean>(false);
@@ -31,15 +31,7 @@ const DropDownApplicationProperties = () => {
   return (
     <section>
       <article onClick={handleOpenList} className="relative">
-        {showList ? (
-          <div className="absolute left-2 top-1 text-slate-400">
-            <AiFillCaretDown />
-          </div>
-        ) : (
-          <div className="absolute left-2 top-1 text-slate-400">
-            <AiFillCaretUp />
-          </div>
-        )}
+        {showList ? <CaretDown /> : <CaretUp />}
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
       <div
