@@ -37,10 +37,10 @@ const DropDownApplicationProperties = () => {
 
   return (
     <section>
-      <article onClick={handleOpenList} className="relative">
-        {showList ? <CaretDown /> : <CaretUp />}
+      <article onClick={handleOpenList}>
         <SideBarLink pageName="Application properties" internalLink="application-properties" />
       </article>
+
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
