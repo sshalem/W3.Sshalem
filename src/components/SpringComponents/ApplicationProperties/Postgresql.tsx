@@ -68,6 +68,12 @@ const Postgresql = () => {
             </a>
           </li>
         </ul>
+        <div className="my-4 text-xl">Steps</div>
+        <ul className="mx-8">
+          <li className="list-decimal">Download the zip file</li>
+          <li className="list-decimal">Uninstall it , it will uninstall it to folder pgsql .</li>
+          <li className="list-decimal">Create a new folder as pgsql_data </li>
+        </ul>
       </article>
 
       {/*  */}
