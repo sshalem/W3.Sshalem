@@ -56,9 +56,17 @@ const Postgresql = () => {
           Install PostgreSql standalone on windows
         </div>
         <div className="my-4">Links :</div>
-        <ul>
-          <li></li>
-          <li></li>
+        <ul className="mx-8">
+          <li className="list-disc">
+            <a href="https://www.youtube.com/watch?v=btxwPwnU-oI" target="_blank" className="text-blue-500">
+              https://www.youtube.com/watch?v=btxwPwnU-oI
+            </a>
+          </li>
+          <li className="list-disc">
+            <a href="https://roytuts.com/how-to-install-postgresql-zip-archive-in-windows/" target="_blank" className="text-blue-500">
+              https://roytuts.com/how-to-install-postgresql-zip-archive-in-windows/
+            </a>
+          </li>
         </ul>
       </article>
 
