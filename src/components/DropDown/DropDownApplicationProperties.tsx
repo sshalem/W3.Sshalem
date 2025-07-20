@@ -13,6 +13,7 @@ const DropDownApplicationProperties = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenList = () => {
+    console.log("handleOpenList");
     setShowList(!showList);
     if (divRef.current !== null) {
       setListHeight(divRef.current.scrollHeight);
@@ -20,14 +21,40 @@ const DropDownApplicationProperties = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("application-properties")) {
-      setShowList(true);
+    let splitPathname: string[] = location.pathname.split("/");
+    console.log("useEffect");
+
+    console.log(splitPathname);
+    // console.log(splitPathname[2]);
+    // console.log(splitPathname[3]);
+
+    // console.log(splitPathname.length);
+
+    // console.log(location.pathname);
+    // console.log(location.pathname.substring(8));
+
+    if (splitPathname[2] === "application-properties" && splitPathname[3] === undefined) {
+      console.log("undefined");
+      setShowList(!showList);
       if (divRef.current !== null) {
         setListHeight(divRef.current.scrollHeight);
       }
+    } else if (splitPathname[2] === "application-properties" && splitPathname[3] !== undefined) {
+      console.log("page");
+      setShowList(true);
     } else {
+      console.log("");
       setShowList(false);
     }
+
+    // if (location.pathname.substring(8).includes("application-properties")) {
+    //   setShowList(true);
+    //   if (divRef.current !== null) {
+    //     setListHeight(divRef.current.scrollHeight);
+    //   }
+    // } else {
+    //   setShowList(false);
+    // }
   }, [location.pathname]);
 
   return (
