@@ -13,7 +13,6 @@ const DropDownApplicationProperties = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenList = () => {
-    console.log("handleOpenList");
     setShowList(!showList);
     if (divRef.current !== null) {
       setListHeight(divRef.current.scrollHeight);
@@ -22,7 +21,12 @@ const DropDownApplicationProperties = () => {
 
   useEffect(() => {
     if (location.pathname.substring(8).includes("application-properties")) {
-      setShowList(true);
+      if (location.pathname.split("/")[3] === undefined) {
+        // do nothing ,
+        // this way I prevent the re-render of  setShowList(true);
+      } else {
+        setShowList(true);
+      }
       if (divRef.current !== null) {
         setListHeight(divRef.current.scrollHeight);
       }
