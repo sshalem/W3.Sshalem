@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { ApplicationPropertiesHighlight } from "../../Highlight";
 import InstallPostgresStandalone from "./PostgreSqlSections/InstallPostgresStandalone";
 
 const anchorLinks = new Map<string, string>();
@@ -24,7 +23,6 @@ const Postgresql = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
-      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
@@ -59,7 +57,7 @@ const Postgresql = () => {
       </article>
       {/* End Contents */}
 
-      <InstallPostgresStandalone idAnchor="Install_PostgreSql_standalone_on_windows" />
+      <InstallPostgresStandalone idAnchor="install_postgresql_standalone_on_windows" />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
@@ -67,6 +65,3 @@ const Postgresql = () => {
 };
 
 export default Postgresql;
-
-const osiv = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;
