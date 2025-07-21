@@ -1,9 +1,9 @@
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
-const MySqlDetailedConfig = ({ idAnchor }: { idAnchor: string }) => {
+const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">MySql detailed config</div>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
       <div>
         <div className="mb-4 text-xl font-semibold text-red-500 underline">Question : </div>
         <p className="ml-4">

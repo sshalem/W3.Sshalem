@@ -5,13 +5,19 @@ import MysqlBasicConfig from "./MySqlSections/MysqlBasicConfig";
 import MySqlDetailedConfig from "./MySqlSections/MySqlDetailedConfig";
 import MySqlComprehansivePropertiesConfig from "./MySqlSections/MySqlComprehansivePropertiesConfig";
 
-// let anchorLinks: string[] = ["mysql_dialect", "osiv", "mysql_basic_config", "mysql_detailed_config", "mysql_comprehansive_properties_config"];
-const anchorLinks = new Map<string, string>();
-anchorLinks.set("mysql_dialect", "mysql dialect");
-anchorLinks.set("osiv", "osiv");
-anchorLinks.set("mysql_basic_config", "mysql basic config");
-anchorLinks.set("mysql_detailed_config", "mysql detailed config");
-anchorLinks.set("mysql_comprehansive_properties_config", "mysql comprehansive properties config");
+// =============================================================================================================
+
+const mysql_dialect = "mysql dialect";
+const osiv = "osiv";
+const mysql_basic_config = "mysql basic config";
+const mysql_detailed_config = "mysql detailed config";
+const mysql_comprehansive_properties_config = "mysql comprehansive properties config";
+
+// =============================================================================================================
+
+const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config];
+
+// =============================================================================================================
 
 const MySql = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -51,11 +57,11 @@ const MySql = () => {
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
-          {[...anchorLinks.entries()].map(([key, value]) => {
+          {anchorList.map((anc) => {
             return (
-              <li key={key}>
-                <a href={`#${key}`} className="hover:underline">
-                  {value}
+              <li key={anc}>
+                <a href={`#${anc}`} className="hover:underline">
+                  {anc}
                 </a>
               </li>
             );
@@ -73,11 +79,11 @@ const MySql = () => {
       </article>
       {/* End Contents */}
 
-      <MysqlDialect idAnchor="mysql_dialect" />
-      <MySqlOSIV idAnchor="osiv" />
-      <MysqlBasicConfig idAnchor="mysql_basic_config" />
-      <MySqlDetailedConfig idAnchor="mysql_detailed_config" />
-      <MySqlComprehansivePropertiesConfig idAnchor="mysql_comprehansive_properties_config" />
+      <MysqlDialect anchor={mysql_dialect} />
+      <MySqlOSIV anchor={osiv} />
+      <MysqlBasicConfig anchor={mysql_basic_config} />
+      <MySqlDetailedConfig anchor={mysql_detailed_config} />
+      <MySqlComprehansivePropertiesConfig anchor={mysql_comprehansive_properties_config} />
 
       {/* {this div is only for dividing} */}
       <div className="my-8 h-4" />

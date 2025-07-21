@@ -1,11 +1,9 @@
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
-const MySqlComprehansivePropertiesConfig = ({ idAnchor }: { idAnchor: string }) => {
+const MySqlComprehansivePropertiesConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-        MySql comprehansive properties config
-      </div>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
       <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
     </article>
   );
