@@ -2,16 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import DBeaverMySql from "./DBeaver/DBeaverMySql";
 import DBeaverMySqlOnLinode from "./DBeaver/DBeaverMySqlOnLinode";
 import DBeaverPostgresql from "./DBeaver/DBeaverPostgresql";
+import DBeaverVersion from "./DBeaver/DBeaverVersion";
 
 // =============================================================================================================
 
+const dbeaver_version = "dbeaver version";
 const dbeaver_mysql = "dbeaver with mysql";
 const dbeaver_mysql_on_linode = "dbeaver with mysql on linode server";
 const dbeaver_postgresql = "dbeaver with postgresql";
 
 // =============================================================================================================
 
-const anchorList: string[] = [dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql];
+const anchorList: string[] = [dbeaver_version, dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql];
 
 // =============================================================================================================
 
@@ -64,6 +66,7 @@ const DBeaver = () => {
       </article>
       {/* End Contents */}
 
+      <DBeaverVersion anchor={dbeaver_version} />
       <DBeaverMySql anchor={dbeaver_mysql} />
       <DBeaverMySqlOnLinode anchor={dbeaver_mysql_on_linode} />
       <DBeaverPostgresql anchor={dbeaver_postgresql} />
