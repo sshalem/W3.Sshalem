@@ -37,8 +37,19 @@ const DropDownApplicationProperties = () => {
 
   return (
     <section>
-      <article onClick={handleOpenList}>
-        <SideBarLink pageName="Application properties" internalLink="application-properties" />
+      <article className="relative">
+        <div className="pointer-events-none">
+          {location.pathname.includes("application-properties") ? (
+            <div>{showList ? <CaretUp /> : <CaretDown />}</div>
+          ) : (
+            <div className="opacity-20">
+              <CaretDown />
+            </div>
+          )}
+        </div>
+        <div onClick={handleOpenList} className="select-none">
+          <SideBarLink pageName="Application properties" internalLink="application-properties" />
+        </div>
       </article>
 
       <div

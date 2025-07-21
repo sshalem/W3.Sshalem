@@ -12,9 +12,7 @@ const DropDownJpa = () => {
 
   const divRef = useRef<HTMLDivElement | null>(null);
 
-  const handleOpenList = (e: React.MouseEvent) => {
-    console.log(e);
-
+  const handleOpenList = () => {
     setShowList(!showList);
     if (divRef.current !== null) {
       setListHeight(divRef.current.scrollHeight);
@@ -39,9 +37,30 @@ const DropDownJpa = () => {
 
   return (
     <section>
-      <article onClick={handleOpenList}>
-        <SideBarLink pageName="JPA" internalLink="jpa" />
+      <article className="relative">
+        <div className="pointer-events-none">
+          {location.pathname.includes("jpa") ? (
+            <div>{showList ? <CaretUp /> : <CaretDown />}</div>
+          ) : (
+            <div className="opacity-20">
+              <CaretDown />
+            </div>
+          )}
+        </div>
+        <div onClick={handleOpenList} className="select-none">
+          <SideBarLink pageName="JPA" internalLink="jpa" />
+        </div>
       </article>
+      {/* <article onClick={handleOpenList} className="relative select-none">
+        {location.pathname.includes("jpa") ? (
+          <div>{showList ? <CaretUp /> : <CaretDown />}</div>
+        ) : (
+          <div className="pointer-events-none opacity-20">
+            <CaretDown />
+          </div>
+        )}
+        <SideBarLink pageName="JPA" internalLink="jpa" />
+      </article> */}
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
