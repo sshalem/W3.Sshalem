@@ -10,10 +10,10 @@ import pgadmin_3 from "../../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
 
-const InstallPostgresStandalone = ({ idAnchor, sectionTitle }: { idAnchor: string; sectionTitle: string }) => {
+const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{sectionTitle}</div>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
       <div className="my-4">Links :</div>
       <ul className="mx-8">
         <li className="list-disc">

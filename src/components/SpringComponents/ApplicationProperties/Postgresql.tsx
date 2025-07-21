@@ -3,19 +3,17 @@ import InstallPostgresStandalone from "./PostgreSqlSections/InstallPostgresStand
 import PostgresqlOsiv from "./PostgreSqlSections/PostgresqlOsiv";
 import PostgresqlDetailedConfig from "./PostgreSqlSections/PostgresqlDetailedCOnfig";
 
-const anchor_postgresql_detailed_config = "postgresql_detailed_config";
-const section_postgresql_detailed_config = "postgresql detailed config";
-const anchor_install_postgresql_standalone_on_windows = "install_postgresql_standalone_on_windows";
-const section_install_postgresql_standalone_on_windows = "install postgresql standalone on windows";
-const anchor_osiv = "osiv";
-const section_osiv = "osiv";
+// =============================================================================================================
 
-const anchorLinks = new Map<string, string>();
-anchorLinks.set(anchor_postgresql_detailed_config, section_postgresql_detailed_config);
-anchorLinks.set(anchor_osiv, section_osiv);
-anchorLinks.set(anchor_install_postgresql_standalone_on_windows, section_install_postgresql_standalone_on_windows);
+const postgresql_detailed_config = "postgresql detailed config";
+const osiv = "osiv";
+const install_postgresql_standalone_on_windows = "install postgresql standalone on windows";
 
-// anchorLinks.set("", "");
+// =============================================================================================================
+
+const anchorList: string[] = [postgresql_detailed_config, osiv, install_postgresql_standalone_on_windows];
+
+// =============================================================================================================
 
 const Postgresql = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -54,11 +52,11 @@ const Postgresql = () => {
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
-          {[...anchorLinks.entries()].map(([key, value]) => {
+          {anchorList.map((anc) => {
             return (
-              <li key={key}>
-                <a href={`#${key}`} className="hover:underline">
-                  {value}
+              <li key={anc}>
+                <a href={`#${anc}`} className="hover:underline">
+                  {anc}
                 </a>
               </li>
             );
@@ -67,12 +65,9 @@ const Postgresql = () => {
       </article>
       {/* End Contents */}
 
-      <PostgresqlDetailedConfig idAnchor={anchor_postgresql_detailed_config} sectionTitle={section_postgresql_detailed_config} />
-      <PostgresqlOsiv idAnchor={anchor_osiv} sectionTitle={section_osiv} />
-      <InstallPostgresStandalone
-        idAnchor={anchor_install_postgresql_standalone_on_windows}
-        sectionTitle={section_install_postgresql_standalone_on_windows}
-      />
+      <PostgresqlDetailedConfig anchor={postgresql_detailed_config} />
+      <PostgresqlOsiv anchor={osiv} />
+      <InstallPostgresStandalone anchor={install_postgresql_standalone_on_windows} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
