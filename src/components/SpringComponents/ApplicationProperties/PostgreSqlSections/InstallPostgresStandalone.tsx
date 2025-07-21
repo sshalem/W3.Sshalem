@@ -1,4 +1,4 @@
-import { Span, SpanText } from "../../../Highlight";
+import { JavaHighlight, Span, SpanText, XmlHighlight } from "../../../Highlight";
 import psql_data_folder from "../../../../assets/psql_data_folder.jpg";
 
 const InstallPostgresStandalone = ({ idAnchor }: { idAnchor: string }) => {
@@ -22,22 +22,24 @@ const InstallPostgresStandalone = ({ idAnchor }: { idAnchor: string }) => {
       </ul>
       <div className="my-8 inline-block rounded-md bg-emerald-500 px-2 py-1 text-white">Install Steps </div>
       <ul className="mx-8">
-        <li className="list-decimal">Download the zip file</li>
-        <li className="list-decimal">
+        <li className="my-1 list-decimal">Download the zip file</li>
+        <li className="my-1 list-decimal">
           Uninstall it , it will uninstall it to folder <SpanText>pgsql</SpanText> .
         </li>
-        <li className="list-decimal">
+        <li className="my-1 list-decimal">
           Create a new folder as <Span>pgsql_data</Span>
           <div>
             <img src={psql_data_folder} alt="psql-data-folder-img" className="mx-20 my-10" />
           </div>
         </li>
-        <li className="list-decimal">
+        <li className="my-1 list-decimal">
           Open CMD , go to directory <Span> C:\Localdata\DB\postgresql\pgsql\bin</Span>
         </li>
-        <li className="list-decimal">
+        <li className="my-1 list-decimal">
           Type the following command below, It will install inside the folder of <Span>pgsql_data</Span> all the relevant data:
-          
+          <div className="my-10">
+            <JavaHighlight javaCode="initdb.exe -U postgres -A password -E utf8 -W -D C:\Localdata\DB\postgresql\pgsql\pgsql_data"></JavaHighlight>
+          </div>
         </li>
       </ul>
     </article>
