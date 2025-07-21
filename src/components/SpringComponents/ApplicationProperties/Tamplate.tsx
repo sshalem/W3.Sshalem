@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { ApplicationPropertiesHighlight } from "../../Highlight";
 
 // ====================================================================================
 // ====================================================================================
 // ====================================================================================
-const XXXX = ({ idAnchor }: { idAnchor: string }) => {
-  return <div></div>;
-};
+// const XXXX = ({ idAnchor }: { idAnchor: string }) => {
+//   return <div></div>;
+// };
 
 // ====================================================================================
 // ====================================================================================
@@ -78,6 +77,3 @@ const SideComponentTemplate = () => {
 };
 
 export default SideComponentTemplate;
-
-const osiv = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;
