@@ -1,7 +1,7 @@
-const H2Dbeaver = ({ idAnchor }: { idAnchor: string }) => {
+const H2Dbeaver = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
       <div>links for H2 DBeaver config</div>
       <ul className="list-disc pl-8">
         <li>

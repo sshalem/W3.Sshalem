@@ -3,10 +3,17 @@ import H2Dbeaver from "./H2Sql/H2Dbeaver";
 import H2Osiv from "./H2Sql/H2Osiv";
 import H2DatabseBasicConfig from "./H2Sql/H2DatabseBasicConfig";
 
-const anchorLinks = new Map<string, string>();
-anchorLinks.set("h2_databse_basic_config", "h2_databse_basic_config");
-anchorLinks.set("osiv", "osiv");
-anchorLinks.set("h2_dbeaver", "h2 dbeaver");
+// =============================================================================================================
+
+const h2_databse_basic_config = "h2 databse basic config";
+const osiv = "osiv";
+const h2_dbeaver = "h2 dbeaver";
+
+// =============================================================================================================
+
+const anchorList: string[] = [h2_databse_basic_config, osiv, h2_dbeaver];
+
+// =============================================================================================================
 
 const H2 = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -45,11 +52,11 @@ const H2 = () => {
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
-          {[...anchorLinks.entries()].map(([key, value]) => {
+          {anchorList.map((anc) => {
             return (
-              <li key={key}>
-                <a href={`#${key}`} className="hover:underline">
-                  {value}
+              <li key={anc}>
+                <a href={`#${anc}`} className="hover:underline">
+                  {anc}
                 </a>
               </li>
             );
@@ -59,9 +66,9 @@ const H2 = () => {
 
       {/* End Contents */}
 
-      <H2DatabseBasicConfig idAnchor="h2_databse_basic_config" />
-      <H2Osiv idAnchor="osiv" />
-      <H2Dbeaver idAnchor="h2_dbeaver" />
+      <H2DatabseBasicConfig anchor={h2_databse_basic_config} />
+      <H2Osiv anchor={osiv} />
+      <H2Dbeaver anchor={h2_dbeaver} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
