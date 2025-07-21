@@ -1,21 +1,21 @@
 import { useEffect, useRef, useState } from "react";
-import InstallPostgresStandalone from "./PostgreSqlSections/InstallPostgresStandalone";
-import PostgresqlOsiv from "./PostgreSqlSections/PostgresqlOsiv";
-import PostgresqlDetailedConfig from "./PostgreSqlSections/PostgresqlDetailedConfig";
+import DBeaverMySql from "./DBeaver/DBeaverMySql";
+import DBeaverMySqlOnLinode from "./DBeaver/DBeaverMySqlOnLinode";
+import DBeaverPostgresql from "./DBeaver/DBeaverPostgresql";
 
 // =============================================================================================================
 
-const postgresql_detailed_config = "postgresql detailed config";
-const osiv = "osiv";
-const install_postgresql_standalone_on_windows = "install postgresql standalone on windows";
+const dbeaver_mysql = "dbeaver with mysql";
+const dbeaver_mysql_on_linode = "dbeaver with mysql on linode server";
+const dbeaver_postgresql = "dbeaver with postgresql";
 
 // =============================================================================================================
 
-const anchorList: string[] = [postgresql_detailed_config, osiv, install_postgresql_standalone_on_windows];
+const anchorList: string[] = [dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql];
 
 // =============================================================================================================
 
-const Postgresql = () => {
+const DBeaver = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -35,7 +35,6 @@ const Postgresql = () => {
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
   }, []);
-
   return (
     <section>
       {/* Start Contents */}
@@ -65,13 +64,13 @@ const Postgresql = () => {
       </article>
       {/* End Contents */}
 
-      <PostgresqlDetailedConfig anchor={postgresql_detailed_config} />
-      <PostgresqlOsiv anchor={osiv} />
-      <InstallPostgresStandalone anchor={install_postgresql_standalone_on_windows} />
+      <DBeaverMySql anchor={dbeaver_mysql} />
+      <DBeaverMySqlOnLinode anchor={dbeaver_mysql_on_linode} />
+      <DBeaverPostgresql anchor={dbeaver_postgresql} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default Postgresql;
+export default DBeaver;

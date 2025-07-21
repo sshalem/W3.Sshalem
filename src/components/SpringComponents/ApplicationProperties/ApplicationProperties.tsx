@@ -1,10 +1,12 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const ApplicationProperties = () => {
+  let location = useLocation();
+
   return (
-    <div>
-      <Outlet />
-    </div>
+    <section>
+      {location.pathname === "/spring/application-properties" ? <div className="text-3xl">ApplicationProperties main page ...</div> : <Outlet />}
+    </section>
   );
 };
 

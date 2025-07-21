@@ -4,3 +4,4 @@ export { default as MySql } from "./MySql";
 export { default as Postgresql } from "./Postgresql";
 export { default as MongoDB } from "./MongoDB";
 export { default as LoggingConfig } from "./LoggingConfig";
+export { default as DBeaver } from "./DBeaver";

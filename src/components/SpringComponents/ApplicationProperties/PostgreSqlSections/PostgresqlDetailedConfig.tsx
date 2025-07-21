@@ -29,12 +29,16 @@ spring.datasource.password=admin
 # = JPA / HIBERNATE
 # ===============================
 
-#Spring will create a schema
+# Spring will create a schema
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.generate_statistics=true
+
+# disable OSIV
 spring.jpa.open-in-view=false
+
+# show the SQl queries in a vertical way
 spring.jpa.properties.hibernate.format_sql=true
 
 # if this is not set to false i get 

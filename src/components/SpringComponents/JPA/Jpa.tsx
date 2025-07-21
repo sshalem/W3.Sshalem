@@ -1,11 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const Jpa = () => {
-  return (
-    <div className="text-3xl">
-      <Outlet />
-    </div>
-  );
+  let location = useLocation();
+  return <section>{location.pathname === "/spring/jpa" ? <div className="text-3xl">jpa main page ...</div> : <Outlet />}</section>;
 };
 
 export default Jpa;
