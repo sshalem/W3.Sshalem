@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ApplicationPropertiesHighlight } from "../../Highlight";
+import InstallPostgresStandalone from "./PostgreSqlSections/InstallPostgresStandalone";
 
 const Postgresql = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -40,7 +41,7 @@ const Postgresql = () => {
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
           <li>
-            <a href="#Install PostgreSql standalone on windows" className="hover:underline">
+            <a href="#Install_PostgreSql_standalone_on_windows" className="hover:underline">
               Install PostgreSql standalone on windows
             </a>
           </li>
@@ -51,7 +52,8 @@ const Postgresql = () => {
       {/*  */}
       {/*  */}
 
-      <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
+      <InstallPostgresStandalone idAnchor="Install_PostgreSql_standalone_on_windows"></InstallPostgresStandalone>
+      {/* <article className="my-5 scroll-mt-[1.5rem]" id="Install_PostgreSql_standalone_on_windows">
         <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
           Install PostgreSql standalone on windows
         </div>
@@ -74,7 +76,7 @@ const Postgresql = () => {
           <li className="list-decimal">Uninstall it , it will uninstall it to folder pgsql .</li>
           <li className="list-decimal">Create a new folder as pgsql_data </li>
         </ul>
-      </article>
+      </article> */}
 
       {/*  */}
       {/*  */}

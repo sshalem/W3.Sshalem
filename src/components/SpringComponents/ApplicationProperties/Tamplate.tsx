@@ -1,7 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ApplicationPropertiesHighlight } from "../../Highlight";
 
-const Tamplate = () => {
+// ====================================================================================
+// ====================================================================================
+// ====================================================================================
+const XXXX = ({ idAnchor }: { idAnchor: string }) => {
+  return <div></div>;
+};
+
+// ====================================================================================
+// ====================================================================================
+// ====================================================================================
+
+// let anchorLinks: string[] = ["mysql_dialect", "osiv", "mysql_basic_config", "mysql_detailed_config", "mysql_comprehansive_properties_config"];
+const anchorLinks = new Map<string, string>();
+anchorLinks.set("", "");
+anchorLinks.set("", "");
+anchorLinks.set("", "");
+anchorLinks.set("", "");
+
+const SideComponentTemplate = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -17,7 +35,7 @@ const Tamplate = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
-      console.log(ulRef.current.scrollHeight);
+      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
@@ -39,32 +57,28 @@ const Tamplate = () => {
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
-          <li>
-            <a href="#OSIV" className="hover:underline">
-              mysql dialect
-            </a>
-          </li>
+          {[...anchorLinks.entries()].map(([key, value]) => {
+            return (
+              <li key={key}>
+                <a href={`#${key}`} className="hover:underline">
+                  {value}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </article>
       {/* End Contents */}
 
-      {/*  */}
-      {/*  */}
+      {/* <MysqlDialect idAnchor="mysql_dialect" /> */}
 
-      <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">OSIV</div>
-        <ApplicationPropertiesHighlight propertiesCode={osiv} />
-      </article>
-
-      {/*  */}
-      {/*  */}
-
-      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
+      {/* {this div is only for dividing} */}
+      <div className="my-8 h-4" />
     </section>
   );
 };
 
-export default Tamplate;
+export default SideComponentTemplate;
 
 const osiv = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;
