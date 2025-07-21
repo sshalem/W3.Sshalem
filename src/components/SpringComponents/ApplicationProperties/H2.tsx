@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { ApplicationPropertiesHighlight } from "../../Highlight";
+import H2Dbeaver from "./H2Sql/H2Dbeaver";
+import H2Osiv from "./H2Sql/H2Osiv";
+import H2DatabseBasicConfig from "./H2Sql/H2DatabseBasicConfig";
+
+const anchorLinks = new Map<string, string>();
+anchorLinks.set("h2_databse_basic_config", "h2_databse_basic_config");
+anchorLinks.set("osiv", "osiv");
+anchorLinks.set("h2_dbeaver", "h2 dbeaver");
 
 const H2 = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -17,7 +24,6 @@ const H2 = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
-      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
@@ -33,96 +39,33 @@ const H2 = () => {
             [{showContent ? " hide " : " show "}]
           </span>
         </div>
+
         <ul
           ref={ulRef}
           style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
           className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
         >
-          <li>
-            <a href="#H2_Databse_basic_config" className="hover:underline">
-              H2 Databse basic config
-            </a>
-          </li>
-          <li>
-            <a href="#OSIV" className="hover:underline">
-              osiv
-            </a>
-          </li>
-          <li>
-            <a href="#H2_dbeaver" className="hover:underline">
-              H2 DBeaver
-            </a>
-          </li>
+          {[...anchorLinks.entries()].map(([key, value]) => {
+            return (
+              <li key={key}>
+                <a href={`#${key}`} className="hover:underline">
+                  {value}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </article>
-      {/* End Contents */}
-      {/*       
-      <article className="my-5 scroll-mt-[1.5rem]"> 
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">XXXX</div>
-        <ApplicationPropertiesHighlight propertiesCode={h2} />
-      </article>
-      */}
-      <article className="my-5 scroll-mt-[1.5rem]" id="H2_Databse_basic_config">
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 Databse basic config </div>
-        <ApplicationPropertiesHighlight propertiesCode={h2} />
-      </article>
-      {/*  */}
-      {/*  */}
-      {/*  */}
-      <article className="my-5 scroll-mt-[1.5rem]" id="OSIV">
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">OSIV</div>
-        <div className="my-4">Regarding this property , see the project of LAZY Loading, I explain it there</div>
-        <ApplicationPropertiesHighlight propertiesCode={osiv} />
-      </article>
-      {/*  */}
-      {/*  */}
-      {/*  */}
-      <article className="my-5 scroll-mt-[1.5rem]" id="H2_dbeaver">
-        <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
-        <div>links for H2 DBeaver config</div>
-        <ul className="list-disc pl-8">
-          <li>
-            <a href="https://www.h2database.com/html/main.html" className="text-blue-700">
-              https://www.h2database.com/html/main.html
-            </a>
-          </li>
-          <li>
-            <a href="https://www.h2database.com/html/features.html" className="text-blue-700">
-              https://www.h2database.com/html/features.html
-            </a>
-          </li>
-        </ul>
 
-        <div className="mt-5">need to check what are this paths for</div>
-        <ul className="list-decimal pl-8">
-          <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\maven\maven-central\com.h2database\h2-2.1.210.jar</li>
-          <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\remote\h2database\h2database\master\LICENSE.txt</li>
-        </ul>
-      </article>
-      {/*  */}
-      {/*  */}
-      {/*  */}
+      {/* End Contents */}
+
+      <H2DatabseBasicConfig idAnchor="h2_databse_basic_config" />
+      <H2Osiv idAnchor="osiv" />
+      <H2Dbeaver idAnchor="h2_dbeaver" />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
 export default H2;
-
-const h2 = `spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-
-# Enabling H2 Console
-spring.h2.console.enabled=true
-
-# Custom H2 Console URL from /h2-console to /h2
-spring.h2.console.path=/h2
-
-# console color enabled
-spring.output.ansi.enabled=always`;
-
-const osiv = `# Disable OSIV
-spring.jpa.open-in-view=false`;

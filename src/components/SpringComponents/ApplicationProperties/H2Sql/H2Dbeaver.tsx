@@ -1,0 +1,28 @@
+const H2Dbeaver = ({ idAnchor }: { idAnchor: string }) => {
+  return (
+    <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">H2 DBeaver </div>
+      <div>links for H2 DBeaver config</div>
+      <ul className="list-disc pl-8">
+        <li>
+          <a href="https://www.h2database.com/html/main.html" className="text-blue-700">
+            https://www.h2database.com/html/main.html
+          </a>
+        </li>
+        <li>
+          <a href="https://www.h2database.com/html/features.html" className="text-blue-700">
+            https://www.h2database.com/html/features.html
+          </a>
+        </li>
+      </ul>
+
+      <div className="mt-5">need to check what are this paths for</div>
+      <ul className="list-decimal pl-8">
+        <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\maven\maven-central\com.h2database\h2-2.1.210.jar</li>
+        <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\remote\h2database\h2database\master\LICENSE.txt</li>
+      </ul>
+    </article>
+  );
+};
+
+export default H2Dbeaver;
