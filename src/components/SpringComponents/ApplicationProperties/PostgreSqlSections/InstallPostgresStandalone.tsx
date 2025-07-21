@@ -4,14 +4,16 @@ import batch_command from "../../../../assets/batch_command.jpg";
 import start_postgresql_server from "../../../../assets/start_postgresql_server.jpg";
 import stop_postgresql_server from "../../../../assets/stop_postgresql_server.jpg";
 
+import pgadmin_1 from "../../../../assets/pgadmin_1.jpg";
+import pgadmin_2 from "../../../../assets/pgadmin_2.jpg";
+import pgadmin_3 from "../../../../assets/pgadmin_3.jpg";
+
 import { FaDiamond } from "react-icons/fa6";
 
-const InstallPostgresStandalone = ({ idAnchor }: { idAnchor: string }) => {
+const InstallPostgresStandalone = ({ idAnchor, sectionTitle }: { idAnchor: string; sectionTitle: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={idAnchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">
-        Install PostgreSql standalone on windows
-      </div>
+      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{sectionTitle}</div>
       <div className="my-4">Links :</div>
       <ul className="mx-8">
         <li className="list-disc">
@@ -75,6 +77,45 @@ const InstallPostgresStandalone = ({ idAnchor }: { idAnchor: string }) => {
       <div>
         <img src={stop_postgresql_server} alt="start-postgresql-server-img" className="mx-10 my-10" />
       </div>
+      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">start pgAdmin4</div>
+
+      <ul className="mx-8">
+        <li className="my-1 list-decimal">
+          Go to folder of C:\Localdata\DB\postgresql\pgsql\pgAdmin 4\runtime , click of the <Span>pgAdmin4.exe</Span> file
+        </li>
+        Type the password <Span>postgres</Span>
+        <li className="my-1 list-decimal">Once the pgAdmin tool opens , create new server</li>
+        Right click on the servers -{">"} Register -{">"} Server
+        <div>
+          <img src={pgadmin_1} alt="start-postgresql-server-img" className="mx-10 my-10" />
+        </div>
+        <li className="my-1 list-decimal">
+          Type a name , for example <Span>myServer</Span>
+          <div>
+            <img src={pgadmin_2} alt="start-postgresql-server-img" className="mx-10 my-10" />
+          </div>
+        </li>
+        <li className="my-1 list-decimal">
+          <div className="my-2">In the tab of Connection type the following:</div>
+          <div className="my-1 ml-8 flex">
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> Hostname : &nbsp;<Span>localhost</Span>
+          </div>
+          <div className="my-1 ml-8 flex">
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> Port : &nbsp;<Span>5432</Span>
+          </div>
+          <div className="my-1 ml-8 flex">
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> Username : &nbsp;<Span>postgres</Span> &nbsp; (This is the user we created in
+            Install steps )
+          </div>
+          <div className="my-1 ml-8 flex">
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<Span>postgres</Span> &nbsp; (This is the user we created in
+            Install steps )
+          </div>
+          <div>
+            <img src={pgadmin_3} alt="start-postgresql-server-img" className="mx-10 my-10" />
+          </div>
+        </li>
+      </ul>
     </article>
   );
 };

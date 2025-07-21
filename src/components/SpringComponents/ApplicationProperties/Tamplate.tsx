@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 // ====================================================================================
 // ====================================================================================
 // ====================================================================================
-// const XXXX = ({ idAnchor }: { idAnchor: string }) => {
+// const XXXX = ({ idAnchor, sectionTitle }: { idAnchor: string; sectionTitle: string }) => {
 //   return <div></div>;
 // };
 

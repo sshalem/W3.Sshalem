@@ -1,10 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import InstallPostgresStandalone from "./PostgreSqlSections/InstallPostgresStandalone";
+import PostgresqlOsiv from "./PostgreSqlSections/PostgresqlOsiv";
+import PostgresqlDetailedConfig from "./PostgreSqlSections/PostgresqlDetailedCOnfig";
+
+const anchor_postgresql_detailed_config = "postgresql_detailed_config";
+const section_postgresql_detailed_config = "postgresql detailed config";
+const anchor_install_postgresql_standalone_on_windows = "install_postgresql_standalone_on_windows";
+const section_install_postgresql_standalone_on_windows = "install postgresql standalone on windows";
+const anchor_osiv = "osiv";
+const section_osiv = "osiv";
 
 const anchorLinks = new Map<string, string>();
-anchorLinks.set("install_postgresql_standalone_on_windows", "install postgresql standalone on windows");
-// anchorLinks.set("", "");
-// anchorLinks.set("", "");
+anchorLinks.set(anchor_postgresql_detailed_config, section_postgresql_detailed_config);
+anchorLinks.set(anchor_osiv, section_osiv);
+anchorLinks.set(anchor_install_postgresql_standalone_on_windows, section_install_postgresql_standalone_on_windows);
+
 // anchorLinks.set("", "");
 
 const Postgresql = () => {
@@ -57,7 +67,12 @@ const Postgresql = () => {
       </article>
       {/* End Contents */}
 
-      <InstallPostgresStandalone idAnchor="install_postgresql_standalone_on_windows" />
+      <PostgresqlDetailedConfig idAnchor={anchor_postgresql_detailed_config} sectionTitle={section_postgresql_detailed_config} />
+      <PostgresqlOsiv idAnchor={anchor_osiv} sectionTitle={section_osiv} />
+      <InstallPostgresStandalone
+        idAnchor={anchor_install_postgresql_standalone_on_windows}
+        sectionTitle={section_install_postgresql_standalone_on_windows}
+      />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
