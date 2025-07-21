@@ -64,7 +64,7 @@ const DropDownApplicationProperties = () => {
         <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
         <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />
         <SideDropdownLink pageName="DBeaver" internalLink="application-properties/dbeaver" />
-        <SideDropdownLink pageName="Logging Config" internalLink="application-properties/logging" />
+        <SideDropdownLink pageName="Logging" internalLink="application-properties/logging" />
       </div>
     </section>
   );

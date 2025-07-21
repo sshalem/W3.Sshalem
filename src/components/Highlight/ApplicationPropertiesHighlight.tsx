@@ -13,7 +13,7 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
       <PrismLightSyntaxHighlighter
         language="properties"
         style={PROPERTIES_STYLE}
-        showLineNumbers={true}
+        // showLineNumbers={true}
         customStyle={{
           fontSize: "0.85rem",
           backgroundColor: "#fbfbfb",
