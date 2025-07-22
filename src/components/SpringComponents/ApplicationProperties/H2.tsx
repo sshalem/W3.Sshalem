@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import H2Dbeaver from "./H2Sql/H2Dbeaver";
-import H2Osiv from "./H2Sql/H2Osiv";
-import H2DatabseBasicConfig from "./H2Sql/H2DatabseBasicConfig";
+import H2Dbeaver from "./H2SqlSections/H2Dbeaver";
+import H2Osiv from "./H2SqlSections/H2Osiv";
+import H2DatabseBasicConfig from "./H2SqlSections/H2DatabseBasicConfig";
+import ContentList from "../../ContentList";
 
 // =============================================================================================================
 
@@ -47,21 +48,7 @@ const H2 = () => {
           </span>
         </div>
 
-        <ul
-          ref={ulRef}
-          style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
-        >
-          {anchorList.map((anc) => {
-            return (
-              <li key={anc}>
-                <a href={`#${anc}`} className="hover:underline">
-                  {anc}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <ContentList ulRef={ulRef} showContent={showContent} contentHeight={contentHeight} anchorList={anchorList}></ContentList>
       </article>
 
       {/* End Contents */}

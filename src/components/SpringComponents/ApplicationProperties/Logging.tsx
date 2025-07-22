@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import LoggingSlf4JLogback from "./Logging/LoggingSlf4JLogback";
-import LoggingLogUtil from "./Logging/LoggingLogUtil";
+import LoggingSlf4JLogback from "./LoggingSections/LoggingSlf4JLogback";
+import LoggingLogUtil from "./LoggingSections/LoggingLogUtil";
 import ContentList from "../../ContentList";
 
 // =============================================================================================================

@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import DBeaverMySql from "./DBeaver/DBeaverMySql";
-import DBeaverMySqlOnLinode from "./DBeaver/DBeaverMySqlOnLinode";
-import DBeaverPostgresql from "./DBeaver/DBeaverPostgresql";
-import DBeaverVersion from "./DBeaver/DBeaverVersion";
+import DBeaverMySql from "./DBeaverSections/DBeaverMySql";
+import DBeaverMySqlOnLinode from "./DBeaverSections/DBeaverMySqlOnLinode";
+import DBeaverPostgresql from "./DBeaverSections/DBeaverPostgresql";
+import DBeaverVersion from "./DBeaverSections/DBeaverVersion";
+import ContentList from "../../ContentList";
 
 // =============================================================================================================
 
@@ -48,21 +49,7 @@ const DBeaver = () => {
           </span>
         </div>
 
-        <ul
-          ref={ulRef}
-          style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
-        >
-          {anchorList.map((anc) => {
-            return (
-              <li key={anc}>
-                <a href={`#${anc}`} className="hover:underline">
-                  {anc}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <ContentList ulRef={ulRef} showContent={showContent} contentHeight={contentHeight} anchorList={anchorList}></ContentList>
       </article>
       {/* End Contents */}
 
