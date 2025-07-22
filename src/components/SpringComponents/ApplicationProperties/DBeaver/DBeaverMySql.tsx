@@ -5,11 +5,12 @@ import dbeaver_mysql_1 from "../../../../assets/dbeaver_mysql_1.jpg";
 import dbeaver_mysql_2 from "../../../../assets/dbeaver_mysql_2.jpg";
 import dbeaver_mysql_2_1 from "../../../../assets/dbeaver_mysql_2_1.jpg";
 import dbeaver_mysql_3 from "../../../../assets/dbeaver_mysql_3.jpg";
+import ContentTitle from "../../../ContentTitle";
 
 const DBeaverMySql = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
+      <ContentTitle anchor={anchor} />
 
       <ul className="mx-8">
         <li className="my-1 list-disc">In the image below, I show all my current DB's I have in MySql workbench</li>

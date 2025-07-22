@@ -4,11 +4,12 @@ import { Span } from "../../../Highlight";
 import dbeaver_postgres_1 from "../../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../../assets/dbeaver_postgres_3.jpg";
+import ContentTitle from "../../../ContentTitle";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
+      <ContentTitle anchor={anchor} />
 
       <ul className="mx-8">
         <li className="my-1 list-disc">

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import LoggingSlf4JLogback from "./Logging/LoggingSlf4JLogback";
+import LoggingLogUtil from "./Logging/LoggingLogUtil";
 
 // =============================================================================================================
 
@@ -63,6 +64,7 @@ const Logging = () => {
       {/* End Contents */}
 
       <LoggingSlf4JLogback anchor={slf4j_or_logback} />
+      <LoggingLogUtil anchor={log_util} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

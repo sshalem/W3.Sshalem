@@ -1,9 +1,11 @@
+import ContentTitle from "../../../ContentTitle";
+
 import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
 const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
+      <ContentTitle anchor={anchor} />
       <div>Links with examples of how to config:</div>
       <ul className="mx-8">
         <li className="my-1 list-decimal">

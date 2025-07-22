@@ -1,9 +1,10 @@
+import ContentTitle from "../../../ContentTitle";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <div className="mb-8 inline-block bg-gray-800 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</div>
+      <ContentTitle anchor={anchor} />
       <ApplicationPropertiesHighlight propertiesCode={h2} />
     </article>
   );

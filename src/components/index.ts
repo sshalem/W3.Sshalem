@@ -11,7 +11,7 @@ export { default as Header } from "./Header";
 export { default as MainLayoutTitle } from "./MainLayoutTitle";
 export { default as SideDropdown } from "./SideDropDown";
 export { default as SideDropdownLink } from "./SideDropdownLink";
-
+export { default as ContentTitle } from "./ContentTitle";
 export { default as CaretDown } from "./CaretDown";
 export { default as CaretUp } from "./CaretUp";
 // export { default as ApplicationProperties } from "./SpringComponents/ApplicationProperties";
