@@ -20,8 +20,7 @@ const DropDownRest = () => {
   useEffect(() => {
     if (location.pathname.substring(8).includes("rest")) {
       if (location.pathname.split("/")[3] === undefined) {
-        // do nothing ,
-        // this way I prevent the re-render of  setShowList(true);
+        // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
         setShowList(true);
       }
