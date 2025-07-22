@@ -49,7 +49,14 @@ const router = createBrowserRouter(
                 { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
               ],
             },
-            { path: "rest", element: <Rest /> },
+            {
+              path: "rest",
+              element: <Rest />,
+              children: [
+                { path: "one2many-bi-eager", element: <One2ManyBiEager /> },
+                { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
+              ],
+            },
             { path: "spring-doc", element: <SpringDoc /> },
             { path: "swagger", element: <Swagger /> },
             { path: "open-AI", element: <OpenAI /> },

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { CaretDown, CaretUp, SideBarLink, SideDropdownLink } from "../components";
+import { CaretDown, CaretUp, SideBarLink, SideDropdownLink, SideDropDownTopic } from "../components";
 
 const DropDownJpa = () => {
   const [showList, setShowList] = useState<boolean>(false);
@@ -35,30 +35,7 @@ const DropDownJpa = () => {
 
   return (
     <section>
-      <article className="relative">
-        <div className="pointer-events-none">
-          {location.pathname.includes("jpa") ? (
-            <div>{showList ? <CaretUp /> : <CaretDown />}</div>
-          ) : (
-            <div className="opacity-20">
-              <CaretDown />
-            </div>
-          )}
-        </div>
-        <div onClick={handleOpenList} className="select-none">
-          <SideBarLink pageName="JPA" internalLink="jpa" />
-        </div>
-      </article>
-      {/* <article onClick={handleOpenList} className="relative select-none">
-        {location.pathname.includes("jpa") ? (
-          <div>{showList ? <CaretUp /> : <CaretDown />}</div>
-        ) : (
-          <div className="pointer-events-none opacity-20">
-            <CaretDown />
-          </div>
-        )}
-        <SideBarLink pageName="JPA" internalLink="jpa" />
-      </article> */}
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="jpa" pageName="JPA" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../components";
-import { DropDownApplicationProperties, DropDownJpa } from "../DropDown";
+import { DropDownApplicationProperties, DropDownJpa, DropDownRest } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
@@ -37,6 +37,7 @@ const Spring = () => {
             <SideBarLink pageName="Spring Home" internalLink="." />
             <DropDownApplicationProperties />
             <DropDownJpa />
+            <DropDownRest />
 
             {/* <SideBarLink pageName="Rest" internalLink="rest" />
             <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
