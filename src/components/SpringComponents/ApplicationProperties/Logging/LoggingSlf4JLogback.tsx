@@ -1,11 +1,11 @@
-import ContentTitle from "../../../ContentAnchor";
+import ContentAnchor from "../../../ContentAnchor";
 
 import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
 const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <ContentTitle anchor={anchor} />
+      <ContentAnchor anchor={anchor} />
       <div>Links with examples of how to config:</div>
       <ul className="mx-8">
         <li className="my-1 list-decimal">

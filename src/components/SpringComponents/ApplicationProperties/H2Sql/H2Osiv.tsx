@@ -1,10 +1,10 @@
-import ContentTitle from "../../../ContentAnchor";
+import ContentAnchor from "../../../ContentAnchor";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const H2Osiv = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <ContentTitle anchor={anchor} />
+      <ContentAnchor anchor={anchor} />
       <div className="my-4">
         Regarding this property , see the project of LAZY Loading, (I explain it there). <br />I get a warning in spring console since by default its
         set to
