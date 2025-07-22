@@ -17,6 +17,3 @@ export { default as CaretDown } from "./CaretDown";
 export { default as CaretUp } from "./CaretUp";
 export { default as GitHub } from "./GitHub";
 export { default as GitHubLiAnchor } from "./GitHubLiAnchor";
-// export { default as ApplicationProperties } from "./SpringComponents/ApplicationProperties";
-// export { default as SpringHome } from "./SpringComponents/SpringHome";
-// export { default as Jpa } from "./SpringComponents/Jpa";
