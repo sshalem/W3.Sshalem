@@ -14,8 +14,8 @@ import {
   TransactionManagement,
 } from "./SpringComponents";
 
-import { ApplicationProperties, DBeaver, H2, Logging, MySql, Postgresql } from "./SpringComponents/ApplicationProperties";
-import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JPA";
+import { ApplicationProperties, DBeaver, H2, Logging, MySql, Postgresql } from "./SpringComponents/ApplPropsPkg";
+import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
 
 const router = createBrowserRouter(
   [
