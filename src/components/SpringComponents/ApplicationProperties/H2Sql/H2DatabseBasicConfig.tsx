@@ -1,4 +1,4 @@
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {

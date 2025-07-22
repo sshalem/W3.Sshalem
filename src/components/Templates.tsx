@@ -1,4 +1,6 @@
-import ContentTitle from "../../../ContentAnchor";
+// ==========================================================================================
+
+import ContentTitle from "./ContentAnchor";
 
 const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,3 +15,5 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
 };
 
 export default LoggingLogUtil;
+
+// ==========================================================================================

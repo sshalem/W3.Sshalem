@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import LoggingSlf4JLogback from "./Logging/LoggingSlf4JLogback";
 import LoggingLogUtil from "./Logging/LoggingLogUtil";
+import ContentList from "../../ContentList";
 
 // =============================================================================================================
 
@@ -44,21 +45,7 @@ const Logging = () => {
           </span>
         </div>
 
-        <ul
-          ref={ulRef}
-          style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-          className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
-        >
-          {anchorList.map((anc) => {
-            return (
-              <li key={anc}>
-                <a href={`#${anc}`} className="hover:underline">
-                  {anc}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <ContentList ulRef={ulRef} showContent={showContent} contentHeight={contentHeight} anchorList={anchorList}></ContentList>
       </article>
 
       {/* End Contents */}

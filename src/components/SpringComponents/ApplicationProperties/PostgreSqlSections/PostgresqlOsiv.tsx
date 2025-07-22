@@ -1,4 +1,4 @@
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const PostgresqlOsiv = ({ anchor }: { anchor: string }) => {

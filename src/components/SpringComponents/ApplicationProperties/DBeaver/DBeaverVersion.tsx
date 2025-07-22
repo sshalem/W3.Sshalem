@@ -1,5 +1,5 @@
 import dbeaver_version from "../../../../assets/dbeaver_version.jpg";
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 
 const DBeaverVersion = ({ anchor }: { anchor: string }) => {
   return (

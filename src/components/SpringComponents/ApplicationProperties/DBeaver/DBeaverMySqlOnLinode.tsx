@@ -1,4 +1,4 @@
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 
 const DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {
   return (

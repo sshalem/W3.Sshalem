@@ -4,7 +4,7 @@ import { Span } from "../../../Highlight";
 import dbeaver_postgres_1 from "../../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../../assets/dbeaver_postgres_3.jpg";
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (

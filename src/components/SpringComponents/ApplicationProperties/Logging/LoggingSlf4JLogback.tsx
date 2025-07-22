@@ -1,4 +1,4 @@
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 
 import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
@@ -54,7 +54,7 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
         </li>
       </ul>
 
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl tracking-widest text-white">POM file </div>
+      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">POM file </div>
       <div>
         <Span>Logback</Span> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one dependency
         that it is part of spring boot , <br />
@@ -65,15 +65,13 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
       </div>
       {/*  */}
       {/*  */}
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl tracking-widest text-white">Code usage example </div>
+      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Code usage example </div>
       <div>
         <JavaHighlight javaCode={javaCodeLogExample} />
       </div>
       {/*  */}
       {/*  */}
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl tracking-widest text-white">
-        Re-Produce Logback console Logging pattern
-      </div>
+      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Re-Produce Logback console Logging pattern</div>
       <div>
         From logback &nbsp;
         <a href="https://logback.qos.ch/manual/layouts.html" target="_blank" className="text-blue-500">

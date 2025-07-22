@@ -9,7 +9,7 @@ import pgadmin_2 from "../../../../assets/pgadmin_2.jpg";
 import pgadmin_3 from "../../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (

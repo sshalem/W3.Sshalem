@@ -1,4 +1,4 @@
-import ContentTitle from "../../../ContentTitle";
+import ContentTitle from "../../../ContentAnchor";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const H2Osiv = ({ anchor }: { anchor: string }) => {
