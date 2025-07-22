@@ -3,7 +3,7 @@ import DBeaverMySql from "./DBeaverSections/DBeaverMySql";
 import DBeaverMySqlOnLinode from "./DBeaverSections/DBeaverMySqlOnLinode";
 import DBeaverPostgresql from "./DBeaverSections/DBeaverPostgresql";
 import DBeaverVersion from "./DBeaverSections/DBeaverVersion";
-import ContentList from "../../ContentList";
+import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
@@ -41,16 +41,13 @@ const DBeaver = () => {
   return (
     <section>
       {/* Start Contents */}
-      <article className="content-sm content-md content-lg content-xl content-basic">
-        <div className="mb-0 w-[100%] bg-gray-800 px-2 py-1 text-center capitalize">
-          <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
-          <span className={`${showContent ? `text-red-400` : `text-teal-400`} cursor-pointer text-xs`} onClick={handleShowContent}>
-            [{showContent ? " hide " : " show "}]
-          </span>
-        </div>
-
-        <ContentList ulRef={ulRef} showContent={showContent} contentHeight={contentHeight} anchorList={anchorList}></ContentList>
-      </article>
+      <ContentMenu
+        anchorList={anchorList}
+        contentHeight={contentHeight}
+        handleShowContent={handleShowContent}
+        showContent={showContent}
+        ulRef={ulRef}
+      />
       {/* End Contents */}
 
       <DBeaverVersion anchor={dbeaver_version} />
