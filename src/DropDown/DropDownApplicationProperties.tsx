@@ -49,7 +49,6 @@ const DropDownApplicationProperties = () => {
       >
         {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
         {/* <div className={`${showList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
-        {/* <SideDropdownLink pageName="H2" internalLink="application-properties/." /> */}
         <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
         <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
         <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />
