@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import SideDropdownLink from "../SideDropdownLink";
-import SideBarLink from "../SideBarLink";
 import { useLocation } from "react-router-dom";
-import { CaretDown, CaretUp } from "../../components";
+import { CaretDown, CaretUp, SideBarLink, SideDropdownLink } from "../components";
 
 const DropDownApplicationProperties = () => {
   const [showList, setShowList] = useState<boolean>(false);

@@ -13,10 +13,10 @@ import {
   SpringSecurity,
   Swagger,
   TransactionManagement,
-} from "./components/SpringComponents";
+} from "./SpringComponents";
 
-import { ApplicationProperties, DBeaver, H2, LoggingConfig, MySql, Postgresql } from "./components/SpringComponents/ApplicationProperties";
-import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./components/SpringComponents/JPA";
+import { ApplicationProperties, DBeaver, H2, LoggingConfig, MySql, Postgresql } from "./SpringComponents/ApplicationProperties";
+import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JPA";
 
 const router = createBrowserRouter(
   [

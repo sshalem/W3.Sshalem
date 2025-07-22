@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import H2Dbeaver from "./H2SqlSections/H2Dbeaver";
 import H2Osiv from "./H2SqlSections/H2Osiv";
 import H2DatabseBasicConfig from "./H2SqlSections/H2DatabseBasicConfig";
-import ContentMenu from "../../ContentMenu";
+import { ContentMenu } from "../../components";
 
 // =============================================================================================================
 

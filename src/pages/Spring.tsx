@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../components";
-import { DropDownApplicationProperties, DropDownJpa } from "../components/DropDown";
+import { DropDownApplicationProperties, DropDownJpa } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 

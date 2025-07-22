@@ -1,7 +1,6 @@
-import ContentAnchor from "../../../ContentAnchor";
-import { GitHub, GitHubLiAnchor } from "../../../../components";
+import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 
-import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
 const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
   return (

@@ -1,5 +1,5 @@
-import dbeaver_version from "../../../../assets/dbeaver_version.jpg";
-import ContentAnchor from "../../../ContentAnchor";
+import dbeaver_version from "../../../assets/dbeaver_version.jpg";
+import { ContentAnchor } from "../../../components";
 
 const DBeaverVersion = ({ anchor }: { anchor: string }) => {
   return (

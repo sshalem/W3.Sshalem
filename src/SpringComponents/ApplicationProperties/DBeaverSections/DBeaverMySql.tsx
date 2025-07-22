@@ -1,11 +1,11 @@
 import { FaDiamond } from "react-icons/fa6";
-import { Span } from "../../../../Highlight";
 
-import dbeaver_mysql_1 from "../../../../assets/dbeaver_mysql_1.jpg";
-import dbeaver_mysql_2 from "../../../../assets/dbeaver_mysql_2.jpg";
-import dbeaver_mysql_2_1 from "../../../../assets/dbeaver_mysql_2_1.jpg";
-import dbeaver_mysql_3 from "../../../../assets/dbeaver_mysql_3.jpg";
-import ContentAnchor from "../../../ContentAnchor";
+import dbeaver_mysql_1 from "../../../assets/dbeaver_mysql_1.jpg";
+import dbeaver_mysql_2 from "../../../assets/dbeaver_mysql_2.jpg";
+import dbeaver_mysql_2_1 from "../../../assets/dbeaver_mysql_2_1.jpg";
+import dbeaver_mysql_3 from "../../../assets/dbeaver_mysql_3.jpg";
+import { Span } from "../../../Highlight";
+import { ContentAnchor } from "../../../components";
 
 const DBeaverMySql = ({ anchor }: { anchor: string }) => {
   return (

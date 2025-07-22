@@ -1,4 +1,4 @@
-import ContentAnchor from "../../../ContentAnchor";
+import { ContentAnchor } from "../../../components";
 
 const H2Dbeaver = ({ anchor }: { anchor: string }) => {
   return (

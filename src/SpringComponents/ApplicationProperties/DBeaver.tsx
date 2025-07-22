@@ -3,7 +3,7 @@ import DBeaverMySql from "./DBeaverSections/DBeaverMySql";
 import DBeaverMySqlOnLinode from "./DBeaverSections/DBeaverMySqlOnLinode";
 import DBeaverPostgresql from "./DBeaverSections/DBeaverPostgresql";
 import DBeaverVersion from "./DBeaverSections/DBeaverVersion";
-import ContentMenu from "../../ContentMenu";
+import { ContentMenu } from "../../components";
 
 // =============================================================================================================
 

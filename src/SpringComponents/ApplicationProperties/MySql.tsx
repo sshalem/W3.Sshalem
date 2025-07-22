@@ -4,7 +4,7 @@ import MySqlOSIV from "./MySqlSections/MySqlOSIV";
 import MysqlBasicConfig from "./MySqlSections/MysqlBasicConfig";
 import MySqlDetailedConfig from "./MySqlSections/MySqlDetailedConfig";
 import MySqlComprehansivePropertiesConfig from "./MySqlSections/MySqlComprehansivePropertiesConfig";
-import ContentMenu from "../../ContentMenu";
+import { ContentMenu } from "../../components";
 
 // =============================================================================================================
 

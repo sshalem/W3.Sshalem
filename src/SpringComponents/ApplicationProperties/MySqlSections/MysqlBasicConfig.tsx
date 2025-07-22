@@ -1,5 +1,5 @@
-import ContentAnchor from "../../../ContentAnchor";
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../Highlight";
+import { ContentAnchor } from "../../../components";
 
 const MysqlBasicConfig = ({ anchor }: { anchor: string }) => {
   return (

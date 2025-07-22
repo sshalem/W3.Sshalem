@@ -1,10 +1,9 @@
 import { FaDiamond } from "react-icons/fa6";
-import { Span } from "../../../../Highlight";
-
-import dbeaver_postgres_1 from "../../../../assets/dbeaver_postgres_1.jpg";
-import dbeaver_postgres_2 from "../../../../assets/dbeaver_postgres_2.jpg";
-import dbeaver_postgres_3 from "../../../../assets/dbeaver_postgres_3.jpg";
-import ContentAnchor from "../../../ContentAnchor";
+import dbeaver_postgres_1 from "../../../assets/dbeaver_postgres_1.jpg";
+import dbeaver_postgres_2 from "../../../assets/dbeaver_postgres_2.jpg";
+import dbeaver_postgres_3 from "../../../assets/dbeaver_postgres_3.jpg";
+import { Span } from "../../../Highlight";
+import { ContentAnchor } from "../../../components";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (

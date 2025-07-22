@@ -1,21 +1,20 @@
-import { BatchHighlight, Span, SpanText } from "../../../../Highlight";
-import psql_data_folder from "../../../../assets/psql_data_folder.jpg";
-import batch_command from "../../../../assets/batch_command.jpg";
-import start_postgresql_server from "../../../../assets/start_postgresql_server.jpg";
-import stop_postgresql_server from "../../../../assets/stop_postgresql_server.jpg";
+import { BatchHighlight, Span, SpanText } from "../../../Highlight";
+import psql_data_folder from "../../../assets/psql_data_folder.jpg";
+import batch_command from "../../../assets/batch_command.jpg";
+import start_postgresql_server from "../../../assets/start_postgresql_server.jpg";
+import stop_postgresql_server from "../../../assets/stop_postgresql_server.jpg";
 
-import pgadmin_1 from "../../../../assets/pgadmin_1.jpg";
-import pgadmin_2 from "../../../../assets/pgadmin_2.jpg";
-import pgadmin_3 from "../../../../assets/pgadmin_3.jpg";
+import pgadmin_1 from "../../../assets/pgadmin_1.jpg";
+import pgadmin_2 from "../../../assets/pgadmin_2.jpg";
+import pgadmin_3 from "../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
-import ContentTitle from "../../../ContentAnchor";
-import { GitHub, GitHubLiAnchor } from "../../../../components";
+import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentTitle anchor={anchor} />
+      <ContentAnchor anchor={anchor} />
       <div className="my-4">Links :</div>
       <ul className="mx-8">
         <li className="list-disc">
