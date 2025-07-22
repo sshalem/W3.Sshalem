@@ -7,28 +7,28 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div>Links with examples of how to config:</div>
-      <ul className="mx-8">
-        <li className="my-1 list-decimal">
+      <ul className="mx-8 list-decimal">
+        <li className="my-1">
           <a href="https://dzone.com/articles/configuring-logback-with-spring-boot" target="_blank" className="text-blue-500">
             DZone
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://www.baeldung.com/logback" target="_blank" className="text-blue-500">
             Baeldung
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://mkyong.com/spring-boot/spring-boot-logging-example/" target="_blank" className="text-blue-500">
             MyKong
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://www.codingame.com/playgrounds/4497/configuring-logback-with-spring-boot" target="_blank" className="text-blue-500">
             Configuring Logback with Spring Boot
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://logback.qos.ch/" target="_blank" className="text-blue-500">
             Logback
           </a>
@@ -37,17 +37,17 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
             logback manual
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://docs.spring.io/spring-boot/docs/2.7.6/reference/htmlsingle/#features.logging" target="_blank" className="text-blue-500">
             Spring Doc 2.7.6 - Logging
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://howtodoinjava.com/logback/logback-html-layout/" target="_blank" className="text-blue-500">
             Logback HTML layout
           </a>
         </li>
-        <li className="my-1 list-decimal">
+        <li className="my-1">
           <a href="https://www.youtube.com/watch?v=ZmTNAKuTyVg" target="_blank" className="text-blue-500">
             Logback Video
           </a>
@@ -129,16 +129,16 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
           <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />
         </div>
         <div className="my-8">logging.pattern.console exlpained:</div>
-        <ul className="mx-8">
-          <li className="my-1 list-disc">
+        <ul className="mx-8 list-disc">
+          <li className="my-1">
             <ApplicationPropertiesHighlight propertiesCode={line_1} /> Date and Time: Millisecond precision and easily sortable.
           </li>
-          <li className="my-1 list-disc"></li>
-          <li className="my-1 list-disc"></li>
-          <li className="my-1 list-disc"></li>
-          <li className="my-1 list-disc"></li>
-          <li className="my-1 list-disc"></li>
-          <li className="my-1 list-disc"></li>
+          <li className="my-1"></li>
+          <li className="my-1"></li>
+          <li className="my-1"></li>
+          <li className="my-1"></li>
+          <li className="my-1"></li>
+          <li className="my-1"></li>
         </ul>
       </section>
       {/*  */}
