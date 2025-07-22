@@ -1,6 +1,7 @@
 import ContentAnchor from "../../../ContentAnchor";
+import { GitHub, GitHubLiAnchor } from "../../../../components";
 
-import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
+import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../../Highlight";
 
 const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
@@ -53,51 +54,106 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
           </a>
         </li>
       </ul>
-
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">POM file </div>
-      <div>
-        <Span>Logback</Span> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one dependency
-        that it is part of spring boot , <br />
-        <div>
-          for example : <span className="text-red-500"> web starter depenency</span>
+      {/*  */}
+      {/*  */}
+      <section>
+        <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Why Logback </div>
+        <ul className="mx-8 list-decimal">
+          <li className="my-1">Logback is a successor to log4j</li>
+          <li className="my-1">Great improvement over log4j</li>
+          <li className="my-1">Faster & smaller memory footprint thatn log4j</li>
+          <li className="my-1">
+            Implements <Span>SLF4J</Span> natively
+          </li>
+          <li className="my-1">Automatic reloading of configuration files </li>
+          <li className="my-1">Automatic removal of old log archives</li>
+          <li className="my-1">Automatic compression of archived log files</li>
+          <li className="my-1">Filters : used-based logging, thread-based logging</li>
+        </ul>
+      </section>
+      {/*  */}
+      {/*  */}
+      <section>
+        <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
+          Rolling file setup in application.properties
         </div>
-        <XmlHighlight xmlCode={dependency} />
-      </div>
+        <ul className="mx-8 list-decimal">
+          <li className="my-1">logging.file.path</li>
+          <li className="my-1">logging.file.name</li>
+          <li className="my-1">logging.pattern.file</li>
+          <li className="my-1">logging.pattern.rolling-file-name</li>
+          <li className="my-1">logging.file.max.size (default: 10MB)</li>
+          <li className="my-1">logging.file.max.history (default: 7 days)</li>
+          <li className="my-1">logging.file.total-size-cap</li>
+          <li className="my-1">logging.file.clean-history-on-start</li>
+        </ul>
+      </section>
       {/*  */}
       {/*  */}
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Code usage example </div>
-      <div>
-        <JavaHighlight javaCode={javaCodeLogExample} />
-      </div>
+      <section>
+        <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">POM file </div>
+        <div>
+          <Span>Logback</Span> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one dependency
+          that it is part of spring boot , <br />
+          <div>
+            for example : <span className="text-red-500"> web starter depenency</span>
+          </div>
+          <XmlHighlight xmlCode={dependency} />
+        </div>
+      </section>
       {/*  */}
       {/*  */}
-      <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Re-Produce Logback console Logging pattern</div>
-      <div>
-        From logback &nbsp;
-        <a href="https://logback.qos.ch/manual/layouts.html" target="_blank" className="text-blue-500">
-          https://logback.qos.ch/manual/layouts.html
-        </a>
-        ,
-      </div>
-      <div>I have re-produce the same logging pattern that comes with deafult .</div>
-      <div>
-        This line of logger creates same format of logging in <Span>spring console</Span> :
-      </div>
-      <div>
-        <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />
-      </div>
-      <div className="my-8">logging.pattern.console exlpained:</div>
-      <ul className="mx-8">
-        <li className="my-1 list-disc">
-          <ApplicationPropertiesHighlight propertiesCode={line_1} /> Date and Time: Millisecond precision and easily sortable.
-        </li>
-        <li className="my-1 list-disc"></li>
-        <li className="my-1 list-disc"></li>
-        <li className="my-1 list-disc"></li>
-        <li className="my-1 list-disc"></li>
-        <li className="my-1 list-disc"></li>
-        <li className="my-1 list-disc"></li>
-      </ul>
+      <section>
+        <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Code usage example </div>
+        <div>
+          <JavaHighlight javaCode={javaCodeLogExample} />
+        </div>
+      </section>
+      {/*  */}
+      {/*  */}
+      <section>
+        <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
+          Re-Produce Logback console Logging pattern
+        </div>
+        <div>
+          From logback &nbsp;
+          <a href="https://logback.qos.ch/manual/layouts.html" target="_blank" className="text-blue-500">
+            https://logback.qos.ch/manual/layouts.html
+          </a>
+          ,
+        </div>
+        <div>I have re-produce the same logging pattern that comes with deafult .</div>
+        <div>
+          This line of logger creates same format of logging in <Span>spring console</Span> :
+        </div>
+        <div>
+          <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />
+        </div>
+        <div className="my-8">logging.pattern.console exlpained:</div>
+        <ul className="mx-8">
+          <li className="my-1 list-disc">
+            <ApplicationPropertiesHighlight propertiesCode={line_1} /> Date and Time: Millisecond precision and easily sortable.
+          </li>
+          <li className="my-1 list-disc"></li>
+          <li className="my-1 list-disc"></li>
+          <li className="my-1 list-disc"></li>
+          <li className="my-1 list-disc"></li>
+          <li className="my-1 list-disc"></li>
+          <li className="my-1 list-disc"></li>
+        </ul>
+      </section>
+      {/*  */}
+      {/*  */}
+      <GitHub>
+        <GitHubLiAnchor
+          description="Git logging"
+          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/01-Application-Properties-Logging/07_Logging"
+        />
+        <GitHubLiAnchor
+          description="Git SLF4J , Logback"
+          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/01-Application-Properties-Logging/07_Logging#Logback_SLF4J"
+        />
+      </GitHub>
     </article>
   );
 };

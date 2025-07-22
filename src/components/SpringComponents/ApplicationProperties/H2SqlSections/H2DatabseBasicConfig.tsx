@@ -1,5 +1,5 @@
 import ContentAnchor from "../../../ContentAnchor";
-import { ApplicationPropertiesHighlight } from "../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {
   return (

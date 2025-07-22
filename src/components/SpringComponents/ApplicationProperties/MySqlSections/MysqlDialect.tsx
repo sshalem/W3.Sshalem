@@ -1,5 +1,5 @@
 import ContentAnchor from "../../../ContentAnchor";
-import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
 
 const MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (

@@ -1,5 +1,5 @@
 import ContentTitle from "../../../ContentAnchor";
-import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
 
 const PostgresqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (

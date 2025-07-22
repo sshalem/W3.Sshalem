@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { Span } from "../../../Highlight";
+import { Span } from "../../../../Highlight";
 
 import dbeaver_postgres_1 from "../../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../../assets/dbeaver_postgres_2.jpg";
