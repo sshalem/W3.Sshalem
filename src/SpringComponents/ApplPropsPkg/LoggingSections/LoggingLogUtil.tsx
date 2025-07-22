@@ -55,9 +55,7 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
 
 export default LoggingLogUtil;
 
-const logUtilCode = `package com.ecommerce.utils;
-
-import org.slf4j.Logger;
+const logUtilCode = `import org.slf4j.Logger;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
