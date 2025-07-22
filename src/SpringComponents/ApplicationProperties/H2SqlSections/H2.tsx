@@ -1,26 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import MysqlDialect from "./MySqlSections/MysqlDialect";
-import MySqlOSIV from "./MySqlSections/MySqlOSIV";
-import MysqlBasicConfig from "./MySqlSections/MysqlBasicConfig";
-import MySqlDetailedConfig from "./MySqlSections/MySqlDetailedConfig";
-import MySqlComprehansivePropertiesConfig from "./MySqlSections/MySqlComprehansivePropertiesConfig";
-import { ContentMenu } from "../../components";
+import H2Dbeaver from "./H2Dbeaver";
+import H2Osiv from "./H2Osiv";
+import H2DatabseBasicConfig from "./H2DatabseBasicConfig";
+import { ContentMenu } from "../../../components";
 
 // =============================================================================================================
 
-const mysql_dialect = "Mysql Dialect";
+const h2_databse_basic_config = "H2 DB Basic Config";
 const osiv = "Osiv";
-const mysql_basic_config = "Mysql Basic";
-const mysql_detailed_config = "Mysql Detailed";
-const mysql_comprehansive_properties_config = "Mysql Comprehansive Properties";
+const h2_dbeaver = "H2 DBeaver";
 
 // =============================================================================================================
 
-const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config];
+const anchorList: string[] = [h2_databse_basic_config, osiv, h2_dbeaver];
 
 // =============================================================================================================
 
-const MySql = () => {
+const H2 = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -36,7 +32,6 @@ const MySql = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
-      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
@@ -54,16 +49,13 @@ const MySql = () => {
       />
       {/* End Contents */}
 
-      <MysqlDialect anchor={mysql_dialect} />
-      <MySqlOSIV anchor={osiv} />
-      <MysqlBasicConfig anchor={mysql_basic_config} />
-      <MySqlDetailedConfig anchor={mysql_detailed_config} />
-      <MySqlComprehansivePropertiesConfig anchor={mysql_comprehansive_properties_config} />
+      <H2DatabseBasicConfig anchor={h2_databse_basic_config} />
+      <H2Osiv anchor={osiv} />
+      <H2Dbeaver anchor={h2_dbeaver} />
 
-      {/* {this div is only for dividing} */}
-      <div className="my-8 h-4" />
+      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default MySql;
+export default H2;
