@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import DBeaverMySql from "./DBeaverSections/DBeaverMySql";
-import DBeaverMySqlOnLinode from "./DBeaverSections/DBeaverMySqlOnLinode";
-import DBeaverPostgresql from "./DBeaverSections/DBeaverPostgresql";
-import DBeaverVersion from "./DBeaverSections/DBeaverVersion";
-import { ContentMenu } from "../../components";
+import DBeaverMySql from "./DBeaverMySql";
+import DBeaverMySqlOnLinode from "./DBeaverMySqlOnLinode";
+import DBeaverPostgresql from "./DBeaverPostgresql";
+import DBeaverVersion from "./DBeaverVersion";
+import { ContentMenu } from "../../../components";
 
 // =============================================================================================================
 

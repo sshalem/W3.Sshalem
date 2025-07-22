@@ -9,4 +9,3 @@ export { default as TransactionManagement } from "./TransactionManagement";
 export { default as Caching } from "./Caching";
 export { default as Aop } from "./Aop";
 export { default as SpringSecurity } from "./SpringSecurity";
-export { default as Logging } from "./Logging";

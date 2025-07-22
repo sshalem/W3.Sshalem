@@ -5,7 +5,6 @@ import {
   Aop,
   Caching,
   ExceptionHandling,
-  Logging,
   OpenAI,
   Rest,
   SpringDoc,
@@ -15,7 +14,7 @@ import {
   TransactionManagement,
 } from "./SpringComponents";
 
-import { ApplicationProperties, DBeaver, H2, LoggingConfig, MySql, Postgresql } from "./SpringComponents/ApplicationProperties";
+import { ApplicationProperties, DBeaver, H2, Logging, MySql, Postgresql } from "./SpringComponents/ApplicationProperties";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JPA";
 
 const router = createBrowserRouter(
@@ -39,7 +38,7 @@ const router = createBrowserRouter(
                 { path: "postgresql", element: <Postgresql /> },
                 { path: "mysql", element: <MySql /> },
                 { path: "dbeaver", element: <DBeaver /> },
-                { path: "logging", element: <LoggingConfig /> },
+                { path: "logging", element: <Logging /> },
               ],
             },
             {

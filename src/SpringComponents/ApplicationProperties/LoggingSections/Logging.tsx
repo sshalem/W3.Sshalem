@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import LoggingSlf4JLogback from "./LoggingSections/LoggingSlf4JLogback";
-import LoggingLogUtil from "./LoggingSections/LoggingLogUtil";
-import { ContentMenu } from "../../components";
+import LoggingSlf4JLogback from "./LoggingSlf4JLogback";
+import LoggingLogUtil from "./LoggingLogUtil";
+import { ContentMenu } from "../../../components";
 
 // =============================================================================================================
 
