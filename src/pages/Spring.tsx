@@ -61,8 +61,8 @@ const Spring = () => {
       {/* several options */}
       {/* <main className="mt-4 max-h-full"> */}
       {/* <main className="ml-64 max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1"> */}
+      {/* <main className="ml-64 mt-[50px] max-h-[700px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
       <main className="ml-0 max-h-[750px] w-[1200px] min-w-[400px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1 sm:ml-0 md:ml-64">
-        {/* <main className="ml-64 mt-[50px] max-h-[700px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
         <Outlet />
       </main>
     </GridLayout>
