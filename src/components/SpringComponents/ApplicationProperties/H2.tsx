@@ -6,9 +6,9 @@ import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
-const h2_databse_basic_config = "h2 databse basic config";
-const osiv = "osiv";
-const h2_dbeaver = "h2 dbeaver";
+const h2_databse_basic_config = "H2 DB Basic Config";
+const osiv = "Osiv";
+const h2_dbeaver = "H2 DBeaver";
 
 // =============================================================================================================
 

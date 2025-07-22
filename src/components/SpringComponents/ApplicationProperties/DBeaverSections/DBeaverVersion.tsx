@@ -3,7 +3,7 @@ import ContentAnchor from "../../../ContentAnchor";
 
 const DBeaverVersion = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div>
         While writing this tutorial on 21/07/2025 , the current version of &nbsp;

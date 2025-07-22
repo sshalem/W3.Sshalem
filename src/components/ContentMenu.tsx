@@ -21,26 +21,19 @@ const ContentMenu = ({ ulRef, showContent, contentHeight, anchorList, handleShow
       <ul
         ref={ulRef}
         style={showContent ? { height: `${contentHeight}px` } : { height: "0px" }}
-        className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs lowercase text-teal-700 transition-[height] duration-100 ease-in-out`}
+        className={`${showContent ? "pt-3" : "py-0"} overflow-hidden bg-slate-200 px-1 text-xs text-teal-700 transition-[height] duration-100 ease-in-out`}
       >
+        {/* {anchorLinks.map((anchor, index) => { */}
         {anchorList.map((anc) => {
           return (
+            // <li key={index}>
             <li key={anc}>
-              <a href={`#${anc}`} className="hover:underline">
+              <a href={`#${anc.replace(/ /g, "")}`} className="hover:underline">
                 {anc}
               </a>
             </li>
           );
         })}
-        {/* {anchorLinks.map((anchor, index) => {
-            return (
-              <li key={index}>
-                <a href={`#${anchor}`} className="hover:underline">
-                  {anchor}
-                </a>
-              </li>
-            );
-          })} */}
       </ul>
       {/* ContentList - End*/}
     </article>

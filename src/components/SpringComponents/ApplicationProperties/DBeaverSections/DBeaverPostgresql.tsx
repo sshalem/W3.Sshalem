@@ -8,7 +8,7 @@ import ContentAnchor from "../../../ContentAnchor";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
 
       <ul className="mx-8">

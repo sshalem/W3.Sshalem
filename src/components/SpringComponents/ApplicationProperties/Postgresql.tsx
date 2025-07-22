@@ -6,9 +6,9 @@ import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
-const postgresql_detailed_config = "postgresql detailed config";
-const osiv = "osiv";
-const install_postgresql_standalone_on_windows = "install postgresql standalone on windows";
+const postgresql_detailed_config = "Postgresql Detailed Config";
+const osiv = "Osiv";
+const install_postgresql_standalone_on_windows = "Install Postgresql Standalone On Windows";
 
 // =============================================================================================================
 

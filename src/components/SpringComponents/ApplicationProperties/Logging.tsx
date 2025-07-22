@@ -5,8 +5,8 @@ import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
-const log_util = "log util";
-const slf4j_or_logback = "SLF4J or Logback";
+const log_util = "Log Util";
+const slf4j_or_logback = "Slf4j Or Logback";
 
 // =============================================================================================================
 

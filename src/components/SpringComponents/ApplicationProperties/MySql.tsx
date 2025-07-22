@@ -8,11 +8,11 @@ import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
-const mysql_dialect = "mysql dialect";
-const osiv = "osiv";
-const mysql_basic_config = "mysql basic config";
-const mysql_detailed_config = "mysql detailed config";
-const mysql_comprehansive_properties_config = "mysql comprehansive properties config";
+const mysql_dialect = "Mysql Dialect";
+const osiv = "Osiv";
+const mysql_basic_config = "Mysql Basic";
+const mysql_detailed_config = "Mysql Detailed";
+const mysql_comprehansive_properties_config = "Mysql Comprehansive Properties";
 
 // =============================================================================================================
 

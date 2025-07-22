@@ -2,7 +2,7 @@ import ContentAnchor from "../../../ContentAnchor";
 
 const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
 
       {/* <div>

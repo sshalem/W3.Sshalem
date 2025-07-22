@@ -13,7 +13,7 @@ import ContentTitle from "../../../ContentAnchor";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentTitle anchor={anchor} />
       <div className="my-4">Links :</div>
       <ul className="mx-8">

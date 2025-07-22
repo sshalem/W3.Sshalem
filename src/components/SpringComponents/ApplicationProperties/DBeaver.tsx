@@ -7,10 +7,10 @@ import ContentMenu from "../../ContentMenu";
 
 // =============================================================================================================
 
-const dbeaver_version = "dbeaver version";
-const dbeaver_mysql = "dbeaver with mysql";
-const dbeaver_mysql_on_linode = "dbeaver with mysql on linode server";
-const dbeaver_postgresql = "dbeaver with postgresql";
+const dbeaver_version = "DBeaver Version";
+const dbeaver_mysql = "DBeaver With Mysql";
+const dbeaver_mysql_on_linode = "DBeaver With Mysql On Linode Server";
+const dbeaver_postgresql = "DBeaver With Postgresql";
 
 // =============================================================================================================
 

@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const MysqlBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
     </article>

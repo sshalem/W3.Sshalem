@@ -2,7 +2,7 @@ import ContentAnchor from "../../../ContentAnchor";
 
 const H2Dbeaver = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div>links for H2 DBeaver config</div>
       <ul className="list-disc pl-8">

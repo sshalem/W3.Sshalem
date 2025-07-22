@@ -4,7 +4,7 @@ import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } fro
 
 const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
+    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div>Links with examples of how to config:</div>
       <ul className="mx-8">
