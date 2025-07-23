@@ -18,3 +18,4 @@ export { default as CaretUp } from "./CaretUp";
 export { default as GitHub } from "./GitHub";
 export { default as GitHubLiAnchor } from "./GitHubLiAnchor";
 export { default as SideDropDownTopic } from "./SideDropDownTopic";
+export { default as Loading } from "./Loading";

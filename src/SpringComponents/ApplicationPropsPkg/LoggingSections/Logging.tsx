@@ -1,26 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import DBeaverMySql from "./DBeaverMySql";
-import DBeaverMySqlOnLinode from "./DBeaverMySqlOnLinode";
-import DBeaverPostgresql from "./DBeaverPostgresql";
-import DBeaverVersion from "./DBeaverVersion";
-import { ContentMenu } from "../../../components";
+import LoggingSlf4JLogback from "./LoggingSlf4JLogback";
+import LoggingLogUtil from "./LoggingLogUtil";
+import { ContentMenu, Loading } from "../../../components";
 
 // =============================================================================================================
 
-const dbeaver_version = "DBeaver Version";
-const dbeaver_mysql = "DBeaver With Mysql";
-const dbeaver_mysql_on_linode = "DBeaver With Mysql On Linode Server";
-const dbeaver_postgresql = "DBeaver With Postgresql";
+const log_util = "Log Util";
+const slf4j_or_logback = "Slf4j Or Logback";
 
 // =============================================================================================================
 
-const anchorList: string[] = [dbeaver_version, dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql];
+const anchorList: string[] = [slf4j_or_logback, log_util];
 
 // =============================================================================================================
 
-const DBeaver = () => {
+const Logging = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -38,9 +35,17 @@ const DBeaver = () => {
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
   }, []);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 10);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <section>
-      {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
         contentHeight={contentHeight}
@@ -50,14 +55,11 @@ const DBeaver = () => {
       />
       {/* End Contents */}
 
-      <DBeaverVersion anchor={dbeaver_version} />
-      <DBeaverMySql anchor={dbeaver_mysql} />
-      <DBeaverMySqlOnLinode anchor={dbeaver_mysql_on_linode} />
-      <DBeaverPostgresql anchor={dbeaver_postgresql} />
-
+      <LoggingSlf4JLogback anchor={slf4j_or_logback} />
+      <LoggingLogUtil anchor={log_util} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DBeaver;
+export default Logging;
