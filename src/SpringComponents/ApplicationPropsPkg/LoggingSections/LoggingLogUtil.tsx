@@ -1,7 +1,25 @@
+import { useMemo } from "react";
 import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
+  // Per OpenAI
+  //   When component is using React Highlight Syntax (like react-syntax-highlighter, prism-react-renderer, etc.),
+  //  and you're noticing long reload times or sluggish interactivity (like dropdowns being slow),
+  // it's usually due to heavy rendering of large/highlighted code blocks causing performance bottlenecks.
+
+  // If you’re rendering many code blocks, or very large ones, they can cause the component to:
+  // 1. Re-render slowly,
+  // 2. Block main-thread tasks (like dropdown clicks),
+  // 3. Re-execute highlight logic on every render (especially without memoization).
+
+  // Thus, I use useMemo to prevent to onCLick of dropdown , from being blocked :
+  // 1. I Memoize Syntax Highlighter , for better perfromance
+  // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
+
+  const renderLogUtilCode = useMemo(() => <JavaHighlight javaCode={logUtilCode} />, [logUtilCode]);
+  //   const renderLongCode = useMemo(() => <JavaHighlight javaCode={longCode} />, [longCode]);
+
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
@@ -11,7 +29,6 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
         To use it, I create a <Span>util</Span> package in Spring Boot application , and add this class in it.
         <br />I have several options with this <Span>Log.java</Span>class
       </div>
-
       <div className="my-4">
         <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">System.out.println()</p>
         <p>
@@ -24,14 +41,12 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
         <li className="my-1">High Intensity backgrounds</li>
         <li className="my-1">Regular colors , displayed as JSON in console </li>
       </ul>
-
       <div className="my-4">
         <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Logger object</p>
         <p>
           By getting the <Span>Logger</Span> from the used class (see from line <span className="text-red-500">935</span>):
         </p>
       </div>
-
       <ul className="list-disc pl-8">
         <li className="my-1">Regular Colors : BLACK , RED, GREEN, YELLOW, BLUE, PURPLE, CYAN, WHITE</li>
         <li className="my-1">Bold ,Underline , High Intensity (bright) , Bold High Intensity (bright)</li>
@@ -46,12 +61,11 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
           description={"Git - See Full code of Log file with formating object to be as json in console"}
         ></GitHubLiAnchor>
       </GitHub>
-
       <p className="my-14" />
-      <JavaHighlight javaCode={logUtilCode} />
+      {renderLogUtilCode}
 
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
+      {/* <p className="my-14" />
+      {renderLongCode} */}
     </article>
   );
 };
@@ -1412,9 +1426,28 @@ const longCode = `import org.slf4j.Logger;
 //     public static void errorYellowBackgroundBrightJson(Logger LOGGER, Object msg) throws JsonProcessingException {
 //     	ObjectMapper mapper = new ObjectMapper();
 //      	String message = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(msg);
-//         LOGGER.error(YELLOW_BACKGROUND_BRIGHT + message + RESET);
+//         LOGGER.error(YELLOW_BACKGROUND_BRIT + message + RESET);
 //     }
 //     // -------------------------------------------------------------
+
+//     public static void errorPurpleJson(Logger LOGGER, Object msg) throws JsonProcessingException {
+//     	ObjectMapper mapper = new ObjectMapper();
+//      	String message = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(msg);
+//         LOGGER.error(PURPLE + message + RESEG);
+//     }
+
+//     public static void errorPurpleBackgroundJson(Logger LOGGER, Object msg) throws JsonProcessingException {
+//     	ObjectMapper mapper = new ObjectMapper();
+//      	String message = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(msg);
+//         LOGGER.error(PURPLE_BACKGROUNDHT + message + RESET);
+//     }
+
+//     public static void errorPurpleBackgroundBrightJson(Logger LOGGER, Object msg) throws JsonProcessingException {
+//     	ObjectMapper mapper = new ObjectMapper();
+//      	String message = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(msg);
+//         LOGGER.error(PURPLE_BACKGROUND_BRIGHT + message + RESET);
+//     }
+// }`; // -------------------------------------------------------------
 
 //     public static void errorBlueJson(Logger LOGGER, Object msg) throws JsonProcessingException {
 //     	ObjectMapper mapper = new ObjectMapper();
