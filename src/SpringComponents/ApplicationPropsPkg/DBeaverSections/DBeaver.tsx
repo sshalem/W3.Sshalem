@@ -33,16 +33,25 @@ const DBeaver = () => {
     }
   };
 
+  // Why I have 2 useEffect functions?
+  // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 10);
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
 
   if (isLoading) {
     return <Loading />;

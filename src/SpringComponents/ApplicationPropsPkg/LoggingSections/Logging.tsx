@@ -33,12 +33,21 @@ const Logging = () => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
+      console.log("Ref outsie timeout:", ulRef.current?.scrollHeight + 16);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    console.log("2nd useeffect timeout:");
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 100);
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 1000);
 
   if (isLoading) {
     return <Loading />;
