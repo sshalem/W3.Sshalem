@@ -29,25 +29,25 @@ const Logging = () => {
     }
   };
 
+  // Why I have 2 useEffect functions?
+  // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
       setContentHeight(ulRef.current.scrollHeight + 16);
-      console.log("Ref outsie timeout:", ulRef.current?.scrollHeight + 16);
     }
   }, [isLoading]);
 
   useEffect(() => {
-    console.log("2nd useeffect timeout:");
     const timer = setTimeout(function () {
       setIsLoading(false);
-    }, 1000);
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
   // setTimeout(() => {
   //   setIsLoading(false);
-  // }, 1000);
+  // }, 200);
 
   if (isLoading) {
     return <Loading />;

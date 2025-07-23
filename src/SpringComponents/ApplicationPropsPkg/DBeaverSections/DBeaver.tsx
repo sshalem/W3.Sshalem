@@ -45,7 +45,7 @@ const DBeaver = () => {
   useEffect(() => {
     const timer = setTimeout(function () {
       setIsLoading(false);
-    }, 1000);
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
