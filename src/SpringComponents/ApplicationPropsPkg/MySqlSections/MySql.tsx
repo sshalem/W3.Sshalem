@@ -37,8 +37,8 @@ const MySql = () => {
   useEffect(() => {
     if (ulRef.current !== null) {
       // console.log(ulRef.current.scrollHeight);
-      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
-      setContentHeight(ulRef.current.scrollHeight + 16);
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
+      setContentHeight(ulRef.current.scrollHeight);
     }
   }, []);
 

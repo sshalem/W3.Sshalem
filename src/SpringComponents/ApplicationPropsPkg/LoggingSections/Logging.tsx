@@ -29,12 +29,12 @@ const Logging = () => {
     }
   };
 
-  // Why I have 2 useEffect functions?
-  // 1. useEffect with setTimeout
+  // // Why I have 2 useEffect functions?
+  // // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
-      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight + 16));
-      setContentHeight(ulRef.current.scrollHeight + 16);
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
+      setContentHeight(ulRef.current.scrollHeight);
     }
   }, [isLoading]);
 
@@ -66,6 +66,7 @@ const Logging = () => {
 
       <LoggingSlf4JLogback anchor={slf4j_or_logback} />
       <LoggingLogUtil anchor={log_util} />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
