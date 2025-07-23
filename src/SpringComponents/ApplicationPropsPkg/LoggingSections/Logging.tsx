@@ -38,7 +38,7 @@ const Logging = () => {
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 10);
+  }, 100);
 
   if (isLoading) {
     return <Loading />;
