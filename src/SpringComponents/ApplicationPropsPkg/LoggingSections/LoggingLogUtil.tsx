@@ -52,27 +52,6 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
 
       <p className="my-14" />
       <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
-
-      <p className="my-14" />
-      <JavaHighlight javaCode={longCode} />
     </article>
   );
 };
