@@ -1,5 +1,6 @@
-import { ContentAnchor } from "../../../components";
+import { Answer, ContentAnchor, Question } from "../../../components";
 import { Span } from "../../../Highlight";
+import AboutMe from "./../../../components/AboutMe";
 
 const LoggingFileLocationLinuxServer = ({ anchor }: { anchor: string }) => {
   return (
@@ -7,7 +8,11 @@ const LoggingFileLocationLinuxServer = ({ anchor }: { anchor: string }) => {
       <ContentAnchor anchor={anchor} />
       <article className="my-0">
         <div>refernce link</div>
-        <a href="https://docs.spring.io/spring-boot/reference/features/logging.html" className="tracking-wider text-blue-500 underline">
+        <a
+          href="https://docs.spring.io/spring-boot/reference/features/logging.html"
+          target="_blank"
+          className="tracking-wider text-blue-500 underline"
+        >
           https://docs.spring.io/spring-boot/reference/features/logging.html
         </a>
       </article>
@@ -39,8 +44,34 @@ const LoggingFileLocationLinuxServer = ({ anchor }: { anchor: string }) => {
               &nbsp; is used.
             </li>
           </ul>
+          <div className="my-4">
+            There are 4 possible options with logging file on production server (see Spring docs ) &nbsp;
+            <a
+              href="https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-output"
+              target="_blank"
+              className="tracking-wider text-blue-500 underline"
+            >
+              Logging properties File output
+            </a>
+          </div>
         </div>
       </article>
+      {/*  */}
+      {/*  */}
+      <article>
+        <div className="my-4">
+          <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Scenario 1 : none</p>
+          <p>
+            If I don't define a logging file in <Span>application.properties</Span> the logging will be logged only to console.
+          </p>
+          <Question>
+            <div>If I upload the app to production server, In this situation , where can I find the console log of the app?</div>
+          </Question>
+          <Answer>: I can find it in the file catalina.out located in directory /opt/tomcat/logs</Answer>
+        </div>
+      </article>
+      {/*  */}
+      {/*  */}
     </section>
   );
 };

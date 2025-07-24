@@ -1,4 +1,4 @@
-import { ContentAnchor } from "../../../components";
+import { Answer, ContentAnchor, Question } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
@@ -6,13 +6,13 @@ const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div>
-        <div className="mb-4 text-xl font-semibold text-red-500 underline">Question : </div>
+        <Question />
         <p className="ml-4">
           What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
         </p>
       </div>
       <div>
-        <div className="mb-4 text-xl font-semibold text-green-500 underline">Answer :</div>
+        <Answer />
         <p className="my-2 ml-4">
           1. <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
         </p>
