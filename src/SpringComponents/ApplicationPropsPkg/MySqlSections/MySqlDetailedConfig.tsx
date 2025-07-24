@@ -5,21 +5,19 @@ const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
-      <div>
-        <Question />
-        <p className="ml-4">
-          What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
-        </p>
-      </div>
-      <div>
-        <Answer />
-        <p className="my-2 ml-4">
+
+      <Question>
+        What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
+      </Question>
+
+      <Answer>
+        <p className="my-2">
           1. <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
         </p>
-        <p className="my-2 ml-4">
+        <p className="my-2">
           2. <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging with the time stamp and the package name
         </p>
-      </div>
+      </Answer>
 
       <div>Better to use the following :</div>
       <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />

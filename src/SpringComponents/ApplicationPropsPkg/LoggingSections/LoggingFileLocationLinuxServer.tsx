@@ -64,10 +64,10 @@ const LoggingFileLocationLinuxServer = ({ anchor }: { anchor: string }) => {
           <p>
             If I don't define a logging file in <Span>application.properties</Span> the logging will be logged only to console.
           </p>
-          <Question>
-            <div>If I upload the app to production server, In this situation , where can I find the console log of the app?</div>
-          </Question>
-          <Answer>: I can find it in the file catalina.out located in directory /opt/tomcat/logs</Answer>
+          <Question>If I upload the app to production server, In this situation , where can I find the console log of the app?</Question>
+          <Answer>
+            I can find it in the file <Span>catalina.out</Span> located in directory <Span>/opt/tomcat/logs</Span>
+          </Answer>
         </div>
       </article>
       {/*  */}
