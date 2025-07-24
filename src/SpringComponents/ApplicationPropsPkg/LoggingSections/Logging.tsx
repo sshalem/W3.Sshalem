@@ -2,15 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import LoggingSlf4JLogback from "./LoggingSlf4JLogback";
 import LoggingLogUtil from "./LoggingLogUtil";
 import { ContentMenu, Loading } from "../../../components";
+import LoggingFileLocationLinuxServer from "./LoggingFileLocationLinuxServer";
 
 // =============================================================================================================
 
 const log_util = "Log Util";
 const slf4j_or_logback = "Slf4j Or Logback";
+const logging_file_on_linux_server = "logging file location on linux server";
 
 // =============================================================================================================
 
-const anchorList: string[] = [slf4j_or_logback, log_util];
+const anchorList: string[] = [slf4j_or_logback, logging_file_on_linux_server, log_util];
 
 // =============================================================================================================
 
@@ -65,6 +67,7 @@ const Logging = () => {
       {/* End Contents */}
 
       <LoggingSlf4JLogback anchor={slf4j_or_logback} />
+      <LoggingFileLocationLinuxServer anchor={logging_file_on_linux_server} />
       <LoggingLogUtil anchor={log_util} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
