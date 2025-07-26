@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
-const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
+const LogUtilClass = ({ anchor }: { anchor: string }) => {
   // Per OpenAI
   //   When component is using React Highlight Syntax (like react-syntax-highlighter, prism-react-renderer, etc.),
   //  and you're noticing long reload times or sluggish interactivity (like dropdowns being slow),
@@ -16,7 +16,6 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
   // Thus, I use useMemo to prevent to onCLick of dropdown , from being blocked :
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-
   const renderLogUtilCode = useMemo(() => <JavaHighlight javaCode={logUtilCode} />, [logUtilCode]);
   //   const renderLongCode = useMemo(() => <JavaHighlight javaCode={longCode} />, [longCode]);
 
@@ -63,14 +62,11 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
       </GitHub>
       <p className="my-14" />
       {renderLogUtilCode}
-
-      {/* <p className="my-14" />
-      {renderLongCode} */}
     </article>
   );
 };
 
-export default LoggingLogUtil;
+export default LogUtilClass;
 
 const logUtilCode = `import org.slf4j.Logger;
 
