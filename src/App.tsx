@@ -14,8 +14,10 @@ import {
   TransactionManagement,
 } from "./SpringComponents";
 
-import { ApplicationProperties, DBeaver, H2, Logging, MySql, Postgresql } from "./SpringComponents/ApplicationPropsPkg";
+import { ApplicationProperties, DBeaver, H2, MySql, Postgresql } from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
+import { Logging } from "./SpringComponents/LoggingPkg";
+import { LogUtil } from "./SpringComponents/LoggingPkg";
 
 const router = createBrowserRouter(
   [
@@ -38,7 +40,15 @@ const router = createBrowserRouter(
                 { path: "postgresql", element: <Postgresql /> },
                 { path: "mysql", element: <MySql /> },
                 { path: "dbeaver", element: <DBeaver /> },
-                { path: "logging", element: <Logging /> },
+              ],
+            },
+            {
+              path: "logging",
+              element: <Logging />,
+              children: [
+                // { path: "Slf4JLogback", element: <LoggingSlf4JLogback /> },
+                // { path: "FileLocationLinuxServer", element: <One2ManyBiLazy /> },
+                { path: "LogUtil", element: <LogUtil /> },
               ],
             },
             {

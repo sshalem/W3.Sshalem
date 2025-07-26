@@ -1,22 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import LoggingSlf4JLogback from "./LoggingSlf4JLogback";
-import LoggingLogUtil from "./LoggingLogUtil";
 import { ContentMenu, Loading } from "../../../components";
-import LoggingFileLocationLinuxServer from "./LoggingFileLocationLinuxServer";
+import BasicLogging from "./BasicLogging";
+import LoggerSlf4jLogback from "./LoggerSlf4jLogback";
 
 // =============================================================================================================
 
-const log_util = "Log Util";
-const slf4j_or_logback = "Slf4j Or Logback";
-const logging_file_on_linux_server = "logging file location on linux server";
+const basic_logging = "basic logging";
+const logger_slf4j_logback = "logger Slf4j Logback";
 
 // =============================================================================================================
 
-const anchorList: string[] = [slf4j_or_logback, logging_file_on_linux_server, log_util];
+const anchorList: string[] = [basic_logging, logger_slf4j_logback];
 
 // =============================================================================================================
 
-const Logging = () => {
+const LogUtil = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -66,13 +64,12 @@ const Logging = () => {
       />
       {/* End Contents */}
 
-      <LoggingSlf4JLogback anchor={slf4j_or_logback} />
-      <LoggingFileLocationLinuxServer anchor={logging_file_on_linux_server} />
-      <LoggingLogUtil anchor={log_util} />
+      <BasicLogging anchor={basic_logging} />
+      <LoggerSlf4jLogback anchor={logger_slf4j_logback} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default Logging;
+export default LogUtil;

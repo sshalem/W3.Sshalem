@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../components";
 
-const DropDownApplicationProperties = () => {
+const DropDownLogging = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownApplicationProperties = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("application-properties")) {
+    if (location.pathname.substring(8).includes("logging")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,27 +34,19 @@ const DropDownApplicationProperties = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="application-properties"
-        pageName="Application properties"
-      />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="logging" pageName="Logging" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
-        {/* <div className={`${showList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
-        <SideDropdownLink pageName="H2" internalLink="application-properties/h2" />
-        <SideDropdownLink pageName="MySql" internalLink="application-properties/mysql" />
-        <SideDropdownLink pageName="Postgresql" internalLink="application-properties/postgresql" />
-        <SideDropdownLink pageName="DBeaver" internalLink="application-properties/dbeaver" />
+        {/* <SideDropdownLink pageName="Slf4J(Logback)" internalLink="logging/Slf4JLogback" /> */}
+        {/* <SideDropdownLink pageName="Logging Linux server" internalLink="logging/FileLocationLinuxServer" /> */}
+        <SideDropdownLink pageName="Log Util" internalLink="logging/LogUtil" />
       </div>
     </section>
   );
 };
 
-export default DropDownApplicationProperties;
+export default DropDownLogging;

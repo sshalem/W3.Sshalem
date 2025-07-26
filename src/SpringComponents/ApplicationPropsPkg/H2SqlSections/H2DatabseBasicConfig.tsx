@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <ApplicationPropertiesHighlight propertiesCode={h2} />
     </article>

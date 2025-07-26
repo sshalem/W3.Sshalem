@@ -3,6 +3,7 @@ import { GridLayout, SideBarLink } from "../components";
 import { DropDownApplicationProperties, DropDownJpa, DropDownRest } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownLogging from "../DropDown/DropDownLogging";
 
 const Spring = () => {
   // const { openList, handleOpenList } = useAppContext();
@@ -36,6 +37,7 @@ const Spring = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="Spring Home" internalLink="." />
             <DropDownApplicationProperties />
+            <DropDownLogging />
             <DropDownJpa />
             <DropDownRest />
 

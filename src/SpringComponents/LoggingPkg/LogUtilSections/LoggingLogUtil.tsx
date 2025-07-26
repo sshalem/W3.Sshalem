@@ -21,7 +21,7 @@ const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
   //   const renderLongCode = useMemo(() => <JavaHighlight javaCode={longCode} />, [longCode]);
 
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div className="my-4">
         Here is the code, I created for self usage , a <Span>Log class</Span> which all its methods are static.
@@ -1448,7 +1448,7 @@ public class Log {
 // //         LOGGER.error(PURPLE_BACKGROUND_BRIGHT + message + RESET);
 // //     }
 // // }`;
-// 
+//
 
 // -------------------------------------------------------------
 

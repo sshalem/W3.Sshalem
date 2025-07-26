@@ -2,7 +2,7 @@ import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 
 import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
-const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
+const Slf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
     <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
@@ -160,7 +160,7 @@ const LoggingSlf4JLogback = ({ anchor }: { anchor: string }) => {
 const line_1 = `%clr(%d{\${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint}`;
 
 // %clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} -
-export default LoggingSlf4JLogback;
+export default Slf4JLogback;
 
 const dependency = `<dependency>
 	<groupId>org.springframework.boot</groupId>
@@ -190,3 +190,79 @@ const loggingReProduce = `logging.pattern.console=\
 	--- \
 	[%15.15t]  \
 	%cyan(%-40.40logger{39}) : %msg %n`;
+
+// import { useEffect, useRef, useState } from "react";
+// import { ContentMenu, Loading } from "../../components";
+
+// // =============================================================================================================
+
+// const log_util = "Log Util";
+// const slf4j_or_logback = "Slf4j Or Logback";
+// const logging_file_on_linux_server = "logging file location on linux server";
+
+// // =============================================================================================================
+
+// const anchorList: string[] = [slf4j_or_logback, logging_file_on_linux_server, log_util];
+
+// // =============================================================================================================
+
+// const Logging = () => {
+//   const [showContent, setShowContent] = useState<boolean>(true);
+//   const [contentHeight, setContentHeight] = useState<number>();
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   const ulRef = useRef<HTMLUListElement | null>(null);
+
+//   const handleShowContent = () => {
+//     setShowContent(!showContent);
+//     if (sessionStorage.getItem("scrollHeight") !== null) {
+//       const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
+//       setContentHeight(value);
+//     }
+//   };
+
+//   // // Why I have 2 useEffect functions?
+//   // // 1. useEffect with setTimeout
+//   useEffect(() => {
+//     if (ulRef.current !== null) {
+//       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
+//       setContentHeight(ulRef.current.scrollHeight);
+//     }
+//   }, [isLoading]);
+
+//   useEffect(() => {
+//     const timer = setTimeout(function () {
+//       setIsLoading(false);
+//     }, 200);
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   // setTimeout(() => {
+//   //   setIsLoading(false);
+//   // }, 200);
+
+//   if (isLoading) {
+//     return <Loading />;
+//   }
+
+//   return (
+//     <section>
+//       <ContentMenu
+//         anchorList={anchorList}
+//         contentHeight={contentHeight}
+//         handleShowContent={handleShowContent}
+//         showContent={showContent}
+//         ulRef={ulRef}
+//       />
+//       {/* End Contents */}
+
+//       <LoggingSlf4JLogback anchor={slf4j_or_logback} />
+//       <LoggingFileLocationLinuxServer anchor={logging_file_on_linux_server} />
+//       <LoggingLogUtil anchor={log_util} />
+
+//       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
+//     </section>
+//   );
+// };
+
+// export default Logging;

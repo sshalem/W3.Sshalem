@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
 
       <Question>

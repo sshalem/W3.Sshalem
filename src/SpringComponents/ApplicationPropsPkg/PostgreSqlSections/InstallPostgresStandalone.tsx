@@ -13,7 +13,7 @@ import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div className="my-4">Links :</div>
       <ul className="mx-8">

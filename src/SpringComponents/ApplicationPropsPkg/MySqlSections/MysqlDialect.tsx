@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div className="my-4">
         When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
