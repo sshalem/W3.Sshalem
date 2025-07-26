@@ -2,15 +2,20 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../components";
 import BasicLogging from "./BasicLogging";
 import LoggerSlf4jLogback from "./LoggerSlf4jLogback";
+import PojoAsJson from "./PojoAsJson";
+import JsonObject from "./JsonObject";
 
 // =============================================================================================================
 
 const basic_logging = "basic logging";
 const logger_slf4j_logback = "logger Slf4j Logback";
+const json_object = "json_object";
+
+const pojo_as_json = "pojo as json";
 
 // =============================================================================================================
 
-const anchorList: string[] = [basic_logging, logger_slf4j_logback];
+const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, pojo_as_json];
 
 // =============================================================================================================
 
@@ -66,7 +71,8 @@ const LogUtil = () => {
 
       <BasicLogging anchor={basic_logging} />
       <LoggerSlf4jLogback anchor={logger_slf4j_logback} />
-
+      <JsonObject anchor={json_object} />
+      <PojoAsJson anchor={pojo_as_json} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

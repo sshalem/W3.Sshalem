@@ -12,17 +12,17 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
     <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
 
-      <ul className="mx-8">
-        <li className="my-1 list-disc">In the image below, I show all my current DB's I have in MySql workbench</li>
-        <li className="my-1 list-disc">Lets see how I connect DBeaver with DB's on MySql</li>
+      <ul className="mx-8 list-disc">
+        <li className="my-1">In the image below, I show all my current DB's I have in MySql workbench</li>
+        <li className="my-1">Lets see how I connect DBeaver with DB's on MySql</li>
         <div>
           <img src={dbeaver_mysql_1} alt="dbeaver_mysql_1" className="mx-10 my-10" />
         </div>
 
-        <li className="my-1 list-disc">Open DBeaver</li>
-        <li className="my-1 list-disc">Create new Connection of MySql</li>
+        <li className="my-1">Open DBeaver</li>
+        <li className="my-1">Create new Connection of MySql</li>
 
-        <li className="my-1 list-disc">
+        <li className="my-1">
           <div className="my-2">Under main Tab select the following:</div>
           <div className="my-1 ml-8 flex">
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> <Span>cms</Span> - thats the name of DB in MySql workbench
@@ -47,7 +47,7 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
             <img src={dbeaver_mysql_2_1} alt="dbeaver_mysql_2_1" className="mx-10 my-10" />
           </div>
         </li>
-        <li className="my-1 list-disc">
+        <li className="my-1">
           Under Driver properties, once I'm on it, it will download the necessary drivers
           <div>
             <img src={dbeaver_mysql_3} alt="dbeaver_mysql_3" className="mx-10 my-10" />
