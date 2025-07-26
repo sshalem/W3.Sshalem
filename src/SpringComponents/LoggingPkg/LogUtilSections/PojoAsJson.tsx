@@ -55,10 +55,32 @@ const PojoAsJson = ({ anchor }: { anchor: string }) => {
         </InternalArticle>
         <ul className="mx-8 list-disc"></ul>
       </div>
-
-      {/* <JavaHighlight javaCode={sysoutCode} /> */}
+      <div className="my-5">Code , converting a POJO to JSON using Jackson</div>
+      <JavaHighlight javaCode={pojoAsJsonCode} />
+      <div className="my-5">here is how I present the POJO ,as JSON in console</div>
+      <JavaHighlight javaCode={jsonPresentationCode} />
     </article>
   );
 };
 
 export default PojoAsJson;
+
+const pojoAsJsonCode = `@SpringBootApplication
+public class LoggingProjApplication {
+
+	public static void main(String[] args) throws JsonProcessingException {
+		SpringApplication.run(LoggingProjApplication.class, args);
+
+		Person person = new Person("first", "last", 50);
+
+		ObjectMapper mapper = new ObjectMapper();
+		String data = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(person);
+		System.out.println(data);
+	}
+}`;
+
+const jsonPresentationCode = `{
+  "firstName" : "first",
+  "lastName" : "last",
+  "age" : 50
+}`;
