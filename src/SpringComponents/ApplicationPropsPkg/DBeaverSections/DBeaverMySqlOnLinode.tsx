@@ -1,11 +1,7 @@
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {
-  return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-    </article>
-  );
+  return <MainChildArea anchor={anchor}></MainChildArea>;
 };
 
 export default DBeaverMySqlOnLinode;

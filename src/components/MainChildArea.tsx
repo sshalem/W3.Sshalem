@@ -1,0 +1,17 @@
+import ContentAnchor from "./ContentAnchor";
+
+interface MainChildAreaProps {
+  anchor: string;
+  children?: React.ReactNode;
+}
+
+const MainChildArea = ({ anchor, children }: MainChildAreaProps) => {
+  return (
+    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+      <ContentAnchor anchor={anchor} />
+      {children}
+    </article>
+  );
+};
+
+export default MainChildArea;

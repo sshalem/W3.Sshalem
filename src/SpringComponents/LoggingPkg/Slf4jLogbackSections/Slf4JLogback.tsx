@@ -1,4 +1,4 @@
-import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
+import { ContentAnchor } from "../../../components";
 
 import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
@@ -61,16 +61,6 @@ const Slf4JLogback = ({ anchor }: { anchor: string }) => {
       </section>
       {/*  */}
       {/*  */}
-      <GitHub>
-        <GitHubLiAnchor
-          description="Git logging"
-          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/01-Application-Properties-Logging/07_Logging"
-        />
-        <GitHubLiAnchor
-          description="Git SLF4J , Logback"
-          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/01-Application-Properties-Logging/07_Logging#Logback_SLF4J"
-        />
-      </GitHub>
     </article>
   );
 };

@@ -3,13 +3,11 @@ import dbeaver_postgres_1 from "../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../assets/dbeaver_postgres_3.jpg";
 import { Span } from "../../../Highlight";
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-
+    <MainChildArea anchor={anchor}>
       <ul className="mx-8">
         <li className="my-1 list-disc">
           <Span>cms</Span> is my Database in PgAdmin
@@ -48,7 +46,7 @@ const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
           </div>
         </li>
       </ul>
-    </article>
+    </MainChildArea>
   );
 };
 

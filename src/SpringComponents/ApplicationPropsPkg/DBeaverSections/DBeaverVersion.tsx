@@ -1,10 +1,9 @@
 import dbeaver_version from "../../../assets/dbeaver_version.jpg";
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const DBeaverVersion = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div>
         While writing this tutorial on 21/07/2025 , the current version of &nbsp;
         <span className="rounded-md bg-emerald-500 px-1 py-1 text-white">DBeaver</span>
@@ -12,7 +11,7 @@ const DBeaverVersion = ({ anchor }: { anchor: string }) => {
       <div>
         <img src={dbeaver_version} alt="dbeaver_version" className="mx-10 my-10" />
       </div>
-    </article>
+    </MainChildArea>
   );
 };
 

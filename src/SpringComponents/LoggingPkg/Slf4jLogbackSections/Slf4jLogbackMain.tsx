@@ -2,15 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../components";
 import Slf4jLinks from "./Slf4jLinks";
 import Slf4jRollingFileSetup from "./Slf4jRollingFileSetup";
+import Slf4jGitHub from "./Slf4jGitHub";
 
 // =============================================================================================================
 
 const slf4j_links = "slf4j links";
 const slf4j_rolling_file_setup = "slf4j rolling file setup";
+const slf4j_git_hub = "slf4j git hub";
 
 // =============================================================================================================
 
-const anchorList: string[] = [slf4j_links, slf4j_rolling_file_setup];
+const anchorList: string[] = [slf4j_links, slf4j_rolling_file_setup, slf4j_git_hub];
 
 // =============================================================================================================
 
@@ -59,6 +61,7 @@ const Slf4JLogbackMain = () => {
       {/* End Contents */}
       <Slf4jLinks anchor={slf4j_links} />
       <Slf4jRollingFileSetup anchor={slf4j_rolling_file_setup} />
+      <Slf4jGitHub anchor={slf4j_git_hub} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

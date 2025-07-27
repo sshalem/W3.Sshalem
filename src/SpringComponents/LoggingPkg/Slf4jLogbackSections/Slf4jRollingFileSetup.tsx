@@ -1,10 +1,9 @@
-import { ContentAnchor, CopyCode } from "../../../components";
+import { CopyCode, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="mb-5 mt-5">Rolling file setup with application properties (verify the features are the real update properties)</div>
       <CopyCode code={"rollingFileCode"}>
         <ApplicationPropertiesHighlight propertiesCode={rollingFileCode} />
@@ -19,7 +18,7 @@ const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
         <li className="my-1">logging.file.total-size-cap</li>
         <li className="my-1">logging.file.clean-history-on-start</li>
       </ul> */}
-    </article>
+    </MainChildArea>
   );
 };
 

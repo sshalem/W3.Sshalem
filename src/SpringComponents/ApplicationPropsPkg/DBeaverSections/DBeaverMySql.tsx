@@ -1,17 +1,14 @@
 import { FaDiamond } from "react-icons/fa6";
-
 import dbeaver_mysql_1 from "../../../assets/dbeaver_mysql_1.jpg";
 import dbeaver_mysql_2 from "../../../assets/dbeaver_mysql_2.jpg";
 import dbeaver_mysql_2_1 from "../../../assets/dbeaver_mysql_2_1.jpg";
 import dbeaver_mysql_3 from "../../../assets/dbeaver_mysql_3.jpg";
 import { Span } from "../../../Highlight";
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const DBeaverMySql = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-
+    <MainChildArea anchor={anchor}>
       <ul className="mx-8 list-disc">
         <li className="my-1">In the image below, I show all my current DB's I have in MySql workbench</li>
         <li className="my-1">Lets see how I connect DBeaver with DB's on MySql</li>
@@ -54,7 +51,7 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
           </div>
         </li>
       </ul>
-    </article>
+    </MainChildArea>
   );
 };
 
