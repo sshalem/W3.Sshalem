@@ -22,7 +22,7 @@ const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, 
 
 // =============================================================================================================
 
-const LogUtil = () => {
+const LogUtilMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -82,4 +82,4 @@ const LogUtil = () => {
   );
 };
 
-export default LogUtil;
+export default LogUtilMain;

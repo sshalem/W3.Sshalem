@@ -1,30 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import MysqlDialect from "./MysqlDialect";
-import MySqlOSIV from "./MySqlOSIV";
-import MysqlBasicConfig from "./MysqlBasicConfig";
-import MySqlDetailedConfig from "./MySqlDetailedConfig";
-import MySqlComprehansivePropertiesConfig from "./MySqlComprehansivePropertiesConfig";
-import { ContentMenu } from "../../../components";
-import MySqlGitHub from "./MySqlGitHub";
+import { ContentMenu, Loading } from "../../../components";
 
 // =============================================================================================================
 
-const mysql_dialect = "Mysql Dialect";
-const osiv = "Osiv";
-const mysql_basic_config = "Mysql Basic";
-const mysql_detailed_config = "Mysql Detailed";
-const mysql_comprehansive_properties_config = "Mysql Comprehansive Properties";
-const mysql_github = `Mysql git hub`;
+const basic_logging = "basic logging";
+const logger_slf4j_logback = "logger Slf4j Logback";
+const json_object = "json object";
+const pojo_as_json_in_console = "pojo as json in console";
+const log_util_class = "log util class";
+const log_git_hub = "git hub";
 
 // =============================================================================================================
 
-const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config, mysql_github];
+const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, pojo_as_json_in_console, log_util_class, log_git_hub];
 
 // =============================================================================================================
 
-const MySql = () => {
+const Slf4JLogbackMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -36,17 +31,32 @@ const MySql = () => {
     }
   };
 
+  // // Why I have 2 useEffect functions?
+  // // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
-      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
-      {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
         contentHeight={contentHeight}
@@ -55,17 +65,11 @@ const MySql = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
+      {/* <BasicLogging anchor={basic_logging} /> */}
 
-      <MysqlDialect anchor={mysql_dialect} />
-      <MySqlOSIV anchor={osiv} />
-      <MysqlBasicConfig anchor={mysql_basic_config} />
-      <MySqlDetailedConfig anchor={mysql_detailed_config} />
-      <MySqlComprehansivePropertiesConfig anchor={mysql_comprehansive_properties_config} />
-      <MySqlGitHub anchor={mysql_github} />
-      {/* {this div is only for dividing} */}
-      <div className="my-8 h-4" />
+      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default MySql;
+export default Slf4JLogbackMain;

@@ -14,7 +14,7 @@ const CopyCode = ({ code, children }: { code: string; children: React.ReactNode 
   return (
     <div className="relative">
       <button
-        className="absolute right-[1rem] top-[0.35rem] border-2 border-black px-1 font-mono text-sm text-black transition-colors duration-100 ease-in-out hover:bg-black hover:text-white active:bg-gray-500 active:text-white"
+        className="absolute right-[1rem] top-[0.35rem] border-2 border-black bg-[#fbfbfb] px-1 font-mono text-sm text-black transition-colors duration-100 ease-in-out hover:bg-black hover:text-white active:bg-gray-500 active:text-white"
         onClick={handleCopied}
       >
         {isCopied ? "copied" : "copy"}

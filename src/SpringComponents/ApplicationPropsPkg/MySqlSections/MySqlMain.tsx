@@ -1,22 +1,28 @@
 import { useEffect, useRef, useState } from "react";
-import InstallPostgresStandalone from "./InstallPostgresStandalone";
-import PostgresqlOsiv from "./PostgresqlOsiv";
-import PostgresqlDetailedConfig from "./PostgresqlDetailedConfig";
+import MysqlDialect from "./MysqlDialect";
+import MySqlOSIV from "./MySqlOSIV";
+import MysqlBasicConfig from "./MysqlBasicConfig";
+import MySqlDetailedConfig from "./MySqlDetailedConfig";
+import MySqlComprehansivePropertiesConfig from "./MySqlComprehansivePropertiesConfig";
 import { ContentMenu } from "../../../components";
+import MySqlGitHub from "./MySqlGitHub";
 
 // =============================================================================================================
 
-const postgresql_detailed_config = "Postgresql Detailed Config";
+const mysql_dialect = "Mysql Dialect";
 const osiv = "Osiv";
-const install_postgresql_standalone_on_windows = "Install Postgresql Standalone On Windows";
+const mysql_basic_config = "Mysql Basic";
+const mysql_detailed_config = "Mysql Detailed";
+const mysql_comprehansive_properties_config = "Mysql Comprehansive Properties";
+const mysql_github = `Mysql git hub`;
 
 // =============================================================================================================
 
-const anchorList: string[] = [postgresql_detailed_config, osiv, install_postgresql_standalone_on_windows];
+const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config, mysql_github];
 
 // =============================================================================================================
 
-const Postgresql = () => {
+const MySqlMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -32,6 +38,7 @@ const Postgresql = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
+      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
@@ -49,13 +56,16 @@ const Postgresql = () => {
       />
       {/* End Contents */}
 
-      <PostgresqlDetailedConfig anchor={postgresql_detailed_config} />
-      <PostgresqlOsiv anchor={osiv} />
-      <InstallPostgresStandalone anchor={install_postgresql_standalone_on_windows} />
-
-      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
+      <MysqlDialect anchor={mysql_dialect} />
+      <MySqlOSIV anchor={osiv} />
+      <MysqlBasicConfig anchor={mysql_basic_config} />
+      <MySqlDetailedConfig anchor={mysql_detailed_config} />
+      <MySqlComprehansivePropertiesConfig anchor={mysql_comprehansive_properties_config} />
+      <MySqlGitHub anchor={mysql_github} />
+      {/* {this div is only for dividing} */}
+      <div className="my-8 h-4" />
     </section>
   );
 };
 
-export default Postgresql;
+export default MySqlMain;

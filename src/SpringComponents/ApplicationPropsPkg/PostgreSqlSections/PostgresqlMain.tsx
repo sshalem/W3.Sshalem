@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import H2Dbeaver from "./H2Dbeaver";
-import H2Osiv from "./H2Osiv";
-import H2DatabseBasicConfig from "./H2DatabseBasicConfig";
+import InstallPostgresStandalone from "./InstallPostgresStandalone";
+import PostgresqlOsiv from "./PostgresqlOsiv";
+import PostgresqlDetailedConfig from "./PostgresqlDetailedConfig";
 import { ContentMenu } from "../../../components";
 
 // =============================================================================================================
 
-const h2_databse_basic_config = "H2 DB Basic Config";
+const postgresql_detailed_config = "Postgresql Detailed Config";
 const osiv = "Osiv";
-const h2_dbeaver = "H2 DBeaver";
+const install_postgresql_standalone_on_windows = "Install Postgresql Standalone On Windows";
 
 // =============================================================================================================
 
-const anchorList: string[] = [h2_databse_basic_config, osiv, h2_dbeaver];
+const anchorList: string[] = [postgresql_detailed_config, osiv, install_postgresql_standalone_on_windows];
 
 // =============================================================================================================
 
-const H2 = () => {
+const PostgresqlMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -49,13 +49,13 @@ const H2 = () => {
       />
       {/* End Contents */}
 
-      <H2DatabseBasicConfig anchor={h2_databse_basic_config} />
-      <H2Osiv anchor={osiv} />
-      <H2Dbeaver anchor={h2_dbeaver} />
+      <PostgresqlDetailedConfig anchor={postgresql_detailed_config} />
+      <PostgresqlOsiv anchor={osiv} />
+      <InstallPostgresStandalone anchor={install_postgresql_standalone_on_windows} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default H2;
+export default PostgresqlMain;
