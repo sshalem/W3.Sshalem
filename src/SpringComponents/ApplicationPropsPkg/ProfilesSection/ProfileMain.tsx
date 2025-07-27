@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
 import ProfileIntro from "./ProfileIntro";
-import ProfileBasic from "./ProfileBasic";
+import ProfileConfig from "./ProfileConfig";
 
 // =============================================================================================================
 
 const profile_intro = "Profile Intro";
-const profile_basic = "Profile basic";
+const profile_config = "Profile config";
 
 // =============================================================================================================
 
-const anchorList: string[] = [profile_intro, profile_basic];
+const anchorList: string[] = [profile_intro, profile_config];
 
 // =============================================================================================================
 
@@ -48,7 +48,7 @@ const ProfileMain = () => {
       {/* End Contents */}
 
       <ProfileIntro anchor={profile_intro} />
-      <ProfileBasic anchor={profile_basic} />
+      <ProfileConfig anchor={profile_config} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
