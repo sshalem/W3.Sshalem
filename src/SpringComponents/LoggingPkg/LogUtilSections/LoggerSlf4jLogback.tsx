@@ -1,4 +1,4 @@
-import { ContentAnchor } from "../../../components";
+import { ContentAnchor, CopyCode } from "../../../components";
 import { JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
 const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
@@ -15,7 +15,9 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           for example : <span className="text-red-500"> web-starter-depenency</span>
         </div>
         <div className="my-5">
-          <XmlHighlight xmlCode={dependency} />
+          <CopyCode code={dependency}>
+            <XmlHighlight xmlCode={dependency} />
+          </CopyCode>
         </div>
       </div>
 
@@ -32,7 +34,9 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
         <div className="my-10">
-          <JavaHighlight javaCode={slf4jCode} />
+          <CopyCode code={slf4jCode}>
+            <JavaHighlight javaCode={slf4jCode} />
+          </CopyCode>
         </div>
       </div>
     </article>

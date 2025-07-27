@@ -1,4 +1,4 @@
-import { ContentAnchor, InternalArticle } from "../../../components";
+import { ContentAnchor, CopyCode, InternalArticle } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const PojoAsJson = ({ anchor }: { anchor: string }) => {
@@ -56,9 +56,14 @@ const PojoAsJson = ({ anchor }: { anchor: string }) => {
         <ul className="mx-8 list-disc"></ul>
       </div>
       <div className="my-5">Code , converting a POJO to JSON using Jackson</div>
-      <JavaHighlight javaCode={pojoAsJsonCode} />
+      <CopyCode code={pojoAsJsonCode}>
+        <JavaHighlight javaCode={pojoAsJsonCode} />
+      </CopyCode>
+
       <div className="my-5">here is how I present the POJO ,as JSON in console</div>
-      <JavaHighlight javaCode={jsonPresentationCode} />
+      <CopyCode code={jsonPresentationCode}>
+        <JavaHighlight javaCode={jsonPresentationCode} />
+      </CopyCode>
     </article>
   );
 };

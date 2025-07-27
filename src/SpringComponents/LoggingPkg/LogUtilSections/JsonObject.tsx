@@ -1,4 +1,4 @@
-import { ContentAnchor, InternalArticle } from "../../../components";
+import { ContentAnchor, CopyCode, InternalArticle } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
@@ -27,11 +27,19 @@ const JsonObject = ({ anchor }: { anchor: string }) => {
       </div>
       <InternalArticle articleTitle="example of JSON presentation">
         <div className="my-5">simple json presentation</div>
-        <JavaHighlight javaCode={simpleJsonCode} />
+        <CopyCode code={simpleJsonCode}>
+          <JavaHighlight javaCode={simpleJsonCode} />
+        </CopyCode>
+
         <div className="my-5">nested Json Object presentation</div>
-        <JavaHighlight javaCode={nestedJsonObjectCode} />
+        <CopyCode code={nestedJsonObjectCode}>
+          <JavaHighlight javaCode={nestedJsonObjectCode} />
+        </CopyCode>
+
         <div className="my-5">nested Json Object with Array</div>
-        <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
+        <CopyCode code={nestedJsonObjectArrayCode}>
+          <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
+        </CopyCode>
       </InternalArticle>
     </article>
   );

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
+import { ContentAnchor, CopyCode, GitHub, GitHubLiAnchor } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const LogUtilClass = ({ anchor }: { anchor: string }) => {
@@ -61,7 +61,7 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
         ></GitHubLiAnchor>
       </GitHub>
       <p className="my-14" />
-      {renderLogUtilCode}
+      <CopyCode code={logUtilCode}>{renderLogUtilCode}</CopyCode>
     </article>
   );
 };
