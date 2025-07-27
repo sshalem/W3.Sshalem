@@ -55,6 +55,10 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
 
+# console color enabled
+spring.output.ansi.enabled=always
+
+
 # spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 logging.level.org.hibernate.SQL=DEBUG

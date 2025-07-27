@@ -37,6 +37,9 @@ spring.jpa.generate-ddl=true
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.generate_statistics=true
 
+# console color enabled
+spring.output.ansi.enabled=always
+
 # disable OSIV
 spring.jpa.open-in-view=false
 

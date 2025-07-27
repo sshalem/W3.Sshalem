@@ -29,4 +29,7 @@ spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
 # Regarding this property
 # see the project of LAZY Loading, I explain it there
-spring.jpa.open-in-view=false`;
+spring.jpa.open-in-view=false
+
+# console color enabled
+spring.output.ansi.enabled=always`;
