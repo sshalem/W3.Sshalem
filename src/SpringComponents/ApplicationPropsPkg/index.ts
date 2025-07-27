@@ -5,3 +5,4 @@ export { default as PostgresqlMain } from "./PostgreSqlSections/PostgresqlMain";
 export { default as MongoDBMain } from "./MongoDbSections/MongoDBMain";
 export { default as DBeaverMain } from "./DBeaverSections/DBeaverMain";
 export { default as ProfileMain } from "./ProfilesSection/ProfileMain";
+export { default as DBInitMain } from "./DBInitialization/DBInitMain";

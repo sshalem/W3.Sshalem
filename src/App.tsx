@@ -14,7 +14,15 @@ import {
   TransactionManagement,
 } from "./SpringComponents";
 
-import { ApplicationProperties, DBeaverMain, H2Main, MySqlMain, PostgresqlMain, ProfileMain } from "./SpringComponents/ApplicationPropsPkg";
+import {
+  ApplicationProperties,
+  DBeaverMain,
+  DBInitMain,
+  H2Main,
+  MySqlMain,
+  PostgresqlMain,
+  ProfileMain,
+} from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain } from "./SpringComponents/LoggingPkg";
 
@@ -40,6 +48,7 @@ const router = createBrowserRouter(
                 { path: "mysql", element: <MySqlMain /> },
                 { path: "dbeaver", element: <DBeaverMain /> },
                 { path: "profiles", element: <ProfileMain /> },
+                { path: "db-initialization", element: <DBInitMain /> },
               ],
             },
             {
