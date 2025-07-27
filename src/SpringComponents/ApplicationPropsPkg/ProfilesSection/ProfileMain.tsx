@@ -2,15 +2,21 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
 import ProfileIntro from "./ProfileIntro";
 import ProfileConfig from "./ProfileConfig";
+import ProfileH2Config from "./ProfileH2Config";
+import ProfileMySqlConfig from "./ProfileMySqlConfig";
+import ProfilePostgresqlConfig from "./ProfilePostgresqlConfig";
 
 // =============================================================================================================
 
 const profile_intro = "Profile Intro";
 const profile_config = "Profile config";
+const profile_h2_config = "Profile H2";
+const profile_mysql_config = "Profile MySql";
+const profile_postgresql_config = "Profile PostgreSql";
 
 // =============================================================================================================
 
-const anchorList: string[] = [profile_intro, profile_config];
+const anchorList: string[] = [profile_intro, profile_config, profile_h2_config, profile_mysql_config, profile_postgresql_config];
 
 // =============================================================================================================
 
@@ -49,6 +55,9 @@ const ProfileMain = () => {
 
       <ProfileIntro anchor={profile_intro} />
       <ProfileConfig anchor={profile_config} />
+      <ProfileH2Config anchor={profile_h2_config} />
+      <ProfileMySqlConfig anchor={profile_mysql_config} />
+      <ProfilePostgresqlConfig anchor={profile_postgresql_config} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -1,6 +1,7 @@
 import { FaDiamond } from "react-icons/fa6";
-import { InternalArticle, MainChildArea } from "../../../components";
-import { Span } from "../../../Highlight";
+import { CopyCode, InternalArticle, MainChildArea } from "../../../components";
+import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../Highlight";
+import profile_1 from "../../../assets/profile_1.jpg";
 
 const ProfileConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,30 +17,99 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
         <div className="my-1 ml-8 flex">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> PostgreSql profile
         </div>
-        <InternalArticle articleTitle="steps to create a profile">
-          {/* application.properties        # Default config */}
-          {/* application-dev.properties    # Dev environment */}
-          {/* application-test.properties   # Test environment */}
-          {/* application-prod.properties   # Prod environment */}
-          {/* application-h2.properties   # h2 environment */}
-          {/* application-mysql.properties   # mysql environment */}
-          {/* application-postgresql.properties   # postgresql environment */}
-          <div>step 1:</div>
-          Use following convention , in order to add new properties file:
-          <div className="my-4 ml-4">
-            <Span>application-{`<profile-name>`}.properties</Span>
+        {/* application.properties        # Default config */}
+        {/* application-dev.properties    # Dev environment */}
+        {/* application-test.properties   # Test environment */}
+        {/* application-prod.properties   # Prod environment */}
+        {/* application-h2.properties   # h2 environment */}
+        {/* application-mysql.properties   # mysql environment */}
+        {/* application-postgresql.properties   # postgresql environment */}
+        <InternalArticle articleTitle="Step 1 : application.properties , Set Active Profile">
+          <div>
+            <div className="my-4 ml-8">
+              <ul className="my-2 list-disc">
+                <li className="my-1">
+                  In the default properties I define who will be the profile properties that app will use, for example DEV profile.
+                </li>
+                <li className="my-1">
+                  Set the active profile in the default <Span>application.properties</Span>
+                </li>
+              </ul>
+            </div>
+
+            <CopyCode code={appPropCode}>
+              <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
+            </CopyCode>
+            <div className="my-5">
+              This tells Spring Boot to load &nbsp;
+              <Span>application-dev.properties</Span>&nbsp; in addition to the default config.
+              <br />
+              <div className="my-2">
+                The pattern is of a profile config is : <Span>application-{`{profile-name}`}.properties</Span>
+              </div>
+              <div className="my-2">
+                Where <Span>{`{profile-name}`}</Span> - will be the name of the profile we select .
+              </div>
+              <div className="my-2">
+                In our example <Span>{`{profile-name}`}</Span> is <Span>dev</Span>
+              </div>
+            </div>
           </div>
-          <div>{`<profile-name>`} - will be the name of the profile we select in</div>
         </InternalArticle>
-        {/* <div className="my-1 ml-8 flex">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp;
-          <a href="https://docs.spring.io/spring-boot/reference/features/profiles.html" target="_blank" className="tracking-wider text-blue-500">
-            https://docs.spring.io/spring-boot/reference/features/profiles.html
-          </a>
-        </div> */}
+        {/*  */}
+        {/*  */}
+        <InternalArticle articleTitle="Step 2 : Create Profile-Specific Properties File">
+          <div className="my-2 mb-4">
+            Create a new file of <Span>application-dev.properties</Span> in <Span>src/main/resources:</Span>
+          </div>
+          <img src={profile_1} alt="profile_1" className="ml-16" />
+
+          <div className="my-8">
+            <div className="my-4">
+              type the following code inside <Span>application-dev.properties</Span>
+            </div>
+            <CopyCode code={devCode}>
+              <ApplicationPropertiesHighlight propertiesCode={devCode} />
+            </CopyCode>
+          </div>
+        </InternalArticle>
+        {/*  */}
+        {/*  */}
+        <InternalArticle articleTitle="Step 3 : Run App check console">
+          <div className="my-8">
+            <CopyCode code={javaCode}>
+              <JavaHighlight javaCode={javaCode} />
+            </CopyCode>
+          </div>
+          <div className="my-8">console show active profile is "dev"</div>
+          <div>
+            <BatchHighlight batchCode={batchCOde} />
+          </div>
+        </InternalArticle>
       </article>
     </MainChildArea>
   );
 };
 
 export default ProfileConfig;
+
+const appPropCode = `spring.profiles.active=dev
+`;
+
+const devCode = `my.dev.var=checking dev profile is working
+`;
+
+const javaCode = `@RestController("/")
+public class AppController {
+
+	@Value("$/{my.var}")
+	private String myVar;
+
+	@GetMapping("/data")
+	public String getMethodName() {
+		System.out.println(myVar);
+		return new String("test my app");
+	}
+}`;
+
+const batchCOde = `The following 1 profile is active: "dev"`;
