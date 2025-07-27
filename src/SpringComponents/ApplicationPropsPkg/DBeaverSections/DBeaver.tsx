@@ -4,6 +4,7 @@ import DBeaverMySqlOnLinode from "./DBeaverMySqlOnLinode";
 import DBeaverPostgresql from "./DBeaverPostgresql";
 import DBeaverVersion from "./DBeaverVersion";
 import { ContentMenu, Loading } from "../../../components";
+import DBeaverGitHub from "./DBeaverGitHub";
 
 // =============================================================================================================
 
@@ -11,10 +12,11 @@ const dbeaver_version = "DBeaver Version";
 const dbeaver_mysql = "DBeaver With Mysql";
 const dbeaver_mysql_on_linode = "DBeaver With Mysql On Linode Server";
 const dbeaver_postgresql = "DBeaver With Postgresql";
+const dbeaver_git_hub = "DBeaver git hub";
 
 // =============================================================================================================
 
-const anchorList: string[] = [dbeaver_version, dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql];
+const anchorList: string[] = [dbeaver_version, dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql, dbeaver_git_hub];
 
 // =============================================================================================================
 
@@ -73,6 +75,7 @@ const DBeaver = () => {
       <DBeaverMySql anchor={dbeaver_mysql} />
       <DBeaverMySqlOnLinode anchor={dbeaver_mysql_on_linode} />
       <DBeaverPostgresql anchor={dbeaver_postgresql} />
+      <DBeaverGitHub anchor={dbeaver_git_hub} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
