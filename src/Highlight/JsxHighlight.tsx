@@ -10,7 +10,16 @@ PrismLightSyntaxHighlighter.registerLanguage("jsx", jsx);
 const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
   return (
     <div>
-      <PrismLightSyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers={true} customStyle={{ fontSizeAdjust: "0.57" }}>
+      <PrismLightSyntaxHighlighter
+        language="jsx"
+        style={vscDarkPlus}
+        showLineNumbers={true}
+        customStyle={{
+          fontSizeAdjust: "0.57",
+          // width: "60rem",
+          display: "flex",
+        }}
+      >
         {jsxCode}
       </PrismLightSyntaxHighlighter>
     </div>

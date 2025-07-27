@@ -20,7 +20,8 @@ const BatchHighlight = ({ batchCode }: { batchCode: string }) => {
           outlineStyle: "solid",
           outlineWidth: "1px",
           outlineColor: "#dddddd",
-          width: "60rem",
+          // width: "60rem",
+          display: "flex",
         }}
       >
         {batchCode}

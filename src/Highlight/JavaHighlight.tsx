@@ -13,14 +13,15 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
       <PrismLightSyntaxHighlighter
         language="java"
         style={JAVA_STYLE}
-        showLineNumbers={true}
+        // showLineNumbers={true}
         customStyle={{
           fontSize: "0.85rem",
           backgroundColor: "#fbfbfb",
           outlineStyle: "solid",
           outlineWidth: "1px",
           outlineColor: "#dddddd",
-          width: "60rem",
+          // width: "60rem",
+          display: "flex",
         }}
       >
         {javaCode}
