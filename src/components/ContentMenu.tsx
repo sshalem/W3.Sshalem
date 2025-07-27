@@ -8,7 +8,7 @@ interface ContentMenuProps {
 
 const ContentMenu = ({ ulRef, showContent, contentHeight, anchorList, handleShowContent }: ContentMenuProps) => {
   return (
-    <article className="content-sm content-md content-lg content-xl content-basic">
+    <article className="content-sm content-md content-lg content-xl content-basic z-10">
       {/* ContentHeader - Start */}
       <div className="mb-0 w-[100%] bg-gray-800 px-2 py-1 text-center capitalize">
         <span className="ml-2 text-sm font-semibold tracking-wider text-white">contents </span>
