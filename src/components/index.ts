@@ -24,3 +24,4 @@ export { default as Answer } from "./Answer";
 export { default as InternalArticle } from "./InternalArticle";
 export { default as CopyCode } from "./CopyCode";
 export { default as MainChildArea } from "./MainChildArea";
+export { default as LoggingComapreTable } from "./LoggingComapreTable";

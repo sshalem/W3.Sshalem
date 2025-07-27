@@ -1,4 +1,5 @@
-import { MainChildArea } from "../../../components";
+import { FaDiamond } from "react-icons/fa6";
+import { LoggingComapreTable, MainChildArea } from "../../../components";
 import { Span } from "../../../Highlight";
 
 const LogFileIntro = ({ anchor }: { anchor: string }) => {
@@ -50,16 +51,54 @@ const LogFileIntro = ({ anchor }: { anchor: string }) => {
               </li>
             </ul>
           </div>
-          <div className="my-4">
-            There are 4 possible options with logging file on production server (see Spring docs ) &nbsp;
-            <a
-              href="https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-output"
-              target="_blank"
-              className="tracking-wider text-blue-500 underline"
-            >
-              Logging properties File output
-            </a>
-          </div>
+          {/*  */}
+          <article className="my-4">
+            There are 4 possible options to configure <Span>Spring Boot Logging</Span> with logging file on production server (see Spring docs )
+            &nbsp;
+          </article>
+          <LoggingComapreTable />
+          {/*  */}
+          <article className="my-4">
+            <div className="my-5">
+              from spring docs
+              <div className="my-1 ml-8 flex">
+                <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp;
+                <a
+                  href="https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-output"
+                  target="_blank"
+                  className="tracking-wider text-blue-500"
+                >
+                  https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-output
+                </a>
+              </div>
+              <div className="my-1 ml-8 flex">
+                <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp;
+                <a href="https://docs.spring.io/spring-boot/reference/features/logging.html" target="_blank" className="tracking-wider text-blue-500">
+                  https://docs.spring.io/spring-boot/reference/features/logging.html
+                </a>
+              </div>
+              <div className="my-1 ml-8 flex">
+                <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp;
+                <a
+                  href="https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-rotation"
+                  target="_blank"
+                  className="tracking-wider text-blue-500"
+                >
+                  https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.file-rotation
+                </a>
+              </div>
+              <div className="my-1 ml-8 flex">
+                <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp;
+                <a
+                  href="https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.custom-log-configuration"
+                  target="_blank"
+                  className="tracking-wider text-blue-500"
+                >
+                  https://docs.spring.io/spring-boot/reference/features/logging.html#features.logging.custom-log-configuration
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </article>
     </MainChildArea>
