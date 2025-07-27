@@ -16,7 +16,7 @@ import {
 
 import { ApplicationProperties, DBeaverMain, H2Main, MySqlMain, PostgresqlMain } from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
-import { Logging, LogUtilMain, Slf4JLogbackMain } from "./SpringComponents/LoggingPkg";
+import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain } from "./SpringComponents/LoggingPkg";
 
 const router = createBrowserRouter(
   [
@@ -45,9 +45,9 @@ const router = createBrowserRouter(
               path: "logging",
               element: <Logging />,
               children: [
-                // { path: "Slf4JLogback", element: <LoggingSlf4JLogback /> },
                 { path: "LogUtil", element: <LogUtilMain /> },
-                { path: "slf4j-logback", element: <Slf4JLogbackMain /> },
+                { path: "slf4j-logback", element: <Slf4jLogbackMain /> },
+                { path: "log-file", element: <LogFileMain /> },
               ],
             },
             {

@@ -41,10 +41,9 @@ const DropDownLogging = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/* <SideDropdownLink pageName="Slf4J(Logback)" internalLink="logging/Slf4JLogback" /> */}
-        {/* <SideDropdownLink pageName="Logging Linux server" internalLink="logging/FileLocationLinuxServer" /> */}
         <SideDropdownLink pageName="Log Util" internalLink="logging/LogUtil" />
         <SideDropdownLink pageName="SLF4J (Logback)" internalLink="logging/slf4j-logback" />
+        <SideDropdownLink pageName="Log File" internalLink="logging/log-file" />
       </div>
     </section>
   );
