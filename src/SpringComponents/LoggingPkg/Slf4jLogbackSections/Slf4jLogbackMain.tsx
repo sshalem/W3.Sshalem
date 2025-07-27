@@ -3,16 +3,20 @@ import { ContentMenu, Loading } from "../../../components";
 import Slf4jLinks from "./Slf4jLinks";
 import Slf4jRollingFileSetup from "./Slf4jRollingFileSetup";
 import Slf4jGitHub from "./Slf4jGitHub";
+import Slf4jUtil from "./Slf4jUtil";
+import Slf4jReProduceLogbackPattern from "./Slf4jReProduceLogbackPattern";
 
 // =============================================================================================================
 
 const slf4j_links = "slf4j links";
 const slf4j_rolling_file_setup = "slf4j rolling file setup";
 const slf4j_git_hub = "slf4j git hub";
+const slf4j_util = "slf4j (Logback) util";
+const slf4j_produce_logback_pattern = "slf4j produce logback pattern";
 
 // =============================================================================================================
 
-const anchorList: string[] = [slf4j_links, slf4j_rolling_file_setup, slf4j_git_hub];
+const anchorList: string[] = [slf4j_links, slf4j_util, slf4j_produce_logback_pattern, slf4j_rolling_file_setup, slf4j_git_hub];
 
 // =============================================================================================================
 
@@ -60,6 +64,8 @@ const Slf4JLogbackMain = () => {
       />
       {/* End Contents */}
       <Slf4jLinks anchor={slf4j_links} />
+      <Slf4jUtil anchor={slf4j_util} />
+      <Slf4jReProduceLogbackPattern anchor={slf4j_produce_logback_pattern} />
       <Slf4jRollingFileSetup anchor={slf4j_rolling_file_setup} />
       <Slf4jGitHub anchor={slf4j_git_hub} />
 

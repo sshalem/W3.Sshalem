@@ -22,7 +22,7 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
       </div>
 
       <div className="my-14">
-        <p className="my-5">code below I use:</p>
+        <div className="my-5">code below I use:</div>
         <ul className="list-disc pl-8">
           <li className="my-1">
             <Span>import org.slf4j.Logger</Span> - The <span className="text-blue-600">org.slf4j.Logger</span> interface is the main user entry point
