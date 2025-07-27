@@ -57,4 +57,4 @@ const LogFileLinux = ({ anchor }: { anchor: string }) => {
 
 export default LogFileLinux;
 
-const propertiesCode = `logging.file.name=__Shabtay_Shalem.log`;
+// const propertiesCode = `logging.file.name=__Shabtay_Shalem.log`;
