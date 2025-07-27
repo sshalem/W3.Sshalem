@@ -1,6 +1,7 @@
 import { FaDiamond } from "react-icons/fa6";
 import { CopyCode, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../../Highlight";
+import log_file_1 from "../../../assets/log_file_1.jpg";
 
 const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,13 +24,13 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
         </div>
 
-        <CopyCode code={logginFileNameOnlyCode}>
-          <JavaHighlight javaCode={logginFileNameOnlyCode} />
+        <CopyCode code={logginFileCode}>
+          <JavaHighlight javaCode={logginFileCode} />
         </CopyCode>
 
         <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp; <Span>GET request</Span> &nbsp; , to check log file is created
-          , refresh the project (F5) , see if &nbsp;
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
+          check log file is created , see if &nbsp;
           <Span>app.log</Span> &nbsp; created , then explore the content of &nbsp; <Span>app.log</Span> &nbsp; , see if data is logged in it.
         </div>
       </article>
@@ -47,23 +48,23 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
         </div>
 
         <div className="my-4"></div>
-        <CopyCode code={logginFileNameOnlyProperties}>
-          <ApplicationPropertiesHighlight propertiesCode={logginFileNameOnlyProperties} />
+        <CopyCode code={logginFilePathOnlyProperties}>
+          <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
         </CopyCode>
 
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
         </div>
 
-        <CopyCode code={logginFileNameOnlyCode}>
-          <JavaHighlight javaCode={logginFileNameOnlyCode} />
+        <CopyCode code={logginFileCode}>
+          <JavaHighlight javaCode={logginFileCode} />
         </CopyCode>
 
         <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; , to check log file is created
-          , refresh the project (F5) , see if &nbsp;
-          <Span>app.log</Span> &nbsp; created , then explore the content of &nbsp; <Span>app.log</Span> &nbsp; , see if data is logged in it.
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
+          check if a directory &nbsp;<Span>myLogDir</Span> &nbsp; is created, and check if log file is &nbsp;<Span>spring.log</Span>&nbsp; created.
         </div>
+        <img src={log_file_1} alt="log_file" className="ml-20 mt-10" />
       </article>
     </MainChildArea>
   );
@@ -74,7 +75,11 @@ export default LogFileDevWindows;
 const logginFileNameOnlyProperties = `# Log to a file named app.log in the project root
 logging.file.name=app.log`;
 
-const logginFileNameOnlyCode = `import org.slf4j.Logger;
+const logginFilePathOnlyProperties = `# Log to a directory named myLogDir in the project root
+# it will create by default a Spring.log file
+logging.file.path=./myLogDir`;
+
+const logginFileCode = `import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
