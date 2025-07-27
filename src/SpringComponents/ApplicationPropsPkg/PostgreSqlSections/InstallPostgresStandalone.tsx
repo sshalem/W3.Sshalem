@@ -9,12 +9,11 @@ import pgadmin_2 from "../../../assets/pgadmin_2.jpg";
 import pgadmin_3 from "../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
-import { ContentAnchor, CopyCode, GitHub, GitHubLiAnchor } from "../../../components";
+import { CopyCode, GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="my-4">Links :</div>
       <ul className="mx-8">
         <li className="list-disc">
@@ -139,7 +138,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           </div>
         </li>
       </ul>
-    </article>
+    </MainChildArea>
   );
 };
 

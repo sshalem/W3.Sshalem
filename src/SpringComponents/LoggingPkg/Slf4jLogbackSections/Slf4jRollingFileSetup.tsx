@@ -8,16 +8,6 @@ const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
       <CopyCode code={"rollingFileCode"}>
         <ApplicationPropertiesHighlight propertiesCode={rollingFileCode} />
       </CopyCode>
-      {/* <ul className="mx-8 list-decimal">
-        <li className="my-1">logging.file.path</li>
-        <li className="my-1">logging.file.name</li>
-        <li className="my-1">logging.pattern.file</li>
-        <li className="my-1">logging.pattern.rolling-file-name</li>
-        <li className="my-1">logging.file.max.size (default: 10MB)</li>
-        <li className="my-1">logging.file.max.history (default: 7 days)</li>
-        <li className="my-1">logging.file.total-size-cap</li>
-        <li className="my-1">logging.file.clean-history-on-start</li>
-      </ul> */}
     </MainChildArea>
   );
 };

@@ -1,9 +1,8 @@
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const H2Dbeaver = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div>links for H2 DBeaver config</div>
       <ul className="list-disc pl-8">
         <li>
@@ -23,7 +22,7 @@ const H2Dbeaver = ({ anchor }: { anchor: string }) => {
         <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\maven\maven-central\com.h2database\h2-2.1.210.jar</li>
         <li>C:\Users\User\AppData\Roaming\DBeaverData\drivers\remote\h2database\h2database\master\LICENSE.txt</li>
       </ul>
-    </article>
+    </MainChildArea>
   );
 };
 

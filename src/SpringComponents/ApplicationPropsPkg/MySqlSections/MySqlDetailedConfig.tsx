@@ -1,11 +1,9 @@
-import { Answer, ContentAnchor, CopyCode, Question } from "../../../components";
+import { Answer, CopyCode, MainChildArea, Question } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-
+    <MainChildArea anchor={anchor}>
       <Question>
         What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
       </Question>
@@ -31,7 +29,7 @@ const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
       <CopyCode code={mysql_detailed_config}>
         <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
       </CopyCode>
-    </article>
+    </MainChildArea>
   );
 };
 

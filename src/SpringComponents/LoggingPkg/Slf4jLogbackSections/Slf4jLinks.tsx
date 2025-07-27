@@ -1,10 +1,9 @@
-import { ContentAnchor } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { Span } from "../../../Highlight";
 
 const Slf4jLinks = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="mb-5 mt-5">
         <span className="rounded-md bg-teal-500 p-1 text-white">SLF4J</span> - <span className="font-bold text-red-500">S</span>imple{" "}
         <span className="font-bold text-red-500">L</span>
@@ -96,7 +95,7 @@ const Slf4jLinks = ({ anchor }: { anchor: string }) => {
       </section>
       {/*  */}
       {/*  */}
-    </article>
+    </MainChildArea>
   );
 };
 

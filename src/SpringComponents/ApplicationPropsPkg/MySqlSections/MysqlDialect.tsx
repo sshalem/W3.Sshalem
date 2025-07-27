@@ -1,10 +1,9 @@
-import { ContentAnchor, CopyCode } from "../../../components";
+import { CopyCode, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="my-4">
         When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
         <div className="my-4">
@@ -21,7 +20,7 @@ const MysqlDialect = ({ anchor }: { anchor: string }) => {
           </CopyCode>
         </div>
       </div>
-    </article>
+    </MainChildArea>
   );
 };
 

@@ -1,9 +1,8 @@
-import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
+import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
 
 const MySqlGitHub = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <GitHub>
         <GitHubLiAnchor
           gitLink={
@@ -16,7 +15,7 @@ const MySqlGitHub = ({ anchor }: { anchor: string }) => {
           description={"Git - Connect dbeaver to MySql on linux server"}
         />
       </GitHub>
-    </article>
+    </MainChildArea>
   );
 };
 
