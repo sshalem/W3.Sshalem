@@ -7,8 +7,8 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
       <ContentAnchor anchor={anchor} />
 
       <div>
-        to display description in console <span className="rounded-md bg-emerald-500 px-1 py-1 font-semibold text-white">with TimeStamp</span> with I
-        will use the <Span>SLF4J (Logback)</Span>. <br />
+        to display description in console <span className="rounded-md bg-emerald-500 px-1 py-[0.1rem] font-semibold text-white">with TimeStamp</span>{" "}
+        with I will use the <Span>SLF4J (Logback)</Span>. <br />
         <Span>Logback</Span> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one dependency
         that it is part of spring boot , <br />
         <div>
