@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { Answer, MainChildArea, Question } from "../../../components";
-import { ApplicationPropertiesHighlight, BatchHighlight, Span } from "../../../Highlight";
+import { Span } from "../../../Highlight";
 
 const ProfileIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,8 +11,6 @@ const ProfileIntro = ({ anchor }: { anchor: string }) => {
         For example, you can have different database URLs or log levels for dev, test, and prod. I can have different profile for connecting to
         DataBases.
         <br />A profile file refers to <Span>application.properties</Span> file
-        <div className="my-4"></div>
-        <ApplicationPropertiesHighlight propertiesCode={appProfileConsole} />
       </Answer>
 
       <article className="my-5">
@@ -29,5 +27,3 @@ const ProfileIntro = ({ anchor }: { anchor: string }) => {
 };
 
 export default ProfileIntro;
-
-const appProfileConsole = `No active profile set, falling back to 1 default profile: "default"`;
