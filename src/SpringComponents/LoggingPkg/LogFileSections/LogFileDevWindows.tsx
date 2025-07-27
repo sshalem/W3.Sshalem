@@ -7,22 +7,22 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="mb-8">in this section I will show , how to config the log file during dev process on wiindows</div>
-      <div className="ml-8 flex flex-wrap">
+      <div className="my-1 ml-8 flex flex-wrap">
         <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-red-500">only</span> &nbsp;
         <Span>logging.file.name</Span>&nbsp;
       </div>
-      <div className="ml-8 flex flex-wrap">
+      <div className="my-1 ml-8 flex flex-wrap">
         <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-red-500">only</span> &nbsp;
         <Span>logging.file.path</Span>&nbsp;
       </div>
-      <div className="ml-8 flex flex-wrap">
+      <div className="my-1 ml-8 flex flex-wrap">
         <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-emerald-500">both</span>
         &nbsp; <Span>logging.file.name</Span>&nbsp; and &nbsp;
         <Span>logging.file.path</Span>&nbsp;
       </div>
       {/*  */}
       {/*  */}
-      <article className="my-4">
+      <article className="my-16">
         <div>
           <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
             config <span className="font-mono">logging.file.name </span> only
@@ -50,7 +50,7 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
       </article>
       {/*  */}
       {/*  */}
-      <article className="my-4">
+      <article className="my-16">
         <div>
           <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
             config <span className="font-mono">logging.file.path </span> only
@@ -66,15 +66,12 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
         </CopyCode>
 
-        <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
+        <div className="my-1 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp; as in
+          previous example
         </div>
 
-        <CopyCode code={logginFileCode}>
-          <JavaHighlight javaCode={logginFileCode} />
-        </CopyCode>
-
-        <div className="my-5 ml-8 flex flex-wrap">
+        <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
           check if a directory &nbsp;<Span>myLogDir</Span> &nbsp; is created, and check if log file is &nbsp;<Span>spring.log</Span>&nbsp; created.
         </div>
@@ -82,31 +79,31 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
       </article>
       {/*  */}
       {/*  */}
-      <article className="my-4">
+
+      {/*  */}
+      {/*  */}
+      <article className="my-8">
         <div>
           <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
-            config both <span className="font-mono">logging.file.path and path </span>
+            config both <span className="font-mono">logging.file.name and path </span>
           </span>
         </div>
-        <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; in this example I config &nbsp; <Span>application.properties</Span>
+        <div className="my-4">
+          In this example I config &nbsp; <Span>application.properties</Span>
           &nbsp; with both &nbsp; <Span>logging.file.name</Span> &nbsp; and &nbsp;<Span>logging.file.path</Span>
+          It kind of tricky , since DOCS says , If I have both configured , then &nbsp;<Span>logging.file.path</Span> will be ignored. <br />
+          Thus, In order to be able to have a log file , in my defined folder , with my defined name , here is how I do it
+          <Span>logging.file.name=./myLogDir/sshb.log</Span>
         </div>
-
         <div className="my-4"></div>
         <CopyCode code={logginFilePathOnlyProperties}>
           <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
         </CopyCode>
-
-        <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
+        <div className="my-1 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp; as in
+          previous example
         </div>
-
-        <CopyCode code={logginFileCode}>
-          <JavaHighlight javaCode={logginFileCode} />
-        </CopyCode>
-
-        <div className="my-5 ml-8 flex flex-wrap">
+        <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
           check if a directory &nbsp;<Span>myLogDir</Span> &nbsp; is created, and check if log file is &nbsp;<Span>spring.log</Span>&nbsp; created.
         </div>

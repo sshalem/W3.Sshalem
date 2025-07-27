@@ -7,7 +7,7 @@ const InternalArticle = ({ articleTitle, children }: InternalArticleProps) => {
   return (
     <article>
       <div className="my-4">
-        <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">{articleTitle}</p>
+        <div className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">{articleTitle}</div>
         {children}
       </div>
     </article>
