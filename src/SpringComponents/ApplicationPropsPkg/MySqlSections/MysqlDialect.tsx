@@ -1,4 +1,4 @@
-import { ContentAnchor } from "../../../components";
+import { ContentAnchor, CopyCode } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MysqlDialect = ({ anchor }: { anchor: string }) => {
@@ -8,13 +8,17 @@ const MysqlDialect = ({ anchor }: { anchor: string }) => {
       <div className="my-4">
         When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
         <div className="my-4">
-          <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
+          <CopyCode code={mysql_jdk8}>
+            <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
+          </CopyCode>
         </div>
       </div>
       <div className="my-8">
         When using java version <Span>JDK11</Span> use with <Span>mysql</Span> dialect :
         <div className="my-4">
-          <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
+          <CopyCode code={mysql_jdk11}>
+            <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
+          </CopyCode>
         </div>
       </div>
     </article>

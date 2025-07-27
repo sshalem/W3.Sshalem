@@ -1,4 +1,4 @@
-import { ContentAnchor } from "../../../components";
+import { ContentAnchor, CopyCode } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const BasicLogging = ({ anchor }: { anchor: string }) => {
@@ -9,7 +9,9 @@ const BasicLogging = ({ anchor }: { anchor: string }) => {
         to display description in console <span className="rounded-md bg-red-400 px-1 py-[0.1rem] font-semibold text-white">without TimeStamp</span>{" "}
         we use the Simple <Span>System.out.println</Span>
       </div>
-      <JavaHighlight javaCode={sysoutCode} />
+      <CopyCode code={sysoutCode}>
+        <JavaHighlight javaCode={sysoutCode} />
+      </CopyCode>
     </article>
   );
 };

@@ -22,3 +22,4 @@ export { default as Loading } from "./Loading";
 export { default as Question } from "./Question";
 export { default as Answer } from "./Answer";
 export { default as InternalArticle } from "./InternalArticle";
+export { default as CopyCode } from "./CopyCode";

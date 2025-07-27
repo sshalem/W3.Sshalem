@@ -5,6 +5,7 @@ import MysqlBasicConfig from "./MysqlBasicConfig";
 import MySqlDetailedConfig from "./MySqlDetailedConfig";
 import MySqlComprehansivePropertiesConfig from "./MySqlComprehansivePropertiesConfig";
 import { ContentMenu } from "../../../components";
+import MySqlGitHub from "./MySqlGitHub";
 
 // =============================================================================================================
 
@@ -13,10 +14,11 @@ const osiv = "Osiv";
 const mysql_basic_config = "Mysql Basic";
 const mysql_detailed_config = "Mysql Detailed";
 const mysql_comprehansive_properties_config = "Mysql Comprehansive Properties";
+const mysql_github = `Mysql git hub`;
 
 // =============================================================================================================
 
-const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config];
+const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_detailed_config, mysql_comprehansive_properties_config, mysql_github];
 
 // =============================================================================================================
 
@@ -59,7 +61,7 @@ const MySql = () => {
       <MysqlBasicConfig anchor={mysql_basic_config} />
       <MySqlDetailedConfig anchor={mysql_detailed_config} />
       <MySqlComprehansivePropertiesConfig anchor={mysql_comprehansive_properties_config} />
-
+      <MySqlGitHub anchor={mysql_github} />
       {/* {this div is only for dividing} */}
       <div className="my-8 h-4" />
     </section>

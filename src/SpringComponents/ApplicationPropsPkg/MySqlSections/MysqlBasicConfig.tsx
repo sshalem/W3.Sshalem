@@ -1,11 +1,13 @@
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
-import { ContentAnchor } from "../../../components";
+import { ContentAnchor, CopyCode } from "../../../components";
 
 const MysqlBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
     <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
-      <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
+      <CopyCode code={mysql_basic}>
+        <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
+      </CopyCode>
     </article>
   );
 };
