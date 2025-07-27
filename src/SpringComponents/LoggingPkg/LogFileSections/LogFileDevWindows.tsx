@@ -6,18 +6,64 @@ import log_file_1 from "../../../assets/log_file_1.jpg";
 const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <div className="mb-8">in this section I will show , how to config the log file during dev process on wiindows</div>
+      <div className="ml-8 flex flex-wrap">
+        <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-red-500">only</span> &nbsp;
+        <Span>logging.file.name</Span>&nbsp;
+      </div>
+      <div className="ml-8 flex flex-wrap">
+        <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-red-500">only</span> &nbsp;
+        <Span>logging.file.path</Span>&nbsp;
+      </div>
+      <div className="ml-8 flex flex-wrap">
+        <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Config &nbsp; <span className="font-semibold text-emerald-500">both</span>
+        &nbsp; <Span>logging.file.name</Span>&nbsp; and &nbsp;
+        <Span>logging.file.path</Span>&nbsp;
+      </div>
+      {/*  */}
+      {/*  */}
       <article className="my-4">
         <div>
-          <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">logging.file.name</span>
+          <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
+            config <span className="font-mono">logging.file.name </span> only
+          </span>
         </div>
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; in this example I only config &nbsp; <Span>application.properties</Span>
           &nbsp; with &nbsp; <Span>logging.file.name</Span>
         </div>
-
         <div className="my-4"></div>
         <CopyCode code={logginFileNameOnlyProperties}>
           <ApplicationPropertiesHighlight propertiesCode={logginFileNameOnlyProperties} />
+        </CopyCode>
+        <div className="my-5 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
+        </div>
+        <CopyCode code={logginFileCode}>
+          <JavaHighlight javaCode={logginFileCode} />
+        </CopyCode>
+        <div className="my-5 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
+          check log file is created , see if &nbsp;
+          <Span>app.log</Span> &nbsp; created , then explore the content of &nbsp; <Span>app.log</Span> &nbsp; , see if data is logged in it.
+        </div>
+      </article>
+      {/*  */}
+      {/*  */}
+      <article className="my-4">
+        <div>
+          <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
+            config <span className="font-mono">logging.file.path </span> only
+          </span>
+        </div>
+        <div className="my-5 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; in this example I only config &nbsp; <Span>application.properties</Span>
+          &nbsp; with &nbsp; <Span>logging.file.path</Span>
+        </div>
+
+        <div className="my-4"></div>
+        <CopyCode code={logginFilePathOnlyProperties}>
+          <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
         </CopyCode>
 
         <div className="my-5 ml-8 flex flex-wrap">
@@ -30,21 +76,21 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
 
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
-          check log file is created , see if &nbsp;
-          <Span>app.log</Span> &nbsp; created , then explore the content of &nbsp; <Span>app.log</Span> &nbsp; , see if data is logged in it.
+          check if a directory &nbsp;<Span>myLogDir</Span> &nbsp; is created, and check if log file is &nbsp;<Span>spring.log</Span>&nbsp; created.
         </div>
+        <img src={log_file_1} alt="log_file" className="ml-20 mt-10" />
       </article>
-
       {/*  */}
       {/*  */}
-
       <article className="my-4">
         <div>
-          <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">logging.file.path</span>
+          <span className="rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
+            config both <span className="font-mono">logging.file.path and path </span>
+          </span>
         </div>
         <div className="my-5 ml-8 flex flex-wrap">
-          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; in this example I only config &nbsp; <Span>application.properties</Span>
-          &nbsp; with &nbsp; <Span>logging.file.path</Span>
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; in this example I config &nbsp; <Span>application.properties</Span>
+          &nbsp; with both &nbsp; <Span>logging.file.name</Span> &nbsp; and &nbsp;<Span>logging.file.path</Span>
         </div>
 
         <div className="my-4"></div>
