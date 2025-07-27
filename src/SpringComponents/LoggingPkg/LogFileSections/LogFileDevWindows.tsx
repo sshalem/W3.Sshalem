@@ -2,6 +2,7 @@ import { FaDiamond } from "react-icons/fa6";
 import { CopyCode, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../../Highlight";
 import log_file_1 from "../../../assets/log_file_1.jpg";
+import log_file_2 from "../../../assets/log_file_2.jpg";
 
 const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
   return (
@@ -103,11 +104,17 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp; as in
           previous example
         </div>
+
         <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
           check if a directory &nbsp;<Span>myLogDir</Span> &nbsp; is created, and check if log file is &nbsp;<Span>spring.log</Span>&nbsp; created.
         </div>
-        <img src={log_file_1} alt="log_file" className="ml-20 mt-10" />
+        <div className="my-1 ml-8 flex flex-wrap">
+          <FaDiamond className="mr-2 self-center text-[0.6rem]" /> We cans see , a directory &nbsp;
+          <Span>myLogDir</Span>&nbsp; is created , with the file name I define &nbsp;
+          <Span>sshb.log</Span>&nbsp;
+        </div>
+        <img src={log_file_2} alt="log_file" className="ml-20 mt-10" />
       </article>
     </MainChildArea>
   );
