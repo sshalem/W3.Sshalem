@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../components";
+import Slf4jLinks from "./Slf4jLinks";
+import Slf4jRollingFileSetup from "./Slf4jRollingFileSetup";
 
 // =============================================================================================================
 
-const basic_logging = "basic logging";
-const logger_slf4j_logback = "logger Slf4j Logback";
-const json_object = "json object";
-const pojo_as_json_in_console = "pojo as json in console";
-const log_util_class = "log util class";
-const log_git_hub = "git hub";
+const slf4j_links = "slf4j links";
+const slf4j_rolling_file_setup = "slf4j rolling file setup";
 
 // =============================================================================================================
 
-const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, pojo_as_json_in_console, log_util_class, log_git_hub];
+const anchorList: string[] = [slf4j_links, slf4j_rolling_file_setup];
 
 // =============================================================================================================
 
@@ -31,8 +29,6 @@ const Slf4JLogbackMain = () => {
     }
   };
 
-  // // Why I have 2 useEffect functions?
-  // // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
@@ -46,10 +42,6 @@ const Slf4JLogbackMain = () => {
     }, 200);
     return () => clearTimeout(timer);
   }, []);
-
-  // setTimeout(() => {
-  //   setIsLoading(false);
-  // }, 200);
 
   if (isLoading) {
     return <Loading />;
@@ -65,7 +57,8 @@ const Slf4JLogbackMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      {/* <BasicLogging anchor={basic_logging} /> */}
+      <Slf4jLinks anchor={slf4j_links} />
+      <Slf4jRollingFileSetup anchor={slf4j_rolling_file_setup} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

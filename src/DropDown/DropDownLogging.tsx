@@ -44,6 +44,7 @@ const DropDownLogging = () => {
         {/* <SideDropdownLink pageName="Slf4J(Logback)" internalLink="logging/Slf4JLogback" /> */}
         {/* <SideDropdownLink pageName="Logging Linux server" internalLink="logging/FileLocationLinuxServer" /> */}
         <SideDropdownLink pageName="Log Util" internalLink="logging/LogUtil" />
+        <SideDropdownLink pageName="SLF4J (Logback)" internalLink="logging/slf4j-logback" />
       </div>
     </section>
   );
