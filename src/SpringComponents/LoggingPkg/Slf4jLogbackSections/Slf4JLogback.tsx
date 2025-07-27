@@ -1,6 +1,6 @@
 import { ContentAnchor } from "../../../components";
 
-import { ApplicationPropertiesHighlight, JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const Slf4JLogback = ({ anchor }: { anchor: string }) => {
   return (

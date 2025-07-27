@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { CopyCode, MainChildArea } from "../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
   return (
