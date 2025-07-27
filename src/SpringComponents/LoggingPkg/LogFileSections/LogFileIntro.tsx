@@ -5,7 +5,6 @@ import { Span } from "../../../Highlight";
 const LogFileIntro = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      {" "}
       <article className="my-0">
         <div>refernce link</div>
         <a

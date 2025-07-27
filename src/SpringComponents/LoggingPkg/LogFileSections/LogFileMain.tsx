@@ -1,14 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../components";
 import LogFileIntro from "./LogFileIntro";
+import LogFileLinux from "./LogFileLinux";
+import LogFileDevWindows from "./LogFileDevWindows";
 
 // =============================================================================================================
 
 const log_file_intro = "log file intro";
+const log_file_linux = "log file linux";
+const log_file_dev_windows = "log file dev windows";
 
 // =============================================================================================================
 
-const anchorList: string[] = [log_file_intro];
+const anchorList: string[] = [log_file_intro, log_file_dev_windows, log_file_linux];
 
 // =============================================================================================================
 
@@ -58,6 +62,8 @@ const LogFileMain = () => {
       />
       {/* End Contents */}
       <LogFileIntro anchor={log_file_intro} />
+      <LogFileDevWindows anchor={log_file_dev_windows} />
+      <LogFileLinux anchor={log_file_linux} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

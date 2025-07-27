@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CopyCode = ({ code, children }: { code: string; children: React.ReactNode }) => {
+const CopyCode = ({ code, children }: { code: string; children?: React.ReactNode }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
