@@ -118,7 +118,8 @@ const DBInitIntro = ({ anchor }: { anchor: string }) => {
               </em>{" "}
               <Span>src/main/resources/sqlSchemas/schema.sql</Span>, we need to tell spring boot about this new path , in order for spring to detect
               it. <br />
-              Then, configure your <Span>application.properties</Span> like this:
+              Then, configure your <Span>application.properties</Span> like this. <br /> This tells Spring Boot to load <Span>schema.sql</Span> from
+              <Span>/sqlSchemas/</Span> instead of the default root of resources.
               <ApplicationPropertiesHighlight propertiesCode={schemaSqlDifferentPathCode} />
             </div>
             <div className="mt-16">
