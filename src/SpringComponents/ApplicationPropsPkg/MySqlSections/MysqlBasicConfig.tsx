@@ -22,6 +22,10 @@ spring.datasource.password=root
 # 	 	JPA / HIBERNATE
 # ===============================
  
+# these are the same
+# spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialec
+
 # Spring will create a schema
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true

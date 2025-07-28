@@ -16,6 +16,8 @@ spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# same as 
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
 
 # Enabling H2 Console
 spring.h2.console.enabled=true

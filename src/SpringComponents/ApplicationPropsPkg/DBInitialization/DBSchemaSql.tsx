@@ -1,6 +1,7 @@
 import { IMG, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 import db_init_1 from "../../../assets/db_init_1.jpg";
+import db_init_2 from "../../../assets/db_init_2.jpg";
 
 const DBSchemaSql = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,6 +15,20 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
         <strong>NO</strong>
       </em>{" "}
       <Span>data.sql</Span>, no initial data will be inserted.
+      <div>
+        Default behavior, Spring Boot looks for:
+        <ul className="my-2 ml-16">
+          <li className="my1 list-disc">
+            <Span>schema.sql</Span> → for schema creation
+          </li>
+          <li className="my1 list-disc">
+            <Span>data.sql</Span> → for initial data. If there's no <Span>data.sql</Span>, no initial data will be inserted.
+          </li>
+          <li className="my1 list-disc">
+            They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
+          </li>
+        </ul>
+      </div>
       <section>
         <article className="my-8">
           <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
@@ -41,20 +56,6 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
               </li>
             </ul>
           </div>
-          <div>
-            Default behavior, Spring Boot looks for:
-            <ul className="my-2 ml-16">
-              <li className="my1 list-disc">
-                <Span>schema.sql</Span> → for schema creation
-              </li>
-              <li className="my1 list-disc">
-                <Span>data.sql</Span> → for initial data. If there's no <Span>data.sql</Span>, no initial data will be inserted.
-              </li>
-              <li className="my1 list-disc">
-                They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
-              </li>
-            </ul>
-          </div>
         </article>
         {/*  */}
         {/*  */}
@@ -75,6 +76,7 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
             Then, configure your <Span>application.properties</Span> like this. <br /> This tells Spring Boot to load <Span>schema.sql</Span> from
             <Span>/sqlSchemas/</Span> instead of the default root of resources.
             <ApplicationPropertiesHighlight propertiesCode={schemaSqlDifferentPathCode} />
+            <IMG img_name={db_init_2} />
           </div>
           <div className="mt-16">
             <em>
