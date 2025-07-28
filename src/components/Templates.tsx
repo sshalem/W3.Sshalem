@@ -1,19 +1,9 @@
-// ==========================================================================================
+import MainChildArea from "./MainChildArea";
 
-import ContentAnchor from "./ContentAnchor";
-
-const LoggingLogUtil = ({ anchor }: { anchor: string }) => {
-  return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor}>
-      <ContentAnchor anchor={anchor} />
-
-      {/* <div>
-        <img src={dbeaver_version} alt="dbeaver_version" className="mx-10 my-10" />
-      </div> */}
-    </article>
-  );
+const temp = ({ anchor }: { anchor: string }) => {
+  return <MainChildArea anchor={anchor}></MainChildArea>;
 };
 
-export default LoggingLogUtil;
+export default temp;
 
 // ==========================================================================================

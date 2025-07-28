@@ -1,14 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
 import DBInitIntro from "./DBInitIntro";
+import DBSchemaSql from "./DBSchemaSql";
+import DBDataSql from "./DBDataSql";
 
 // =============================================================================================================
 
 const db_init_intro = "DB init intro";
+const db_schema_sql = "DB schema sql";
+const db_data_sql = "DB data sql";
 
 // =============================================================================================================
 
-const anchorList: string[] = [db_init_intro];
+const anchorList: string[] = [db_init_intro, db_schema_sql, db_data_sql];
 
 // =============================================================================================================
 
@@ -44,8 +48,9 @@ const DBInitMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
       <DBInitIntro anchor={db_init_intro} />
+      <DBSchemaSql anchor={db_schema_sql} />
+      <DBDataSql anchor={db_data_sql} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
