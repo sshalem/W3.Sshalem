@@ -3,7 +3,7 @@ import dbeaver_postgres_1 from "../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../assets/dbeaver_postgres_3.jpg";
 import { Span } from "../../../Highlight";
-import { MainChildArea } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,9 +15,7 @@ const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-disc">
           Lets see how I connect DBeaver with <Span>cms</Span> DB on Postgresql
         </li>
-        <div>
-          <img src={dbeaver_postgres_1} alt="dbeaver_postgres_1" className="mx-10 my-10" />
-        </div>
+        <IMG img_name={dbeaver_postgres_1}></IMG>
 
         <li className="my-1 list-disc">Open DBeaver</li>
         <li className="my-1 list-disc">Create new Connection of Postgresql</li>
@@ -35,15 +33,10 @@ const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> user and password : both are <Span>postgres</Span> (as I define when I installed
             Postgres on my computer)
           </div>
-          <div>
-            <img src={dbeaver_postgres_2} alt="dbeaver_postgres_2" className="mx-10 my-10" />
-          </div>
         </li>
         <li className="my-1 list-disc">
           Under Driver properties, once I'm on it, it will download the necessary drivers
-          <div>
-            <img src={dbeaver_postgres_3} alt="dbeaver_postgres_3" className="mx-10 my-10" />
-          </div>
+          <IMG img_name={dbeaver_postgres_3}></IMG>
         </li>
       </ul>
     </MainChildArea>

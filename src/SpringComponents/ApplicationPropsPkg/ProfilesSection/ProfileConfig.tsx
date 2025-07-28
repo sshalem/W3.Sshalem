@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { InternalArticle, MainChildArea } from "../../../components";
+import { IMG, InternalArticle, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../Highlight";
 import profile_1 from "../../../assets/profile_1.jpg";
 
@@ -60,7 +60,7 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
           <div className="my-2 mb-4">
             Create a new file of <Span>application-dev.properties</Span> in <Span>src/main/resources:</Span>
           </div>
-          <img src={profile_1} alt="profile_1" className="ml-16" />
+          <IMG img_name={profile_1}></IMG>
 
           <div className="my-8">
             <div className="my-4">

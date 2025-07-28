@@ -1,4 +1,4 @@
-import { Answer, InternalArticle, MainChildArea, Question } from "../../../components";
+import { Answer, IMG, InternalArticle, MainChildArea, Question } from "../../../components";
 import { BatchHighlight, Span } from "../../../Highlight";
 import logging_linux from "../../../assets/logging_linux.jpg";
 
@@ -49,7 +49,7 @@ const LogFileLinux = ({ anchor }: { anchor: string }) => {
           <BatchHighlight batchCode="find / -iname '__Shabtay*'" />
         </div>
         <div className="my-2">Eventually I got the path of the file ,</div>
-        <img src={logging_linux} alt="logging_linux" />
+        <IMG img_name={logging_linux}></IMG>
       </InternalArticle>
     </MainChildArea>
   );

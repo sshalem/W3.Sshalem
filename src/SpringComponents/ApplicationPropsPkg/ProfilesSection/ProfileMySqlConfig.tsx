@@ -1,11 +1,11 @@
-import { MainChildArea } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 import profile_mysql from "../../../assets/profile_mysql.jpg";
 
 const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <img src={profile_mysql} alt="profile_mysql" className="my-2 mb-8 ml-16" />
+      <IMG img_name={profile_mysql}></IMG>
       <div className="my-5">
         <span className="rounded-md bg-blue-500 p-1 font-semibold text-white">application.properties</span>
       </div>
