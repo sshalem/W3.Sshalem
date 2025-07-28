@@ -1,12 +1,10 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <CopyCode code={h2}>
-        <ApplicationPropertiesHighlight propertiesCode={h2} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={h2} />
     </MainChildArea>
   );
 };
