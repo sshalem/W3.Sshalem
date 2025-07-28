@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { InternalArticle, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { Span } from "../../../Highlight";
 
 const DBInitIntro = ({ anchor }: { anchor: string }) => {
