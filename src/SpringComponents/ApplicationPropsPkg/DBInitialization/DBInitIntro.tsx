@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { Answer, CopyCode, InternalArticle, MainChildArea, Question } from "../../../components";
+import { Answer, InternalArticle, MainChildArea, Question } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const DBInitIntro = ({ anchor }: { anchor: string }) => {
@@ -61,6 +61,7 @@ const DBInitIntro = ({ anchor }: { anchor: string }) => {
           <Span>data.sql</Span>, no initial data will be inserted.
           <div>
             When using <Span>schema.sql</Span>, pair it with:
+            <ApplicationPropertiesHighlight propertiesCode={schemaSqlCode} />
           </div>
         </div>
         <div className="mt-4">
@@ -108,9 +109,6 @@ export default DBInitIntro;
 const propertiesDefaultCode = `spring.jpa.hibernate.ddl-auto=create  # or update, validate, etc.
 `;
 
-const schemaSqlCode = `CREATE TABLE users (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    email VARCHAR(100)
-);
+const schemaSqlCode = `spring.jpa.hibernate.ddl-auto=none
+spring.jpa.defer-datasource-initialization=true
 `;
