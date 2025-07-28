@@ -7,7 +7,7 @@ interface MainChildAreaProps {
 
 const MainChildArea = ({ anchor, children }: MainChildAreaProps) => {
   return (
-    <section className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
+    <section className="my-10 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <article>{children}</article>
     </section>
