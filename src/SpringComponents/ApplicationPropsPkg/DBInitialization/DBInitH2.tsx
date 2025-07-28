@@ -87,9 +87,9 @@ spring.jpa.generate-ddl=true
 # to initialize using "data.sql" file    ##
 ###########################################
 spring.sql.init.mode=always
-spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql
-spring.sql.init.platform=H2
 spring.jpa.defer-datasource-initialization=true
+spring.sql.init.platform=H2
+spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql
 
 # spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql, classpath:DB_initialization_scripts/data-H2extra.sql
 `;
