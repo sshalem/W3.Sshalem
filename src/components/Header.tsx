@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <div className="mx-auto flex h-[29rem] w-11/12 flex-col items-center justify-evenly text-5xl font-medium text-white">
         <div className="text-6xl font-semibold italic tracking-wider">
           W<sup>3</sup> Sshalem Software tutorials
