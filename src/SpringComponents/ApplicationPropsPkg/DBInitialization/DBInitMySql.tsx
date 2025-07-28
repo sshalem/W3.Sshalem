@@ -1,6 +1,6 @@
 import { IMG, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
-import db_init_6 from "../../../assets/db_init_6.jpg";
+import db_init_7 from "../../../assets/db_init_7.jpg";
 
 const DBInitMySql = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const DBInitMySql = ({ anchor }: { anchor: string }) => {
             </li>
           </ul>
         </div>
-        <IMG img_name={db_init_6}></IMG>
+        <IMG img_name={db_init_7}></IMG>
       </div>
       <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
         main application.properties
@@ -46,6 +46,8 @@ spring.profiles.active=MySql
 # console color enabled
 spring.output.ansi.enabled=always
 
+spring.jpa.open-in-view=false
+
 server.error.include-binding-errors=always
 server.error.include-exception=true
 server.error.include-message=always
@@ -68,17 +70,15 @@ spring.datasource.password=root
 # ===============================
 # 	 	JPA / HIBERNATE
 # ===============================
- 
-#Spring will create a schema
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
+spring.jpa.open-in-view=false
 #spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.generate_statistics=true
-spring.jpa.open-in-view=false
 #spring.jpa.properties.hibernate.format_sql=true
 
 # When using java version JDK11 use with mysql dialect
-#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 # ==========================================
 #  we must add this config as well for 

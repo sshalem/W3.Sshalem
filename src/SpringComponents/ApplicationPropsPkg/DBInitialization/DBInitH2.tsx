@@ -46,6 +46,8 @@ spring.profiles.active=H2
 # console color enabled
 spring.output.ansi.enabled=always
 
+spring.jpa.open-in-view=false
+
 server.error.include-binding-errors=always
 server.error.include-exception=true
 server.error.include-message=always
@@ -70,14 +72,16 @@ spring.h2.console.enabled=true
 # Custom H2 Console URL from /h2-console to /h2
 spring.h2.console.path=/h2
 
-#Spring will create a schema
+# ===============================
+# 	 	JPA / HIBERNATE
+# ===============================
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
 #spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.generate_statistics=true
 #spring.jpa.properties.hibernate.format_sql=true
 
-spring.jpa.open-in-view=false
+
 
 ###########################################
 # to initialize using "data.sql" file    ##
@@ -87,7 +91,7 @@ spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql
 spring.sql.init.platform=H2
 spring.jpa.defer-datasource-initialization=true
 
-#spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql, classpath:DB_initialization_scripts/data-H2extra.sql
+# spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql, classpath:DB_initialization_scripts/data-H2extra.sql
 `;
 
 const dataH2 = `insert into role(role_id, role) values (1, 'ADMIN');
