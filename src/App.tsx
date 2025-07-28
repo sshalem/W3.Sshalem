@@ -24,7 +24,7 @@ import {
   ProfileMain,
 } from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
-import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain } from "./SpringComponents/LoggingPkg";
+import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
 
 const router = createBrowserRouter(
   [
@@ -58,6 +58,7 @@ const router = createBrowserRouter(
                 { path: "LogUtil", element: <LogUtilMain /> },
                 { path: "slf4j-logback", element: <Slf4jLogbackMain /> },
                 { path: "log-file", element: <LogFileMain /> },
+                { path: "logging-props", element: <LoggingPropsMain /> },
               ],
             },
             {
