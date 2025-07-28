@@ -9,6 +9,7 @@ const TopNavbar = () => {
 
   const handleShowContent = () => {
     // setshowTopNavbar(!showTopNavbar);
+    setshowTopNavbar(true);
   };
   return (
     <section className="fixed left-0 top-0 -z-[100] mx-auto block h-0 w-full bg-white">
