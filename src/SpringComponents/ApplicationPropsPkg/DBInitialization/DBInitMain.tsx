@@ -4,6 +4,7 @@ import DBInitIntro from "./DBInitIntro";
 import DBSchemaSql from "./DBInitSchemaSql";
 import DBDataSql from "./DBInitDataSql";
 import DBInitPlatform from "./DBInitPlatform";
+import DBInitH2 from "./DBInitH2";
 
 // =============================================================================================================
 
@@ -11,10 +12,14 @@ const db_init_intro = "DB init intro";
 const db_schema_sql = "DB schema sql";
 const db_data_sql = "DB data sql";
 const db_init_platform = "DB platform";
+const db_h2_data_sql = "DB H2 data sql";
+const db_mysql_data_sql = "DB mysql data sql";
+const db_postgres_data_sql = "DB postgres data sql";
+const db_multiple_profiles_and_data_sql = "DB multiple profiles and data sql";
 
 // =============================================================================================================
 
-const anchorList: string[] = [db_init_intro, db_schema_sql, db_data_sql, db_init_platform];
+const anchorList: string[] = [db_init_intro, db_schema_sql, db_data_sql, db_init_platform, db_h2_data_sql];
 
 // =============================================================================================================
 
@@ -54,6 +59,7 @@ const DBInitMain = () => {
       <DBSchemaSql anchor={db_schema_sql} />
       <DBDataSql anchor={db_data_sql} />
       <DBInitPlatform anchor={db_init_platform}></DBInitPlatform>
+      <DBInitH2 anchor={db_h2_data_sql}></DBInitH2>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
