@@ -1,9 +1,8 @@
-import { ContentAnchor, GitHub, GitHubLiAnchor } from "../../../components";
+import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
 
 const LogGitHub = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <GitHub>
         <GitHubLiAnchor
           gitLink={"https://github.com/sshalem/Spring-Boot/blob/main/01-Application-Properties-Logging/07_Logging/README.md#Logback_SLF4J"}
@@ -26,7 +25,7 @@ const LogGitHub = ({ anchor }: { anchor: string }) => {
           description={"Git - Log.java Code ,formating object to be as json in console"}
         />
       </GitHub>
-    </article>
+    </MainChildArea>
   );
 };
 export default LogGitHub;

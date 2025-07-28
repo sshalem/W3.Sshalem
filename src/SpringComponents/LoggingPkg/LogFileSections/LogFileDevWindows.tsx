@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../../Highlight";
 import log_file_1 from "../../../assets/log_file_1.jpg";
 import log_file_2 from "../../../assets/log_file_2.jpg";
@@ -34,15 +34,11 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           &nbsp; with &nbsp; <Span>logging.file.name</Span>
         </div>
         <div className="my-4"></div>
-        <CopyCode code={logginFileNameOnlyProperties}>
-          <ApplicationPropertiesHighlight propertiesCode={logginFileNameOnlyProperties} />
-        </CopyCode>
+        <ApplicationPropertiesHighlight propertiesCode={logginFileNameOnlyProperties} />
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp;
         </div>
-        <CopyCode code={logginFileCode}>
-          <JavaHighlight javaCode={logginFileCode} />
-        </CopyCode>
+        <JavaHighlight javaCode={logginFileCode} />
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<Span>GET request</Span> &nbsp; ,refresh the project (F5) ,
           check log file is created , see if &nbsp;
@@ -63,9 +59,7 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
         </div>
 
         <div className="my-4"></div>
-        <CopyCode code={logginFilePathOnlyProperties}>
-          <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
-        </CopyCode>
+        <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
 
         <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp; as in
@@ -97,9 +91,7 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           <Span>logging.file.name=./myLogDir/sshb.log</Span>
         </div>
         <div className="my-4"></div>
-        <CopyCode code={logginFilePathOnlyProperties}>
-          <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
-        </CopyCode>
+        <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
         <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <Span>RestController</Span>&nbsp; as in
           previous example

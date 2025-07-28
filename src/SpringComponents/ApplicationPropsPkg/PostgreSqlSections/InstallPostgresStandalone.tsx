@@ -9,7 +9,7 @@ import pgadmin_2 from "../../../assets/pgadmin_2.jpg";
 import pgadmin_3 from "../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
-import { CopyCode, GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
+import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
@@ -61,9 +61,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">
           Type the following command below, It will install inside the folder of <Span>pgsql_data</Span> all the relevant data:
           <div className="my-10">
-            <CopyCode code={batchCode}>
-              <BatchHighlight batchCode={batchCode} />
-            </CopyCode>
+            <BatchHighlight batchCode={batchCode} />
           </div>
         </li>
         <li className="my-1 list-decimal">
@@ -82,9 +80,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
       <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">Start PostgreSql server</div>
       <div>Paste the command we got (See the image above)</div>
       <div className="my-10">
-        <CopyCode code={startPostgresqlServer}>
-          <BatchHighlight batchCode={startPostgresqlServer} />
-        </CopyCode>
+        <BatchHighlight batchCode={startPostgresqlServer} />
       </div>
       <div>
         <img src={start_postgresql_server} alt="start-postgresql-server-img" className="mx-10 my-10" />
@@ -92,9 +88,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
       <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">stop PostgreSql server</div>
       <div>Paste the command we got (See the image above)</div>
       <div className="my-10">
-        <CopyCode code={stopPostgresqlServer}>
-          <BatchHighlight batchCode={stopPostgresqlServer} />
-        </CopyCode>
+        <BatchHighlight batchCode={stopPostgresqlServer} />
       </div>
       <div>
         <img src={stop_postgresql_server} alt="start-postgresql-server-img" className="mx-10 my-10" />

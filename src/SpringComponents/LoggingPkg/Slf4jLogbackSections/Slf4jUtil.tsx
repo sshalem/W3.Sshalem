@@ -1,4 +1,4 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { JavaHighlight, Span, XmlHighlight } from "../../../Highlight";
 
 const Slf4jUtil = ({ anchor }: { anchor: string }) => {
@@ -13,9 +13,7 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
             for example : <Span> web starter depenency</Span>
           </div>
           <div className="my-5">Add to POM file</div>
-          <CopyCode code={dependency}>
-            <XmlHighlight xmlCode={dependency} />
-          </CopyCode>
+          <XmlHighlight xmlCode={dependency} />
         </div>
       </section>
       {/*  */}
@@ -33,9 +31,7 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
         <div className="my-5">
-          <CopyCode code={javaCodeLogExample}>
-            <JavaHighlight javaCode={javaCodeLogExample} />
-          </CopyCode>
+          <JavaHighlight javaCode={javaCodeLogExample} />
         </div>
       </section>
       {/*  */}

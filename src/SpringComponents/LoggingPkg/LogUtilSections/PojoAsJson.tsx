@@ -1,10 +1,9 @@
-import { ContentAnchor, CopyCode, InternalArticle } from "../../../components";
+import { InternalArticle, MainChildArea } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const PojoAsJson = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="mb-5">
         There are times where I want to display a JAVA Object (POJO) as JSON format , for convinience. <br />
         to do that I will use the <Span>JACKSON</Span> library.
@@ -56,15 +55,11 @@ const PojoAsJson = ({ anchor }: { anchor: string }) => {
         <ul className="mx-8 list-disc"></ul>
       </div>
       <div className="my-5">Code , converting a POJO to JSON using Jackson</div>
-      <CopyCode code={pojoAsJsonCode}>
-        <JavaHighlight javaCode={pojoAsJsonCode} />
-      </CopyCode>
+      <JavaHighlight javaCode={pojoAsJsonCode} />
 
       <div className="my-5">here is how I present the POJO ,as JSON in console</div>
-      <CopyCode code={jsonPresentationCode}>
-        <JavaHighlight javaCode={jsonPresentationCode} />
-      </CopyCode>
-    </article>
+      <JavaHighlight javaCode={jsonPresentationCode} />
+    </MainChildArea>
   );
 };
 

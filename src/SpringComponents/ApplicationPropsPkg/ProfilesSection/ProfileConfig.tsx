@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { CopyCode, InternalArticle, MainChildArea } from "../../../components";
+import { InternalArticle, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../Highlight";
 import profile_1 from "../../../assets/profile_1.jpg";
 
@@ -37,9 +37,7 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
               </ul>
             </div>
 
-            <CopyCode code={appPropCode}>
-              <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
-            </CopyCode>
+            <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
             <div className="my-5">
               This tells Spring Boot to load &nbsp;
               <Span>application-dev.properties</Span>&nbsp; in addition to the default config.
@@ -68,18 +66,14 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
             <div className="my-4">
               type the following code inside <Span>application-dev.properties</Span>
             </div>
-            <CopyCode code={devCode}>
-              <ApplicationPropertiesHighlight propertiesCode={devCode} />
-            </CopyCode>
+            <ApplicationPropertiesHighlight propertiesCode={devCode} />
           </div>
         </InternalArticle>
         {/*  */}
         {/*  */}
         <InternalArticle articleTitle="Step 3 : Run App check console">
           <div className="my-8">
-            <CopyCode code={javaCode}>
-              <JavaHighlight javaCode={javaCode} />
-            </CopyCode>
+            <JavaHighlight javaCode={javaCode} />
           </div>
           <div className="my-8">console show active profile is "dev"</div>
           <div>

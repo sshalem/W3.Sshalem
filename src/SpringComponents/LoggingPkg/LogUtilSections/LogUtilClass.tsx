@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ContentAnchor, CopyCode, GitHub, GitHubLiAnchor } from "../../../components";
+import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
 import { JavaHighlight, Span } from "../../../Highlight";
 
 const LogUtilClass = ({ anchor }: { anchor: string }) => {
@@ -20,8 +20,7 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
   //   const renderLongCode = useMemo(() => <JavaHighlight javaCode={longCode} />, [longCode]);
 
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="my-4">
         Here is the code, I created for self usage , a <Span>Log class</Span> which all its methods are static.
         <br />
@@ -61,8 +60,8 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
         ></GitHubLiAnchor>
       </GitHub>
       <p className="my-14" />
-      <CopyCode code={logUtilCode}>{renderLogUtilCode}</CopyCode>
-    </article>
+      {renderLogUtilCode}
+    </MainChildArea>
   );
 };
 

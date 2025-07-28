@@ -1,12 +1,10 @@
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 
 const MysqlBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <CopyCode code={mysql_basic}>
-        <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
     </MainChildArea>
   );
 };

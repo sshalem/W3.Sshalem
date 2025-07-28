@@ -1,4 +1,4 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const PostgresqlOsiv = ({ anchor }: { anchor: string }) => {
@@ -9,9 +9,7 @@ const PostgresqlOsiv = ({ anchor }: { anchor: string }) => {
         set to
         <Span>true</Span> . <br /> To disable the warning, I set to <Span>false</Span>
       </div>
-      <CopyCode code={osiv}>
-        <ApplicationPropertiesHighlight propertiesCode={osiv} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={osiv} />
     </MainChildArea>
   );
 };

@@ -1,4 +1,4 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 import profile_mysql from "../../../assets/profile_mysql.jpg";
 
@@ -9,15 +9,11 @@ const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <span className="rounded-md bg-blue-500 p-1 font-semibold text-white">application.properties</span>
       </div>
-      <CopyCode code={defaultProps}>
-        <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
       <div className="my-5">
         <span className="rounded-md bg-emerald-500 p-1 font-semibold text-white">application-h2.properties</span>
       </div>
-      <CopyCode code={configMysqlProps}>
-        <ApplicationPropertiesHighlight propertiesCode={configMysqlProps} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={configMysqlProps} />
     </MainChildArea>
   );
 };

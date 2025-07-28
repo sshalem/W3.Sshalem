@@ -1,4 +1,4 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 import profile_h2 from "../../../assets/profile_h2.jpg";
 
@@ -9,15 +9,11 @@ const ProfileH2Config = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <span className="rounded-md bg-blue-500 p-1 font-semibold text-white">application.properties</span>
       </div>
-      <CopyCode code={defaultProps}>
-        <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
       <div className="my-5">
         <span className="rounded-md bg-emerald-500 p-1 font-semibold text-white">application-h2.properties</span>
       </div>
-      <CopyCode code={configH2Props}>
-        <ApplicationPropertiesHighlight propertiesCode={configH2Props} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={configH2Props} />
     </MainChildArea>
   );
 };

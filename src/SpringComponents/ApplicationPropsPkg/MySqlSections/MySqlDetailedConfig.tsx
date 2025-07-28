@@ -1,4 +1,4 @@
-import { Answer, CopyCode, MainChildArea, Question } from "../../../components";
+import { Answer, MainChildArea, Question } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
@@ -18,17 +18,11 @@ const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
       </Answer>
 
       <div>Better to use the following :</div>
-      <CopyCode code={propertiesCode}>
-        <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
-      </CopyCode>
-
+      <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
       <div className="my-8">
         here below , I give example of <Span>application.properties</Span> with explaination:
       </div>
-
-      <CopyCode code={mysql_detailed_config}>
-        <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
     </MainChildArea>
   );
 };

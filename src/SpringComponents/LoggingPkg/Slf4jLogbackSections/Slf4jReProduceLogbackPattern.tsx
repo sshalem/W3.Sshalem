@@ -1,4 +1,4 @@
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
@@ -24,9 +24,7 @@ const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
         </div>
 
         <div className="my-8">Here is another way to config the pattern </div>
-        <CopyCode code={anotherWayCode}>
-          <ApplicationPropertiesHighlight propertiesCode={anotherWayCode} />
-        </CopyCode>
+        <ApplicationPropertiesHighlight propertiesCode={anotherWayCode} />
         <div className="my-8">logging.pattern.console exlpained:</div>
         <ul className="mx-8 list-decimal">
           <li className="my-1">

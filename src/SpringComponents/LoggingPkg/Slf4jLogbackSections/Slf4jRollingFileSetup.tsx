@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { CopyCode, MainChildArea } from "../../../components";
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight } from "../../../Highlight";
 
 const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
@@ -29,9 +29,7 @@ const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
           </a>
         </div>
       </div>
-      <CopyCode code={"rollingFileCode"}>
-        <ApplicationPropertiesHighlight propertiesCode={rollingFileCode} />
-      </CopyCode>
+      <ApplicationPropertiesHighlight propertiesCode={rollingFileCode} />
     </MainChildArea>
   );
 };

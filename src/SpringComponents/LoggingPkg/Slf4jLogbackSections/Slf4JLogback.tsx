@@ -1,12 +1,9 @@
-import { ContentAnchor } from "../../../components";
-
+import { MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
 
 const Slf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="my-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-
+    <MainChildArea anchor={anchor}>
       <section>
         <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">
           Re-Produce Logback console Logging pattern
@@ -40,7 +37,7 @@ const Slf4JLogback = ({ anchor }: { anchor: string }) => {
       </section>
       {/*  */}
       {/*  */}
-    </article>
+    </MainChildArea>
   );
 };
 
