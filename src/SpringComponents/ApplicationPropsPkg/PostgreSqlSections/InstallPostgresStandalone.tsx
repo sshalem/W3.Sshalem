@@ -9,7 +9,7 @@ import pgadmin_2 from "../../../assets/pgadmin_2.jpg";
 import pgadmin_3 from "../../../assets/pgadmin_3.jpg";
 
 import { FaDiamond } from "react-icons/fa6";
-import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../components";
+import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../components";
 
 const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
   return (
@@ -51,9 +51,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         </li>
         <li className="my-1 list-decimal">
           Create a new folder as <Span>pgsql_data</Span>
-          <div>
-            <img src={psql_data_folder} alt="psql-data-folder-img" className="mx-20 my-10" />
-          </div>
+          <IMG img_name={psql_data_folder} />
         </li>
         <li className="my-1 list-decimal">
           Open CMD , go to directory <Span> C:\Localdata\DB\postgresql\pgsql\bin</Span>
@@ -72,27 +70,25 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           <div className="my-1 ml-8 flex">
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<Span>postgres</Span>
           </div>
-          <div>
-            <img src={batch_command} alt="batch-command-img" className="mx-10 my-10" />
-          </div>
         </li>
       </ul>
+      <IMG img_name={batch_command} />
       <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">Start PostgreSql server</div>
       <div>Paste the command we got (See the image above)</div>
       <div className="my-10">
         <BatchHighlight batchCode={startPostgresqlServer} />
       </div>
-      <div>
-        <img src={start_postgresql_server} alt="start-postgresql-server-img" className="mx-10 my-10" />
-      </div>
+
+      <IMG img_name={start_postgresql_server} />
+
       <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">stop PostgreSql server</div>
       <div>Paste the command we got (See the image above)</div>
       <div className="my-10">
         <BatchHighlight batchCode={stopPostgresqlServer} />
       </div>
-      <div>
-        <img src={stop_postgresql_server} alt="start-postgresql-server-img" className="mx-10 my-10" />
-      </div>
+
+      <IMG img_name={stop_postgresql_server} />
+
       <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white">start pgAdmin4</div>
 
       <ul className="mx-8">
@@ -103,12 +99,12 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">Once the pgAdmin tool opens , create new server</li>
         Right click on the servers -{">"} Register -{">"} Server
         <div>
-          <img src={pgadmin_1} alt="start-postgresql-server-img" className="mx-10 my-10" />
+          <IMG img_name={pgadmin_1} />
         </div>
         <li className="my-1 list-decimal">
           Type a name , for example <Span>myServer</Span>
           <div>
-            <img src={pgadmin_2} alt="start-postgresql-server-img" className="mx-10 my-10" />
+            <IMG img_name={pgadmin_2} />
           </div>
         </li>
         <li className="my-1 list-decimal">
@@ -128,7 +124,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
             Install steps )
           </div>
           <div>
-            <img src={pgadmin_3} alt="start-postgresql-server-img" className="mx-10 my-10" />
+            <IMG img_name={pgadmin_3} />
           </div>
         </li>
       </ul>

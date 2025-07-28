@@ -1,6 +1,7 @@
 import { FaDiamond } from "react-icons/fa6";
-import { Answer, InternalArticle, MainChildArea, Question } from "../../../components";
+import { IMG, InternalArticle, MainChildArea } from "../../../components";
 import { ApplicationPropertiesHighlight, Span } from "../../../Highlight";
+import db_init_1 from "../../../assets/db_init_1.jpg";
 
 const DBInitIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -59,43 +60,57 @@ const DBInitIntro = ({ anchor }: { anchor: string }) => {
             <strong>NO</strong>
           </em>{" "}
           <Span>data.sql</Span>, no initial data will be inserted.
-          <div>
-            When using <Span>schema.sql</Span>, pair it with:
+          <div className="mt-8">
+            When using <Span>schema.sql</Span> pair it with with the 2 features below:
             <ApplicationPropertiesHighlight propertiesCode={schemaSqlCode} />
           </div>
+          <div>
+            When you place <Span>schema.sql</Span> in <Span>src/main/resources</Span>, Spring Boot automatically detects it if database initialization
+            is enabled. <br />
+            Default behavior, Spring Boot looks for:
+            <ul className="my-2 ml-16">
+              <li className="my1 list-disc">
+                <Span>schema.sql</Span> → for schema creation
+              </li>
+              <li className="my1 list-disc">
+                <Span>data.sql</Span> → for initial data. If there's no <Span>data.sql</Span>, no initial data will be inserted.
+              </li>
+              <li className="my1 list-disc">
+                They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
+              </li>
+            </ul>
+            <IMG img_name={db_init_1} />
+          </div>
+          <div>
+            When you place <Span>schema.sql</Span> in <Span>src/main/resources</Span>, Spring Boot automatically detects it if database initialization
+            is enabled. <br />
+            Default behavior, Spring Boot looks for:
+            <ul className="my-2 ml-16">
+              <li className="my1 list-disc">
+                <Span>schema.sql</Span> → for schema creation
+              </li>
+              <li className="my1 list-disc">
+                <Span>data.sql</Span> → for initial data. If there's no <Span>data.sql</Span>, no initial data will be inserted.
+              </li>
+              <li className="my1 list-disc">
+                They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-16">
           <em>
             <strong>Note :</strong>
           </em>
         </div>
         <div>
-          Most of the time, I don't use <Span>schema.sql</Span> , I prefer &nbsp;
+          Most of the time, I don't use <Span>schema.sql</Span> (I use <Span>data.sql</Span>) , I prefer &nbsp;
           <em>
             <strong>automatic schema generation</strong>.
           </em>
           <br /> Spring Boot can create tables from your <Span>JPA</Span> <Span>@Entity</Span> classes using:
           <ApplicationPropertiesHighlight propertiesCode={propertiesDefaultCode} />
         </div>
-        <Question>
-          How Spring Boot Uses <Span>schema.sql</Span>?
-        </Question>
-        <Answer>
-          When you place <Span>schema.sql</Span> in <Span>src/main/resources</Span>, Spring Boot automatically detects it if database initialization
-          is enabled. <br />
-          Default behavior, Spring Boot looks for:
-          <ul className="my-2 ml-16">
-            <li className="my1 list-disc">
-              <Span>schema.sql</Span> → for schema creation
-            </li>
-            <li className="my1 list-disc">
-              <Span>data.sql</Span> → for initial data
-            </li>
-            <li className="my1 list-disc">
-              They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
-            </li>
-          </ul>
-        </Answer>
         <div className="my-2 inline-block rounded-md bg-slate-500 p-1 tracking-wider text-white">Example</div>
         <div></div>
       </InternalArticle>
@@ -109,6 +124,13 @@ export default DBInitIntro;
 const propertiesDefaultCode = `spring.jpa.hibernate.ddl-auto=create  # or update, validate, etc.
 `;
 
-const schemaSqlCode = `spring.jpa.hibernate.ddl-auto=none
+const schemaSqlCode = `# Enable execution of schema.sql and data.sql
+spring.sql.init.mode=always
+
+# when using schema.sql , Don't let Hibernate auto-create the schema
+spring.jpa.hibernate.ddl-auto=none
+
+# Makes Spring Boot run SQL scripts before Hibernate initializes (important!)
+# Ensure schema.sql runs BEFORE JPA starts (important!)
 spring.jpa.defer-datasource-initialization=true
 `;
