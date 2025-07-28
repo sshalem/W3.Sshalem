@@ -8,6 +8,7 @@ import DBInitH2 from "./DBInitH2";
 import DBInitMySql from "./DBInitMySql";
 import DBInitPostgresql from "./DBInitPostgresql";
 import DBInitMultipleProfiles from "./DBInitMultipleProfiles";
+import DBInitGit from "./DBInitGit";
 
 // =============================================================================================================
 
@@ -19,6 +20,7 @@ const db_h2_data_sql = "DB H2 data sql";
 const db_mysql_data_sql = "DB mysql data sql";
 const db_postgres_data_sql = "DB postgres data sql";
 const db_multiple_profiles_and_data_sql = "DB multiple profiles and data sql";
+const db_init_git = "DB init git";
 
 // =============================================================================================================
 
@@ -31,6 +33,7 @@ const anchorList: string[] = [
   db_mysql_data_sql,
   db_postgres_data_sql,
   db_multiple_profiles_and_data_sql,
+  db_init_git,
 ];
 
 // =============================================================================================================
@@ -75,6 +78,8 @@ const DBInitMain = () => {
       <DBInitMySql anchor={db_mysql_data_sql}></DBInitMySql>
       <DBInitPostgresql anchor={db_postgres_data_sql}></DBInitPostgresql>
       <DBInitMultipleProfiles anchor={db_multiple_profiles_and_data_sql}></DBInitMultipleProfiles>
+      <DBInitGit anchor={db_init_git}></DBInitGit>
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
