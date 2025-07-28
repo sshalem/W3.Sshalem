@@ -24,7 +24,7 @@ const TopNavbar = () => {
           </Link>
           {showTopNavbar && (
             <div className="inline-block">
-              <button
+              {/* <button
                 className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white"
                 onClick={() => {
                   location.href = "/#about";
@@ -39,14 +39,19 @@ const TopNavbar = () => {
                 }}
               >
                 MyProjects
-              </button>
-
-              {/* <a href="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+              </button> */}
+              {/* <Link to="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+                about
+              </Link>
+              <Link to="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+                MyProjects
+              </Link> */}
+              <a href="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
                 about
               </a>
               <a href="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
                 MyProjects
-              </a> */}
+              </a>
             </div>
           )}
         </nav>
