@@ -8,7 +8,7 @@ const TopNavbar = () => {
   // const location = useLocation();
 
   const handleShowContent = () => {
-    setshowTopNavbar(!showTopNavbar);
+    // setshowTopNavbar(!showTopNavbar);
   };
   return (
     <section className="fixed left-0 top-0 -z-[100] mx-auto block h-0 w-full bg-white">
@@ -24,12 +24,29 @@ const TopNavbar = () => {
           </Link>
           {showTopNavbar && (
             <div className="inline-block">
-              <a href="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+              <button
+                className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white"
+                onClick={() => {
+                  location.href = "/#about";
+                }}
+              >
+                about
+              </button>
+              <button
+                className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white"
+                onClick={() => {
+                  location.href = "/#MyProjects";
+                }}
+              >
+                MyProjects
+              </button>
+
+              {/* <a href="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
                 about
               </a>
               <a href="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
                 MyProjects
-              </a>
+              </a> */}
             </div>
           )}
         </nav>
