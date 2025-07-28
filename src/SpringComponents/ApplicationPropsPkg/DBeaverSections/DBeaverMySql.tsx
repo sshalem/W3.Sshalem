@@ -36,7 +36,7 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> there is also option to define the local client as &nbsp;
             <span className="rounded-md bg-emerald-500 px-1 text-white">MySql Server 8.0</span>
           </div>
-          <IMG img_name={dbeaver_mysql_2}></IMG>
+          <IMG img_name={dbeaver_mysql_2_1}></IMG>
         </li>
         <li className="my-1">
           Under Driver properties, once I'm on it, it will download the necessary drivers

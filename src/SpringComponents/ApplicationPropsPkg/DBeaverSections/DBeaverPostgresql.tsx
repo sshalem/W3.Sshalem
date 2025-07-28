@@ -33,6 +33,7 @@ const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> user and password : both are <Span>postgres</Span> (as I define when I installed
             Postgres on my computer)
           </div>
+          <IMG img_name={dbeaver_postgres_2}></IMG>
         </li>
         <li className="my-1 list-disc">
           Under Driver properties, once I'm on it, it will download the necessary drivers
