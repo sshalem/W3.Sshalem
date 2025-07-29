@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CaretUp, CaretDown, SideBarLink } from "../components";
 interface SideDropDownTopicProps {
   showList: boolean;
@@ -7,6 +8,10 @@ interface SideDropDownTopicProps {
 }
 
 const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }: SideDropDownTopicProps) => {
+  useEffect(() => {
+    console.log("SideDropDownTopic trig", pageName);
+  }, []);
+
   return (
     <article className="relative">
       <div className="pointer-events-none">

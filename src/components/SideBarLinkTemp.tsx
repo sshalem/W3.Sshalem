@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const SideBarLink = ({ pageName, internalLink }: { pageName: string; internalLink: string }) => {
+const SideBarLinkTemp = ({ pageName, internalLink }: { pageName: string; internalLink: string }) => {
   let location = useLocation();
   // console.log("SideBarLink:", internalLink);
 
   useEffect(() => {
     // Only run when pathname changes
     // console.log("SideBarLink:", location.pathname, "-", internalLink);
-    console.log("SideBarLink:", internalLink);
+    console.log("SideBarLinkTemp:", internalLink);
   }, [location.pathname]);
 
   return (
@@ -26,4 +26,4 @@ const SideBarLink = ({ pageName, internalLink }: { pageName: string; internalLin
   );
 };
 
-export default SideBarLink;
+export default SideBarLinkTemp;
