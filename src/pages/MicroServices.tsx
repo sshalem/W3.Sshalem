@@ -8,6 +8,8 @@ const MicroServices = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
+  const location = useLocation();
+
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
   };
@@ -35,7 +37,7 @@ const MicroServices = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
 
-            <SideBarLink pageName="MicroService Home" internalLink="." />
+            <SideBarLink pageName="MicroService Home" path={location.pathname} />
             <DropDownEureka />
           </div>
         </article>

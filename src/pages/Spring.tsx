@@ -5,10 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Spring = () => {
-  // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
-
-  console.log("Spring:");
 
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
@@ -36,7 +33,7 @@ const Spring = () => {
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="Spring Home" internalLink="." />
+            <SideBarLink pageName="Spring Home" path="." />
             <DropDownApplicationProperties />
             <DropDownLogging />
             <DropDownJpa />
