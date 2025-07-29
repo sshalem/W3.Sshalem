@@ -26,9 +26,9 @@ import {
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
 import { Eureka, MicroServiceHome } from "./MicroServiceComponents";
-import { EurekaMain } from "./MicroServiceComponents/EurekaPkg";
+import { EurekaDiscoveryMain, EurekaMain } from "./MicroServiceComponents/EurekaPkg";
 import ReactHome from "./ReactJSComponents/ReactHome";
-import REactRouter from "./ReactJSComponents/REactRouter";
+import ReactRouter from "./ReactJSComponents/ReactRouter";
 import ReactJsx from "./ReactJSComponents/ReactJsx";
 
 const router = createBrowserRouter(
@@ -101,7 +101,10 @@ const router = createBrowserRouter(
             {
               path: "eureka",
               element: <Eureka />,
-              children: [{ path: "eureka-server", element: <EurekaMain /> }],
+              children: [
+                { path: "eureka-server", element: <EurekaMain /> },
+                { path: "eureka-discovery", element: <EurekaDiscoveryMain /> },
+              ],
             },
           ],
         },
@@ -110,7 +113,7 @@ const router = createBrowserRouter(
           element: <ReactJS />,
           children: [
             { index: true, element: <ReactHome /> },
-            { path: "reactRouter", element: <REactRouter /> },
+            { path: "reactRouter", element: <ReactRouter /> },
             { path: "reactJsx", element: <ReactJsx /> },
           ],
         },

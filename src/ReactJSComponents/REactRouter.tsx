@@ -1,7 +1,5 @@
-const REactRouter = () => {
-  console.log("react router page");
-
-  return <div className="text-3xl">react router ... </div>;
+const ReactRouter = () => {
+  return <div className="text-3xl">React Router ...</div>;
 };
 
-export default REactRouter;
+export default ReactRouter;

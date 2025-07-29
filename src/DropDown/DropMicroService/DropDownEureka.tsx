@@ -42,6 +42,7 @@ const DropDownEureka = () => {
         ref={divRef}
       >
         <SideDropdownLink pageName="Eureka Server" internalLink="eureka/eureka-server" />
+        <SideDropdownLink pageName="Eureka Discovery" internalLink="eureka/eureka-discovery" />
       </div>
     </section>
   );
