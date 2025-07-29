@@ -1,15 +1,16 @@
 // import { useEffect } from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const SideBarLink = ({ pageName, internalLink }: { pageName: string; internalLink: string }) => {
   let location = useLocation();
 
-  // console.log("SideBarLink:", location.pathname, "-", internalLink);
+  console.log("SideBarLink:", location.pathname, "-", internalLink);
 
-  // useEffect(() => {
-  // Only run when pathname changes
-  // console.log("SideBarLink:", location.pathname, "-", internalLink);
-  // }, []);
+  useEffect(() => {
+    // Only run when pathname changes
+    // console.log("SideBarLink:", location.pathname, "-", internalLink);
+  }, []);
 
   return (
     <Link to={internalLink}>

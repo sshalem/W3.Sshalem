@@ -36,6 +36,18 @@ const MicroServices = () => {
             <div className="h-3"></div>
 
             <SideBarLink pageName="MicroService Home" internalLink="." />
+            {/* <div>
+              <Link to={"."}>
+                <div className="text-[15px] text-base leading-[1.65]">
+                  {location.pathname === "/microservices" ? (
+                    <div className="bg-gray-300 pl-8 font-medium text-black">MicroService Home</div>
+                  ) : (
+                    <div className="pl-8 hover:bg-gray-300">MicroService Home</div>
+                  )}
+                </div>
+              </Link>
+            </div> */}
+
             <DropDownEureka />
           </div>
         </article>

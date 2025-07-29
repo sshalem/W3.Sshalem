@@ -53,15 +53,6 @@ const Spring = () => {
         </article>
       )}
 
-      {/* I use here max-h-full (And not , 100vh or 100%), so the my SideNavbar won't scroll with the outlet content */}
-      {/* there is another solution , to set the Sidebar as fixed  */}
-      {/*  */}
-      {/*  */}
-
-      {/* several options */}
-      {/* <main className="mt-4 max-h-full"> */}
-      {/* <main className="ml-64 max-h-full w-[1150px] min-w-[330px] border-r-[1px] border-solid border-zinc-300 px-8 py-4 pt-1"> */}
-      {/* <main className="ml-64 mt-[50px] max-h-[700px] w-[850px] min-w-[330px] overflow-auto border-r-[1px] border-solid border-zinc-300 px-8 py-4"> */}
       <main className="css-main-outlet">
         <Outlet />
       </main>
