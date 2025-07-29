@@ -8,6 +8,8 @@ const Spring = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
+  console.log("Spring:");
+
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
   };
