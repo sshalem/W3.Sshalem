@@ -8,7 +8,7 @@ const MicroServices = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const [showList, setShowList] = useState<boolean>(false);
-  const [listHeight, setListHeight] = useState<number>();
+  // const [listHeight, setListHeight] = useState<number>();
 
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
@@ -35,7 +35,7 @@ const MicroServices = () => {
   const handleOpenList = () => {
     setShowList(!showList);
     if (divRef.current !== null) {
-      setListHeight(divRef.current.scrollHeight);
+      // setListHeight(divRef.current.scrollHeight);
     }
   };
 
@@ -49,7 +49,7 @@ const MicroServices = () => {
         setShowList(true);
       }
       if (divRef.current !== null) {
-        setListHeight(divRef.current.scrollHeight);
+        // setListHeight(divRef.current.scrollHeight);
       }
     } else {
       setShowList(false);
