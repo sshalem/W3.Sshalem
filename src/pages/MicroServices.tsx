@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -7,8 +7,6 @@ import { DropDownEureka } from "../DropDown";
 const MicroServices = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
-
-  const location = useLocation();
 
   const toggleSideNavbar = () => {
     setShowSidebar(!showSidebar);
@@ -37,7 +35,7 @@ const MicroServices = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
 
-            <SideBarLink pageName="MicroService Home" path={location.pathname} />
+            <SideBarLink pageName="MicroService Home" internalLink="." />
             <DropDownEureka />
           </div>
         </article>
