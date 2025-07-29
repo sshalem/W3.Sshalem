@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
-import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, Python, ReactJS, Spring, SpringMicroServices, Sql } from "./pages";
+import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, MicroServices, Python, ReactJS, Spring, Sql } from "./pages";
 import {
   Aop,
   Caching,
@@ -25,6 +25,8 @@ import {
 } from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
+import { Eureka, MicroServiceHome } from "./MicroServiceComponents";
+import { EurekaMain } from "./MicroServiceComponents/EurekaPkg";
 
 const router = createBrowserRouter(
   [
@@ -88,7 +90,18 @@ const router = createBrowserRouter(
             { path: "logging", element: <Logging /> },
           ],
         },
-        { path: "microservices", element: <SpringMicroServices /> },
+        {
+          path: "microservices",
+          element: <MicroServices />,
+          children: [
+            { index: true, element: <MicroServiceHome /> },
+            {
+              path: "eureka",
+              element: <Eureka />,
+              children: [{ path: "eureka-server", element: <EurekaMain /> }],
+            },
+          ],
+        },
         { path: "reactJS", element: <ReactJS /> },
         { path: "javascript", element: <JavaScript /> },
         { path: "html_css", element: <HTML_CSS /> },

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../components";
 
-const DropDownRest = () => {
+const DropDownEureka = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownRest = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("rest")) {
+    if (location.pathname.substring(8).includes("eureka")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,18 +34,17 @@ const DropDownRest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="rest" pageName="RestAPI" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="eureka" pageName="Eureka" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="One2Many Bi Eager" internalLink="rest/one2many-bi-eager" />
-        <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="rest/one2many-bi-lazy" />
+        <SideDropdownLink pageName="Eureka Server" internalLink="eureka/eureka-server" />
       </div>
     </section>
   );
 };
 
-export default DropDownRest;
+export default DropDownEureka;

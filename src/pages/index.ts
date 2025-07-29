@@ -8,6 +8,6 @@ export { default as Spring } from "./Spring";
 export { default as Sql } from "./Sql";
 export { default as Error } from "./Error";
 export { default as Home } from "./Home";
-export { default as SpringMicroServices } from "./SpringMicroServices";
+export { default as MicroServices } from "./MicroServices";
 export { default as FullStack } from "./FullStack";
 export { default as Git } from "./Git";

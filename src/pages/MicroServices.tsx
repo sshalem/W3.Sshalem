@@ -3,8 +3,9 @@ import { GridLayout, SideBarLink } from "../components";
 // import { DropDownLogging } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownEureka from "../DropDown/DropMicroService/DropDownEureka";
 
-const Z_PageTemplate = () => {
+const MicroServices = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
@@ -35,7 +36,7 @@ const Z_PageTemplate = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Mic.S Home" internalLink="." />
-            {/* <DropDownLogging /> */}
+            <DropDownEureka />
 
             {/* <SideBarLink pageName="Rest" internalLink="rest" />
             <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
@@ -67,4 +68,4 @@ const Z_PageTemplate = () => {
   );
 };
 
-export default Z_PageTemplate;
+export default MicroServices;
