@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../components";
-import { DropDownApplicationProperties, DropDownJpa, DropDownRest, DropDownLogging } from "../DropDown";
+import { DropDownLogging } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const Spring = () => {
+const Z_PageTemplate = () => {
   // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
@@ -34,11 +34,8 @@ const Spring = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="Spring Home" internalLink="." />
-            <DropDownApplicationProperties />
+            <SideBarLink pageName="Mic.S Home" internalLink="." />
             <DropDownLogging />
-            <DropDownJpa />
-            <DropDownRest />
 
             {/* <SideBarLink pageName="Rest" internalLink="rest" />
             <SideBarLink pageName="Spring Docs" internalLink="spring-doc" />
@@ -70,4 +67,4 @@ const Spring = () => {
   );
 };
 
-export default Spring;
+export default Z_PageTemplate;
