@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { DropDownEureka } from "../DropDown";
 
 const MicroServices = () => {
-  // const { openList, handleOpenList } = useAppContext();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {

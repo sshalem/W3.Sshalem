@@ -34,7 +34,7 @@ const Spring = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Spring Home" internalLink="/spring" />
-            {/* <SideBarLinkTemp pageName="Spring Home" internalLink="." /> */}
+            
             <DropDownApplicationProperties />
             <DropDownLogging />
             <DropDownJpa />
