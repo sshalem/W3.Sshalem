@@ -1,6 +1,26 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
-import { DevOps, Error, FullStack, Git, Home, HTML_CSS, Java, JavaScript, MicroServices, Python, ReactJS, Spring, Sql } from "./pages";
+import {
+  Batch,
+  DevOps,
+  Error,
+  FullStack,
+  Git,
+  Home,
+  HTML_CSS,
+  Java,
+  JavaScript,
+  Linux,
+  MicroServices,
+  Page_Creation,
+  Postman,
+  Python,
+  ReactJS,
+  Spring,
+  Sql,
+  Windows,
+} from "./pages";
+
 import {
   Aop,
   Caching,
@@ -125,6 +145,11 @@ const router = createBrowserRouter(
         { path: "python", element: <Python /> },
         { path: "devops", element: <DevOps /> },
         { path: "git", element: <Git /> },
+        { path: "linux", element: <Linux /> },
+        { path: "batch", element: <Batch /> },
+        { path: "postman", element: <Postman /> },
+        { path: "windows", element: <Windows /> },
+        { path: "page_creation", element: <Page_Creation /> },
       ],
     },
   ],

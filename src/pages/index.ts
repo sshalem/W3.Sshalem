@@ -11,3 +11,9 @@ export { default as Home } from "./Home";
 export { default as MicroServices } from "./MicroServices";
 export { default as FullStack } from "./FullStack";
 export { default as Git } from "./Git";
+export { default as Linux } from "./Linux";
+export { default as Batch } from "./Batch";
+export { default as Postman } from "./Postman";
+export { default as Windows } from "./Windows";
+
+export { default as Page_Creation } from "./Page_Creation";
