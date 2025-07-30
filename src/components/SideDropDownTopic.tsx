@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CaretUp, CaretDown } from "../components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 interface SideDropDownTopicProps {
   showList: boolean;
   handleOpenList: () => void;
@@ -9,8 +9,10 @@ interface SideDropDownTopicProps {
 }
 
 const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }: SideDropDownTopicProps) => {
+  let location = useLocation();
+
   useEffect(() => {
-    // console.log("SideDropDownTopic trig", pageName);
+    console.log("SideDropDownTopic : ", location.pathname, "-", internalLink);
   }, []);
 
   return (
@@ -31,29 +33,16 @@ const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }:
         {/* Disable the Link */}
         {/* Enable the SideBarLink component */}
         {/* check console */}
+
         <Link to={internalLink}>
           <div className="text-[15px] text-base leading-[1.65]">
-            {location.pathname.substring(8).length === 0 && internalLink === "." ? (
-              <div className="bg-gray-300 pl-8 font-medium text-black">{pageName}</div>
-            ) : location.pathname.substring(8).includes(internalLink) ? (
+            {location.pathname.includes(internalLink) ? (
               <div className="bg-gray-300 pl-8 font-medium text-black">{pageName}</div>
             ) : (
               <div className="pl-8 hover:bg-gray-300">{pageName}</div>
             )}
           </div>
         </Link>
-
-        {/* <Link to={internalLink}>
-          <div className="text-[15px] text-base leading-[1.65]">
-            {location.pathname.substring(8).length === 0 && internalLink === "." ? (
-              <div className="bg-gray-300 pl-8 font-medium text-black">{pageName}</div>
-            ) : location.pathname.substring(8).includes(internalLink) ? (
-              <div className="bg-gray-300 pl-8 font-medium text-black">{pageName}</div>
-            ) : (
-              <div className="pl-8 hover:bg-gray-300">{pageName}</div>
-            )}
-          </div>
-        </Link> */}
       </div>
     </article>
   );

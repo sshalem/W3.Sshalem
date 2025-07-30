@@ -34,7 +34,7 @@ const DropDownRest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="rest" pageName="RestAPI" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" pageName="RestAPI" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

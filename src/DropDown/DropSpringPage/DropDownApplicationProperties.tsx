@@ -37,7 +37,7 @@ const DropDownApplicationProperties = () => {
       <SideDropDownTopic
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="application-properties"
+        internalLink="/spring/application-properties"
         pageName="Application properties"
       />
 
