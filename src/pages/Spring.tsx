@@ -3,7 +3,6 @@ import { GridLayout, SideBarLink } from "../components";
 import { DropDownApplicationProperties, DropDownJpa, DropDownRest, DropDownLogging } from "../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import SideBarLinkTemp from "../components/SideBarLinkTemp";
 
 const Spring = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -34,7 +33,7 @@ const Spring = () => {
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="Spring Home" internalLink="." />
+            <SideBarLink pageName="Spring Home" internalLink="/spring" />
             {/* <SideBarLinkTemp pageName="Spring Home" internalLink="." /> */}
             <DropDownApplicationProperties />
             <DropDownLogging />

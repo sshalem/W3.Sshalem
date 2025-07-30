@@ -41,10 +41,10 @@ const DropDownLogging = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="Log Util" internalLink="logging/LogUtil" />
-        <SideDropdownLink pageName="SLF4J (Logback)" internalLink="logging/slf4j-logback" />
-        <SideDropdownLink pageName="Log File" internalLink="logging/log-file" />
-        <SideDropdownLink pageName="Logging Properties" internalLink="logging/logging-props" />
+        <SideDropdownLink pageName="Log Util" internalLink="/spring/logging/LogUtil" />
+        <SideDropdownLink pageName="SLF4J (Logback)" internalLink="/spring/logging/slf4j-logback" />
+        <SideDropdownLink pageName="Log File" internalLink="/spring/logging/log-file" />
+        <SideDropdownLink pageName="Logging Properties" internalLink="/spring/logging/logging-props" />
       </div>
     </section>
   );

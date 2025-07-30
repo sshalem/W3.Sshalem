@@ -41,8 +41,8 @@ const DropDownEureka = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="Eureka Server" internalLink="eureka/eureka-server" />
-        <SideDropdownLink pageName="Eureka Discovery" internalLink="eureka/eureka-discovery" />
+        <SideDropdownLink pageName="Eureka Server" internalLink="/microservices/eureka/eureka-server" />
+        <SideDropdownLink pageName="Eureka Discovery" internalLink="/microservices/eureka/eureka-discovery" />
       </div>
     </section>
   );
