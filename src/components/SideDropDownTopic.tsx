@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { CaretUp, CaretDown } from "../components";
 import { Link, useLocation } from "react-router-dom";
 interface SideDropDownTopicProps {
@@ -11,9 +10,9 @@ interface SideDropDownTopicProps {
 const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }: SideDropDownTopicProps) => {
   let location = useLocation();
 
-  useEffect(() => {
-    console.log("SideDropDownTopic : ", location.pathname, "-", internalLink);
-  }, []);
+  // useEffect(() => {
+  //   console.log("SideDropDownTopic : ", location.pathname, "-", internalLink);
+  // }, []);
 
   return (
     <article className="relative">
