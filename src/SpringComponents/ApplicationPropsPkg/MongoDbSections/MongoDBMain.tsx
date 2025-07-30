@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
+import MongoDBIntro from "./MongoDBIntro";
 
 // =============================================================================================================
 
@@ -45,8 +46,7 @@ const MongoDBMain = () => {
       {/* End Contents */}
 
       {/* Sub Pages Component example */}
-      {/* <MongoDBIntro anchor={mongodb_intro} /> */}
-
+      <MongoDBIntro anchor={mongodb_intro} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
