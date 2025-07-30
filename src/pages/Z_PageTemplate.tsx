@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink } from "../components";
+import { GridLayout } from "../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { DropDownEureka } from "../DropDown";
 
 const Z_PageTemplate = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,16 +32,16 @@ const Z_PageTemplate = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-
-            <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
-
-            <DropDownEureka />
+            Drop Down of Page
+            {/* Example of SideBarLink & DropDownSubPage */}
+            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
+            {/* <DropDownEureka /> */}
           </div>
         </article>
       )}
-
       <main className="css-main-outlet">
         <Outlet />
+        text of Page
       </main>
     </GridLayout>
   );

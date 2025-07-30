@@ -47,9 +47,6 @@ import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg"
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
 import { Eureka, MicroServiceHome } from "./MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./MicroServiceComponents/EurekaPkg";
-import ReactHome from "./ReactJSComponents/ReactHome";
-import ReactJsx from "./ReactJSComponents/ReactJsx";
-import ReactRouter from "./ReactJSComponents/ReactRouter";
 
 const router = createBrowserRouter(
   [
@@ -128,15 +125,7 @@ const router = createBrowserRouter(
             },
           ],
         },
-        {
-          path: "reactJS",
-          element: <ReactJS />,
-          children: [
-            { index: true, element: <ReactHome /> },
-            { path: "reactRouter", element: <ReactRouter /> },
-            { path: "reactJsx", element: <ReactJsx /> },
-          ],
-        },
+        { path: "reactJS", element: <ReactJS /> },
         { path: "javascript", element: <JavaScript /> },
         { path: "html_css", element: <HTML_CSS /> },
         { path: "fullstack", element: <FullStack /> },
