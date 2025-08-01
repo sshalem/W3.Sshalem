@@ -210,3 +210,35 @@
 /*******************************
 ********* end of  about  *******
 ********************************/
+
+/*******************************
+************* Tree *************
+********************************/
+
+.tree,
+.tree ul {
+  list-style: none;
+  padding-left: 2em;
+  margin: 0;
+}
+
+.tree ul {
+  display: none;
+}
+
+.tree input[type="checkbox"] {
+  display: none;
+}
+
+.tree input[type="checkbox"]:checked + label + ul {
+  display: block;
+}
+
+.tree label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/*******************************
+************* Tree *************
+********************************/

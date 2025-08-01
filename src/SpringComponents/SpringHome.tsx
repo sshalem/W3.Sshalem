@@ -1,8 +1,11 @@
+import { Tree, TreeApp } from "../components";
+
 const SpringHome = () => {
   return (
     <section>
-      <div className="text-3xl">Spring home ...</div>
-      <article>Project component structure</article>
+      <div className="my-2 text-3xl">Spring home ...</div>
+      <TreeApp />
+      <Tree />
     </section>
   );
 };
