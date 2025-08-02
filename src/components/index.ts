@@ -27,7 +27,6 @@ export { default as MainChildArea } from "./MainChildArea";
 export { default as LoggingComapreTable } from "./LoggingComapreTable";
 export { default as IMG } from "./IMG";
 export { default as Tree } from "./Tree";
-export { default as TreeApp } from "./TreeApp";
 export { default as TreeFolder } from "./TreeFolder";
 export { default as TreeComponent } from "./TreeComponent";
 export { default as TreeOutlet } from "./TreeOutlet";
