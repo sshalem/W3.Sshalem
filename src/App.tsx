@@ -48,6 +48,8 @@ import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg"
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
 import { Eureka, MicroServiceHome } from "./MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./MicroServiceComponents/EurekaPkg";
+import AppTreeComponent from "./PageCreateComponents/AppTreeComponent";
+import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponent";
 
 const router = createBrowserRouter(
   [
@@ -139,7 +141,14 @@ const router = createBrowserRouter(
         { path: "batch", element: <Batch /> },
         { path: "postman", element: <Postman /> },
         { path: "windows", element: <Windows /> },
-        { path: "page_creation", element: <Page_Creation /> },
+        {
+          path: "page_creation",
+          element: <Page_Creation />,
+          children: [
+            { path: "app-tree", element: <AppTreeComponent /> },
+            { path: "component-tree", element: <ComponentTreeComponent /> },
+          ],
+        },
       ],
     },
   ],
