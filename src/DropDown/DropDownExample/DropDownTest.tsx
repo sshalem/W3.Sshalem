@@ -34,14 +34,15 @@ const DropDownTest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/example/test" pageName="test page" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/example/test" pageName="Test" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="Test" internalLink="example/test/learn" />
+        <SideDropdownLink pageName="Learn" internalLink="/example/test/learn" />
+        <SideDropdownLink pageName="Study" internalLink="/example/test/study" />
       </div>
     </section>
   );

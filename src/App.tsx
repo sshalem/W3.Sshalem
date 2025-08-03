@@ -54,7 +54,10 @@ import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 import Example from "./pages/Example";
 import ExampleHome from "./ExampleComponents/ExampleHome";
-import TestMain from "./ExampleComponents/TestMain";
+
+import Test from "./ExampleComponents/TestPkg/Test";
+import LearnMain from "./ExampleComponents/TestPkg/LearnSections/LearnMain";
+import StudyMain from "./ExampleComponents/TestPkg/StudySections/StudyMain";
 
 const router = createBrowserRouter(
   [
@@ -119,6 +122,21 @@ const router = createBrowserRouter(
           ],
         },
         {
+          path: "example",
+          element: <Example />,
+          children: [
+            { index: true, element: <ExampleHome /> },
+            {
+              path: "test",
+              element: <Test />,
+              children: [
+                { path: "learn", element: <LearnMain /> },
+                { path: "study", element: <StudyMain /> },
+              ],
+            },
+          ],
+        },
+        {
           path: "microservices",
           element: <MicroServices />,
           children: [
@@ -154,21 +172,6 @@ const router = createBrowserRouter(
             { path: "app-tree", element: <AppTreeComponent /> },
             { path: "component-tree", element: <ComponentTreeComponent /> },
             { path: "web-page", element: <WebPageComponent /> },
-          ],
-        },
-        {
-          path: "example",
-          element: <Example />,
-          children: [
-            { index: true, element: <ExampleHome /> },
-            // {
-            //   path: "test",
-            //   element: <Test />,
-            //   children: [
-            //     { path: "learn", element: <LearnMain /> },
-            //     { path: "study", element: <StudyMain /> },
-            //   ],
-            // },
           ],
         },
       ],
