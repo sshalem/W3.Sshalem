@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropDownTopic } from "../../components";
 
-const DropDownAppTree = () => {
+const DropDownComponentTree = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownAppTree = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("rest")) {
+    if (location.pathname.substring(8).includes("/page_creation/component-tree")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,7 +34,7 @@ const DropDownAppTree = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/app-tree" pageName="App Tree" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/component-tree" pageName="Component Tree" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -50,4 +50,4 @@ const DropDownAppTree = () => {
   );
 };
 
-export default DropDownAppTree;
+export default DropDownComponentTree;

@@ -3,6 +3,7 @@ import { GridLayout } from "../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownAppTree from "../DropDown/DropPageCreation/DropDownAppTree";
+import DropDownComponentTree from "../DropDown/DropPageCreation/DropDownComponentTree";
 
 const Page_Creation = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,9 +34,10 @@ const Page_Creation = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            {/* <DropDownAppTree /> */}
+            <DropDownAppTree />
+            <DropDownComponentTree />
 
-            <Link to="/page_creation/app-tree">
+            {/* <Link to="/page_creation/app-tree">
               <div className="text-[15px] text-base leading-[1.65]">
                 {location.pathname.includes("/page_creation/app-tree") ? (
                   <div className="bg-gray-300 pl-8 font-medium text-black">App Tree</div>
@@ -43,11 +45,11 @@ const Page_Creation = () => {
                   <div className="pl-8 hover:bg-gray-300">App Tree</div>
                 )}
               </div>
-            </Link>
+            </Link> */}
 
             {/*  */}
 
-            <Link to="/page_creation/component-tree">
+            {/* <Link to="/page_creation/component-tree">
               <div className="text-[15px] text-base leading-[1.65]">
                 {location.pathname.includes("/page_creation/component-tree") ? (
                   <div className="bg-gray-300 pl-8 font-medium text-black">Component Tree</div>
@@ -55,7 +57,7 @@ const Page_Creation = () => {
                   <div className="pl-8 hover:bg-gray-300">Component Tree</div>
                 )}
               </div>
-            </Link>
+            </Link> */}
 
             {/*  */}
           </div>
