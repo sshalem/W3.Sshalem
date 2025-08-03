@@ -18,7 +18,8 @@ const Z_DropDownTemplate = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("rest")) {
+    // if (location.pathname.substring(8).includes("rest")) {
+    if (location.pathname.includes("rest")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,14 +35,15 @@ const Z_DropDownTemplate = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="rest" pageName="RestAPI" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" pageName="RestAPI" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="One2Many Bi Eager" internalLink="rest/one2many-bi-eager" />
+        <SideDropdownLink pageName="One2Many Bi Eager" internalLink="/spring/rest/one2many-bi-eager" />
+        <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="/spring/rest/one2many-bi-lazy" />
       </div>
     </section>
   );

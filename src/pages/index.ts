@@ -17,3 +17,4 @@ export { default as Postman } from "./Postman";
 export { default as Windows } from "./Windows";
 
 export { default as Page_Creation } from "./Page_Creation";
+export { default as Example } from "./Example";

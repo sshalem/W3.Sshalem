@@ -5,6 +5,7 @@ import page_create_2 from "../assets/page_create_2.jpg";
 import page_create_3 from "../assets/page_create_3.jpg";
 import page_create_4 from "../assets/page_create_4.jpg";
 import page_create_5 from "../assets/page_create_5.jpg";
+import page_create_6 from "../assets/page_create_6.jpg";
 
 const PageCreationHome = () => {
   return (
@@ -72,8 +73,8 @@ const PageCreationHome = () => {
         After adding the Page template code , this is how page looks now.
         <IMG img_name={page_create_4}></IMG>
         <div>
-          Let's add the sidebar content , so it will be shown like we see in <Span>Spring</Span>page:
-          <IMG img_name={page_create_2} />
+          Let's add the sidebar content , so it will be shown like we see in page:
+          <IMG img_name={page_create_6} />
           This is a convension of how I define the folder and files in the project.
         </div>
         <ul className="ml-8 list-decimal">

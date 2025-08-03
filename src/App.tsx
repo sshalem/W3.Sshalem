@@ -19,6 +19,7 @@ import {
   Spring,
   Sql,
   Windows,
+  Example,
 } from "./pages";
 
 import {
@@ -52,12 +53,8 @@ import AppTreeComponent from "./PageCreateComponents/AppTreeComponent";
 import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponent";
 import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
-import Example from "./pages/Example";
-import ExampleHome from "./ExampleComponents/ExampleHome";
 
-import Test from "./ExampleComponents/TestPkg/Test";
-import LearnMain from "./ExampleComponents/TestPkg/LearnSections/LearnMain";
-import StudyMain from "./ExampleComponents/TestPkg/StudySections/StudyMain";
+import { LearnMain, StudyMain, Test, ExampleHome } from "./ExampleComponents";
 
 const router = createBrowserRouter(
   [
