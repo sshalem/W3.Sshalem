@@ -1,5 +1,4 @@
-import { Tree } from "../components";
-import TreeAppBrowserRouter from "../components/TreeAppBrowserRouter";
+import { Tree, TreeAppBrowserRouter } from "../Tree";
 
 const SpringHome = () => {
   return (
