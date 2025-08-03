@@ -20,6 +20,7 @@ export const links: string[] = [
   "/postman",
   "/windows",
   "/page_creation",
+  "/example",
 ];
 
 // "/1",

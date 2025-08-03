@@ -52,6 +52,7 @@ import AppTreeComponent from "./PageCreateComponents/AppTreeComponent";
 import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponent";
 import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
+import Example from "./pages/Example";
 
 const router = createBrowserRouter(
   [
@@ -153,6 +154,7 @@ const router = createBrowserRouter(
             { path: "web-page", element: <WebPageComponent /> },
           ],
         },
+        { path: "example", element: <Example /> },
       ],
     },
   ],

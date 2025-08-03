@@ -34,6 +34,10 @@
   .css-ul {
     @apply ml-4 border-l-2 pl-4;
   }
+
+  .css-title {
+    @apply my-8 inline-block select-none rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white;
+  }
 }
 
 :root {
