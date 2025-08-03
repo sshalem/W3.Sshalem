@@ -1,12 +1,19 @@
 import DetailsSummaryComponent from "../../../../DetailsSummaryComponent";
 import TreeComponent from "../../../../TreeComponent";
 
-const folder = "/SpringComponents/ApplicationPropsPkg/H2SqlSections";
-const componentsNames: string[] = ["<H2DatabseBasicConfig>", "<H2Dbeaver>", "<H2Osiv>"];
+const folder = "/SpringComponents/ApplicationPropsPkg/MySqlSections";
+const componentsNames: string[] = [
+  "<MysqlBasicConfig>",
+  "<MySqlComprehansivePropertiesConfig>",
+  "<MySqlDetailedConfig>",
+  "<MysqlDialect>",
+  "<MySqlGitHub>",
+  "<MySqlOSIV>",
+];
 
-const TreeH2Main = () => {
+const TreeMySqlMain = () => {
   return (
-    <DetailsSummaryComponent folder={folder} componentName={"<H2Main>"}>
+    <DetailsSummaryComponent folder={folder} componentName={"<MySqlMain>"}>
       <ul className="css-ul">
         {componentsNames.map((componentName, index) => {
           return (
@@ -20,4 +27,4 @@ const TreeH2Main = () => {
   );
 };
 
-export default TreeH2Main;
+export default TreeMySqlMain;

@@ -1,16 +1,17 @@
 import DetailsSummaryComponent from "../../../DetailsSummaryComponent";
 import DetailsSummaryOutlet from "../../../DetailsSummaryOutlet";
-import TreeH2Main from "./H2Childs/TreeH2Main";
-import TreeMySqlMain from "./MySqlChilds/TreeMySqlMain";
+import TreeLogUtilMain from "./LogUtilChilds/TreeLogUtilMain";
 
-const TreeApplicationProperties = () => {
+import TreeSlf4jLogbackMain from "./Slf4jChilds/TreeSlf4jLogbackMain";
+
+const TreeLogging = () => {
   return (
-    <DetailsSummaryComponent folder="/SpringComponents/ApplicationPropsPkg" componentName={"<ApplicationProperties>"}>
+    <DetailsSummaryComponent folder="/SpringComponents/ApplicationPropsPkg" componentName={"<Logging>"}>
       <ul className="css-ul">
         <DetailsSummaryOutlet componentName="<Outlet>">
           <ul className="css-ul">
-            <TreeH2Main />
-            <TreeMySqlMain />
+            <TreeSlf4jLogbackMain />
+            <TreeLogUtilMain />
           </ul>
         </DetailsSummaryOutlet>
       </ul>
@@ -18,4 +19,4 @@ const TreeApplicationProperties = () => {
   );
 };
 
-export default TreeApplicationProperties;
+export default TreeLogging;
