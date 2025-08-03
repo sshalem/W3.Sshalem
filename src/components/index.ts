@@ -31,3 +31,7 @@ export { default as TreeFolder } from "./TreeFolder";
 export { default as TreeComponent } from "./TreeComponent";
 export { default as TreeOutlet } from "./TreeOutlet";
 export { default as SpanAppTree } from "./SpanAppTree";
+export { default as DetailsSummary } from "./DetailsSummary";
+export { default as DetailsSummaryOutlet } from "./DetailsSummaryOutlet";
+export { default as DetailsSummaryComponent } from "./DetailsSummaryComponent";
+export { default as TreeSpanApp } from "./TreeSpanApp";

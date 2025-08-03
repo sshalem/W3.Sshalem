@@ -109,7 +109,6 @@ const router = createBrowserRouter(
             { path: "caching", element: <Caching /> },
             { path: "aop", element: <Aop /> },
             { path: "spring-security", element: <SpringSecurity /> },
-            { path: "logging", element: <Logging /> },
           ],
         },
         {

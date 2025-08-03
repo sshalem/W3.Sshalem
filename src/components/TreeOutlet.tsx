@@ -1,10 +1,8 @@
-const TreeOutlet = ({ name, folder }: { name: string; folder: string }) => {
+const TreeOutlet = ({ folder, componentName }: { folder: string; componentName: string }) => {
   return (
     <>
-      <input type="checkbox" id={name} />
-      <label htmlFor={name}>
-        <span className="px-[5px] py-[1px] font-mono text-[#009]">{`<${name}>`}</span> 💧❄️ {folder}
-      </label>
+      <span className="px-[5px] py-[1px] font-mono text-[#009905]">{componentName}</span>
+      ❄️ <span className="px-[5px] py-[1px] font-mono text-[#009]">{folder}</span>
     </>
   );
 };
