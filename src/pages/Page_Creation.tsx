@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { GridLayout } from "../components";
+import { GridLayout, SideBarLink } from "../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownAppTree from "../DropDown/DropPageCreation/DropDownAppTree";
@@ -35,6 +35,7 @@ const Page_Creation = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
+            <SideBarLink pageName="Page Creation" internalLink="/page_creation" />
             <DropDownAppTree />
             <DropDownComponentTree />
             <DropDownWebPageComponent />

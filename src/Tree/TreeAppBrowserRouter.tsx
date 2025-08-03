@@ -7,7 +7,7 @@ const TreeAppBrowserRouter = () => {
       <div className="my-4 text-2xl">🌍 App Browser Router Tree</div>
 
       <article className="ml-5">
-        <DetailsSummary path="/" componentName={"<MainLayout>"}>
+        <DetailsSummary path="/" componentName={"<MainLayout>"} open={true}>
           <ul className="css-ul">
             <li>
               <DetailsSummary path="/spring" componentName="<Spring>">

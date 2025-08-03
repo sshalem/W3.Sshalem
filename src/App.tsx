@@ -51,6 +51,7 @@ import { EurekaDiscoveryMain, EurekaMain } from "./MicroServiceComponents/Eureka
 import AppTreeComponent from "./PageCreateComponents/AppTreeComponent";
 import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponent";
 import WebPageComponent from "./PageCreateComponents/WebPageComponent";
+import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 
 const router = createBrowserRouter(
   [
@@ -146,10 +147,10 @@ const router = createBrowserRouter(
           path: "page_creation",
           element: <Page_Creation />,
           children: [
+            { index: true, element: <PageCreationHome /> },
             { path: "app-tree", element: <AppTreeComponent /> },
             { path: "component-tree", element: <ComponentTreeComponent /> },
             { path: "web-page", element: <WebPageComponent /> },
-            ,
           ],
         },
       ],
