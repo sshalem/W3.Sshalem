@@ -41,7 +41,6 @@ const Z_PageTemplate = () => {
       )}
       <main className="css-main-outlet">
         <Outlet />
-        text of Page
       </main>
     </GridLayout>
   );

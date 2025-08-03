@@ -1,6 +1,9 @@
 import { IMG } from "../components";
 import { JsxHighlight, Span } from "../Highlight";
 import page_create_1 from "../assets/page_create_1.jpg";
+import page_create_2 from "../assets/page_create_2.jpg";
+import page_create_3 from "../assets/page_create_3.jpg";
+import page_create_4 from "../assets/page_create_4.jpg";
 
 const PageCreationHome = () => {
   return (
@@ -51,16 +54,36 @@ const PageCreationHome = () => {
             <li>
               under <Span>MainLayout</Span> path , add new child
             </li>
+            <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
+            <li>
+              at this point I should see <Span>Example</Span> page link on <Span>Navbar</Span>
+              <IMG img_name={page_create_1}></IMG>
+            </li>
+            <li>
+              To config the side navbar on the page, copy the context of componenet <Span>Z_PageTemplate</Span>
+              and paste it in <Span>Example</Span>component. <br />
+              After adding the Page template code , this is how page looks now.
+              <IMG img_name={page_create_4}></IMG>
+            </li>
           </ul>
-          <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
-          at this poit I should see <Span>Example</Span> page link on <Span>Navbar</Span>
-          <IMG img_name={page_create_1}></IMG>
         </div>
       </article>
 
       <article>
         <div className="css-title">step 4 </div>
-        <div></div>
+        <div>Lets see how to add the Sidebar navigation </div>
+        <IMG img_name={page_create_2} />
+        <div>
+          Now I will config the folder of <Span>Example</Span>
+        </div>
+        <ul className="ml-8 list-decimal">
+          <li>
+            under <Span>src</Span> folder, create the following folder (Its a convension) <Span>ExampleComponents</Span>
+            <IMG img_name={page_create_3}></IMG>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
       </article>
 
       <article>
