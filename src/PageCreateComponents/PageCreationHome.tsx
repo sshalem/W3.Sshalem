@@ -1,11 +1,13 @@
 import { IMG } from "../components";
 import { JsxHighlight, Span } from "../Highlight";
 import page_create_1 from "../assets/page_create_1.jpg";
-import page_create_2 from "../assets/page_create_2.jpg";
 import page_create_3 from "../assets/page_create_3.jpg";
 import page_create_4 from "../assets/page_create_4.jpg";
 import page_create_5 from "../assets/page_create_5.jpg";
 import page_create_6 from "../assets/page_create_6.jpg";
+import page_create_7 from "../assets/page_create_7.jpg";
+import page_create_8 from "../assets/page_create_8.jpg";
+import page_create_9 from "../assets/page_create_9.jpg";
 
 const PageCreationHome = () => {
   return (
@@ -88,7 +90,7 @@ const PageCreationHome = () => {
           <JsxHighlight jsxCode={jsxCode_5}></JsxHighlight>
           <IMG img_name={page_create_3}></IMG>
           <li>
-            Add a Link to <Span>Example</Span> component , so I will see <Span>Example Home</Span> in my side navbar. <br />
+            Add a <Span>SideBarLink</Span> to <Span>Example</Span> component , so I will see <Span>Example Home</Span> in my side navbar. <br />
             copy code below and add it to <Span>Example</Span> component. (see inside <Span>Example</Span> component where exactlly to add it)
             <JsxHighlight jsxCode={jsxCode_6}></JsxHighlight>
           </li>
@@ -98,6 +100,8 @@ const PageCreationHome = () => {
             now lets examine our web page see ho it looks:
             <IMG img_name={page_create_5}></IMG>
           </li>
+
+          <li>Continue with creating the DropDown.</li>
           <li>
             Create new folder <Span>DropDownExample</Span> under the main <Span>DropDown</Span>folder
           </li>
@@ -110,17 +114,27 @@ const PageCreationHome = () => {
           <li>
             verify that the internalLink matches the correct path (see inside code)
             <div>
-              <Span>includes("example")</Span> and <Span>internalLink="/example/test"</Span>
+              <Span>includes("test")</Span> and <Span>internalLink="/example/test"</Span>
             </div>
+            <IMG img_name={page_create_9}></IMG>
           </li>
           <li>
             Go to <Span>Example</Span> page component , add to it <Span>DropDownTest</Span> component (see code )
           </li>
           <li>
-            Create new file in <Span>ExampleComponents</Span> name it <Span>TestMain.tsx</Span>
+            Create new file in <Span>ExampleComponents</Span> name it <Span>Test.tsx</Span>
           </li>
           <li>
-            add to <Span>App.tsx</Span>
+            create 2 folder with following convension <Span>LearnSections</Span> and <Span>StudySections</Span>
+            <IMG img_name={page_create_7}></IMG>
+          </li>
+          <li>
+            In each folder create a file taht will be the main file ,<Span>StudyMain.tsx</Span> and <Span>LearnMain.tsx</Span>
+            <IMG img_name={page_create_8}></IMG>
+          </li>
+          <li>
+            add to <Span>App.tsx</Span> the new links and thier corresponding elements
+            <JsxHighlight jsxCode={jsxCode_8}></JsxHighlight>
           </li>
         </ul>
       </article>
@@ -165,7 +179,7 @@ const jsxCode_2 = `export const links: string[] = [
 
 const jsxCode_3 = `{ path: "example", element: <Example /> },`;
 
-const jsxCode_4 = `export { default as MicroServiceHome } from "./ExampleHome";`;
+const jsxCode_4 = `export { default as ExampleHome } from "./ExampleHome";`;
 
 const jsxCode_5 = `const ExampleHome = () => {
   return <div className="text-3xl">Example Home ...</div>;
@@ -180,5 +194,21 @@ const jsxCode_7 = `        {
           element: <Example />,
           children: [
             { index: true, element: <ExampleHome /> }
+          ],
+        },`;
+
+const jsxCode_8 = `        {
+          path: "example",
+          element: <Example />,
+          children: [
+            { index: true, element: <ExampleHome /> },
+            {
+              path: "test",
+              element: <Test />,
+              children: [
+                { path: "learn", element: <LearnMain /> },
+                { path: "study", element: <StudyMain /> },
+              ],
+            },
           ],
         },`;
