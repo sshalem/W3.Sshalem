@@ -7,3 +7,4 @@ export { default as DetailsSummaryOutlet } from "./DetailsSummaryOutlet";
 export { default as DetailsSummaryComponent } from "./DetailsSummaryComponent";
 export { default as TreeSpanApp } from "./TreeSpanApp";
 export { default as TreeAppBrowserRouter } from "./TreeAppBrowserRouter";
+export { default as TreeSpring } from "./Spring/TreeSpring";

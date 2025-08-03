@@ -1,5 +1,6 @@
 import DetailsSummaryComponent from "./DetailsSummaryComponent";
 import DetailsSummaryOutlet from "./DetailsSummaryOutlet";
+import TreeSpring from "./Spring/TreeSpring";
 import TreeComponent from "./TreeComponent";
 
 const Tree = () => {
@@ -26,7 +27,8 @@ const Tree = () => {
             <li>
               <DetailsSummaryOutlet componentName="<Outlet>">
                 <ul className="css-ul">
-                  <DetailsSummaryComponent folder="/pages" componentName={"<Spring>"}>
+                  <TreeSpring />
+                  {/* <DetailsSummaryComponent folder="/pages" componentName={"<Spring>"}>
                     <ul className="css-ul">
                       <DetailsSummaryComponent folder="/DropDown/DropSpringPage" componentName={"<DropDownApplicationProperties>"}>
                         <ul className="css-ul"></ul>
@@ -155,7 +157,7 @@ const Tree = () => {
                         </ul>
                       </DetailsSummaryOutlet>
                     </ul>
-                  </DetailsSummaryComponent>
+                  </DetailsSummaryComponent> */}
                   <DetailsSummaryComponent folder="/pages" componentName={"<ReactJS>"}></DetailsSummaryComponent>
                   <DetailsSummaryComponent folder="/pages" componentName={"<Java>"}></DetailsSummaryComponent>
                 </ul>
