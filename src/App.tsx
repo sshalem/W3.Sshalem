@@ -55,6 +55,7 @@ import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 
 import { LearnMain, StudyMain, Test, ExampleHome } from "./ExampleComponents";
+import { SpecificationDocument, CreateStepMain } from "./PageCreateComponents";
 
 const router = createBrowserRouter(
   [
@@ -166,6 +167,11 @@ const router = createBrowserRouter(
           element: <Page_Creation />,
           children: [
             { index: true, element: <PageCreationHome /> },
+            {
+              path: "specification-document",
+              element: <SpecificationDocument />,
+              children: [{ path: "create-steps", element: <CreateStepMain /> }],
+            },
             { path: "app-tree", element: <AppTreeComponent /> },
             { path: "component-tree", element: <ComponentTreeComponent /> },
             { path: "web-page", element: <WebPageComponent /> },

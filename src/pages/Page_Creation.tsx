@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import DropDownAppTree from "../DropDown/DropPageCreation/DropDownAppTree";
 import DropDownComponentTree from "../DropDown/DropPageCreation/DropDownComponentTree";
 import DropDownWebPageComponent from "../DropDown/DropPageCreation/DropDownWebPageComponent";
+import DropDownSteps from "../DropDown/DropPageCreation/DropDownSteps";
 
 const Page_Creation = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -36,6 +37,7 @@ const Page_Creation = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Page Creation Home" internalLink="/page_creation" />
+            <DropDownSteps />
             <DropDownAppTree />
             <DropDownComponentTree />
             <DropDownWebPageComponent />
