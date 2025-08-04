@@ -55,6 +55,7 @@ import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 
 import { SpecificationDocument, CreateStepMain } from "./PageCreateComponents";
+import { CPlusPlusHome } from "./CPlusPlusComponents";
 
 const router = createBrowserRouter(
   [
@@ -64,7 +65,17 @@ const router = createBrowserRouter(
       errorElement: <Error />,
       children: [
         { index: true, element: <Home /> },
-        { path: "c++", element: <C_plus_plus /> },
+        {
+          path: "c++",
+          element: <C_plus_plus />,
+          children: [
+            { index: true, element: <CPlusPlusHome /> },
+            { path: "advanced-topics", element: <SpecificationDocument /> },
+            { path: "fundamental-concepts", element: <SpecificationDocument /> },
+            { path: "oop", element: <SpecificationDocument /> },
+            { path: "standard-template-lib", element: <SpecificationDocument /> },
+          ],
+        },
         {
           path: "spring",
           element: <Spring />,

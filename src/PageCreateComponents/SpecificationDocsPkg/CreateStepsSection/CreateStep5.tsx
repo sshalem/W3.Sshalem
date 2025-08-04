@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../components";
+import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_six from "../../../assets/page_create_six.jpg";
@@ -75,91 +75,38 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           <li>
-            Now, I want config the links for the 5 created components. <br />
+            Config <Span>App.tsx</Span> with links for the 5 created components. <br />
             <div>
               4.1. go to <Span>App.tsx</Span>
             </div>
             <div>
-              4.1. go to <Span>App.tsx</Span>
+              4.2. Add the <Span>children</Span> array , inside <Span>C_plus_plus</Span> component.
             </div>
-            <ul className="my-4 ml-8 list-decimal">
-              <li>
-                <strong>C++ Home</strong> (will be a regular link and not a DropDown Link)
-              </li>
-              <li>
-                <strong>Fundamental Concepts</strong>
-              </li>
-              <li>
-                <strong>OOP</strong>
-              </li>
-              <li>
-                <strong>Standard Template Lib</strong>
-              </li>
-              <li>
-                <strong>Advanced Topics</strong>
-              </li>
-            </ul>
-            For each of the Link , I will create a component , afterwards , I will assign a <Span>url path</Span> to it. <br />
-            So , I will 5 components , under folder of <Span></Span>
-            <ul className="my-4 ml-8 list-disc">
-              <li>
-                <strong>C++ Home</strong> already made a component in section
-              </li>
-              <li>
-                <strong>Fundamental Concepts</strong>
-              </li>
-              <li>
-                <strong>OOP</strong>
-              </li>
-              <li>
-                <strong>Standard Template Lib</strong>
-              </li>
-              <li>
-                <strong>Advanced Topics</strong>
-              </li>
-            </ul>
-            <IMG img_name={page_create_eight}></IMG>
+            <div>
+              4.3. See the assign <Span>url path</Span> I gave to each component
+            </div>
+            <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
             <li>
-              under <Span>src</Span> , go to <Span>DropDown</Span> folder , and create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with
-              name related to component).
-              <br />
-              this folder , will hold all the sidebar navigation links of <Span>CPlusPlus</Span>
+              <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5
+              componets I made.
+              <Question>
+                Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
+              </Question>
+              <Answer>
+                Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
+                <Span>c++</Span> url
+              </Answer>
+              So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet
+              I create.
+              <JsxHighlight jsxCode=""></JsxHighlight>
             </li>
-            thus, create 4 files , under <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
-            <ul className="my-4 ml-8 list-disc">
-              <li>
-                4.1. <Span>DropDownAdvancedTopics</Span>
-              </li>
-              <li>
-                4.2. <Span>DropDownFundamentalConcepts</Span>
-              </li>
-              <li>
-                4.3. <Span>DropDownOOP</Span>
-              </li>
-              <li>
-                4.4. <Span>DropDownStandardTempLib</Span>
-              </li>
-            </ul>
-            <IMG img_name={page_create_eight}></IMG>
+            <li>
+              Add to <Span>C_plus_plus</Span> page component , the links to all components. <br />
+              <JsxHighlight jsxCode={jsxCode_C_plus_with_links}></JsxHighlight>
+            </li>
           </li>
           {/*  */}
           {/*  */}
-          <li>
-            copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDown</Span> file I created. <br />
-            The code will make the links to be visible on the sidebar nav.
-          </li>
-          In the code below where I have 3 variable
-          <ul className="my-4 ml-8 list-disc">
-            <li>
-              <Span>AAAA</Span> - <Span>c++</Span>. Need to assign the url path as in section 2, paragraph 3 <Span>c++</Span>
-            </li>
-            <li>
-              <Span>BBBB"</Span>- assign the url of the <Span>DropDown</Span> sidebar link the url path <Span></Span>
-            </li>
-            <li>
-              <Span>cccc"</Span>- assign the following path <Span></Span>
-            </li>
-          </ul>
           <JsxHighlight jsxCode={jsxCode_DropDown} />
         </ul>
       </article>
@@ -189,6 +136,63 @@ export { default as AdvancedTopics } from "./AdvancedTopics";
 export { default as FundamentalConcepts } from "./FundamentalConcepts";
 export { default as OOP } from "./OOP";
 export { default as StandardTemplateLib } from "./StandardTemplateLib";`;
+
+const jsxCode_Outlet = ``;
+
+const jsxCode_C_plus_with_links = `import { Link, Outlet } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { GridLayout } from "../components";
+
+const C_plus_plus = () => {
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+
+  const toggleSideNavbar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  const closeSidebar = () => {
+    // console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      setShowSidebar(false);
+    } else {
+      setShowSidebar(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", closeSidebar);
+    return () => window.removeEventListener("resize", closeSidebar);
+  }, []);
+
+  return (
+    <GridLayout>
+      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+
+      {showSidebar && (
+        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
+          <div className="relative h-full w-full">
+            <div className="h-3"></div>
+
+            {/* Example of SideBarLink & DropDownSubPage */}
+            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
+            {/* <DropDownEureka /> */}
+            <Link to={"/c++"}><div>C++ Home</div></Link>
+            <Link to={"/c++/fundamental-concepts"}><div>Fundamental Concepts</div></Link>
+            <Link to={"/c++/oop"}><div>OOP</div></Link>
+            <Link to={"/c++/standard-template-lib"}><div>Standard Template Lib</div></Link>
+            <Link to={"/c++/advanced-topics"}><div>Advanced Topics</div></Link>
+          </div>
+        </article>
+      )}
+      <main className="css-main-outlet">
+        <Outlet />
+      </main>
+    </GridLayout>
+  );
+};
+
+export default C_plus_plus;`;
 
 const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -240,3 +244,15 @@ const DropDownAdvancedTopics = () => {
 };
 
 export default DropDownAdvancedTopics;`;
+
+const jsxCode_AppAddedChildren = `        {
+          path: "c++",
+          element: <C_plus_plus />,
+          children: [
+            { index: true, element: <CPlusPlusHome /> },
+            { path: "advanced-topics", element: <SpecificationDocument /> },
+            { path: "fundamental-concepts", element: <SpecificationDocument /> },
+            { path: "oop", element: <SpecificationDocument /> },
+            { path: "standard-template-lib", element: <SpecificationDocument /> },
+          ],
+        },`;

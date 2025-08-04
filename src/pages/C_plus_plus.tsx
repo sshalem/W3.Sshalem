@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout } from "../components";
@@ -32,10 +32,25 @@ const C_plus_plus = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down Page Links
+
             {/* Example of SideBarLink & DropDownSubPage */}
             {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
             {/* <DropDownEureka /> */}
+            <Link to={"/c++"}>
+              <div>C++ Home</div>
+            </Link>
+            <Link to={"/c++/fundamental-concepts"}>
+              <div>Fundamental Concepts</div>
+            </Link>
+            <Link to={"/c++/oop"}>
+              <div>OOP</div>
+            </Link>
+            <Link to={"/c++/standard-template-lib"}>
+              <div>Standard Template Lib</div>
+            </Link>
+            <Link to={"/c++/advanced-topics"}>
+              <div>Advanced Topics</div>
+            </Link>
           </div>
         </article>
       )}
