@@ -1,9 +1,8 @@
-import { Answer, IMG, MainChildArea, Question } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_six from "../../../assets/page_create_six.jpg";
 import page_create_seven from "../../../assets/page_create_seven.jpg";
-import page_create_eight from "../../../assets/page_create_eight.jpg";
 
 const CreateStep5 = ({ anchor }: { anchor: string }) => {
   return (
