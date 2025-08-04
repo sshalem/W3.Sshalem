@@ -1,11 +1,5 @@
-import { Outlet } from "react-router-dom";
-
 const OOP = () => {
-  return (
-    <section>
-      <Outlet />
-    </section>
-  );
+  return <div className="text-3xl">OOP page</div>;
 };
 
 export default OOP;
