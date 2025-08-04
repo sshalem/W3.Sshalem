@@ -5,13 +5,6 @@ import page_create_six from "../../../assets/page_create_six.jpg";
 import page_create_seven from "../../../assets/page_create_seven.jpg";
 import page_create_eight from "../../../assets/page_create_eight.jpg";
 
-import page_create_3 from "../../../assets/page_create_3.jpg";
-import page_create_5 from "../../../assets/page_create_5.jpg";
-
-import page_create_7 from "../../../assets/page_create_7.jpg";
-import page_create_8 from "../../../assets/page_create_8.jpg";
-import page_create_9 from "../../../assets/page_create_9.jpg";
-
 const CreateStep5 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
@@ -24,37 +17,63 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             <li>code will be cleaner and readable.</li>
           </ul>
         </div>
-        <ul className="ml-8 list-decimal">
+        <div>
+          <strong>work order :</strong>
+          <ul className="my-4 mb-8 ml-8 list-decimal">
+            <li>create 5 components</li>
+            <li>
+              assign 5 <Span>url path</Span> to the components by using the <Span>DropDownXXX</Span> component.
+            </li>
+          </ul>
+        </div>
+        <strong>follow the following steps:</strong>
+        <ul className="my-4 ml-8 list-decimal">
           <li>
             under <Span>src</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
           </li>
           <li>
-            create 2 files in this folder :
+            create 5 files in this folder :
             <ul className="list ml-4">
+              <ul className="my-4 ml-8 list-disc">
+                <li>
+                  <Span>CPlusPlusHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link <Span>C++</Span>
+                </li>
+                <li>
+                  <Span>FundamentalConcepts.tsx</Span>
+                </li>
+                <li>
+                  <Span>OOP</Span>
+                </li>
+                <li>
+                  <Span>StandardTemplateLib.tsx</Span>
+                </li>
+                <li>
+                  <Span>AdvancedTopics.tsx</Span>
+                </li>
+              </ul>
+
               <li>
-                2.1. <Span>CPlusPlusHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link{" "}
-                <Span>C++</Span>
-              </li>
-              <JsxHighlight jsxCode={jsxCode_4}></JsxHighlight>
-              <li>
-                2.2. <Span>index.ts</Span> - where all Internal components will be exported (to prevent massive imports)
-              </li>
-              <JsxHighlight jsxCode={jsxCode_5}></JsxHighlight>
-              <li>
-                2.3. <Span>CPLusPLusComponents</Span> folder with 2 files inside
-                <IMG img_name={page_create_seven}></IMG>
+                2.3. Here is <Span>CPLusPLusComponents</Span> folder with 5 files inside
+                <IMG img_name={"page_create_seven"}></IMG>
               </li>
             </ul>
           </li>
+          Code of 3 components <Span>CPLusPLusComponents</Span>. all have the same format (for now).
+          <JsxHighlight jsxCode={jsxCode_CplusHome}></JsxHighlight>
+          <JsxHighlight jsxCode={jsxCode_OOP}></JsxHighlight>
+          <JsxHighlight jsxCode={jsxCode_fundamentalConcepts}></JsxHighlight>
+          {/*  */}
+          {/*  */}
           <li>
-            under <Span>src</Span> , go to <Span>DropDown</Span> folder , and create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with name
-            related to component).
-            <br />
-            this folder , will hold all the sidebar navigation links of <Span>CPlusPlus</Span>
+            In <Span>CPLusPLusComponents</Span> folder , create an
+            <Span>index.ts</Span> - where all Internal components will be exported (to prevent massive imports)
+            <JsxHighlight jsxCode={jsxCode_Index} />
           </li>
+          {/*  */}
+          {/*  */}
           <li>
             These are the links that I want to have on the side are (for the example):
-            <ul className="my-4 ml-8 list-disc">
+            <ul className="my-4 ml-8 list-decimal">
               <li>
                 <strong>C++ Home</strong> (will be a regular link and not a DropDown Link)
               </li>
@@ -71,6 +90,32 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
                 <strong>Advanced Topics</strong>
               </li>
             </ul>
+            For each of the Link , I will create a component , afterwards , I will assign a <Span>url path</Span> to it. <br />
+            So , I will 5 components , under folder of <Span></Span>
+            <ul className="my-4 ml-8 list-disc">
+              <li>
+                <strong>C++ Home</strong> already made a component in section
+              </li>
+              <li>
+                <strong>Fundamental Concepts</strong>
+              </li>
+              <li>
+                <strong>OOP</strong>
+              </li>
+              <li>
+                <strong>Standard Template Lib</strong>
+              </li>
+              <li>
+                <strong>Advanced Topics</strong>
+              </li>
+            </ul>
+            <IMG img_name={page_create_eight}></IMG>
+            <li>
+              under <Span>src</Span> , go to <Span>DropDown</Span> folder , and create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with
+              name related to component).
+              <br />
+              this folder , will hold all the sidebar navigation links of <Span>CPlusPlus</Span>
+            </li>
             thus, create 4 files , under <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
             <ul className="my-4 ml-8 list-disc">
               <li>
@@ -113,12 +158,22 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep5;
 
-const jsxCode_4 = `const CPlusPlusHome = () => {
+const jsxCode_CplusHome = `const CPlusPlusHome = () => {
   return <div className="text-3xl">C++ Home ...</div>;
 };
 export default CPlusPlusHome;`;
 
-const jsxCode_5 = `export { default as CPlusPlusHome } from "./CPlusPlusHome";`;
+const jsxCode_OOP = `const OOP = () => {
+  return <div className="text-3xl">OOP Home ...</div>;
+};
+export default OOP;`;
+
+const jsxCode_fundamentalConcepts = `const FundamentalConcepts = () => {
+  return <div className="text-3xl">Fundamental Concepts ...</div>;
+};
+export default FundamentalConcepts;`;
+
+const jsxCode_Index = `export { default as CPlusPlusHome } from "./CPlusPlusHome";`;
 
 const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
