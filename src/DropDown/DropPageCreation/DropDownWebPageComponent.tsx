@@ -18,7 +18,7 @@ const DropDownWebPageComponent = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.substring(8).includes("rest")) {
+    if (location.pathname.includes("web-page")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
