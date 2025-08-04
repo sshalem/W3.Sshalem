@@ -62,7 +62,6 @@ const CreateStepMain = () => {
       <CreateStep4 anchor={step_4} />
       <CreateStep5 anchor={step_5} />
       <CreateStep6 anchor={step_6} />
-      {/* <XXXIntro anchor={xxx_intro} /> */}
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

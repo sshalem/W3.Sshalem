@@ -20,6 +20,7 @@ import {
   Sql,
   Windows,
   Example,
+  C_plus_plus,
 } from "./pages";
 
 import {
@@ -54,7 +55,6 @@ import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponen
 import WebPageComponent from "./PageCreateComponents/WebPageComponent";
 import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 
-import { LearnMain, StudyMain, Test, ExampleHome } from "./ExampleComponents";
 import { SpecificationDocument, CreateStepMain } from "./PageCreateComponents";
 
 const router = createBrowserRouter(
@@ -65,6 +65,7 @@ const router = createBrowserRouter(
       errorElement: <Error />,
       children: [
         { index: true, element: <Home /> },
+        { path: "c++", element: <C_plus_plus /> },
         {
           path: "spring",
           element: <Spring />,
@@ -160,21 +161,6 @@ const router = createBrowserRouter(
             { path: "app-tree", element: <AppTreeComponent /> },
             { path: "component-tree", element: <ComponentTreeComponent /> },
             { path: "web-page", element: <WebPageComponent /> },
-          ],
-        },
-        {
-          path: "example",
-          element: <Example />,
-          children: [
-            { index: true, element: <ExampleHome /> },
-            {
-              path: "test",
-              element: <Test />,
-              children: [
-                { path: "learn", element: <LearnMain /> },
-                { path: "study", element: <StudyMain /> },
-              ],
-            },
           ],
         },
       ],

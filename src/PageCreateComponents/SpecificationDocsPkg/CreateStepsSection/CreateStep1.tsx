@@ -1,6 +1,6 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-import page_create_one from "../../../assets/page_create_one.jpg";
+import page_create_1 from "../../../assets/page_create_1.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
             <li>
               create a new page component with name <Span>C_plus_plus.tsx</Span>
             </li>
-            <IMG img_name={page_create_one}></IMG>
+            <IMG img_name={page_create_1}></IMG>
             <li>add the below code in the created file</li>
             <JsxHighlight jsxCode={jsxCode_1}></JsxHighlight>
           </ul>

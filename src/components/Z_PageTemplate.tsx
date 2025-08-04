@@ -32,7 +32,7 @@ const Z_PageTemplate = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down of Page
+            Drop Down Page Links
             {/* Example of SideBarLink & DropDownSubPage */}
             {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
             {/* <DropDownEureka /> */}

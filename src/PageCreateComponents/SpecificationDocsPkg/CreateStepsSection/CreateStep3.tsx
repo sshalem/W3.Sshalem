@@ -1,25 +1,26 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-import page_create_1 from "../../../assets/page_create_1.jpg";
+import page_create_three from "../../../assets/page_create_three.jpg";
+import page_create_four from "../../../assets/page_create_four.jpg";
 
 const CreateStep3 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      {" "}
       <article>
-        <div className="css-title">step 3 : Config App.tsx with Example Page</div>
+        In order to see the the page name in the Navbar , do the following:
         <div>
-          <ul className="ml-8 list-decimal">
+          <ul className="my-4 ml-8 list-decimal">
             <li>
               go to <Span>App.tsx</Span> file
             </li>
             <li>
-              under <Span>MainLayout</Span> path , add new child
+              add code below, under <Span>MainLayout</Span> path , (I create new child) ,
             </li>
             <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
+            <IMG img_name={page_create_three}></IMG>
             <li>
-              at this point I should see <Span>Example</Span> page link on <Span>Navbar</Span>
-              <IMG img_name={page_create_1}></IMG>
+              at this point I should see <Span>C++</Span> page link on <Span>Navbar</Span>
+              <IMG img_name={page_create_four}></IMG>
             </li>
           </ul>
         </div>
@@ -30,4 +31,4 @@ const CreateStep3 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep3;
 
-const jsxCode_3 = `{ path: "example", element: <Example /> },`;
+const jsxCode_3 = `{ path: "c++", element: <C_plus_plus /> },`;
