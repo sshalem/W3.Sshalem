@@ -22,7 +22,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           <ul className="my-4 mb-8 ml-8 list-decimal">
             <li>create 5 components</li>
             <li>
-              assign 5 <Span>url path</Span> to the components by using the <Span>DropDownXXX</Span> component.
+              assign 5 <Span>url path</Span> to the components . (In section 6, I will switch to the <Span>DropDownXXX</Span> component.)
             </li>
           </ul>
         </div>
@@ -31,6 +31,8 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           <li>
             under <Span>src</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
           </li>
+          {/*  */}
+          {/*  */}
           <li>
             create 5 files in this folder :
             <ul className="list ml-4">
@@ -51,13 +53,14 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
                   <Span>AdvancedTopics.tsx</Span>
                 </li>
               </ul>
-
-              <li>
-                2.3. Here is <Span>CPLusPLusComponents</Span> folder with 5 files inside
-                <IMG img_name={"page_create_seven"}></IMG>
-              </li>
+              Here is <Span>CPLusPLusComponents</Span> folder with 5 component files inside. <br />
+              In paragraph 3 , I mentioning regarding <Span>index.ts</Span> to comine all componets in one file, to prevent multiple{" "}
+              <Span>import</Span> lines.
+              <IMG img_name={page_create_seven}></IMG>
             </ul>
           </li>
+          {/*  */}
+          {/*  */}
           Code of 3 components <Span>CPLusPLusComponents</Span>. all have the same format (for now).
           <JsxHighlight jsxCode={jsxCode_CplusHome}></JsxHighlight>
           <JsxHighlight jsxCode={jsxCode_OOP}></JsxHighlight>
@@ -66,13 +69,19 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           <li>
             In <Span>CPLusPLusComponents</Span> folder , create an
-            <Span>index.ts</Span> - where all Internal components will be exported (to prevent massive imports)
+            <Span>index.ts</Span> , <br /> all Internal components will be exported to prevent massive imports.
             <JsxHighlight jsxCode={jsxCode_Index} />
           </li>
           {/*  */}
           {/*  */}
           <li>
-            These are the links that I want to have on the side are (for the example):
+            Now, I want config the links for the 5 created components. <br />
+            <div>
+              4.1. go to <Span>App.tsx</Span>
+            </div>
+            <div>
+              4.1. go to <Span>App.tsx</Span>
+            </div>
             <ul className="my-4 ml-8 list-decimal">
               <li>
                 <strong>C++ Home</strong> (will be a regular link and not a DropDown Link)
@@ -133,6 +142,8 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             </ul>
             <IMG img_name={page_create_eight}></IMG>
           </li>
+          {/*  */}
+          {/*  */}
           <li>
             copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDown</Span> file I created. <br />
             The code will make the links to be visible on the sidebar nav.
@@ -173,7 +184,11 @@ const jsxCode_fundamentalConcepts = `const FundamentalConcepts = () => {
 };
 export default FundamentalConcepts;`;
 
-const jsxCode_Index = `export { default as CPlusPlusHome } from "./CPlusPlusHome";`;
+const jsxCode_Index = `export { default as CPlusPlusHome } from "./CPlusPlusHome";
+export { default as AdvancedTopics } from "./AdvancedTopics";
+export { default as FundamentalConcepts } from "./FundamentalConcepts";
+export { default as OOP } from "./OOP";
+export { default as StandardTemplateLib } from "./StandardTemplateLib";`;
 
 const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
