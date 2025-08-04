@@ -1,19 +1,21 @@
-import { MainChildArea } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
+import page_create_one from "../../../assets/page_create_one.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        <div className="css-title">step 1 : Create new page </div>
         <div>
           <ul className="ml-8 list-decimal">
             <li>
               go to <Span>pages</Span> folder
             </li>
             <li>
-              create a new page component with name <Span>Example</Span>
+              create a new page component with name <Span>C_plus_plus.tsx</Span>
             </li>
+            <IMG img_name={page_create_one}></IMG>
+            <li>add the below code in the created file</li>
             <JsxHighlight jsxCode={jsxCode_1}></JsxHighlight>
           </ul>
         </div>
@@ -24,9 +26,8 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep1;
 
-const jsxCode_1 = `const Example = () => {
-  return <div className="text-3xl">Example page ...</div>;
+const jsxCode_1 = `const C_plus_plus = () => {
+  return <div className="text-3xl">C++ ...</div>;
 };
 
-export default Example;
-`;
+export default C_plus_plus;`;
