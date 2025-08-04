@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../components";
+import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_six from "../../../assets/page_create_six.jpg";
@@ -103,6 +103,20 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
                 <strong>Advanced Topics</strong>
               </li>
             </ul>
+            <li>
+              <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5
+              componets I made.
+              <Question>
+                Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
+              </Question>
+              <Answer>
+                Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
+                <Span>c++</Span> url
+              </Answer>
+              So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet
+              I create.
+              <JsxHighlight jsxCode=""></JsxHighlight>
+            </li>
             For each of the Link , I will create a component , afterwards , I will assign a <Span>url path</Span> to it. <br />
             So , I will 5 components , under folder of <Span></Span>
             <ul className="my-4 ml-8 list-disc">

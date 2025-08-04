@@ -87,27 +87,10 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             </div>
             <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
             <li>
-              <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5
-              componets I made.
-              <Question>
-                Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
-              </Question>
-              <Answer>
-                Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
-                <Span>c++</Span> url
-              </Answer>
-              So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet
-              I create.
-              <JsxHighlight jsxCode=""></JsxHighlight>
-            </li>
-            <li>
               Add to <Span>C_plus_plus</Span> page component , the links to all components. <br />
               <JsxHighlight jsxCode={jsxCode_C_plus_with_links}></JsxHighlight>
             </li>
           </li>
-          {/*  */}
-          {/*  */}
-          <JsxHighlight jsxCode={jsxCode_DropDown} />
         </ul>
       </article>
     </MainChildArea>
@@ -136,8 +119,6 @@ export { default as AdvancedTopics } from "./AdvancedTopics";
 export { default as FundamentalConcepts } from "./FundamentalConcepts";
 export { default as OOP } from "./OOP";
 export { default as StandardTemplateLib } from "./StandardTemplateLib";`;
-
-const jsxCode_Outlet = ``;
 
 const jsxCode_C_plus_with_links = `import { Link, Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
