@@ -19,7 +19,6 @@ import {
   Spring,
   Sql,
   Windows,
-  Example,
   C_plus_plus,
 } from "./pages";
 

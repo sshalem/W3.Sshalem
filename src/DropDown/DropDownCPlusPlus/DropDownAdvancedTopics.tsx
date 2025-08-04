@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../components";
 
-const DropDownTest = () => {
+const DropDownAdvancedTopics = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownTest = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("test")) {
+    if (location.pathname.includes("BBBB")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,18 +34,17 @@ const DropDownTest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/example/test" pageName="Test" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" pageName="home" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="Learn" internalLink="/example/test/learn" />
-        <SideDropdownLink pageName="Study" internalLink="/example/test/study" />
+        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
       </div>
     </section>
   );
 };
 
-export default DropDownTest;
+export default DropDownAdvancedTopics;

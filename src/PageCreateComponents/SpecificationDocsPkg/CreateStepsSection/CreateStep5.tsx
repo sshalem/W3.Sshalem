@@ -1,9 +1,13 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-import page_create_five from "../../../assets/page_create_five.jpg";
+
+import page_create_six from "../../../assets/page_create_six.jpg";
+import page_create_seven from "../../../assets/page_create_seven.jpg";
+import page_create_eight from "../../../assets/page_create_eight.jpg";
+
 import page_create_3 from "../../../assets/page_create_3.jpg";
 import page_create_5 from "../../../assets/page_create_5.jpg";
-import page_create_6 from "../../../assets/page_create_6.jpg";
+
 import page_create_7 from "../../../assets/page_create_7.jpg";
 import page_create_8 from "../../../assets/page_create_8.jpg";
 import page_create_9 from "../../../assets/page_create_9.jpg";
@@ -13,67 +17,94 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <article>
         <div>
-          Let's add the sidebar content , so it will be shown like we see in page:
-          <IMG img_name={page_create_6} />
-          This is a convension of how I define the folder and files in the project.
+          Let's add the sidebar navigation links , so it will be shown like we see in page
+          <IMG img_name={page_create_six} />I must follow this <Span>convention</Span> , since :
+          <ul className="my-4 ml-8 list-disc">
+            <li>I organazide code , with folder/pkg. </li>
+            <li>code will be cleaner and readable.</li>
+          </ul>
         </div>
         <ul className="ml-8 list-decimal">
           <li>
-            under <Span>src</Span> folder, create the following folder (Its a convension) <Span>ExampleComponents</Span>
+            under <Span>src</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
           </li>
           <li>
-            create 2 files in this folder <Span>index.ts</Span> and <Span>ExampleHome.tsx</Span>
-          </li>
-          <JsxHighlight jsxCode={jsxCode_4}></JsxHighlight>
-          <JsxHighlight jsxCode={jsxCode_5}></JsxHighlight>
-          <IMG img_name={page_create_3}></IMG>
-          <li>
-            Add a <Span>SideBarLink</Span> to <Span>Example</Span> component , so I will see <Span>Example Home</Span> in my side navbar. <br />
-            copy code below and add it to <Span>Example</Span> component. (see inside <Span>Example</Span> component where exactlly to add it)
-            <JsxHighlight jsxCode={jsxCode_6}></JsxHighlight>
-          </li>
-          <li>
-            Add to <Span>App.tsx</Span> the children of <Span>Example</Span> component
-            <JsxHighlight jsxCode={jsxCode_7}></JsxHighlight>
-            now lets examine our web page see ho it looks:
-            <IMG img_name={page_create_5}></IMG>
-          </li>
-
-          <li>Continue with creating the DropDown.</li>
-          <li>
-            Create new folder <Span>DropDownExample</Span> under the main <Span>DropDown</Span>folder
+            create 2 files in this folder :
+            <ul className="list ml-4">
+              <li>
+                2.1. <Span>CPlusPlusHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link{" "}
+                <Span>C++</Span>
+              </li>
+              <JsxHighlight jsxCode={jsxCode_4}></JsxHighlight>
+              <li>
+                2.2. <Span>index.ts</Span> - where all Internal components will be exported (to prevent massive imports)
+              </li>
+              <JsxHighlight jsxCode={jsxCode_5}></JsxHighlight>
+              <li>
+                2.3. <Span>CPLusPLusComponents</Span> folder with 2 files inside
+                <IMG img_name={page_create_seven}></IMG>
+              </li>
+            </ul>
           </li>
           <li>
-            create new file with name convension prefix <Span>DropDown</Span>, for instance <Span>DropDownTest.tsx</Span>
+            under <Span>src</Span> , go to <Span>DropDown</Span> folder , and create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with name
+            related to component).
+            <br />
+            this folder , will hold all the sidebar navigation links of <Span>CPlusPlus</Span>
           </li>
           <li>
-            copy from <Span>Z_DropDownTemplate</Span> the content of the component , and paste it in <Span>DropDownTest.tsx</Span>.
+            These are the links that I want to have on the side are (for the example):
+            <ul className="my-4 ml-8 list-disc">
+              <li>
+                <strong>C++ Home</strong> (will be a regular link and not a DropDown Link)
+              </li>
+              <li>
+                <strong>Fundamental Concepts</strong>
+              </li>
+              <li>
+                <strong>OOP</strong>
+              </li>
+              <li>
+                <strong>Standard Template Lib</strong>
+              </li>
+              <li>
+                <strong>Advanced Topics</strong>
+              </li>
+            </ul>
+            thus, create 4 files , under <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
+            <ul className="my-4 ml-8 list-disc">
+              <li>
+                4.1. <Span>DropDownAdvancedTopics</Span>
+              </li>
+              <li>
+                4.2. <Span>DropDownFundamentalConcepts</Span>
+              </li>
+              <li>
+                4.3. <Span>DropDownOOP</Span>
+              </li>
+              <li>
+                4.4. <Span>DropDownStandardTempLib</Span>
+              </li>
+            </ul>
+            <IMG img_name={page_create_eight}></IMG>
           </li>
           <li>
-            verify that the internalLink matches the correct path (see inside code)
-            <div>
-              <Span>includes("test")</Span> and <Span>internalLink="/example/test"</Span>
-            </div>
-            <IMG img_name={page_create_9}></IMG>
+            copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDown</Span> file I created. <br />
+            The code will make the links to be visible on the sidebar nav.
           </li>
-          <li>
-            Go to <Span>Example</Span> page component , add to it <Span>DropDownTest</Span> component (see code )
-          </li>
-          <li>
-            Create new file in <Span>ExampleComponents</Span> name it <Span>Test.tsx</Span>
-          </li>
-          <li>
-            create 2 folder with following convension <Span>LearnSections</Span> and <Span>StudySections</Span>
-            <IMG img_name={page_create_7}></IMG>
-          </li>
-          <li>
-            In each folder create a file taht will be the main file ,<Span>StudyMain.tsx</Span> and <Span>LearnMain.tsx</Span>
-            <IMG img_name={page_create_8}></IMG>
-          </li>
-          <li>
-            add to <Span>App.tsx</Span> the new links and thier corresponding elements
-            <JsxHighlight jsxCode={jsxCode_8}></JsxHighlight>
-          </li>
+          In the code below where I have 3 variable
+          <ul className="my-4 ml-8 list-disc">
+            <li>
+              <Span>AAAA</Span> - <Span>c++</Span>. Need to assign the url path as in section 2, paragraph 3 <Span>c++</Span>
+            </li>
+            <li>
+              <Span>BBBB"</Span>- assign the url of the <Span>DropDown</Span> sidebar link the url path <Span></Span>
+            </li>
+            <li>
+              <Span>cccc"</Span>- assign the following path <Span></Span>
+            </li>
+          </ul>
+          <JsxHighlight jsxCode={jsxCode_DropDown} />
         </ul>
       </article>
     </MainChildArea>
@@ -82,36 +113,60 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep5;
 
-const jsxCode_4 = `export { default as ExampleHome } from "./ExampleHome";`;
+const jsxCode_4 = `const CPlusPlusHome = () => {
+  return <div className="text-3xl">C++ Home ...</div>;
+};
+export default CPlusPlusHome;`;
 
-const jsxCode_5 = `const ExampleHome = () => {
-  return <div className="text-3xl">Example Home ...</div>;
+const jsxCode_5 = `export { default as CPlusPlusHome } from "./CPlusPlusHome";`;
+
+const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { SideDropdownLink, SideDropDownTopic } from "../../components";
+
+const DropDownAdvancedTopics = () => {
+  const [showList, setShowList] = useState<boolean>(false);
+  const [listHeight, setListHeight] = useState<number>();
+
+  let location = useLocation();
+
+  const divRef = useRef<HTMLDivElement | null>(null);
+
+  const handleOpenList = () => {
+    setShowList(!showList);
+    if (divRef.current !== null) {
+      setListHeight(divRef.current.scrollHeight);
+    }
+  };
+
+  useEffect(() => {
+    if (location.pathname.includes("BBBB")) {
+      if (location.pathname.split("/")[3] === undefined) {
+        // do nothing , this way I prevent the re-render of  setShowList(true);
+      } else {
+        setShowList(true);
+      }
+      if (divRef.current !== null) {
+        setListHeight(divRef.current.scrollHeight);
+      }
+    } else {
+      setShowList(false);
+    }
+  }, [location.pathname]);
+
+  return (
+    <section>
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" pageName="home" />
+
+      <div
+        style={showList ? { height: \`\${listHeight}px\` } : { height: "0px" }}
+        className={\`overflow-hidden bg-white transition-[height] duration-100 ease-in-out\`}
+        ref={divRef}
+      >
+        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
+      </div>
+    </section>
+  );
 };
 
-export default ExampleHome;`;
-
-const jsxCode_6 = `<SideBarLink pageName="Example Home" internalLink="/example" />`;
-
-const jsxCode_7 = `        {
-          path: "example",
-          element: <Example />,
-          children: [
-            { index: true, element: <ExampleHome /> }
-          ],
-        },`;
-
-const jsxCode_8 = `        {
-          path: "example",
-          element: <Example />,
-          children: [
-            { index: true, element: <ExampleHome /> },
-            {
-              path: "test",
-              element: <Test />,
-              children: [
-                { path: "learn", element: <LearnMain /> },
-                { path: "study", element: <StudyMain /> },
-              ],
-            },
-          ],
-        },`;
+export default DropDownAdvancedTopics;`;
