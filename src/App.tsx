@@ -120,21 +120,6 @@ const router = createBrowserRouter(
           ],
         },
         {
-          path: "example",
-          element: <Example />,
-          children: [
-            { index: true, element: <ExampleHome /> },
-            {
-              path: "test",
-              element: <Test />,
-              children: [
-                { path: "learn", element: <LearnMain /> },
-                { path: "study", element: <StudyMain /> },
-              ],
-            },
-          ],
-        },
-        {
           path: "microservices",
           element: <MicroServices />,
           children: [
@@ -175,6 +160,21 @@ const router = createBrowserRouter(
             { path: "app-tree", element: <AppTreeComponent /> },
             { path: "component-tree", element: <ComponentTreeComponent /> },
             { path: "web-page", element: <WebPageComponent /> },
+          ],
+        },
+        {
+          path: "example",
+          element: <Example />,
+          children: [
+            { index: true, element: <ExampleHome /> },
+            {
+              path: "test",
+              element: <Test />,
+              children: [
+                { path: "learn", element: <LearnMain /> },
+                { path: "study", element: <StudyMain /> },
+              ],
+            },
           ],
         },
       ],
