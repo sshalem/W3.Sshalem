@@ -1,7 +1,7 @@
 import MainChildArea from "./MainChildArea";
 
-const temp = ({ anchor }: { anchor: string }) => {
+const Z_section_internal = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}></MainChildArea>;
 };
 
-export default temp;
+export default Z_section_internal;

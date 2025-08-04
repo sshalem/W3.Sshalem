@@ -35,7 +35,7 @@ const Page_Creation = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="Page Creation" internalLink="/page_creation" />
+            <SideBarLink pageName="Page Creation Home" internalLink="/page_creation" />
             <DropDownAppTree />
             <DropDownComponentTree />
             <DropDownWebPageComponent />
