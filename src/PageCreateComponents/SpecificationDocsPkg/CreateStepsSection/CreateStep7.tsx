@@ -69,7 +69,15 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <Span>BBBB</Span>- replace with url path
                 <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
               </li>
+              <li>
+                <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
+                same name of <Span>BBBB</Span> just with Capital letter , and without dashes
+              </li>
             </ul>
+          </li>
+          <li>
+            import all the <Span>DropDownXXX</Span> created to <Span>C_Plus_Plus</Span> page
+            <JsxHighlight jsxCode="" />
           </li>
           <Span>Z_DropDownTemplate</Span> code :
           <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
@@ -91,6 +99,8 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 };
 
 export default CreateStep7;
+
+const jsxCode_C_plus_plus_with_DropDown = ``;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
