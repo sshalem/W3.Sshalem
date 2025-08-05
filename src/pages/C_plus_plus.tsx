@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout } from "../components";
