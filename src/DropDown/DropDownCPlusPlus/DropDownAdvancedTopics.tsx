@@ -18,7 +18,7 @@ const DropDownAdvancedTopics = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("BBBB")) {
+    if (location.pathname.includes("advanced-topics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,15 +34,7 @@ const DropDownAdvancedTopics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="home" />
-
-      <div
-        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
-        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
-        ref={divRef}
-      >
-        <SideDropdownLink sideDropDownNavName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
-      </div>
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/c++/advanced-topics" topicName="Advanced Topics" />
     </section>
   );
 };
