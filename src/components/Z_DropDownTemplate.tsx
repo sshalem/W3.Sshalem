@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../components";
+import { SideDropDownTopic } from "../components";
 
 const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  const [listHeight, setListHeight] = useState<number>();
+  // const [listHeight, setListHeight] = useState<number>();
+  const [, setListHeight] = useState<number>();
 
   let location = useLocation();
 

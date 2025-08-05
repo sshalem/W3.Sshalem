@@ -2,7 +2,6 @@ import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_8 from "../../../assets/page_create_8.jpg";
-import page_create_9 from "../../../assets/page_create_9.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
@@ -63,18 +62,16 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
               </li>
               <li className="my-1">
-                <Span>AAAA</Span> - assign url path <span className="text-lg font-semibold text-blue-600">"c++"</span>. This url path is made in
+                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
                 section 2, paragraph 3 <Span>c++</Span>
               </li>
               <li className="my-1">
-                <Span>BBBB"</Span>- assign url path
-                <span className="text-lg font-semibold text-blue-600">"fundamental-concepts"</span>the <Span>DropDown</Span> sidebar link the url path
-                <Span>fundamental-concepts</Span>
+                <Span>BBBB</Span>- replace with url path
+                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
               </li>
             </ul>
-            <IMG img_name={page_create_9}></IMG>
           </li>
-          Code example of <Span>DropDownFundamentalConcepts</Span>
+          <Span>Z_DropDownTemplate</Span> code :
           <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
         </ul>
         <div>
@@ -97,11 +94,12 @@ export default CreateStep7;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../components";
+import { SideDropDownTopic } from "../components";
 
 const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  const [listHeight, setListHeight] = useState<number>();
+  // const [listHeight, setListHeight] = useState<number>();
+  const [, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -129,7 +127,7 @@ const Z_DropDownTemplate = () => {
     }
   }, [location.pathname]);
 
-  return (    
+  return (
     <section>
       <SideDropDownTopic 
         showList={showList}
@@ -141,4 +139,5 @@ const Z_DropDownTemplate = () => {
   );
 };
 
-export default Z_DropDownTemplate;`;
+export default Z_DropDownTemplate;
+`;
