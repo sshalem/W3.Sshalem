@@ -2,33 +2,15 @@ import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_8 from "../../../assets/page_create_8.jpg";
-import page_create_10 from "../../../assets/page_create_10.jpg";
+import page_create_9 from "../../../assets/page_create_9.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        In this seection , I will modify the sidebar navigation ,links, from regular link , to a <Span>DropDownXXXX</Span> link, so I can heve
-        Internal links in them. <br /> In section 7, I show how to config the internal links of the <Span>DropDownXXXX</Span>
+        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component, so I can heve Internal links in them. <br />
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
-          {/*  */}
-          {/*  */}
-          {/*  */}
-          {/*  */}
-          <li>
-            First, I removed all <Span>Link</Span> elements, and start w/o any links in <Span>C_Plus_Plus</Span>
-          </li>
-          <li>
-            I want to make the page of <Span>C++ Home</Span> the landing page , thus I add following code line to it <br />
-            <br />
-            <Span>
-              {`<SideBarLink`} pageName="C++ Home" internalLink="/c++" {`/>`}
-            </Span>
-            <JsxHighlight jsxCode={jsx_HomeLink}></JsxHighlight>
-            This is how web page looks:
-            <IMG img_name={page_create_10}></IMG>
-          </li>
           <li>
             under <Span>src</Span> , go to <Span>DropDown</Span> folder .
             <br />
@@ -41,20 +23,26 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             .
           </li>
           <li>
-            create 4 files (I don't create <Span>DropDownXXXX</Span> for the <Span>{"<Page>"}_home</Span> component), under
+            create 4 files (), under
             <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
+            <div className="text-red-500">
+              <strong>Note</strong>: don't create <Span>DropDownXXXX</Span> for the <Span>{"C++"} home</Span> component.
+              <strong>
+                I design the code that they won't be a <Span>{`<DropDownXXXX>`}</Span>
+              </strong>
+            </div>
             <ul className="my-4 ml-8 list-disc">
               <li>
-                4.1. <Span>DropDownAdvancedTopics</Span>
+                3.1. <Span>DropDownAdvancedTopics</Span>
               </li>
               <li>
-                4.2. <Span>DropDownFundamentalConcepts</Span>
+                3.2. <Span>DropDownFundamentalConcepts</Span>
               </li>
               <li>
-                4.3. <Span>DropDownOOP</Span>
+                3.3. <Span>DropDownOOP</Span>
               </li>
               <li>
-                4.4. <Span>DropDownStandardTempLib</Span>
+                3.4. <Span>DropDownStandardTempLib</Span>
               </li>
             </ul>
             <IMG img_name={page_create_8}></IMG>
@@ -69,25 +57,25 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             )
             <ul className="my-4 ml-8 list-decimal">
               <li className="my-1">
-                copy <Span>Z_DropDownTemplate</Span> code , and paste in <Span>DropDownFundamentalConcepts</Span>.
+                copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownFundamentalConcepts</Span>.
               </li>
               <li className="my-1">
-                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>, <Span>cccc"</Span>
+                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
               </li>
               <li className="my-1">
-                <Span>AAAA</Span> - assign url path <Span>c++</Span>. This url path is made in section 2, paragraph 3 <Span>c++</Span>
+                <Span>AAAA</Span> - assign url path <span className="text-lg font-semibold text-blue-600">"c++"</span>. This url path is made in
+                section 2, paragraph 3 <Span>c++</Span>
               </li>
               <li className="my-1">
-                <Span>BBBB"</Span>- assign the url of the <Span>DropDown</Span> sidebar link the url path <Span></Span>
-              </li>
-              <li className="my-1">
-                <Span>cccc"</Span>- assign the following path <Span></Span>
+                <Span>BBBB"</Span>- assign url path
+                <span className="text-lg font-semibold text-blue-600">"fundamental-concepts"</span>the <Span>DropDown</Span> sidebar link the url path
+                <Span>fundamental-concepts</Span>
               </li>
             </ul>
+            <IMG img_name={page_create_9}></IMG>
           </li>
-
-          <ul className="my-4 ml-8 list-disc"></ul>
-          <JsxHighlight jsxCode={jsxCode_DropDown} />
+          Code example of <Span>DropDownFundamentalConcepts</Span>
+          <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
         </ul>
         <div>
           <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
@@ -107,38 +95,11 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep7;
 
-const jsx_HomeLink = `const C_plus_plus = () => {
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
-
-  .
-  .
-  .
-  return (
-    <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
-
-      {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="C++ Home" internalLink="/c++" />
-          </div>
-        </article>
-      )}
-      <main className="css-main-outlet">
-        <Outlet />
-      </main>
-    </GridLayout>
-  );
-};
-
-export default C_plus_plus;`;
-
-const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
+const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../components";
 
-const DropDownAdvancedTopics = () => {
+const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -168,19 +129,16 @@ const DropDownAdvancedTopics = () => {
     }
   }, [location.pathname]);
 
-  return (
+  return (    
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" pageName="home" />
-
-      <div
-        style={showList ? { height: \`\${listHeight}px\` } : { height: "0px" }}
-        className={\`overflow-hidden bg-white transition-[height] duration-100 ease-in-out\`}
-        ref={divRef}
-      >
-        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
-      </div>
+      <SideDropDownTopic 
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/AAAA/BBBB"
+        topicName="topic name"
+      />
     </section>
   );
 };
 
-export default DropDownAdvancedTopics;`;
+export default Z_DropDownTemplate;`;
