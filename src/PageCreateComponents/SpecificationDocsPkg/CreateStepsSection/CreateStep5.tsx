@@ -179,9 +179,9 @@ const jsxCode_AppAddedChildren = `        {
           element: <C_plus_plus />,
           children: [
             { index: true, element: <CPlusPlusHome /> },
-            { path: "advanced-topics", element: <SpecificationDocument /> },
-            { path: "fundamental-concepts", element: <SpecificationDocument /> },
-            { path: "oop", element: <SpecificationDocument /> },
-            { path: "standard-template-lib", element: <SpecificationDocument /> },
+            { path: "advanced-topics", element: <AdvancedTopics /> },
+            { path: "fundamental-concepts", element: <FundamentalConcepts /> },
+            { path: "oop", element: <OOP /> },
+            { path: "standard-template-lib", element: <StandardTemplateLib /> },
           ],
         },`;
