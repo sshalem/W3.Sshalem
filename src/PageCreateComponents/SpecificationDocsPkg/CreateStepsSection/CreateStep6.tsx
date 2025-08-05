@@ -1,122 +1,34 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
-import page_create_six from "../../../assets/page_create_six.jpg";
-import page_create_seven from "../../../assets/page_create_seven.jpg";
 import page_create_eight from "../../../assets/page_create_eight.jpg";
 
 const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        <div>
-          Let's add the sidebar navigation links , so it will be shown like we see in page
-          <IMG img_name={page_create_six} />I must follow this <Span>convention</Span> , since :
-          <ul className="my-4 ml-8 list-disc">
-            <li>I organazide code , with folder/pkg. </li>
-            <li>code will be cleaner and readable.</li>
-          </ul>
-        </div>
-        <div>
-          <strong>work order :</strong>
-          <ul className="my-4 mb-8 ml-8 list-decimal">
-            <li>create 5 components</li>
-            <li>
-              assign 5 <Span>url path</Span> to the components . (In section 6, I will switch to the <Span>DropDownXXX</Span> component.)
-            </li>
-          </ul>
-        </div>
+        In this seection , I will modify the sidebar navigation ,links, from regular link , to a <Span>DropDownXXXX</Span> link, so I can heve
+        Internal links in them. <br /> In section 7, I show how to config the internal links of the <Span>DropDownXXXX</Span>
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
+          {/*  */}
+          {/*  */}
           <li>
-            under <Span>src</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
+            <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets
+            I made.
+            <Question>
+              Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
+            </Question>
+            <Answer>
+              Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
+              <Span>c++</Span> url
+            </Answer>
+            So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet I
+            create.
           </li>
           {/*  */}
           {/*  */}
           <li>
-            create 5 files in this folder :
-            <ul className="list ml-4">
-              <ul className="my-4 ml-8 list-disc">
-                <li>
-                  <Span>CPlusPlusHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link <Span>C++</Span>
-                </li>
-                <li>
-                  <Span>FundamentalConcepts.tsx</Span>
-                </li>
-                <li>
-                  <Span>OOP</Span>
-                </li>
-                <li>
-                  <Span>StandardTemplateLib.tsx</Span>
-                </li>
-                <li>
-                  <Span>AdvancedTopics.tsx</Span>
-                </li>
-              </ul>
-              Here is <Span>CPLusPLusComponents</Span> folder with 5 component files inside. <br />
-              In paragraph 3 , I mentioning regarding <Span>index.ts</Span> to comine all componets in one file, to prevent multiple{" "}
-              <Span>import</Span> lines.
-              <IMG img_name={page_create_seven}></IMG>
-            </ul>
-          </li>
-          {/*  */}
-          {/*  */}
-          Code of 3 components <Span>CPLusPLusComponents</Span>. all have the same format (for now).
-          <JsxHighlight jsxCode={jsxCode_CplusHome}></JsxHighlight>
-          <JsxHighlight jsxCode={jsxCode_OOP}></JsxHighlight>
-          <JsxHighlight jsxCode={jsxCode_fundamentalConcepts}></JsxHighlight>
-          {/*  */}
-          {/*  */}
-          <li>
-            In <Span>CPLusPLusComponents</Span> folder , create an
-            <Span>index.ts</Span> , <br /> all Internal components will be exported to prevent massive imports.
-            <JsxHighlight jsxCode={jsxCode_Index} />
-          </li>
-          {/*  */}
-          {/*  */}
-          <li>
-            Config <Span>App.tsx</Span> with links for the 5 created components. <br />
-            <div>
-              4.1. go to <Span>App.tsx</Span>
-            </div>
-            <div>
-              4.2. Add the <Span>children</Span> array , inside <Span>C_plus_plus</Span> component.
-            </div>
-            <div>
-              4.3. See the assign <Span>url path</Span> I gave to each component
-            </div>
-            <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
-            <ul className="my-4 ml-8 list-decimal">
-              <li>
-                <strong>C++ Home</strong> (will be a regular link and not a DropDown Link)
-              </li>
-              <li>
-                <strong>Fundamental Concepts</strong>
-              </li>
-              <li>
-                <strong>OOP</strong>
-              </li>
-              <li>
-                <strong>Standard Template Lib</strong>
-              </li>
-              <li>
-                <strong>Advanced Topics</strong>
-              </li>
-            </ul>
-            <li>
-              <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5
-              componets I made.
-              <Question>
-                Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
-              </Question>
-              <Answer>
-                Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
-                <Span>c++</Span> url
-              </Answer>
-              So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet
-              I create.
-              <JsxHighlight jsxCode=""></JsxHighlight>
-            </li>
             For each of the Link , I will create a component , afterwards , I will assign a <Span>url path</Span> to it. <br />
             So , I will 5 components , under folder of <Span></Span>
             <ul className="my-4 ml-8 list-disc">
@@ -187,27 +99,6 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep6;
 
-const jsxCode_CplusHome = `const CPlusPlusHome = () => {
-  return <div className="text-3xl">C++ Home ...</div>;
-};
-export default CPlusPlusHome;`;
-
-const jsxCode_OOP = `const OOP = () => {
-  return <div className="text-3xl">OOP Home ...</div>;
-};
-export default OOP;`;
-
-const jsxCode_fundamentalConcepts = `const FundamentalConcepts = () => {
-  return <div className="text-3xl">Fundamental Concepts ...</div>;
-};
-export default FundamentalConcepts;`;
-
-const jsxCode_Index = `export { default as CPlusPlusHome } from "./CPlusPlusHome";
-export { default as AdvancedTopics } from "./AdvancedTopics";
-export { default as FundamentalConcepts } from "./FundamentalConcepts";
-export { default as OOP } from "./OOP";
-export { default as StandardTemplateLib } from "./StandardTemplateLib";`;
-
 const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../components";
@@ -258,15 +149,3 @@ const DropDownAdvancedTopics = () => {
 };
 
 export default DropDownAdvancedTopics;`;
-
-const jsxCode_AppAddedChildren = `        {
-          path: "c++",
-          element: <C_plus_plus />,
-          children: [
-            { index: true, element: <CPlusPlusHome /> },
-            { path: "advanced-topics", element: <SpecificationDocument /> },
-            { path: "fundamental-concepts", element: <SpecificationDocument /> },
-            { path: "oop", element: <SpecificationDocument /> },
-            { path: "standard-template-lib", element: <SpecificationDocument /> },
-          ],
-        },`;

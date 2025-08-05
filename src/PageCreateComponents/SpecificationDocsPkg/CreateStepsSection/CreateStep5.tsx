@@ -60,9 +60,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           </li>
           {/*  */}
           {/*  */}
-          Code of 3 components <Span>CPLusPLusComponents</Span>. all have the same format (for now).
-          <JsxHighlight jsxCode={jsxCode_CplusHome}></JsxHighlight>
-          <JsxHighlight jsxCode={jsxCode_OOP}></JsxHighlight>
+          Here is the Code of <Span>FundamentalConcepts.tsx</Span> inside <Span>CPLusPLusComponents</Span> folder. all 5 have same format (for now).
           <JsxHighlight jsxCode={jsxCode_fundamentalConcepts}></JsxHighlight>
           {/*  */}
           {/*  */}
@@ -97,16 +95,6 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
 };
 
 export default CreateStep5;
-
-const jsxCode_CplusHome = `const CPlusPlusHome = () => {
-  return <div className="text-3xl">C++ Home ...</div>;
-};
-export default CPlusPlusHome;`;
-
-const jsxCode_OOP = `const OOP = () => {
-  return <div className="text-3xl">OOP Home ...</div>;
-};
-export default OOP;`;
 
 const jsxCode_fundamentalConcepts = `const FundamentalConcepts = () => {
   return <div className="text-3xl">Fundamental Concepts ...</div>;

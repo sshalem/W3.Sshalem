@@ -32,10 +32,7 @@ const C_plus_plus = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-
-            {/* Example of SideBarLink & DropDownSubPage */}
-            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
-            {/* <DropDownEureka /> */}
+            {/* Regular links */}
             <Link to={"/c++"}>
               <div>C++ Home</div>
             </Link>
@@ -51,6 +48,10 @@ const C_plus_plus = () => {
             <Link to={"/c++/advanced-topics"}>
               <div>Advanced Topics</div>
             </Link>
+
+            {/* Example of SideBarLink & DropDownSubPage */}
+            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
+            {/* <DropDownEureka /> */}
           </div>
         </article>
       )}
