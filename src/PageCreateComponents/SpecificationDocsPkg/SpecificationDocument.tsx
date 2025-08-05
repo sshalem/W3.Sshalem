@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { IMG } from "../../components";
-import page_create_10 from "../../assets/page_create_10.jpg";
+import page_create_spec_doc from "../../assets/page_create_spec_doc.jpg";
 
 const SpecificationDocument = () => {
   const location = useLocation();
@@ -27,7 +27,7 @@ const SpecificationDocument = () => {
               </li>
             </ul>
           </div>
-          <IMG img_name={page_create_10}></IMG>
+          <IMG img_name={page_create_spec_doc}></IMG>
         </section>
       ) : (
         <Outlet />

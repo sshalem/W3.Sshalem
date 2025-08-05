@@ -1,7 +1,7 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-import page_create_three from "../../../assets/page_create_three.jpg";
-import page_create_four from "../../../assets/page_create_four.jpg";
+import page_create_3 from "../../../assets/page_create_3.jpg";
+import page_create_4 from "../../../assets/page_create_4.jpg";
 
 const CreateStep3 = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,10 +17,10 @@ const CreateStep3 = ({ anchor }: { anchor: string }) => {
               add code below, under <Span>MainLayout</Span> path , (I create new child) ,
             </li>
             <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
-            <IMG img_name={page_create_three}></IMG>
+            <IMG img_name={page_create_3}></IMG>
             <li>
               at this point I should see <Span>C++</Span> page link on <Span>Navbar</Span>
-              <IMG img_name={page_create_four}></IMG>
+              <IMG img_name={page_create_4}></IMG>
             </li>
           </ul>
         </div>

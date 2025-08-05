@@ -1,6 +1,6 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-import page_create_five from "../../../assets/page_create_five.jpg";
+import page_create_5 from "../../../assets/page_create_5.jpg";
 
 const CreateStep4 = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         <br />
         After adding the Page template code , we can see the sidebar navigation is setup, but there are NO links. <br />
         Also, no content is visible.
-        <IMG img_name={page_create_five}></IMG>
+        <IMG img_name={page_create_5}></IMG>
         Here is <Span>C_plus_plus.tsx</Span> code
         <JsxHighlight jsxCode={jsxPage_Template}></JsxHighlight>
       </article>

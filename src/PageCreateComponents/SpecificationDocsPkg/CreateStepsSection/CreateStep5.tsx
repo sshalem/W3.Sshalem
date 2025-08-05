@@ -1,16 +1,24 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
-import page_create_six from "../../../assets/page_create_six.jpg";
-import page_create_seven from "../../../assets/page_create_seven.jpg";
+import page_create_6 from "../../../assets/page_create_6.jpg";
+import page_create_7 from "../../../assets/page_create_7.jpg";
 
 const CreateStep5 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
+        <div className="my-8 text-lg font-semibold text-red-500">
+          <span className="">Note</span>
+          <div className="ml-4 text-red-400">
+            I made this section only for myself , to see the difference between working with <Span>Links</Span> ,<br /> and then modifing it to be a
+            <Span>DropDownXXXX</Span>. <br />
+            Hence, I can <strong>skip</strong> to next section 6 (<strong>Re-Define the view of Home page link</strong> )
+          </div>
+        </div>
         <div>
           Let's add the sidebar navigation links , so it will be shown like we see in page
-          <IMG img_name={page_create_six} />I must follow this <Span>convention</Span> , since :
+          <IMG img_name={page_create_6} />I must follow this <Span>convention</Span> , since :
           <ul className="my-4 ml-8 list-disc">
             <li>I organazide code , with folder/pkg. </li>
             <li>code will be cleaner and readable.</li>
@@ -55,7 +63,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
               Here is <Span>CPLusPLusComponents</Span> folder with 5 component files inside. <br />
               In paragraph 3 , I mentioning regarding <Span>index.ts</Span> to comine all componets in one file, to prevent multiple{" "}
               <Span>import</Span> lines.
-              <IMG img_name={page_create_seven}></IMG>
+              <IMG img_name={page_create_7}></IMG>
             </ul>
           </li>
           {/*  */}

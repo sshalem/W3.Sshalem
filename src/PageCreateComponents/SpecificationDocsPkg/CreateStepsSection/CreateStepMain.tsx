@@ -7,6 +7,8 @@ import CreateStep4 from "./CreateStep4";
 import CreateStep5 from "./CreateStep5";
 import CreateStep6 from "./CreateStep6";
 import CreateStep7 from "./CreateStep7";
+import CreateStep8 from "./CreateStep8";
+import CreateStep9 from "./CreateStep9";
 
 // =============================================================================================================
 
@@ -15,13 +17,14 @@ const step_2 = "2. config page to navbar";
 const step_3 = "3. config router in App.tsx";
 const step_4 = "4. config side navabr";
 const step_5 = "5. config side navbar link";
-const step_6 = "6. config side navbar link as DropDown tag";
-const step_7 = "7. config side navbar content";
-const step_8 = "8. config content menu (sections anchor/hash links)";
+const step_6 = "6. Re-Define view of Home page link";
+const step_7 = "7. config side navbar link as DropDown tag";
+const step_8 = "8. config side navbar content";
+const step_9 = "9. config content menu (sections anchor/hash links)";
 
 // =============================================================================================================
 
-const anchorList: string[] = [step_1, step_2, step_3, step_4, step_5, step_6, step_7, step_8];
+const anchorList: string[] = [step_1, step_2, step_3, step_4, step_5, step_6, step_7, step_8, step_9];
 
 // =============================================================================================================
 
@@ -65,6 +68,8 @@ const CreateStepMain = () => {
       <CreateStep5 anchor={step_5} />
       <CreateStep6 anchor={step_6} />
       <CreateStep7 anchor={step_7} />
+      <CreateStep8 anchor={step_8} />
+      <CreateStep9 anchor={step_9} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
