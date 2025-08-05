@@ -2,12 +2,15 @@ import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_8 from "../../../assets/page_create_8.jpg";
+import page_create_11 from "../../../assets/page_create_11.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component, so I can heve Internal links in them. <br />
+        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component, so I can heve Internal links in them.
+        <IMG img_name={page_create_11}></IMG>
+        <br />
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li>
@@ -57,6 +60,10 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             <ul className="my-4 ml-8 list-decimal">
               <li className="my-1">
                 copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownFundamentalConcepts</Span>.
+                <div className="my-2">
+                  <Span>Z_DropDownTemplate</Span> code :
+                </div>
+                <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
               </li>
               <li className="my-1">
                 In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
@@ -77,10 +84,8 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
           </li>
           <li>
             import all the <Span>DropDownXXX</Span> created to <Span>C_Plus_Plus</Span> page
-            <JsxHighlight jsxCode="" />
+            <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
-          <Span>Z_DropDownTemplate</Span> code :
-          <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
         </ul>
         <div>
           <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
@@ -100,7 +105,57 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep7;
 
-const jsxCode_C_plus_plus_with_DropDown = ``;
+const jsxCode_C_plus_plus_with_DropDown = `import { Outlet } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { GridLayout, SideBarLink } from "../components";
+import { DropDownAdvancedTopics, DropDownFundamentalConcepts, DropDownOOP, DropDownStandardTempLib } from "../DropDown";
+
+const C_plus_plus = () => {
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+
+  const toggleSideNavbar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  const closeSidebar = () => {
+    // console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      setShowSidebar(false);
+    } else {
+      setShowSidebar(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", closeSidebar);
+    return () => window.removeEventListener("resize", closeSidebar);
+  }, []);
+
+  return (
+    <GridLayout>
+      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+
+      {showSidebar && (
+        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
+          <div className="relative h-full w-full">
+            <div className="h-3"></div>
+            <SideBarLink pageName="C++ Home" internalLink="/c++" />
+            <DropDownFundamentalConcepts />
+            <DropDownOOP />
+            <DropDownStandardTempLib />
+            <DropDownAdvancedTopics />
+          </div>
+        </article>
+      )}
+      <main className="css-main-outlet">
+        <Outlet />
+      </main>
+    </GridLayout>
+  );
+};
+
+export default C_plus_plus;`;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
