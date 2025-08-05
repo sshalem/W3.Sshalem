@@ -35,7 +35,7 @@ const DropDownEureka = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/microservices/eureka" pageName="Eureka" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/microservices/eureka" topicName="Eureka" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

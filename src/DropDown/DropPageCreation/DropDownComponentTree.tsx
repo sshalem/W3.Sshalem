@@ -35,7 +35,12 @@ const DropDownComponentTree = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/component-tree" pageName="Component Tree" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/page_creation/component-tree"
+        topicName="Component Tree"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

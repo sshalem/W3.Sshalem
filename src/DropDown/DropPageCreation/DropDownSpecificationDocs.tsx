@@ -38,7 +38,7 @@ const DropDownSpecificationDocs = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/page_creation/specification-document"
-        pageName="Specification Document"
+        topicName="Specification Document"
       />
 
       <div

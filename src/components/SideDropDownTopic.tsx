@@ -3,11 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 interface SideDropDownTopicProps {
   showList: boolean;
   handleOpenList: () => void;
-  pageName: string;
+  topicName: string;
   internalLink: string;
 }
 
-const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }: SideDropDownTopicProps) => {
+const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink }: SideDropDownTopicProps) => {
   let location = useLocation();
 
   // useEffect(() => {
@@ -26,7 +26,7 @@ const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }:
         )}
       </div>
       <div onClick={handleOpenList} className="select-none">
-        {/* <SideBarLink pageName={pageName} internalLink={internalLink} /> */}
+        {/* <SideBarLink topicName={topicName} internalLink={internalLink} /> */}
         {/* Instead of using the SideBarLink , to prevent multiple useLocation re-rendering */}
         {/* If I want to check what it did: */}
         {/* Disable the Link */}
@@ -36,9 +36,9 @@ const SideDropDownTopic = ({ showList, handleOpenList, pageName, internalLink }:
         <Link to={internalLink}>
           <div className="text-[15px] text-base leading-[1.65]">
             {location.pathname.includes(internalLink) ? (
-              <div className="bg-gray-300 pl-8 font-medium text-black">{pageName}</div>
+              <div className="bg-gray-300 pl-8 font-medium text-black">{topicName}</div>
             ) : (
-              <div className="pl-8 hover:bg-gray-300">{pageName}</div>
+              <div className="pl-8 hover:bg-gray-300">{topicName}</div>
             )}
           </div>
         </Link>

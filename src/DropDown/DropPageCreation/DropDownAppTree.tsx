@@ -35,7 +35,7 @@ const DropDownAppTree = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/app-tree" pageName="App Tree" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/app-tree" topicName="App Tree" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

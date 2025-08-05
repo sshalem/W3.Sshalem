@@ -35,7 +35,7 @@ const DropDownJpa = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jpa" pageName="JPA" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jpa" topicName="JPA" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

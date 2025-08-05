@@ -48,21 +48,27 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           <li>
-            copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDown</Span> file I created. <br />
-            The code will make the links to be visible on the sidebar nav.
+            I will demonstrate how on the <Span>DropDownFundamentalConcepts</Span>.
+            <ul className="my-4 ml-8 list-decimal">
+              <li className="my-1">
+                copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDownFundamentalConcepts</Span> file I created.
+              </li>
+              <li className="my-1">
+                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>, <Span>cccc"</Span>
+              </li>
+              <li className="my-1">
+                <Span>AAAA</Span> - assign url path <Span>c++</Span>. This url path is made in section 2, paragraph 3 <Span>c++</Span>
+              </li>
+              <li className="my-1">
+                <Span>BBBB"</Span>- assign the url of the <Span>DropDown</Span> sidebar link the url path <Span></Span>
+              </li>
+              <li className="my-1">
+                <Span>cccc"</Span>- assign the following path <Span></Span>
+              </li>
+            </ul>
           </li>
-          In the code below where I have 3 variable
-          <ul className="my-4 ml-8 list-disc">
-            <li>
-              <Span>AAAA</Span> - <Span>c++</Span>. Need to assign the url path as in section 2, paragraph 3 <Span>c++</Span>
-            </li>
-            <li>
-              <Span>BBBB"</Span>- assign the url of the <Span>DropDown</Span> sidebar link the url path <Span></Span>
-            </li>
-            <li>
-              <Span>cccc"</Span>- assign the following path <Span></Span>
-            </li>
-          </ul>
+
+          <ul className="my-4 ml-8 list-disc"></ul>
           <JsxHighlight jsxCode={jsxCode_DropDown} />
         </ul>
         <div>
@@ -126,7 +132,7 @@ const DropDownAdvancedTopics = () => {
         className={\`overflow-hidden bg-white transition-[height] duration-100 ease-in-out\`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
+        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
       </div>
     </section>
   );

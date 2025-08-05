@@ -34,7 +34,7 @@ const DropDownAdvancedTopics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" pageName="home" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="home" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

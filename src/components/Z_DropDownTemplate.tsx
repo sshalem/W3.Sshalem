@@ -35,14 +35,14 @@ const Z_DropDownTemplate = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" pageName="home" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="home" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
+        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
       </div>
     </section>
   );

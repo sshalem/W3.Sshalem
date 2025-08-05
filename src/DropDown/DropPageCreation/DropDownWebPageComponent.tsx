@@ -34,7 +34,7 @@ const DropDownWebPageComponent = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/web-page" pageName="Web Page" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/web-page" topicName="Web Page" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

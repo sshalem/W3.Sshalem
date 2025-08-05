@@ -35,7 +35,7 @@ const DropDownLogging = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" pageName="Logging" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" topicName="Logging" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
