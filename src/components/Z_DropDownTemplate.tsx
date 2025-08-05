@@ -42,7 +42,7 @@ const Z_DropDownTemplate = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
+        <SideDropdownLink sideDropDownNavName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
       </div>
     </section>
   );

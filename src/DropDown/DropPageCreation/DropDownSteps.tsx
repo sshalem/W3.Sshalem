@@ -46,7 +46,7 @@ const DropDownSteps = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="Create Steps" internalLink="/page_creation/specification-document/create-steps" />
+        <SideDropdownLink sideDropDownNavName="Create Steps" internalLink="/page_creation/specification-document/create-steps" />
       </div>
     </section>
   );

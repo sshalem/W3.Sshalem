@@ -42,8 +42,8 @@ const DropDownJpa = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="One2Many Bi Eager" internalLink="/spring/jpa/one2many-bi-eager" />
-        <SideDropdownLink pageName="One2Many Bi Lazy" internalLink="/spring/jpa/one2many-bi-lazy" />
+        <SideDropdownLink sideDropDownNavName="One2Many Bi Eager" internalLink="/spring/jpa/one2many-bi-eager" />
+        <SideDropdownLink sideDropDownNavName="One2Many Bi Lazy" internalLink="/spring/jpa/one2many-bi-lazy" />
       </div>
     </section>
   );

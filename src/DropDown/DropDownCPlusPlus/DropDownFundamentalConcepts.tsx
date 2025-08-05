@@ -46,7 +46,7 @@ const DropDownFundamentalConcepts = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="functions" internalLink="/c++/fundamental-concepts/functions" />
+        <SideDropdownLink sideDropDownNavName="functions" internalLink="/c++/fundamental-concepts/functions" />
       </div>
     </section>
   );

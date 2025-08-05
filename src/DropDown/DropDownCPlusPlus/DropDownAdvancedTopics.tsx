@@ -41,7 +41,7 @@ const DropDownAdvancedTopics = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink pageName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
+        <SideDropdownLink sideDropDownNavName="sidebar link name" internalLink="/AAAA/XXXX/cccc" />
       </div>
     </section>
   );

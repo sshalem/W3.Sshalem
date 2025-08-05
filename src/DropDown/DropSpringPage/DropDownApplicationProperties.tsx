@@ -49,13 +49,13 @@ const DropDownApplicationProperties = () => {
       >
         {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
         {/* <div className={`${showList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
-        <SideDropdownLink pageName="H2" internalLink="/spring/application-properties/h2" />
-        <SideDropdownLink pageName="MySql" internalLink="/spring/application-properties/mysql" />
-        <SideDropdownLink pageName="Postgresql" internalLink="/spring/application-properties/postgresql" />
-        <SideDropdownLink pageName="MongoDB" internalLink="/spring/application-properties/mongodb" />
-        <SideDropdownLink pageName="DBeaver" internalLink="/spring/application-properties/dbeaver" />
-        <SideDropdownLink pageName="Profiles" internalLink="/spring/application-properties/profiles" />
-        <SideDropdownLink pageName="DB Initialization" internalLink="/spring/application-properties/db-initialization" />
+        <SideDropdownLink sideDropDownNavName="H2" internalLink="/spring/application-properties/h2" />
+        <SideDropdownLink sideDropDownNavName="MySql" internalLink="/spring/application-properties/mysql" />
+        <SideDropdownLink sideDropDownNavName="Postgresql" internalLink="/spring/application-properties/postgresql" />
+        <SideDropdownLink sideDropDownNavName="MongoDB" internalLink="/spring/application-properties/mongodb" />
+        <SideDropdownLink sideDropDownNavName="DBeaver" internalLink="/spring/application-properties/dbeaver" />
+        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/spring/application-properties/profiles" />
+        <SideDropdownLink sideDropDownNavName="DB Initialization" internalLink="/spring/application-properties/db-initialization" />
       </div>
     </section>
   );
