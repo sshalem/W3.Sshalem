@@ -13,49 +13,22 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
         <ul className="my-4 ml-8 list-decimal">
           {/*  */}
           {/*  */}
+          {/*  */}
+          {/*  */}
           <li>
-            <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets
-            I made.
-            <Question>
-              Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
-            </Question>
-            <Answer>
-              Because, I want the content of each component to be displayed in the browser , since thery are children links of my main{" "}
-              <Span>c++</Span> url
-            </Answer>
-            So lets modify each component with the following added code. I will do it only for <Span>OOP</Span> , but need to do it to each componet I
-            create.
+            under <Span>src</Span> , go to <Span>DropDown</Span> folder .
+            <br />
           </li>
-          {/*  */}
-          {/*  */}
+          <li className="my-1">
+            Create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with name related to component). <br />
+            <strong>
+              this folder , will hold all the sidebar navigation links of <Span>C_Plus_Plus</Span> page
+            </strong>
+            .
+          </li>
           <li>
-            For each of the Link , I will create a component , afterwards , I will assign a <Span>url path</Span> to it. <br />
-            So , I will 5 components , under folder of <Span></Span>
-            <ul className="my-4 ml-8 list-disc">
-              <li>
-                <strong>C++ Home</strong> already made a component in section
-              </li>
-              <li>
-                <strong>Fundamental Concepts</strong>
-              </li>
-              <li>
-                <strong>OOP</strong>
-              </li>
-              <li>
-                <strong>Standard Template Lib</strong>
-              </li>
-              <li>
-                <strong>Advanced Topics</strong>
-              </li>
-            </ul>
-            <IMG img_name={page_create_eight}></IMG>
-            <li>
-              under <Span>src</Span> , go to <Span>DropDown</Span> folder , and create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with
-              name related to component).
-              <br />
-              this folder , will hold all the sidebar navigation links of <Span>CPlusPlus</Span>
-            </li>
-            thus, create 4 files , under <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
+            create 4 files (I don't create <Span>DropDownXXXX</Span> for the <Span>{"<Page>"}_home</Span> component), under
+            <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
             <ul className="my-4 ml-8 list-disc">
               <li>
                 4.1. <Span>DropDownAdvancedTopics</Span>
@@ -92,6 +65,17 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           </ul>
           <JsxHighlight jsxCode={jsxCode_DropDown} />
         </ul>
+        <div>
+          <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
+          made.
+          <Question>
+            Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
+          </Question>
+          <Answer>
+            Because, I want the content of each component to be displayed in the browser , since thery are children links of my main <Span>c++</Span>
+            url
+          </Answer>
+        </div>
       </article>
     </MainChildArea>
   );

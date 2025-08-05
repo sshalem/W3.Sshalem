@@ -60,7 +60,8 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           </li>
           {/*  */}
           {/*  */}
-          Here is the Code of <Span>FundamentalConcepts.tsx</Span> inside <Span>CPLusPLusComponents</Span> folder. all 5 have same format (for now).
+          Here is the Code of <Span>FundamentalConcepts.tsx</Span> inside <Span>CPLusPLusComponents</Span> folder. all 5 components , have same code
+          format (for now).
           <JsxHighlight jsxCode={jsxCode_fundamentalConcepts}></JsxHighlight>
           {/*  */}
           {/*  */}
