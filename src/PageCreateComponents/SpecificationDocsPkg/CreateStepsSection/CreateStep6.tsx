@@ -2,6 +2,7 @@ import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_eight from "../../../assets/page_create_eight.jpg";
+import page_create_ten from "../../../assets/page_create_ten.jpg";
 
 const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,6 +16,19 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           {/*  */}
+          <li>
+            First, I removed all <Span>Link</Span> elements, and start w/o any links in <Span>C_Plus_Plus</Span>
+          </li>
+          <li>
+            I want to make the page of <Span>C++ Home</Span> the landing page , thus I add following code line to it <br />
+            <br />
+            <Span>
+              {`<SideBarLink`} pageName="C++ Home" internalLink="/c++" {`/>`}
+            </Span>
+            <JsxHighlight jsxCode={jsx_HomeLink}></JsxHighlight>
+            This is how web page looks:
+            <IMG img_name={page_create_ten}></IMG>
+          </li>
           <li>
             under <Span>src</Span> , go to <Span>DropDown</Span> folder .
             <br />
@@ -48,10 +62,14 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           <li>
-            I will demonstrate how on the <Span>DropDownFundamentalConcepts</Span>.
+            Do following steps on the <Span>DropDownFundamentalConcepts</Span>. (
+            <strong>
+              It applies to every <Span>DropDownXXXX</Span>
+            </strong>
+            )
             <ul className="my-4 ml-8 list-decimal">
               <li className="my-1">
-                copy <Span>Z_DropDownTemplate</Span> code , inside the each <Span>DropDownFundamentalConcepts</Span> file I created.
+                copy <Span>Z_DropDownTemplate</Span> code , and paste in <Span>DropDownFundamentalConcepts</Span>.
               </li>
               <li className="my-1">
                 In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>, <Span>cccc"</Span>
@@ -88,6 +106,33 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
 };
 
 export default CreateStep6;
+
+const jsx_HomeLink = `const C_plus_plus = () => {
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+
+  .
+  .
+  .
+  return (
+    <GridLayout>
+      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+
+      {showSidebar && (
+        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
+          <div className="relative h-full w-full">
+            <div className="h-3"></div>
+            <SideBarLink pageName="C++ Home" internalLink="/c++" />
+          </div>
+        </article>
+      )}
+      <main className="css-main-outlet">
+        <Outlet />
+      </main>
+    </GridLayout>
+  );
+};
+
+export default C_plus_plus;`;
 
 const jsxCode_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";

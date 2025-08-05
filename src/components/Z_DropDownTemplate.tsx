@@ -35,7 +35,7 @@ const Z_DropDownTemplate = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="home" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="topic name" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { GridLayout } from "../components";
-import DropDownFundamentalConcepts from "../DropDown/DropDownCPlusPlus/DropDownFundamentalConcepts";
+import { GridLayout, SideBarLink } from "../components";
 
 const C_plus_plus = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,26 +32,9 @@ const C_plus_plus = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            {/* Regular links */}
-            {/* <Link to={"/c++"}>
-              <div>C++ Home</div>
-            </Link>
-            <Link to={"/c++/fundamental-concepts"}>
-              <div>Fundamental Concepts</div>
-            </Link>
-            <Link to={"/c++/oop"}>
-              <div>OOP</div>
-            </Link>
-            <Link to={"/c++/standard-template-lib"}>
-              <div>Standard Template Lib</div>
-            </Link>
-            <Link to={"/c++/advanced-topics"}>
-              <div>Advanced Topics</div>
-            </Link> */}
-            {/* Example of SideBarLink & DropDownSubPage */}
-            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
-            {/* <DropDownEureka /> */}
-            <DropDownFundamentalConcepts />
+            <SideBarLink pageName="C++ Home" internalLink="/c++" />
+
+            {/* <DropDownFundamentalConcepts /> */}
           </div>
         </article>
       )}
