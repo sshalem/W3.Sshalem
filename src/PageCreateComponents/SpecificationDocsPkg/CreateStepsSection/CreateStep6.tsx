@@ -18,6 +18,9 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             Go to <Span>CPLusPLusComponents</Span> folder.
           </li>
           <li>
+            Create new folder <Span>FundamentalConceptsPkg</Span>.
+          </li>
+          <li>
             Create new Component <Span>FundamentalConcepts.tsx</Span>.<JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
           </li>
           <li>
@@ -25,9 +28,9 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             <br />
           </li>
           <li className="my-1">
-            Create new subfolder <Span>DropDownCPlusPlus</Span> inside it <Span>DropDown</Span> folder
+            Create new subfolder <Span>DropDownCPlusPlus</Span> inside it <Span>DropDown</Span> folder.
             <strong>
-              Note: folder hold all the sidebar nav links of <Span>C_Plus_Plus</Span> page
+              Note: folder hold nav links of <Span>C_Plus_Plus</Span> page
             </strong>
             .
           </li>

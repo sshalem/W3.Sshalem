@@ -7,8 +7,15 @@ import page_create_11 from "../../../assets/page_create_11.jpg";
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      As <Span>DropDownFundamentalConcepts</Span> implies that once the section is clicked, it's dropped down, then I should see a list of subjects.
+      <br /> In this section I will add a List of subjects ,to the <Span>DropDownFundamentalConcepts</Span> section. The list of subjects I will add
+      are :
+      <ul className="my-4 ml-8 list-decimal">
+        <li className="my-1">Functions</li>
+        <li className="my-1">Arrays</li>
+        <li className="my-1">Pointers</li>
+      </ul>
       <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component, so I can heve Internal links in them.
         <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>follow the following steps:</strong>
