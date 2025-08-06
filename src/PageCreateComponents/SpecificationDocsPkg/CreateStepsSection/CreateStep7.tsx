@@ -1,21 +1,28 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
-import page_create_11 from "../../../assets/page_create_11.jpg";
 import page_create_13 from "../../../assets/page_create_13.jpg";
 import page_create_15 from "../../../assets/page_create_15.jpg";
+import page_create_16 from "../../../assets/page_create_16.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownFundamentalConcepts</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects.
-      <br /> In this section I will add a subject to the <Span>DropDownFundamentalConcepts</Span> section. <br />(<strong>NOTE : </strong> I made here
-      only one subject , but I can have multple subjects).
-      <ul className="my-4 ml-8 list-decimal">
-        <li className="my-1">Functions</li>
+      As <Span>DropDownFundamentalConcepts</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects which
+      are internal <Span>Links</Span> of <Span>DropDownFundamentalConcepts</Span>.
+      <ul className="my-4 ml-8 list-disc">
+        <li className="my-1">
+          In this section I will add a subject to the <Span>DropDownFundamentalConcepts</Span> section
+        </li>
+        <li className="my-1">
+          Subject <Span>Link</Span> name I create <Span>Pointers</Span>
+        </li>
+        <li className="my-1">
+          (<strong>NOTE : </strong> I made here only one <Span>Link</Span> (subject) , but I can have multple subjects).
+        </li>
       </ul>
+      <IMG img_name={page_create_16}></IMG>
       <article>
-        <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>
           steps to add a
@@ -206,7 +213,7 @@ const Z_Subject = () => {
   let location = useLocation();
   return (
     <section>
-        {location.pathname === "/AAAA/BBBB" ? <div className="text-3xl">Subject Main  ...</div> : <Outlet />}
+        {location.pathname === "/AAAA/BBBB" ? <div className="text-3xl">DropDown Main  ...</div> : <Outlet />}
     </section>
   )
 };
