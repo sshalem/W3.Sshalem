@@ -20,7 +20,7 @@ const step_4 = "4. config side navabr";
 const step_5 = "5. add Home Page";
 const step_6 = "6. add DropDown element section";
 const step_7 = "7. add Internal Link (subject) to DropDown";
-const step_8 = "8. create DropDown Internal Link list";
+const step_8 = "8. add Content + menu to Subject (link) ";
 const step_9 = "9. config DropDown Internal Link content";
 const step_10 = "10. config content menu (sections anchor/hash links)";
 
