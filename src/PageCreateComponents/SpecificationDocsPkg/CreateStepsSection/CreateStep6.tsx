@@ -68,6 +68,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
+        Now we got the layout we want :<IMG img_name={page_create_11}></IMG>
       </article>
     </MainChildArea>
   );
