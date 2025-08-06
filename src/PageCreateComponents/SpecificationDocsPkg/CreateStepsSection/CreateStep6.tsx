@@ -189,5 +189,4 @@ const Z_DropDownTemplate = () => {
   );
 };
 
-export default Z_DropDownTemplate;
-`;
+export default Z_DropDownTemplate;`;
