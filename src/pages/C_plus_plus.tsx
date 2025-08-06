@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../components";
+import { DropDownFundamentalConcepts } from "../DropDown";
 
 const C_plus_plus = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,6 +34,7 @@ const C_plus_plus = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="C++ Home" internalLink="/c++" />
+            <DropDownFundamentalConcepts />
           </div>
         </article>
       )}
