@@ -1,138 +1,82 @@
-import { Answer, IMG, MainChildArea, Question } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
-
-import page_create_8 from "../../../assets/page_create_8.jpg";
-import page_create_9 from "../../../assets/page_create_9.jpg";
+import page_create_17 from "../../../assets/page_create_17.jpg";
 
 const CreateStep8 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component, so I can heve Internal links in them. <br />
-        <strong>follow the following steps:</strong>
-        <ul className="my-4 ml-8 list-decimal">
-          <li>
-            under <Span>src</Span> , go to <Span>DropDown</Span> folder .
-            <br />
-          </li>
-          <li className="my-1">
-            Create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with name related to component). <br />
-            <strong>
-              this folder , will hold all the sidebar navigation links of <Span>C_Plus_Plus</Span> page
-            </strong>
-            .
-          </li>
-          <li>
-            create 4 files (), under
-            <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
-            <div className="text-red-500">
-              <strong>Note</strong>: don't create <Span>DropDownXXXX</Span> for the <Span>{"C++"} home</Span> component.
-              <strong>
-                I design the code that they won't be a <Span>{`<DropDownXXXX>`}</Span>
-              </strong>
-            </div>
-            <ul className="my-4 ml-8 list-disc">
-              <li>
-                3.1. <Span>DropDownAdvancedTopics</Span>
-              </li>
-              <li>
-                3.2. <Span>DropDownFundamentalConcepts</Span>
-              </li>
-              <li>
-                3.3. <Span>DropDownOOP</Span>
-              </li>
-              <li>
-                3.4. <Span>DropDownStandardTempLib</Span>
-              </li>
-            </ul>
-            <IMG img_name={page_create_8}></IMG>
-          </li>
-          {/*  */}
-          {/*  */}
-          <li>
-            Do following steps on the <Span>DropDownFundamentalConcepts</Span>. (
-            <strong>
-              It applies to every <Span>DropDownXXXX</Span>
-            </strong>
-            )
-            <ul className="my-4 ml-8 list-decimal">
-              <li className="my-1">
-                copy <Span>Z_DropDownTemplate</Span> code , and paste in <Span>DropDownFundamentalConcepts</Span>.
-              </li>
-              <li className="my-1">
-                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>, <Span>cccc"</Span>
-              </li>
-              <li className="my-1">
-                <Span>AAAA</Span> - assign url path <Span>c++</Span>. This url path is made in section 2, paragraph 3 <Span>c++</Span>
-              </li>
-              <li className="my-1">
-                <Span>BBBB"</Span>- assign url path<Span>fundamental-concepts</Span> the <Span>DropDown</Span> sidebar link the url path
-                <Span>fundamental-concepts</Span>
-              </li>
-              <li className="my-1">
-                <Span>cccc"</Span>- assign url path <Span>functions</Span>
-              </li>
-            </ul>
-            <IMG img_name={page_create_9}></IMG>
-          </li>
-          Code example of <Span>DropDownFundamentalConcepts</Span>
-          <JsxHighlight jsxCode={jsxCode_DropDown} />
-        </ul>
-        <div>
-          <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
-          made.
-          <Question>
-            Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
-          </Question>
-          <Answer>
-            Because, I want the content of each component to be displayed in the browser , since thery are children links of my main <Span>c++</Span>
-            url
-          </Answer>
-        </div>
-      </article>
+      In order to have following layout of the content , with the menu on the side perfrom the following steps.
+      <ul className="my-4 ml-8 list-decimal">
+        <li className="my-1">
+          copy the content of the code below , and paste it in <Span>PointersMain.tsx</Span> component.
+          <JsxHighlight jsxCode={jsxCode_Section_Main} />
+          The code above show Content Menu
+          <IMG img_name={page_create_17} />
+        </li>
+        <li className="my-1">
+          Create Component <Span>PointersIntro.tsx</Span> (this is convention) in <Span>PointersSection</Span> folder.
+          
+        </li>
+        <li className="my-1"></li>
+        <li className="my-1"></li>
+        <li className="my-1"></li>
+      </ul>
     </MainChildArea>
   );
 };
 
 export default CreateStep8;
 
-const jsxCode_DropDown = `const DropDownFundamentalConcepts = () => {
-  .
-  .
-  .
+const jsxCode_Section_Main = `import { useEffect, useRef, useState } from "react";
+import { ContentMenu } from "../components";
+
+// =============================================================================================================
+
+const xxx_intro = "xxx Intro";
+
+// =============================================================================================================
+
+const anchorList: string[] = [xxx_intro];
+
+// =============================================================================================================
+
+const Z_SectionMain = () => {
+  const [showContent, setShowContent] = useState<boolean>(true);
+  const [contentHeight, setContentHeight] = useState<number>();
+
+  const ulRef = useRef<HTMLUListElement | null>(null);
+
+  const handleShowContent = () => {
+    setShowContent(!showContent);
+    if (sessionStorage.getItem("scrollHeight") !== null) {
+      const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
+      setContentHeight(value);
+    }
+  };
 
   useEffect(() => {
-    if (location.pathname.includes("fundamental-concepts")) {
-      if (location.pathname.split("/")[3] === undefined) {
-        // do nothing , this way I prevent the re-render of  setShowList(true);
-      } else {
-        setShowList(true);
-      }
-      if (divRef.current !== null) {
-        setListHeight(divRef.current.scrollHeight);
-      }
-    } else {
-      setShowList(false);
+    if (ulRef.current !== null) {
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
+      setContentHeight(ulRef.current.scrollHeight);
     }
-  }, [location.pathname]);
+  }, []);
 
   return (
     <section>
-      <SideDropDownTopic 
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/c++/fundamental-concepts"
-        topicName="fundamental concepts"
+      {/* Start Contents */}
+      <ContentMenu
+        anchorList={anchorList}
+        contentHeight={contentHeight}
+        handleShowContent={handleShowContent}
+        showContent={showContent}
+        ulRef={ulRef}
       />
+      {/* End Contents */}
 
-      <div
-        style={showList ? { height: \`\${listHeight}px\` } : { height: "0px" }}
-        className={\`overflow-hidden bg-white transition-[height] duration-100 ease-in-out\`}
-        ref={divRef}
-      >        
-      </div>
+      {/* <XXXIntro anchor={xxx_intro} /> */}
+
+      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-
-export default DropDownFundamentalConcepts;`;
+export default Z_SectionMain;`;
