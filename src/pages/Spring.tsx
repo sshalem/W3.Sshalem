@@ -27,7 +27,7 @@ const Spring = () => {
 
   return (
     <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+      <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">

@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../components";
-import { DropDownAdvancedTopics, DropDownFundamentalConcepts, DropDownOOP, DropDownStandardTempLib } from "../DropDown";
 
 const C_plus_plus = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -27,17 +26,13 @@ const C_plus_plus = () => {
 
   return (
     <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+      <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="C++ Home" internalLink="/c++" />
-            <DropDownFundamentalConcepts />
-            <DropDownOOP />
-            <DropDownStandardTempLib />
-            <DropDownAdvancedTopics />
           </div>
         </article>
       )}
