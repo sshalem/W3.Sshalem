@@ -94,9 +94,9 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             </ul>
           </li>
           <li>
-            This how page layout looks, but something owed
+            This how page layout looks, but something <strong>odd</strong>.
             <Question>
-              Why I see the content of <Span>FundamentalConcepts.tsx</Span> if I clicked on the subject of <Span>Pointers</Span> ?
+              Why I see the content of <Span>FundamentalConcepts.tsx</Span> ,when I clicked on the subject of <Span>Pointers</Span> ?
             </Question>
             <Answer>
               I must define the <Span>Outlet</Span> component from <Span>React-Router</Span> , inside <Span>FundamentalConcepts.tsx</Span>
@@ -209,7 +209,7 @@ export default PointersMain;`;
 
 const jsxCode_Subject_with_outlet = `import { Outlet, useLocation } from "react-router-dom";
 
-const Z_Subject = () => {
+const Z_Component_Outlet = () => {
   let location = useLocation();
   return (
     <section>
@@ -217,4 +217,4 @@ const Z_Subject = () => {
     </section>
   )
 };
-export default Z_Subject;`;
+export default Z_Component_Outlet;`;
