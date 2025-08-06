@@ -3,11 +3,13 @@ import { JsxHighlight, Span } from "../../../Highlight";
 import page_create_17 from "../../../assets/page_create_17.jpg";
 import page_create_18 from "../../../assets/page_create_18.jpg";
 import page_create_19 from "../../../assets/page_create_19.jpg";
+import page_create_20 from "../../../assets/page_create_20.jpg";
 
 const CreateStep8 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       In order to have following layout of the content , with the menu on the side perfrom the following steps.
+      <IMG img_name={page_create_20}></IMG>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
           copy the content of the code below , and paste it in <Span>PointersMain.tsx</Span> component.
@@ -50,9 +52,12 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           let's fill the <Span>content menu</Span> and the title of each section.
           <ul className="my-2 ml-8 list-disc">
-            <li className="my-1"></li>
-            <li className="my-1"></li>
-            <li className="my-1"></li>
+            <li>create content menu variables</li>
+            <JsxHighlight jsxCode={jsxCode_content_menu_variables}></JsxHighlight>
+            <li>Update anchorList with content menu</li>
+            <JsxHighlight jsxCode={jsxCode_Update_anchorList}></JsxHighlight>
+            <li>Update Components with the refered content menu variable</li>
+            <JsxHighlight jsxCode={jsxCode_update_components}></JsxHighlight>
           </ul>
         </li>
       </ul>
@@ -146,3 +151,12 @@ const jsxCode_import = `  return (
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );`;
+
+const jsxCode_content_menu_variables = `const pointers_intro = "pointers intro";
+const pointers_two = "pointers two";`;
+
+const jsxCode_Update_anchorList = `const pointers_intro = "pointers intro";
+const pointers_two = "pointers two";`;
+
+const jsxCode_update_components = `      <PointersIntro anchor={pointers_intro}></PointersIntro>
+      <PointersTwo anchor={pointers_two}></PointersTwo>`;

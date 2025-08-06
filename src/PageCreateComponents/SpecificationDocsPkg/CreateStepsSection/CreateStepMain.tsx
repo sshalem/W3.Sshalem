@@ -8,8 +8,6 @@ import CreateStep5 from "./CreateStep5";
 import CreateStep6 from "./CreateStep6";
 import CreateStep7 from "./CreateStep7";
 import CreateStep8 from "./CreateStep8";
-import CreateStep9 from "./CreateStep9";
-import CreateStep10 from "./CreateStep10";
 
 // =============================================================================================================
 
@@ -21,12 +19,10 @@ const step_5 = "5. add Home Page";
 const step_6 = "6. add DropDown element section";
 const step_7 = "7. add Internal Link (subject) to DropDown";
 const step_8 = "8. add Content + menu to Subject (link) ";
-const step_9 = "9. config DropDown Internal Link content";
-const step_10 = "10. config content menu (sections anchor/hash links)";
 
 // =============================================================================================================
 
-const anchorList: string[] = [step_1, step_2, step_3, step_4, step_5, step_6, step_7, step_8, step_9, step_10];
+const anchorList: string[] = [step_1, step_2, step_3, step_4, step_5, step_6, step_7, step_8];
 
 // =============================================================================================================
 
@@ -70,8 +66,7 @@ const CreateStepMain = () => {
       <CreateStep6 anchor={step_6} />
       <CreateStep7 anchor={step_7} />
       <CreateStep8 anchor={step_8} />
-      <CreateStep9 anchor={step_9} />
-      <CreateStep10 anchor={step_10} />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

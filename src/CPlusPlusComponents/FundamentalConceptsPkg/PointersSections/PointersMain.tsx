@@ -3,16 +3,21 @@ import { ContentMenu } from "../../../components";
 import PointersIntro from "./PointersIntro";
 import PointersTwo from "./PointersTwo";
 
-// =============================================================================================================
+// ===========================================
+// ==     content menu (title name)         ==
+// ===========================================
 
-const xxx_intro = "xxx Intro";
+const pointers_intro = "pointers intro";
+const pointers_two = "pointers two";
 
-// =============================================================================================================
+// ===========================================
+// == Update anchorList with  content menu  ==
+// ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [pointers_intro, pointers_two];
 
-// =============================================================================================================
-
+// ============================================
+// ============================================
 const PointersMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
@@ -46,8 +51,8 @@ const PointersMain = () => {
       />
       {/* End Contents */}
 
-      <PointersIntro anchor={""}></PointersIntro>
-      <PointersTwo anchor={""}></PointersTwo>
+      <PointersIntro anchor={pointers_intro}></PointersIntro>
+      <PointersTwo anchor={pointers_two}></PointersTwo>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
