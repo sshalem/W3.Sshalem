@@ -59,7 +59,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
                 <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
               </li>
               <li className="my-1">
-                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
+                In the code below where I have 2 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
               </li>
               <li className="my-1">
                 <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in

@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../components";
 
 const DropDownFundamentalConcepts = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -38,8 +38,16 @@ const DropDownFundamentalConcepts = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/c++/fundamental-concepts"
-        topicName="fundamental concepts"
+        topicName="Fundamental Concepts"
       />
+
+      <div
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
+        ref={divRef}
+      >
+        <SideDropdownLink sideDropDownNavName="Pointers" internalLink="/c++/fundamental-concepts/pointers" />
+      </div>
     </section>
   );
 };

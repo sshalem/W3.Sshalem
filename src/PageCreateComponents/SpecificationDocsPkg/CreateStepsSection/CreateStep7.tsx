@@ -37,26 +37,32 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             <Span>PointersMain.tsx</Span> code :
           </div>
           <JsxHighlight jsxCode={jsxCode_pointers_main} />
-          {/*  */}
-          {/*  */}
-
           <li>
-            Do following steps on the <Span>DropDownFundamentalConcepts</Span>. (
-            <strong>
-              It applies to every <Span>DropDownXXXX</Span>
-            </strong>
-            )
-            <ul className="my-4 ml-8 list-decimal">
-              <li className="my-1">
-                copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownFundamentalConcepts</Span>.
-                <div className="my-2">
-                  <Span>Z_DropDownTemplate</Span> code :
-                </div>
-                <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
-              </li>
-              <li className="my-1">
-                In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
-              </li>
+            go to <Span>App.tsx</Span> file
+          </li>
+          <li>
+            add <Span>children</Span> to <Span>FundamentalConcepts</Span>
+          </li>
+          <li>
+            define new route under <Span>FundamentalConcepts</Span> as follows
+            <Span>{`{ path: "pointers", element: <PointersMain /> }`}</Span>
+          </li>
+
+          <JsxHighlight jsxCode={jsxCode_App_with_pointers} />
+          <li>
+            go to <Span>DropDownFundamentalConcepts.tsx</Span>
+          </li>
+          <li>
+            modify the code of <Span>DropDownFundamentalConcepts.tsx</Span> to be so I can see the Subject name <Span>Pointers</Span>. <br />
+            Better option , copy the code from template of <Span>Z_DropDownIncludeInternalLink.tsx</Span> and paste it
+            <Span>DropDownFundamentalConcepts.tsx</Span>
+            <div className="my-2">
+              <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
+            </div>
+          </li>
+          <li className="my-1">
+            In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB</Span> , <Span>cccc</Span>
+            <ul className="my-4 ml-4 list-disc">
               <li className="my-1">
                 <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
                 section 2, paragraph 3 <Span>c++</Span>
@@ -65,16 +71,22 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <Span>BBBB</Span>- replace with url path
                 <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
               </li>
+              <li className="my-1">
+                <Span>cccc</Span>- replace with url path
+                <span className="mx-1 font-mono text-lg text-red-500">"pointers"</span> (see section 7, paragrapgh 5)
+              </li>
               <li>
-                <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
+                <Span>topicName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
                 same name of <Span>BBBB</Span> just with Capital letter , and without dashes
+              </li>
+              <li>
+                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Pointers"</span> . The convention , give same
+                name of <Span>cccc</Span> just with Capital letter , and without dashes
               </li>
             </ul>
           </li>
-          <li>
-            import all the <Span>DropDownXXX</Span> created to <Span>C_Plus_Plus</Span> page
-            <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
-          </li>
+
+          <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
         </ul>
         <div>
           <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
@@ -94,66 +106,13 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep7;
 
-const jsxCode_C_plus_plus_with_DropDown = `import { Outlet } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { GridLayout, SideBarLink } from "../components";
-import { DropDownAdvancedTopics, DropDownFundamentalConcepts, DropDownOOP, DropDownStandardTempLib } from "../DropDown";
-
-const C_plus_plus = () => {
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
-
-  const toggleSideNavbar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
-  const closeSidebar = () => {
-    // console.log(window.innerWidth);
-    if (window.innerWidth < 768) {
-      setShowSidebar(false);
-    } else {
-      setShowSidebar(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", closeSidebar);
-    return () => window.removeEventListener("resize", closeSidebar);
-  }, []);
-
-  return (
-    <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
-
-      {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="C++ Home" internalLink="/c++" />
-            <DropDownFundamentalConcepts />
-            <DropDownOOP />
-            <DropDownStandardTempLib />
-            <DropDownAdvancedTopics />
-          </div>
-        </article>
-      )}
-      <main className="css-main-outlet">
-        <Outlet />
-      </main>
-    </GridLayout>
-  );
-};
-
-export default C_plus_plus;`;
-
-const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
+const jsxCode_Z_DropDownIncludeInternalLink = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../components";
 
-const Z_DropDownTemplate = () => {
+const Z_DropDownIncludeInternalLink = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  // const [listHeight, setListHeight] = useState<number>();
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -189,12 +148,39 @@ const Z_DropDownTemplate = () => {
         internalLink="/AAAA/BBBB"
         topicName="topic name"
       />
+
+      <div
+        style={showList ? { height: \`\${listHeight}px\` } : { height: "0px" }}
+        className={\`overflow-hidden bg-white transition-[height] duration-100 ease-in-out\`}
+        ref={divRef}
+      >
+        <SideDropdownLink sideDropDownNavName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
+      </div>
     </section>
   );
 };
 
-export default Z_DropDownTemplate;
-`;
+export default Z_DropDownIncludeInternalLink;`;
+
+const jsxCode_App_with_pointers = `      path: "/",
+      element: <MainLayout />,
+      errorElement: <Error />,
+      children: [
+        { index: true, element: <Home /> },
+        {
+          path: "c++",
+          element: <C_plus_plus />,
+          children: [
+            { index: true, element: <CPlusPlusHome /> },
+            {
+              path: "fundamental-concepts",
+              element: <FundamentalConcepts />,
+              children: [
+                { path: "pointers", element: <PointersMain /> },              
+              ],
+            },
+          ],
+        },`;
 
 const jsxCode_pointers_main = `const PointersMain = () => {
   return <div>Pointers Main ...</div>;

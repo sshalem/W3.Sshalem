@@ -56,6 +56,7 @@ import PageCreationHome from "./PageCreateComponents/PageCreationHome";
 
 import { SpecificationDocument, CreateStepMain } from "./PageCreateComponents";
 import { CPlusPlusHome, FundamentalConcepts } from "./CPlusPlusComponents";
+import PointersMain from "./CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
 
 const router = createBrowserRouter(
   [
@@ -70,7 +71,13 @@ const router = createBrowserRouter(
           element: <C_plus_plus />,
           children: [
             { index: true, element: <CPlusPlusHome /> },
-            { path: "fundamental-concepts", element: <FundamentalConcepts /> },
+            {
+              path: "fundamental-concepts",
+              element: <FundamentalConcepts />,
+              children: [
+                { path: "pointers", element: <PointersMain /> },              
+              ],
+            },
           ],
         },
         {
