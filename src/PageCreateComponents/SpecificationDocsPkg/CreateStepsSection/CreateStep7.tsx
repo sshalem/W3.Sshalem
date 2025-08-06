@@ -3,6 +3,7 @@ import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_11 from "../../../assets/page_create_11.jpg";
 import page_create_13 from "../../../assets/page_create_13.jpg";
+import page_create_15 from "../../../assets/page_create_15.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
@@ -53,8 +54,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             go to <Span>DropDownFundamentalConcepts.tsx</Span>
           </li>
           <li>
-            modify the code of <Span>DropDownFundamentalConcepts.tsx</Span> to be so I can see the Subject name <Span>Pointers</Span>. <br />
-            Better option , copy the code from template of <Span>Z_DropDownIncludeInternalLink.tsx</Span> and paste it
+            copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
             <Span>DropDownFundamentalConcepts.tsx</Span>
             <div className="my-2">
               <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
@@ -83,22 +83,35 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Pointers"</span> . The convention , give same
                 name of <Span>cccc</Span> just with Capital letter , and without dashes
               </li>
+              <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
           </li>
-
-          <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
+          <li>
+            This how page layout looks, but something owed
+            <Question>
+              Why I see the content of <Span>FundamentalConcepts.tsx</Span> if I clicked on the subject of <Span>Pointers</Span> ?
+            </Question>
+            <Answer>
+              I must define the <Span>Outlet</Span> component from <Span>React-Router</Span> , inside <Span>FundamentalConcepts.tsx</Span>
+            </Answer>
+          </li>
+          <IMG img_name={page_create_15}></IMG>
+          <li>
+            Config the <Span>FundamentalConcepts.tsx</Span> with <Span>Outlet</Span> component . <br />
+            <ul className="my-4 ml-4 list-disc">
+              use code below :
+              <li className="my-1">
+                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
+                section 2, paragraph 3 <Span>c++</Span>
+              </li>
+              <li className="my-1">
+                <Span>BBBB</Span>- replace with url path
+                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
+              </li>
+              <JsxHighlight jsxCode={jsxCode_Subject_with_outlet} />
+            </ul>
+          </li>
         </ul>
-        <div>
-          <span className="font-semibold text-red-500">Important Note</span>I must add <Span>Outlet</Span>component , inside each of the 5 componets I
-          made.
-          <Question>
-            Why I need to add <Span>Outlet</Span> to each componet I make (besides CPlusPLusHome.tsx) ?
-          </Question>
-          <Answer>
-            Because, I want the content of each component to be displayed in the browser , since thery are children links of my main <Span>c++</Span>
-            url
-          </Answer>
-        </div>
       </article>
     </MainChildArea>
   );
@@ -186,3 +199,15 @@ const jsxCode_pointers_main = `const PointersMain = () => {
   return <div>Pointers Main ...</div>;
 };
 export default PointersMain;`;
+
+const jsxCode_Subject_with_outlet = `import { Outlet, useLocation } from "react-router-dom";
+
+const Z_Subject = () => {
+  let location = useLocation();
+  return (
+    <section>
+        {location.pathname === "/AAAA/BBBB" ? <div className="text-3xl">Subject Main  ...</div> : <Outlet />}
+    </section>
+  )
+};
+export default Z_Subject;`;
