@@ -3,6 +3,7 @@ import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_8 from "../../../assets/page_create_8.jpg";
 import page_create_11 from "../../../assets/page_create_11.jpg";
+import page_create_12 from "../../../assets/page_create_12.jpg";
 
 const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,8 +22,15 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             Create new folder <Span>FundamentalConceptsPkg</Span>.
           </li>
           <li>
-            Create new Component <Span>FundamentalConcepts.tsx</Span>.<JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
+            Create new Component <Span>FundamentalConcepts.tsx</Span> inside <Span>FundamentalConceptsPkg</Span>.
+            <div className="my-2">
+              <strong>folder view :</strong>
+            </div>
+            <IMG img_name={page_create_12}></IMG>
+            <Span>FundamentalConcepts.tsx</Span> code :
+            <JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
           </li>
+
           <li>
             under <Span>src</Span> , go to <Span>DropDown</Span> folder .
             <br />
