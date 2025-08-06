@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
+import PointersIntro from "./PointersIntro";
+import PointersTwo from "./PointersTwo";
 
 // =============================================================================================================
 
@@ -44,7 +46,8 @@ const PointersMain = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <PointersIntro anchor={""}></PointersIntro>
+      <PointersTwo anchor={""}></PointersTwo>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

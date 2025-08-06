@@ -1,6 +1,8 @@
 import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 import page_create_17 from "../../../assets/page_create_17.jpg";
+import page_create_18 from "../../../assets/page_create_18.jpg";
+import page_create_19 from "../../../assets/page_create_19.jpg";
 
 const CreateStep8 = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,12 +16,45 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
           <IMG img_name={page_create_17} />
         </li>
         <li className="my-1">
-          Create Component <Span>PointersIntro.tsx</Span> (this is convention) in <Span>PointersSection</Span> folder.
-          
+          Create 2 Component in <Span>PointersSection</Span> folder
+          <ul className="my-2 ml-8 list-disc">
+            <li className="my-1">
+              <Span>PointersIntro.tsx</Span>
+            </li>
+            <li className="my-1">
+              <Span>PointersTwo.tsx</Span>
+            </li>
+          </ul>
+          <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
+          Folder layout ,with The 2 created components inside the
+          <IMG img_name={page_create_18} />
         </li>
-        <li className="my-1"></li>
-        <li className="my-1"></li>
-        <li className="my-1"></li>
+        <li className="my-1">
+          copy/paste the code below inside <Span>PointersIntro.tsx</Span> and <Span>PointersTwo.tsx</Span>
+        </li>
+        <li className="my-1">
+          Import to <Span>PointersMain.tsx</Span> component , the 2 new components I created :
+          <ul className="my-2 ml-8 list-disc">
+            <li className="my-1">
+              <Span>PointersIntro.tsx</Span>
+            </li>
+            <li className="my-1">
+              <Span>PointersTwo.tsx</Span>
+            </li>
+          </ul>
+        </li>
+        <JsxHighlight jsxCode={jsxCode_import}></JsxHighlight>
+        The code above show , the <strong>content</strong> of each section {`->`} cool. <br />
+        continue with paragraph 5.
+        <IMG img_name={page_create_19} />
+        <li className="my-1">
+          let's fill the <Span>content menu</Span> and the title of each section.
+          <ul className="my-2 ml-8 list-disc">
+            <li className="my-1"></li>
+            <li className="my-1"></li>
+            <li className="my-1"></li>
+          </ul>
+        </li>
       </ul>
     </MainChildArea>
   );
@@ -30,15 +65,20 @@ export default CreateStep8;
 const jsxCode_Section_Main = `import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../components";
 
-// =============================================================================================================
+// ===========================================
+// ==     content menu (title name)         ==
+// ===========================================
 
 const xxx_intro = "xxx Intro";
 
-// =============================================================================================================
+// ===========================================
+// == Update anchorList with  content menu  ==
+// ===========================================
 
 const anchorList: string[] = [xxx_intro];
 
-// =============================================================================================================
+// ============================================
+// ============================================
 
 const Z_SectionMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
@@ -80,3 +120,29 @@ const Z_SectionMain = () => {
   );
 };
 export default Z_SectionMain;`;
+
+const jsxCode_section_internal_code = `import { MainChildArea } from "../../../components";
+
+const Z_section_internal = ({ anchor }: { anchor: string }) => {
+  return <MainChildArea anchor={anchor}>Add any content here</MainChildArea>;
+};
+export default Z_section_internal;`;
+
+const jsxCode_import = `  return (
+    <section>
+      {/* Start Contents */}
+      <ContentMenu
+        anchorList={anchorList}
+        contentHeight={contentHeight}
+        handleShowContent={handleShowContent}
+        showContent={showContent}
+        ulRef={ulRef}
+      />
+      {/* End Contents */}
+
+      <PointersIntro anchor={""}></PointersIntro>
+      <PointersTwo anchor={""}></PointersTwo>
+
+      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
+    </section>
+  );`;
