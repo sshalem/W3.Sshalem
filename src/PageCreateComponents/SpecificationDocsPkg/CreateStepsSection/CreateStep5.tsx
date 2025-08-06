@@ -2,8 +2,8 @@ import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_6 from "../../../assets/page_create_6.jpg";
-import page_create_7 from "../../../assets/page_create_7.jpg";
 import page_create_10 from "../../../assets/page_create_10.jpg";
+
 const CreateStep5 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
@@ -103,7 +103,7 @@ const C_plus_plus = () => {
 
   return (
     <GridLayout>
-      <FaBars className="fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden" onClick={toggleSideNavbar} />
+      <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
