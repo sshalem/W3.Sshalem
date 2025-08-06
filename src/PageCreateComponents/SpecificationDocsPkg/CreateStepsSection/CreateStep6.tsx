@@ -1,4 +1,4 @@
-import { Answer, IMG, MainChildArea, Question } from "../../../components";
+import { IMG, MainChildArea } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_8 from "../../../assets/page_create_8.jpg";
@@ -8,7 +8,8 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component.
+        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component. <br /> <strong>example</strong> :
+        <Span>DropDownFundamentalConcepts.tsx</Span> to show <Span>Fundamental Concepts</Span> as a link
         <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>follow the following steps:</strong>
