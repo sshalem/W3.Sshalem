@@ -2,14 +2,14 @@ import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
 import page_create_11 from "../../../assets/page_create_11.jpg";
-import page_create_12 from "../../../assets/page_create_12.jpg";
+import page_create_13 from "../../../assets/page_create_13.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       As <Span>DropDownFundamentalConcepts</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects.
       <br /> In this section I will add a subject to the <Span>DropDownFundamentalConcepts</Span> section. <br />(<strong>NOTE : </strong> I made here
-      only one subject , but I have multple subjects).
+      only one subject , but I can have multple subjects).
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">Functions</li>
       </ul>
@@ -28,10 +28,15 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
           <li>
             create <Span>PointersSections</Span> folder , inside <Span>CPlusPlusComponents/FundamentalConceptsPkg</Span> folder
           </li>
-          <IMG img_name={page_create_12}></IMG>
           <li>
             create <Span>PointersMain</Span> component , inside <Span>PointersSections</Span> folder
           </li>
+          <div className="my-2">Folder layout :</div>
+          <IMG img_name={page_create_13}></IMG>
+          <div className="my-2">
+            <Span>PointersMain.tsx</Span> code :
+          </div>
+          <JsxHighlight jsxCode={jsxCode_pointers_main} />
           {/*  */}
           {/*  */}
 
@@ -190,3 +195,8 @@ const Z_DropDownTemplate = () => {
 
 export default Z_DropDownTemplate;
 `;
+
+const jsxCode_pointers_main = `const PointersMain = () => {
+  return <div>Pointers Main ...</div>;
+};
+export default PointersMain;`;
