@@ -1,63 +1,40 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../components";
 import { JsxHighlight, Span } from "../../../Highlight";
 
-import page_create_8 from "../../../assets/page_create_8.jpg";
 import page_create_11 from "../../../assets/page_create_11.jpg";
+import page_create_12 from "../../../assets/page_create_12.jpg";
 
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownFundamentalConcepts</Span> implies that once the section is clicked, it's dropped down, then I should see a list of subjects.
-      <br /> In this section I will add a List of subjects ,to the <Span>DropDownFundamentalConcepts</Span> section. The list of subjects I will add
-      are :
+      As <Span>DropDownFundamentalConcepts</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects.
+      <br /> In this section I will add a subject to the <Span>DropDownFundamentalConcepts</Span> section. <br />(<strong>NOTE : </strong> I made here
+      only one subject , but I have multple subjects).
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">Functions</li>
-        <li className="my-1">Arrays</li>
-        <li className="my-1">Pointers</li>
       </ul>
       <article>
         <IMG img_name={page_create_11}></IMG>
         <br />
-        <strong>follow the following steps:</strong>
+        <strong>
+          steps to add a
+          <span className="mx-2 text-blue-600">
+            <strong>Pointers</strong>
+          </span>
+          Subject to the Drop Down List :
+        </strong>
+
         <ul className="my-4 ml-8 list-decimal">
           <li>
-            under <Span>src</Span> , go to <Span>DropDown</Span> folder .
-            <br />
+            create <Span>PointersSections</Span> folder , inside <Span>CPlusPlusComponents/FundamentalConceptsPkg</Span> folder
           </li>
-          <li className="my-1">
-            Create new subfolder inside it <Span>DropDownCPlusPlus</Span> (with name related to component). <br />
-            <strong>
-              this folder , will hold all the sidebar navigation links of <Span>C_Plus_Plus</Span> page
-            </strong>
-            .
-          </li>
+          <IMG img_name={page_create_12}></IMG>
           <li>
-            create 4 files (), under
-            <Span>/src/DropDown/DropDownCPlusPlus</Span> , which they will hold the name of our sidebar link
-            <div className="text-red-500">
-              <strong>Note</strong>: don't create <Span>DropDownXXXX</Span> for the <Span>{"C++"} home</Span> component.
-              <strong>
-                I design the code that they won't be a <Span>{`<DropDownXXXX>`}</Span>
-              </strong>
-            </div>
-            <ul className="my-4 ml-8 list-disc">
-              <li>
-                3.1. <Span>DropDownAdvancedTopics</Span>
-              </li>
-              <li>
-                3.2. <Span>DropDownFundamentalConcepts</Span>
-              </li>
-              <li>
-                3.3. <Span>DropDownOOP</Span>
-              </li>
-              <li>
-                3.4. <Span>DropDownStandardTempLib</Span>
-              </li>
-            </ul>
-            <IMG img_name={page_create_8}></IMG>
+            create <Span>PointersMain</Span> component , inside <Span>PointersSections</Span> folder
           </li>
           {/*  */}
           {/*  */}
+
           <li>
             Do following steps on the <Span>DropDownFundamentalConcepts</Span>. (
             <strong>
