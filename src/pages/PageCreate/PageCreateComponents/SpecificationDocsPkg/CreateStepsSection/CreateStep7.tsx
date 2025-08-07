@@ -33,10 +33,10 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
         </strong>
 
         <ul className="my-4 ml-8 list-decimal">
-          <li>
-            create <Span>PointersSections</Span> folder , inside <Span>CPlusPlusComponents/FundamentalConceptsPkg</Span> folder
+          <li className="my-1">
+            create <Span>PointersSections</Span> folder , inside <Span>/pages/CPlusPlus/CPlusPlusComponents/FundamentalConceptsPkg</Span> folder
           </li>
-          <li>
+          <li className="my-1">
             create <Span>PointersMain</Span> component , inside <Span>PointersSections</Span> folder
           </li>
           <div className="my-2">Folder layout :</div>
@@ -45,22 +45,22 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             <Span>PointersMain.tsx</Span> code :
           </div>
           <JsxHighlight jsxCode={jsxCode_pointers_main} />
-          <li>
+          <li className="my-1">
             go to <Span>App.tsx</Span> file
           </li>
-          <li>
+          <li className="my-1">
             add <Span>children</Span> to <Span>FundamentalConcepts</Span>
           </li>
-          <li>
+          <li className="my-1">
             define new route under <Span>FundamentalConcepts</Span> as follows
             <Span>{`{ path: "pointers", element: <PointersMain /> }`}</Span>
           </li>
 
           <JsxHighlight jsxCode={jsxCode_App_with_pointers} />
-          <li>
+          <li className="my-1">
             go to <Span>DropDownFundamentalConcepts.tsx</Span>
           </li>
-          <li>
+          <li className="my-1">
             copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
             <Span>DropDownFundamentalConcepts.tsx</Span>
             <div className="my-2">
