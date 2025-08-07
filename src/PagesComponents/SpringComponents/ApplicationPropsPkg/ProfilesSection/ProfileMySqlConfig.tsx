@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
 import profile_mysql from "../../../../assets/profile_mysql.jpg";
 
 const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {

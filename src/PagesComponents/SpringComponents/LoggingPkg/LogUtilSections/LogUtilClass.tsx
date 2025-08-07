@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
-import { JavaHighlight, Span } from "../../../../Highlight";
+import { JavaHighlight, Span } from "../../../../components/Highlight";
 
 const LogUtilClass = ({ anchor }: { anchor: string }) => {
   // Per OpenAI

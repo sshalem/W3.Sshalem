@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
 
 const H2DatabseBasicConfig = ({ anchor }: { anchor: string }) => {
   return (

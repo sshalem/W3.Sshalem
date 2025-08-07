@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 import db_init_3 from "../../../../assets/db_init_3.jpg";
 import db_init_4 from "../../../../assets/db_init_4.jpg";
 

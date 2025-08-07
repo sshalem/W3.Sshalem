@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { Span } from "../../../../Highlight";
+import { Span } from "../../../../components/Highlight";
 
 const Slf4jLinks = ({ anchor }: { anchor: string }) => {
   return (

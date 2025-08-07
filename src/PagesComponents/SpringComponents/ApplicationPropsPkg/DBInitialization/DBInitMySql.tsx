@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 import db_init_7 from "../../../../assets/db_init_7.jpg";
 
 const DBInitMySql = ({ anchor }: { anchor: string }) => {

@@ -1,5 +1,5 @@
 import { ContentAnchor, InternalArticle } from "../../../../components";
-import { JavaHighlight, Span } from "../../../../Highlight";
+import { JavaHighlight, Span } from "../../../../components/Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
   return (

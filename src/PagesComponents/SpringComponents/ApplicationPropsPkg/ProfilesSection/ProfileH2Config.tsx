@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
 import profile_h2 from "../../../../assets/profile_h2.jpg";
 
 const ProfileH2Config = ({ anchor }: { anchor: string }) => {

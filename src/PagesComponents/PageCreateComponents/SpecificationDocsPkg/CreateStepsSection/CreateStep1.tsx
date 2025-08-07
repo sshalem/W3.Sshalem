@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { JsxHighlight, Span } from "../../../../Highlight";
+import { JsxHighlight, Span } from "../../../../components/Highlight";
 import page_create_1 from "../../../../assets/page_create_1.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {

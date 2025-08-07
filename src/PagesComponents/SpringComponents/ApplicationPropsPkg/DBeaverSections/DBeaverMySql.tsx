@@ -3,7 +3,7 @@ import dbeaver_mysql_1 from "../../../../assets/dbeaver_mysql_1.jpg";
 import dbeaver_mysql_2 from "../../../../assets/dbeaver_mysql_2.jpg";
 import dbeaver_mysql_2_1 from "../../../../assets/dbeaver_mysql_2_1.jpg";
 import dbeaver_mysql_3 from "../../../../assets/dbeaver_mysql_3.jpg";
-import { Span } from "../../../../Highlight";
+import { Span } from "../../../../components/Highlight";
 import { IMG, MainChildArea } from "../../../../components";
 
 const DBeaverMySql = ({ anchor }: { anchor: string }) => {

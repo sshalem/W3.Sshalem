@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { JavaHighlight, Span, XmlHighlight } from "../../../../Highlight";
+import { JavaHighlight, Span, XmlHighlight } from "../../../../components/Highlight";
 
 const Slf4jUtil = ({ anchor }: { anchor: string }) => {
   return (

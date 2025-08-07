@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 
 const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
   return (

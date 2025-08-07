@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { LoggingComapreTable, MainChildArea } from "../../../../components";
-import { Span } from "../../../../Highlight";
+import { Span } from "../../../../components/Highlight";
 
 const LogFileIntro = ({ anchor }: { anchor: string }) => {
   return (

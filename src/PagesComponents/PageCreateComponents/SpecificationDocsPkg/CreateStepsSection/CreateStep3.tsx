@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { JsxHighlight, Span } from "../../../../Highlight";
+import { JsxHighlight, Span } from "../../../../components/Highlight";
 import page_create_3 from "../../../../assets/page_create_3.jpg";
 import page_create_4 from "../../../../assets/page_create_4.jpg";
 

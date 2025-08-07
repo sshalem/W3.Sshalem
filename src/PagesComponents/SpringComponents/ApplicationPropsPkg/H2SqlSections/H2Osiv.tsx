@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 
 const H2Osiv = ({ anchor }: { anchor: string }) => {
   return (

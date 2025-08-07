@@ -1,5 +1,5 @@
 import { Answer, IMG, InternalArticle, MainChildArea, Question } from "../../../../components";
-import { BatchHighlight, Span } from "../../../../Highlight";
+import { BatchHighlight, Span } from "../../../../components/Highlight";
 import logging_linux from "../../../../assets/logging_linux.jpg";
 
 const LogFileLinux = ({ anchor }: { anchor: string }) => {

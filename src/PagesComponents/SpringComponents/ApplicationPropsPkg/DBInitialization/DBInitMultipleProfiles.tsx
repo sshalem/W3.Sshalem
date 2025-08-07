@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 import db_init_9 from "../../../../assets/db_init_9.jpg";
 
 const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {

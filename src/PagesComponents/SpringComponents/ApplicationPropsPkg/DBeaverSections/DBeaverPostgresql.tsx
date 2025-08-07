@@ -2,7 +2,7 @@ import { FaDiamond } from "react-icons/fa6";
 import dbeaver_postgres_1 from "../../../../assets/dbeaver_postgres_1.jpg";
 import dbeaver_postgres_2 from "../../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../../assets/dbeaver_postgres_3.jpg";
-import { Span } from "../../../../Highlight";
+import { Span } from "../../../../components/Highlight";
 import { IMG, MainChildArea } from "../../../../components";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {

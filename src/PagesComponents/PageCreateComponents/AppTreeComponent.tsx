@@ -1,4 +1,4 @@
-import { TreeAppBrowserRouter } from "../../Tree";
+import { TreeAppBrowserRouter } from "../../components/Tree";
 
 const AppTreeComponent = () => {
   return (

@@ -1,5 +1,5 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../../components";
-import { JsxHighlight, Span } from "../../../../Highlight";
+import { JsxHighlight, Span } from "../../../../components/Highlight";
 
 import page_create_13 from "../../../../assets/page_create_13.jpg";
 import page_create_15 from "../../../../assets/page_create_15.jpg";

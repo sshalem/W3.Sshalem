@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
 import profile_postgres from "../../../../assets/profile_postgres.jpg";
 
 const ProfilePostgresqlConfig = ({ anchor }: { anchor: string }) => {

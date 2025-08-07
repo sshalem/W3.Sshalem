@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { IMG, InternalArticle, MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../../components/Highlight";
 import profile_1 from "../../../../assets/profile_1.jpg";
 
 const ProfileConfig = ({ anchor }: { anchor: string }) => {

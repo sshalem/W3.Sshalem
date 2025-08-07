@@ -1,5 +1,5 @@
 import { Answer, MainChildArea, Question } from "../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, Span } from "../../../../components/Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (

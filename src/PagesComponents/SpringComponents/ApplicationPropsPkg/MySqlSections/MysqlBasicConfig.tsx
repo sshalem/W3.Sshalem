@@ -1,4 +1,4 @@
-import { ApplicationPropertiesHighlight } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
 import { MainChildArea } from "../../../../components";
 
 const MysqlBasicConfig = ({ anchor }: { anchor: string }) => {

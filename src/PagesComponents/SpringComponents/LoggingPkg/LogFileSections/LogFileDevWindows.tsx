@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../../../Highlight";
+import { ApplicationPropertiesHighlight, JavaHighlight, Span } from "../../../../components/Highlight";
 import log_file_1 from "../../../../assets/log_file_1.jpg";
 import log_file_2 from "../../../../assets/log_file_2.jpg";
 

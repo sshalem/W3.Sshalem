@@ -1,5 +1,5 @@
 import { InternalArticle, MainChildArea } from "../../../../components";
-import { JavaHighlight, Span } from "../../../../Highlight";
+import { JavaHighlight, Span } from "../../../../components/Highlight";
 
 const PojoAsJson = ({ anchor }: { anchor: string }) => {
   return (
