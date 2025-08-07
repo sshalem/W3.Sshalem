@@ -5,35 +5,36 @@ import db_init_6 from "../../../assets/db_init_6.jpg";
 const DBInitH2 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      here is how we config H2 with <Span>data.sql</Span>
       <div>
-        here is how we config H2 with <Span>data.sql</Span>
-        <div>
-          <ul className="my-4 ml-16 list-decimal">
-            <li className="my-1">
-              create <Span>application-H2.properties</Span>file
-            </li>
-            <li className="my-1">
-              config main <Span>application.properties</Span>
-            </li>
-            <li className="my-1">
-              <Span>data-H2.sql</Span>
-            </li>
-          </ul>
-        </div>
-        <IMG img_name={db_init_6}></IMG>
+        <ul className="my-4 ml-16 list-decimal">
+          <li className="my-1">
+            <div>folder/files layout</div>
+            <IMG img_name={db_init_6}></IMG>
+          </li>
+          <li className="my-1">
+            create <Span>application-H2.properties</Span>file
+          </li>
+          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+            application-H2.properties
+          </div>
+          <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
+          <li className="my-1">
+            config main <Span>application.properties</Span>
+          </li>
+          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+            main application.properties
+          </div>
+          <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+          <li className="my-1">
+            <Span>data-H2.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+          </li>
+          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+            data-H2.sql
+          </div>
+          <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
+        </ul>
       </div>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        main application.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        application-H2.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        data-H2.sql
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
     </MainChildArea>
   );
 };
