@@ -47,16 +47,20 @@ import {
 } from "./SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
-import { Eureka, MicroServiceHome } from "./MicroServiceComponents";
-import { EurekaDiscoveryMain, EurekaMain } from "./MicroServiceComponents/EurekaPkg";
-import AppTreeComponent from "./PageCreateComponents/AppTreeComponent";
-import ComponentTreeComponent from "./PageCreateComponents/ComponentTreeComponent";
-import WebPageComponent from "./PageCreateComponents/WebPageComponent";
-import PageCreationHome from "./PageCreateComponents/PageCreationHome";
+import { Eureka, MicroServiceHome } from "./PagesComponents/MicroServiceComponents";
+import { EurekaDiscoveryMain, EurekaMain } from "./PagesComponents/MicroServiceComponents/EurekaPkg";
 
-import { SpecificationDocument, CreateStepMain } from "./PageCreateComponents";
-import { CPlusPlusHome, FundamentalConcepts } from "./CPlusPlusComponents";
-import PointersMain from "./CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
+import {
+  SpecificationDocument,
+  CreateStepMain,
+  PageCreationHome,
+  AppTreeComponent,
+  ComponentTreeComponent,
+  WebPageComponent,
+} from "./PagesComponents/PageCreateComponents";
+
+import { CPlusPlusHome, FundamentalConcepts } from "./PagesComponents/CPlusPlusComponents";
+import PointersMain from "./PagesComponents/CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
 
 const router = createBrowserRouter(
   [
@@ -74,9 +78,7 @@ const router = createBrowserRouter(
             {
               path: "fundamental-concepts",
               element: <FundamentalConcepts />,
-              children: [
-                { path: "pointers", element: <PointersMain /> },              
-              ],
+              children: [{ path: "pointers", element: <PointersMain /> }],
             },
           ],
         },
