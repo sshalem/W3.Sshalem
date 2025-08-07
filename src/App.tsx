@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import {
   Batch,
+  C_plus_plus_page,
   DevOps,
   Error,
   FullStack,
@@ -11,15 +12,14 @@ import {
   Java,
   JavaScript,
   Linux,
-  MicroServices,
-  Page_Creation,
+  MicroServices_page,
+  Page_Creation_page,
   Postman,
   Python,
   ReactJS,
-  Spring,
+  Spring_page,
   Sql,
   Windows,
-  C_plus_plus,
 } from "./pages";
 
 import {
@@ -33,7 +33,7 @@ import {
   SpringSecurity,
   Swagger,
   TransactionManagement,
-} from "./PagesComponents/SpringComponents";
+} from "./pages/Spring/SpringComponents";
 
 import {
   ApplicationProperties,
@@ -44,11 +44,11 @@ import {
   MySqlMain,
   PostgresqlMain,
   ProfileMain,
-} from "./PagesComponents/SpringComponents/ApplicationPropsPkg";
-import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./PagesComponents/SpringComponents/JpaPkg";
-import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./PagesComponents/SpringComponents/LoggingPkg";
-import { Eureka, MicroServiceHome } from "./PagesComponents/MicroServiceComponents";
-import { EurekaDiscoveryMain, EurekaMain } from "./PagesComponents/MicroServiceComponents/EurekaPkg";
+} from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
+import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
+import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
+import { Eureka, MicroServiceHome } from "./pages/MicroServices/MicroServiceComponents";
+import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
 import {
   SpecificationDocument,
@@ -57,10 +57,10 @@ import {
   AppTreeComponent,
   ComponentTreeComponent,
   WebPageComponent,
-} from "./PagesComponents/PageCreateComponents";
+} from "./pages/PageCreate/PageCreateComponents";
 
-import { CPlusPlusHome, FundamentalConcepts } from "./PagesComponents/CPlusPlusComponents";
-import PointersMain from "./PagesComponents/CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
+import { CPlusPlusHome, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
+import PointersMain from "./pages/CPlusPlus/CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
 
 const router = createBrowserRouter(
   [
@@ -72,7 +72,7 @@ const router = createBrowserRouter(
         { index: true, element: <Home /> },
         {
           path: "c++",
-          element: <C_plus_plus />,
+          element: <C_plus_plus_page />,
           children: [
             { index: true, element: <CPlusPlusHome /> },
             {
@@ -84,7 +84,7 @@ const router = createBrowserRouter(
         },
         {
           path: "spring",
-          element: <Spring />,
+          element: <Spring_page />,
           children: [
             { index: true, element: <SpringHome /> },
             {
@@ -138,7 +138,7 @@ const router = createBrowserRouter(
         },
         {
           path: "microservices",
-          element: <MicroServices />,
+          element: <MicroServices_page />,
           children: [
             { index: true, element: <MicroServiceHome /> },
             {
@@ -166,7 +166,7 @@ const router = createBrowserRouter(
         { path: "windows", element: <Windows /> },
         {
           path: "page_creation",
-          element: <Page_Creation />,
+          element: <Page_Creation_page />,
           children: [
             { index: true, element: <PageCreationHome /> },
             {
