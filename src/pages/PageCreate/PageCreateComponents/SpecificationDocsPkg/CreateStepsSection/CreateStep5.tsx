@@ -17,7 +17,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li>
-            under <Span>src</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
+            under <Span>/pages/CPlusPlus</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
           </li>
           {/*  */}
           {/*  */}
@@ -45,23 +45,28 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           <li>
             Config <Span>App.tsx</Span> with links. <br />
-            <div>
+            <div className="my-1">
               3.1. go to <Span>App.tsx</Span>
             </div>
-            <div>
-              3.2. Add the <Span>children</Span> array , inside <Span>C_plus_plus</Span> component.
+            <div className="my-1">
+              3.2. Add the <Span>children</Span> array , inside <Span>C_plus_plus_page</Span> component.
             </div>
-            <div>
+            <div className="my-1">
               3.3. See that I define <Span>CPlusPlusHome.tsx</Span> as
               <Span>index</Span> , so when I click on <Span>C++</Span> link on Navbar , I will land on <Span>CPlusPlusHome.tsx</Span>.
             </div>
-            <div>
+            <div className="my-1">
               3.3. See the assign <Span>url path</Span> I gave to each component
             </div>
             <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
-            <div>
-              Add to <Span>C_plus_plus</Span> page component , the link to <Span>CPlusPlusHome.tsx</Span> (I create a Component for that ). <br />
-              <Span>{`<SideBarLink pageName="C++ Home" internalLink="/c++" />`}</Span> <br />
+            <div className="my-1">
+              Add to <Span>C_plus_plus_page</Span> component , the <Span>SideBarLink</Span> component with <Span>pageName</Span> and
+              <Span>internalLink</Span> as below:
+              <ul className="my-4 ml-8 list-disc">
+                <li>
+                  <Span>{`<SideBarLink pageName="C++ Home" internalLink="/c++" />`}</Span> <br />
+                </li>
+              </ul>
               <JsxHighlight jsxCode={jsxCode_C_plus_with_links}></JsxHighlight>
             </div>
           </li>
@@ -80,7 +85,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../components";
 
-const C_plus_plus = () => {
+const C_plus_plus_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -120,11 +125,11 @@ const C_plus_plus = () => {
   );
 };
 
-export default C_plus_plus;`;
+export default C_plus_plus_page;`;
 
 const jsxCode_AppAddedChildren = `        {
           path: "c++",
-          element: <C_plus_plus />,
+          element: <C_plus_plus_page />,
           children: [
             { index: true, element: <CPlusPlusHome /> },            
           ],
