@@ -13,26 +13,34 @@ const DBInitH2 = ({ anchor }: { anchor: string }) => {
             <IMG img_name={db_init_6}></IMG>
           </li>
           <li className="my-1">
-            create <Span>application-H2.properties</Span>file
+            <div>
+              create <Span>application-H2.properties</Span>file
+            </div>
+            <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+              application-H2.properties
+            </div>
+            <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
           </li>
-          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-            application-H2.properties
-          </div>
-          <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
+
           <li className="my-1">
-            config main <Span>application.properties</Span>
+            <div>
+              config main <Span>application.properties</Span>
+            </div>
+            <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+              main application.properties
+            </div>
+            <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
           </li>
-          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-            main application.properties
-          </div>
-          <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+
           <li className="my-1">
-            <Span>data-H2.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+            <div>
+              <Span>data-H2.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+            </div>
+            <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+              data-H2.sql
+            </div>
+            <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
           </li>
-          <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-            data-H2.sql
-          </div>
-          <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
         </ul>
       </div>
     </MainChildArea>

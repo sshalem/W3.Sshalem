@@ -10,30 +10,40 @@ const DBInitMySql = ({ anchor }: { anchor: string }) => {
         <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
-              create <Span>application-MySql.properties</Span>file
+              <div>folder/files layout</div>
+              <IMG img_name={db_init_7}></IMG>
             </li>
             <li className="my-1">
-              config main <Span>application.properties</Span>
+              <div>
+                create <Span>application-MySql.properties</Span>file
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                application-MySql.properties
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMySqlProfileCode}></ApplicationPropertiesHighlight>
+            </li>
+
+            <li className="my-1">
+              <div>
+                config main <Span>application.properties</Span>
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                main application.properties
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
             </li>
             <li className="my-1">
-              <Span>data-MySql.sql</Span>
+              <div>
+                <Span>data-MySql.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                data-MySql.sql
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={dataMySql}></ApplicationPropertiesHighlight>
             </li>
           </ul>
         </div>
-        <IMG img_name={db_init_7}></IMG>
       </div>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        main application.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        application-MySql.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsMySqlProfileCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        data-MySql.sql
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={dataMySql}></ApplicationPropertiesHighlight>
     </MainChildArea>
   );
 };
