@@ -58,7 +58,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
           <JsxHighlight jsxCode={jsxCode_App_with_pointers} />
           <li className="my-1">
-            go to <Span>DropDownFundamentalConcepts.tsx</Span>
+            go to <Span>DropDownFundamentalConcepts.tsx</Span> in folder <Span>DropCPlusPlus</Span>
           </li>
           <li className="my-1">
             copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
