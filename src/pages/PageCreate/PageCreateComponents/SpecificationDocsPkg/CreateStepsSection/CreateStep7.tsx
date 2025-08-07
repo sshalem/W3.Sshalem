@@ -189,7 +189,7 @@ const jsxCode_App_with_pointers = `      path: "/",
         { index: true, element: <Home /> },
         {
           path: "c++",
-          element: <C_plus_plus />,
+          element: <C_plus_plus_page />,
           children: [
             { index: true, element: <CPlusPlusHome /> },
             {
