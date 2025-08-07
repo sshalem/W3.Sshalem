@@ -9,19 +9,19 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component. <br /> <strong>example</strong> :
-        <Span>DropDownFundamentalConcepts.tsx</Span> to show <Span>Fundamental Concepts</Span> as a link
+        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component. <div className="my-2"></div>
+        <strong>example</strong> :<Span>DropDownFundamentalConcepts.tsx</Span> to show <Span>Fundamental Concepts</Span> as a link
         <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
-          <li>
+          <li className="my-1">
             Go to <Span>CPLusPLusComponents</Span> folder.
           </li>
-          <li>
+          <li className="my-1">
             Create new folder <Span>FundamentalConceptsPkg</Span>.
           </li>
-          <li>
+          <li className="my-1">
             Create new Component <Span>FundamentalConcepts.tsx</Span> inside <Span>FundamentalConceptsPkg</Span>.
             <div className="my-2">
               <strong>folder view :</strong>
@@ -31,7 +31,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             <JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
           </li>
 
-          <li>
+          <li className="my-1">
             under <Span>src</Span> , go to <Span>DropDown</Span> folder .
             <br />
           </li>
@@ -42,13 +42,13 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             </strong>
             .
           </li>
-          <li>
+          <li className="my-1">
             Create component <Span>DropDownFundamentalConcepts.tsx</Span> inside
             <Span>DropDownCPlusPlus</Span> <IMG img_name={page_create_8}></IMG>
           </li>
           {/*  */}
           {/*  */}
-          <li>
+          <li className="my-1">
             Do following steps on the <Span>DropDownFundamentalConcepts</Span>.
             <ul className="my-4 ml-8 list-decimal">
               <li className="my-1">
@@ -69,13 +69,13 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
                 <Span>BBBB</Span>- replace with url path
                 <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
               </li>
-              <li>
+              <li className="my-1">
                 <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
                 same name of <Span>BBBB</Span> just with Capital letter , and without dashes
               </li>
             </ul>
           </li>
-          <li>
+          <li className="my-1">
             import <Span>DropDownFundamentalConcepts</Span> created to into <Span>C_Plus_Plus</Span> page
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
