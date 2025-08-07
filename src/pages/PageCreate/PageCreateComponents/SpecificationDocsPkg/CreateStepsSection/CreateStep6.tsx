@@ -137,7 +137,7 @@ export default C_Plus_Plus_page;`;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../components";
+import { SideDropDownTopic } from "../../../components";
 
 const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);

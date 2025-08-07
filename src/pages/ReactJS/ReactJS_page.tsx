@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from "../../components";
+import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
@@ -32,9 +32,7 @@ const ReactJS_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down of Page ReactJS
-            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
-            <DropDownEureka /> */}
+            <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
           </div>
         </article>
       )}
