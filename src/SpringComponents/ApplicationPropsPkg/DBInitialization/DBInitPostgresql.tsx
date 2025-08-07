@@ -10,30 +10,39 @@ const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
         <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
-              create <Span>application-Postgres.properties</Span>file
+              <div>folder/files layout</div>
+              <IMG img_name={db_init_8}></IMG>
             </li>
             <li className="my-1">
-              config main <Span>application.properties</Span>
+              <div>
+                create <Span>application-Postgres.properties</Span>file
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                application-Postgres.properties
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={applicationPropsPostGresqlProfileCode}></ApplicationPropertiesHighlight>
             </li>
             <li className="my-1">
-              <Span>data-PostGreSql.sql</Span>
+              <div>
+                config main <Span>application.properties</Span>
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                main application.properties
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+            </li>
+            <li className="my-1">
+              <div>
+                <Span>data-PostGreSql.sql</Span>
+              </div>
+              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+                data-PostGreSql.sql
+              </div>
+              <ApplicationPropertiesHighlight propertiesCode={dataPostGreSql}></ApplicationPropertiesHighlight>
             </li>
           </ul>
         </div>
-        <IMG img_name={db_init_8}></IMG>
       </div>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        main application.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        application-Postgres.properties
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsPostGresqlProfileCode}></ApplicationPropertiesHighlight>
-      <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        data-PostGreSql.sql
-      </div>
-      <ApplicationPropertiesHighlight propertiesCode={dataPostGreSql}></ApplicationPropertiesHighlight>
     </MainChildArea>
   );
 };

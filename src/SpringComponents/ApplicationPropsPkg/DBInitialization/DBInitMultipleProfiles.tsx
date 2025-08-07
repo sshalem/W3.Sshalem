@@ -14,7 +14,7 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
           <li className="my-1">Postgresql</li>
         </ul>
         This way, instead of re-configuring the properties file, I just Enable/Disable the profile in the main <Span>application.properties</Span>
-        file.
+        file. <br />
         {/* <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
@@ -28,7 +28,7 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
             </li>
           </ul>
         </div> */}
-        Imgae below shows I have 3 profiles config
+        Image below shows I have 3 profiles config
         <IMG img_name={db_init_9}></IMG>
       </div>
       <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
