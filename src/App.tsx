@@ -33,7 +33,7 @@ import {
   SpringSecurity,
   Swagger,
   TransactionManagement,
-} from "./SpringComponents";
+} from "./PagesComponents/SpringComponents";
 
 import {
   ApplicationProperties,
@@ -44,9 +44,9 @@ import {
   MySqlMain,
   PostgresqlMain,
   ProfileMain,
-} from "./SpringComponents/ApplicationPropsPkg";
-import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./SpringComponents/JpaPkg";
-import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./SpringComponents/LoggingPkg";
+} from "./PagesComponents/SpringComponents/ApplicationPropsPkg";
+import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./PagesComponents/SpringComponents/JpaPkg";
+import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./PagesComponents/SpringComponents/LoggingPkg";
 import { Eureka, MicroServiceHome } from "./PagesComponents/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./PagesComponents/MicroServiceComponents/EurekaPkg";
 
