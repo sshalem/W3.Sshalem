@@ -60,7 +60,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
               </li>
               <li className="my-1">
                 <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
+                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span>
               </li>
               <li className="my-1">
                 <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
@@ -73,6 +73,13 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           </li>
           <li className="my-1">
             add new route in the children of <Span>C_plus_plus_page</Span>
+            <ul className="my-4 ml-8 list-disc">
+              <Span>{`path: "fundamental-concepts", element: <FundamentalConcepts /> },`}</Span>
+              <li className="my-1">
+                <Span>Path</Span> - same as <Span>BBBB</Span> path <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span>
+              </li>
+            </ul>
+            <div className="my-3"></div>
             <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
           </li>
           <li className="my-1">

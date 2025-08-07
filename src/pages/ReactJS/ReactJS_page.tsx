@@ -40,7 +40,6 @@ const ReactJS_page = () => {
       )}
       <main className="css-main-outlet">
         <Outlet />
-        text of Page ReactJS
       </main>
     </GridLayout>
   );
