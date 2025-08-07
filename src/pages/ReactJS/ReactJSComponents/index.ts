@@ -1,3 +1,3 @@
 export { default as ReactJSHome } from "./ReactJSHome";
-export { default as Basics } from "./BasicsPkg/Basics";
-export { default as JsxMain } from "./BasicsPkg/JsxSections/JsxMain";
+export { default as ReactBasics } from "./ReactBasicsPkg/ReactBasics";
+export { default as JsxMain } from "./ReactBasicsPkg/JsxSections/JsxMain";

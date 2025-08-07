@@ -78,7 +78,7 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
 export default CreateStep8;
 
 const jsxCode_Section_Main = `import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../components";
+import { ContentMenu } from "../../../../../components";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -136,7 +136,7 @@ const Z_SectionMain = () => {
 };
 export default Z_SectionMain;`;
 
-const jsxCode_section_internal_code = `import { MainChildArea } from "../../../components";
+const jsxCode_section_internal_code = `import { MainChildArea } from "../../../../../components";
 
 const Z_section_internal = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}>Add any content here</MainChildArea>;

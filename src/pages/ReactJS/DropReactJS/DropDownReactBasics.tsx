@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownBasics = () => {
+const DropDownReactBasics = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -34,7 +34,7 @@ const DropDownBasics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="Basics" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="React Basics" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -47,4 +47,4 @@ const DropDownBasics = () => {
   );
 };
 
-export default DropDownBasics;
+export default DropDownReactBasics;

@@ -61,7 +61,8 @@ import {
 
 import { CPlusPlusHome, PointersMain, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
 
-import { JsxMain, Basics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
+import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
+import { ArrayMain, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 
 const router = createBrowserRouter(
   [
@@ -157,13 +158,20 @@ const router = createBrowserRouter(
           element: <ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
-            { path: "basics", element: <Basics />, children: [{ path: "jsx", element: <JsxMain /> }] },
+            { path: "basics", element: <ReactBasics />, children: [{ path: "jsx", element: <JsxMain /> }] },
           ],
         },
         { path: "javascript", element: <JavaScript_page /> },
         { path: "html_css", element: <HTML_CSS_page /> },
         { path: "fullstack", element: <FullStack_page /> },
-        { path: "java", element: <Java_page /> },
+        {
+          path: "java",
+          element: <Java_page />,
+          children: [
+            { index: true, element: <JavaHome /> },
+            { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+          ],
+        },
         { path: "sql", element: <Sql_page /> },
         { path: "python", element: <Python_page /> },
         { path: "devops", element: <DevOps_page /> },

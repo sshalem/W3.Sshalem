@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from "../../components";
+import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownJavaBasics from "./DropJava/DropDownJavaBasics";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -32,16 +33,13 @@ const Java_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down of Page Java
-            {/* Example of SideBarLink & DropDownSubPage */}
-            {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
-            {/* <DropDownEureka /> */}
+            <SideBarLink pageName="Java Home" internalLink="/java" />
+            <DropDownJavaBasics />
           </div>
         </article>
       )}
       <main className="css-main-outlet">
         <Outlet />
-        text of Page Java
       </main>
     </GridLayout>
   );

@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownBasics from "./DropReactJS/DropDownBasics";
+import DropDownBasics from "./DropReactJS/DropDownReactBasics";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
