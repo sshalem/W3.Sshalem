@@ -19,7 +19,7 @@ const DropDownBasics = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("BBBB")) {
+    if (location.pathname.includes("basics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,7 +35,7 @@ const DropDownBasics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="topic name" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="Basics" />
     </section>
   );
 };

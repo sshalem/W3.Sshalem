@@ -62,6 +62,7 @@ import {
 import { CPlusPlusHome, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
 import PointersMain from "./pages/CPlusPlus/CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
 import { ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
+import Basics from "./pages/ReactJS/ReactJSComponents/BasicsPkg/Basics";
 
 const router = createBrowserRouter(
   [
@@ -152,7 +153,14 @@ const router = createBrowserRouter(
             },
           ],
         },
-        { path: "reactJS", element: <ReactJS_page />, children: [{ index: true, element: <ReactJSHome /> }] },
+        {
+          path: "reactJS",
+          element: <ReactJS_page />,
+          children: [
+            { index: true, element: <ReactJSHome /> },
+            { path: "basics", element: <Basics /> },
+          ],
+        },
         { path: "javascript", element: <JavaScript_page /> },
         { path: "html_css", element: <HTML_CSS_page /> },
         { path: "fullstack", element: <FullStack_page /> },

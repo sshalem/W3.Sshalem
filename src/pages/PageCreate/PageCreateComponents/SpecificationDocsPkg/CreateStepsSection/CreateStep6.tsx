@@ -69,7 +69,14 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             </ul>
           </li>
           <li className="my-1">
-            import <Span>DropDownFundamentalConcepts</Span> component , and add it to <Span>C_Plus_Plus_page</Span>.
+            go to <Span>App.tsx</Span>.
+          </li>
+          <li className="my-1">
+            add new route in the children of <Span>C_plus_plus_page</Span>
+            <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
+          </li>
+          <li className="my-1">
+            import <Span>DropDownFundamentalConcepts</Span> component , to <Span>C_Plus_Plus_page</Span>.
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
@@ -183,3 +190,20 @@ const Z_DropDownTemplate = () => {
 };
 
 export default Z_DropDownTemplate;`;
+
+const jsxCode_APP_with_fundamentalConcepts = `const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      errorElement: <Error_page />,
+      children: [
+        { index: true, element: <Home_page /> },
+        {
+          path: "c++",
+          element: <C_plus_plus_page />,
+          children: [
+            { index: true, element: <CPlusPlusHome /> },
+            { path: "fundamental-concepts", element: <FundamentalConcepts /> },
+          ],
+        },`;
