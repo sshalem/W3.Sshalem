@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { DropDownEureka } from "../../DropDown";
+import DropDownEureka from "./DropMicroService/DropDownEureka";
 
 const MicroServices_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

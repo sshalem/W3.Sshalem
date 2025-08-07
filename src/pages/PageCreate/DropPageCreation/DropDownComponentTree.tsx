@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../components";
+import { SideDropDownTopic } from "../../../components";
 
 const DropDownComponentTree = () => {
   const [showList, setShowList] = useState<boolean>(false);

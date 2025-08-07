@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownAppTree from "../../DropDown/DropPageCreation/DropDownAppTree";
-import DropDownComponentTree from "../../DropDown/DropPageCreation/DropDownComponentTree";
-import DropDownWebPageComponent from "../../DropDown/DropPageCreation/DropDownWebPageComponent";
-import DropDownSteps from "../../DropDown/DropPageCreation/DropDownSteps";
+import DropDownSteps from "./DropPageCreation/DropDownSteps";
+import DropDownAppTree from "./DropPageCreation/DropDownAppTree";
+import DropDownComponentTree from "./DropPageCreation/DropDownComponentTree";
+import DropDownWebPageComponent from "./DropPageCreation/DropDownWebPageComponent";
 
 const Page_Creation_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

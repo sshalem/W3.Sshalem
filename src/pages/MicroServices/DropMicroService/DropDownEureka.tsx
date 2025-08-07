@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownFundamentalConcepts = () => {
+const DropDownEureka = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,8 @@ const DropDownFundamentalConcepts = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("fundamental-concepts")) {
+    // if (location.pathname.substring(8).includes("eureka")) {
+    if (location.pathname.includes("eureka")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,22 +35,18 @@ const DropDownFundamentalConcepts = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/c++/fundamental-concepts"
-        topicName="Fundamental Concepts"
-      />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/microservices/eureka" topicName="Eureka" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Pointers" internalLink="/c++/fundamental-concepts/pointers" />
+        <SideDropdownLink sideDropDownNavName="Eureka Server" internalLink="/microservices/eureka/eureka-server" />
+        <SideDropdownLink sideDropDownNavName="Eureka Discovery" internalLink="/microservices/eureka/eureka-discovery" />
       </div>
     </section>
   );
 };
 
-export default DropDownFundamentalConcepts;
+export default DropDownEureka;

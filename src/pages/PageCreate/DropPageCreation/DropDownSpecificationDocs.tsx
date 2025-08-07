@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSteps = () => {
+const DropDownSpecificationDocs = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -52,4 +52,4 @@ const DropDownSteps = () => {
   );
 };
 
-export default DropDownSteps;
+export default DropDownSpecificationDocs;

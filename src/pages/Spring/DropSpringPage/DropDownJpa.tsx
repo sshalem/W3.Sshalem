@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const DropDownJpa = () => {
   const [showList, setShowList] = useState<boolean>(false);

@@ -1,8 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
-import { DropDownApplicationProperties, DropDownJpa, DropDownRest, DropDownLogging } from "../../DropDown";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownApplicationProperties from "./DropSpringPage/DropDownApplicationProperties";
+import DropDownLogging from "./DropSpringPage/DropDownLogging";
+import DropDownJpa from "./DropSpringPage/DropDownJpa";
+import DropDownRest from "./DropSpringPage/DropDownRest";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownAppTree = () => {
+const DropDownFundamentalConcepts = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,8 +18,7 @@ const DropDownAppTree = () => {
   };
 
   useEffect(() => {
-    // if (location.pathname.substring(8).includes("rest")) {
-    if (location.pathname.includes("app-tree")) {
+    if (location.pathname.includes("fundamental-concepts")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,20 +34,22 @@ const DropDownAppTree = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/app-tree" topicName="App Tree" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/c++/fundamental-concepts"
+        topicName="Fundamental Concepts"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/* I don't add want to add here any internal dropDown Link */}
-        {/* I keep this line here only */}
-        {/* for reminding how it is used in other components */}
-        {/* <SideDropdownLink pageName="One2Many Bi Eager" internalLink="rest/one2many-bi-eager" /> */}
+        <SideDropdownLink sideDropDownNavName="Pointers" internalLink="/c++/fundamental-concepts/pointers" />
       </div>
     </section>
   );
 };
 
-export default DropDownAppTree;
+export default DropDownFundamentalConcepts;
