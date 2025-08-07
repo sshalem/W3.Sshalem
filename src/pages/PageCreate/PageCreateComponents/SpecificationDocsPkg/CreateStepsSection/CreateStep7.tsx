@@ -76,7 +76,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
               </li>
               <li className="my-1">
                 <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
+                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 6, paragrapgh 6.4)
               </li>
               <li className="my-1">
                 <Span>cccc</Span>- replace with url path
@@ -128,7 +128,8 @@ export default CreateStep7;
 
 const jsxCode_Z_DropDownIncludeInternalLink = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
+
 
 const Z_DropDownIncludeInternalLink = () => {
   const [showList, setShowList] = useState<boolean>(false);

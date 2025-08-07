@@ -1,4 +1,7 @@
+import { Outlet, useLocation } from "react-router-dom";
+
 const Basics = () => {
-  return <div className="text-3xl">Basics Concepts ...</div>;
+  let location = useLocation();
+  return <section>{location.pathname === "/reactJS/basics" ? <div className="text-3xl">Basics Main ...</div> : <Outlet />}</section>;
 };
 export default Basics;

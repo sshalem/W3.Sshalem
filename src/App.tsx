@@ -59,10 +59,9 @@ import {
   WebPageComponent,
 } from "./pages/PageCreate/PageCreateComponents";
 
-import { CPlusPlusHome, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
-import PointersMain from "./pages/CPlusPlus/CPlusPlusComponents/FundamentalConceptsPkg/PointersSections/PointersMain";
-import { ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
-import Basics from "./pages/ReactJS/ReactJSComponents/BasicsPkg/Basics";
+import { CPlusPlusHome, PointersMain, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
+
+import { JsxMain, Basics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
 
 const router = createBrowserRouter(
   [
@@ -158,7 +157,7 @@ const router = createBrowserRouter(
           element: <ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
-            { path: "basics", element: <Basics /> },
+            { path: "basics", element: <Basics />, children: [{ path: "jsx", element: <JsxMain /> }] },
           ],
         },
         { path: "javascript", element: <JavaScript_page /> },
