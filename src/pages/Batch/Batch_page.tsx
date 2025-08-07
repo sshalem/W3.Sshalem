@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from "../components";
+import { GridLayout } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const Python = () => {
+const Batch_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -32,7 +32,7 @@ const Python = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down of Python Page
+            Drop Down of Page Batch
             {/* Example of SideBarLink & DropDownSubPage */}
             {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
             {/* <DropDownEureka /> */}
@@ -41,10 +41,10 @@ const Python = () => {
       )}
       <main className="css-main-outlet">
         <Outlet />
-        text of Python Page
+        text of Page Batch
       </main>
     </GridLayout>
   );
 };
 
-export default Python;
+export default Batch_page;

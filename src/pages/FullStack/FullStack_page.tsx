@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from "../components";
+import { GridLayout } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const JavaScript = () => {
+const FullStack_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -32,7 +32,7 @@ const JavaScript = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down of Page JavaScript
+            Drop Down of Page FullStack
             {/* Example of SideBarLink & DropDownSubPage */}
             {/* <SideBarLink pageName="MicroService Home" internalLink="/microservices" /> */}
             {/* <DropDownEureka /> */}
@@ -41,10 +41,10 @@ const JavaScript = () => {
       )}
       <main className="css-main-outlet">
         <Outlet />
-        text of Page JavaScript
+        text of Page FullStack
       </main>
     </GridLayout>
   );
 };
 
-export default JavaScript;
+export default FullStack_page;
