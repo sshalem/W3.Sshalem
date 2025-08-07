@@ -8,19 +8,25 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
       <article>
         <div>Lets see how to add the Sidebar navigation </div>
         To config the side navbar on the page,
-        <ul className="my-4 ml-8 list-decimal">
+        <ul className="my-4 ml-8 list-disc">
           <li>
             copy the context of componenet <Span>Z_PageTemplate</Span>
-            and paste it in <Span>C_plus_plus</Span> component.
+            and paste it in <Span>C_plus_plus_page</Span> component.
           </li>
-
-          <li>continue with step 5</li>
+          <li>
+            After adding the Page template code , we can see the sidebar navigation is setup. <br />
+          </li>
+          <li>
+            at this point :
+            <ul className="ml-8 list-disc">
+              <li>there are NO links Also.</li>
+              <li>no content is visible.</li>
+            </ul>
+          </li>
         </ul>
-        <br />
-        After adding the Page template code , we can see the sidebar navigation is setup, but there are NO links. <br />
-        Also, no content is visible.
+        <div>This is how page looks at this point, (continue with step 5)</div>
         <IMG img_name={page_create_5}></IMG>
-        Here is <Span>C_plus_plus.tsx</Span> code
+        Here is <Span>C_plus_plus_page.tsx</Span> code
         <JsxHighlight jsxCode={jsxPage_Template}></JsxHighlight>
       </article>
     </MainChildArea>
@@ -34,7 +40,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout } from "../components";
 
-const C_plus_plus = () => {
+const C_plus_plus_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -77,4 +83,4 @@ const C_plus_plus = () => {
   );
 };
 
-export default C_plus_plus;`;
+export default C_plus_plus_page;`;
