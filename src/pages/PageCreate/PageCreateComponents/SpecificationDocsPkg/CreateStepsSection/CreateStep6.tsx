@@ -16,7 +16,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            Go to <Span>CPLusPLusComponents</Span> folder.
+            Go to <Span>/pages/CPlusPlus/CPLusPLusComponents</Span> folder.
           </li>
           <li className="my-1">
             Create new folder <Span>FundamentalConceptsPkg</Span>.
@@ -32,19 +32,12 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           </li>
 
           <li className="my-1">
-            under <Span>src</Span> , go to <Span>DropDown</Span> folder .
+            under <Span>/pages/CPlusPlus</Span> , create folder <Span>DropCPlusPlus</Span>.
             <br />
           </li>
           <li className="my-1">
-            Create new subfolder <Span>DropDownCPlusPlus</Span> inside it <Span>DropDown</Span> folder.
-            <strong>
-              Note: folder hold nav links of <Span>C_Plus_Plus</Span> page
-            </strong>
-            .
-          </li>
-          <li className="my-1">
             Create component <Span>DropDownFundamentalConcepts.tsx</Span> inside
-            <Span>DropDownCPlusPlus</Span> <IMG img_name={page_create_8}></IMG>
+            <Span>DropCPlusPlus</Span> <IMG img_name={page_create_8}></IMG>
           </li>
           {/*  */}
           {/*  */}
@@ -76,7 +69,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             </ul>
           </li>
           <li className="my-1">
-            import <Span>DropDownFundamentalConcepts</Span> created to into <Span>C_Plus_Plus</Span> page
+            import <Span>DropDownFundamentalConcepts</Span> component , and add it to <Span>C_Plus_Plus_page</Span>.
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
@@ -99,7 +92,7 @@ import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../components";
 import { DropDownAdvancedTopics, DropDownFundamentalConcepts, DropDownOOP, DropDownStandardTempLib } from "../DropDown";
 
-const C_plus_plus = () => {
+const C_Plus_Plus_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -140,7 +133,7 @@ const C_plus_plus = () => {
   );
 };
 
-export default C_plus_plus;`;
+export default C_Plus_Plus_page;`;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
