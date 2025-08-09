@@ -59,7 +59,7 @@ import {
   WebPageComponent,
 } from "./pages/PageCreate/PageCreateComponents";
 
-import { CppHome, PointersMain, FundamentalConcepts, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
+import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 
 import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
 import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
@@ -83,11 +83,6 @@ const router = createBrowserRouter(
               path: "cpp-basics",
               element: <CppBasics />,
               children: [{ path: "functions", element: <FunctionsMain /> }],
-            },
-            {
-              path: "fundamental-concepts",
-              element: <FundamentalConcepts />,
-              children: [{ path: "pointers", element: <PointersMain /> }],
             },
           ],
         },
