@@ -31,4 +31,4 @@ const CreateStep3 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep3;
 
-const jsxCode_3 = `{ path: "c++", element: <C_plus_plus_page /> },`;
+const jsxCode_3 = `{ path: "c++", element: <Cpp_page /> },`;

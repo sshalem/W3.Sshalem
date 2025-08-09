@@ -32,5 +32,4 @@ export default CreateStep1;
 const jsxCode_1 = `const Cpp_page = () => {
   return <div className="text-3xl">C++ ...</div>;
 };
-
 export default Cpp_page;`;
