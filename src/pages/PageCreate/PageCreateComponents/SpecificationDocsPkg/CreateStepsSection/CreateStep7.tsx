@@ -8,8 +8,8 @@ import page_create_16 from "../../../../../assets/page_create_16.jpg";
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownCppBasics</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects which are
-      internal <Span>Links</Span> of <Span>DropDownCppBasics</Span>.
+      As <Span>DropDownCppBasics</Span> implies , once the section clicked, it dropped's down, then I should see a <Span>Internal Links</Span> of
+      <Span>DropDownCppBasics</Span>.
       <ul className="my-4 ml-8 list-disc">
         <li className="my-1">
           In this section I will add a <Span>internal Link</Span> (subject) to the <Span>DropDownCppBasics</Span> section

@@ -27,7 +27,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
               <strong>folder view :</strong>
             </div>
             <IMG img_name={page_create_12}></IMG>
-            <Span>FundamentalConcepts.tsx</Span> code :
+            <Span>CppBasics.tsx</Span> code :
             <JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
           </li>
 
@@ -36,16 +36,16 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             <br />
           </li>
           <li className="my-1">
-            Create component <Span>DropDownFundamentalConcepts.tsx</Span> inside
+            Create component <Span>DropDownCppBasics.tsx</Span> inside
             <Span>DropCpp</Span> <IMG img_name={page_create_8}></IMG>
           </li>
           {/*  */}
           {/*  */}
           <li className="my-1">
-            Do following steps on the <Span>DropDownFundamentalConcepts</Span>.
+            Do following steps on the <Span>DropDownCppBasics.tsx</Span>.
             <ul className="my-4 ml-8 list-decimal">
               <li className="my-1">
-                copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownFundamentalConcepts</Span>.
+                copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownCppBasics.tsx</Span>.
                 <div className="my-2">
                   <Span>Z_DropDownTemplate</Span> code :
                 </div>
@@ -60,11 +60,11 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
               </li>
               <li className="my-1">
                 <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span>
+                <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span>
               </li>
               <li className="my-1">
-                <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
-                same name of <Span>BBBB</Span> just with Capital letter , and without dashes
+                <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"C++ basics"</span> . The convention , give same name
+                of <Span>BBBB</Span> just with Capital letter , and without dashes
               </li>
             </ul>
           </li>
@@ -74,16 +74,16 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           <li className="my-1">
             add new route in the children of <Span>Cpp</Span>
             <ul className="my-4 ml-8 list-disc">
-              <Span>{`path: "fundamental-concepts", element: <FundamentalConcepts /> },`}</Span>
+              <Span>{`path: "cpp-basics", element: <CppBasics /> },`}</Span>
               <li className="my-1">
-                <Span>Path</Span> - same as <Span>BBBB</Span> path <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span>
+                <Span>Path</Span> - same as <Span>BBBB</Span> path <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span>
               </li>
             </ul>
             <div className="my-3"></div>
             <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
           </li>
           <li className="my-1">
-            import <Span>DropDownFundamentalConcepts</Span> component , to <Span>Cpp_page</Span>.
+            import <Span>DropDownCppBasics</Span> component , to <Span>Cpp_page</Span>.
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
@@ -95,16 +95,16 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep6;
 
-const jsxCode_fundamental_concepts = `const FundamentalConcepts = () => {
-  return <div className="text-3xl">Fundamental Concepts ...</div>;
+const jsxCode_fundamental_concepts = `const CppBasics = () => {
+  return <div className="text-3xl">Cpp Basics ...</div>;
 };
-export default FundamentalConcepts;`;
+export default CppBasics;`;
 
 const jsxCode_C_plus_plus_with_DropDown = `import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../../components";
-import DropDownFundamentalConcepts from "./DropCpp/DropDownFundamentalConcepts";
+import DropDownCppBasics from "./DropCpp/DropDownCppBasics";
 
 const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -136,7 +136,7 @@ const Cpp_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="C++ Home" internalLink="/c++" />
-            <DropDownFundamentalConcepts />
+            <DropDownCppBasics />
           </div>
         </article>
       )}
@@ -147,7 +147,8 @@ const Cpp_page = () => {
   );
 };
 
-export default Cpp_page;`;
+export default Cpp_page;
+`;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -208,9 +209,9 @@ const jsxCode_APP_with_fundamentalConcepts = `const router = createBrowserRouter
         { index: true, element: <Home_page /> },
         {
           path: "c++",
-          element: <C_plus_plus_page />,
+          element: <Cpp_page />,
           children: [
-            { index: true, element: <CPlusPlusHome /> },
-            { path: "fundamental-concepts", element: <FundamentalConcepts /> },
+            { index: true, element: <CppHome /> },
+            { path: "cpp-basics", element: <CppBasics /> },
           ],
         },`;

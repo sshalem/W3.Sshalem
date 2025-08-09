@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../../components";
-import DropDownFundamentalConcepts from "./DropCpp/DropDownFundamentalConcepts";
 import DropDownCppBasics from "./DropCpp/DropDownCppBasics";
 
 const Cpp_page = () => {
@@ -36,7 +35,6 @@ const Cpp_page = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="C++ Home" internalLink="/c++" />
             <DropDownCppBasics />
-            <DropDownFundamentalConcepts />
           </div>
         </article>
       )}
