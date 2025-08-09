@@ -11,7 +11,7 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         <ul className="my-4 ml-8 list-disc">
           <li>
             copy the context of componenet <Span>Z_PageTemplate</Span>
-            and paste it in <Span>C_plus_plus_page</Span> component.
+            and paste it in <Span>Cpp_page</Span> component.
           </li>
           <li>
             After adding the Page template code , we can see the sidebar navigation is setup. <br />
@@ -26,7 +26,7 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         </ul>
         <div>This is how page looks at this point, (continue with step 5)</div>
         <IMG img_name={page_create_5}></IMG>
-        Here is <Span>C_plus_plus_page.tsx</Span> code
+        Here is <Span>Cpp_page.tsx</Span> code
         <JsxHighlight jsxCode={jsxPage_Template}></JsxHighlight>
       </article>
     </MainChildArea>
@@ -40,7 +40,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout } from "../components";
 
-const C_plus_plus_page = () => {
+const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -69,10 +69,8 @@ const C_plus_plus_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            Drop Down Page Links
-            {/* Example of SideBarLink & DropDownSubPage */}
-            {/* <SideBarLink pageName="XXX Home" internalLink="/XXX" /> */}
-            {/* <DropDownXXX /> */}
+            Drop Down Page Links            
+            {/* Add Drop Down Links here */}
           </div>
         </article>
       )}
@@ -83,4 +81,4 @@ const C_plus_plus_page = () => {
   );
 };
 
-export default C_plus_plus_page;`;
+export default Cpp_page;`;
