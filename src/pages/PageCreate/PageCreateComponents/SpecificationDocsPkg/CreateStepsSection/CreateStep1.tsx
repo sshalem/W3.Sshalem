@@ -12,10 +12,10 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
               go to <Span>pages</Span> folder
             </li>
             <li>
-              create new folder <Span>CPlusPlus</Span>
+              create new folder <Span>Cpp</Span>
             </li>
             <li>
-              Inside <Span>CPlusPlus</Span> , create new page component <Span>C_plus_plus.tsx</Span>
+              Inside <Span>Cpp</Span> , create new page component <Span>Cpp_page.tsx</Span>
             </li>
             <IMG img_name={page_create_1}></IMG>
             <li>add the below code in the created file</li>
@@ -29,8 +29,8 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep1;
 
-const jsxCode_1 = `const C_plus_plus_page = () => {
+const jsxCode_1 = `const Cpp_page = () => {
   return <div className="text-3xl">C++ ...</div>;
 };
 
-export default C_plus_plus_page;`;
+export default Cpp_page;`;
