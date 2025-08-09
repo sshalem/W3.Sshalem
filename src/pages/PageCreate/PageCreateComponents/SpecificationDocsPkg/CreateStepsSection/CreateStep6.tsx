@@ -16,7 +16,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            Go to <Span>/pages/CPlusPlus/CPLusPLusComponents</Span> folder.
+            Go to <Span>/pages/Cpp/CppComponents</Span> folder.
           </li>
           <li className="my-1">
             Create new folder <Span>FundamentalConceptsPkg</Span>.
@@ -32,12 +32,12 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           </li>
 
           <li className="my-1">
-            under <Span>/pages/CPlusPlus</Span> , create folder <Span>DropCPlusPlus</Span>.
+            under <Span>/pages/Cpp</Span> , create folder <Span>DropCpp</Span>.
             <br />
           </li>
           <li className="my-1">
             Create component <Span>DropDownFundamentalConcepts.tsx</Span> inside
-            <Span>DropCPlusPlus</Span> <IMG img_name={page_create_8}></IMG>
+            <Span>DropCpp</Span> <IMG img_name={page_create_8}></IMG>
           </li>
           {/*  */}
           {/*  */}
@@ -72,7 +72,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             go to <Span>App.tsx</Span>.
           </li>
           <li className="my-1">
-            add new route in the children of <Span>C_plus_plus_page</Span>
+            add new route in the children of <Span>Cpp</Span>
             <ul className="my-4 ml-8 list-disc">
               <Span>{`path: "fundamental-concepts", element: <FundamentalConcepts /> },`}</Span>
               <li className="my-1">
@@ -83,7 +83,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
           </li>
           <li className="my-1">
-            import <Span>DropDownFundamentalConcepts</Span> component , to <Span>C_Plus_Plus_page</Span>.
+            import <Span>DropDownFundamentalConcepts</Span> component , to <Span>Cpp_page</Span>.
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
@@ -103,10 +103,10 @@ export default FundamentalConcepts;`;
 const jsxCode_C_plus_plus_with_DropDown = `import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { GridLayout, SideBarLink } from "../components";
-import { DropDownAdvancedTopics, DropDownFundamentalConcepts, DropDownOOP, DropDownStandardTempLib } from "../DropDown";
+import { GridLayout, SideBarLink } from "../../components";
+import DropDownFundamentalConcepts from "./DropCpp/DropDownFundamentalConcepts";
 
-const C_Plus_Plus_page = () => {
+const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -147,7 +147,7 @@ const C_Plus_Plus_page = () => {
   );
 };
 
-export default C_Plus_Plus_page;`;
+export default Cpp_page;`;
 
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";

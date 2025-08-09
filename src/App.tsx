@@ -80,6 +80,11 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <CppHome /> },
             {
+              path: "cpp-basics",
+              element: <FundamentalConcepts />,
+              children: [{ path: "functions", element: <PointersMain /> }],
+            },
+            {
               path: "fundamental-concepts",
               element: <FundamentalConcepts />,
               children: [{ path: "pointers", element: <PointersMain /> }],
