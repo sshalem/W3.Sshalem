@@ -15,4 +15,3 @@ export { default as DropDownWebPageComponent } from "./PageCreate/DropPageCreati
 export { default as DropDownEureka } from "./MicroServices/DropMicroService/DropDownEureka";
 
 // C++ DropDown
-export { default as DropDownFundamentalConcepts } from "./Cpp/DropCpp/DropDownFundamentalConcepts";
