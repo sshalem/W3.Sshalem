@@ -8,7 +8,8 @@ import page_create_16 from "../../../../../assets/page_create_16.jpg";
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownCppBasics</Span> implies , once the section clicked, it dropped's down, then I should see a <Span>Internal Links</Span> of
+      As <Span>DropDownCppBasics</Span> implies , once the section clicked, it <strong>dropped's down</strong>, then I should see
+      <Span>Internal Links</Span> of &nbsp;
       <Span>DropDownCppBasics</Span>.
       <ul className="my-4 ml-8 list-disc">
         <li className="my-1">

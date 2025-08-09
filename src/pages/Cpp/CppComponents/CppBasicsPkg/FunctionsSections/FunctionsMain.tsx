@@ -1,4 +1,4 @@
 const FunctionsMain = () => {
-  return <div>Functions Main ...</div>;
+  return <div className="text-3xl">Functions Main ...</div>;
 };
 export default FunctionsMain;
