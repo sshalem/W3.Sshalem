@@ -42,18 +42,10 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           <li className="my-1">
-            Do following steps on the <Span>DropDownCppBasics.tsx</Span>.
+            Do following steps on the <Span>DropDownCppBasics.tsx</Span>. <br /> copy code below (can be found in file <Span>Z_DropDownTemplate</Span>
+            ), and paste in <Span>DropDownCppBasics.tsx</Span>.<div className="my-1">In the code below where I have 3 variable :</div>
             <ul className="my-4 ml-8 list-decimal">
-              <li className="my-1">
-                copy code below (can be found in file <Span>Z_DropDownTemplate</Span>), and paste in <Span>DropDownCppBasics.tsx</Span>.
-                <div className="my-2">
-                  <Span>Z_DropDownTemplate</Span> code :
-                </div>
-                <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
-              </li>
-              <li className="my-1">
-                In the code below where I have 2 variable , <Span>AAAA</Span>, <Span>BBBB"</Span>
-              </li>
+              <div className="my-2"></div>
               <li className="my-1">
                 <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
                 section 2, paragraph 3 <Span>c++</Span>
@@ -66,6 +58,9 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
                 <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"C++ basics"</span> . The convention , give same name
                 of <Span>BBBB</Span> just with Capital letter , and without dashes
               </li>
+              <div className="my-8"></div>
+              <Span>Z_DropDownTemplate</Span> code :
+              <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
             </ul>
           </li>
           <li className="my-1">

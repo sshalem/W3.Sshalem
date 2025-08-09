@@ -43,30 +43,54 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
           <div className="my-2">Folder layout :</div>
           <IMG img_name={page_create_13}></IMG>
           <div className="my-2">
-            <Span>PointersMain.tsx</Span> code :
+            <Span>FunctionsMain.tsx</Span> code :
           </div>
-          <JsxHighlight jsxCode={jsxCode_pointers_main} />
+          <JsxHighlight jsxCode={jsxCode_functions_main} />
           <li className="my-1">
             go to <Span>App.tsx</Span> file
           </li>
           <li className="my-1">
-            add <Span>children</Span> to <Span>FundamentalConcepts</Span>
+            add <Span>children</Span> to <Span>CppBasics</Span>
           </li>
           <li className="my-1">
-            define new route under <Span>FundamentalConcepts</Span> as follows
-            <Span>{`{ path: "pointers", element: <PointersMain /> }`}</Span>
+            define new route under <Span>CppBasics</Span> as follows
+            <Span>{`{ path: "functions", element: <FunctionsMain /> }`}</Span>
           </li>
 
-          <JsxHighlight jsxCode={jsxCode_App_with_pointers} />
+          <JsxHighlight jsxCode={jsxCode_App_with_functions} />
           <li className="my-1">
-            go to <Span>DropDownFundamentalConcepts.tsx</Span> in folder <Span>DropCpp</Span>
+            go to <Span>DropDownCppBasics.tsx</Span> in folder <Span>DropCpp</Span>
           </li>
           <li className="my-1">
             copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
-            <Span>DropDownFundamentalConcepts.tsx</Span>
-            <div className="my-2">
-              <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
-            </div>
+            <Span>DropDownCppBasics.tsx</Span>. <br />
+            In the code, fill the following :
+            <ul className="my-4 ml-4 list-disc">
+              <li className="my-1">
+                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
+                section 2, paragraph 3 <Span>c++</Span>
+              </li>
+              <li className="my-1">
+                <Span>BBBB</Span>- replace with url path
+                <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span> (see section 6, paragrapgh 6.4)
+              </li>
+              <li className="my-1">
+                <Span>cccc</Span>- replace with url path
+                <span className="mx-1 font-mono text-lg text-red-500">"functions"</span> (see section 7, paragrapgh 5)
+              </li>
+              <li>
+                <Span>topicName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"C++ basics"</span> . The convention , give same name of
+                <Span>BBBB</Span> just with Capital letter , and without dashes
+              </li>
+              <li>
+                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fointers"</span> . The convention , give same
+                name of <Span>cccc</Span> just with Capital letter , and without dashes
+              </li>
+              <div className="my-8">
+                <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
+              </div>
+              <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
+            </ul>
           </li>
           <li className="my-1">
             In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB</Span> , <Span>cccc</Span>
@@ -91,6 +115,9 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Pointers"</span> . The convention , give same
                 name of <Span>cccc</Span> just with Capital letter , and without dashes
               </li>
+              <div className="my-8">
+                <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
+              </div>
               <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
           </li>
@@ -184,30 +211,30 @@ const Z_DropDownIncludeInternalLink = () => {
 
 export default Z_DropDownIncludeInternalLink;`;
 
-const jsxCode_App_with_pointers = `      path: "/",
+const jsxCode_App_with_functions = `      path: "/",
       element: <MainLayout />,
-      errorElement: <Error />,
+      errorElement: <Error_page />,
       children: [
-        { index: true, element: <Home /> },
+        { index: true, element: <Home_page /> },
         {
           path: "c++",
           element: <Cpp_page />,
           children: [
             { index: true, element: <CppHome /> },
             {
-              path: "fundamental-concepts",
-              element: <FundamentalConcepts />,
+              path: "cpp-basics",
+              element: <CppBasics />,              
               children: [
-                { path: "pointers", element: <PointersMain /> },              
+                { path: "functions", element: <FunctionsMain /> },              
               ],
             },
           ],
         },`;
 
-const jsxCode_pointers_main = `const PointersMain = () => {
-  return <div>Pointers Main ...</div>;
+const jsxCode_functions_main = `const FunctionsMain = () => {
+  return <div>Functions Main ...</div>;
 };
-export default PointersMain;`;
+export default FunctionsMain;`;
 
 const jsxCode_Subject_with_outlet = `import { Outlet, useLocation } from "react-router-dom";
 
