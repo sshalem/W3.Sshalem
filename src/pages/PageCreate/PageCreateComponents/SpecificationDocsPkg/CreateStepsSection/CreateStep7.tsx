@@ -8,17 +8,17 @@ import page_create_16 from "../../../../../assets/page_create_16.jpg";
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownFundamentalConcepts</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects which
-      are internal <Span>Links</Span> of <Span>DropDownFundamentalConcepts</Span>.
+      As <Span>DropDownCppBasics</Span> implies , once the section is clicked, it dropped's down, then I should see a list of subjects which are
+      internal <Span>Links</Span> of <Span>DropDownCppBasics</Span>.
       <ul className="my-4 ml-8 list-disc">
         <li className="my-1">
-          In this section I will add a subject to the <Span>DropDownFundamentalConcepts</Span> section
+          In this section I will add a <Span>internal Link</Span> (subject) to the <Span>DropDownCppBasics</Span> section
         </li>
         <li className="my-1">
-          Subject <Span>Link</Span> name I create <Span>Pointers</Span>
+          Subject <Span>Link</Span> name I create <Span>Functions</Span>
         </li>
         <li className="my-1">
-          (<strong>NOTE : </strong> I made here only one <Span>Link</Span> (subject) , but I can have multple subjects).
+          (<strong>NOTE : </strong> I made here only one <Span>Link</Span> (subject) , but I can have multiple subjects).
         </li>
       </ul>
       <IMG img_name={page_create_16}></IMG>
@@ -27,17 +27,17 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
         <strong>
           steps to add a
           <span className="mx-2 text-blue-600">
-            <strong>Pointers</strong>
+            <strong>Functions</strong>
           </span>
           Subject to the Drop Down List :
         </strong>
 
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            create <Span>PointersSections</Span> folder , inside <Span>/pages/CPlusPlus/CPlusPlusComponents/FundamentalConceptsPkg</Span> folder
+            create <Span>FunctionsSections</Span> folder , inside <Span>/pages/Cpp/CppComponents/CppBasicsPkg</Span> folder
           </li>
           <li className="my-1">
-            create <Span>PointersMain</Span> component , inside <Span>PointersSections</Span> folder
+            create <Span>PointersMain</Span> component , inside <Span>FunctionsSections</Span> folder
           </li>
           <div className="my-2">Folder layout :</div>
           <IMG img_name={page_create_13}></IMG>
@@ -58,7 +58,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
           <JsxHighlight jsxCode={jsxCode_App_with_pointers} />
           <li className="my-1">
-            go to <Span>DropDownFundamentalConcepts.tsx</Span> in folder <Span>DropCPlusPlus</Span>
+            go to <Span>DropDownFundamentalConcepts.tsx</Span> in folder <Span>DropCpp</Span>
           </li>
           <li className="my-1">
             copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
@@ -190,9 +190,9 @@ const jsxCode_App_with_pointers = `      path: "/",
         { index: true, element: <Home /> },
         {
           path: "c++",
-          element: <C_plus_plus_page />,
+          element: <Cpp_page />,
           children: [
-            { index: true, element: <CPlusPlusHome /> },
+            { index: true, element: <CppHome /> },
             {
               path: "fundamental-concepts",
               element: <FundamentalConcepts />,

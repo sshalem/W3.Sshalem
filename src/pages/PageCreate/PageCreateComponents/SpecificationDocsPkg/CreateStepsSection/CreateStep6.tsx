@@ -10,7 +10,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <article>
         In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component. <div className="my-2"></div>
-        <strong>example</strong> :<Span>DropDownFundamentalConcepts.tsx</Span> to show <Span>Fundamental Concepts</Span> as a link
+        <strong>example</strong> :<Span>DropDownCppBasics.tsx</Span> to show <Span>C++ Basics</Span> as an link
         <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>follow the following steps:</strong>
@@ -19,10 +19,10 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             Go to <Span>/pages/Cpp/CppComponents</Span> folder.
           </li>
           <li className="my-1">
-            Create new folder <Span>FundamentalConceptsPkg</Span>.
+            Create new folder <Span>CppBasicsPkg</Span>.
           </li>
           <li className="my-1">
-            Create new Component <Span>FundamentalConcepts.tsx</Span> inside <Span>FundamentalConceptsPkg</Span>.
+            Create new Component <Span>CppBasics.tsx</Span> inside <Span>CppBasicsPkg</Span>.
             <div className="my-2">
               <strong>folder view :</strong>
             </div>
