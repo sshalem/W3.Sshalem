@@ -35,10 +35,10 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
 
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            create <Span>FunctionsSections</Span> folder , inside <Span>/pages/Cpp/CppComponents/CppBasicsPkg</Span> folder
+            create folder <Span>FunctionsSections</Span> , inside <Span>/pages/Cpp/CppComponents/CppBasicsPkg</Span> folder
           </li>
           <li className="my-1">
-            create <Span>PointersMain</Span> component , inside <Span>FunctionsSections</Span> folder
+            create component <Span>FunctionsMain</Span> , inside <Span>FunctionsSections</Span> folder
           </li>
           <div className="my-2">Folder layout :</div>
           <IMG img_name={page_create_13}></IMG>
