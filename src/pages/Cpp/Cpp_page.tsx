@@ -2,9 +2,9 @@ import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../../components";
-import DropDownFundamentalConcepts from "./DropCPlusPlus/DropDownFundamentalConcepts";
+import DropDownFundamentalConcepts from "./DropCpp/DropDownFundamentalConcepts";
 
-const C_plus_plus_page = () => {
+const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -45,4 +45,4 @@ const C_plus_plus_page = () => {
   );
 };
 
-export default C_plus_plus_page;
+export default Cpp_page;

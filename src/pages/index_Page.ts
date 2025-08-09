@@ -1,5 +1,5 @@
 export { default as Batch_page } from "./Batch/Batch_page";
-export { default as C_plus_plus_page } from "./CPlusPlus/C_plus_plus_page";
+export { default as Cpp_page } from "./Cpp/Cpp_page";
 export { default as DevOps_page } from "./DevOps/DevOps_page";
 export { default as FullStack_page } from "./FullStack/FullStack_page";
 export { default as Git_page } from "./Git/Git_page";

@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import {
   Batch_page,
-  C_plus_plus_page,
+  Cpp_page,
   DevOps_page,
   Error_page,
   FullStack_page,
@@ -59,11 +59,12 @@ import {
   WebPageComponent,
 } from "./pages/PageCreate/PageCreateComponents";
 
-import { CPlusPlusHome, PointersMain, FundamentalConcepts } from "./pages/CPlusPlus/CPlusPlusComponents";
+import { CppHome, PointersMain, FundamentalConcepts } from "./pages/Cpp/CppComponents";
 
 import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
 import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
+import { HtmlCssHome } from "./pages/HTML_CSS/HtmlCssComponents";
 
 const router = createBrowserRouter(
   [
@@ -75,9 +76,9 @@ const router = createBrowserRouter(
         { index: true, element: <Home_page /> },
         {
           path: "c++",
-          element: <C_plus_plus_page />,
+          element: <Cpp_page />,
           children: [
-            { index: true, element: <CPlusPlusHome /> },
+            { index: true, element: <CppHome /> },
             {
               path: "fundamental-concepts",
               element: <FundamentalConcepts />,
@@ -170,7 +171,7 @@ const router = createBrowserRouter(
             { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
           ],
         },
-        { path: "html_css", element: <HTML_CSS_page /> },
+        { path: "html_css", element: <HTML_CSS_page />, children: [{ index: true, element: <HtmlCssHome /> }] },
         { path: "fullstack", element: <FullStack_page /> },
         {
           path: "java",
