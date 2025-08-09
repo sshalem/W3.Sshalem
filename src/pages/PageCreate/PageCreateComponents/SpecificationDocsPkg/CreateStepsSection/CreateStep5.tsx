@@ -17,7 +17,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li>
-            under <Span>/pages/CPlusPlus</Span> folder, create new folder with name <Span>CPlusPlusComponents</Span>
+            under <Span>/pages/Cpp</Span> folder, create new folder with name <Span>CppComponents</Span>
           </li>
           {/*  */}
           {/*  */}
@@ -26,15 +26,15 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             <ul className="list ml-4">
               <ul className="my-4 ml-8 list-disc">
                 <li>
-                  <Span>CPlusPlusHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link <Span>C++</Span>
+                  <Span>CppHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link <Span>C++</Span>
                 </li>
                 <li>
                   <Span>index.ts</Span> - to comine all componets in one file, to prevent multiple <Span>import</Span> lines.
                 </li>
               </ul>
-              Here is <Span>CPLusPLusComponents</Span> folder with 2 files inside. <br />
+              Here is <Span>CppComponents</Span> folder with 2 files inside. <br />
               <IMG img_name={page_create_6}></IMG>
-              <Span>CPlusPlusHome.tsx</Span> code :<JsxHighlight jsxCode={jsx_C_plus_plus_home} />
+              <Span>CppHome.tsx</Span> code :<JsxHighlight jsxCode={jsx_C_plus_plus_home} />
               <Span>index.ts</Span> code : <JsxHighlight jsxCode={jsxCode_Index} />
             </ul>
           </li>
@@ -49,18 +49,18 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
               3.1. go to <Span>App.tsx</Span>
             </div>
             <div className="my-1">
-              3.2. Add the <Span>children</Span> array , inside <Span>C_plus_plus_page</Span> component.
+              3.2. Add the <Span>children</Span> array , inside <Span>Cpp_page</Span> component.
             </div>
             <div className="my-1">
-              3.3. See that I define <Span>CPlusPlusHome.tsx</Span> as
-              <Span>index</Span> , so when I click on <Span>C++</Span> link on Navbar , I will land on <Span>CPlusPlusHome.tsx</Span>.
+              3.3. See that I define <Span>CppHome.tsx</Span> as
+              <Span>index</Span> , so when I click on <Span>C++</Span> link on Navbar , I will land on <Span>CppHome.tsx</Span>.
             </div>
             <div className="my-1">
               3.3. See the assign <Span>url path</Span> I gave to each component
             </div>
             <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
             <div className="my-1">
-              Add to <Span>C_plus_plus_page</Span> component , the <Span>SideBarLink</Span> component with <Span>pageName</Span> and
+              Add to <Span>Cpp_page</Span> component , the <Span>SideBarLink</Span> component with <Span>pageName</Span> and
               <Span>internalLink</Span> as below:
               <ul className="my-4 ml-8 list-disc">
                 <li>
@@ -78,14 +78,14 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
 
 export default CreateStep5;
 
-const jsxCode_Index = `export { default as CPlusPlusHome } from "./CPlusPlusHome";`;
+const jsxCode_Index = `export { default as CppHome } from "./CppHome";`;
 
 const jsxCode_C_plus_with_links = `import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { GridLayout, SideBarLink } from "../components";
 
-const C_plus_plus_page = () => {
+const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -125,17 +125,17 @@ const C_plus_plus_page = () => {
   );
 };
 
-export default C_plus_plus_page;`;
+export default Cpp_page;`;
 
 const jsxCode_AppAddedChildren = `        {
           path: "c++",
-          element: <C_plus_plus_page />,
+          element: <Cpp_page />,
           children: [
-            { index: true, element: <CPlusPlusHome /> },            
+            { index: true, element: <CppHome /> },            
           ],
         },`;
 
-const jsx_C_plus_plus_home = `const CPlusPlusHome = () => {
+const jsx_C_plus_plus_home = `const CppHome = () => {
   return <div className="text-3xl">C++ Home ...</div>;
 };
-export default CPlusPlusHome;`;
+export default CppHome;`;
