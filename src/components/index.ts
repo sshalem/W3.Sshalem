@@ -1,5 +1,4 @@
 export { default as MainLayout } from "./MainLayout";
-import SpanGreen from "./Highlight/SpanGreen";
 export { default as TopNavbar } from "./TopNavbar";
 export { default as Navbar } from "./Navbar";
 export { default as SideNavbar } from "./SideNavbar";
