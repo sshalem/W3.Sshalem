@@ -18,7 +18,7 @@ const DropDownHtml = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("java")) {
+    if (location.pathname.includes("html-basics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,14 +34,14 @@ const DropDownHtml = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/basics" topicName="Java Basics" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/html_css/html-basics" topicName="HTML Basics" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Array" internalLink="/java/basics/array" />
+        <SideDropdownLink sideDropDownNavName="HTML types" internalLink="/html_css/html-basics/html-types" />
       </div>
     </section>
   );

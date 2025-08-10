@@ -64,7 +64,7 @@ import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
 import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
-import { HtmlCssHome } from "./pages/HTML_CSS/HtmlCssComponents";
+import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 
 const router = createBrowserRouter(
   [
@@ -171,7 +171,15 @@ const router = createBrowserRouter(
             { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
           ],
         },
-        { path: "html_css", element: <HTML_CSS_page />, children: [{ index: true, element: <HtmlCssHome /> }] },
+        {
+          path: "html_css",
+          element: <HTML_CSS_page />,
+          children: [
+            { index: true, element: <HtmlCssHome /> },
+            { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
+            { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
+          ],
+        },
         { path: "fullstack", element: <FullStack_page /> },
         {
           path: "java",

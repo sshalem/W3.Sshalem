@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { DropDownCss, DropDownHtml } from "./HtmlCssComponents";
 
 const HTML_CSS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,6 +34,8 @@ const HTML_CSS_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Html CSS Home" internalLink="/html_css" />
+            <DropDownHtml></DropDownHtml>
+            <DropDownCss></DropDownCss>
           </div>
         </article>
       )}
