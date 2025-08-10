@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
+import StsVersions from "./SpringHomePkg/StsVersions";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const sts_versions = "sts versions";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [sts_versions];
 
 // ============================================
 // ============================================
@@ -48,8 +49,7 @@ const SpringHome = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <StsVersions anchor={sts_versions} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
