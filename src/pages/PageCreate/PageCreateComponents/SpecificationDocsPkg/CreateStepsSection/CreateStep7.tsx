@@ -83,8 +83,8 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <Span>BBBB</Span> just with Capital letter , and without dashes
               </li>
               <li>
-                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fointers"</span> . The convention , give same
-                name of <Span>cccc</Span> just with Capital letter , and without dashes
+                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Functions"</span> . The convention , give
+                same name of <Span>cccc</Span> just with Capital letter , and without dashes
               </li>
               <div className="my-8">
                 <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
@@ -92,7 +92,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
               <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
           </li>
-          <li className="my-1">
+          {/* <li className="my-1">
             In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB</Span> , <Span>cccc</Span>
             <ul className="my-4 ml-4 list-disc">
               <li className="my-1">
@@ -120,7 +120,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
               </div>
               <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
-          </li>
+          </li> */}
           <li>
             This how page layout looks, but something <strong>odd</strong>.
             <Question>
