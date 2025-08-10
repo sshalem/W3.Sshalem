@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../../components";
-import { Span } from "../../../../../components/Highlight";
+import { SpanBlue } from "../../../../../components/Highlight";
 
 const DBInitIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -8,16 +8,16 @@ const DBInitIntro = ({ anchor }: { anchor: string }) => {
       <div className="my-2">In this section , Let's see how we can :</div>
       <ul className="ml-8 list-disc">
         <li className="my-1 ml-5">
-          our own schema , w/o giving spring to create it for us by using a <Span>schema.sql</Span> file
+          our own schema , w/o giving spring to create it for us by using a <SpanBlue>schema.sql</SpanBlue> file
         </li>
         <li className="my-1 ml-5">
-          how to initialize the tables with data , using <Span>data.sql</Span> file
+          how to initialize the tables with data , using <SpanBlue>data.sql</SpanBlue> file
         </li>
         <li className="my-1 ml-5">
-          how to create multiple <Span>schema-${`platform`}.sql</Span> during development
+          how to create multiple <SpanBlue>schema-${`platform`}.sql</SpanBlue> during development
         </li>
         <li className="my-1 ml-5">
-          how to create multiple <Span>data-${`platform`}.sql</Span> during development
+          how to create multiple <SpanBlue>data-${`platform`}.sql</SpanBlue> during development
         </li>
       </ul>
       <div className="my-5">

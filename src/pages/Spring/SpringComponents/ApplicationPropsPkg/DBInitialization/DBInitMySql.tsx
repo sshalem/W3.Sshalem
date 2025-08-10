@@ -1,12 +1,12 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_7 from "../../../../../assets/db_init_7.jpg";
 
 const DBInitMySql = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
-        here is how we config MySql with <Span>data.sql</Span>
+        here is how we config MySql with <SpanBlue>data.sql</SpanBlue>
         <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
@@ -15,7 +15,7 @@ const DBInitMySql = ({ anchor }: { anchor: string }) => {
             </li>
             <li className="my-1">
               <div>
-                create <Span>application-MySql.properties</Span>file
+                create <SpanBlue>application-MySql.properties</SpanBlue>file
               </div>
               <DivDoubleBorder>application-MySql.properties</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={applicationPropsMySqlProfileCode}></ApplicationPropertiesHighlight>
@@ -23,14 +23,14 @@ const DBInitMySql = ({ anchor }: { anchor: string }) => {
 
             <li className="my-1">
               <div>
-                config main <Span>application.properties</Span>
+                config main <SpanBlue>application.properties</SpanBlue>
               </div>
               <DivDoubleBorder>main application.properties</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
             </li>
             <li className="my-1">
               <div>
-                <Span>data-MySql.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+                <SpanBlue>data-MySql.sql</SpanBlue> code , inside folder <SpanBlue>DB_initialization_scripts</SpanBlue>
               </div>
               <DivDoubleBorder>data-MySql.sql</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={dataMySql}></ApplicationPropertiesHighlight>

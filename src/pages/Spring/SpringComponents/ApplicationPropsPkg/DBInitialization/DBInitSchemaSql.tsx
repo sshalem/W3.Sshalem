@@ -1,31 +1,31 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_1 from "../../../../../assets/db_init_1.jpg";
 import db_init_2 from "../../../../../assets/db_init_2.jpg";
 
 const DBSchemaSql = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      In Spring Boot, <Span>schema.sql</Span> is a SQL script file used to define and initialize the database schema (i.e., tables, constraints,
-      indexes) when the application starts. <Span>schema.sql</Span> contains raw SQL statements (like CREATE TABLE, ALTER, etc.) that Spring Boot runs
-      at startup to set up the database structure before inserting any data (via <Span>data.sql</Span>).
+      In Spring Boot, <SpanBlue>schema.sql</SpanBlue> is a SQL script file used to define and initialize the database schema (i.e., tables,
+      constraints, indexes) when the application starts. <SpanBlue>schema.sql</SpanBlue> contains raw SQL statements (like CREATE TABLE, ALTER, etc.)
+      that Spring Boot runs at startup to set up the database structure before inserting any data (via <SpanBlue>data.sql</SpanBlue>).
       <br />
       If there's{" "}
       <em>
         <strong>NO</strong>
       </em>{" "}
-      <Span>data.sql</Span>, no initial data will be inserted.
+      <SpanBlue>data.sql</SpanBlue>, no initial data will be inserted.
       <div>
         Default behavior, Spring Boot looks for:
         <ul className="my-2 ml-16">
           <li className="my1 list-disc">
-            <Span>schema.sql</Span> → for schema creation
+            <SpanBlue>schema.sql</SpanBlue> → for schema creation
           </li>
           <li className="my1 list-disc">
-            <Span>data.sql</Span> → for initial data. If there's no <Span>data.sql</Span>, no initial data will be inserted.
+            <SpanBlue>data.sql</SpanBlue> → for initial data. If there's no <SpanBlue>data.sql</SpanBlue>, no initial data will be inserted.
           </li>
           <li className="my1 list-disc">
-            They are executed in order: first <Span>schema.sql</Span>, then <Span>data.sql</Span>.
+            They are executed in order: first <SpanBlue>schema.sql</SpanBlue>, then <SpanBlue>data.sql</SpanBlue>.
           </li>
         </ul>
       </div>
@@ -38,21 +38,23 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
             </em>
           </DivDoubleBorder>
           <div>
-            When you place <Span>schema.sql</Span> in <Span>src/main/resources</Span>, Spring Boot automatically detects it. (if database
-            initialization <Span>spring.sql.init.mode=always</Span> is enabled) <br />
-            When using <Span>schema.sql</Span> configure your <Span>application.properties</Span> like this :
+            When you place <SpanBlue>schema.sql</SpanBlue> in <SpanBlue>src/main/resources</SpanBlue>, Spring Boot automatically detects it. (if
+            database initialization <SpanBlue>spring.sql.init.mode=always</SpanBlue> is enabled) <br />
+            When using <SpanBlue>schema.sql</SpanBlue> configure your <SpanBlue>application.properties</SpanBlue> like this :
             <ApplicationPropertiesHighlight propertiesCode={schemaSqlCode} />
             <IMG img_name={db_init_1} />
             <ul className="my-8 ml-16 list-decimal">
               <li className="my-1">
-                <Span>spring.sql.init.mode=always</Span> - Enable execution of <Span>schema.sql</Span> and <Span>data.sql</Span>
+                <SpanBlue>spring.sql.init.mode=always</SpanBlue> - Enable execution of <SpanBlue>schema.sql</SpanBlue> and{" "}
+                <SpanBlue>data.sql</SpanBlue>
               </li>
               <li className="my-1">
-                <Span>spring.jpa.hibernate.ddl-auto=none</Span> - when using <Span>schema.sql</Span> , Don't let Hibernate auto-create the schema
+                <SpanBlue>spring.jpa.hibernate.ddl-auto=none</SpanBlue> - when using <SpanBlue>schema.sql</SpanBlue> , Don't let Hibernate auto-create
+                the schema
               </li>
               <li className="my-1">
-                <Span>spring.jpa.defer-datasource-initialization=true</Span> - Makes Spring Boot run SQL scripts before Hibernate initializes
-                (important!). Ensure <Span>schema.sql</Span> runs BEFORE JPA starts (important!)
+                <SpanBlue>spring.jpa.defer-datasource-initialization=true</SpanBlue> - Makes Spring Boot run SQL scripts before Hibernate initializes
+                (important!). Ensure <SpanBlue>schema.sql</SpanBlue> runs BEFORE JPA starts (important!)
               </li>
             </ul>
           </div>
@@ -67,14 +69,15 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
             </em>
           </DivDoubleBorder>
           <div>
-            Let's say I want to put <Span>schema.sql</Span>{" "}
+            Let's say I want to put <SpanBlue>schema.sql</SpanBlue>{" "}
             <em>
               <strong>in different folder</strong>
             </em>{" "}
-            <Span>src/main/resources/sqlSchemas/schema.sql</Span>, we need to tell spring boot about this new path , in order for spring to detect it.{" "}
-            <br />
-            Then, configure your <Span>application.properties</Span> like this. <br /> This tells Spring Boot to load <Span>schema.sql</Span> from
-            <Span>/sqlSchemas/</Span> instead of the default root of resources.
+            <SpanBlue>src/main/resources/sqlSchemas/schema.sql</SpanBlue>, we need to tell spring boot about this new path , in order for spring to
+            detect it. <br />
+            Then, configure your <SpanBlue>application.properties</SpanBlue> like this. <br /> This tells Spring Boot to load{" "}
+            <SpanBlue>schema.sql</SpanBlue> from
+            <SpanBlue>/sqlSchemas/</SpanBlue> instead of the default root of resources.
             <ApplicationPropertiesHighlight propertiesCode={schemaSqlDifferentPathCode} />
             <IMG img_name={db_init_2} />
           </div>
@@ -87,11 +90,11 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
 
         <article>
           <div>
-            Most of the time, I don't use <Span>schema.sql</Span> (I use <Span>data.sql</Span>) , I prefer &nbsp;
+            Most of the time, I don't use <SpanBlue>schema.sql</SpanBlue> (I use <SpanBlue>data.sql</SpanBlue>) , I prefer &nbsp;
             <em>
               <strong>automatic schema generation</strong>.
             </em>
-            <br /> Spring Boot can create tables from your <Span>JPA</Span> <Span>@Entity</Span> classes using:
+            <br /> Spring Boot can create tables from your <SpanBlue>JPA</SpanBlue> <SpanBlue>@Entity</SpanBlue> classes using:
             <ApplicationPropertiesHighlight propertiesCode={propertiesDefaultCode} />
           </div>
         </article>

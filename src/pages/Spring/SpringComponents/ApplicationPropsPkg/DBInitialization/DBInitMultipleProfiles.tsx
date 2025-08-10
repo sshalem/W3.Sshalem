@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_9 from "../../../../../assets/db_init_9.jpg";
 
 const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
@@ -7,24 +7,26 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <div>
         Sometimes , when I'm working on different computers, each computer have different DB installed (Like my desktop, Laptop etc...) <br />
-        Hence, when I work on big projects, I allways config 3 files ( 3 <Span>application.properties</Span> files) for each of the following DB:
+        Hence, when I work on big projects, I allways config 3 files ( 3 <SpanBlue>application.properties</SpanBlue> files) for each of the following
+        DB:
         <ul className="my-4 ml-16 list-decimal">
           <li className="my-1">H2</li>
           <li className="my-1">MySql</li>
           <li className="my-1">Postgresql</li>
         </ul>
-        This way, instead of re-configuring the properties file, I just Enable/Disable the profile in the main <Span>application.properties</Span>
+        This way, instead of re-configuring the properties file, I just Enable/Disable the profile in the main{" "}
+        <SpanBlue>application.properties</SpanBlue>
         file. <br />
         {/* <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
-              create <Span>application-Postgres.properties</Span>file
+              create <SpanBlue>application-Postgres.properties</SpanBlue>file
             </li>
             <li className="my-1">
-              config main <Span>application.properties</Span>
+              config main <SpanBlue>application.properties</SpanBlue>
             </li>
             <li className="my-1">
-              <Span>data-PostGreSql.sql</Span>
+              <SpanBlue>data-PostGreSql.sql</SpanBlue>
             </li>
           </ul>
         </div> */}
@@ -33,7 +35,7 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
       </div>
       <DivDoubleBorder>main application.properties</DivDoubleBorder>
       <div>
-        This is how the main <Span>application.properties</Span> in configured. <br />
+        This is how the main <SpanBlue>application.properties</SpanBlue> in configured. <br />
         For example, If I want to work with MySql profile, I disable the other profiles, and Enable MySql profile.
       </div>
       <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>

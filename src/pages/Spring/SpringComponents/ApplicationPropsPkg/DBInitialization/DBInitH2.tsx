@@ -1,11 +1,11 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_6 from "../../../../../assets/db_init_6.jpg";
 
 const DBInitH2 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      here is how we config H2 with <Span>data.sql</Span>
+      here is how we config H2 with <SpanBlue>data.sql</SpanBlue>
       <div>
         <ul className="my-4 ml-16 list-decimal">
           <li className="my-1">
@@ -14,7 +14,7 @@ const DBInitH2 = ({ anchor }: { anchor: string }) => {
           </li>
           <li className="my-1">
             <div>
-              create <Span>application-H2.properties</Span>file
+              create <SpanBlue>application-H2.properties</SpanBlue>file
             </div>
             <DivDoubleBorder>application-H2.properties</DivDoubleBorder>
             <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
@@ -22,7 +22,7 @@ const DBInitH2 = ({ anchor }: { anchor: string }) => {
 
           <li className="my-1">
             <div>
-              config main <Span>application.properties</Span>
+              config main <SpanBlue>application.properties</SpanBlue>
             </div>
             <DivDoubleBorder>main application.properties</DivDoubleBorder>
             <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
@@ -30,7 +30,7 @@ const DBInitH2 = ({ anchor }: { anchor: string }) => {
 
           <li className="my-1">
             <div>
-              <Span>data-H2.sql</Span> code , inside folder <Span>DB_initialization_scripts</Span>
+              <SpanBlue>data-H2.sql</SpanBlue> code , inside folder <SpanBlue>DB_initialization_scripts</SpanBlue>
             </div>
             <DivDoubleBorder>data-H2.sql</DivDoubleBorder>
             <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
