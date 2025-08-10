@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
 import db_init_5 from "../../../../../assets/db_init_5.jpg";
 
 const DBInitPlatform = ({ anchor }: { anchor: string }) => {
@@ -21,9 +21,7 @@ const DBInitPlatform = ({ anchor }: { anchor: string }) => {
         database-specific variations by naming them with a <Span>-{`<platform>`}</Span> suffix. The <Span>spring.sql.init.platform</Span> property
         tells Spring Boot which variant to pick.
       </div>
-      <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        Example
-      </div>
+      <DivDoubleBorder>Example</DivDoubleBorder>
       <div className="ml-5">
         config <Span>application.properties</Span> like this (Note : the name is case sensitive)
         <ApplicationPropertiesHighlight propertiesCode="spring.sql.init.platform=MySql" />

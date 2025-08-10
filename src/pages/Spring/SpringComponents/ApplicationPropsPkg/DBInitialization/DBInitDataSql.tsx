@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
 import db_init_3 from "../../../../../assets/db_init_3.jpg";
 import db_init_4 from "../../../../../assets/db_init_4.jpg";
 
@@ -36,12 +36,12 @@ const DBDataSql = ({ anchor }: { anchor: string }) => {
       </div>
       <section>
         <article className="my-8">
-          <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+          <DivDoubleBorder>
             <strong>data.sql</strong> located in{" "}
             <em>
               <strong>src/main/resources</strong>
             </em>
-          </div>
+          </DivDoubleBorder>
           <div>
             When you place <Span>data.sql</Span> in <Span>src/main/resources</Span>, Spring Boot automatically detects it. (if database initialization
             <Span>spring.sql.init.mode=always</Span> is enabled) <br />
@@ -84,12 +84,12 @@ const DBDataSql = ({ anchor }: { anchor: string }) => {
         {/*  */}
         {/*  */}
         <article className="my-8">
-          <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
+          <DivDoubleBorder>
             <strong>data.sql</strong> located in{" "}
             <em>
               <strong>src/main/resources/sqlData/data.sql</strong>
             </em>
-          </div>
+          </DivDoubleBorder>
           <div>
             Let's say I want to put <Span>data.sql</Span>{" "}
             <em>

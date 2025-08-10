@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
 import db_init_8 from "../../../../../assets/db_init_8.jpg";
 
 const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
@@ -17,27 +17,21 @@ const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
               <div>
                 create <Span>application-Postgres.properties</Span>file
               </div>
-              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-                application-Postgres.properties
-              </div>
+              <DivDoubleBorder>application-Postgres.properties</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={applicationPropsPostGresqlProfileCode}></ApplicationPropertiesHighlight>
             </li>
             <li className="my-1">
               <div>
                 config main <Span>application.properties</Span>
               </div>
-              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-                main application.properties
-              </div>
+              <DivDoubleBorder>main application.properties</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
             </li>
             <li className="my-1">
               <div>
                 <Span>data-PostGreSql.sql</Span>
               </div>
-              <div className="mt-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-                data-PostGreSql.sql
-              </div>
+              <DivDoubleBorder>data-PostGreSql.sql</DivDoubleBorder>
               <ApplicationPropertiesHighlight propertiesCode={dataPostGreSql}></ApplicationPropertiesHighlight>
             </li>
           </ul>
