@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const MySqlOSIV = ({ anchor }: { anchor: string }) => {
   return (
@@ -7,7 +7,7 @@ const MySqlOSIV = ({ anchor }: { anchor: string }) => {
       <div className="my-4">
         Regarding this property , see the project of LAZY Loading, (I explain it there). <br />I get a warning in spring console since by default its
         set to
-        <Span>true</Span> . <br /> To disable the warning, I set to <Span>false</Span>
+        <SpanBlue>true</SpanBlue> . <br /> To disable the warning, I set to <SpanBlue>false</SpanBlue>
       </div>
       <ApplicationPropertiesHighlight propertiesCode={osiv} />
     </MainChildArea>

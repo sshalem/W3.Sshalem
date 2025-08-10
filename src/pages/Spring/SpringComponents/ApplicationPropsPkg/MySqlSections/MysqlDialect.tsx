@@ -1,17 +1,17 @@
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-4">
-        When using java version <Span>JDK8</Span> use with <Span>mysql</Span> dialect :
+        When using java version <SpanBlue>JDK8</SpanBlue> use with <SpanBlue>mysql</SpanBlue> dialect :
         <div className="my-4">
           <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
         </div>
       </div>
       <div className="my-8">
-        When using java version <Span>JDK11</Span> use with <Span>mysql</Span> dialect :
+        When using java version <SpanBlue>JDK11</SpanBlue> use with <SpanBlue>mysql</SpanBlue> dialect :
         <div className="my-4">
           <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
         </div>

@@ -1,26 +1,26 @@
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <Question>
-        What is difference between <Span> spring.jpa.show-sql=true</Span> to <Span>logging.level.org.hibernate.SQL=debug</Span> ?
+        What is difference between <SpanBlue> spring.jpa.show-sql=true</SpanBlue> to <SpanBlue>logging.level.org.hibernate.SQL=debug</SpanBlue> ?
       </Question>
 
       <Answer>
         <p className="my-2">
-          1. <Span>spring.jpa.show-sql=true</Span> - show the the logging w/o the the time stamp and the package name
+          1. <SpanBlue>spring.jpa.show-sql=true</SpanBlue> - show the the logging w/o the the time stamp and the package name
         </p>
         <p className="my-2">
-          2. <Span> logging.level.org.hibernate.SQL=debug</Span> - shows the logging with the time stamp and the package name
+          2. <SpanBlue> logging.level.org.hibernate.SQL=debug</SpanBlue> - shows the logging with the time stamp and the package name
         </p>
       </Answer>
 
       <div>Better to use the following :</div>
       <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
       <div className="my-8">
-        here below , I give example of <Span>application.properties</Span> with explaination:
+        here below , I give example of <SpanBlue>application.properties</SpanBlue> with explaination:
       </div>
       <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
     </MainChildArea>
