@@ -8,3 +8,4 @@ export { default as SpanText } from "./SpanText";
 export { default as SpanGreen } from "./SpanGreen";
 export { default as SpanRed } from "./SpanRed";
 export { default as SpanBlue } from "./SpanBlue";
+export { default as DivDoubleBorder } from "./DivDoubleBorder";

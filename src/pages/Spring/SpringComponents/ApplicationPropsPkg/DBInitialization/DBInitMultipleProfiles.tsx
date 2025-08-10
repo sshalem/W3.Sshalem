@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, Span } from "../../../../../components/Highlight";
 import db_init_9 from "../../../../../assets/db_init_9.jpg";
 
 const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
@@ -31,21 +31,17 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
         Image below shows I have 3 profiles config
         <IMG img_name={db_init_9}></IMG>
       </div>
-      <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        main application.properties
-      </div>
+      <DivDoubleBorder>main application.properties</DivDoubleBorder>
       <div>
         This is how the main <Span>application.properties</Span> in configured. <br />
         For example, If I want to work with MySql profile, I disable the other profiles, and Enable MySql profile.
       </div>
       <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
-      <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        application-{`<profile>`}.properties
-      </div>
+
+      <DivDoubleBorder>{`application-<profile>.properties`}</DivDoubleBorder>
       <div>See Implementation above in each section (H2, MySql, PostgResql)</div>
-      <div className="my-8 inline-block border-spacing-10 rounded-md border-8 border-double border-zinc-400 p-1 tracking-wider text-black">
-        data-{`<platform>`}.sql
-      </div>
+
+      <DivDoubleBorder>{`data-<platform>.sql`}</DivDoubleBorder>
       <div>See Implementation above in each section (H2, MySql, PostgResql)</div>
     </MainChildArea>
   );

@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { IMG, InternalArticle, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 import profile_1 from "../../../../../assets/profile_1.jpg";
 
 const ProfileConfig = ({ anchor }: { anchor: string }) => {
@@ -32,7 +32,7 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
                   In the default properties I define who will be the profile properties that app will use, for example DEV profile.
                 </li>
                 <li className="my-1">
-                  Set the active profile in the default <Span>application.properties</Span>
+                  Set the active profile in the default <SpanBlue>application.properties</SpanBlue>
                 </li>
               </ul>
             </div>
@@ -40,16 +40,16 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
             <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
             <div className="my-5">
               This tells Spring Boot to load &nbsp;
-              <Span>application-dev.properties</Span>&nbsp; in addition to the default config.
+              <SpanBlue>application-dev.properties</SpanBlue>&nbsp; in addition to the default config.
               <br />
               <div className="my-2">
-                The pattern is of a profile config is : <Span>application-{`{profile-name}`}.properties</Span>
+                The pattern is of a profile config is : <SpanBlue>application-{`{profile-name}`}.properties</SpanBlue>
               </div>
               <div className="my-2">
-                Where <Span>{`{profile-name}`}</Span> - will be the name of the profile we select .
+                Where <SpanBlue>{`{profile-name}`}</SpanBlue> - will be the name of the profile we select .
               </div>
               <div className="my-2">
-                In our example <Span>{`{profile-name}`}</Span> is <Span>dev</Span>
+                In our example <SpanBlue>{`{profile-name}`}</SpanBlue> is <SpanBlue>dev</SpanBlue>
               </div>
             </div>
           </div>
@@ -58,13 +58,13 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
         {/*  */}
         <InternalArticle articleTitle="Step 2 : Create Profile-Specific Properties File">
           <div className="my-2 mb-4">
-            Create a new file of <Span>application-dev.properties</Span> in <Span>src/main/resources:</Span>
+            Create a new file of <SpanBlue>application-dev.properties</SpanBlue> in <SpanBlue>src/main/resources:</SpanBlue>
           </div>
           <IMG img_name={profile_1}></IMG>
 
           <div className="my-8">
             <div className="my-4">
-              type the following code inside <Span>application-dev.properties</Span>
+              type the following code inside <SpanBlue>application-dev.properties</SpanBlue>
             </div>
             <ApplicationPropertiesHighlight propertiesCode={devCode} />
           </div>

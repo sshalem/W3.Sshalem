@@ -3,7 +3,7 @@ import dbeaver_mysql_1 from "../../../../../assets/dbeaver_mysql_1.jpg";
 import dbeaver_mysql_2 from "../../../../../assets/dbeaver_mysql_2.jpg";
 import dbeaver_mysql_2_1 from "../../../../../assets/dbeaver_mysql_2_1.jpg";
 import dbeaver_mysql_3 from "../../../../../assets/dbeaver_mysql_3.jpg";
-import { Span } from "../../../../../components/Highlight";
+import { Span, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import { IMG, MainChildArea } from "../../../../../components";
 
 const DBeaverMySql = ({ anchor }: { anchor: string }) => {
@@ -20,21 +20,21 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           <div className="my-2">Under main Tab select the following:</div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> <Span>cms</Span> - thats the name of DB in MySql workbench
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> <SpanBlue>cms</SpanBlue> - thats the name of DB in MySql workbench
           </div>
           <div className="my-1 ml-8 flex">
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> Note - Database field is empty , meaning DBeaver will import all databases
             available
           </div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> user and password : both are <Span>root</Span> (as I define when I installed
-            MySql on my computer)
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> user and password : both are <SpanBlue>root</SpanBlue> (as I define when I
+            installed MySql on my computer)
           </div>
           <IMG img_name={dbeaver_mysql_2}></IMG>
 
           <div className="my-1 ml-8 flex">
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> there is also option to define the local client as &nbsp;
-            <span className="rounded-md bg-emerald-500 px-1 text-white">MySql Server 8.0</span>
+            <SpanGreen>MySql Server 8.0</SpanGreen>
           </div>
           <IMG img_name={dbeaver_mysql_2_1}></IMG>
         </li>
