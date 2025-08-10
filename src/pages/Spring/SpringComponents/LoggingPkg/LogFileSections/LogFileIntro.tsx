@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { LoggingComapreTable, MainChildArea } from "../../../../../components";
+import { TableComapreLogging, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const LogFileIntro = ({ anchor }: { anchor: string }) => {
@@ -52,7 +52,7 @@ const LogFileIntro = ({ anchor }: { anchor: string }) => {
             There are 4 possible options to configure <SpanBlue>Spring Boot Logging</SpanBlue> with logging file on production server (see Spring docs
             ) &nbsp;
           </article>
-          <LoggingComapreTable />
+          <TableComapreLogging />
           {/*  */}
           <article className="my-4">
             <div className="my-5">

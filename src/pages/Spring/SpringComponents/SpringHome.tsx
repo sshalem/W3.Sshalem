@@ -1,18 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../components";
 import StsVersions from "./SpringHomePkg/StsVersions";
+import SpringTopics from "./SpringHomePkg/SpringTopics";
+import SpringGuideRefrence from "./SpringHomePkg/SpringGuideRefrence";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const sts_versions = "sts versions";
+const spring_topics = "spring topics";
+const spring_guide_refrence = "spring guide refrence";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [sts_versions];
+const anchorList: string[] = [spring_topics, sts_versions];
 
 // ============================================
 // ============================================
@@ -49,7 +53,9 @@ const SpringHome = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
+      <SpringTopics anchor={spring_topics} />
       <StsVersions anchor={sts_versions} />
+      <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

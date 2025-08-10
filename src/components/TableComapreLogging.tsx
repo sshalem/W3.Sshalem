@@ -1,4 +1,4 @@
-const LoggingComapreTable = () => {
+const TableComapreLogging = () => {
   const data = [
     {
       name: "(none)",
@@ -35,8 +35,8 @@ const LoggingComapreTable = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, idx) => (
-            <tr key={idx}>
+          {data.map((row, index) => (
+            <tr key={index}>
               <td>{row.name}</td>
               <td>{row.path}</td>
               <td>{row.description}</td>
@@ -48,4 +48,4 @@ const LoggingComapreTable = () => {
   );
 };
 
-export default LoggingComapreTable;
+export default TableComapreLogging;
