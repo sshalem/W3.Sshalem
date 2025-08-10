@@ -1,40 +1,40 @@
 import { InternalArticle, MainChildArea } from "../../../../../components";
-import { JavaHighlight, Span } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const PojoAsJson = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="mb-5">
         There are times where I want to display a JAVA Object (POJO) as JSON format , for convinience. <br />
-        to do that I will use the <Span>JACKSON</Span> library.
+        to do that I will use the <SpanBlue>JACKSON</SpanBlue> library.
         <InternalArticle articleTitle="JACKSON - JSON Data Binding">
           <ul className="mx-8 list-disc">
             <li className="my-1">Data Binding is the process of converting JSON data to a JAVA POJO </li>
             <li className="my-1">Also known as : mapping, Serialization/Deserialization , Marshalling/Unmarshalling</li>
             <li className="my-1">
-              <Span>Spring</Span> uses the <Span>JACKSON</Span> Project behind the scene.
+              <SpanBlue>Spring</SpanBlue> uses the <SpanBlue>JACKSON</SpanBlue> Project behind the scene.
             </li>
             <li className="my-1">
-              <Span>JACKSON</Span> handles data binding between JSON and JAVA POJO.
+              <SpanBlue>JACKSON</SpanBlue> handles data binding between JSON and JAVA POJO.
             </li>
           </ul>
           <div className="mb-2 mt-8">
-            <Span>JACKSON</Span> data Binding API:
+            <SpanBlue>JACKSON</SpanBlue> data Binding API:
           </div>
           <ul className="mx-8 list-disc">
             <li className="my-1">
-              Package: <Span>com.fasterxml.jackson.databind</Span>
+              Package: <SpanBlue>com.fasterxml.jackson.databind</SpanBlue>
             </li>
             <li className="my-1">Supports XML and JSON</li>
             <li className="my-1">
-              By default <Span>JACKSON</Span> calls appropriate <Span>getter/setter methods</Span>
+              By default <SpanBlue>JACKSON</SpanBlue> calls appropriate <SpanBlue>getter/setter methods</SpanBlue>
             </li>
           </ul>
         </InternalArticle>
         <InternalArticle articleTitle="Spring and Jackson Support">
           <div>
-            The following things are done automatically , behind the scene by <Span>JACKSON</Span> project ,When building <Span>Spring REST</Span>{" "}
-            &nbsp; applications :
+            The following things are done automatically , behind the scene by <SpanBlue>JACKSON</SpanBlue> project ,When building{" "}
+            <SpanBlue>Spring REST</SpanBlue> &nbsp; applications :
           </div>
           <ul className="mx-8 list-disc">
             <li className="my-1">Spring will automatically handle Jackson Integration</li>
@@ -42,12 +42,12 @@ const PojoAsJson = ({ anchor }: { anchor: string }) => {
             <li className="my-1">JAVA object being returned from REST controller is converted to JSON</li>
             <li className="my-1">
               To Convert JAVA POJO to JSON- Jackson project calls
-              <span className="text-emerald-500"> getter methods</span>
+              <SpanGreen> getter methods</SpanGreen>
               &nbsp; on POJO.
             </li>
             <li className="my-1">
               To Convert JSON to JAVA POJO - Jackson project calls
-              <span className="text-red-500"> setter methods</span>
+              <SpanRed> setter methods</SpanRed>
               &nbsp; on POJO. (It doesn't access internal private fields directly.)
             </li>
           </ul>

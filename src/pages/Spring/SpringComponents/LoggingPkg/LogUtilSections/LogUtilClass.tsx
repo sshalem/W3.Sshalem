@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, Span } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const LogUtilClass = ({ anchor }: { anchor: string }) => {
   // Per OpenAI
@@ -22,15 +22,15 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-4">
-        Here is the code, I created for self usage , a <Span>Log class</Span> which all its methods are static.
+        Here is the code, I created for self usage , a <SpanBlue>Log class</SpanBlue> which all its methods are static.
         <br />
-        To use it, I create a <Span>util</Span> package in Spring Boot application , and add this class in it.
-        <br />I have several options with this <Span>Log.java</Span>class
+        To use it, I create a <SpanBlue>util</SpanBlue> package in Spring Boot application , and add this class in it.
+        <br />I have several options with this <SpanBlue>Log.java</SpanBlue>class
       </div>
       <div className="my-4">
         <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">System.out.println()</p>
         <p>
-          Print to console with <Span>System.out.println()</Span> using the following ways:
+          Print to console with <SpanBlue>System.out.println()</SpanBlue> using the following ways:
         </p>
       </div>
       <ul className="list-disc pl-8">
@@ -42,7 +42,7 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
       <div className="my-4">
         <p className="my-4 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">Logger object</p>
         <p>
-          By getting the <Span>Logger</Span> from the used class (see from line <span className="text-red-500">935</span>):
+          By getting the <SpanBlue>Logger</SpanBlue> from the used class (see from line <span className="text-red-500">935</span>):
         </p>
       </div>
       <ul className="list-disc pl-8">

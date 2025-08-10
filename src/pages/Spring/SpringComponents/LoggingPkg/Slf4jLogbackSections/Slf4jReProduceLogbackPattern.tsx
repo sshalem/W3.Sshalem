@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
         </div>
         <div>I have re-produce the same logging pattern that comes with deafult .</div>
         <div>
-          This line of logger creates same format of logging in <Span>spring console</Span> :
+          This line of logger creates same format of logging in <SpanBlue>spring console</SpanBlue> :
         </div>
         <div>
           <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />
@@ -28,25 +28,25 @@ const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
         <div className="my-8">logging.pattern.console exlpained:</div>
         <ul className="mx-8 list-decimal">
           <li className="my-1">
-            <Span>{line_1}</Span> - Date and Time: Millisecond precision and easily sortable.
+            <SpanBlue>{line_1}</SpanBlue> - Date and Time: Millisecond precision and easily sortable.
           </li>
           <li className="my-1">
-            <Span>{line_2}</Span> - Log Level: ERROR, WARN, INFO, DEBUG, or TRACE.
+            <SpanBlue>{line_2}</SpanBlue> - Log Level: ERROR, WARN, INFO, DEBUG, or TRACE.
           </li>
           <li className="my-1">
-            <Span>{line_3}</Span> - Process ID.
+            <SpanBlue>{line_3}</SpanBlue> - Process ID.
           </li>
           <li className="my-1">
-            <Span>{line_4}</Span> - 3 dashes --- separator to distinguish the start of actual log messages.
+            <SpanBlue>{line_4}</SpanBlue> - 3 dashes --- separator to distinguish the start of actual log messages.
           </li>
           <li className="my-1">
-            <Span>{line_5}</Span> - Thread name: Enclosed in square brackets (may be truncated for console output).
+            <SpanBlue>{line_5}</SpanBlue> - Thread name: Enclosed in square brackets (may be truncated for console output).
           </li>
           <li className="my-1">
-            <Span>{line_6}</Span> - Logger name: This is usually the source class name (often abbreviated).
+            <SpanBlue>{line_6}</SpanBlue> - Logger name: This is usually the source class name (often abbreviated).
           </li>
           <li className="my-1">
-            <Span>{line_7}</Span> -The log message.
+            <SpanBlue>{line_7}</SpanBlue> -The log message.
           </li>
         </ul>
       </section>

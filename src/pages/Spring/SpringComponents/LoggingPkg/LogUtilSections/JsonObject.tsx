@@ -1,12 +1,12 @@
 import { ContentAnchor, InternalArticle } from "../../../../../components";
-import { JavaHighlight, Span } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
   return (
     <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
       <ContentAnchor anchor={anchor} />
       <div className="mt-2">
-        <Span>JSON</Span> - JavaScript Object Notation . JSON object are key/value pairs :
+        <SpanBlue>JSON</SpanBlue> - JavaScript Object Notation . JSON object are key/value pairs :
         <ul className="mx-8 list-disc">
           <li className="my-1">
             key (or name) - on left side

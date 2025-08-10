@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, Span, XmlHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanBlue, XmlHighlight } from "../../../../../components/Highlight";
 
 const Slf4jUtil = ({ anchor }: { anchor: string }) => {
   return (
@@ -7,10 +7,10 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
       <section>
         <div className="my-8 inline-block rounded-md bg-teal-500 px-2 py-1 tracking-widest text-white">POM file </div>
         <div>
-          <Span>Logback</Span> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one dependency
-          that it is part of spring boot , <br />
+          <SpanBlue>Logback</SpanBlue> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one
+          dependency that it is part of spring boot , <br />
           <div>
-            for example : <Span> web starter depenency</Span>
+            for example : <SpanBlue> web starter depenency</SpanBlue>
           </div>
           <div className="my-5">Add to POM file</div>
           <XmlHighlight xmlCode={dependency} />
@@ -22,12 +22,12 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
         <div className="my-5">code below I use:</div>
         <ul className="list-disc pl-8">
           <li className="my-1">
-            <Span>import org.slf4j.Logger</Span> - The <span className="text-blue-600">org.slf4j.Logger</span> interface is the main user entry point
-            of SLF4J API.
+            <SpanBlue>import org.slf4j.Logger</SpanBlue> - The <span className="text-blue-600">org.slf4j.Logger</span> interface is the main user
+            entry point of SLF4J API.
           </li>
           <li className="my-1">
-            <Span>import org.slf4j.LoggerFactory</Span> - The <span className="text-blue-600">LoggerFactory</span> is a utility class producing
-            Loggers forvarious logging APIs, e.g. logback
+            <SpanBlue>import org.slf4j.LoggerFactory</SpanBlue> - The <span className="text-blue-600">LoggerFactory</span> is a utility class
+            producing Loggers forvarious logging APIs, e.g. logback
           </li>
         </ul>
         <div className="my-5">

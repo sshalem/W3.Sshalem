@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const Slf4JLogback = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const Slf4JLogback = ({ anchor }: { anchor: string }) => {
         </div>
         <div>I have re-produce the same logging pattern that comes with deafult .</div>
         <div>
-          This line of logger creates same format of logging in <Span>spring console</Span> :
+          This line of logger creates same format of logging in <SpanBlue>spring console</SpanBlue> :
         </div>
         <div>
           <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />

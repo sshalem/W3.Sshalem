@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { Span } from "../../../../../components/Highlight";
+import { SpanBlue } from "../../../../../components/Highlight";
 
 const Slf4jLinks = ({ anchor }: { anchor: string }) => {
   return (
@@ -68,7 +68,7 @@ const Slf4jLinks = ({ anchor }: { anchor: string }) => {
           <li className="my-1">Great improvement over log4j</li>
           <li className="my-1">Faster & smaller memory footprint thatn log4j</li>
           <li className="my-1">
-            Implements <Span>SLF4J</Span> natively
+            Implements <SpanBlue>SLF4J</SpanBlue> natively
           </li>
           <li className="my-1">Automatic reloading of configuration files </li>
           <li className="my-1">Automatic removal of old log archives</li>

@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { LoggingComapreTable, MainChildArea } from "../../../../../components";
-import { Span } from "../../../../../components/Highlight";
+import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const LogFileIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,39 +21,36 @@ const LogFileIntro = ({ anchor }: { anchor: string }) => {
           console output, you need to set a :
           <ul className="my-5 list-disc pl-8">
             <li className="my-1">
-              <Span>logging.file.name</Span>
+              <SpanBlue>logging.file.name</SpanBlue>
             </li>
             <li className="my-1">
-              or <Span>logging.file.path</Span> property (for example, in your application.properties).
+              or <SpanBlue>logging.file.path</SpanBlue> property (for example, in your application.properties).
             </li>
           </ul>
           <div className="my-4">
             If both properties are set &nbsp;
-            <Span>
-              <span className="text-red-500">logging.file.path</span>
-            </Span>
+            <SpanRed>logging.file.path</SpanRed>
             &nbsp; is ignored, and only &nbsp;
-            <Span>
-              <span className="text-emerald-500">logging.file.name</span>
-            </Span>
+            <SpanGreen>logging.file.name</SpanGreen>
             &nbsp; is used.
           </div>
           <div className="my-8">
-            <span className="rounded-md bg-red-500 p-1 px-2 font-semibold text-white">Important note</span>
+            <SpanRed>Important note</SpanRed>
             <ul className="my-5 list-disc pl-8">
               <li className="my-1">
-                <Span>System.out.println()</Span> writes only (directly) to the console (not to file), and bypasses the logging framework entirely.
+                <SpanBlue>System.out.println()</SpanBlue> writes only (directly) to the console (not to file), and bypasses the logging framework
+                entirely.
               </li>
               <li className="my-1">
-                <Span>Spring Boot’s logging()</Span> (e.g., via SLF4J, Logback, or Log4j2) is configured to write logs to both the console and
+                <SpanBlue>Spring Boot’s logging()</SpanBlue> (e.g., via SLF4J, Logback, or Log4j2) is configured to write logs to both the console and
                 optionally a file.
               </li>
             </ul>
           </div>
           {/*  */}
           <article className="my-4">
-            There are 4 possible options to configure <Span>Spring Boot Logging</Span> with logging file on production server (see Spring docs )
-            &nbsp;
+            There are 4 possible options to configure <SpanBlue>Spring Boot Logging</SpanBlue> with logging file on production server (see Spring docs
+            ) &nbsp;
           </article>
           <LoggingComapreTable />
           {/*  */}
