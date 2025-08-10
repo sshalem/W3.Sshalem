@@ -39,13 +39,13 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
           <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
         </li> */}
         <li className="my-1">
-          Import to <SpanBlue>PointersMain.tsx</SpanBlue> component , the 2 new components I created :
+          Import to <SpanBlue>FunctionsMain.tsx</SpanBlue> component , the 2 new components I created
           <ul className="my-2 ml-8 list-disc">
             <li className="my-1">
-              <SpanBlue>PointersIntro.tsx</SpanBlue>
+              <SpanGreen>FunctionsIntro.tsx</SpanGreen>
             </li>
             <li className="my-1">
-              <SpanBlue>PointersTwo.tsx</SpanBlue>
+              <SpanGreen>FunctionsTwo.tsx</SpanGreen>
             </li>
           </ul>
         </li>
