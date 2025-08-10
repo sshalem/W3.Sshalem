@@ -31,7 +31,7 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
             </li>
           </ul>
           <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
-          Folder layout ,with The 2 created components inside the
+          Folder layout ,with The 2 created components inside <SpanBlue>FunctionsSection</SpanBlue> folder
           <IMG img_name={page_create_18} />
         </li>
         {/* <li className="my-1">
