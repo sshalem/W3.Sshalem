@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
+import FunctionsIntro from "./FunctionsIntro";
+import FunctionsTwo from "./FunctionsTwo";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
+
+// const functions_intro = "functions intro";
+// const functions_two = "functions two";
 
 const xxx_intro = "xxx Intro";
 
@@ -11,8 +16,8 @@ const xxx_intro = "xxx Intro";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
+// const anchorList: string[] = [functions_intro, functions_two];
 const anchorList: string[] = [xxx_intro];
-
 // ============================================
 // ============================================
 
@@ -48,9 +53,8 @@ const FunctionsMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      {/* <XXXIntro anchor={xxx_intro} /> */}
-
+      {/* <FunctionsIntro anchor={functions_intro} />
+      <FunctionsTwo anchor={functions_two} /> */}
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

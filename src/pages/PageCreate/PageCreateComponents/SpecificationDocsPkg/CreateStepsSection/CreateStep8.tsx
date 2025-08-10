@@ -39,15 +39,8 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
           <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
         </li> */}
         <li className="my-1">
-          Import to <SpanBlue>FunctionsMain.tsx</SpanBlue> component , the 2 new components I created
-          <ul className="my-2 ml-8 list-disc">
-            <li className="my-1">
-              <SpanGreen>FunctionsIntro.tsx</SpanGreen>
-            </li>
-            <li className="my-1">
-              <SpanGreen>FunctionsTwo.tsx</SpanGreen>
-            </li>
-          </ul>
+          Import to <SpanBlue>FunctionsMain.tsx</SpanBlue> component , the 2 new components I created (<SpanGreen>FunctionsIntro.tsx</SpanGreen>and
+          <SpanGreen>FunctionsTwo.tsx</SpanGreen>)
         </li>
         <JsxHighlight jsxCode={jsxCode_import}></JsxHighlight>
         The code above show , the <strong>content</strong> of each section {`->`} cool. <br />
@@ -56,16 +49,22 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           let's fill the <SpanBlue>content menu</SpanBlue> and the title of each section.
           <ul className="my-2 ml-8 list-disc">
-            <li>create content menu variables</li>
+            <li>
+              In <SpanGreen>FunctionsMain.tsx</SpanGreen> create variables for the content menu
+            </li>
             <JsxHighlight jsxCode={jsxCode_content_menu_variables}></JsxHighlight>
-            <li>Update anchorList with content menu</li>
+            <li>
+              In <SpanGreen>FunctionsMain.tsx</SpanGreen> Update anchorList with content menu variables
+            </li>
             <JsxHighlight jsxCode={jsxCode_Update_anchorList}></JsxHighlight>
-            <li>Update Components with the refered content menu variable</li>
+            <li>
+              In <SpanGreen>FunctionsMain.tsx</SpanGreen> Update Components with the refered content menu variable
+            </li>
             <JsxHighlight jsxCode={jsxCode_update_components}></JsxHighlight>
           </ul>
         </li>
         <div className="my-1">
-          <SpanBlue>PointersMain.tsx</SpanBlue> final code
+          <SpanBlue>FunctionsMain.tsx</SpanBlue> final code
         </div>
         <JsxHighlight jsxCode={jsxCode_Pointers_Main} />
         Now, we get the layout as presented in the beginning of the Section.
@@ -162,36 +161,36 @@ const jsxCode_import = `  return (
     </section>
   );`;
 
-const jsxCode_content_menu_variables = `const pointers_intro = "pointers intro";
-const pointers_two = "pointers two";`;
+const jsxCode_content_menu_variables = `const functions_intro = "functions intro";
+const functions_two = "functions two";`;
 
-const jsxCode_Update_anchorList = `const pointers_intro = "pointers intro";
-const pointers_two = "pointers two";`;
+const jsxCode_Update_anchorList = `const anchorList: string[] = [functions_intro, functions_two];`;
 
 const jsxCode_update_components = `      <PointersIntro anchor={pointers_intro}></PointersIntro>
       <PointersTwo anchor={pointers_two}></PointersTwo>`;
 
 const jsxCode_Pointers_Main = `import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
-import PointersIntro from "./PointersIntro";
-import PointersTwo from "./PointersTwo";
+import FunctionsIntro from "./FunctionsIntro";
+import FunctionsTwo from "./FunctionsTwo";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const pointers_intro = "pointers intro";
-const pointers_two = "pointers two";
+const functions_intro = "functions intro";
+const functions_two = "functions two";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [pointers_intro, pointers_two];
+const anchorList: string[] = [functions_intro, functions_two];
 
 // ============================================
 // ============================================
-const PointersMain = () => {
+
+const FunctionsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -223,14 +222,10 @@ const PointersMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      <PointersIntro anchor={pointers_intro}></PointersIntro>
-      <PointersTwo anchor={pointers_two}></PointersTwo>
-
+      <FunctionsIntro anchor={functions_intro} />
+      <FunctionsTwo anchor={functions_two} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-
-export default PointersMain;
-`;
+export default FunctionsMain;`;
