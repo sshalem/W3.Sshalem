@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, Span, SpanBlue, SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 
 const BasicLogging = ({ anchor }: { anchor: string }) => {
   return (
