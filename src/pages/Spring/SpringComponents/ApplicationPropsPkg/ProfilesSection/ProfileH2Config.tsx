@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
 import profile_h2 from "../../../../../assets/profile_h2.jpg";
 
 const ProfileH2Config = ({ anchor }: { anchor: string }) => {
@@ -7,11 +7,11 @@ const ProfileH2Config = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <IMG img_name={profile_h2}></IMG>
       <div className="my-5">
-        <span className="rounded-md bg-blue-500 p-1 font-semibold text-white">application.properties</span>
+        <DivDoubleBorder>application.properties</DivDoubleBorder>
       </div>
       <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
       <div className="my-5">
-        <span className="rounded-md bg-emerald-500 p-1 font-semibold text-white">application-h2.properties</span>
+        <DivDoubleBorder>application-h2.properties</DivDoubleBorder>
       </div>
       <ApplicationPropertiesHighlight propertiesCode={configH2Props} />
     </MainChildArea>

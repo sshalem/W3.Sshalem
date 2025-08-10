@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Span } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const ProfileIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -10,10 +10,10 @@ const ProfileIntro = ({ anchor }: { anchor: string }) => {
         Profiles help you isolate configuration and bean definitions for different environments. <br />
         For example, you can have different database URLs or log levels for dev, test, and prod. I can have different profile for connecting to
         DataBases.
-        <br />A profile file refers to <Span>application.properties</Span> file.
+        <br />A profile file refers to <SpanBlue>application.properties</SpanBlue> file.
         <br />
-        When spring app runs it uses <Span>application.properties</Span> file configuration. Since we have only 1 file of &nbsp;
-        <Span>application.properties</Span> , it is named as default profile.
+        When spring app runs it uses <SpanBlue>application.properties</SpanBlue> file configuration. Since we have only 1 file of &nbsp;
+        <SpanBlue>application.properties</SpanBlue> , it is named as default profile.
       </Answer>
 
       <article className="my-5">
@@ -27,8 +27,8 @@ const ProfileIntro = ({ anchor }: { anchor: string }) => {
       </article>
       <Question>Is there a default profile for a Spring boot app?</Question>
       <Answer>
-        Yes, there is. <Span>application.properties</Span> is the default profile of a spring boot app. Once I run a Spring-boot app , see what
-        console shows if there is no other profile files
+        Yes, there is. <SpanBlue>application.properties</SpanBlue> is the default profile of a spring boot app. Once I run a Spring-boot app , see
+        what console shows if there is no other profile files
         <br />
         <div className="my-4"></div>
         <ApplicationPropertiesHighlight propertiesCode={appProfileConsole} />
