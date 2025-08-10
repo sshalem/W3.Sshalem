@@ -2,7 +2,7 @@ const SpanGreen = ({ children }: React.PropsWithChildren) => {
   return (
     <span>
       &nbsp;
-      <span className="border-[1px] border-gray-300 px-[5px] py-[1px] font-mono text-[#009]">{children}</span>&nbsp;
+      <span className="rounded-md border-[1px] border-gray-300 bg-green-500 px-[5px] py-[1px] font-mono text-white">{children}</span>&nbsp;
     </span>
   );
 };

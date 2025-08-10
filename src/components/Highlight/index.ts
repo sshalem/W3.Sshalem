@@ -5,3 +5,6 @@ export { default as ApplicationPropertiesHighlight } from "./ApplicationProperti
 export { default as BatchHighlight } from "./BatchHighlight";
 export { default as Span } from "./Span";
 export { default as SpanText } from "./SpanText";
+export { default as SpanGreen } from "./SpanGreen";
+export { default as SpanRed } from "./SpanRed";
+export { default as SpanBlue } from "./SpanBlue";

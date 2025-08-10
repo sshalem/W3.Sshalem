@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, Span, SpanBlue } from "../../../../../components/Highlight";
 import page_create_1 from "../../../../../assets/page_create_1.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {
@@ -9,7 +9,7 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
         <div>
           <ul className="ml-8 list-decimal">
             <li>
-              go to <Span>pages</Span> folder
+              go to <SpanBlue>pages</SpanBlue> folder
             </li>
             <li>
               create new folder <Span>Cpp</Span>
