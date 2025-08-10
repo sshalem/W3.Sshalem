@@ -1,5 +1,5 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 import page_create_13 from "../../../../../assets/page_create_13.jpg";
 import page_create_15 from "../../../../../assets/page_create_15.jpg";
@@ -8,18 +8,18 @@ import page_create_16 from "../../../../../assets/page_create_16.jpg";
 const CreateStep7 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      As <Span>DropDownCppBasics</Span> implies , once the section clicked, it <strong>dropped's down</strong>, then I should see
-      <Span>Internal Links</Span> of &nbsp;
-      <Span>DropDownCppBasics</Span>.
+      As <SpanBlue>DropDownCppBasics</SpanBlue> implies , once the section clicked, it <strong>dropped's down</strong>, then I should see
+      <SpanBlue>Internal Links</SpanBlue> of &nbsp;
+      <SpanBlue>DropDownCppBasics</SpanBlue>.
       <ul className="my-4 ml-8 list-disc">
         <li className="my-1">
-          In this section I will add a <Span>internal Link</Span> (subject) to the <Span>DropDownCppBasics</Span> section
+          In this section I will add a <SpanBlue>internal Link</SpanBlue> (subject) to the <SpanBlue>DropDownCppBasics</SpanBlue> section
         </li>
         <li className="my-1">
-          Subject <Span>Link</Span> name I create <Span>Functions</Span>
+          Subject <SpanBlue>Link</SpanBlue> name I create <SpanBlue>Functions</SpanBlue>
         </li>
         <li className="my-1">
-          (<strong>NOTE : </strong> I made here only one <Span>Link</Span> (subject) , but I can have multiple subjects).
+          (<strong>NOTE : </strong> I made here only one <SpanBlue>Link</SpanBlue> (subject) , but I can have multiple subjects).
         </li>
       </ul>
       <IMG img_name={page_create_16}></IMG>
@@ -27,121 +27,95 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
         <br />
         <strong>
           steps to add a
-          <span className="mx-2 text-blue-600">
+          <SpanRed>
             <strong>Functions</strong>
-          </span>
+          </SpanRed>
           Subject to the Drop Down List :
         </strong>
 
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            create folder <Span>FunctionsSections</Span> , inside <Span>/pages/Cpp/CppComponents/CppBasicsPkg</Span> folder
+            create folder <SpanBlue>FunctionsSections</SpanBlue> , inside <SpanBlue>/pages/Cpp/CppComponents/CppBasicsPkg</SpanBlue> folder
           </li>
           <li className="my-1">
-            create component <Span>FunctionsMain</Span> , inside <Span>FunctionsSections</Span> folder
+            create component <SpanBlue>FunctionsMain</SpanBlue> , inside <SpanBlue>FunctionsSections</SpanBlue> folder
           </li>
           <div className="my-2">Folder layout :</div>
           <IMG img_name={page_create_13}></IMG>
           <div className="my-2">
-            <Span>FunctionsMain.tsx</Span> code :
+            <SpanBlue>FunctionsMain.tsx</SpanBlue> code :
           </div>
           <JsxHighlight jsxCode={jsxCode_functions_main} />
           <li className="my-1">
-            go to <Span>App.tsx</Span> file
+            go to <SpanBlue>App.tsx</SpanBlue> file
           </li>
           <li className="my-1">
-            add <Span>children</Span> to <Span>CppBasics</Span>
+            add <SpanBlue>children</SpanBlue> to <SpanBlue>CppBasics</SpanBlue>
           </li>
           <li className="my-1">
-            define new route under <Span>CppBasics</Span> as follows
-            <Span>{`{ path: "functions", element: <FunctionsMain /> }`}</Span>
+            define new route under <SpanBlue>CppBasics</SpanBlue> as follows
+            <SpanBlue>{`{ path: "functions", element: <FunctionsMain /> }`}</SpanBlue>
           </li>
 
           <JsxHighlight jsxCode={jsxCode_App_with_functions} />
           <li className="my-1">
-            go to <Span>DropDownCppBasics.tsx</Span> in folder <Span>DropCpp</Span>
+            go to <SpanBlue>DropDownCppBasics.tsx</SpanBlue> in folder <SpanBlue>DropCpp</SpanBlue>
           </li>
           <li className="my-1">
-            copy the code below ( It's template of <Span>Z_DropDownIncludeInternalLink.tsx</Span>) and paste it
-            <Span>DropDownCppBasics.tsx</Span>. <br />
+            copy the code below ( It's template of <SpanBlue>Z_DropDownIncludeInternalLink.tsx</SpanBlue>) and paste it
+            <SpanBlue>DropDownCppBasics.tsx</SpanBlue>. <br />
             In the code, fill the following :
             <ul className="my-4 ml-4 list-disc">
               <li className="my-1">
-                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
-                section 2, paragraph 3 <Span>c++</Span>
+                <SpanBlue>AAAA</SpanBlue> - replace with url path <SpanGreen>c++</SpanGreen>. This url path is made in section 2, paragraph 3
+                <SpanBlue>c++</SpanBlue>
               </li>
               <li className="my-1">
-                <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span> (see section 6, paragrapgh 6.4)
+                <SpanBlue>BBBB</SpanBlue>- replace with url path
+                <SpanGreen>cpp-basics</SpanGreen> (see section 6, paragrapgh 6.4)
               </li>
               <li className="my-1">
-                <Span>cccc</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"functions"</span> (see section 7, paragrapgh 5)
+                <SpanBlue>cccc</SpanBlue>- replace with url path
+                <SpanGreen>functions</SpanGreen> (see section 7, paragrapgh 5)
               </li>
               <li>
-                <Span>topicName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"C++ basics"</span> . The convention , give same name of
-                <Span>BBBB</Span> just with Capital letter , and without dashes
+                <SpanBlue>topicName</SpanBlue>- <SpanGreen>C++ basics</SpanGreen> . The convention , give same name of
+                <SpanBlue>BBBB</SpanBlue> just with Capital letter , and without dashes
               </li>
               <li>
-                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Functions"</span> . The convention , give
-                same name of <Span>cccc</Span> just with Capital letter , and without dashes
+                <SpanBlue>sideDropDownNavName</SpanBlue>- <SpanGreen>Functions</SpanGreen>. The convention , give same name of{" "}
+                <SpanBlue>cccc</SpanBlue> just with Capital letter , and without dashes
               </li>
               <div className="my-8">
-                <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
+                <SpanRed>Z_DropDownIncludeInternalLink.tsx</SpanRed> code :
               </div>
               <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
           </li>
-          {/* <li className="my-1">
-            In the code below where I have 3 variable , <Span>AAAA</Span>, <Span>BBBB</Span> , <Span>cccc</Span>
-            <ul className="my-4 ml-4 list-disc">
-              <li className="my-1">
-                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
-                section 2, paragraph 3 <Span>c++</Span>
-              </li>
-              <li className="my-1">
-                <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 6, paragrapgh 6.4)
-              </li>
-              <li className="my-1">
-                <Span>cccc</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"pointers"</span> (see section 7, paragrapgh 5)
-              </li>
-              <li>
-                <Span>topicName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Fundamental Concepts"</span> . The convention , give
-                same name of <Span>BBBB</Span> just with Capital letter , and without dashes
-              </li>
-              <li>
-                <Span>sideDropDownNavName</Span>- <span className="mx-1 font-mono text-lg text-red-500">"Pointers"</span> . The convention , give same
-                name of <Span>cccc</Span> just with Capital letter , and without dashes
-              </li>
-              <div className="my-8">
-                <Span>Z_DropDownIncludeInternalLink.tsx</Span> code :
-              </div>
-              <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
-            </ul>
-          </li> */}
+
           <li>
-            This how page layout looks, but something <strong>odd</strong>.
+            This how page layout looks, but something <SpanRed>odd</SpanRed>.
             <Question>
-              Why I see the content of <Span>FundamentalConcepts.tsx</Span> ,when I clicked on the subject of <Span>Pointers</Span> ?
+              Why I see the content of <SpanBlue>CppBasics.tsx</SpanBlue> ,when I clicked on the subject of <SpanBlue>Functions</SpanBlue> ?
+              <IMG img_name={page_create_15}></IMG>
             </Question>
             <Answer>
-              I must define the <Span>Outlet</Span> component from <Span>React-Router</Span> , inside <Span>FundamentalConcepts.tsx</Span>
+              I must define the <SpanGreen>Outlet</SpanGreen> component from <SpanBlue>React-Router</SpanBlue> , inside
+              <SpanBlue>CppBasics.tsx</SpanBlue>
             </Answer>
           </li>
-          <IMG img_name={page_create_15}></IMG>
-          <li>
-            Config the <Span>FundamentalConcepts.tsx</Span> with <Span>Outlet</Span> component . <br />
+
+          <li className="my-8">
+            Config the <SpanBlue>CppBasics.tsx</SpanBlue> with <SpanGreen>Outlet</SpanGreen> component . <br />
             <ul className="my-4 ml-4 list-disc">
               use code below :
               <li className="my-1">
-                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
-                section 2, paragraph 3 <Span>c++</Span>
+                <SpanBlue>AAAA</SpanBlue> - replace with url path <SpanGreen>c++</SpanGreen>. This url path is made in section 2, paragraph 3
+                <SpanBlue>c++</SpanBlue>
               </li>
               <li className="my-1">
-                <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"fundamental-concepts"</span> (see section 5, paragrapgh 4.3)
+                <SpanBlue>BBBB</SpanBlue>- replace with url path
+                <SpanGreen>cpp-basics</SpanGreen> (see section 5, paragrapgh 4.3)
               </li>
               <JsxHighlight jsxCode={jsxCode_Subject_with_outlet} />
             </ul>

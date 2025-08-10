@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span, SpanBlue } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 import page_create_1 from "../../../../../assets/page_create_1.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {
@@ -12,10 +12,10 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
               go to <SpanBlue>pages</SpanBlue> folder
             </li>
             <li>
-              create new folder <Span>Cpp</Span>
+              create new folder <SpanBlue>Cpp</SpanBlue>
             </li>
             <li>
-              Inside <Span>Cpp</Span> , create new page component <Span>Cpp_page.tsx</Span>
+              Inside <SpanBlue>Cpp</SpanBlue> , create new page component <SpanBlue>Cpp_page.tsx</SpanBlue>
             </li>
             <IMG img_name={page_create_1}></IMG>
             <li>add the below code in the created file</li>

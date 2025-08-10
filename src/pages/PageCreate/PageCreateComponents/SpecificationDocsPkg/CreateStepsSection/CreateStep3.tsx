@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 import page_create_3 from "../../../../../assets/page_create_3.jpg";
 import page_create_4 from "../../../../../assets/page_create_4.jpg";
 
@@ -11,15 +11,15 @@ const CreateStep3 = ({ anchor }: { anchor: string }) => {
         <div>
           <ul className="my-4 ml-8 list-decimal">
             <li>
-              go to <Span>App.tsx</Span> file
+              go to <SpanBlue>App.tsx</SpanBlue> file
             </li>
             <li>
-              add code below, under <Span>MainLayout</Span> path , (I create new child) ,
+              add code below, under <SpanBlue>MainLayout</SpanBlue> path , (I create new child) ,
             </li>
             <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
             <IMG img_name={page_create_3}></IMG>
             <li>
-              at this point I should see <Span>C++</Span> page link on <Span>Navbar</Span>
+              at this point I should see <SpanBlue>C++</SpanBlue> page link on <SpanBlue>Navbar</SpanBlue>
               <IMG img_name={page_create_4}></IMG>
             </li>
           </ul>

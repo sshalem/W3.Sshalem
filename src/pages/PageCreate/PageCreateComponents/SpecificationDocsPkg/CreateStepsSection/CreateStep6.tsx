@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 
 import page_create_8 from "../../../../../assets/page_create_8.jpg";
 import page_create_11 from "../../../../../assets/page_create_11.jpg";
@@ -9,76 +9,77 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
-        In this section , I will add the sidebar nav links with <Span>DropDownXXXX</Span> component. <div className="my-2"></div>
-        <strong>example</strong> :<Span>DropDownCppBasics.tsx</Span> to show <Span>C++ Basics</Span> as an link
+        In this section , I will add the sidebar nav links with <SpanBlue>DropDownXXXX</SpanBlue> component. <div className="my-2"></div>
+        <strong>example</strong> :<SpanBlue>DropDownCppBasics.tsx</SpanBlue> to show <SpanBlue>C++ Basics</SpanBlue> as an link
         <IMG img_name={page_create_11}></IMG>
         <br />
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            Go to <Span>/pages/Cpp/CppComponents</Span> folder.
+            Go to <SpanBlue>/pages/Cpp/CppComponents</SpanBlue> folder.
           </li>
           <li className="my-1">
-            Create new folder <Span>CppBasicsPkg</Span>.
+            Create new folder <SpanBlue>CppBasicsPkg</SpanBlue>.
           </li>
           <li className="my-1">
-            Create new Component <Span>CppBasics.tsx</Span> inside <Span>CppBasicsPkg</Span>.
+            Create new Component <SpanBlue>CppBasics.tsx</SpanBlue> inside <SpanBlue>CppBasicsPkg</SpanBlue>.
             <div className="my-2">
               <strong>folder view :</strong>
             </div>
             <IMG img_name={page_create_12}></IMG>
-            <Span>CppBasics.tsx</Span> code :
+            <SpanBlue>CppBasics.tsx</SpanBlue> code :
             <JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
           </li>
 
           <li className="my-1">
-            under <Span>/pages/Cpp</Span> , create folder <Span>DropCpp</Span>.
+            under <SpanBlue>/pages/Cpp</SpanBlue> , create folder <SpanBlue>DropCpp</SpanBlue>.
             <br />
           </li>
           <li className="my-1">
-            Create component <Span>DropDownCppBasics.tsx</Span> inside
-            <Span>DropCpp</Span> <IMG img_name={page_create_8}></IMG>
+            Create component <SpanBlue>DropDownCppBasics.tsx</SpanBlue> inside
+            <SpanBlue>DropCpp</SpanBlue> <IMG img_name={page_create_8}></IMG>
           </li>
           {/*  */}
           {/*  */}
           <li className="my-1">
-            Do following steps on the <Span>DropDownCppBasics.tsx</Span>. <br /> copy code below (can be found in file <Span>Z_DropDownTemplate</Span>
-            ), and paste in <Span>DropDownCppBasics.tsx</Span>.<div className="my-1">In the code below where I have 3 variable :</div>
+            Do following steps on the <SpanBlue>DropDownCppBasics.tsx</SpanBlue>. <br /> copy code below (can be found in file
+            <SpanBlue>Z_DropDownTemplate</SpanBlue>
+            ), and paste in <SpanBlue>DropDownCppBasics.tsx</SpanBlue>.<div className="my-1">In the code below where I have 3 variable :</div>
             <ul className="my-4 ml-8 list-decimal">
               <div className="my-2"></div>
               <li className="my-1">
-                <Span>AAAA</Span> - replace with url path <span className="mx-1 font-mono text-lg text-red-500">"c++"</span>. This url path is made in
-                section 2, paragraph 3 <Span>c++</Span>
+                <SpanBlue>AAAA</SpanBlue> - replace with url path <SpanGreen>c++</SpanGreen>. This url path is made in section 2, paragraph 3
+                <SpanBlue>c++</SpanBlue>
               </li>
               <li className="my-1">
-                <Span>BBBB</Span>- replace with url path
-                <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span>
+                <SpanBlue>BBBB</SpanBlue>- replace with url path
+                <SpanGreen>cpp-basics</SpanGreen>
               </li>
               <li className="my-1">
-                <Span>topic name</Span>- <span className="mx-1 font-mono text-lg text-red-500">"C++ basics"</span> . The convention , give same name
-                of <Span>BBBB</Span> just with Capital letter , and without dashes
+                <SpanBlue>topic name</SpanBlue>- <SpanGreen>C++ basics</SpanGreen> . The convention , give same name of <SpanBlue>BBBB</SpanBlue>
+                just with Capital letter , and without dashes
               </li>
               <div className="my-8"></div>
-              <Span>Z_DropDownTemplate</Span> code :
+              <SpanBlue>Z_DropDownTemplate</SpanBlue> code :
               <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
             </ul>
           </li>
           <li className="my-1">
-            go to <Span>App.tsx</Span>.
+            go to <SpanBlue>App.tsx</SpanBlue>.
           </li>
           <li className="my-1">
-            add new route in the children of <Span>Cpp</Span>
+            add new route in the children of <SpanBlue>Cpp</SpanBlue>
             <ul className="my-4 ml-8 list-disc">
-              <Span>{`path: "cpp-basics", element: <CppBasics /> },`}</Span>
+              <SpanBlue>{`path: "cpp-basics", element: <CppBasics /> },`}</SpanBlue>
               <li className="my-1">
-                <Span>Path</Span> - same as <Span>BBBB</Span> path <span className="mx-1 font-mono text-lg text-red-500">"cpp-basics"</span>
+                <SpanBlue>Path</SpanBlue> - same as <SpanBlue>BBBB</SpanBlue> path <SpanGreen>cpp-basics</SpanGreen>
               </li>
             </ul>
             <div className="my-3"></div>
             <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
           </li>
           <li className="my-1">
-            import <Span>DropDownCppBasics</Span> component , to <Span>Cpp_page</Span>.
+            import <SpanBlue>DropDownCppBasics</SpanBlue> component , to <SpanBlue>Cpp_page</SpanBlue>.
             <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
@@ -148,6 +149,7 @@ export default Cpp_page;
 const jsxCode_Z_DropDown = `import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropDownTopic } from "../../../components";
+import SpanGreen from './../../../../../components/Highlight/SpanGreen';
 
 const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);

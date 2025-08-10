@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 import page_create_5 from "../../../../../assets/page_create_5.jpg";
 
 const CreateStep4 = ({ anchor }: { anchor: string }) => {
@@ -10,8 +10,8 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         To config the side navbar on the page,
         <ul className="my-4 ml-8 list-disc">
           <li>
-            copy the context of componenet <Span>Z_PageTemplate</Span>
-            and paste it in <Span>Cpp_page</Span> component.
+            copy the context of componenet <SpanBlue>Z_PageTemplate</SpanBlue>
+            and paste it in <SpanBlue>Cpp_page</SpanBlue> component.
           </li>
           <li>
             After adding the Page template code , we can see the sidebar navigation is setup. <br />
@@ -26,7 +26,7 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         </ul>
         <div>This is how page looks at this point, (continue with step 5)</div>
         <IMG img_name={page_create_5}></IMG>
-        Here is <Span>Cpp_page.tsx</Span> code
+        Here is <SpanBlue>Cpp_page.tsx</SpanBlue> code
         <JsxHighlight jsxCode={jsxPage_Template}></JsxHighlight>
       </article>
     </MainChildArea>

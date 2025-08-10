@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 import page_create_2 from "../../../../../assets/page_create_2.jpg";
 
 const CreateStep2 = ({ anchor }: { anchor: string }) => {
@@ -7,27 +7,28 @@ const CreateStep2 = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <article>
         <div>
-          All page names in the <Span>Navbar</Span>are populated from a <Span>Links</Span> array I created in <Span>utils</Span>folder. thus,
+          All page names in the <SpanBlue>Navbar</SpanBlue>are populated from a <SpanBlue>Links</SpanBlue> array I created in{" "}
+          <SpanBlue>utils</SpanBlue>folder. thus,
           <ul className="my-4 ml-8 list-decimal">
             <li>
-              go to <Span>utils</Span> folder
+              go to <SpanBlue>utils</SpanBlue> folder
             </li>
             <li>
-              open <Span>links.ts</Span> file
+              open <SpanBlue>links.ts</SpanBlue> file
             </li>
             <IMG img_name={page_create_2} />
             <li>
-              add to the <Span>links</Span> array , new link , usually, I set the name of the page <Span>c++</Span> same as the name of the link.{" "}
-              <br />
+              add to the <SpanBlue>links</SpanBlue> array , new link , usually, I set the name of the page <SpanBlue>c++</SpanBlue> same as the name
+              of the link. <br />
               <strong>convesion</strong>: must be in small letters
               <br />
               this will be
               <ul className="ml-8 list-disc">
                 <li>
-                  the url path exaple <Span>localhost:/5173/c++</Span>
+                  the url path exaple <SpanBlue>localhost:/5173/c++</SpanBlue>
                 </li>
                 <li>
-                  Page name shown on <Span>Navbar</Span>
+                  Page name shown on <SpanBlue>Navbar</SpanBlue>
                 </li>
               </ul>
             </li>

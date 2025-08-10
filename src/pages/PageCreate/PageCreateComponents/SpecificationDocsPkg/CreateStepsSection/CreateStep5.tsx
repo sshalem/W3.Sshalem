@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, Span } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 import page_create_6 from "../../../../../assets/page_create_6.jpg";
 import page_create_10 from "../../../../../assets/page_create_10.jpg";
@@ -17,7 +17,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
         <strong>follow the following steps:</strong>
         <ul className="my-4 ml-8 list-decimal">
           <li>
-            under <Span>/pages/Cpp</Span> folder, create new folder with name <Span>CppComponents</Span>
+            under <SpanBlue>/pages/Cpp</SpanBlue> folder, create new folder with name <SpanBlue>CppComponents</SpanBlue>
           </li>
           {/*  */}
           {/*  */}
@@ -26,16 +26,17 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             <ul className="list ml-4">
               <ul className="my-4 ml-8 list-disc">
                 <li>
-                  <Span>CppHome.tsx</Span> - this will be the page to land on when I click on the <Span>Navbar</Span> the link <Span>C++</Span>
+                  <SpanBlue>CppHome.tsx</SpanBlue> - this will be the page to land on when I click on the <SpanBlue>Navbar</SpanBlue> the link{" "}
+                  <SpanBlue>C++</SpanBlue>
                 </li>
                 <li>
-                  <Span>index.ts</Span> - to comine all componets in one file, to prevent multiple <Span>import</Span> lines.
+                  <SpanBlue>index.ts</SpanBlue> - to comine all componets in one file, to prevent multiple <SpanBlue>import</SpanBlue> lines.
                 </li>
               </ul>
-              Here is <Span>CppComponents</Span> folder with 2 files inside. <br />
+              Here is <SpanBlue>CppComponents</SpanBlue> folder with 2 files inside. <br />
               <IMG img_name={page_create_6}></IMG>
-              <Span>CppHome.tsx</Span> code :<JsxHighlight jsxCode={jsx_C_plus_plus_home} />
-              <Span>index.ts</Span> code : <JsxHighlight jsxCode={jsxCode_Index} />
+              <SpanBlue>CppHome.tsx</SpanBlue> code :<JsxHighlight jsxCode={jsx_C_plus_plus_home} />
+              <SpanBlue>index.ts</SpanBlue> code : <JsxHighlight jsxCode={jsxCode_Index} />
             </ul>
           </li>
           {/*  */}
@@ -44,27 +45,28 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
           {/*  */}
           {/*  */}
           <li>
-            Config <Span>App.tsx</Span> with links. <br />
+            Config <SpanBlue>App.tsx</SpanBlue> with links. <br />
             <div className="my-1">
-              3.1. go to <Span>App.tsx</Span>
+              3.1. go to <SpanBlue>App.tsx</SpanBlue>
             </div>
             <div className="my-1">
-              3.2. Add the <Span>children</Span> array , inside <Span>Cpp_page</Span> component.
+              3.2. Add the <SpanBlue>children</SpanBlue> array , inside <SpanBlue>Cpp_page</SpanBlue> component.
             </div>
             <div className="my-1">
-              3.3. See that I define <Span>CppHome.tsx</Span> as
-              <Span>index</Span> , so when I click on <Span>C++</Span> link on Navbar , I will land on <Span>CppHome.tsx</Span>.
+              3.3. See that I define <SpanBlue>CppHome.tsx</SpanBlue> as
+              <SpanBlue>index</SpanBlue> , so when I click on <SpanBlue>C++</SpanBlue> link on Navbar , I will land on{" "}
+              <SpanBlue>CppHome.tsx</SpanBlue>.
             </div>
             <div className="my-1">
-              3.3. See the assign <Span>url path</Span> I gave to each component
+              3.3. See the assign <SpanBlue>url path</SpanBlue> I gave to each component
             </div>
             <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
             <div className="my-1">
-              Add to <Span>Cpp_page</Span> component , the <Span>SideBarLink</Span> component with <Span>pageName</Span> and
-              <Span>internalLink</Span> as below:
+              Add to <SpanBlue>Cpp_page</SpanBlue> component , the <SpanBlue>SideBarLink</SpanBlue> component with <SpanBlue>pageName</SpanBlue> and
+              <SpanBlue>internalLink</SpanBlue> as below:
               <ul className="my-4 ml-8 list-disc">
                 <li>
-                  <Span>{`<SideBarLink pageName="C++ Home" internalLink="/c++" />`}</Span> <br />
+                  <SpanBlue>{`<SideBarLink pageName="C++ Home" internalLink="/c++" />`}</SpanBlue> <br />
                 </li>
               </ul>
               <JsxHighlight jsxCode={jsxCode_C_plus_with_links}></JsxHighlight>
