@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
-import FunctionsIntro from "./FunctionsIntro";
-import FunctionsTwo from "./FunctionsTwo";
+// import FunctionsIntro from "./FunctionsIntro";
+// import FunctionsTwo from "./FunctionsTwo";
 
 // ===========================================
 // ==     content menu (title name)         ==
