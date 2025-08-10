@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import page_create_17 from "../../../../../assets/page_create_17.jpg";
 import page_create_18 from "../../../../../assets/page_create_18.jpg";
 import page_create_19 from "../../../../../assets/page_create_19.jpg";
@@ -21,10 +21,10 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
           Create 2 Component in <SpanBlue>FunctionsSection</SpanBlue> folder
           <ul className="my-2 ml-8 list-disc">
             <li className="my-1">
-              <SpanBlue>FunctionsIntro.tsx</SpanBlue>
+              <SpanGreen>FunctionsIntro.tsx</SpanGreen>
             </li>
             <li className="my-1">
-              <SpanBlue>FunctionsTwo.tsx</SpanBlue>
+              <SpanGreen>FunctionsTwo.tsx</SpanGreen>
             </li>
             <li className="my-1">
               copy/paste the code below inside <SpanBlue>FunctionsIntro.tsx</SpanBlue> and <SpanBlue>FunctionsTwo.tsx</SpanBlue>
