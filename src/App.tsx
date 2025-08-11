@@ -69,6 +69,11 @@ import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { SqlHome } from "./pages/Sql/SqlComponents";
 import { PythonHome } from "./pages/Python/PythonComponents";
 import { DevOpsHome } from "./pages/DevOps/DevOpsComponents";
+import { GitHome } from "./pages/Git/GitComponents";
+import { LinuxHome } from "./pages/Linux/LinuxComponents";
+import { BatchHome } from "./pages/Batch/BatchComponents";
+import { PostmanHome } from "./pages/Postman/PostmanComponents";
+import { WindowsHome } from "./pages/Windows/WindowsComponents";
 
 const router = createBrowserRouter(
   [
@@ -196,11 +201,11 @@ const router = createBrowserRouter(
         { path: "sql", element: <Sql_page />, children: [{ index: true, element: <SqlHome /> }] },
         { path: "python", element: <Python_page />, children: [{ index: true, element: <PythonHome /> }] },
         { path: "devops", element: <DevOps_page />, children: [{ index: true, element: <DevOpsHome /> }] },
-        { path: "git", element: <Git_page />, children: [{ index: true, element: <PythonHome /> }] },
-        { path: "linux", element: <Linux_page />, children: [{ index: true, element: <PythonHome /> }] },
-        { path: "batch", element: <Batch_page />, children: [{ index: true, element: <PythonHome /> }] },
-        { path: "postman", element: <Postman_page />, children: [{ index: true, element: <PythonHome /> }] },
-        { path: "windows", element: <Windows_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
+        { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
+        { path: "batch", element: <Batch_page />, children: [{ index: true, element: <BatchHome /> }] },
+        { path: "postman", element: <Postman_page />, children: [{ index: true, element: <PostmanHome /> }] },
+        { path: "windows", element: <Windows_page />, children: [{ index: true, element: <WindowsHome /> }] },
         {
           path: "page_creation",
           element: <Page_Creation_page />,
