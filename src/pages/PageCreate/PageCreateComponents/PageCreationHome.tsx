@@ -1,7 +1,7 @@
 const PageCreationHome = () => {
   return (
     <section>
-      <div className="my-4 text-3xl">Page creation home ...</div>
+      <div className="bg-teal-500 p-4 text-4xl text-white">Page creation home ...</div>
     </section>
   );
 };

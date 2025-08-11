@@ -1,5 +1,5 @@
 const JavaHome = () => {
-  return <div className="text-3xl">Java Home ...</div>;
+  return <div className="my-4 bg-teal-500 p-4 text-4xl text-white">Java Home ...</div>;
 };
 
 export default JavaHome;

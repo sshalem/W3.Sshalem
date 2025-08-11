@@ -28,7 +28,6 @@ const Spring_page = () => {
   return (
     <GridLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
-
       {showSidebar && (
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
