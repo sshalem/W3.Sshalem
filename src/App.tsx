@@ -65,6 +65,10 @@ import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSCompon
 import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
+import { FullStackHome } from "./pages/FullStack/FullStackComponents";
+import { SqlHome } from "./pages/Sql/SqlComponents";
+import { PythonHome } from "./pages/Python/PythonComponents";
+import { DevOpsHome } from "./pages/DevOps/DevOpsComponents";
 
 const router = createBrowserRouter(
   [
@@ -180,7 +184,7 @@ const router = createBrowserRouter(
             { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
           ],
         },
-        { path: "fullstack", element: <FullStack_page /> },
+        { path: "fullstack", element: <FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
         {
           path: "java",
           element: <Java_page />,
@@ -189,14 +193,14 @@ const router = createBrowserRouter(
             { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
           ],
         },
-        { path: "sql", element: <Sql_page /> },
-        { path: "python", element: <Python_page /> },
-        { path: "devops", element: <DevOps_page /> },
-        { path: "git", element: <Git_page /> },
-        { path: "linux", element: <Linux_page /> },
-        { path: "batch", element: <Batch_page /> },
-        { path: "postman", element: <Postman_page /> },
-        { path: "windows", element: <Windows_page /> },
+        { path: "sql", element: <Sql_page />, children: [{ index: true, element: <SqlHome /> }] },
+        { path: "python", element: <Python_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "devops", element: <DevOps_page />, children: [{ index: true, element: <DevOpsHome /> }] },
+        { path: "git", element: <Git_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "linux", element: <Linux_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "batch", element: <Batch_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "postman", element: <Postman_page />, children: [{ index: true, element: <PythonHome /> }] },
+        { path: "windows", element: <Windows_page />, children: [{ index: true, element: <PythonHome /> }] },
         {
           path: "page_creation",
           element: <Page_Creation_page />,
