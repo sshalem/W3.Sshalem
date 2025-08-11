@@ -1,9 +1,5 @@
 const PageCreationHome = () => {
-  return (
-    <section>
-      <div className="bg-teal-500 p-4 text-4xl text-white">Page creation home ...</div>
-    </section>
-  );
+  return <div className="bg-teal-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Page creation Home ...</div>;
 };
 
 export default PageCreationHome;
