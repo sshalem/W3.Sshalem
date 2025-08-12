@@ -67,7 +67,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
+import { DataTypesMain, PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
 import { DevOpsHome } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -212,7 +212,7 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <PythonHome /> },
             { path: "vscode", element: <VsCodePython /> },
-            { path: "python-basics", element: <PythonBasics /> },
+            { path: "python-basics", element: <PythonBasics />, children: [{ path: "data-types", element: <DataTypesMain /> }] },
           ],
         },
         { path: "devops", element: <DevOps_page />, children: [{ index: true, element: <DevOpsHome /> }] },
