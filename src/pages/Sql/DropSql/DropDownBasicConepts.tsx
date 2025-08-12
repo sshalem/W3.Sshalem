@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const DropDownBasicConepts = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  // const [listHeight, setListHeight] = useState<number>();
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -36,6 +35,14 @@ const DropDownBasicConepts = () => {
   return (
     <section>
       <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/sql/basic-concepts" topicName="Basic Concepts" />
+
+      <div
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
+        ref={divRef}
+      >
+        <SideDropdownLink sideDropDownNavName="Key Types" internalLink="/sql/basic-concepts/key-types" />
+      </div>
     </section>
   );
 };
