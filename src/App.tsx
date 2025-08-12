@@ -67,7 +67,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { PythonHome } from "./pages/Python/PythonComponents";
+import { PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
 import { DevOpsHome } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -206,7 +206,15 @@ const router = createBrowserRouter(
             { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
           ],
         },
-        { path: "python", element: <Python_page />, children: [{ index: true, element: <PythonHome /> }] },
+        {
+          path: "python",
+          element: <Python_page />,
+          children: [
+            { index: true, element: <PythonHome /> },
+            { path: "vscode", element: <VsCodePython /> },
+            { path: "python-basics", element: <PythonBasics /> },
+          ],
+        },
         { path: "devops", element: <DevOps_page />, children: [{ index: true, element: <DevOpsHome /> }] },
         { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },

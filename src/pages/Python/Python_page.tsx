@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownPythonBasics from "./DropPython/DropDownPythonBasics";
+import DropDownPythonVsCode from "./DropPython/DropDownPythonVsCode";
 
 const Python_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,6 +35,8 @@ const Python_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Python Home" internalLink="/python" />
+            <DropDownPythonVsCode />
+            <DropDownPythonBasics />
           </div>
         </article>
       )}
