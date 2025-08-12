@@ -35,7 +35,13 @@ const DropDownPythonVsCode = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/python/vscode" topicName="VsCode with Python" />
+      <SideDropDownTopic
+        enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/python/vscode"
+        topicName="VsCode with Python"
+      />
     </section>
   );
 };

@@ -1,13 +1,15 @@
 import { CaretUp, CaretDown } from "../components";
 import { Link, useLocation } from "react-router-dom";
+
 interface SideDropDownTopicProps {
   showList: boolean;
   handleOpenList: () => void;
   topicName: string;
   internalLink: string;
+  enableCaret?: boolean;
 }
 
-const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink }: SideDropDownTopicProps) => {
+const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink, enableCaret = true }: SideDropDownTopicProps) => {
   let location = useLocation();
 
   // useEffect(() => {
@@ -16,15 +18,18 @@ const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink }
 
   return (
     <article className="relative">
-      <div className="pointer-events-none">
-        {location.pathname.includes(internalLink) ? (
-          <div>{showList ? <CaretUp /> : <CaretDown />}</div>
-        ) : (
-          <div className="opacity-20">
-            <CaretDown />
-          </div>
-        )}
-      </div>
+      {enableCaret && (
+        <div className="pointer-events-none">
+          {location.pathname.includes(internalLink) ? (
+            <div>{showList ? <CaretUp /> : <CaretDown />}</div>
+          ) : (
+            <div className="opacity-20">
+              <CaretDown />
+            </div>
+          )}
+        </div>
+      )}
+
       <div onClick={handleOpenList} className="select-none">
         {/* <SideBarLink topicName={topicName} internalLink={internalLink} /> */}
         {/* Instead of using the SideBarLink , to prevent multiple useLocation re-rendering */}
