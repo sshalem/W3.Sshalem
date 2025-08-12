@@ -2,6 +2,9 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DropDownNetlify from "./DropDevOps/DropDownNetlify";
+import DropDownRender from "./DropDevOps/DropDownRender";
+import DropDownTomcat from "./DropDevOps/DropDownTomcat";
 
 const DevOps_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -33,6 +36,9 @@ const DevOps_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="DevOps Home" internalLink="/devops" />
+            <DropDownNetlify />
+            <DropDownRender />
+            <DropDownTomcat />
           </div>
         </article>
       )}

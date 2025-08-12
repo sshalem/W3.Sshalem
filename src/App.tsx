@@ -68,7 +68,7 @@ import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from ".
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
 import { DataTypesMain, PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
-import { DevOpsHome } from "./pages/DevOps/DevOpsComponents";
+import { DeployNetlify, DeployRender, DeplyTomcat, DevOpsHome } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
@@ -215,7 +215,16 @@ const router = createBrowserRouter(
             { path: "python-basics", element: <PythonBasics />, children: [{ path: "data-types", element: <DataTypesMain /> }] },
           ],
         },
-        { path: "devops", element: <DevOps_page />, children: [{ index: true, element: <DevOpsHome /> }] },
+        {
+          path: "devops",
+          element: <DevOps_page />,
+          children: [
+            { index: true, element: <DevOpsHome /> },
+            { path: "netlify", element: <DeployNetlify /> },
+            { path: "render", element: <DeployRender /> },
+            { path: "tomcat", element: <DeplyTomcat /> },
+          ],
+        },
         { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
         { path: "batch", element: <Batch_page />, children: [{ index: true, element: <BatchHome /> }] },
