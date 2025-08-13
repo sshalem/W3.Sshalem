@@ -1,17 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
+import O1_InitialServerSetup from "./O1_InitialServerSetup";
+import O2_DateTimeZoneModification from "./O2_DateTimeZoneModification";
+import O3_ConfigAccount from "./O3_ConfigAccount";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const O1_InitialServerSetup = "O1_InitialServerSetup";
+const Initial_Server_Setup = "Initial_Server_Setup";
+const Date_Time_Zone = `Date_Time_Zone`;
+const Config_account = `Config_account`;
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [O1_InitialServerSetup];
+const anchorList: string[] = [Initial_Server_Setup, Date_Time_Zone, Config_account];
 
 // ============================================
 // ============================================
@@ -48,7 +53,9 @@ const SetupServerMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
+      <O1_InitialServerSetup anchor={Initial_Server_Setup}></O1_InitialServerSetup>
+      <O2_DateTimeZoneModification anchor={Date_Time_Zone}></O2_DateTimeZoneModification>
+      <O3_ConfigAccount anchor={Config_account}></O3_ConfigAccount>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
