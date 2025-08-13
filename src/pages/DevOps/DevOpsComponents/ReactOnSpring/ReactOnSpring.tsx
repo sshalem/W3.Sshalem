@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
 import ReactOnSpringMain from "./ReactOnSpringMain";
+import ReactOnSpringUnloadZforce from "./ReactOnSpringUnloadZforce";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const react_on_spring = "react on spring";
+const unload_z_force_example = "Config filter see Unliad Z force";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [react_on_spring];
+const anchorList: string[] = [react_on_spring, unload_z_force_example];
 
 // ============================================
 // ============================================
@@ -51,6 +53,7 @@ const ReactOnSpring = () => {
       {/* End Contents */}
 
       <ReactOnSpringMain anchor={react_on_spring} />
+      <ReactOnSpringUnloadZforce anchor={unload_z_force_example} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
