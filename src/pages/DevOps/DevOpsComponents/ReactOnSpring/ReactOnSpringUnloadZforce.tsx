@@ -9,7 +9,7 @@ const ReactOnSpringUnloadZforce = ({ anchor }: { anchor: string }) => {
       </div>
       <GitHub>
         <GitHubLiAnchor
-          description="https://github.com/sshalem/Z_unload_force/blob/main/production/production-unload-z-force/src/main/java/com/ZunloadForce/filter/SpaWebFilter.java"
+          description="Filter to apply React SPA routing"
           gitLink="https://github.com/sshalem/Z_unload_force/blob/main/production/production-unload-z-force/src/main/java/com/ZunloadForce/filter/SpaWebFilter.java"
         />
       </GitHub>
