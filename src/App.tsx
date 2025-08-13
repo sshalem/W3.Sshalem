@@ -20,7 +20,7 @@ import {
   Spring_page,
   Sql_page,
   Windows_page,
-} from "./pages/index_Page";
+} from "./pages";
 
 import {
   Aop,
