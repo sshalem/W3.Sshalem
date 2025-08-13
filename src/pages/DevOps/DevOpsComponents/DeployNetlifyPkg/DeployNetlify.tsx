@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
-import DeployNetlifyIntro from "./DeployNetlifySections/DeployNetlifyIntro";
+import ConfigNetlifyForSpa from "./DeployNetlifySections/ConfigNetlifyForSpa";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const netlify_intro = "netlify Intro";
+const config_netlify_for_spa = "config netlify for SPA";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [netlify_intro];
+const anchorList: string[] = [config_netlify_for_spa];
 
 // ============================================
 // ============================================
@@ -49,7 +49,7 @@ const DeployNetlify = () => {
         ulRef={ulRef}
       />
 
-      <DeployNetlifyIntro anchor={netlify_intro} />
+      <ConfigNetlifyForSpa anchor={config_netlify_for_spa} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
