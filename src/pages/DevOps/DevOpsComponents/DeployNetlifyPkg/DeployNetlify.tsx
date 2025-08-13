@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
-import ConfigNetlifyForSpa from "./DeployNetlifySections/ConfigNetlifyForSpa";
+import DeployNetlifyMain from "./DeployNetlifyMain";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -49,7 +49,7 @@ const DeployNetlify = () => {
         ulRef={ulRef}
       />
 
-      <ConfigNetlifyForSpa anchor={config_netlify_for_spa} />
+      <DeployNetlifyMain anchor={config_netlify_for_spa} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

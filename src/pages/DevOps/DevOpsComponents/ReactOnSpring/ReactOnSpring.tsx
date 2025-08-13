@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
+import ReactOnSpringMain from "./ReactOnSpringMain";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -49,6 +50,7 @@ const ReactOnSpring = () => {
       />
       {/* End Contents */}
 
+      <ReactOnSpringMain anchor={react_on_spring} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

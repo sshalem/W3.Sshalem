@@ -1,6 +1,6 @@
-import { MainChildArea } from "../../../../../components";
+import { MainChildArea } from "../../../../components";
 
-const ConfigNetlifyForSpa = ({ anchor }: { anchor: string }) => {
+const DeployNetlifyMain = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article>
@@ -18,4 +18,4 @@ const ConfigNetlifyForSpa = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default ConfigNetlifyForSpa;
+export default DeployNetlifyMain;

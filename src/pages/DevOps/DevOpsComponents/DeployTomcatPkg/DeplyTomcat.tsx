@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
-import DeployTomcatIntro from "./DeployTomcatSections/DeployTomcatIntro";
+import DeployTomcatMain from "./DeployTomcatMain";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const tomcat_intro = "Tomcat Intro";
+const tomcat_deploy = "Tomcat Deploy";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [tomcat_intro];
+const anchorList: string[] = [tomcat_deploy];
 
 // ============================================
 // ============================================
@@ -50,7 +50,7 @@ const DeplyTomcat = () => {
       />
       {/* End Contents */}
 
-      <DeployTomcatIntro anchor={tomcat_intro}></DeployTomcatIntro>
+      <DeployTomcatMain anchor={tomcat_deploy}></DeployTomcatMain>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

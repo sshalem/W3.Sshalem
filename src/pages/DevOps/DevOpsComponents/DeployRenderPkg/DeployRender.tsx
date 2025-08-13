@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
-import DeployRenderIntro from "./DeployRenderSections/DeployRenderIntro";
+import DeployRenderMain from "./DeployRenderMain";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const render_intro = "Render Intro";
+const render_deploy = "Render Deploy";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [render_intro];
+const anchorList: string[] = [render_deploy];
 
 // ============================================
 // ============================================
@@ -50,7 +50,7 @@ const DeployRender = () => {
       />
       {/* End Contents */}
 
-      <DeployRenderIntro anchor={render_intro}></DeployRenderIntro>
+      <DeployRenderMain anchor={render_deploy}></DeployRenderMain>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
