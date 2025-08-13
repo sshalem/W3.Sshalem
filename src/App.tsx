@@ -68,13 +68,21 @@ import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from ".
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
 import { DataTypesMain, PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
-import { CreateServerMain, DeployNetlify, DeployRender, DeplyTomcat, DevOpsHome, Linode } from "./pages/DevOps/DevOpsComponents";
+import {
+  ConnectToServerSshMain,
+  CreateServerMain,
+  DeployNetlify,
+  DeployRender,
+  DeplyTomcat,
+  DevOpsHome,
+  Linode,
+  ReactOnSpring,
+} from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { PostmanHome } from "./pages/Postman/PostmanComponents";
 import { WindowsHome } from "./pages/Windows/WindowsComponents";
-import ReactOnSpring from "./pages/DevOps/DevOpsComponents/ReactOnSpring/ReactOnSpring";
 
 const router = createBrowserRouter(
   [
@@ -225,7 +233,14 @@ const router = createBrowserRouter(
             { path: "netlify", element: <DeployNetlify /> },
             { path: "render", element: <DeployRender /> },
             { path: "tomcat", element: <DeplyTomcat /> },
-            { path: "linode", element: <Linode />, children: [{ path: "create-server", element: <CreateServerMain /> }] },
+            {
+              path: "linode",
+              element: <Linode />,
+              children: [
+                { path: "create-server", element: <CreateServerMain /> },
+                { path: "connect-with-ssh", element: <ConnectToServerSshMain /> },
+              ],
+            },
           ],
         },
         { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
