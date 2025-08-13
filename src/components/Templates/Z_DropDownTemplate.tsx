@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../components";
+import { SideDropDownTopic } from "..";
 
-const Z_DropDownIncludeInternalLink = () => {
+const Z_DropDownTemplate = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  const [listHeight, setListHeight] = useState<number>();
+  // const [listHeight, setListHeight] = useState<number>();
+  const [, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -35,16 +36,8 @@ const Z_DropDownIncludeInternalLink = () => {
   return (
     <section>
       <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/AAAA/BBBB" topicName="topic name" />
-
-      <div
-        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
-        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
-        ref={divRef}
-      >
-        <SideDropdownLink sideDropDownNavName="sidebar link name" internalLink="/AAAA/BBBB/cccc" />
-      </div>
     </section>
   );
 };
 
-export default Z_DropDownIncludeInternalLink;
+export default Z_DropDownTemplate;

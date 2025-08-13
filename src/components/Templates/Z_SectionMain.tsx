@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../components";
+import { ContentMenu } from "..";
 
 // ===========================================
 // ==     content menu (title name)         ==

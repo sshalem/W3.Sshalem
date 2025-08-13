@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from ".";
+import { GridLayout } from "..";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
