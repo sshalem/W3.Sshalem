@@ -14,9 +14,12 @@ const TopNavbar = () => {
   useEffect(() => {
     console.log(hash);
 
+    // Checks if url with hash is present
     if (hash) {
       // 1. remove '#' from hash
-      // 2. find the elemtn with assigned hash , for example id="about", id="MyProjects"
+      // 2. find the element with assigned hash , for example
+      // id="about",
+      // id="MyProjects"
       const el = document.getElementById(hash.substring(1));
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
@@ -38,10 +41,10 @@ const TopNavbar = () => {
           </Link>
 
           <div className="inline-block">
-            <Link to="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+            <Link to="/#about" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white" onClick={handleTopOfPage}>
               about
             </Link>
-            <Link to="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white">
+            <Link to="/#MyProjects" className="h-full px-4 py-5 align-middle hover:bg-blue-600 hover:text-white" onClick={handleTopOfPage}>
               MyProjects
             </Link>
           </div>
