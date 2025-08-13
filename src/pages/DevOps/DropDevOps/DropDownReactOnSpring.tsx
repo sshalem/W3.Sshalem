@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropDownTopic } from "../../../components";
 
-const DropDownRender = () => {
+const DropDownReactOnSpring = () => {
   const [showList, setShowList] = useState<boolean>(false);
   // const [listHeight, setListHeight] = useState<number>();
   const [, setListHeight] = useState<number>();
@@ -19,7 +19,7 @@ const DropDownRender = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("render")) {
+    if (location.pathname.includes("react-on-spring")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -39,11 +39,11 @@ const DropDownRender = () => {
         enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/devops/render"
-        topicName="Render Deploy"
+        internalLink="/devops/react-on-spring"
+        topicName="React On Spring"
       />
     </section>
   );
 };
 
-export default DropDownRender;
+export default DropDownReactOnSpring;

@@ -74,6 +74,7 @@ import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { PostmanHome } from "./pages/Postman/PostmanComponents";
 import { WindowsHome } from "./pages/Windows/WindowsComponents";
+import ReactOnSpring from "./pages/DevOps/DevOpsComponents/ReactOnSpring/ReactOnSpring";
 
 const router = createBrowserRouter(
   [
@@ -220,6 +221,7 @@ const router = createBrowserRouter(
           element: <DevOps_page />,
           children: [
             { index: true, element: <DevOpsHome /> },
+            { path: "react-on-spring", element: <ReactOnSpring /> },
             { path: "netlify", element: <DeployNetlify /> },
             { path: "render", element: <DeployRender /> },
             { path: "tomcat", element: <DeplyTomcat /> },
