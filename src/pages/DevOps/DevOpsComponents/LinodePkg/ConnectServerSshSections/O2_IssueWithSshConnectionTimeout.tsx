@@ -1,8 +1,8 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { SpanBlue } from "../../../../../components/Highlight";
 import linode_6 from "../../../../../assets/linode_6.jpg";
 
-const IssueWithSshConnectionTimeout = ({ anchor }: { anchor: string }) => {
+const O2_IssueWithSshConnectionTimeout = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
@@ -14,4 +14,4 @@ const IssueWithSshConnectionTimeout = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default IssueWithSshConnectionTimeout;
+export default O2_IssueWithSshConnectionTimeout;

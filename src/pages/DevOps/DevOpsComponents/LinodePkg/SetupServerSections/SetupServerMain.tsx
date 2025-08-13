@@ -5,13 +5,13 @@ import { ContentMenu } from "../../../../../components";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const create_linode_server = "create_linode_server";
+const O1_InitialServerSetup = "O1_InitialServerSetup";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [create_linode_server];
+const anchorList: string[] = [O1_InitialServerSetup];
 
 // ============================================
 // ============================================

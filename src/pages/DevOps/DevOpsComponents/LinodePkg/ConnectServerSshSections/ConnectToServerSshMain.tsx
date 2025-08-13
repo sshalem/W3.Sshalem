@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
-import ConnectWithSsh from "./ConnectWithSsh";
-import IssueWithSshConnectionTimeout from "./IssueWithSshConnectionTimeout";
+import O1_ConnectWithSsh from "./O1_ConnectWithSsh";
+import O2_IssueWithSshConnectionTimeout from "./O2_IssueWithSshConnectionTimeout";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -51,8 +51,8 @@ const ConnectToServerSshMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <ConnectWithSsh anchor={connect_to_server_ssh}></ConnectWithSsh>
-      <IssueWithSshConnectionTimeout anchor={ssh_connection_timeout_issue}></IssueWithSshConnectionTimeout>
+      <O1_ConnectWithSsh anchor={connect_to_server_ssh}></O1_ConnectWithSsh>
+      <O2_IssueWithSshConnectionTimeout anchor={ssh_connection_timeout_issue}></O2_IssueWithSshConnectionTimeout>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

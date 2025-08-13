@@ -2,7 +2,7 @@ import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import linode_5 from "../../../../../assets/linode_5.jpg";
 
-const ConnectWithSsh = ({ anchor }: { anchor: string }) => {
+const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
@@ -30,4 +30,4 @@ const ConnectWithSsh = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default ConnectWithSsh;
+export default O1_ConnectWithSsh;

@@ -5,7 +5,7 @@ import linode_3 from "../../../../../assets/linode_3.jpg";
 import linode_4 from "../../../../../assets/linode_4.jpg";
 import { DivDoubleBorder, Span, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 
-const CreateLinodeServer = ({ anchor }: { anchor: string }) => {
+const O1_CreateLinodeServer = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>Follow the steps:</div>
@@ -36,4 +36,4 @@ const CreateLinodeServer = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default CreateLinodeServer;
+export default O1_CreateLinodeServer;

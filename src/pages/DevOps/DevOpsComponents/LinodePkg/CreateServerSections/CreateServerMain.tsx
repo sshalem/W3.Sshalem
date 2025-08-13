@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
-import CreateLinodeServer from "./CreateLinodeServer";
+import O1_CreateLinodeServer from "./O1_CreateLinodeServer";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -49,7 +49,7 @@ const CreateServerMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <CreateLinodeServer anchor={create_linode_server} />
+      <O1_CreateLinodeServer anchor={create_linode_server} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
