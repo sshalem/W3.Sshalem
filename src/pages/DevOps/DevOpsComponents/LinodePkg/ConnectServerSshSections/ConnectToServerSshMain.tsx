@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
 import ConnectWithSsh from "./ConnectWithSsh";
+import IssueWithSshConnectionTimeout from "./IssueWithSshConnectionTimeout";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const connect_to_server_ssh = "connect_to_server_ssh";
+const ssh_connection_timeout_issue = "ssh_connection_timeout_issue";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [connect_to_server_ssh];
+const anchorList: string[] = [connect_to_server_ssh, ssh_connection_timeout_issue];
 
 // ============================================
 // ============================================
@@ -50,6 +52,7 @@ const ConnectToServerSshMain = () => {
       />
       {/* End Contents */}
       <ConnectWithSsh anchor={connect_to_server_ssh}></ConnectWithSsh>
+      <IssueWithSshConnectionTimeout anchor={ssh_connection_timeout_issue}></IssueWithSshConnectionTimeout>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

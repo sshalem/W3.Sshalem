@@ -77,6 +77,7 @@ import {
   DevOpsHome,
   Linode,
   ReactOnSpring,
+  SetupServerMain,
 } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -239,6 +240,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "create-server", element: <CreateServerMain /> },
                 { path: "connect-with-ssh", element: <ConnectToServerSshMain /> },
+                { path: "setup-server", element: <SetupServerMain /> },
               ],
             },
           ],

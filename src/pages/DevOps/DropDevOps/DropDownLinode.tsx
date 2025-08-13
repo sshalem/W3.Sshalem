@@ -42,6 +42,8 @@ const DropDownLinode = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linode/create-server" />
+        <SideDropdownLink sideDropDownNavName="connect with ssh" internalLink="/devops/linode/connect-with-ssh" />
+        <SideDropdownLink sideDropDownNavName="setup server Linux (ubuntu)" internalLink="/devops/linode/setup-server" />
       </div>
     </section>
   );
