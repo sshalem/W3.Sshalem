@@ -68,7 +68,7 @@ import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from ".
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
 import { DataTypesMain, PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
-import { DeployNetlify, DeployRender, DeplyTomcat, DevOpsHome } from "./pages/DevOps/DevOpsComponents";
+import { CreateServerMain, DeployNetlify, DeployRender, DeplyTomcat, DevOpsHome, Linode } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
@@ -225,6 +225,7 @@ const router = createBrowserRouter(
             { path: "netlify", element: <DeployNetlify /> },
             { path: "render", element: <DeployRender /> },
             { path: "tomcat", element: <DeplyTomcat /> },
+            { path: "linode", element: <Linode />, children: [{ path: "create-server", element: <CreateServerMain /> }] },
           ],
         },
         { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
