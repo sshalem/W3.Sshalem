@@ -35,13 +35,7 @@ const DropDownRender = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        enableCaret={false}
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/devops/render"
-        topicName="Render Deploy"
-      />
+      <SideDropDownTopic enableCaret={false} showList={showList} handleOpenList={handleOpenList} internalLink="/devops/render" topicName="Render" />
     </section>
   );
 };

@@ -35,13 +35,7 @@ const DropDownNetlify = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        enableCaret={false}
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/devops/netlify"
-        topicName="Netlify Deploy"
-      />
+      <SideDropDownTopic enableCaret={false} showList={showList} handleOpenList={handleOpenList} internalLink="/devops/netlify" topicName="Netlify" />
     </section>
   );
 };

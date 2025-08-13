@@ -35,13 +35,7 @@ const DropDownTomcat = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        enableCaret={false}
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/devops/tomcat"
-        topicName="Tomcat Deploy"
-      />
+      <SideDropDownTopic enableCaret={false} showList={showList} handleOpenList={handleOpenList} internalLink="/devops/tomcat" topicName="Tomcat" />
     </section>
   );
 };
