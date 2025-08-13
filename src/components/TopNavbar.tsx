@@ -3,7 +3,7 @@ import { SiStudyverse } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
 
 const TopNavbar = () => {
-  // this will get only the url from the hash sign
+  // this will takes the url path : only from the hash sign
   // example : #about, #MyProjects
   const { hash } = useLocation();
 
