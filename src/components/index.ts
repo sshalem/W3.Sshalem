@@ -3,7 +3,6 @@ export { default as TopNavbar } from "./TopNavbar";
 export { default as Navbar } from "./Navbar";
 export { default as SideNavbar } from "./SideNavbar";
 export { default as GridLayout } from "./GridLayout";
-export { default as LeftColumnLayout } from "./LeftColumnLayout";
 export { default as SideBarLink } from "./SideBarLink";
 export { default as AboutMe } from "./AboutMe";
 export { default as MyProjects } from "./MyProjects";
