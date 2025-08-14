@@ -43,8 +43,9 @@ const DropDownLinode = () => {
       >
         <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linode/create-server" />
         <SideDropdownLink sideDropDownNavName="connect with ssh" internalLink="/devops/linode/connect-with-ssh" />
-        <SideDropdownLink sideDropDownNavName="setup server Linux (ubuntu)" internalLink="/devops/linode/setup-server" />
-        <SideDropdownLink sideDropDownNavName="JDK Install" internalLink="/devops/linode/jdk-install" />
+        <SideDropdownLink sideDropDownNavName="Linux server setup" internalLink="/devops/linode/setup-server" />
+        <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linode/jdk-install" />
+        <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linode/tomcat-install" />
       </div>
     </section>
   );

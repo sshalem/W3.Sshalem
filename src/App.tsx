@@ -79,6 +79,7 @@ import {
   Linode,
   ReactOnSpring,
   SetupServerMain,
+  TomcatInstallMain,
 } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -243,6 +244,7 @@ const router = createBrowserRouter(
                 { path: "connect-with-ssh", element: <ConnectToServerSshMain /> },
                 { path: "setup-server", element: <SetupServerMain /> },
                 { path: "jdk-install", element: <JdkInstallMain /> },
+                { path: "tomcat-install", element: <TomcatInstallMain /> },
               ],
             },
           ],

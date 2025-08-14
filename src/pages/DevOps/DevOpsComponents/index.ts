@@ -5,6 +5,7 @@ export { default as ConnectToServerSshMain } from "./LinodePkg/ConnectServerSshS
 export { default as ReactOnSpring } from "./ReactOnSpring/ReactOnSpring";
 export { default as SetupServerMain } from "./LinodePkg/SetupServerSections/SetupServerMain";
 export { default as JdkInstallMain } from "./LinodePkg/JdkInstallSections/JdkInstallMain";
+export { default as TomcatInstallMain } from "./LinodePkg/TomcatInstallSections/TomcatInstallMain";
 
 export { default as DeployNetlify } from "./DeployNetlifyPkg/DeployNetlify";
 export { default as DeployRender } from "./DeployRenderPkg/DeployRender";
