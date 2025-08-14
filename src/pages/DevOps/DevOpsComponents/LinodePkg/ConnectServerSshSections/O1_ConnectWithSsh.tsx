@@ -1,6 +1,7 @@
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import linode_5 from "../../../../../assets/linode_5.jpg";
+import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
 const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,9 +12,8 @@ const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
       </div>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">Open admin CMD on windows</li>
-        <li className="my-1">
-          Take the IP from linode server , type command <SpanGreen>ssh root@139.162.148.144</SpanGreen>
-        </li>
+        <li className="my-1">Take the IP from linode server , type command</li>
+        <LinuxHighlight bashCode={ssh_connect}></LinuxHighlight>
         <li className="my-1">
           When I setup the linode , the user & password for root are as follows. thus I need to type the password below
           <ul className="my-4 ml-8 list-disc">
@@ -31,3 +31,5 @@ const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
   );
 };
 export default O1_ConnectWithSsh;
+
+const ssh_connect = `ssh root@139.162.148.144`;
