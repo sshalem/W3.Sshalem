@@ -52,7 +52,7 @@ const config_tomcat_1 = `sudo nano /opt/tomcat/conf/tomcat-users.xml`;
 const setup_user = `<role rolename="manager-gui"/>
 <role rolename="admin-gui"/>
 <role rolename="manager-script"/>
-<user username="sshb" password="123" roles="manager-gui,manager-script,admin-gui"/>`;
+<user username="sshb" password="123" roles="manager-script,admin-gui,manager-gui"/>`;
 
 const context_restriction = `sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml`;
 
