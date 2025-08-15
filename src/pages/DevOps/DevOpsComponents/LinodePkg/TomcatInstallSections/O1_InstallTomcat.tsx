@@ -78,10 +78,19 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
               <SpanBlue>tar.gz</SpanBlue> file to the <SpanBlue>/tmp</SpanBlue> directory
             </li>
             <li className="my-1">
-              <SpanGreen>sudo mkdir /opt/tomcat</SpanGreen> create <SpanBlue>tomcat directory</SpanBlue> inside <SpanBlue>opt directory</SpanBlue>
+              <SpanGreen>sudo mkdir /opt/tomcat</SpanGreen> create <SpanBlue>tomcat</SpanBlue>directory inside <SpanBlue>opt</SpanBlue> directory
             </li>
 
-            <li className="my-1"></li>
+            <li className="my-1">
+              <SpanGreen>sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1</SpanGreen> extract it to the{" "}
+              <SpanBlue>/opt/tomcat </SpanBlue>directory
+            </li>
+            <li className="my-1">
+              <SpanGreen>sudo chown -R tomcat:tomcat /opt/tomcat/</SpanGreen> Set Permissions, First, we’ll change the directory ownership to tomcat.
+            </li>
+            <li className="my-1">
+              <SpanGreen>sudo chmod -R u+x /opt/tomcat/bin</SpanGreen> Next, make all scripts within the bin directory executable.
+            </li>
           </ul>
         </li>
         <LinuxHighlight bashCode={tomcat_install}></LinuxHighlight>
