@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
@@ -35,35 +35,56 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
         </li>
         <li className="my-1">At the left pane , Click on the Download</li>
         <IMG img_name={tomcat_1}></IMG>
-        <li className="my-1">At the time that I made this tutorial, I install the tomcat 10.1.26 version .</li>
+        <li className="my-1">
+          At the time that I made this tutorial, I install the tomcat <SpanBlue>v10.1.44</SpanBlue> version .
+        </li>
         <li className="my-1">
           On the <SpanGreen>Quick navigation</SpanGreen> , click on <SpanGreen>browse</SpanGreen>
         </li>
         <IMG img_name={tomcat_2}></IMG>
         <li className="my-1">
-          Click on the <SpanGreen>v10.1.26</SpanGreen>
+          Click on the <SpanBlue>v10.1.44</SpanBlue>
         </li>
         <IMG img_name={tomcat_3}></IMG>
         <li className="my-1">
-          Click on <SpanGreen>bin</SpanGreen>
+          Click on <SpanBlue>bin</SpanBlue>
         </li>
         <IMG img_name={tomcat_4}></IMG>
         <li className="my-1">
           Now choose the version to download. This will be the the name of the tomact version file I will download on Linux Server
           <ul className="my-4 ml-8 list-disc">
             <li className="my-1">
-              version : <SpanRed>apache-tomcat-10.1.26.tar.gz</SpanRed> see image below
+              version : <SpanRed>apache-tomcat-10.1.44.tar.gz</SpanRed> see image below
             </li>
             <li className="my-1">
-              link to download from : <SpanRed>https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz</SpanRed>{" "}
+              link to download from : <SpanRed>https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanRed>{" "}
               combination of the url + the version
             </li>
           </ul>
         </li>
         <IMG img_name={tomcat_5}></IMG>
-        <li className="my-1">use following commands to Install on Linux</li>
+        <li className="my-1">
+          use following commands to Install on Linux
+          <ul className="my-4 ml-8 list-decimal">
+            <li className="my-1">
+              <SpanGreen>sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat</SpanGreen> create a new system user with home directory
+              <SpanBlue>/opt/tomcat</SpanBlue>
+            </li>
+            <li className="my-1">
+              <SpanGreen>cd /tmp</SpanGreen> go tp <SpanBlue>tmp directory</SpanBlue>
+            </li>
+            <li className="my-1">
+              <SpanGreen>wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanGreen>Download the
+              <SpanBlue>tar.gz</SpanBlue> file to the <SpanBlue>/tmp</SpanBlue> directory
+            </li>
+            <li className="my-1">
+              <SpanGreen>sudo mkdir /opt/tomcat</SpanGreen> create <SpanBlue>tomcat directory</SpanBlue> inside <SpanBlue>opt directory</SpanBlue>
+            </li>
+
+            <li className="my-1"></li>
+          </ul>
+        </li>
         <LinuxHighlight bashCode={tomcat_install}></LinuxHighlight>
-        <li className="my-1"></li>
       </ul>
     </MainChildArea>
   );
@@ -72,7 +93,8 @@ export default O1_InstallTomcat;
 
 const tomcat_install = `sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat
 cd /tmp
-wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz
+sudo mkdir /opt/tomcat
 sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
 sudo chown -R tomcat:tomcat /opt/tomcat/
 sudo chmod -R u+x /opt/tomcat/bin`;

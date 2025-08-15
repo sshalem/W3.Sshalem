@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
 import O1_InstallTomcat from "./O1_InstallTomcat";
+import O2_ConfigUsers from "./O2_ConfigUsers";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const O1_tomcat_install = "01_Install_tomcat_on_linux";
+const O2_config_users = "O2_config_users";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [O1_tomcat_install];
+const anchorList: string[] = [O1_tomcat_install, O2_config_users];
 
 // ============================================
 // ============================================
@@ -50,6 +52,7 @@ const TomcatInstallMain = () => {
       />
       {/* End Contents */}
       <O1_InstallTomcat anchor={O1_tomcat_install}></O1_InstallTomcat>
+      <O2_ConfigUsers anchor={O2_config_users}></O2_ConfigUsers>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
