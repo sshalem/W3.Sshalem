@@ -1,4 +1,4 @@
-import Shabtay_1 from "../assets/Shabtay_1.jpg";
+import Shabtay_1 from "../assets/Shabtay_1_dramatic_cool.jpg";
 
 const AboutMe = () => {
   return (
