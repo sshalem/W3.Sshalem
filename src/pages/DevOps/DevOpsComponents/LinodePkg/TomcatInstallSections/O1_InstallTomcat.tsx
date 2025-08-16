@@ -63,6 +63,9 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
           </ul>
         </li>
         <IMG img_name={tomcat_5}></IMG>
+        <li className="my-1">open CMD </li>
+        <li className="my-1">copy/paste command to connet to Linode Server</li>
+        <LinuxHighlight bashCode={connect_to_server}></LinuxHighlight>
         <li className="my-1">
           use following commands to Install on Linux
           <ul className="my-4 ml-8 list-decimal">
@@ -99,6 +102,8 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
   );
 };
 export default O1_InstallTomcat;
+
+const connect_to_server = `ssh root@139.162.148.144`;
 
 const tomcat_install = `sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat
 cd /tmp
