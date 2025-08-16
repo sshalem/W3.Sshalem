@@ -1,16 +1,18 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 import tomcat_6 from "../../../../../assets/tomcat_6.jpg";
 
 const O2_ConfigUsers = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <DivDoubleBorder>tomcat-users.xml</DivDoubleBorder>
       <ul className="my-4 ml-8 list-decimal">
+        <li className="my-1">
+          Let's config <SpanRed>tomcat-users.xml</SpanRed> to add users
+        </li>
         <li className="my-1">open CMD </li>
         <li className="my-1">copy/paste command to connet to Linode Server</li>
-        <LinuxHighlight bashCode={connect_to_srver}></LinuxHighlight>
+        <LinuxHighlight bashCode={connect_to_server}></LinuxHighlight>
         <li className="my-1">
           copy/paste command to open the <SpanGreen>tomcat-users.xml</SpanGreen> with <SpanGreen>nano</SpanGreen>
         </li>
@@ -19,20 +21,20 @@ const O2_ConfigUsers = ({ anchor }: { anchor: string }) => {
           to setup new tomcat user <SpanGreen>username="sshb"</SpanGreen> <SpanGreen>password="123"</SpanGreen>, as manager & admin . paste code below
         </li>
         <LinuxHighlight bashCode={setup_user}></LinuxHighlight>
-      </ul>
-      <DivDoubleBorder>Remove restriction , Manager page</DivDoubleBorder>
-      To remove the restriction for the <SpanBlue>Manager</SpanBlue> page :
-      <ul className="my-4 ml-8 list-decimal">
+        <li className="my-1">
+          To enable remote access to <SpanRed>manager</SpanRed> app Let's config <SpanRed>context.xml</SpanRed> , then remove the restriction for the{" "}
+          <SpanBlue>Manager</SpanBlue> page
+        </li>
         <li className="my-1">open its config file for editing</li>
         <LinuxHighlight bashCode={context_restriction}></LinuxHighlight>
         <li className="my-1">
           Comment out the <SpanBlue>Valve</SpanBlue> tag definition, as shown:
         </li>
         <IMG img_name={tomcat_6}></IMG>
-      </ul>
-      <DivDoubleBorder>Remove restriction from Host Manager</DivDoubleBorder>
-      We also need to remove the restriction for the <SpanBlue>Host Manager</SpanBlue> page (As I did in prev section):
-      <ul className="my-4 ml-8 list-decimal">
+        <li className="my-1">
+          To enable remote access to <SpanRed>Host Manager</SpanRed> Let's config <SpanRed>context.xml</SpanRed> to remove the restriction for
+          <SpanBlue>Host Manager</SpanBlue> page (As I did in prev section)
+        </li>
         <li className="my-1">open its config file for editing</li>
         <LinuxHighlight bashCode={host_restriction}></LinuxHighlight>
         <li className="my-1">
@@ -45,7 +47,7 @@ const O2_ConfigUsers = ({ anchor }: { anchor: string }) => {
 };
 export default O2_ConfigUsers;
 
-const connect_to_srver = `ssh root@139.162.148.144`;
+const connect_to_server = `ssh root@139.162.148.144`;
 
 const config_tomcat_1 = `sudo nano /opt/tomcat/conf/tomcat-users.xml`;
 

@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
 import O1_InstallTomcat from "./O1_InstallTomcat";
 import O2_ConfigUsers from "./O2_ConfigUsers";
-import O3_ModifyPort from "./O3_ModifyPort";
+import O3_ConfigTomcatService from "./O3_ConfigTomcatService";
+import O4_StartTomcat from "./O4_StartTomcat";
+import O5_BrowseTomcat from "./O5_BrowseTomcat";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -10,13 +12,15 @@ import O3_ModifyPort from "./O3_ModifyPort";
 
 const O1_tomcat_install = "O1_Install_tomcat_on_linux";
 const O2_config_users = "O2_config_users";
-const O3_modify_port = "O3_modify_port";
+const O3_config_tomcat_service = "O3_config_tomcat_service";
+const O4_start_tomcat = `O4_start_tomcat`;
+const O5_browse_tomcat = `O5_browse_tomcat`;
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [O1_tomcat_install, O2_config_users, O3_modify_port];
+const anchorList: string[] = [O1_tomcat_install, O2_config_users, O3_config_tomcat_service, O4_start_tomcat, O5_browse_tomcat];
 
 // ============================================
 // ============================================
@@ -55,7 +59,9 @@ const TomcatInstallMain = () => {
       {/* End Contents */}
       <O1_InstallTomcat anchor={O1_tomcat_install}></O1_InstallTomcat>
       <O2_ConfigUsers anchor={O2_config_users}></O2_ConfigUsers>
-      <O3_ModifyPort anchor={O3_modify_port}></O3_ModifyPort>
+      <O3_ConfigTomcatService anchor={O3_config_tomcat_service}></O3_ConfigTomcatService>
+      <O4_StartTomcat anchor={O4_start_tomcat}></O4_StartTomcat>
+      <O5_BrowseTomcat anchor={O5_browse_tomcat}></O5_BrowseTomcat>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
