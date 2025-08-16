@@ -1,7 +1,6 @@
-import { IMG, MainChildArea } from "../../../../../components";
+import { MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
-import tomcat_7 from "../../../../../assets/tomcat_7.jpg";
 
 const O5_BrowseTomcat = ({ anchor }: { anchor: string }) => {
   return (
