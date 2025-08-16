@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownLinode = () => {
+const DropDownLinux = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownLinode = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("linode")) {
+    if (location.pathname.includes("linux-server")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,21 +34,22 @@ const DropDownLinode = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/devops/linode" topicName="Linode (Akami)" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/devops/linux-server" topicName="Linux (Linode Akami)" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linode/create-server" />
-        <SideDropdownLink sideDropDownNavName="connect with ssh" internalLink="/devops/linode/connect-with-ssh" />
-        <SideDropdownLink sideDropDownNavName="Linux server setup" internalLink="/devops/linode/setup-server" />
-        <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linode/jdk-install" />
-        <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linode/tomcat-install" />
+        <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linux-server/create-server" />
+        <SideDropdownLink sideDropDownNavName="connect with ssh" internalLink="/devops/linux-server/connect-with-ssh" />
+        <SideDropdownLink sideDropDownNavName="Linux server setup" internalLink="/devops/linux-server/setup-server" />
+        <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
+        <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
+        <SideDropdownLink sideDropDownNavName="Linux MySql Install" internalLink="/devops/linux-server/mysql-install" />
       </div>
     </section>
   );
 };
 
-export default DropDownLinode;
+export default DropDownLinux;

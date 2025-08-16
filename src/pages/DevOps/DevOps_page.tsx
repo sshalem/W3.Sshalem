@@ -6,7 +6,7 @@ import DropDownNetlify from "./DropDevOps/DropDownNetlify";
 import DropDownRender from "./DropDevOps/DropDownRender";
 import DropDownTomcat from "./DropDevOps/DropDownTomcat";
 import DropDownReactOnSpring from "./DropDevOps/DropDownReactOnSpring";
-import DropDownLinode from "./DropDevOps/DropDownLinode";
+import DropDownLinux from "./DropDevOps/DropDownLinux";
 
 const DevOps_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -42,7 +42,7 @@ const DevOps_page = () => {
             <DropDownNetlify />
             <DropDownRender />
             <DropDownTomcat />
-            <DropDownLinode />
+            <DropDownLinux />
           </div>
         </article>
       )}
