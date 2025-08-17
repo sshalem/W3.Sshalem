@@ -17,7 +17,7 @@ const anchorList: string[] = [tomcat_deploy];
 // ============================================
 // ============================================
 
-const DeplyTomcat = () => {
+const DeployTomcat = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -56,4 +56,4 @@ const DeplyTomcat = () => {
     </section>
   );
 };
-export default DeplyTomcat;
+export default DeployTomcat;

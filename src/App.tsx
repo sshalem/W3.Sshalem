@@ -73,7 +73,7 @@ import {
   CreateServerMain,
   DeployNetlify,
   DeployRender,
-  DeplyTomcat,
+  DeployTomcat,
   DevOpsHome,
   JdkInstallMain,
   JenkinsMain,
@@ -237,7 +237,7 @@ const router = createBrowserRouter(
             { path: "react-on-spring", element: <ReactOnSpring /> },
             { path: "netlify", element: <DeployNetlify /> },
             { path: "render", element: <DeployRender /> },
-            { path: "tomcat", element: <DeplyTomcat /> },
+            { path: "tomcat", element: <DeployTomcat /> },
             {
               path: "linux-server",
               element: <Linux_Server />,

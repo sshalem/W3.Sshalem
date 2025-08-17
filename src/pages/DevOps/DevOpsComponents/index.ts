@@ -11,4 +11,4 @@ export { default as JenkinsMain } from "./LinuxPkg/JenkinsSections/JenkinsMain";
 
 export { default as DeployNetlify } from "./DeployNetlifyPkg/DeployNetlify";
 export { default as DeployRender } from "./DeployRenderPkg/DeployRender";
-export { default as DeplyTomcat } from "./DeployTomcatPkg/DeplyTomcat";
+export { default as DeployTomcat } from "./DeployTomcatPkg/DeployTomcat";
