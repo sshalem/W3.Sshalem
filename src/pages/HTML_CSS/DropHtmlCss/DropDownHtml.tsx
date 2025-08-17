@@ -18,7 +18,7 @@ const DropDownHtml = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("html-basics")) {
+    if (location.pathname.includes("html_css/html-basics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
