@@ -19,7 +19,7 @@ const DropDownLogging = () => {
 
   useEffect(() => {
     // if (location.pathname.substring(8).includes("logging")) {
-    if (location.pathname.includes("logging")) {
+    if (location.pathname.includes("spring/logging")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {

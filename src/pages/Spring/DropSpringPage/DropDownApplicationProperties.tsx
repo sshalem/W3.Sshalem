@@ -19,7 +19,7 @@ const DropDownApplicationProperties = () => {
 
   useEffect(() => {
     // if (location.pathname.substring(8).includes("application-properties")) {
-    if (location.pathname.includes("application-properties")) {
+    if (location.pathname.includes("spring/application-properties")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
