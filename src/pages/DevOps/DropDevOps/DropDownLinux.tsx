@@ -47,6 +47,7 @@ const DropDownLinux = () => {
         <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
         <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
         <SideDropdownLink sideDropDownNavName="Linux MySql Install" internalLink="/devops/linux-server/mysql-install" />
+        <SideDropdownLink sideDropDownNavName="Linux Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
       </div>
     </section>
   );

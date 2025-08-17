@@ -7,6 +7,7 @@ export { default as SetupServerMain } from "./LinuxPkg/SetupServerSections/Setup
 export { default as JdkInstallMain } from "./LinuxPkg/JdkInstallSections/JdkInstallMain";
 export { default as TomcatInstallMain } from "./LinuxPkg/TomcatInstallSections/TomcatInstallMain";
 export { default as MySqlnstallMain } from "./LinuxPkg/MySqlSections/MySqlnstallMain";
+export { default as JenkinsMain } from "./LinuxPkg/JenkinsSections/JenkinsMain";
 
 export { default as DeployNetlify } from "./DeployNetlifyPkg/DeployNetlify";
 export { default as DeployRender } from "./DeployRenderPkg/DeployRender";
