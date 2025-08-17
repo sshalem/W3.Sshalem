@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../../components";
+import { SideDropDownTopic } from "../../../components";
 
-const DropDownBasicConepts = () => {
+const DropDownPortCheck = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownBasicConepts = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("sql/basic-concepts")) {
+    if (location.pathname.includes("windows/basic-concepts")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +34,21 @@ const DropDownBasicConepts = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/sql/basic-concepts" topicName="Basic Concepts" />
+      <SideDropDownTopic
+        enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/windows/port-check"
+        topicName="Port check"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
-      >
-        <SideDropdownLink sideDropDownNavName="Key Types" internalLink="/sql/basic-concepts/key-types" />
-      </div>
+      ></div>
     </section>
   );
 };
 
-export default DropDownBasicConepts;
+export default DropDownPortCheck;

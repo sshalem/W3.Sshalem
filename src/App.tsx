@@ -89,7 +89,7 @@ import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { PostmanHome } from "./pages/Postman/PostmanComponents";
-import { WindowsHome } from "./pages/Windows/WindowsComponents";
+import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 
 const router = createBrowserRouter(
   [
@@ -260,7 +260,14 @@ const router = createBrowserRouter(
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
         { path: "batch", element: <Batch_page />, children: [{ index: true, element: <BatchHome /> }] },
         { path: "postman", element: <Postman_page />, children: [{ index: true, element: <PostmanHome /> }] },
-        { path: "windows", element: <Windows_page />, children: [{ index: true, element: <WindowsHome /> }] },
+        {
+          path: "windows",
+          element: <Windows_page />,
+          children: [
+            { index: true, element: <WindowsHome /> },
+            { path: "port-check", element: <PortCheckMain /> },
+          ],
+        },
         {
           path: "page_creation",
           element: <Page_Creation_page />,
