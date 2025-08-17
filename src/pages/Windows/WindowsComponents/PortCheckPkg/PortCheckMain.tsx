@@ -1,17 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
+import O2_PortCheck from "./O2_PortCheck";
+import O1_Git from "./O1_Git";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const jsx_intro = "jsx intro";
+const o1_git = "O1_git";
+const o2_port_check = "O2_port_check";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [jsx_intro];
+const anchorList: string[] = [o1_git, o2_port_check];
 
 // ============================================
 // ============================================
@@ -48,7 +51,8 @@ const PortCheckMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
+      <O1_Git anchor={o1_git}></O1_Git>
+      <O2_PortCheck anchor={o2_port_check}></O2_PortCheck>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
