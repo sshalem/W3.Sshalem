@@ -19,7 +19,7 @@ const DropDownEureka = () => {
 
   useEffect(() => {
     // if (location.pathname.substring(8).includes("eureka")) {
-    if (location.pathname.includes("eureka")) {
+    if (location.pathname.includes("microservices/eureka")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {

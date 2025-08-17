@@ -19,7 +19,7 @@ const DropDownAppTree = () => {
 
   useEffect(() => {
     // if (location.pathname.substring(8).includes("rest")) {
-    if (location.pathname.includes("app-tree")) {
+    if (location.pathname.includes("page_creation/app-tree")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,7 +35,13 @@ const DropDownAppTree = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/app-tree" topicName="App Tree" />
+      <SideDropDownTopic
+        enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/page_creation/app-tree"
+        topicName="App Tree"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

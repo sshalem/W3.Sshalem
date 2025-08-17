@@ -19,7 +19,7 @@ const DropDownComponentTree = () => {
 
   useEffect(() => {
     // if (location.pathname.substring(8).includes("/page_creation/component-tree")) {
-    if (location.pathname.includes("component-tree")) {
+    if (location.pathname.includes("page_creation/component-tree")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -36,6 +36,7 @@ const DropDownComponentTree = () => {
   return (
     <section>
       <SideDropDownTopic
+        enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/page_creation/component-tree"

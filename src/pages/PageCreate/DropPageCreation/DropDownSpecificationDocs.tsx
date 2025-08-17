@@ -18,7 +18,7 @@ const DropDownSpecificationDocs = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("specification-document")) {
+    if (location.pathname.includes("page_creation/specification-document")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {

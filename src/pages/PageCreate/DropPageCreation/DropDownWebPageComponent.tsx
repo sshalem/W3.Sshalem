@@ -18,7 +18,7 @@ const DropDownWebPageComponent = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("web-page")) {
+    if (location.pathname.includes("page_creation/web-page")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,7 +34,13 @@ const DropDownWebPageComponent = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/page_creation/web-page" topicName="Web Page" />
+      <SideDropDownTopic
+        enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/page_creation/web-page"
+        topicName="Web Page"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

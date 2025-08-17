@@ -18,7 +18,7 @@ const DropDownJavaBasics = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("java")) {
+    if (location.pathname.includes("java/basics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
