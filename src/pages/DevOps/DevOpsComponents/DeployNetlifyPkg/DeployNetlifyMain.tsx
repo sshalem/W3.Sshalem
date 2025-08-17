@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { SpanBlue } from "../../../../components/Highlight";
+import { SpanBlue, SpanRed } from "../../../../components/Highlight";
 
 const DeployNetlifyMain = ({ anchor }: { anchor: string }) => {
   return (
@@ -33,8 +33,8 @@ const DeployNetlifyMain = ({ anchor }: { anchor: string }) => {
           The <SpanBlue>index.html</SpanBlue> file contains our entire React app code
         </li>
         <li className="my-1">
-          And as routing is handled by our React app which is contained in the index.html file, our application will work without a page not found
-          issue.
+          And as routing is handled by our React app which is contained in the <SpanBlue>index.html</SpanBlue> file, our application will work without
+          a <SpanRed>page not found issue</SpanRed>.
         </li>
       </ul>
     </MainChildArea>
