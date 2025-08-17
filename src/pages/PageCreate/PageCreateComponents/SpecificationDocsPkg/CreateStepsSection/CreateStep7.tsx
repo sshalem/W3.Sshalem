@@ -149,7 +149,7 @@ const Z_DropDownIncludeInternalLink = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("BBBB")) {
+    if (location.pathname.includes("AAAA/BBBB")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
