@@ -42,7 +42,8 @@ const DropDownLinux = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linux-server/create-server" />
-        <SideDropdownLink sideDropDownNavName="connect with ssh" internalLink="/devops/linux-server/connect-with-ssh" />
+        <SideDropdownLink sideDropDownNavName="connect with SSH" internalLink="/devops/linux-server/connect-with-ssh" />
+        <SideDropdownLink sideDropDownNavName="connect with FileZilla" internalLink="/devops/linux-server/connect-with-filezilla" />
         <SideDropdownLink sideDropDownNavName="Linux server setup" internalLink="/devops/linux-server/setup-server" />
         <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
         <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />

@@ -83,6 +83,7 @@ import {
   SetupServerMain,
   TomcatInstallMain,
   Tomcat,
+  FileZillaMain,
 } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -245,6 +246,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "create-server", element: <CreateServerMain /> },
                 { path: "connect-with-ssh", element: <ConnectToServerSshMain /> },
+                { path: "connect-with-filezilla", element: <FileZillaMain /> },
                 { path: "setup-server", element: <SetupServerMain /> },
                 { path: "jdk-install", element: <JdkInstallMain /> },
                 { path: "tomcat-install", element: <TomcatInstallMain /> },
