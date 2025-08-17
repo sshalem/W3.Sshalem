@@ -19,7 +19,7 @@ const DropDownReactOnSpring = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("react-on-spring")) {
+    if (location.pathname.includes("devops/react-on-spring")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {

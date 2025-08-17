@@ -18,7 +18,9 @@ const DropDownLinux = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("linux-server")) {
+    if (location.pathname.includes("devops/linux-server")) {
+      console.log(location.pathname);
+
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
