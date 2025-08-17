@@ -61,7 +61,7 @@ import {
 
 import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 
-import { JsxMain, ReactBasics, ReactJSHome } from "./pages/ReactJS/ReactJSComponents";
+import { JsxMain, ReactBasics, ReactJSHome, ReactRouter, ReactRouterMain } from "./pages/ReactJS/ReactJSComponents";
 import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
@@ -186,6 +186,7 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <ReactJSHome /> },
             { path: "basics", element: <ReactBasics />, children: [{ path: "jsx", element: <JsxMain /> }] },
+            { path: "react-router", element: <ReactRouter />, children: [{ path: "install", element: <ReactRouterMain /> }] },
           ],
         },
         {

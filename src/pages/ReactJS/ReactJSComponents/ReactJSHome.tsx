@@ -11,7 +11,7 @@ const ReactJSHome = () => {
             gitLink="https://github.com/sshalem/ReactJS/blob/main/01_ReactJS_course.md"
           ></GitHubLiAnchor>
           <GitHubLiAnchor
-            description="2 - React Project setup"
+            description="2 - React Project setup (vite ,tailwind ,icons, favicon ,Router, axios, loading spinner component )"
             gitLink="https://github.com/sshalem/ReactJS/blob/main/02_React_Project_setup.md"
           ></GitHubLiAnchor>
           <GitHubLiAnchor description="" gitLink=""></GitHubLiAnchor>
