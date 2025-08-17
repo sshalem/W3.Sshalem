@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const DropDownTomcat = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  // const [listHeight, setListHeight] = useState<number>();
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -35,7 +34,15 @@ const DropDownTomcat = () => {
 
   return (
     <section>
-      <SideDropDownTopic enableCaret={false} showList={showList} handleOpenList={handleOpenList} internalLink="/devops/tomcat" topicName="Tomcat" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/devops/tomcat" topicName="Tomcat" />
+
+      <div
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
+        ref={divRef}
+      >
+        <SideDropdownLink sideDropDownNavName="Deploy React on Tomcat" internalLink="/devops/tomcat/react-on-tomcat" />
+      </div>
     </section>
   );
 };

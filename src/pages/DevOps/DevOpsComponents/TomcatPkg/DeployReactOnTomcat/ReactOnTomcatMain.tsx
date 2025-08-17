@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
-import DeployTomcatMain from "./DeployTomcatMain";
+import { ContentMenu } from "../../../../../components";
+import O1_Git from "./O1_Git";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const tomcat_deploy = "Tomcat Deploy";
+const o1_git = "O1_Git";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [tomcat_deploy];
+const anchorList: string[] = [o1_git];
 
 // ============================================
 // ============================================
 
-const DeployTomcat = () => {
+const ReactOnTomcatMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -50,10 +50,10 @@ const DeployTomcat = () => {
       />
       {/* End Contents */}
 
-      <DeployTomcatMain anchor={tomcat_deploy}></DeployTomcatMain>
+      <O1_Git anchor={o1_git}></O1_Git>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default DeployTomcat;
+export default ReactOnTomcatMain;
