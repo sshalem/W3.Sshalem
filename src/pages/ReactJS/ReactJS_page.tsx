@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownBasics from "./DropReactJS/DropDownReactBasics";
 import DropDownReactRouter from "./DropReactJS/DropDownReactRouter";
+import DropDownTypeScript from "./DropReactJS/DropDownTypeScript";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -36,6 +37,7 @@ const ReactJS_page = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
             <DropDownBasics />
+            <DropDownTypeScript />
             <DropDownReactRouter />
           </div>
         </article>
