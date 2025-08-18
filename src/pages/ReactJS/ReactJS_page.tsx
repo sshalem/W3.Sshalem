@@ -3,7 +3,7 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownBasics from "./DropReactJS/DropDownReactBasics";
-import DropDownReactRouter from "./DropReactJS/DropDownRouter";
+import DropDownRouter from "./DropReactJS/DropDownRouter";
 import DropDownTypeScript from "./DropReactJS/DropDownTypeScript";
 
 const ReactJS_page = () => {
@@ -38,7 +38,7 @@ const ReactJS_page = () => {
             <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
             <DropDownBasics />
             <DropDownTypeScript />
-            <DropDownReactRouter />
+            <DropDownRouter />
           </div>
         </article>
       )}
