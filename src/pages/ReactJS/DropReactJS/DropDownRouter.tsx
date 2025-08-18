@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownReactRouter = () => {
+const DropDownRouter = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownReactRouter = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/react-router")) {
+    if (location.pathname.includes("reactJS/router")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +34,17 @@ const DropDownReactRouter = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/react-router" topicName="React Router" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/router" topicName="Router" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Install Router" internalLink="/reactJS/react-router/install" />
+        <SideDropdownLink sideDropDownNavName="Install Router" internalLink="/reactJS/router/install" />
       </div>
     </section>
   );
 };
 
-export default DropDownReactRouter;
+export default DropDownRouter;

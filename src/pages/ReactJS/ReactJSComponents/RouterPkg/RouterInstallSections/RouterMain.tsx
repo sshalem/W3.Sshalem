@@ -16,7 +16,7 @@ const anchorList: string[] = [xxx_intro];
 // ============================================
 // ============================================
 
-const ReactRouterMain = () => {
+const RouterMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -56,4 +56,4 @@ const ReactRouterMain = () => {
   );
 };
 
-export default ReactRouterMain;
+export default RouterMain;
