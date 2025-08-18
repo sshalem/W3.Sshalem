@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { JsxHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 
 const O2_Variables = ({ anchor }: { anchor: string }) => {
   return (
