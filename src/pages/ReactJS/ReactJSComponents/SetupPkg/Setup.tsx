@@ -1,17 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
+import O1_CreateViteProject from "./O1_CreateViteProject";
+import O2_Favicon from "./O2_Favicon";
+import O3_ReactIcons from "./O3_ReactIcons";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_CreateViteProject = "1. Create Vite Project";
+const o2_Favicon = "2. Favicon";
+const o3_ReactIcons = "3. React Icons";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons];
 
 // ============================================
 // ============================================
@@ -49,7 +54,9 @@ const Setup = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_CreateViteProject anchor={o1_CreateViteProject}></O1_CreateViteProject>
+      <O2_Favicon anchor={o2_Favicon}></O2_Favicon>
+      <O3_ReactIcons anchor={o3_ReactIcons}></O3_ReactIcons>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
