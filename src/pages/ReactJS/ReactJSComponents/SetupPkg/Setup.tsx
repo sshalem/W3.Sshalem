@@ -3,6 +3,7 @@ import { ContentMenu } from "../../../../components";
 import O1_CreateViteProject from "./O1_CreateViteProject";
 import O2_Favicon from "./O2_Favicon";
 import O3_ReactIcons from "./O3_ReactIcons";
+import O4_InstallAxios from "./O4_InstallAxios";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -11,12 +12,13 @@ import O3_ReactIcons from "./O3_ReactIcons";
 const o1_CreateViteProject = "1. Create Vite Project";
 const o2_Favicon = "2. Favicon";
 const o3_ReactIcons = "3. React Icons";
+const o4_InstallAxios = "4. axios";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons];
+const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios];
 
 // ============================================
 // ============================================
@@ -57,7 +59,7 @@ const Setup = () => {
       <O1_CreateViteProject anchor={o1_CreateViteProject}></O1_CreateViteProject>
       <O2_Favicon anchor={o2_Favicon}></O2_Favicon>
       <O3_ReactIcons anchor={o3_ReactIcons}></O3_ReactIcons>
-
+      <O4_InstallAxios anchor={o4_InstallAxios}></O4_InstallAxios>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
