@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import DropDownBasics from "./DropReactJS/DropDownReactBasics";
 import DropDownRouter from "./DropReactJS/DropDownRouter";
 import DropDownTypeScript from "./DropReactJS/DropDownTypeScript";
+import DropDownSetup from "./DropReactJS/DropDownSetup";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -39,6 +40,7 @@ const ReactJS_page = () => {
             <DropDownBasics />
             <DropDownTypeScript />
             <DropDownRouter />
+            <DropDownSetup />
           </div>
         </article>
       )}
