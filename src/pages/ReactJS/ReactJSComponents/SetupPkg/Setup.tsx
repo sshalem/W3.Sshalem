@@ -4,6 +4,7 @@ import O1_CreateViteProject from "./O1_CreateViteProject";
 import O2_Favicon from "./O2_Favicon";
 import O3_ReactIcons from "./O3_ReactIcons";
 import O4_InstallAxios from "./O4_InstallAxios";
+import O5_Tailwindcss from "./O5_Tailwindcss";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,12 +14,13 @@ const o1_CreateViteProject = "1. Create Vite Project";
 const o2_Favicon = "2. Favicon";
 const o3_ReactIcons = "3. React Icons";
 const o4_InstallAxios = "4. axios";
+const o5_Tailwindcss = "5. tailwindcss";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios];
+const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios, o5_Tailwindcss];
 
 // ============================================
 // ============================================
@@ -60,6 +62,7 @@ const Setup = () => {
       <O2_Favicon anchor={o2_Favicon}></O2_Favicon>
       <O3_ReactIcons anchor={o3_ReactIcons}></O3_ReactIcons>
       <O4_InstallAxios anchor={o4_InstallAxios}></O4_InstallAxios>
+      <O5_Tailwindcss anchor={o5_Tailwindcss}></O5_Tailwindcss>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

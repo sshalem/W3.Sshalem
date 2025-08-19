@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../components";
-import { BatchHighlight, JsxHighlight } from "../../../../components/Highlight";
+import { BatchHighlight } from "../../../../components/Highlight";
 
 const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
   return (
