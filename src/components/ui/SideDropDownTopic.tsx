@@ -1,5 +1,7 @@
-import { CaretUp, CaretDown } from "../components";
 import { Link, useLocation } from "react-router-dom";
+import { CaretUp, CaretDown } from "../../components";
+// import  from "../Caret/CaretUp";
+// import CaretDown from "../Caret/CaretDown";
 
 interface SideDropDownTopicProps {
   showList: boolean;

@@ -1,5 +1,5 @@
 import { FaDiamond } from "react-icons/fa6";
-import { IMG, InternalArticle, MainChildArea } from "../../../../../components";
+import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, BatchHighlight, DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 import profile_1 from "../../../../../assets/profile_1.jpg";
 

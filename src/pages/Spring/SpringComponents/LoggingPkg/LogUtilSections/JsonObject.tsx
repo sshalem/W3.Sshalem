@@ -1,5 +1,5 @@
-import { ContentAnchor, InternalArticle } from "../../../../../components";
-import { JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { ContentAnchor } from "../../../../../components";
+import { DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,16 +25,15 @@ const JsonObject = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
       </div>
-      <InternalArticle articleTitle="example of JSON presentation">
-        <div className="my-5">simple json presentation</div>
-        <JavaHighlight javaCode={simpleJsonCode} />
+      <DivDoubleBorder>example of JSON presentation</DivDoubleBorder>
+      <div className="my-5">simple json presentation</div>
+      <JavaHighlight javaCode={simpleJsonCode} />
 
-        <div className="my-5">nested Json Object presentation</div>
-        <JavaHighlight javaCode={nestedJsonObjectCode} />
+      <div className="my-5">nested Json Object presentation</div>
+      <JavaHighlight javaCode={nestedJsonObjectCode} />
 
-        <div className="my-5">nested Json Object with Array</div>
-        <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
-      </InternalArticle>
+      <div className="my-5">nested Json Object with Array</div>
+      <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
     </article>
   );
 };
