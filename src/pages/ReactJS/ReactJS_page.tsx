@@ -37,10 +37,10 @@ const ReactJS_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
+            <DropDownSetup />
             <DropDownBasics />
             <DropDownTypeScript />
             <DropDownRouter />
-            <DropDownSetup />
           </div>
         </article>
       )}

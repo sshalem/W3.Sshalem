@@ -5,6 +5,7 @@ import O2_Favicon from "./O2_Favicon";
 import O3_ReactIcons from "./O3_ReactIcons";
 import O4_InstallAxios from "./O4_InstallAxios";
 import O5_Tailwindcss from "./O5_Tailwindcss";
+import O6_LoadingSpinner from "./O6_LoadingSpinner";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -15,12 +16,13 @@ const o2_Favicon = "2. Favicon";
 const o3_ReactIcons = "3. React Icons";
 const o4_InstallAxios = "4. axios";
 const o5_Tailwindcss = "5. tailwindcss";
+const o6_LoadingSpinner = "6. Loading Spinner";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios, o5_Tailwindcss];
+const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios, o5_Tailwindcss, o6_LoadingSpinner];
 
 // ============================================
 // ============================================
@@ -57,12 +59,12 @@ const Setup = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
       <O1_CreateViteProject anchor={o1_CreateViteProject}></O1_CreateViteProject>
       <O2_Favicon anchor={o2_Favicon}></O2_Favicon>
       <O3_ReactIcons anchor={o3_ReactIcons}></O3_ReactIcons>
       <O4_InstallAxios anchor={o4_InstallAxios}></O4_InstallAxios>
       <O5_Tailwindcss anchor={o5_Tailwindcss}></O5_Tailwindcss>
+      <O6_LoadingSpinner anchor={o6_LoadingSpinner}></O6_LoadingSpinner>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
