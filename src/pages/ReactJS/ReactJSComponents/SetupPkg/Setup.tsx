@@ -6,6 +6,7 @@ import O3_ReactIcons from "./O3_ReactIcons";
 import O4_InstallAxios from "./O4_InstallAxios";
 import O5_Tailwindcss from "./O5_Tailwindcss";
 import O6_LoadingSpinner from "./O6_LoadingSpinner";
+import O7_InstallReactRouter from "./O7_InstallReactRouter";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -17,12 +18,21 @@ const o3_ReactIcons = "3. React Icons";
 const o4_InstallAxios = "4. axios";
 const o5_Tailwindcss = "5. tailwindcss";
 const o6_LoadingSpinner = "6. Loading Spinner";
+const o7_InstallReactRouter = "7. Router";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateViteProject, o2_Favicon, o3_ReactIcons, o4_InstallAxios, o5_Tailwindcss, o6_LoadingSpinner];
+const anchorList: string[] = [
+  o1_CreateViteProject,
+  o2_Favicon,
+  o3_ReactIcons,
+  o4_InstallAxios,
+  o5_Tailwindcss,
+  o6_LoadingSpinner,
+  o7_InstallReactRouter,
+];
 
 // ============================================
 // ============================================
@@ -65,6 +75,7 @@ const Setup = () => {
       <O4_InstallAxios anchor={o4_InstallAxios}></O4_InstallAxios>
       <O5_Tailwindcss anchor={o5_Tailwindcss}></O5_Tailwindcss>
       <O6_LoadingSpinner anchor={o6_LoadingSpinner}></O6_LoadingSpinner>
+      <O7_InstallReactRouter anchor={o7_InstallReactRouter}></O7_InstallReactRouter>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
