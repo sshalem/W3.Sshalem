@@ -1,4 +1,4 @@
-import MainChildArea from "../MainChildArea";
+import MainChildArea from "../ui/MainChildArea";
 
 const Z_section_internal = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}></MainChildArea>;

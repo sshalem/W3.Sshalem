@@ -1,6 +1,6 @@
 import { FaDiamond } from "react-icons/fa6";
 import { IMG, InternalArticle, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, BatchHighlight, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, BatchHighlight, DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 import profile_1 from "../../../../../assets/profile_1.jpg";
 
 const ProfileConfig = ({ anchor }: { anchor: string }) => {
@@ -24,62 +24,58 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
         {/* application-h2.properties   # h2 environment */}
         {/* application-mysql.properties   # mysql environment */}
         {/* application-postgresql.properties   # postgresql environment */}
-        <InternalArticle articleTitle="Step 1 : application.properties , Set Active Profile">
-          <div>
-            <div className="my-4 ml-8">
-              <ul className="my-2 list-disc">
-                <li className="my-1">
-                  In the default properties I define who will be the profile properties that app will use, for example DEV profile.
-                </li>
-                <li className="my-1">
-                  Set the active profile in the default <SpanBlue>application.properties</SpanBlue>
-                </li>
-              </ul>
-            </div>
+        <DivDoubleBorder>Step 1 : application.properties , Set Active Profile</DivDoubleBorder>
+        <div>
+          <div className="my-4 ml-8">
+            <ul className="my-2 list-disc">
+              <li className="my-1">
+                In the default properties I define who will be the profile properties that app will use, for example DEV profile.
+              </li>
+              <li className="my-1">
+                Set the active profile in the default <SpanBlue>application.properties</SpanBlue>
+              </li>
+            </ul>
+          </div>
 
-            <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
-            <div className="my-5">
-              This tells Spring Boot to load &nbsp;
-              <SpanBlue>application-dev.properties</SpanBlue>&nbsp; in addition to the default config.
-              <br />
-              <div className="my-2">
-                The pattern is of a profile config is : <SpanBlue>application-{`{profile-name}`}.properties</SpanBlue>
-              </div>
-              <div className="my-2">
-                Where <SpanBlue>{`{profile-name}`}</SpanBlue> - will be the name of the profile we select .
-              </div>
-              <div className="my-2">
-                In our example <SpanBlue>{`{profile-name}`}</SpanBlue> is <SpanBlue>dev</SpanBlue>
-              </div>
+          <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
+          <div className="my-5">
+            This tells Spring Boot to load &nbsp;
+            <SpanBlue>application-dev.properties</SpanBlue>&nbsp; in addition to the default config.
+            <br />
+            <div className="my-2">
+              The pattern is of a profile config is : <SpanBlue>application-{`{profile-name}`}.properties</SpanBlue>
+            </div>
+            <div className="my-2">
+              Where <SpanBlue>{`{profile-name}`}</SpanBlue> - will be the name of the profile we select .
+            </div>
+            <div className="my-2">
+              In our example <SpanBlue>{`{profile-name}`}</SpanBlue> is <SpanBlue>dev</SpanBlue>
             </div>
           </div>
-        </InternalArticle>
+        </div>
         {/*  */}
         {/*  */}
-        <InternalArticle articleTitle="Step 2 : Create Profile-Specific Properties File">
-          <div className="my-2 mb-4">
-            Create a new file of <SpanBlue>application-dev.properties</SpanBlue> in <SpanBlue>src/main/resources:</SpanBlue>
+        <DivDoubleBorder>Step 2 : Create Profile-Specific Properties File</DivDoubleBorder>
+        <div className="my-2 mb-4">
+          Create a new file of <SpanBlue>application-dev.properties</SpanBlue> in <SpanBlue>src/main/resources:</SpanBlue>
+        </div>
+        <IMG img_name={profile_1}></IMG>
+        <div className="my-8">
+          <div className="my-4">
+            type the following code inside <SpanBlue>application-dev.properties</SpanBlue>
           </div>
-          <IMG img_name={profile_1}></IMG>
-
-          <div className="my-8">
-            <div className="my-4">
-              type the following code inside <SpanBlue>application-dev.properties</SpanBlue>
-            </div>
-            <ApplicationPropertiesHighlight propertiesCode={devCode} />
-          </div>
-        </InternalArticle>
+          <ApplicationPropertiesHighlight propertiesCode={devCode} />
+        </div>
         {/*  */}
         {/*  */}
-        <InternalArticle articleTitle="Step 3 : Run App check console">
-          <div className="my-8">
-            <JavaHighlight javaCode={javaCode} />
-          </div>
-          <div className="my-8">console show active profile is "dev"</div>
-          <div>
-            <BatchHighlight batchCode={batchCOde} />
-          </div>
-        </InternalArticle>
+        <DivDoubleBorder>Step 3 : Run App check console</DivDoubleBorder>
+        <div className="my-8">
+          <JavaHighlight javaCode={javaCode} />
+        </div>
+        <div className="my-8">console show active profile is "dev"</div>
+        <div>
+          <BatchHighlight batchCode={batchCOde} />
+        </div>
       </article>
     </MainChildArea>
   );

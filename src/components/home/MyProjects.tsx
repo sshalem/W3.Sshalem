@@ -1,15 +1,15 @@
-import Shabtay_1 from "../assets/Shabtay_1_dramatic_cool.jpg";
+import aboutImg from "../../assets/header_banner.jpg";
 
-const AboutMe = () => {
+const MyProjects = () => {
   return (
-    <section className="bg-white px-0 py-8" id="about">
+    <section className="bg-white px-0 py-8" id="MyProjects">
       <div className="about__center">
         <article className="about-img">
-          <img src={Shabtay_1} alt="about-img" className="about-img__photo" />
+          <img src={aboutImg} alt="about-img" className="about-img__photo" />
         </article>
         <article className="about-info">
           <div className="about-info__container">
-            <h1 className="about-info__title">about me</h1>
+            <h1 className="about-info__title">My Projects</h1>
             <p className="about-info__text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nulla totam reprehenderit similique vel placeat ipsum natus eaque libero
               nam.
@@ -29,4 +29,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default MyProjects;
