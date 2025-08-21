@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../../components";
+import { Anchor, IMG, MainChildArea } from "../../../../components";
 import { BatchHighlight, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_tailwind_1 from "../../../../assets/setup_tailwind_1.jpg";
 import setup_tailwind_2 from "../../../../assets/setup_tailwind_2.jpg";
@@ -12,10 +12,7 @@ const O5_Tailwindcss = ({ anchor }: { anchor: string }) => {
       <div></div>
       <ul className="my-4 ml-8 list-disc">
         <li className="my-1">
-          go to{" "}
-          <a href="https://tailwindcss.com/" target="_blank" className="text-blue-600">
-            https://tailwindcss.com/
-          </a>
+          go to <Anchor description=" https://tailwindcss.com/" href="https://tailwindcss.com/"></Anchor>
         </li>
         <li className="my-1">
           make sure to select v3.4.17 <IMG img_name={setup_tailwind_1}></IMG>
@@ -27,10 +24,7 @@ const O5_Tailwindcss = ({ anchor }: { anchor: string }) => {
       </div>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          go to{" "}
-          <a href="https://tailwindcss.com/" target="_blank" className="text-blue-600">
-            https://tailwindcss.com/
-          </a>
+          go to <Anchor description=" https://tailwindcss.com/" href="https://tailwindcss.com/"></Anchor>
         </li>
         <li className="my-1">
           make sure to select v3.4.17 , since this is what I currently use (per date 20-08-2025) <IMG img_name={setup_tailwind_1}></IMG>

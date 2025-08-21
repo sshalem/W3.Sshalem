@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../../components";
+import { Anchor, IMG, MainChildArea } from "../../../../components";
 import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_1 from "../../../../assets/setup_1.jpg";
 import setup_2 from "../../../../assets/setup_2.jpg";
@@ -20,10 +20,7 @@ const O2_Favicon = ({ anchor }: { anchor: string }) => {
           <IMG img_name={setup_1}></IMG>
         </li>
         <li className="my-1">
-          open favicon web site{" "}
-          <a href="https://realfavicongenerator.net/" target="_blank" className="text-blue-600">
-            https://realfavicongenerator.net/
-          </a>
+          open favicon web site <Anchor description="https://realfavicongenerator.net/" href="https://realfavicongenerator.net/"></Anchor>
         </li>
         <li className="my-1">
           Upload the image I want to use as favicon

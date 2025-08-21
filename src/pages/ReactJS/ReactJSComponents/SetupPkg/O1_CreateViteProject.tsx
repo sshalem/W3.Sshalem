@@ -1,4 +1,4 @@
-import { MainChildArea } from "../../../../components";
+import { Anchor, MainChildArea } from "../../../../components";
 import { BatchHighlight } from "../../../../components/Highlight";
 
 const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
@@ -7,10 +7,7 @@ const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
       <div>To create new VITE project </div>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          go to{" "}
-          <a href="https://vite.dev/guide/" target="_blank" className="text-blue-600">
-            https://vite.dev/guide/
-          </a>
+          go to <Anchor description="https://vite.dev/guide/" href="https://vite.dev/guide/"></Anchor>
         </li>
         <li className="my-1">open CMD type the following command</li>
         <li className="my-1">Follow the instructions , to create a VITE ReactJS + TypeScript project</li>

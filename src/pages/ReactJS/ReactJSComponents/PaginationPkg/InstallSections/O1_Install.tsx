@@ -1,21 +1,31 @@
-import { MainChildArea } from "../../../../../components";
-import { SpanGreen } from "../../../../../components/Highlight";
+import { Anchor, MainChildArea } from "../../../../../components";
+import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const O1_Install = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
-        I implemented my own Pagaination + Search functoinality. <br />
+        I implemented my own <SpanBlue>Pagaination</SpanBlue> + <SpanBlue>Search</SpanBlue> functoinality. <br />
         <ul className="my-4 ml-8 list-disc">
           <li className="my-1">
-            <SpanGreen>App.tsx</SpanGreen> - In App.tsx (can be any file name), I show how to config it , thats the only thing the Engineer will have
-            to do
-          </li>
-          <li className="my-1">
-            <SpanGreen>Pagination.tsx</SpanGreen> - this is the implementation of the Pagination + Search (form Coder side , it is just a block box)
+            Must install <SpanRed>Tailwindcss</SpanRed> and <SpanRed>react-icons</SpanRed> , because I used them in my implementation.
           </li>
         </ul>
       </section>
+
+      <DivDoubleBorder>Install</DivDoubleBorder>
+      <ul className="my-4 ml-8 list-disc">
+        <li className="my-1">
+          Create <SpanGreen>Pagaination.tsx</SpanGreen> component, in <SpanGreen>components</SpanGreen> folder .
+        </li>
+        <li className="my-1">
+          Copy/Paste the code from{" "}
+          <Anchor
+            description="Pagination.tsx (from Project 19)"
+            href="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/19-pagination-production-no-context/Pagination.tsx"
+          ></Anchor>
+        </li>
+      </ul>
     </MainChildArea>
   );
 };

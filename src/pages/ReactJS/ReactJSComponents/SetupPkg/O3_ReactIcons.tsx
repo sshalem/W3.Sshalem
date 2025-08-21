@@ -1,4 +1,4 @@
-import { MainChildArea } from "../../../../components";
+import { Anchor, MainChildArea } from "../../../../components";
 import { BatchHighlight, SpanRed } from "../../../../components/Highlight";
 
 const O3_ReactIcons = ({ anchor }: { anchor: string }) => {
@@ -6,10 +6,7 @@ const O3_ReactIcons = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          go to{" "}
-          <a href="https://react-icons.github.io/react-icons/" target="_blank" className="text-blue-600">
-            https://react-icons.github.io/react-icons/
-          </a>
+          go to <Anchor description="https://react-icons.github.io/react-icons/" href="https://react-icons.github.io/react-icons/"></Anchor>
         </li>
         <li className="my-1">
           type following command in termianl to install react icons

@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../../components";
+import { Anchor, IMG, MainChildArea } from "../../../../components";
 import { BatchHighlight, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_router_1 from "../../../../assets/setup_router_1.jpg";
 
@@ -7,10 +7,7 @@ const O7_InstallReactRouter = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          go to{" "}
-          <a href="https://reactrouter.com/home" target="_blank" className="text-blue-600">
-            https://reactrouter.com/home
-          </a>
+          go to <Anchor description="https://reactrouter.com/home" href="https://reactrouter.com/home"></Anchor>
         </li>
         <li className="my-1">
           Make sure to select <SpanGreen>V6.XX.0</SpanGreen> (V6.29.0 is the latest version I used in Ecommerce Project)
