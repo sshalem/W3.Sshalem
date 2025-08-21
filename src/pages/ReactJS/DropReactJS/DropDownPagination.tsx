@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../../components";
+import { SideDropDownTopic } from "../../../components";
 
 const DropDownPagination = () => {
   const [showList, setShowList] = useState<boolean>(false);
@@ -35,13 +35,12 @@ const DropDownPagination = () => {
   return (
     <section>
       <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/pagination" topicName="Pagination" />
-
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Install" internalLink="/reactJS/pagination/install" />
+        {/*  */}
       </div>
     </section>
   );

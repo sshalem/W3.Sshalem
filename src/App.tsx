@@ -62,7 +62,6 @@ import {
 import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 
 import {
-  InstallPaginationMain,
   IntroMain,
   JsxMain,
   Pagination,
@@ -200,7 +199,7 @@ const router = createBrowserRouter(
             { path: "basics", element: <ReactBasics />, children: [{ path: "jsx", element: <JsxMain /> }] },
             { path: "typescript", element: <TypeScript />, children: [{ path: "introduction", element: <IntroMain /> }] },
             { path: "router", element: <ReactRouter />, children: [{ path: "install", element: <RouterMain /> }] },
-            { path: "pagination", element: <Pagination />, children: [{ path: "install", element: <InstallPaginationMain /> }] },
+            { path: "pagination", element: <Pagination /> },
           ],
         },
         {

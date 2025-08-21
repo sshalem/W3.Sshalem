@@ -1,5 +1,5 @@
-import { Anchor, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Anchor, MainChildArea } from "../../../../components";
+import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 
 const O1_Install = ({ anchor }: { anchor: string }) => {
   return (
