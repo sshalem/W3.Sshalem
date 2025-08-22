@@ -15,7 +15,14 @@ const O1_Install = ({ anchor }: { anchor: string }) => {
             I can style the data as I want
           </li>
           <li className="my-1">
-            If I want to re-style the way that Paginatoiin looks , Go inside <SpanGreen>Pagination.tsx</SpanGreen> code re-style it
+            If I want to re-style the way that Pagination looks , Go inside <SpanGreen>Pagination.tsx</SpanGreen> code re-style it
+          </li>
+          <li className="my-1">
+            <SpanBlue>Pagaination</SpanBlue> works only when I get <SpanGreen>Array of objects</SpanGreen> from Backend, CSV, file , etc...
+          </li>
+          <li className="my-1">It can handle Array with a Single Object, because it's still an array</li>
+          <li className="my-1">
+            It will <SpanRed>NOT work on a single object</SpanRed>, it must be wrapped inside in <SpanBlue>Array</SpanBlue>
           </li>
         </ul>
       </section>
