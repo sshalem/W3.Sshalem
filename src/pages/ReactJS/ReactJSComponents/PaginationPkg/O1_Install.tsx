@@ -10,6 +10,13 @@ const O1_Install = ({ anchor }: { anchor: string }) => {
           <li className="my-1">
             Must install <SpanRed>Tailwindcss</SpanRed> and <SpanRed>react-icons</SpanRed> , because I used them in my implementation.
           </li>
+          <li className="my-1">
+            Code is written in a way , that data will be itterated in the main Compnent where I config it (<strong>See next examples</strong> ), that
+            I can style the data as I want
+          </li>
+          <li className="my-1">
+            If I want to re-style the way that Paginatoiin looks , Go inside <SpanGreen>Pagination.tsx</SpanGreen> code re-style it
+          </li>
         </ul>
       </section>
 

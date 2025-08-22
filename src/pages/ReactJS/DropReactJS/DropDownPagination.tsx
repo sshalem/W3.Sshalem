@@ -34,7 +34,13 @@ const DropDownPagination = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/pagination" topicName="Pagination" />
+      <SideDropDownTopic
+        enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/reactJS/pagination"
+        topicName="Pagination"
+      />
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
