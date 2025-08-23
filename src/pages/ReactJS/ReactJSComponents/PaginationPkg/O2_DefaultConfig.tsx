@@ -1,12 +1,13 @@
-import { MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { IMG, MainChildArea } from "../../../../components";
+import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import pagination_1 from "../../../../assets/pagination_1.jpg";
 
 const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
         This is default implementation , with minimum configuration , which gives only pagination. <br />
-        thus,
+        <IMG img_name={pagination_1}></IMG>
         <ul className="my-4 ml-8 list-disc">
           <li className="my-1">
             we <SpanRed>MUST</SpanRed> know the <SpanGreen>fields</SpanGreen> of the objects
@@ -19,28 +20,33 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
             <strong>Note : </strong>Pagination Code is written in <SpanRed>TypeScript</SpanRed>
           </li>
         </ul>
-        <DivDoubleBorder>Basic Config usage</DivDoubleBorder>
+        {/*  */}
+        <div className="my-12"></div>
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
-            define the fields of a single object
+            define the <SpanGreen>fields</SpanGreen> of a single object , as they appear on backend (or any other data sorce)
             <JsxHighlight jsxCode={fields}></JsxHighlight>
           </li>
           <li className="my-1">
-            define the type of the Single Object , since I iterate it in my code
+            Since I use <SpanGreen>TypeScript</SpanGreen> , thus, I define a <SpanGreen>type</SpanGreen> (or I can define interface instead) of the
+            Single Object , since I iterate it in my code
             <JsxHighlight jsxCode={itemProps}></JsxHighlight>
           </li>
           <li className="my-1">
-            define 3 useState (These are a Must for code to work)
+            define 3 <SpanGreen>useState</SpanGreen> (These are a Must for code to work)
             <JsxHighlight jsxCode={use_state}></JsxHighlight>
           </li>
           <li className="my-1">
-            Config Pagination Component
+            Config Pagination Component, see that I wrapped it inside a logic of <SpanRed>isLoading</SpanRed>
             <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
           </li>
-          <li className="my-1">fetch data , setItems with raw JSON data (see full code)</li>
+          <li className="my-1">
+            fetch data (I use the useEffect on initial , but I can do whatever I want when fetching), <SpanGreen>setItems</SpanGreen> with raw JSON
+            data (see full code)
+          </li>
           <li className="my-1">Iterate data and display</li>
         </ul>
-        <div className="my-2">
+        <div className="my-12">
           See <SpanGreen>Full code</SpanGreen>
           <JsxHighlight jsxCode={use_pagination}></JsxHighlight>
         </div>
@@ -54,7 +60,9 @@ export default O2_DefaultConfig;
 const fields = `// [1] - define the fields of a single object
 const itemFields = ["id", "first_name", "last_name", "email"];`;
 
-const itemProps = `type ItemProp = {
+const itemProps = `// [2] - define the type of the Single Object , since I iterate it in my code,
+//       I prepare to have the right type, Instead of 'any'
+type ItemProp = {
   id: number;
   first_name: string;
   last_name: string;
@@ -66,7 +74,7 @@ const use_state = `  // [3] - define 3 useState (These are a Must for code to wo
   const [dataChunk, setDataChunk] = useState<ItemProp[]>([]);
   const [isLoading, setLoading] = useState<boolean>(false);`;
 
-const config_pagination = `{!isLoading && (
+const config_pagination = `      {!isLoading && (
         <Pagination 
           data={items}
           allFields={itemFields}
@@ -95,7 +103,8 @@ const Test = () => {
   const [dataChunk, setDataChunk] = useState<ItemProp[]>([]);
   const [isLoading, setLoading] = useState<boolean>(false);
 
-  // [4] fetch data , setItems with raw JSON data
+  // [4] - fetch data , setItems with raw JSON data
+
   const getData = async () => {
     try {
       setLoading(true);
