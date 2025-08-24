@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import pagination_1 from "../../../../assets/pagination_1.jpg";
 
 const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
@@ -10,6 +10,9 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
         <IMG img_name={pagination_1}></IMG>
         <ul className="my-4 ml-8 list-disc">
           <li className="my-1">
+            <strong>Note : </strong>Pagination Code is written in <SpanRed>TypeScript</SpanRed>
+          </li>
+          <li className="my-1">
             we <SpanRed>MUST</SpanRed> know the <SpanGreen>fields</SpanGreen> of the objects
           </li>
           <li className="my-1">
@@ -17,11 +20,13 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
             <SpanBlue>first_name</SpanBlue>, <SpanBlue>last_name</SpanBlue>, <SpanBlue>email</SpanBlue>
           </li>
           <li className="my-1">
-            <strong>Note : </strong>Pagination Code is written in <SpanRed>TypeScript</SpanRed>
+            <SpanRed>CSS for Data</SpanRed> - Re-design with css the data layout , inside <SpanGreen>Pagination</SpanGreen>
+            code. go to the last <SpanGreen>section</SpanGreen> tag , where <SpanGreen>dataChuck</SpanGreen> is itterated.
           </li>
         </ul>
         {/*  */}
-        <div className="my-12"></div>
+        {/*  */}
+        <DivDoubleBorder>Implement default config</DivDoubleBorder>
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
             define the <SpanGreen>fields</SpanGreen> of a single object , as they appear on backend (or any other data sorce)
@@ -58,60 +63,45 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
 export default O2_DefaultConfig;
 
 const fields = `// [1] - define the fields of a single object
-const itemFields = ["id", "first_name", "last_name", "email"];`;
+const dataFields = ["id", "first_name", "last_name", "email"];`;
 
 const itemProps = `// [2] - define the type of the Single Object , since I iterate it in my code,
 //       I prepare to have the right type, Instead of 'any'
-type ItemProp = {
+type DataProps = {
   id: number;
   first_name: string;
   last_name: string;
   email: string;
 };`;
 
-const use_state = `  // [3] - define 3 useState (These are a Must for code to work)
-  const [items, setItems] = useState<ItemProp[]>([]);
-  const [dataChunk, setDataChunk] = useState<ItemProp[]>([]);
-  const [isLoading, setLoading] = useState<boolean>(false);`;
+const use_state = `  // [3] - define useState (These are a Must for code to work)
+  const [data, setData] = useState<DataProps[]>([]);`;
 
-const config_pagination = `      {!isLoading && (
-        <Pagination 
-          data={items}
-          allFields={itemFields}
-          setDataChunk={setDataChunk}
-        />        
-      )}`;
+const config_pagination = `<Pagination 
+    data={data} 
+    allFields={dataFields} 
+/>`;
 
 const use_pagination = `import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 
-// [2] - define the type of the Single Object , since I iterate it in my code,
-//       I prepare to have the right type, Instead of 'any'
-type ItemProp = {
+type DataProps = {
   id: number;
   first_name: string;
   last_name: string;
   email: string;
 };
 
-// [1] - define the fields of a single object
-const itemFields = ["id", "first_name", "last_name", "email"];
+const dataFields = ["id", "first_name", "last_name", "email"];
 
-const Test = () => {
-  // [3] - define 3 useState (These are a Must for code to work)
-  const [items, setItems] = useState<ItemProp[]>([]);
-  const [dataChunk, setDataChunk] = useState<ItemProp[]>([]);
-  const [isLoading, setLoading] = useState<boolean>(false);
-
-  // [4] - fetch data , setItems with raw JSON data
+const App = () => {
+  const [data, setData] = useState<DataProps[]>([]);
 
   const getData = async () => {
     try {
-      setLoading(true);
-      const res = await fetch("src/19-pagination-production-no-context/MOCK_DATA.json");
+      const res = await fetch("src/20-Pagination-prod/MOCK_DATA.json");
       const jsonData = await res.json();
-      setItems(jsonData);
-      setLoading(false);
+      setData(jsonData);
     } catch (error) {
       console.log(error);
     }
@@ -121,7 +111,7 @@ const Test = () => {
     getData();
   }, []);
 
-  if (items.length === 0) {
+  if (data.length === 0) {
     return (
       <>
         <div className="text-3xl">No Data to display...</div>
@@ -130,33 +120,10 @@ const Test = () => {
   }
 
   return (
-    <>       
-      {/* Start -[5] - Config Pagination Component */}
-      {!isLoading && (
-        <Pagination 
-          data={items}
-          allFields={itemFields}
-          setDataChunk={setDataChunk}
-        />        
-      )}
-
-      {/* Start - [6] - Iterate data and display */}
-      {!isLoading && (
-        <div className="mx-auto grid w-7/12 grid-cols-2 py-2">
-          {/* Start - Iterate dataChunk */}
-          {dataChunk.map((itemProp: ItemProp, index: number) => {
-            const { id, first_name, last_name, email } = itemProp;
-            return (
-              <div key={index}>
-                {id} , {first_name} , {last_name} , {email}
-              </div>
-            );
-          })}
-        </div>
-      )}
-      {/* End - display the data */}
+    <>
+      <Pagination data={data} allFields={dataFields} />
     </>
   );
 };
 
-export default Test;`;
+export default App;`;
