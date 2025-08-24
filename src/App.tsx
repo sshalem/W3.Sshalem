@@ -26,6 +26,7 @@ import {
   Aop,
   Caching,
   ExceptionHandling,
+  Ide,
   OpenAI,
   Rest,
   SpringDoc,
@@ -100,6 +101,7 @@ import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
+import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 
 const router = createBrowserRouter(
   [
@@ -126,6 +128,14 @@ const router = createBrowserRouter(
           element: <Spring_page />,
           children: [
             { index: true, element: <SpringHome /> },
+            {
+              path: "ide",
+              element: <Ide />,
+              children: [
+                { path: "sts", element: <StsMain /> },
+                { path: "intellij", element: <IntelliJMain /> },
+              ],
+            },
             {
               path: "application-properties",
               element: <ApplicationProperties />,

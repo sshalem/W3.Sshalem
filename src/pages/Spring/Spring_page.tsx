@@ -6,6 +6,7 @@ import DropDownApplicationProperties from "./DropSpringPage/DropDownApplicationP
 import DropDownLogging from "./DropSpringPage/DropDownLogging";
 import DropDownJpa from "./DropSpringPage/DropDownJpa";
 import DropDownRest from "./DropSpringPage/DropDownRest";
+import DropDownIDE from "./DropSpringPage/DropDownIDE";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -36,7 +37,7 @@ const Spring_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Spring Home" internalLink="/spring" />
-
+            <DropDownIDE />
             <DropDownApplicationProperties />
             <DropDownLogging />
             <DropDownJpa />

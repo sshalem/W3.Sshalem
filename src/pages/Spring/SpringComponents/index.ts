@@ -9,3 +9,4 @@ export { default as TransactionManagement } from "./TransMngmntPkg/TransactionMa
 export { default as Caching } from "./CachingPkg/Caching";
 export { default as Aop } from "./AopPkg/Aop";
 export { default as SpringSecurity } from "./SecurityPkg/SpringSecurity";
+export { default as Ide } from "./IdePkg/Ide";
