@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
 import O1_TerminologyCompare from "./O1_TerminologyCompare";
+import O2_IntellijConfigPlugins from "./O2_IntellijConfigPlugins";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_terminology_compare = "1. Terminology compare";
+const o2_IntellijConfigPlugins = "2. Intellij Plugins + config";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_terminology_compare];
+const anchorList: string[] = [o1_terminology_compare, o2_IntellijConfigPlugins];
 
 // ============================================
 // ============================================
@@ -51,6 +53,7 @@ const IntelliJMain = () => {
       {/* End Contents */}
 
       <O1_TerminologyCompare anchor={o1_terminology_compare}></O1_TerminologyCompare>
+      <O2_IntellijConfigPlugins anchor={o2_IntellijConfigPlugins}></O2_IntellijConfigPlugins>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

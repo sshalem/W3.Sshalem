@@ -72,7 +72,7 @@ const Ide = () => {
           <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-md">
             <table className="min-w-full border-collapse">
               <thead>
-                <tr className="bg-gray-200 dark:bg-gray-700">
+                <tr className="bg-blue-500 text-white">
                   <th className="px-3 py-2 text-left font-medium">Action</th>
                   <th className="px-3 py-2 text-left font-medium">Eclipse</th>
                   <th className="px-3 py-2 text-left font-medium">IntelliJ IDEA</th>
@@ -81,7 +81,7 @@ const Ide = () => {
               <tbody>
                 {data.map((group) => (
                   <Fragment key={group.section}>
-                    <tr className="bg-gray-100 dark:bg-gray-800">
+                    <tr className="bg-blue-300 text-white">
                       <td colSpan={3} className="px-3 py-2 font-semibold">
                         {group.section}
                       </td>
@@ -89,10 +89,10 @@ const Ide = () => {
                     {group.rows
                       .filter((row) => row.action.toLowerCase().includes(filter.toLowerCase()))
                       .map((row) => (
-                        <tr key={row.action} className="hover:bg-gray-50 dark:hover:bg-gray-900">
-                          <td className="border-t border-gray-300 px-3 py-2 dark:border-gray-700">{row.action}</td>
-                          <td className="border-t border-gray-300 px-3 py-2 dark:border-gray-700">{row.eclipse}</td>
-                          <td className="border-t border-gray-300 px-3 py-2 dark:border-gray-700">{row.intellij}</td>
+                        <tr key={row.action} className="hover:bg-blue-50">
+                          <td className="border-t border-gray-300 px-3 py-2">{row.action}</td>
+                          <td className="border-t border-gray-300 px-3 py-2">{row.eclipse}</td>
+                          <td className="border-t border-gray-300 px-3 py-2">{row.intellij}</td>
                         </tr>
                       ))}
                   </Fragment>
