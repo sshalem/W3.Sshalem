@@ -22,7 +22,6 @@ const O3_SearchFields = ({ anchor }: { anchor: string }) => {
         </GitHub>
         {/*  */}
         {/*  */}
-        <IMG img_name={pagination_2}></IMG>
         <DivDoubleBorder>Search Fields config</DivDoubleBorder>
         steps are exactlly as in previous section, I just add 1 line of config to <SpanGreen>Pagination</SpanGreen> component
         <ul className="my-4 ml-8 list-decimal">
@@ -33,6 +32,7 @@ const O3_SearchFields = ({ anchor }: { anchor: string }) => {
           </li>
           <li className="my-1">In example below , I added all the the fields</li>
         </ul>
+        <IMG img_name={pagination_2}></IMG>
       </section>
     </MainChildArea>
   );
