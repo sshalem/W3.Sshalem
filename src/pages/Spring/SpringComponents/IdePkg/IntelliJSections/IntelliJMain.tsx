@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
+import O1_TerminologyCompare from "./O1_TerminologyCompare";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_terminology_compare = "1. Terminology compare";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_terminology_compare];
 
 // ============================================
 // ============================================
@@ -49,7 +50,7 @@ const IntelliJMain = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_TerminologyCompare anchor={o1_terminology_compare}></O1_TerminologyCompare>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

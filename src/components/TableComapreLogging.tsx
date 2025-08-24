@@ -27,19 +27,19 @@ const TableComapreLogging = () => {
   return (
     <div style={{ padding: "20px" }}>
       <table border={1} cellPadding="10" style={{ borderCollapse: "collapse", width: "100%" }}>
-        <thead style={{ backgroundColor: "#f2f2f2" }}>
+        <thead className="bg-blue-500 text-lg text-white">
           <tr>
-            <th className="text-start font-medium">logging.file.name</th>
-            <th className="text-start font-medium">logging.file.path</th>
-            <th className="text-start font-medium">Description</th>
+            <th className="border border-gray-300 text-start font-medium">logging.file.name</th>
+            <th className="border border-gray-300 text-start font-medium">logging.file.path</th>
+            <th className="border border-gray-300 text-start font-medium">Description</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
-              <td>{row.name}</td>
-              <td>{row.path}</td>
-              <td>{row.description}</td>
+              <td className="border border-gray-300 px-6 py-3">{row.name}</td>
+              <td className="border border-gray-300 px-6 py-3">{row.path}</td>
+              <td className="border border-gray-300 px-6 py-3">{row.description}</td>
             </tr>
           ))}
         </tbody>
