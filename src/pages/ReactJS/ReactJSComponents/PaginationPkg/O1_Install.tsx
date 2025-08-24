@@ -1,4 +1,4 @@
-import { Anchor, MainChildArea } from "../../../../components";
+import { Anchor, GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
 import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 
 const O1_Install = ({ anchor }: { anchor: string }) => {
@@ -35,11 +35,25 @@ const O1_Install = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           Copy/Paste the code from{" "}
           <Anchor
-            description="Pagination.tsx (from Project 19)"
-            href="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/19-pagination-production-no-context/Pagination.tsx"
+            description="Pagination.tsx (from Project 20)"
+            href="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/20-Pagination-prod/Pagination.tsx"
           ></Anchor>
         </li>
       </ul>
+      <GitHub>
+        <GitHubLiAnchor
+          description="main - pagaination git"
+          gitLink="https://github.com/sshalem/ReactJS/tree/main/08-pagination-sort-items/src/20-Pagination-prod"
+        ></GitHubLiAnchor>
+        <GitHubLiAnchor
+          description="pagaination usage"
+          gitLink="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/20-Pagination-prod/App20.tsx"
+        ></GitHubLiAnchor>
+        <GitHubLiAnchor
+          description="pagaination code"
+          gitLink="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/20-Pagination-prod/Pagination.tsx"
+        ></GitHubLiAnchor>
+      </GitHub>
     </MainChildArea>
   );
 };

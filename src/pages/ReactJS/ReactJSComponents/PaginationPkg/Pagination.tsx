@@ -6,15 +6,17 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
 import O1_Install from "./O1_Install";
 import O2_DefaultConfig from "./O2_DefaultConfig";
+import O3_SearchFields from "./O3_SearchFields";
 
 const o1_install = "1. Install";
 const o2_default_config = "2. Default config";
+const o3_search_fields = "3. Search fields";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_install, o2_default_config];
+const anchorList: string[] = [o1_install, o2_default_config, o3_search_fields];
 
 // ============================================
 // ============================================
@@ -54,6 +56,7 @@ const Pagination = () => {
 
       <O1_Install anchor={o1_install}></O1_Install>
       <O2_DefaultConfig anchor={o2_default_config}></O2_DefaultConfig>
+      <O3_SearchFields anchor={o3_search_fields}></O3_SearchFields>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

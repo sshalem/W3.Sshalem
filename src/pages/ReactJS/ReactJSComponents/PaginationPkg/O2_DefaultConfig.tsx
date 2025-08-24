@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../../components";
+import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
 import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import pagination_1 from "../../../../assets/pagination_1.jpg";
 
@@ -24,6 +24,20 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
             code. go to the last <SpanGreen>section</SpanGreen> tag , where <SpanGreen>dataChuck</SpanGreen> is itterated.
           </li>
         </ul>
+        <GitHub>
+          <GitHubLiAnchor
+            description="main - pagaination git"
+            gitLink="https://github.com/sshalem/ReactJS/tree/main/08-pagination-sort-items/src/20-Pagination-prod"
+          ></GitHubLiAnchor>
+          <GitHubLiAnchor
+            description="pagaination usage"
+            gitLink="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/20-Pagination-prod/App20.tsx"
+          ></GitHubLiAnchor>
+          <GitHubLiAnchor
+            description="pagaination code"
+            gitLink="https://github.com/sshalem/ReactJS/blob/main/08-pagination-sort-items/src/20-Pagination-prod/Pagination.tsx"
+          ></GitHubLiAnchor>
+        </GitHub>
         {/*  */}
         {/*  */}
         <DivDoubleBorder>Implement default config</DivDoubleBorder>
@@ -42,7 +56,7 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
             <JsxHighlight jsxCode={use_state}></JsxHighlight>
           </li>
           <li className="my-1">
-            Config Pagination Component, see that I wrapped it inside a logic of <SpanRed>isLoading</SpanRed>
+            Config Pagination Component
             <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
           </li>
           <li className="my-1">
