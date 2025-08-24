@@ -3,6 +3,8 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownEureka from "./DropMicroService/DropDownEureka";
+import DropDownKafka from "./DropMicroService/DropDownKafka";
+import DropDownRabbitMQ from "./DropMicroService/DropDownRabbitMQ";
 
 const MicroServices_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -35,7 +37,8 @@ const MicroServices_page = () => {
             <div className="h-3"></div>
 
             <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
-
+            <DropDownKafka />
+            <DropDownRabbitMQ />
             <DropDownEureka />
           </div>
         </article>

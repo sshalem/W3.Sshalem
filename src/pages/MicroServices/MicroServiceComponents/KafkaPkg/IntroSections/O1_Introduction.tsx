@@ -1,0 +1,22 @@
+import { Anchor, MainChildArea } from "../../../../../components";
+
+const O1_Introduction = ({ anchor }: { anchor: string }) => {
+  return (
+    <MainChildArea anchor={anchor}>
+      <section>
+        From course on udemy{" "}
+        <Anchor
+          description="apache kafka - Ramesh Fadatare "
+          href="https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/learn/lecture/35997454#overview"
+        ></Anchor>{" "}
+        part of course{" "}
+        <Anchor
+          description="Building Microservices with Spring Boot & Spring Cloud"
+          href="https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/?couponCode=25BBPMXINACTIVE"
+        ></Anchor>
+      </section>
+    </MainChildArea>
+  );
+};
+
+export default O1_Introduction;
