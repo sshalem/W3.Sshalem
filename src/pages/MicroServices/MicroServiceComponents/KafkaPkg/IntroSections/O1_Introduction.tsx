@@ -3,6 +3,7 @@ import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../co
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import kafka_1 from "../../../../../assets/kafka_1.jpg";
+import kafka_2 from "../../../../../assets/kafka_2.jpg";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 
 const O1_Introduction = ({ anchor }: { anchor: string }) => {
@@ -62,6 +63,7 @@ const O1_Introduction = ({ anchor }: { anchor: string }) => {
           <Li> store those messages and provide the stored messages to any consumers that need them</Li>
         </ULDecimal>
         The broker acts as the middle person between producers sending messages and consumers receiving messages
+        <IMG img_name={kafka_2}></IMG>
       </section>
       <DivDoubleBorder>2. Cluster</DivDoubleBorder>
       <section>
@@ -87,24 +89,24 @@ const O1_Introduction = ({ anchor }: { anchor: string }) => {
         cluster. So if one broker goes down the replicas on other brokers can still serve the messages, providing reliability and preventing data
         loss.
       </section>
-      <DivDoubleBorder>5. Offsets</DivDoubleBorder>
+      <DivDoubleBorder>6. Offsets</DivDoubleBorder>
       <section>
         Offsets is a sequence of id's given to messages as they arrive at a partition. Once the offset is assigned it will never be changed. The first
         message gets offset zero. the next gets offset of one, and so on.
       </section>
-      <DivDoubleBorder>6. Messages</DivDoubleBorder>
+      <DivDoubleBorder>7. Messages</DivDoubleBorder>
       <section>These messages can contain any type of data like logs, events, records or other information from the producer</section>
-      <DivDoubleBorder>7. Producer</DivDoubleBorder>
+      <DivDoubleBorder>8. Producer</DivDoubleBorder>
       <section>
         Is Application that send messages only to <SpanBlue>Kafka server</SpanBlue>
       </section>
-      <DivDoubleBorder>8. Consumer</DivDoubleBorder>
+      <DivDoubleBorder>9. Consumer</DivDoubleBorder>
       <section>
         Is Application that reads messages from <SpanBlue>Kafka server</SpanBlue>
       </section>
-      <DivDoubleBorder>8. Consumer Groups</DivDoubleBorder>
+      <DivDoubleBorder>10. Consumer Groups</DivDoubleBorder>
       <section>A Consumer group contains one or more consumers working together to process the messages.</section>
-      <DivDoubleBorder>10. Fault Tolerance</DivDoubleBorder>
+      <DivDoubleBorder>11. Fault Tolerance</DivDoubleBorder>
       <section>
         Kafka provides the <SpanBlue>fault tolerance</SpanBlue> by making the multiple copies ( replicas ) of the data. Each partitions data is copied
         across different brokers. If one broker fails the another broker with the replica can easily take over as the leader ensuring operations keep
