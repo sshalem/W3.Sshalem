@@ -3,12 +3,14 @@ import { CaretUp, CaretDown } from "../../components";
 // import  from "../Caret/CaretUp";
 // import CaretDown from "../Caret/CaretDown";
 
+type Caret = true | false;
+
 interface SideDropDownTopicProps {
   showList: boolean;
   handleOpenList: () => void;
   topicName: string;
   internalLink: string;
-  enableCaret?: boolean;
+  enableCaret?: Caret;
 }
 
 const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink, enableCaret = true }: SideDropDownTopicProps) => {

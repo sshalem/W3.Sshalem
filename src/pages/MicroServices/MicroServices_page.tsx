@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import DropDownEureka from "./DropMicroService/DropDownEureka";
 import DropDownKafka from "./DropMicroService/DropDownKafka";
 import DropDownRabbitMQ from "./DropMicroService/DropDownRabbitMQ";
+import DropDownDocker from "./DropMicroService/DropDownDocker";
 
 const MicroServices_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -37,6 +38,7 @@ const MicroServices_page = () => {
             <div className="h-3"></div>
 
             <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
+            <DropDownDocker />
             <DropDownKafka />
             <DropDownRabbitMQ />
             <DropDownEureka />

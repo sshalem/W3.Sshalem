@@ -48,7 +48,7 @@ import {
 } from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
 import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
-import { Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
+import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
 import {
@@ -190,6 +190,7 @@ const router = createBrowserRouter(
           element: <MicroServices_page />,
           children: [
             { index: true, element: <MicroServiceHome /> },
+            { path: "docker", element: <Docker /> },
             {
               path: "eureka",
               element: <Eureka />,
