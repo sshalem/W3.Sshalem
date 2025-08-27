@@ -88,7 +88,9 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </article>
       ✅ In short:
-      <div>Docker makes development, testing, and deployment faster, more consistent, and less painful by standardizing environments.</div>
+      <div className="my-1 ml-8">
+        Docker makes development, testing, and deployment faster, more consistent, and less painful by standardizing environments.
+      </div>
       <section>
         <br />
         <br />
@@ -96,12 +98,7 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
         That's why the app behaves the same across different machines and OSs. issues. ✅ That means no more{" "}
         <SpanRed>“but it worked on my machine”</SpanRed>.
         <br />
-        <br /> The final Docker image includes:
-        <ULDecimal>
-          <Li>The JDK (from the base image).</Li>
-          <Li>Spring Boot JAR.</Li>
-          <Li>Any configuration (ports, entrypoint).</Li>
-        </ULDecimal>
+        <br />
         So ,when I run the container:
         <ULdisc>
           <Li>👉 It doesn’t matter if your host machine has JDK 8, 21, or none at all. </Li>
@@ -112,32 +109,48 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
       </section>
+      <DivDoubleBorder>Docker core concepts</DivDoubleBorder>
       <IMG img_name={docker_1}></IMG>
-      <DivDoubleBorder>Core Concepts</DivDoubleBorder>
-      <DivDoubleBorder>Dockerize Spring boot App</DivDoubleBorder>
       <section>
-        When dockerize a Spring boot app:
+        When saying dockerize a Spring boot app we mean we doing the following things.
         <ULDecimal>
           <Li>
-            We write a <SpanGreen>Dockerfile</SpanGreen> - this describes how to build your app image:
-            <ULdisc>
-              <Li>Which base image to use (e.g. Java ).</Li>
-              <Li>Which files to copy (your app code).</Li>
-              <Li>What dependencies to install.</Li>
-              <Li>What command to run when the container starts.</Li>
-            </ULdisc>
+            <SpanGreen>Docker File</SpanGreen>
+            <div className="my-4 ml-8">
+              <SpanBlue>Docker file</SpanBlue> is a text file that contains a set of instructions for building a <SpanBlue>Docker image</SpanBlue>. We
+              write a <SpanGreen>Dockerfile</SpanGreen> that describes how to build your app image:
+              <ULdisc>
+                <Li>what operating system to start from.</Li>
+                <Li>what software packages to install.</Li>
+                <Li>what files to copy in.</Li>
+                <Li>and what command to run when the container starts.</Li>
+              </ULdisc>
+            </div>
           </Li>
           <Li>
-            We build the image using docker build.
-            <ULdisc>
-              <Li>This produces an immutable "snapshot" of your app environment.</Li>
-            </ULdisc>
+            <SpanGreen>Docker Image</SpanGreen>
+            <div className="my-4 ml-8">
+              <SpanBlue>Docker Image</SpanBlue> defines everything my application needs to run inside a container. <br />
+              Think of it like a class definition in programming — it defines what the object (container) will look like.
+              <ULdisc>
+                <Li>A blueprint/template for creating containers.</Li>
+                <Li>Built from a Dockerfile.</Li>
+                <Li>Read-only (cannot be changed once built).</Li>
+                <Li>Can be stored and shared (e.g., on Docker Hub).</Li>
+              </ULdisc>
+            </div>
           </Li>
           <Li>
-            We run the <SpanGreen>image</SpanGreen> as a <SpanGreen>container</SpanGreen> with docker run.
-            <ULdisc>
-              <Li>Now your app is isolated but portable.</Li>
-            </ULdisc>
+            <SpanGreen>Docker Container</SpanGreen>
+            <div className="my-4 ml-8">
+              Think of it like an object created from a class — you can have many containers (objects) from one image (class).
+              <ULdisc>
+                <Li>A running instance of a Docker image.</Li>
+                <Li>Writable layer on top of the image (so it can store logs, temp files, etc.).</Li>
+                <Li>You can run multiple containers from the same image.</Li>
+                <Li>Containers can start, stop, restart, and be deleted.</Li>
+              </ULdisc>
+            </div>
           </Li>
         </ULDecimal>
       </section>

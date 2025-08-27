@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../components";
 import O1_WhatIsDocker from "./O1_WhatIsDocker";
+import O2_WorkFlow from "./O2_WorkFlow";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_WhatIsDocker = "1. What Is Docker";
-
+const o2_WorkFlow = "2. Docker Work Flow";
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_WhatIsDocker];
+const anchorList: string[] = [o1_WhatIsDocker, o2_WorkFlow];
 
 // ============================================
 // ============================================
@@ -50,6 +51,7 @@ const Docker = () => {
       />
       {/* End Contents */}
       <O1_WhatIsDocker anchor={o1_WhatIsDocker}></O1_WhatIsDocker>
+      <O2_WorkFlow anchor={o2_WorkFlow}></O2_WorkFlow>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
