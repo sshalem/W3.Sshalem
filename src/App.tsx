@@ -102,6 +102,7 @@ import { BatchHome } from "./pages/Batch/BatchComponents";
 import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
+import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
 
 const router = createBrowserRouter(
   [
@@ -165,6 +166,14 @@ const router = createBrowserRouter(
               children: [
                 { path: "one2many-bi-eager", element: <One2ManyBiEager /> },
                 { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
+              ],
+            },
+            {
+              path: "mapping-libs",
+              element: <MappingLibs />,
+              children: [
+                { path: "model-mapper", element: <ModelMapperMain /> },
+                { path: "map-struct", element: <MapStructMain /> },
               ],
             },
             {
