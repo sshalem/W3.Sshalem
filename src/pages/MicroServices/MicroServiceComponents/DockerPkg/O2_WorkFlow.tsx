@@ -1,5 +1,5 @@
 import { IMG, MainChildArea } from "../../../../components";
-import docker_2 from "../../../../assets/docker_2.png";
+import docker_2 from "../../../../assets/docker_2.jpg";
 import ULDecimal from "../../../../components/ui/ULDecimal";
 import Li from "../../../../components/ui/Li";
 import { SpanSky } from "../../../../components/Highlight";
