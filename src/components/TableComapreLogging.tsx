@@ -25,13 +25,13 @@ const TableComapreLogging = () => {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <table border={1} cellPadding="10" style={{ borderCollapse: "collapse", width: "100%" }}>
+    <div className="overflow-x-auto rounded-lg shadow-md">
+      <table className="min-w-full border-collapse">
         <thead className="bg-blue-500 text-lg text-white">
           <tr>
-            <th className="border border-gray-300 text-start font-medium">logging.file.name</th>
-            <th className="border border-gray-300 text-start font-medium">logging.file.path</th>
-            <th className="border border-gray-300 text-start font-medium">Description</th>
+            <th className="border border-gray-300 px-3 py-2 text-start font-medium">logging.file.name</th>
+            <th className="border border-gray-300 px-3 py-2 text-start font-medium">logging.file.path</th>
+            <th className="border border-gray-300 px-3 py-2 text-start font-medium">Description</th>
           </tr>
         </thead>
         <tbody>
