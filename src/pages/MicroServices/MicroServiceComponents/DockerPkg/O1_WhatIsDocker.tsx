@@ -1,4 +1,4 @@
-import { Answer, IMG, MainChildArea, Question } from "../../../../components";
+import { Anchor, Answer, IMG, MainChildArea, Question } from "../../../../components";
 import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../components/Highlight";
 import Li from "../../../../components/ui/Li";
 import ULDecimal from "../../../../components/ui/ULDecimal";
@@ -8,6 +8,20 @@ import docker_1 from "../../../../assets/docker_1.jpg";
 const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <section>
+        From course on <SpanSky>udemy</SpanSky>{" "}
+        <Anchor
+          description="Ramesh Fadatare tutorial on apache kafka"
+          href="https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/learn/lecture/35997454#overview"
+        ></Anchor>{" "}
+        <div>
+          part of course{" "}
+          <Anchor
+            description="Docker - section"
+            href="https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/learn/lecture/50629365#overview"
+          ></Anchor>
+        </div>
+      </section>
       <Question>What is Docker?</Question>
       <Answer></Answer>
       👌 — Docker is a platform for <strong>developing</strong>, <strong>shipping</strong>, and <strong>running</strong> applications in
