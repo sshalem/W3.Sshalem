@@ -46,7 +46,7 @@ import {
   PostgresqlMain,
   ProfileMain,
 } from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
-import { Jpa, One2ManyBiEager, One2ManyBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
+import { EntityValidationMain, Jpa, O2MBiEagerMain, O2MBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
 import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
@@ -103,6 +103,7 @@ import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanCom
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
+import { BeanValidationMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 
 const router = createBrowserRouter(
   [
@@ -164,8 +165,9 @@ const router = createBrowserRouter(
               path: "jpa",
               element: <Jpa />,
               children: [
-                { path: "one2many-bi-eager", element: <One2ManyBiEager /> },
-                { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
+                { path: "entity-validation", element: <EntityValidationMain /> },
+                { path: "one2many-bi-eager", element: <O2MBiEagerMain /> },
+                { path: "one2many-bi-lazy", element: <O2MBiLazy /> },
               ],
             },
             {
@@ -179,10 +181,7 @@ const router = createBrowserRouter(
             {
               path: "rest",
               element: <Rest />,
-              children: [
-                { path: "one2many-bi-eager", element: <One2ManyBiEager /> },
-                { path: "one2many-bi-lazy", element: <One2ManyBiLazy /> },
-              ],
+              children: [{ path: "bean-validation", element: <BeanValidationMain /> }],
             },
             { path: "spring-doc", element: <SpringDoc /> },
             { path: "swagger", element: <Swagger /> },
