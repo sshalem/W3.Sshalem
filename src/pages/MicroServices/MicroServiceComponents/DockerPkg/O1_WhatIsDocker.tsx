@@ -1,5 +1,5 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../../components";
-import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky } from "../../../../components/Highlight";
 import Li from "../../../../components/ui/Li";
 import ULDecimal from "../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../components/ui/ULdisc";
@@ -94,7 +94,7 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
       <section>
         <br />
         <br />
-        <SpanBlue>Docker</SpanBlue> does not use your host's JDK — it downloads and uses the one I specify in the image. <br />
+        <SpanSky>Docker</SpanSky> does not use your host's JDK — it downloads and uses the one I specify in the image. <br />
         That's why the app behaves the same across different machines and OSs. issues. ✅ That means no more{" "}
         <SpanRed>“but it worked on my machine”</SpanRed>.
         <br />
@@ -104,8 +104,8 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
           <Li>👉 It doesn’t matter if your host machine has JDK 8, 21, or none at all. </Li>
           <Li>👉 The container always has JDK 21 inside.</Li>
           <Li>
-            Meaning , when I<SpanBlue>dockerize</SpanBlue> Spring Boot app, the
-            <SpanBlue>Docker image</SpanBlue> will include (download) the JDK version I specified. <br />
+            Meaning , when I<SpanSky>dockerize</SpanSky> Spring Boot app, the
+            <SpanSky>Docker image</SpanSky> will include (download) the JDK version I specified. <br />
           </Li>
         </ULdisc>
       </section>
@@ -117,7 +117,7 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanGreen>Docker File</SpanGreen>
             <div className="my-4 ml-8">
-              <SpanBlue>Docker file</SpanBlue> is a text file that contains a set of instructions for building a <SpanBlue>Docker image</SpanBlue>. We
+              <SpanSky>Docker file</SpanSky> is a text file that contains a set of instructions for building a <SpanSky>Docker image</SpanSky>. We
               write a <SpanGreen>Dockerfile</SpanGreen> that describes how to build your app image:
               <ULdisc>
                 <Li>what operating system to start from.</Li>
@@ -130,7 +130,7 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanGreen>Docker Image</SpanGreen>
             <div className="my-4 ml-8">
-              <SpanBlue>Docker Image</SpanBlue> defines everything my application needs to run inside a container. <br />
+              <SpanSky>Docker Image</SpanSky> defines everything my application needs to run inside a container. <br />
               Think of it like a class definition in programming — it defines what the object (container) will look like.
               <ULdisc>
                 <Li>A blueprint/template for creating containers.</Li>
