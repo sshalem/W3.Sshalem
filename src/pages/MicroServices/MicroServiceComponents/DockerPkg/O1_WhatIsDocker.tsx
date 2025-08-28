@@ -1,5 +1,5 @@
 import { Answer, IMG, MainChildArea, Question } from "../../../../components";
-import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky } from "../../../../components/Highlight";
+import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../components/Highlight";
 import Li from "../../../../components/ui/Li";
 import ULDecimal from "../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../components/ui/ULdisc";
@@ -11,9 +11,9 @@ const O1_WhatIsDocker = ({ anchor }: { anchor: string }) => {
       <Question>What is Docker?</Question>
       <Answer></Answer>
       👌 — Docker is a platform for <strong>developing</strong>, <strong>shipping</strong>, and <strong>running</strong> applications in
-      <SpanGreen>containers</SpanGreen>. <br />
+      <SpanTeal>containers</SpanTeal>. <br />
       <div>
-        👌 — Docker solves <SpanGreen>several classic developer problems</SpanGreen> that have been around for decades. Here’s a breakdown: <br />{" "}
+        👌 — Docker solves <SpanTeal>several classic developer problems</SpanTeal> that have been around for decades. Here’s a breakdown: <br />{" "}
         <br />
       </div>
       <div>🔑 1. “It works on my machine” problem</div>
