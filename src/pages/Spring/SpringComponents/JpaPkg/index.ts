@@ -4,3 +4,4 @@ export { default as O2MBiLazy } from "./O2MBiLazySections/O2MBiLazy";
 export { default as EntityValidationMain } from "./EntityVaidationSections/EntityValidationMain";
 export { default as MappingLibsMain } from "./MappingLibsSections/MappingLibsMain";
 export { default as AuditingMain } from "./AuditingSections/AuditingMain";
+export { default as PaginationSortingMain } from "./PaginationSortingSections/PaginationSortingMain";

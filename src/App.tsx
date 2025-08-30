@@ -46,7 +46,15 @@ import {
   PostgresqlMain,
   ProfileMain,
 } from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
-import { AuditingMain, EntityValidationMain, Jpa, MappingLibsMain, O2MBiEagerMain, O2MBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
+import {
+  AuditingMain,
+  EntityValidationMain,
+  Jpa,
+  MappingLibsMain,
+  O2MBiEagerMain,
+  O2MBiLazy,
+  PaginationSortingMain,
+} from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
 import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
@@ -174,6 +182,7 @@ const router = createBrowserRouter(
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
                 { path: "auditing", element: <AuditingMain /> },
+                { path: "pagination-sorting", element: <PaginationSortingMain /> },
                 { path: "one2many-bi-eager", element: <O2MBiEagerMain /> },
                 { path: "one2many-bi-lazy", element: <O2MBiLazy /> },
               ],
