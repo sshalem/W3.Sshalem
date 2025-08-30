@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Anchor, MainChildArea } from "../../../../../components";
+import { MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 

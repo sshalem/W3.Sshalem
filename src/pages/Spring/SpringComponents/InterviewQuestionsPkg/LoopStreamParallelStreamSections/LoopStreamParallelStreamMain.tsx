@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
+import O1_Intro from "./O1_Intro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_StreamMillionRecords = "1. Stream Million Records Instantly";
-const o2_LiveUpdateDataDashboard = "2. Live Update Data Dashboard";
+const o1_Intro = "1. Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_StreamMillionRecords, o2_LiveUpdateDataDashboard];
+const anchorList: string[] = [o1_Intro];
 
 // ============================================
 // ============================================
@@ -50,7 +50,7 @@ const LoopStreamParallelStreamMain = () => {
       />
       {/* End Contents */}
 
-      {/* <O1_StreamMillionRecords anchor={o1_StreamMillionRecords}></O1_StreamMillionRecords> */}
+      <O1_Intro anchor={o1_Intro}></O1_Intro>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
