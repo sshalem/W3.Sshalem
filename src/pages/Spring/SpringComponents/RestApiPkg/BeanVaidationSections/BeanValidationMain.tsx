@@ -50,7 +50,7 @@ const BeanValidationMain = () => {
       />
       {/* End Contents */}
 
-      <O1_BeanValidation></O1_BeanValidation>
+      <O1_BeanValidation anchor={o1_BeanValidation}></O1_BeanValidation>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
