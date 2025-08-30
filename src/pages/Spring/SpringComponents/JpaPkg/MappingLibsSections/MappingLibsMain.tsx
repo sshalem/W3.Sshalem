@@ -1,22 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
+import O1_CompareLibs from "./O1_CompareLibs";
+import O2_ModelMapper from "./O2_ModelMapper";
+import O3_MapStruct from "./O3_MapStruct";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_CompareLibs = "1. Compare Libs";
+const o2_ModelMapper = "2. Model Mapper";
+const o3_MapStruct = "3. Map Struct";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_CompareLibs, o2_ModelMapper, o3_MapStruct];
 
 // ============================================
 // ============================================
 
-const MapStructMain = () => {
+const MappingLibsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -49,11 +54,13 @@ const MapStructMain = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_CompareLibs anchor={o1_CompareLibs}></O1_CompareLibs>
+      <O2_ModelMapper anchor={o2_ModelMapper}></O2_ModelMapper>
+      <O3_MapStruct anchor={o3_MapStruct}></O3_MapStruct>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default MapStructMain;
+export default MappingLibsMain;

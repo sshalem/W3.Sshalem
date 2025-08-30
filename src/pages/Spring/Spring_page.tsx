@@ -7,7 +7,6 @@ import DropDownLogging from "./DropSpringPage/DropDownLogging";
 import DropDownJpa from "./DropSpringPage/DropDownJpa";
 import DropDownRest from "./DropSpringPage/DropDownRest";
 import DropDownIDE from "./DropSpringPage/DropDownIDE";
-import DropDownMappingLibs from "./DropSpringPage/DropDownMappingLibs";
 import DropDownInterviewQuestions from "./DropSpringPage/DropDownInterviewQuestions";
 
 const Spring_page = () => {
@@ -43,7 +42,6 @@ const Spring_page = () => {
             <DropDownApplicationProperties />
             <DropDownLogging />
             <DropDownJpa />
-            <DropDownMappingLibs />
             <DropDownRest />
             <DropDownInterviewQuestions />
           </div>

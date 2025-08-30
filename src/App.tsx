@@ -46,7 +46,7 @@ import {
   PostgresqlMain,
   ProfileMain,
 } from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
-import { EntityValidationMain, Jpa, O2MBiEagerMain, O2MBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
+import { AuditingMain, EntityValidationMain, Jpa, MappingLibsMain, O2MBiEagerMain, O2MBiLazy } from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
 import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
@@ -102,10 +102,14 @@ import { BatchHome } from "./pages/Batch/BatchComponents";
 import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
-import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
+// import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
 import { SseMain, StreamDataMain, StreamLargeResponseMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 import InterviewQuestions from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/InterviewQuestions";
-import { LoopStreamParallelStreamMain, StreamRecordsInstantlyMain } from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/intex";
+import {
+  LoopStreamParallelStreamMain,
+  MultiThreadBlockQueueMain,
+  StreamRecordsInstantlyMain,
+} from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/intex";
 
 const router = createBrowserRouter(
   [
@@ -168,16 +172,10 @@ const router = createBrowserRouter(
               element: <Jpa />,
               children: [
                 { path: "entity-validation", element: <EntityValidationMain /> },
+                { path: "mapping-libs", element: <MappingLibsMain /> },
+                { path: "auditing", element: <AuditingMain /> },
                 { path: "one2many-bi-eager", element: <O2MBiEagerMain /> },
                 { path: "one2many-bi-lazy", element: <O2MBiLazy /> },
-              ],
-            },
-            {
-              path: "mapping-libs",
-              element: <MappingLibs />,
-              children: [
-                { path: "model-mapper", element: <ModelMapperMain /> },
-                { path: "map-struct", element: <MapStructMain /> },
               ],
             },
             {
@@ -203,6 +201,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
                 { path: "loop-stream-parallel-stream", element: <LoopStreamParallelStreamMain /> },
+                { path: "multithread-block-queue", element: <MultiThreadBlockQueueMain /> },
               ],
             },
           ],
