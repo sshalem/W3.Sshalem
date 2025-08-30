@@ -27,12 +27,12 @@ const TableCompareTerminology = () => {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <table border={1} cellPadding="10" style={{ borderCollapse: "collapse", width: "50%" }}>
+    <div className="w-1/2 overflow-x-auto rounded-lg shadow-md">
+      <table className="min-w-full border-collapse">
         <thead className="bg-blue-500 text-lg text-white">
           <tr>
-            <th className="border border-gray-300 text-start font-medium">STS/Eclipse</th>
-            <th className="border border-gray-300 text-start font-medium">IntelliJ</th>
+            <th className="border border-gray-300 px-3 py-2 text-start font-medium">STS/Eclipse</th>
+            <th className="border border-gray-300 px-3 py-2 text-start font-medium">IntelliJ</th>
           </tr>
         </thead>
         <tbody>
