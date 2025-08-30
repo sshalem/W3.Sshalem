@@ -7,7 +7,7 @@ import ULDecimal from "../../../../components/ui/ULDecimal";
 import Li from "../../../../components/ui/Li";
 import { SpanSky } from "../../../../components/Highlight";
 
-const O3_InstallDocker = ({ anchor }: { anchor: string }) => {
+const O4_InstallDocker = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>In order to be able to run the Docker, we need to install Docker Engine</section>
@@ -35,4 +35,4 @@ const O3_InstallDocker = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_InstallDocker;
+export default O4_InstallDocker;

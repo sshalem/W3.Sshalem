@@ -103,7 +103,7 @@ import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanCom
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
-import { BeanValidationMain } from "./pages/Spring/SpringComponents/RestApiPkg";
+import { BeanValidationMain, StreamRecordsInstantlyMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 
 const router = createBrowserRouter(
   [
@@ -181,7 +181,10 @@ const router = createBrowserRouter(
             {
               path: "rest",
               element: <Rest />,
-              children: [{ path: "bean-validation", element: <BeanValidationMain /> }],
+              children: [
+                { path: "bean-validation", element: <BeanValidationMain /> },
+                { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
+              ],
             },
             { path: "spring-doc", element: <SpringDoc /> },
             { path: "swagger", element: <Swagger /> },

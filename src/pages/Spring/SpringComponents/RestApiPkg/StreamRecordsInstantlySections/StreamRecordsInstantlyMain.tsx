@@ -1,28 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
-import O1_WhatIsDocker from "./O1_WhatIsDocker";
-import O2_WorkFlow from "./O2_WorkFlow";
-import O4_InstallDocker from "./O4_InstallDocker";
-import O3_InstallWSL2 from "./O3_InstallWSL2";
+import { ContentMenu } from "../../../../../components";
+import O1_StreamMillionRecords from "./O1_StreamMillionRecords";
+import O2_LiveUpdateDataDashboard from "./O2_LiveUpdateDataDashboard";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_WhatIsDocker = "1. What Is Docker";
-const o2_WorkFlow = "2. Docker Work Flow";
-const o3_InstallWSL2 = "3. Install WSL2";
-const o4_InstallDocker = "4. Install Docker";
+const o1_StreamMillionRecords = "1. Stream Million Records Instantly";
+const o2_LiveUpdateDataDashboard = "2. Live Update Data Dashboard";
+
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_WhatIsDocker, o2_WorkFlow, o3_InstallWSL2, o4_InstallDocker];
+const anchorList: string[] = [o1_StreamMillionRecords, o2_LiveUpdateDataDashboard];
 
 // ============================================
 // ============================================
 
-const Docker = () => {
+const StreamRecordsInstantlyMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -54,13 +51,13 @@ const Docker = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_WhatIsDocker anchor={o1_WhatIsDocker}></O1_WhatIsDocker>
-      <O2_WorkFlow anchor={o2_WorkFlow}></O2_WorkFlow>
-      <O3_InstallWSL2 anchor={o3_InstallWSL2}></O3_InstallWSL2>
-      <O4_InstallDocker anchor={o4_InstallDocker}></O4_InstallDocker>
+
+      <O1_StreamMillionRecords anchor={o1_StreamMillionRecords}></O1_StreamMillionRecords>
+      <O2_LiveUpdateDataDashboard anchor={o2_LiveUpdateDataDashboard}></O2_LiveUpdateDataDashboard>
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default Docker;
+export default StreamRecordsInstantlyMain;

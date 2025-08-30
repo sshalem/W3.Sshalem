@@ -43,6 +43,7 @@ const DropDownRest = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Java Bean Validation" internalLink="/spring/rest/bean-validation" />
+        <SideDropdownLink sideDropDownNavName="Stream Records Instantly" internalLink="/spring/rest/stream-records-instantly" />
       </div>
     </section>
   );
