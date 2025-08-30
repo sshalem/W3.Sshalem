@@ -1,3 +1,4 @@
 export { default as Rest } from "./Rest";
-export { default as BeanValidationMain } from "./BeanVaidationSections/BeanValidationMain";
-export { default as StreamRecordsInstantlyMain } from "./StreamRecordsInstantlySections/StreamRecordsInstantlyMain";
+export { default as StreamLargeResponseMain } from "./StreamLargeResponseSections/StreamLargeResponseMain";
+export { default as StreamDataMain } from "./StreamDataSections/StreamDataMain";
+export { default as SseMain } from "./SseSections/SseMain";

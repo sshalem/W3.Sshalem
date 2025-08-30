@@ -8,6 +8,7 @@ import DropDownJpa from "./DropSpringPage/DropDownJpa";
 import DropDownRest from "./DropSpringPage/DropDownRest";
 import DropDownIDE from "./DropSpringPage/DropDownIDE";
 import DropDownMappingLibs from "./DropSpringPage/DropDownMappingLibs";
+import DropDownInterviewQuestions from "./DropSpringPage/DropDownInterviewQuestions";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -44,6 +45,7 @@ const Spring_page = () => {
             <DropDownJpa />
             <DropDownMappingLibs />
             <DropDownRest />
+            <DropDownInterviewQuestions />
           </div>
         </article>
       )}

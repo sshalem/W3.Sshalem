@@ -103,7 +103,9 @@ import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanCom
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
-import { BeanValidationMain, StreamRecordsInstantlyMain } from "./pages/Spring/SpringComponents/RestApiPkg";
+import { SseMain, StreamDataMain, StreamLargeResponseMain } from "./pages/Spring/SpringComponents/RestApiPkg";
+import InterviewQuestions from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/InterviewQuestions";
+import { LoopStreamParallelStreamMain, StreamRecordsInstantlyMain } from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/intex";
 
 const router = createBrowserRouter(
   [
@@ -182,8 +184,9 @@ const router = createBrowserRouter(
               path: "rest",
               element: <Rest />,
               children: [
-                { path: "bean-validation", element: <BeanValidationMain /> },
-                { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
+                { path: "stream-data", element: <StreamDataMain /> },
+                { path: "sse", element: <SseMain /> },
+                { path: "stream-large-response", element: <StreamLargeResponseMain /> },
               ],
             },
             { path: "spring-doc", element: <SpringDoc /> },
@@ -194,6 +197,14 @@ const router = createBrowserRouter(
             { path: "caching", element: <Caching /> },
             { path: "aop", element: <Aop /> },
             { path: "spring-security", element: <SpringSecurity /> },
+            {
+              path: "interview-questions",
+              element: <InterviewQuestions />,
+              children: [
+                { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
+                { path: "loop-stream-parallel-stream", element: <LoopStreamParallelStreamMain /> },
+              ],
+            },
           ],
         },
         {

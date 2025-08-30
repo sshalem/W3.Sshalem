@@ -13,9 +13,9 @@ const SideDropdownLink = ({ sideDropDownNavName, internalLink }: { sideDropDownN
     <Link to={internalLink}>
       <div className="text-[15px] text-base leading-[1.65]">
         {location.pathname === internalLink ? (
-          <div className="bg-blue-600 pl-12 text-white">{sideDropDownNavName}</div>
+          <div className="bg-blue-600 pl-10 text-white">{sideDropDownNavName}</div>
         ) : (
-          <div className="pl-12 hover:bg-gray-300">{sideDropDownNavName}</div>
+          <div className="pl-10 hover:bg-gray-300">{sideDropDownNavName}</div>
         )}
       </div>
     </Link>

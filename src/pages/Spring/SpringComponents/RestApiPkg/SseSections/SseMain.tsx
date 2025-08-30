@@ -1,23 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu } from "../../../../../components";
-import O1_BeanValidation from "./O1_BeanValidation";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_BeanValidation = "1. Bean Validation";
+const o1_Intro = "1. Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_BeanValidation];
+const anchorList: string[] = [o1_Intro];
 
 // ============================================
 // ============================================
 
-const BeanValidationMain = () => {
+const SseMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
 
@@ -50,11 +49,11 @@ const BeanValidationMain = () => {
       />
       {/* End Contents */}
 
-      <O1_BeanValidation anchor={o1_BeanValidation}></O1_BeanValidation>
+      {/* <O1_Intro anchor={o1_Intro}></O1_Intro> */}
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default BeanValidationMain;
+export default SseMain;
