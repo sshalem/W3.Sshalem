@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import TableCompareTerminology from "../../../../../components/TableCompareTerminology";
+import TableCompareTerminology from "../../../../../components/Tables/TableCompareTerminology";
 
 const O1_TerminologyCompare = ({ anchor }: { anchor: string }) => {
   return (

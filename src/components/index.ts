@@ -17,6 +17,6 @@ export { default as Loading } from "./Loading";
 export { default as Question } from "./ui/Question";
 export { default as Answer } from "./ui/Answer";
 export { default as MainChildArea } from "./ui/MainChildArea";
-export { default as TableComapreLogging } from "./TableComapreLogging";
+export { default as TableComapreLogging } from "./Tables/TableComapreLogging";
 export { default as IMG } from "./ui/IMG";
 export { default as Anchor } from "./ui/Anchor";
