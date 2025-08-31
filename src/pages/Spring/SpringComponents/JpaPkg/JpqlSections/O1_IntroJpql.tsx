@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanRed, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 import TableCompareJPQL from "../../../../../components/Tables/TableCompareJPQL";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -22,6 +22,33 @@ const O1_IntroJpql = ({ anchor }: { anchor: string }) => {
         </Li>
         <Li>Supports joins, subqueries, aggregation, and more.</Li>
       </ULdisc>
+      <DivDoubleBorder>JPQL vs Native SQL Query</DivDoubleBorder>
+      <section>
+        While <SpanGreen>JPQL</SpanGreen> is powerful and covers most use cases, there are situations where using a{" "}
+        <SpanGreen>native SQL query</SpanGreen> becomes necessary or more practical.
+        <div className="mt-8 font-semibold">✅ When JPQL Is Enough , works well for:</div>
+        <ULdisc>
+          <Li>Standard CRUD operations</Li>
+          <Li>Filtering, sorting, and joining entities</Li>
+          <Li>Aggregations (COUNT, SUM, AVG, etc.)</Li>
+          <Li>Subqueries and expressions</Li>
+          <Li>Working with mapped relationships (e.g., @OneToMany, @ManyToOne)</Li>
+        </ULdisc>
+        <hr />
+        <div className="mt-8 font-semibold">⚠️ When Native Queries Are Necessary</div>
+        <ULdisc>
+          <Li>Complex SQL Features Not Supported by JPQL</Li>
+          <Li>
+            Querying Unmapped Tables or Views (If you're accessing a table not mapped to an entity, <SpanRed>JPQL won't work</SpanRed>.)
+          </Li>
+          <Li>
+            Performance Optimization , Sometimes native queries are faster or allow better <SpanSky>indexing/hints</SpanSky>.
+          </Li>
+          <Li>JPQL supports bulk updates/deletes, but native queries can be more flexible.</Li>
+          <Li>You need native SQL to call stored procedures or database functions.</Li>
+        </ULdisc>
+        <hr />
+      </section>
       <TableCompareJPQL />
     </MainChildArea>
   );

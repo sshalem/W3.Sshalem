@@ -1,11 +1,11 @@
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanCyan, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, JavaHighlight, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
-import SpanRed from "./../../../../../components/Highlight/SpanRed";
+import SpanRed from "../../../../../components/Highlight/SpanRed";
 
-const O3_JpqlSingleEntityTable = ({ anchor }: { anchor: string }) => {
+const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -64,7 +64,7 @@ const O3_JpqlSingleEntityTable = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_JpqlSingleEntityTable;
+export default O4_QueryJoinedEntityTable;
 
 const user_entity = `@Entity
 @Table(name = "USERS_TB")
