@@ -4,7 +4,7 @@ import MySqlOSIV from "./MySqlOSIV";
 import MysqlBasicConfig from "./MysqlBasicConfig";
 import MySqlDetailedConfig from "./MySqlDetailedConfig";
 import MySqlComprehansivePropertiesConfig from "./MySqlComprehansivePropertiesConfig";
-import { ContentMenu } from "../../../../../components";
+import { ContentMenu, Loading } from "../../../../../components";
 import MySqlGitHub from "./MySqlGitHub";
 
 // =============================================================================================================
@@ -25,6 +25,7 @@ const anchorList: string[] = [mysql_dialect, osiv, mysql_basic_config, mysql_det
 const MySqlMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -38,12 +39,25 @@ const MySqlMain = () => {
 
   useEffect(() => {
     if (ulRef.current !== null) {
-      // console.log(ulRef.current.scrollHeight);
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
 
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <section>
       {/* Start Contents */}

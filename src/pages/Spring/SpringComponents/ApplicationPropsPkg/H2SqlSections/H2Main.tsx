@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import H2Dbeaver from "./H2Dbeaver";
 import H2Osiv from "./H2Osiv";
 import H2DatabseBasicConfig from "./H2DatabseBasicConfig";
-import { ContentMenu } from "../../../../../components";
+import { ContentMenu, Loading } from "../../../../../components";
 
 // =============================================================================================================
 
@@ -19,6 +19,7 @@ const anchorList: string[] = [h2_databse_basic_config, osiv, h2_dbeaver];
 const H2Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -35,7 +36,22 @@ const H2Main = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
