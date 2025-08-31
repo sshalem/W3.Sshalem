@@ -87,7 +87,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { DataTypesMain, PythonBasics, PythonHome, VsCodePython } from "./pages/Python/PythonComponents";
+import { DataTypesMain, PythonBasics, PythonHome, VsCodePythonMain } from "./pages/Python/PythonComponents";
 import {
   ConnectToServerSshMain,
   CreateServerMain,
@@ -294,7 +294,7 @@ const router = createBrowserRouter(
           element: <Python_page />,
           children: [
             { index: true, element: <PythonHome /> },
-            { path: "vscode", element: <VsCodePython /> },
+            { path: "vscode", element: <VsCodePythonMain /> },
             { path: "python-basics", element: <PythonBasics />, children: [{ path: "data-types", element: <DataTypesMain /> }] },
           ],
         },

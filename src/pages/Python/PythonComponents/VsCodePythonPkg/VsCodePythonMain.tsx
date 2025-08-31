@@ -1,25 +1,26 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
-import VsCodeIntro from "./VsCodePySections/VsCodeIntro";
+import { ContentMenu, Loading } from "../../../../components";
+import O1_VsCodeIntro from "./O1_VsCodeIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const vscode_intro = "vscode Intro";
+const o1_VsCodeIntro = "1. vscode Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [vscode_intro];
+const anchorList: string[] = [o1_VsCodeIntro];
 
 // ============================================
 // ============================================
 
-const VsCodePython = () => {
+const VsCodePythonMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -36,7 +37,22 @@ const VsCodePython = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
@@ -50,9 +66,9 @@ const VsCodePython = () => {
       />
       {/* End Contents */}
 
-      <VsCodeIntro anchor={vscode_intro}></VsCodeIntro>
+      <O1_VsCodeIntro anchor={o1_VsCodeIntro}></O1_VsCodeIntro>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default VsCodePython;
+export default VsCodePythonMain;
