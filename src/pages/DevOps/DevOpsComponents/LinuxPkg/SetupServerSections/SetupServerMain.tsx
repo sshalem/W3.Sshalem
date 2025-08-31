@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../../components";
+import { ContentMenu, Loading } from "../../../../../components";
 import O1_InitialServerSetup from "./O1_InitialServerSetup";
 import O2_DateTimeZoneModification from "./O2_DateTimeZoneModification";
 import O3_ConfigAccount from "./O3_ConfigAccount";
@@ -27,6 +27,7 @@ const anchorList: string[] = [Initial_Server_Setup, Date_Time_Zone, Config_accou
 const SetupServerMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -43,7 +44,22 @@ const SetupServerMain = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>

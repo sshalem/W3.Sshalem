@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../../components";
+import { ContentMenu, Loading } from "../../../../../components";
 import O1_InstallTomcat from "./O1_InstallTomcat";
 import O2_ConfigUsers from "./O2_ConfigUsers";
 import O3_ConfigTomcatService from "./O3_ConfigTomcatService";
@@ -28,6 +28,7 @@ const anchorList: string[] = [O1_tomcat_install, O2_config_users, O3_config_tomc
 const TomcatInstallMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -44,7 +45,22 @@ const TomcatInstallMain = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
