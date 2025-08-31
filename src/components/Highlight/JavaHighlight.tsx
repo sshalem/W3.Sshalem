@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import java from "react-syntax-highlighter/dist/esm/languages/prism/java";
-import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 PrismLightSyntaxHighlighter.registerLanguage("java", java);
 
@@ -33,7 +33,7 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
-            backgroundColor: "#fbfbfb",
+            // backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
