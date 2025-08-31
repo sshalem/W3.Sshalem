@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_SetupEntity from "./O1_SetupEntityO2M";
+import O2_SetupEntityO2M from "./O2_SetupEntityO2M";
+import O1_IntroO2M from "./O1_IntroO2M";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_SetupEntity = "1. Setup Entities";
+const o1_IntroO2M = "1. Intro";
+const o2_SetupEntityO2M = "2. Setup Entities";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_SetupEntity];
+const anchorList: string[] = [o1_IntroO2M, o2_SetupEntityO2M];
 
 // ============================================
 // ============================================
@@ -65,9 +67,8 @@ const One2ManyBiLazyMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      <O1_SetupEntity anchor={o1_SetupEntity}></O1_SetupEntity>
-
+      <O1_IntroO2M anchor={o1_IntroO2M}></O1_IntroO2M>
+      <O2_SetupEntityO2M anchor={o2_SetupEntityO2M}></O2_SetupEntityO2M>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

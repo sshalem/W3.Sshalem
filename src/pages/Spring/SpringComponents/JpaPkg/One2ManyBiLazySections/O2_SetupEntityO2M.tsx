@@ -1,22 +1,25 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 
-const O1_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
+const O2_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
         Here I will show the best practice for setting up a Bi-Directional <SpanSky>OneToMany</SpanSky> mapping.
       </section>
-
-      <div>UserEntity - Parent Entity</div>
+      {/*  */}
+      <DivDoubleBorder>UserEntity - Parent Entity</DivDoubleBorder>
+      ➡️ If <SpanRed>orphanRemoval = true</SpanRed>, this will issue a DELETE for that user in the DB. <br />
+      ➡️ If <SpanGreen>orphanRemoval = false</SpanGreen>, it will only break the relationship (set user_id to NULL if <SpanTeal>nullable</SpanTeal> ).
       <JavaHighlight javaCode={user_entity}></JavaHighlight>
-      <div>RoleEntity - Child Entity</div>
+      {/*  */}
+      <DivDoubleBorder>RoleEntity - Child Entity</DivDoubleBorder>
       <JavaHighlight javaCode={role_entity}></JavaHighlight>
     </MainChildArea>
   );
 };
 
-export default O1_SetupEntityO2M;
+export default O2_SetupEntityO2M;
 
 const user_entity = `@Entity
 @Table(name = "USERS_TB")
@@ -30,12 +33,7 @@ public class UserEntity {
 	private String email;
 	private String password;
 	
-  @OneToMany(
-      mappedBy = "user",             // field in RoleEntity
-      cascade = CascadeType.ALL,     // Cascade operations
-      orphanRemoval = true,          // Remove roles if removed from list
-      fetch = FetchType.LAZY         // Load roles lazily
-  )
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @JsonManagedReference   // ✅ Handles forward part of the relation
 	private Set<RoleEntity> roles = new HashSet<>();
 
