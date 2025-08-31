@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
+import { ContentMenu, Loading } from "../../../../components";
 import O2_PortCheck from "./O2_PortCheck";
 import O1_Git from "./O1_Git";
 
@@ -22,6 +22,7 @@ const anchorList: string[] = [o1_git, o2_port_check];
 const PortCheckMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -38,7 +39,22 @@ const PortCheckMain = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>

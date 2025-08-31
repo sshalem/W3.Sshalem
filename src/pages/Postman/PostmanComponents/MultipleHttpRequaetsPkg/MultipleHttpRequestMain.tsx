@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
+import { ContentMenu, Loading } from "../../../../components";
 import O1_Git_MultipleHttpReq from "./O1_Git_MultipleHttpReq";
 
 // ===========================================
@@ -20,6 +20,7 @@ const anchorList: string[] = [o1_git_http_request];
 const MultipleHttpRequestMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -36,7 +37,22 @@ const MultipleHttpRequestMain = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
