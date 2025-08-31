@@ -91,19 +91,19 @@ import { DataTypesMain, PythonBasics, PythonHome, VsCodePythonMain } from "./pag
 import {
   ConnectToServerSshMain,
   CreateServerMain,
-  DeployNetlify,
-  DeployRender,
   ReactOnTomcatMain,
   DevOpsHome,
   JdkInstallMain,
   JenkinsMain,
   Linux_Server,
   MySqlnstallMain,
-  ReactOnSpring,
+  ReactOnSpringMain,
   SetupServerMain,
   TomcatInstallMain,
   Tomcat,
   FileZillaMain,
+  DeployNetlifyMain,
+  DeployRenderMain,
 } from "./pages/DevOps/DevOpsComponents";
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -303,9 +303,9 @@ const router = createBrowserRouter(
           element: <DevOps_page />,
           children: [
             { index: true, element: <DevOpsHome /> },
-            { path: "react-on-spring", element: <ReactOnSpring /> },
-            { path: "netlify", element: <DeployNetlify /> },
-            { path: "render", element: <DeployRender /> },
+            { path: "react-on-spring", element: <ReactOnSpringMain /> },
+            { path: "netlify", element: <DeployNetlifyMain /> },
+            { path: "render", element: <DeployRenderMain /> },
             { path: "tomcat", element: <Tomcat />, children: [{ path: "react-on-tomcat", element: <ReactOnTomcatMain /> }] },
             {
               path: "linux-server",

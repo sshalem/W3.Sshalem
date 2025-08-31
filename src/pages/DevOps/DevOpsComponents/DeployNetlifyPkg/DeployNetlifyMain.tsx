@@ -1,43 +1,74 @@
-import { MainChildArea } from "../../../../components";
-import { SpanBlue, SpanRed } from "../../../../components/Highlight";
+import { useEffect, useRef, useState } from "react";
+import { ContentMenu, Loading } from "../../../../components";
+import O1_DeployNetlify from "./O1_DeployNetlify";
 
-const DeployNetlifyMain = ({ anchor }: { anchor: string }) => {
+// ===========================================
+// ==     content menu (title name)         ==
+// ===========================================
+
+const o1_DeployNetlify = "1. config netlify for SPA";
+
+// ===========================================
+// == Update anchorList with  content menu  ==
+// ===========================================
+
+const anchorList: string[] = [o1_DeployNetlify];
+
+// ============================================
+// ============================================
+
+const DeployNetlifyMain = () => {
+  const [showContent, setShowContent] = useState<boolean>(true);
+  const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
+
+  const ulRef = useRef<HTMLUListElement | null>(null);
+
+  const handleShowContent = () => {
+    setShowContent(!showContent);
+    if (sessionStorage.getItem("scrollHeight") !== null) {
+      const value = JSON.parse(sessionStorage.getItem("scrollHeight") as string);
+      setContentHeight(value);
+    }
+  };
+
+  useEffect(() => {
+    if (ulRef.current !== null) {
+      sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
+      setContentHeight(ulRef.current.scrollHeight);
+    }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <MainChildArea anchor={anchor}>
-      <article className="mb-4">
-        See link{" "}
-        <a href="https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/" target="_blank" className="text-blue-600">
-          https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/
-        </a>
-      </article>
-      <div>
-        with SPA , once I refresh any the route page url (Not index main page url), I get a page not found error. <br />
-        This is because when we access any route on our local machine, React Router handles the routing. <br />
-        But when we deploy the application on any server, directly accessing the route will send the request to the server itself (Netlify in our
-        case).
-      </div>
-      <ul className="my-4 ml-8 list-decimal">
-        <li className="my-1">
-          Create a new file with the name <SpanBlue>_redirects</SpanBlue>
-        </li>
-        <li className="my-1">
-          Place the file under <SpanBlue>public</SpanBlue> folder of the project
-        </li>
-        <li className="my-1">
-          add the following contents inside it <SpanBlue>/* /index.html 200</SpanBlue>
-        </li>
-        <li className="my-1">
-          Here, we're telling Netlify to redirect all the routes to the <SpanBlue>index.html</SpanBlue> file.
-        </li>
-        <li className="my-1">
-          The <SpanBlue>index.html</SpanBlue> file contains our entire React app code
-        </li>
-        <li className="my-1">
-          And as routing is handled by our React app which is contained in the <SpanBlue>index.html</SpanBlue> file, our application will work without
-          a <SpanRed>page not found issue</SpanRed>.
-        </li>
-      </ul>
-    </MainChildArea>
+    <section>
+      {/* Start Contents */}
+      <ContentMenu
+        anchorList={anchorList}
+        contentHeight={contentHeight}
+        handleShowContent={handleShowContent}
+        showContent={showContent}
+        ulRef={ulRef}
+      />
+
+      <O1_DeployNetlify anchor={o1_DeployNetlify} />
+
+      <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
+    </section>
   );
 };
 export default DeployNetlifyMain;

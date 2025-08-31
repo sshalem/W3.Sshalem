@@ -1,7 +1,7 @@
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
 import { SpanBlue } from "../../../../components/Highlight";
 
-const ReactOnSpringUnloadZforce = ({ anchor }: { anchor: string }) => {
+const O2_ReactOnSpringUnloadZforce = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
@@ -16,4 +16,4 @@ const ReactOnSpringUnloadZforce = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default ReactOnSpringUnloadZforce;
+export default O2_ReactOnSpringUnloadZforce;
