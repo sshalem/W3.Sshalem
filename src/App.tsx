@@ -51,9 +51,9 @@ import {
   EntityValidationMain,
   Jpa,
   JpqlMain,
+  Many2ManyBiLazyMain,
   MappingLibsMain,
-  O2MBiEagerMain,
-  O2MBiLazy,
+  One2ManyBiLazyMain,
   PaginationSortingMain,
 } from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
@@ -185,8 +185,8 @@ const router = createBrowserRouter(
                 { path: "auditing", element: <AuditingMain /> },
                 { path: "jpql", element: <JpqlMain /> },
                 { path: "pagination-sorting", element: <PaginationSortingMain /> },
-                { path: "one2many-bi-eager", element: <O2MBiEagerMain /> },
-                { path: "one2many-bi-lazy", element: <O2MBiLazy /> },
+                { path: "many2many-bi-lazy", element: <Many2ManyBiLazyMain /> },
+                { path: "one2many-bi-lazy", element: <One2ManyBiLazyMain /> },
               ],
             },
             {

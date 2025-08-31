@@ -47,8 +47,8 @@ const DropDownJpa = () => {
         <SideDropdownLink sideDropDownNavName="Auditing" internalLink="/spring/jpa/auditing" />
         <SideDropdownLink sideDropDownNavName="Pagination Sort" internalLink="/spring/jpa/pagination-sorting" />
         <SideDropdownLink sideDropDownNavName="JPQL" internalLink="/spring/jpa/jpql" />
-        <SideDropdownLink sideDropDownNavName="o2m Bi Eager" internalLink="/spring/jpa/one2many-bi-eager" />
-        <SideDropdownLink sideDropDownNavName="o2m Bi Lazy" internalLink="/spring/jpa/one2many-bi-lazy" />
+        <SideDropdownLink sideDropDownNavName="OneToMany (Bi Lazy)" internalLink="/spring/jpa/one2many-bi-lazy" />
+        <SideDropdownLink sideDropDownNavName="ManyToMany (Bi Lazy)" internalLink="/spring/jpa/many2many-bi-lazy" />
       </div>
     </section>
   );

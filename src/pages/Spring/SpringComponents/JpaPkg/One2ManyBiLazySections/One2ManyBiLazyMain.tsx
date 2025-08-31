@@ -1,37 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_BasicConstraints from "./O1_BasicConstraints";
-import O2_SizeRangeConstraints from "./O2_SizeRangeConstraints";
-import O3_PatternFormatConstraints from "./O3_PatternFormatConstraints";
-import O4_CompositeAdvanced from "./O4_CompositeAdvanced";
-import O5_ExampleDtoBeanValidation from "./O5_ExampleDtoBeanValidation";
+import O1_SetupEntity from "./O1_SetupEntityO2M";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_BasicConstraints = "1. Basic Constraints";
-const o2_SizeRangeConstraints = "2. Size Range Constraints";
-const o3_PatternFormatConstraints = "3. Pattern Format Constraints";
-const o4_CompositeAdvanced = "4. Composite Advanced";
-const o5_ExampleDtoBeanValidation = "5. Example Dto Bean Validation";
+const o1_SetupEntity = "1. Setup Entities";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [
-  o1_BasicConstraints,
-  o2_SizeRangeConstraints,
-  o3_PatternFormatConstraints,
-  o4_CompositeAdvanced,
-  o5_ExampleDtoBeanValidation,
-];
+const anchorList: string[] = [o1_SetupEntity];
 
 // ============================================
 // ============================================
 
-const EntityValidationMain = () => {
+const One2ManyBiLazyMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -80,15 +66,11 @@ const EntityValidationMain = () => {
       />
       {/* End Contents */}
 
-      <O1_BasicConstraints anchor={o1_BasicConstraints}></O1_BasicConstraints>
-      <O2_SizeRangeConstraints anchor={o2_SizeRangeConstraints}></O2_SizeRangeConstraints>
-      <O3_PatternFormatConstraints anchor={o3_PatternFormatConstraints}></O3_PatternFormatConstraints>
-      <O4_CompositeAdvanced anchor={o4_CompositeAdvanced}></O4_CompositeAdvanced>
-      <O5_ExampleDtoBeanValidation anchor={o5_ExampleDtoBeanValidation}></O5_ExampleDtoBeanValidation>
+      <O1_SetupEntity anchor={o1_SetupEntity}></O1_SetupEntity>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default EntityValidationMain;
+export default One2ManyBiLazyMain;

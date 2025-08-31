@@ -1,10 +1,22 @@
-import React from "react";
+import { MainChildArea } from "../../../../../components";
+import { JavaHighlight, SpanSky } from "../../../../../components/Highlight";
 
-const O2MBiLazyMain = () => {
-  return <div></div>;
+const O1_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
+  return (
+    <MainChildArea anchor={anchor}>
+      <section>
+        Here I will show the best practice for setting up a Bi-Directional <SpanSky>OneToMany</SpanSky> mapping.
+      </section>
+
+      <div>UserEntity - Parent Entity</div>
+      <JavaHighlight javaCode={user_entity}></JavaHighlight>
+      <div>RoleEntity - Child Entity</div>
+      <JavaHighlight javaCode={role_entity}></JavaHighlight>
+    </MainChildArea>
+  );
 };
 
-export default O2MBiLazyMain;
+export default O1_SetupEntityO2M;
 
 const user_entity = `@Entity
 @Table(name = "USERS_TB")
