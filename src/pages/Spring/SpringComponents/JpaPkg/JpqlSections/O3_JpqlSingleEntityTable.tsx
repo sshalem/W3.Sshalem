@@ -1,11 +1,23 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import Li from "../../../../../components/ui/Li";
+import ULDecimal from "../../../../../components/ui/ULDecimal";
 
 const O3_JpqlSingleEntityTable = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
-        <div>To Query on Single Entity , that has a Single table in Postgresql</div>
+        <div>
+          Here I show how to Query on Single Entity , that has a Single table in Postgresql <br />
+          <ULDecimal>
+            <Li>
+              <SpanSky>UserEntity</SpanSky> Class name used with <SpanTeal>JPQL</SpanTeal>
+            </Li>
+            <Li>
+              <SpanSky>USERS_TB</SpanSky> Table name used with <SpanTeal>Native SQL</SpanTeal>
+            </Li>
+          </ULDecimal>
+        </div>
 
         <JavaHighlight javaCode={user_entity}></JavaHighlight>
       </section>
