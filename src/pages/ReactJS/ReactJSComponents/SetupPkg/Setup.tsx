@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../components";
+import { ContentMenu, Loading } from "../../../../components";
 import O1_CreateViteProject from "./O1_CreateViteProject";
 import O2_Favicon from "./O2_Favicon";
 import O3_ReactIcons from "./O3_ReactIcons";
@@ -40,6 +40,7 @@ const anchorList: string[] = [
 const Setup = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -56,7 +57,22 @@ const Setup = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>

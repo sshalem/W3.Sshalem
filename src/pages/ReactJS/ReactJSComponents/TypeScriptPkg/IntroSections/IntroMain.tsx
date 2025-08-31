@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu } from "../../../../../components";
+import { ContentMenu, Loading } from "../../../../../components";
 import O1_Introduction from "./O1_Introduction";
 import O2_Variables from "./O2_Variables";
 import O3_UnknownNever from "./O3_UnknownNever";
@@ -30,6 +30,7 @@ const anchorList: string[] = [o1_introduction, o2_variables, o3_unknown_never, o
 const IntroMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const ulRef = useRef<HTMLUListElement | null>(null);
 
@@ -46,7 +47,22 @@ const IntroMain = () => {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
       setContentHeight(ulRef.current.scrollHeight);
     }
+  }, [isLoading]);
+
+  useEffect(() => {
+    const timer = setTimeout(function () {
+      setIsLoading(false);
+    }, 200);
+    return () => clearTimeout(timer);
   }, []);
+
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <section>
