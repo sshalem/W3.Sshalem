@@ -47,12 +47,9 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
       <ul className="mx-8">
         <li className="my-1 list-decimal">Download the zip file</li>
         <li className="my-1 list-decimal">
-          Uninstall it , it will uninstall it to folder <SpanBlue>pgsql</SpanBlue> .
+          Unzip it , it will unzip it to folder <SpanBlue>pgsql</SpanBlue> .
         </li>
-        <li className="my-1 list-decimal">
-          Create a new folder as <SpanBlue>pgsql_data</SpanBlue>
-          <IMG img_name={psql_data_folder} />
-        </li>
+
         <li className="my-1 list-decimal">
           Open CMD , go to directory <SpanBlue> C:\Localdata\DB\postgresql\pgsql\bin</SpanBlue>
         </li>
@@ -68,7 +65,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
             <FaDiamond className="mr-2 self-center text-[0.6rem]" /> username : &nbsp;<SpanBlue>postgres</SpanBlue>
           </div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanBlue>postgres</SpanBlue>
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanBlue>root</SpanBlue>
           </div>
         </li>
       </ul>
@@ -95,7 +92,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">
           Go to folder of C:\Localdata\DB\postgresql\pgsql\pgAdmin 4\runtime , click of the <SpanBlue>pgAdmin4.exe</SpanBlue> file
         </li>
-        Type the password <SpanBlue>postgres</SpanBlue>
+        Type the password <SpanBlue>root</SpanBlue>
         <li className="my-1 list-decimal">Once the pgAdmin tool opens , create new server</li>
         Right click on the servers -{">"} Register -{">"} Server
         <div>
@@ -120,8 +117,8 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
             created in Install steps )
           </div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanBlue>postgres</SpanBlue> &nbsp; (This is the user we
-            created in Install steps )
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanBlue>root</SpanBlue> &nbsp; (This is the user we created in
+            Install steps )
           </div>
           <div>
             <IMG img_name={pgadmin_3} />
@@ -134,7 +131,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
 
 export default InstallPostgresStandalone;
 
-const batchCode = `initdb.exe -U postgres -A password -E utf8 -W -D C:\\Localdata\\DB\\postgresql\\pgsql\\pgsql_data`;
+const batchCode = `initdb.exe -U postgres -A password -E utf8 -W -D C:\\Localdata\\DB\\postgresql\\pgsql_data`;
 
 const startPostgresqlServer = `C:\\Windows\\System32>cd \\Localdata\\DB\\postgresql\\pgsql\\bin
 C:\\Localdata\\DB\\postgresql\\pgsql\\bin>pg_ctl -D ^"C^:^\\Localdata^\\DB^\\postgresql^\\pgsql^_data^" -l logfile start`;
