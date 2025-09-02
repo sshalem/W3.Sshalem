@@ -38,7 +38,6 @@ public class UserEntity {
 	private Set<RoleEntity> roles = new HashSet<>();
 
 	// Default Constructor , Getters / Setters
-	// toString: don't add the associated entity in the toString method This will cause ERROR
 	
 	public void addRole(RoleEntity role) {
 		if (this.roles == null) {
@@ -50,7 +49,7 @@ public class UserEntity {
 
 	public void removeRole(RoleEntity role) {
 		this.roles.remove(role);
-		// role.setUser(null);
+		role.setUser(null); // break relationship properly
 	}`;
 
 const role_entity = `@Entity

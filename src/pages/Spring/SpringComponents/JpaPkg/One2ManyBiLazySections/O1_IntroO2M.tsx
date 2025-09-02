@@ -1,5 +1,6 @@
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -43,6 +44,7 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
           <Li>Don’t use it if the child may live independently or move to another parent (e.g., Department → Student if students can transfer).</Li>
         </ULdisc>
       </div>
+      <TableCompareOrphanVsCascadeRemove />
     </MainChildArea>
   );
 };
