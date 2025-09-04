@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -9,15 +9,15 @@ const O1_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       Let's see few concepts before diving into JPA.
       <section>
-        <DivDoubleBorder>In-Memory (Persistent Context)</DivDoubleBorder>
+        <DivDoubleBorder>In-Memory (also called Persistent Context)</DivDoubleBorder>
         <article>
           <ULDecimal>
             <Li>
               <strong>Definition</strong>
               <div>
-                A data storage approach where objects/data are kept in the system’s RAM but managed in a way that it can persist across certain
-                operations within an application. Often used in ORMs (Object-Relational Mappers) like Hibernate, or in frameworks like Entity
-                Framework.
+                A data storage approach where objects/data are kept in the system’s <SpanSky>RAM</SpanSky> but managed in a way that it can persist
+                across certain operations within an application. Often used in ORMs (Object-Relational Mappers) like Hibernate, or in frameworks like
+                Entity Framework.
               </div>
             </Li>
             <Li>

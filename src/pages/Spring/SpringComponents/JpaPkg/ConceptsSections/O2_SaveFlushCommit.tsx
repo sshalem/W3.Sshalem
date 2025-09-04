@@ -1,11 +1,25 @@
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
+import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O2_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <div>
+        Note: actions as SAVE, UPDATE , DELETE ,must be performed inside a a <SpanRed>Transactional</SpanRed> method. <br />
+        <ULdisc>
+          <Li>method must be public when perfroming any of these actions (SAVE, UPDATE, DELETE)</Li>
+          <Li>
+            must annotated method with <SpanGreen>@Transactional</SpanGreen> to keep the session open as long
+          </Li>
+          <Li></Li>
+        </ULdisc>
+        <br />I will show , what happens when <SpanBlue>SAVE</SpanBlue> action is perfrom. It is very important to understand since it will give a
+        great understanding of creating these sactions.
+        <br />
+        In addition, In the topic of <SpanGreen>Transaction Management</SpanGreen> it becomes essential
+      </div>
       <section>
         <DivDoubleBorder>save() , flush() , commit()</DivDoubleBorder>
         <article>
@@ -14,7 +28,8 @@ const O2_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
               <SpanGreen>save()</SpanGreen>
               <ULdisc>
                 <Li>
-                  <strong>Purpose</strong>: Register a new or updated entity in the persistence context.
+                  <strong>Purpose</strong>: Register a new or updated entity in the <SpanSky>persistence context</SpanSky> (Hibernate’s first-level
+                  cache).
                 </Li>
                 <Li>
                   <strong>Behavior</strong>:
@@ -92,9 +107,20 @@ parentRepository.save(p);  // in-memory
 parentRepository.flush();  // SQL INSERT executed now`;
 
 const commit_parent = `@Transactional
-public void demo() {
-    Parent p = new Parent();
-    p.setName("John");
-    parentRepository.save(p);  // in memory
-    // flush optional
-} // transaction commits here automatically`;
+public void updateUser(Long id, String newName) {
+    User user = userRepo.findById(id).orElseThrow();
+    user.setName(newName); // 1️⃣ in memory, Hibernate marks the entity as dirty (changed).
+
+    userRepo.save(user); // 2️⃣ JPA checks if it’s new or existing. If exist → schedule an UPDATE.
+    // No SQL executed yet (just staged in persistence context).
+    // Still no flush/commit.
+ 
+} 
+// 3️⃣ Commit (end of @Transactional method) . 
+// (commit happens here automatically) 
+// On method exit, Spring calls commit: (Spring ends the transaction. ) 
+// But , Before commit, 
+//      Hibernate automatically calls flush 
+//      and Executes all staged SQL.
+// Then commit happens: Changes are permanently stored in DB. 
+// TX is closed`;
