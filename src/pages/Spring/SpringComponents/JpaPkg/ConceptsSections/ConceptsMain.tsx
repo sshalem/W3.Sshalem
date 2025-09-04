@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_InMemoryVsDB from "./O1_InMemoryVsDB";
 import O2_SaveFlushCommit from "./O2_SaveFlushCommit";
+import O3_HibernateSession from "./O3_HibernateSession";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -9,12 +10,13 @@ import O2_SaveFlushCommit from "./O2_SaveFlushCommit";
 
 const o1_InMemoryVsDB = "1. InMemory(PersistentContext) Vs DB";
 const o2_SaveFlushCommit = "2. Save, Flush, Commit";
+const o3_HibernateSession = "3. Hibernate Session";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_InMemoryVsDB, o2_SaveFlushCommit];
+const anchorList: string[] = [o1_InMemoryVsDB, o2_SaveFlushCommit, o3_HibernateSession];
 
 // ============================================
 // ============================================
@@ -70,6 +72,7 @@ const ConceptsMain = () => {
 
       <O1_InMemoryVsDB anchor={o1_InMemoryVsDB}></O1_InMemoryVsDB>
       <O2_SaveFlushCommit anchor={o2_SaveFlushCommit}></O2_SaveFlushCommit>
+      <O3_HibernateSession anchor={o3_HibernateSession}></O3_HibernateSession>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
