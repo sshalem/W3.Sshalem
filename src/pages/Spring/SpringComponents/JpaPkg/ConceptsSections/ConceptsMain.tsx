@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_InMemoryVsDB from "./O1_InMemoryVsDB";
+import O2_SaveFlushCommit from "./O2_SaveFlushCommit";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_InMemoryVsDB = "1. InMemory(PersistentContext) Vs DB";
+const o2_SaveFlushCommit = "2. Save, Flush, Commit";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_InMemoryVsDB];
+const anchorList: string[] = [o1_InMemoryVsDB, o2_SaveFlushCommit];
 
 // ============================================
 // ============================================
@@ -67,6 +69,7 @@ const ConceptsMain = () => {
       {/* End Contents */}
 
       <O1_InMemoryVsDB anchor={o1_InMemoryVsDB}></O1_InMemoryVsDB>
+      <O2_SaveFlushCommit anchor={o2_SaveFlushCommit}></O2_SaveFlushCommit>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
