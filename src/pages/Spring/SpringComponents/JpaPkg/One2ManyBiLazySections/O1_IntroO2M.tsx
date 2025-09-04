@@ -45,6 +45,30 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </div>
       <TableCompareOrphanVsCascadeRemove />
+      <div className="my-6">
+        <SpanRed>Important Note</SpanRed>
+        <div>
+          <p className="my-4 ml-8">
+            for the behaviors in that table to actually take effect, you need to make sure that your operations run inside a transaction. Here’s
+            why...
+          </p>
+          <hr />
+          <p className="my-4">
+            Why <SpanRed>@Transactional</SpanRed> is needed
+          </p>
+          <ULdisc>
+            <Li>JPA/Hibernate doesn’t execute SQL immediately.</Li>
+            <Li>Changes you make (remove(), parent.getChildren().remove(child), etc.) are tracked in the persistence context first.</Li>
+            <Li>
+              The actual DELETE / UPDATE SQL statements are flushed to the database only when:
+              <ULdisc>
+                <Li>The transaction is committed, or</Li>
+                <Li>You explicitly call entityManager.flush().</Li>
+              </ULdisc>
+            </Li>
+          </ULdisc>
+        </div>
+      </div>
     </MainChildArea>
   );
 };

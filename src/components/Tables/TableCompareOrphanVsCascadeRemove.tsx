@@ -28,7 +28,7 @@ const TableCompareOrphanVsCascadeRemove = () => {
 
   return (
     <section className="my-8">
-      <h1 className="mb-4 text-2xl font-bold">JPQL vs Native SQL</h1>
+      <h1 className="mb-4 text-2xl font-bold">orphanRemocal vs Cascade.Remove</h1>
       {/*  */}
       <div className="overflow-x-auto rounded-lg shadow-md">
         <table className="min-w-full border-collapse">
