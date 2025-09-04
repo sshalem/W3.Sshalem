@@ -18,10 +18,13 @@ const TableIdeCompare = () => {
     {
       section: "Navigation",
       rows: [
+        { action: "Open Declaration", eclipse: "F3", intellij: "Ctrl + B / Ctrl + Click" },
+        { action: "Open Type Hierarchy", eclipse: "F4", intellij: "Ctrl + H" },
+        { action: "Open Call Hierarchy", eclipse: "Ctrl + Alt + H", intellij: "Ctrl + Alt + H" },
+        { action: "Outline / File Structure", eclipse: "Ctrl + O", intellij: "Alt + 7" },
+        { action: "Quick Outline / File Structure", eclipse: "Ctrl + O", intellij: "Ctrl + F12" },
         { action: "Open Type / Class", eclipse: "Ctrl + Shift + T", intellij: "Ctrl + N" },
         { action: "Open Resource / File", eclipse: "Ctrl + Shift + R", intellij: "Ctrl + Shift + N" },
-        { action: "Open Declaration", eclipse: "F3", intellij: "Ctrl + B / Ctrl + Click" },
-        { action: "Quick Outline / File Structure", eclipse: "Ctrl + O", intellij: "Ctrl + F12" },
         { action: "Navigate Back", eclipse: "Alt + ←", intellij: "Ctrl + Alt + ←" },
         { action: "Navigate Forward", eclipse: "Alt + →", intellij: "Ctrl + Alt + →" },
       ],
@@ -29,7 +32,7 @@ const TableIdeCompare = () => {
     {
       section: "Editing & Refactoring",
       rows: [
-        { action: "Quick Fix / Intention", eclipse: "Ctrl + 1", intellij: "Alt + Enter" },
+        { action: "Quick Fix / Intention (Assign Local Variable)", eclipse: "Ctrl + 1", intellij: "Alt + Enter" },
         { action: "Rename", eclipse: "Alt + Shift + R", intellij: "Shift + F6" },
         { action: "Format Code", eclipse: "Ctrl + Shift + F", intellij: "Ctrl + Alt + L" },
         { action: "Organize Imports", eclipse: "Ctrl + Shift + O", intellij: "Ctrl + Alt + O" },
