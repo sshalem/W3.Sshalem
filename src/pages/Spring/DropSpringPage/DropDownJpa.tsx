@@ -42,6 +42,7 @@ const DropDownJpa = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        <SideDropdownLink sideDropDownNavName="In-Memory & DB concepts" internalLink="/spring/jpa/in-memory-database" />
         <SideDropdownLink sideDropDownNavName="Entity validation" internalLink="/spring/jpa/entity-validation" />
         <SideDropdownLink sideDropDownNavName="Mapping Libs" internalLink="/spring/jpa/mapping-libs" />
         <SideDropdownLink sideDropDownNavName="Auditing" internalLink="/spring/jpa/auditing" />

@@ -49,6 +49,7 @@ import {
 import {
   AuditingMain,
   EntityValidationMain,
+  InMemDBMain,
   Jpa,
   JpqlMain,
   Many2ManyBiLazyMain,
@@ -180,6 +181,7 @@ const router = createBrowserRouter(
               path: "jpa",
               element: <Jpa />,
               children: [
+                { path: "in-memory-database", element: <InMemDBMain /> },
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
                 { path: "auditing", element: <AuditingMain /> },
