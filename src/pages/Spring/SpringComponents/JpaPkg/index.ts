@@ -6,4 +6,4 @@ export { default as MappingLibsMain } from "./MappingLibsSections/MappingLibsMai
 export { default as AuditingMain } from "./AuditingSections/AuditingMain";
 export { default as PaginationSortingMain } from "./PaginationSortingSections/PaginationSortingMain";
 export { default as JpqlMain } from "./JpqlSections/JpqlMain";
-export { default as InMemDBMain } from "./InMemoryDataBaseSections/InMemDBMain";
+export { default as ConceptsMain } from "./ConceptsSections/ConceptsMain";
