@@ -1,27 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_InMemoryVsDB from "./O1_InMemoryVsDB";
-import O2_SaveFlushCommit from "./O2_SaveFlushCommit";
-import O3_HibernateSession from "./O3_HibernateSession";
+import O2_InMemoryVsDB from "./O2_InMemoryVsDB";
+import O3_SaveFlushCommit from "./O3_SaveFlushCommit";
+import O4_HibernateSession from "./O4_HibernateSession";
+import O1_IntroTxMngmt from "./O1_IntroTxMngmt";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_InMemoryVsDB = "1. InMemory(PersistentContext) Vs DB";
-const o2_SaveFlushCommit = "2. Save, Flush, Commit";
-const o3_HibernateSession = "3. Hibernate Session";
+const o1_IntroTxMngmt = "1. Intro TX Mangmnt";
+const o2_InMemoryVsDB = "2. Spring InMemory Vs DB";
+const o3_SaveFlushCommit = "3. Save, Flush, Commit";
+const o4_HibernateSession = "4. Hibernate Session";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_InMemoryVsDB, o2_SaveFlushCommit, o3_HibernateSession];
+const anchorList: string[] = [o1_IntroTxMngmt, o2_InMemoryVsDB, o3_SaveFlushCommit, o4_HibernateSession];
 
 // ============================================
 // ============================================
 
-const ConceptsMain = () => {
+const TransactionManagementMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -69,14 +71,14 @@ const ConceptsMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      <O1_InMemoryVsDB anchor={o1_InMemoryVsDB}></O1_InMemoryVsDB>
-      <O2_SaveFlushCommit anchor={o2_SaveFlushCommit}></O2_SaveFlushCommit>
-      <O3_HibernateSession anchor={o3_HibernateSession}></O3_HibernateSession>
+      <O1_IntroTxMngmt anchor={o1_IntroTxMngmt}></O1_IntroTxMngmt>
+      <O2_InMemoryVsDB anchor={o2_InMemoryVsDB}></O2_InMemoryVsDB>
+      <O3_SaveFlushCommit anchor={o3_SaveFlushCommit}></O3_SaveFlushCommit>
+      <O4_HibernateSession anchor={o4_HibernateSession}></O4_HibernateSession>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ConceptsMain;
+export default TransactionManagementMain;

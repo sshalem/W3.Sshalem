@@ -4,12 +4,12 @@ import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O1_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
+const O2_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       Let's see few concepts before diving into JPA.
       <section>
-        <DivDoubleBorder>In-Memory (also called Persistent Context)</DivDoubleBorder>
+        <DivDoubleBorder>Spring In-Memory (also called Persistent Context)</DivDoubleBorder>
         <article>
           <ULDecimal>
             <Li>
@@ -136,4 +136,4 @@ const O1_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_InMemoryVsDB;
+export default O2_InMemoryVsDB;

@@ -3,7 +3,7 @@ import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed, SpanSky }
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O2_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
+const O3_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
@@ -95,7 +95,7 @@ const O2_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_SaveFlushCommit;
+export default O3_SaveFlushCommit;
 
 const save_parent = `Parent p = new Parent();
 p.setName("John");

@@ -48,7 +48,6 @@ import {
 } from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
 import {
   AuditingMain,
-  ConceptsMain,
   EntityValidationMain,
   Jpa,
   JpqlMain,
@@ -56,6 +55,7 @@ import {
   MappingLibsMain,
   One2ManyBiLazyMain,
   PaginationSortingMain,
+  TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/JpaPkg";
 import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
 import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
@@ -181,7 +181,7 @@ const router = createBrowserRouter(
               path: "jpa",
               element: <Jpa />,
               children: [
-                { path: "concepts", element: <ConceptsMain /> },
+                { path: "transaction-management", element: <TransactionManagementMain /> },
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
                 { path: "auditing", element: <AuditingMain /> },
