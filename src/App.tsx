@@ -116,6 +116,7 @@ import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 import { SseMain, StreamDataMain, StreamLargeResponseMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 import InterviewQuestions from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/InterviewQuestions";
 import {
+  JavaInUseMain,
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
@@ -215,6 +216,7 @@ const router = createBrowserRouter(
                 { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
                 { path: "loop-stream-parallel-stream", element: <LoopStreamParallelStreamMain /> },
                 { path: "multithread-block-queue", element: <MultiThreadBlockQueueMain /> },
+                { path: "java-in-use", element: <JavaInUseMain /> },
               ],
             },
           ],

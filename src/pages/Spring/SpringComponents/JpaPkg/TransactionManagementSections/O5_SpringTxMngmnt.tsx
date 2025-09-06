@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanTeal } from "../../../../../components/Highlight";
+import { SpanTeal } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
