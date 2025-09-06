@@ -84,8 +84,8 @@ const O2_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
                   <strong>Supports queries:</strong> Usually comes with query languages (SQL/NoSQL APIs).
                 </Li>
                 <Li>
-                  <strong>Concurrency & Transactions:</strong> Manages multiple users/threads with ACID guarantees (Atomicity, Consistency, Isolation,
-                  Durability).
+                  <strong>Concurrency & Transactions:</strong> Manages multiple users/threads with <strong>ACID</strong> guarantees (Atomicity,
+                  Consistency, Isolation, Durability).
                 </Li>
                 <Li>
                   <strong>Slower than memory:</strong> Disk I/O is slower than RAM access, though optimizations like caching exist.

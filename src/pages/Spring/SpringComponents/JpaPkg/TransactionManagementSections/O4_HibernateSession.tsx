@@ -95,7 +95,7 @@ const O4_HibernateSession = ({ anchor }: { anchor: string }) => {
                 </ULdisc>
               </Li>
               <Li>
-                So when you call <strong>userRepository.save(user)</strong>, Spring → JPA → Hibernate → Session → SQL.
+                So when you call <strong>userRepository.save(user)</strong>, Spring → JPA → Hibernate → Session → <strong>JDBC</strong> → SQL.
               </Li>
             </ULdisc>
           </article>
@@ -156,7 +156,10 @@ const O4_HibernateSession = ({ anchor }: { anchor: string }) => {
             </div>
             <ULdisc>
               <Li>
-                Repository → <strong>EntityManager</strong> → Hibernate <strong>Session</strong> → Database.
+                Repository → <strong>EntityManager</strong> → Hibernate <strong>Session</strong> → <strong>JDBC</strong> → Database.
+              </Li>
+              <Li>
+                So when you call <strong>userRepository.save(user)</strong>, Spring JPA → Hibernate Session → <strong>JDBC</strong> → SQL.
               </Li>
               <Li>
                 The Session is usually <strong>invisible to us</strong> because Spring manages it.

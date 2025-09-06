@@ -4,6 +4,7 @@ import O2_InMemoryVsDB from "./O2_InMemoryVsDB";
 import O3_SaveFlushCommit from "./O3_SaveFlushCommit";
 import O4_HibernateSession from "./O4_HibernateSession";
 import O1_IntroTxMngmt from "./O1_IntroTxMngmt";
+import O5_SpringTxMngmnt from "./O5_SpringTxMngmnt";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,12 +14,13 @@ const o1_IntroTxMngmt = "1. Intro TX Mangmnt";
 const o2_InMemoryVsDB = "2. Spring InMemory Vs DB";
 const o3_SaveFlushCommit = "3. Save, Flush, Commit";
 const o4_HibernateSession = "4. Hibernate Session";
+const o5_SpringTxMngmnt = "5. Spring Tx Management";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroTxMngmt, o2_InMemoryVsDB, o3_SaveFlushCommit, o4_HibernateSession];
+const anchorList: string[] = [o1_IntroTxMngmt, o2_InMemoryVsDB, o3_SaveFlushCommit, o4_HibernateSession, o5_SpringTxMngmnt];
 
 // ============================================
 // ============================================
@@ -75,6 +77,7 @@ const TransactionManagementMain = () => {
       <O2_InMemoryVsDB anchor={o2_InMemoryVsDB}></O2_InMemoryVsDB>
       <O3_SaveFlushCommit anchor={o3_SaveFlushCommit}></O3_SaveFlushCommit>
       <O4_HibernateSession anchor={o4_HibernateSession}></O4_HibernateSession>
+      <O5_SpringTxMngmnt anchor={o5_SpringTxMngmnt}></O5_SpringTxMngmnt>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
