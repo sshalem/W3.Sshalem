@@ -1,5 +1,5 @@
 import { Anchor, Answer, IMG, MainChildArea, Question } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, JavaHighlight, JsxHighlight, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import jpa_01 from "../../../../../assets/jpa_01.jpg";
@@ -26,7 +26,7 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
       </div>
       <section>
         <DivDoubleBorder>
-          UserEntity <SpanRed>w/o</SpanRed> Cascade
+          UserEntity <SpanRed>w/o</SpanRed> CascadeType.PERSIST
         </DivDoubleBorder>
         <article>
           <ULDecimal>
@@ -43,13 +43,14 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             <Li>Open Postman</Li>
             <Li>Select 02-Spring-JPA → oneToMany → Users API</Li>
             <Li>
-              send a PUT request of <SpanSky>addRoleUpdateUser</SpanSky>
+              send a POST request of <SpanSky>createUserWithRoles</SpanSky>
               <IMG img_name={jpa_01}></IMG>
             </Li>
             <Li>
-              This method updates the password of the user , and add new role to User. <br />
+              The Request I sent , Includes new User with 2 Roles. <br />
+              <JsxHighlight jsxCode={user_role_json}></JsxHighlight>
               <SpanRed>Note</SpanRed> - I return <SpanGreen>ENTITY</SpanGreen> NOT <SpanRed>DTO</SpanRed> ,let's see what happens.
-              <JavaHighlight javaCode={add_role_to_user}></JavaHighlight>
+              <JavaHighlight javaCode={create_user_with_roles}></JavaHighlight>
               controller code
               <JavaHighlight javaCode={controller_no_dto}></JavaHighlight>
             </Li>
@@ -60,17 +61,18 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
         <article className="my-8">let's examine the behabior</article>
         <ULdisc>
           <Li>
-            Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , only <strong>update</strong> to user executed, there is <SpanRed>no insert</SpanRed>{" "}
+            Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , only <strong>insert</strong> to user executed, there is <SpanRed>no insert</SpanRed>{" "}
             to role_tb, . <br />
-            Since there is no <strong>CASCADE PERSIST</strong> enables
+            Since there is no <strong>CASCADE PERSIST</strong>
             <JavaHighlight javaCode={hibernate_no_cascade}></JavaHighlight>
           </Li>
           <Li>
             DataBase - <SpanGreen>as Expected</SpanGreen> , only User updated , no Role added to user{" "}
           </Li>
           <Li>
-            Response from Controller - <SpanRed>Not Expected</SpanRed> Even though I use Fetch Lazy, when I return the <strong>UserEntity</strong> it
-            also retrun all roles for it. <br />I expected to have only <strong>UserEntity</strong> back to client in postman , and not User + Roles
+            Response from Controller - <SpanRed>Not Expected</SpanRed> Even though I use <strong>Fetch Lazy</strong>, when I return the{" "}
+            <strong>UserEntity</strong> it also retruns all roles for it. <br />I expect to have only <strong>UserEntity</strong> back to client in
+            postman , and not User + Roles
             <Question>
               <div className="text-lg font-semibold">Why this happens?</div>
             </Question>
@@ -105,14 +107,15 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             <Li>Open Postman</Li>
             <Li>Select 02-Spring-JPA → oneToMany → Users API</Li>
             <Li>
-              send a PUT request of <SpanSky>addRoleUpdateUser</SpanSky>
+              send a POST request of <SpanSky>createUserWithRoles</SpanSky>
               <IMG img_name={jpa_01}></IMG>
             </Li>
             <Li>
-              This method updates the password of the user , and add new role to User. <br />
+              The Request I sent , Includes new User with 2 Roles. <br />
+              <JsxHighlight jsxCode={user_role_json}></JsxHighlight>
               <SpanRed>Note</SpanRed> - Now I will return <SpanGreen>DTO</SpanGreen> ,w'll see that Only User DTO retrurns.
-              <JavaHighlight javaCode={add_role_to_user}></JavaHighlight>
-              controller code
+              <JavaHighlight javaCode={create_user_with_roles}></JavaHighlight>
+              controller code with DTO response
               <JavaHighlight javaCode={controller_with__dto}></JavaHighlight>
             </Li>
             <Li>Lets examine Hibernate SQL query and DataBase</Li>
@@ -122,25 +125,15 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
         <article className="my-8">let's examine the behavior</article>
         <ULdisc>
           <Li>
-            Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , 2 SQL queries for <strong>insert new role</strong> to role_tb and{" "}
-            <strong>update user</strong> . <br />
-            Since <strong>CASCADE PERSIST</strong> enabled, thus PERSIST action (SAVE) was perfomed on paretn and on Child.
+            Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , 3 SQL <strong>insert</strong> queries . <br />
+            Since <strong>CASCADE PERSIST</strong> enabled, thus PERSIST action (SAVE) was perfomed on parent and on Child.
             <JavaHighlight javaCode={hibernate_cascade_persist}></JavaHighlight>
           </Li>
           <Li>
-            DataBase - <SpanGreen>as Expected</SpanGreen> , only User updated , no Role added to user{" "}
+            DataBase - <SpanGreen>as Expected</SpanGreen> we see new row for user , and 2 new rows for roles
           </Li>
           <Li>
-            Response from Controller - <SpanRed>Not Expected</SpanRed> Even though I use Fetch Lazy, when I return the <strong>UserEntity</strong> it
-            also retrun all roles for it. <br />I expected to have only <strong>UserEntity</strong> back to client in postman , and not User + Roles
-            <Question>
-              <div className="text-lg font-semibold">Why this happens?</div>
-            </Question>
-            <Answer>
-              <Link to={"#3_1_DTOvsEntity"}>
-                <span className="text-blue-500">see section 3.1 DTO vs Entity resposne </span>
-              </Link>
-            </Answer>
+            Response from Controller - <SpanGreen>as Expected</SpanGreen> , I retrun DTO thus , only the User returned w/o it's roles.
           </Li>
         </ULdisc>
       </section>
@@ -154,42 +147,51 @@ const no_cascade = `	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orpha
 	@JsonManagedReference
 	private Set<RoleEntity> roles;`;
 
-const add_role_to_user = `	@Override
-	@Transactional
-	public UserEntity addRoleUpdateUser(long userPid, UserEntity userEntity) {
-		UserEntity _userDB = userRepository.findByPid(userPid);
-		if (_userDB == null)
-			throw new ResourceNotFoundException("Not found User with userPid = " + userPid);
-
-		_userDB.setPassword(userEntity.getPassword());
-		userEntity.getRoles().forEach(role -> {
-		     role.setPid(userPid);
-         _userDB.addRole(role);
-    });
-
-		return userRepository.save(_userDB);
+const create_user_with_roles = `	@Override
+	public UserEntity createUserWithRoles(UserEntity userEntity) {
+		LOGGER.info("method : createUserWithRoles(UserEntity userEntity)");
+        return userRepository.save(userEntity);
 	}`;
 
-const controller_no_dto = `	@PutMapping("/addRoleUpdateUser/{userPid}")
-	public ResponseEntity<?> addRoleUpdateUser(@RequestBody UserEntity userEntity, @PathVariable("userPid") long userPid) {
-		UserEntity returnedValue = userServiceImpl.addRoleUpdateUser(userPid, userEntity);
-		return new ResponseEntity<Object>(returnedValue, null, HttpStatus.CREATED);
+const controller_no_dto = `	@PostMapping("/createUserWithRoles")
+	public ResponseEntity<?> createUserWithRoles(@RequestBody UserEntity userEntity) {
+		return new ResponseEntity<Object>(userServiceImpl.createUserWithRoles(userEntity), null, HttpStatus.CREATED);
 	}`;
 
-const controller_with__dto = `	@PutMapping("/addRoleUpdateUser/{userPid}")
-	public ResponseEntity<?> addRoleUpdateUser(@RequestBody UserEntity userEntity, @PathVariable("userPid") long userPid) {
-		UserEntity updateUser = userServiceImpl.addRoleUpdateUser(userPid, userEntity);
+const controller_with__dto = `	@PostMapping("/createUserWithRoles")
+	public ResponseEntity<?> createUserWithRoles(@RequestBody UserEntity userEntity) {
 		UserDto returnedValue = new UserDto();
-		BeanUtils.copyProperties(updateUser, returnedValue);
+		UserEntity user = userServiceImpl.createUserWithRoles(userEntity);
+		BeanUtils.copyProperties(user,returnedValue);
 		return new ResponseEntity<Object>(returnedValue, null, HttpStatus.CREATED);
-	}`;
+	}
+`;
 
-const hibernate_no_cascade = `Hibernate: update users_tb set email=?, name=?, password=?, pid=? where id=?`;
+const hibernate_no_cascade = `Hibernate: insert into users_tb (email, name, password, pid) values (?, ?, ?, ?)`;
 
 //
 const with_cascade = `    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY, orphanRemoval = true)
     @JsonManagedReference
     private Set<RoleEntity> roles;`;
 
-const hibernate_cascade_persist = `Hibernate: insert into roles_tb (pid, role, user_id) values (?, ?, ?)
-Hibernate: update users_tb set email=?, name=?, password=?, pid=? where id=?`;
+const hibernate_cascade_persist = `Hibernate: insert into users_tb (email, name, password, pid) values (?, ?, ?, ?)
+Hibernate: insert into roles_tb (pid, role, user_id) values (?, ?, ?)
+Hibernate: insert into roles_tb (pid, role, user_id) values (?, ?, ?)
+`;
+
+const user_role_json = `{
+    "pid": 5555,
+    "name": "Ariel shalem",
+    "email": "ariel.shalem@gmail.com",
+    "password": "102030" ,
+    "roles": [
+        {            
+            "role": "CEO",
+            "pid": 5555
+        },
+        {           
+            "role": "SUPER-ADMIN",
+            "pid": 5555
+        }       
+    ]
+}`;

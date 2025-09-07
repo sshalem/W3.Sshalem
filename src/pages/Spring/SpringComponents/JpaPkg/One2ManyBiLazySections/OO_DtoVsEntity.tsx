@@ -1,5 +1,5 @@
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -9,14 +9,17 @@ const OO_DtovsEntity = ({ anchor }: { anchor: string }) => {
       <section>
         <Question>
           <div className="text-lg font-semibold">
-            Why with Fetch Lazy, when I retrun Parent Entity from Controller it also retruns it's children ?
+            Why with Fetch Lazy, when I return <SpanBlue>Parent Entity</SpanBlue> (Not DTO) from Controller, it also retruns it's children ?
           </div>
         </Question>
         <Answer>
           <ULdisc>
-            <Li>The problem is that serialization accesses the lazy collection, which triggers DB fetch.</Li>
             <Li>
-              The best practice is <SpanRed>not to return entities directly in REST APIs</SpanRed> — <SpanGreen>use DTOs</SpanGreen>.
+              The problem is that serialization accesses the lazy collection (calls the <strong>getter methods</strong> of{" "}
+              <strong>getRoles() </strong> ) , which triggers DB fetch.
+            </Li>
+            <Li>
+              The best practice is <SpanGreen>use DTOs</SpanGreen>. Don't return <SpanRed> entities directly in REST APIs</SpanRed>.
             </Li>
             <Li>
               Lazy loading in <strong>JPA/Hibernate</strong> means:
@@ -38,7 +41,8 @@ const OO_DtovsEntity = ({ anchor }: { anchor: string }) => {
               ✅ <SpanGreen>to conclude</SpanGreen>,
               <ULdisc>
                 <Li>
-                  <strong>Return DTOs</strong> . and best practice , retrun from the controller not from service layer.
+                  <strong>Return DTOs</strong> . And best practice , retrun from the <SpanGreen>controller</SpanGreen> not from{" "}
+                  <SpanRed>service layer</SpanRed>.
                 </Li>
                 <Li>
                   If you return Entities from the controller, the children will be serialized by Jackson, unless you suppress them{" "}
