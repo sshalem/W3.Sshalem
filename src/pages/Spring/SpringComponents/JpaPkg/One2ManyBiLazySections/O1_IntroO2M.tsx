@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
@@ -8,7 +9,16 @@ import ULdisc from "../../../../../components/ui/ULdisc";
 const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      Let's see few concepts before diving into <SpanSky>@OneToMany</SpanSky>
+      <p>
+        Let's see few concepts before diving into <SpanSky>@OneToMany</SpanSky>
+      </p>
+      <p>
+        for more comprehansive see{" "}
+        <Link to={"/spring/jpa/transaction-management"} className="tracking-wider text-blue-500">
+          Tansaction Management setions 1-5
+        </Link>
+      </p>
+
       <section>
         <DivDoubleBorder>
           In-memory (PersistContext) <SpanRed>vs</SpanRed> DataBase
