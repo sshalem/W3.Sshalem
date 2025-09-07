@@ -10,7 +10,8 @@ const O2_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
       {/*  */}
       <DivDoubleBorder>UserEntity - Parent Entity</DivDoubleBorder>
       ➡️ If <SpanRed>orphanRemoval = true</SpanRed>, this will issue a DELETE for that user in the DB. <br />
-      ➡️ If <SpanGreen>orphanRemoval = false</SpanGreen>, it will only break the relationship (set user_id to NULL if <SpanTeal>nullable</SpanTeal> ).
+      ➡️ If <SpanGreen>orphanRemoval = false</SpanGreen>, it will only break the relationship (Best practice , set user_id to NULL if{" "}
+      <SpanTeal>nullable</SpanTeal> ).
       <JavaHighlight javaCode={user_entity}></JavaHighlight>
       {/*  */}
       <DivDoubleBorder>RoleEntity - Child Entity</DivDoubleBorder>
@@ -33,7 +34,7 @@ public class UserEntity {
 	private String email;
 	private String password;
 	
-  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
   @JsonManagedReference   // ✅ Handles forward part of the relation
 	private Set<RoleEntity> roles = new HashSet<>();
 

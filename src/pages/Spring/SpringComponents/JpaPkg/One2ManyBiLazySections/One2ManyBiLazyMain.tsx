@@ -7,6 +7,7 @@ import O4_LazyCascadeMerge from "./O4_LazyCascadeMerge";
 import O5_LazyCascadeRemove from "./O5_LazyCascadeRemove";
 import O6_LazyCascadeRefresh from "./O6_LazyCascadeRefresh";
 import O7_LazyCascadeDetach from "./O7_LazyCascadeDetach";
+import OO_DtovsEntity from "./OO_DtovsEntity";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -19,6 +20,7 @@ const o4_LazyCascadeMerge = "4. CascadeTyep Merge (update)";
 const o5_LazyCascadeRemove = "5. CascadeType Remove (delete)";
 const o6_LazyCascadeRefresh = "6. CascadeType Refresh";
 const o7_LazyCascadeDetach = "7. CascadeType Detach";
+const oo_DtovsEntity = "3_1_ DTO vs Entity";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -28,6 +30,7 @@ const anchorList: string[] = [
   o1_IntroO2M,
   o2_SetupEntityO2M,
   o3_LazyCascadePersist,
+  oo_DtovsEntity,
   o4_LazyCascadeMerge,
   o5_LazyCascadeRemove,
   o6_LazyCascadeRefresh,
@@ -88,6 +91,7 @@ const One2ManyBiLazyMain = () => {
       <O1_IntroO2M anchor={o1_IntroO2M}></O1_IntroO2M>
       <O2_SetupEntityO2M anchor={o2_SetupEntityO2M}></O2_SetupEntityO2M>
       <O3_LazyCascadePersist anchor={o3_LazyCascadePersist}></O3_LazyCascadePersist>
+      <OO_DtovsEntity anchor={oo_DtovsEntity}></OO_DtovsEntity>
       <O4_LazyCascadeMerge anchor={o4_LazyCascadeMerge}></O4_LazyCascadeMerge>
       <O5_LazyCascadeRemove anchor={o5_LazyCascadeRemove}></O5_LazyCascadeRemove>
       <O6_LazyCascadeRefresh anchor={o6_LazyCascadeRefresh}></O6_LazyCascadeRefresh>
