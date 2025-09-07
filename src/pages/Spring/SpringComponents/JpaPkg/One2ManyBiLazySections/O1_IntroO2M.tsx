@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
@@ -49,104 +49,7 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
       </section>
       {/*  */}
       {/*  */}
-      <section>
-        <DivDoubleBorder>Cascade</DivDoubleBorder>
-        <article>
-          In <strong>JPA/Hibernate</strong>, when you use a <SpanSky>@OneToMany</SpanSky> relationship, the cascade attribute defines which operations
-          performed on the <strong>parent</strong> entity should be <strong>automatically propagated</strong> to its <strong>child</strong> entities.
-          <ULDecimal>
-            <Li>
-              <strong>CascadeType.PERSIST</strong> - When saving the parent, the children will also be saved automatically. Example:
-              entityManager.persist(parent); will save both parent and children.
-            </Li>
-            <Li>
-              <strong>CascadeType.MERGE</strong> - When updating the parent, changes to children will also be merged
-            </Li>
-            <Li>
-              <strong>CascadeType.REMOVE</strong> - When deleting the parent, the children will also be deleted.
-            </Li>
-            <Li>
-              <strong>CascadeType.REFRESH</strong> - Refreshing the parent also refreshes children from the database.
-            </Li>
-            <Li>
-              <strong>CascadeType.DETACH</strong> - Detaching the parent will also detach children from the persistence context.
-            </Li>
-            <Li>CascadeType.ALL Applies all of the above cascade operations.</Li>
-          </ULDecimal>
-        </article>
-      </section>
-      {/*  */}
-      {/*  */}
-      <section>
-        <DivDoubleBorder>save() , flush() , commit()</DivDoubleBorder>
-        <article>
-          <ul className="my-4 ml-8">
-            <Li>
-              <SpanGreen>save()</SpanGreen>
-              <ULdisc>
-                <Li>
-                  <strong>Purpose</strong>: Register a new or updated entity in the persistence context.
-                </Li>
-                <Li>
-                  <strong>Behavior</strong>:
-                  <ULdisc>
-                    <Li>The entity becomes managed.</Li>
-                    <Li>
-                      Hibernate tracks changes for <strong>dirty checking</strong>
-                    </Li>
-                    <Li>No SQL is guaranteed immediately; SQL may be delayed until flush or commit.</Li>
-                  </ULdisc>
-                </Li>
-                <Li>
-                  <strong>Usage</strong>
-                  <JavaHighlight javaCode={save_parent}></JavaHighlight>
-                </Li>
-              </ULdisc>
-            </Li>
 
-            <Li>
-              <SpanGreen>flush()</SpanGreen>
-              <ULdisc>
-                <Li>
-                  <strong>Purpose</strong> : Force Hibernate to synchronize the in-memory state with the database immediately.
-                </Li>
-                <Li>
-                  <strong>Behavior</strong>:
-                  <ULdisc>
-                    <Li>Executes INSERT, UPDATE, DELETE for all managed entities in the current persistence context.</Li>
-                    <Li>Does not commit the transaction — changes can still be rolled back.</Li>
-                  </ULdisc>
-                </Li>
-                <Li>
-                  <strong>Usage</strong>
-                  <JavaHighlight javaCode={flush_parent}></JavaHighlight>
-                </Li>
-              </ULdisc>
-            </Li>
-
-            <Li>
-              <SpanGreen>commit()</SpanGreen>
-              <ULdisc>
-                <Li>
-                  <strong>Purpose</strong> : Finalize the transaction.
-                </Li>
-                <Li>
-                  <strong>Behavior</strong>:
-                  <ULdisc>
-                    <Li>Automatically triggers a flush() if not done already.</Li>
-                    <Li>Makes all changes permanent in the database.</Li>
-                    <Li>After commit, changes cannot be rolled back.</Li>
-                  </ULdisc>
-                </Li>
-                <Li>
-                  <strong>Usage</strong>
-                  <JavaHighlight javaCode={commit_parent}></JavaHighlight>
-                </Li>
-              </ULdisc>
-            </Li>
-          </ul>
-        </article>
-      </section>
       {/*  */}
       {/*  */}
       <section>
@@ -213,20 +116,3 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
 };
 
 export default O1_IntroO2M;
-
-const save_parent = `Parent p = new Parent();
-p.setName("John");
-parentRepository.save(p);  // registered in persistence context , No SQL necessarily sent yet`;
-
-const flush_parent = `Parent p = new Parent();
-p.setName("John");
-parentRepository.save(p);  // in-memory
-parentRepository.flush();  // SQL INSERT executed now`;
-
-const commit_parent = `@Transactional
-public void demo() {
-    Parent p = new Parent();
-    p.setName("John");
-    parentRepository.save(p);  // in memory
-    // flush optional
-} // transaction commits here automatically`;
