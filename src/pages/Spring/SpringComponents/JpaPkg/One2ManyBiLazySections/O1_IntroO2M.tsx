@@ -28,8 +28,7 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
           performed on the <strong>parent</strong> entity should be <strong>automatically propagated</strong> to its <strong>child</strong> entities.
           <ULDecimal>
             <Li>
-              <strong>CascadeType.PERSIST</strong> - When saving the parent, the children will also be saved automatically. Example:
-              entityManager.persist(parent); will save both parent and children.
+              <strong>CascadeType.PERSIST</strong> - When saving the parent, the children will also be saved automatically.
             </Li>
             <Li>
               <strong>CascadeType.MERGE</strong> - When updating the parent, changes to children will also be merged

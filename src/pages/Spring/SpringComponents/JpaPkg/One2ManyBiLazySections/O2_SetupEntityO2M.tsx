@@ -63,7 +63,7 @@ public class RoleEntity {
 	private long pid;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id")
+	@JoinColumn(name = "user_id" ,nullable = true)
 	@JsonBackReference   // ✅ Prevents recursion
 	private UserEntity user;
 }`;
