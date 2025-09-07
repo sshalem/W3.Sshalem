@@ -25,7 +25,9 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
         </ULDecimal>
       </div>
       <section>
-        <DivDoubleBorder>UserEntity w/o Cascade</DivDoubleBorder>
+        <DivDoubleBorder>
+          UserEntity <SpanRed>w/o</SpanRed> Cascade
+        </DivDoubleBorder>
         <article>
           <ULDecimal>
             <Li>
@@ -48,6 +50,8 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
               This method updates the password of the user , and add new role to User. <br />
               <SpanRed>Note</SpanRed> - I return <SpanGreen>ENTITY</SpanGreen> NOT <SpanRed>DTO</SpanRed> ,let's see what happens.
               <JavaHighlight javaCode={add_role_to_user}></JavaHighlight>
+              controller code
+              <JavaHighlight javaCode={controller_no_dto}></JavaHighlight>
             </Li>
             <Li>Lets examine Hibernate SQL query and DataBase</Li>
           </ULDecimal>
@@ -60,6 +64,68 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             to role_tb, . <br />
             Since there is no <strong>CASCADE PERSIST</strong> enables
             <JavaHighlight javaCode={hibernate_no_cascade}></JavaHighlight>
+          </Li>
+          <Li>
+            DataBase - <SpanGreen>as Expected</SpanGreen> , only User updated , no Role added to user{" "}
+          </Li>
+          <Li>
+            Response from Controller - <SpanRed>Not Expected</SpanRed> Even though I use Fetch Lazy, when I return the <strong>UserEntity</strong> it
+            also retrun all roles for it. <br />I expected to have only <strong>UserEntity</strong> back to client in postman , and not User + Roles
+            <Question>
+              <div className="text-lg font-semibold">Why this happens?</div>
+            </Question>
+            <Answer>
+              <Link to={"#3_1_DTOvsEntity"}>
+                <span className="text-blue-500">see section 3.1 DTO vs Entity resposne </span>
+              </Link>
+            </Answer>
+          </Li>
+        </ULdisc>
+      </section>
+
+      {/*  */}
+      {/*  */}
+
+      <section>
+        <DivDoubleBorder>
+          UserEntity <SpanGreen>CascadeType.PERSIST</SpanGreen> Cascade
+        </DivDoubleBorder>
+        <article>
+          <ULDecimal>
+            <Li>
+              Setup UserEntity with <SpanSky>CascadeType.PERSIST</SpanSky>
+              <JavaHighlight javaCode={with_cascade}></JavaHighlight>
+            </Li>
+            <Li>
+              <Anchor
+                description="see Git Hub - OneToMany Bi-direc Lazy "
+                href="https://github.com/sshalem/Spring-Boot/tree/main/02-JPA/02-One2Many-Bi-Fetch-Lazy"
+              ></Anchor>
+            </Li>{" "}
+            <Li>Open Postman</Li>
+            <Li>Select 02-Spring-JPA → oneToMany → Users API</Li>
+            <Li>
+              send a PUT request of <SpanSky>addRoleUpdateUser</SpanSky>
+              <IMG img_name={jpa_01}></IMG>
+            </Li>
+            <Li>
+              This method updates the password of the user , and add new role to User. <br />
+              <SpanRed>Note</SpanRed> - Now I will return <SpanGreen>DTO</SpanGreen> ,w'll see that Only User DTO retrurns.
+              <JavaHighlight javaCode={add_role_to_user}></JavaHighlight>
+              controller code
+              <JavaHighlight javaCode={controller_with__dto}></JavaHighlight>
+            </Li>
+            <Li>Lets examine Hibernate SQL query and DataBase</Li>
+          </ULDecimal>
+        </article>
+
+        <article className="my-8">let's examine the behavior</article>
+        <ULdisc>
+          <Li>
+            Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , 2 SQL queries for <strong>insert new role</strong> to role_tb and{" "}
+            <strong>update user</strong> . <br />
+            Since <strong>CASCADE PERSIST</strong> enabled, thus PERSIST action (SAVE) was perfomed on paretn and on Child.
+            <JavaHighlight javaCode={hibernate_cascade_persist}></JavaHighlight>
           </Li>
           <Li>
             DataBase - <SpanGreen>as Expected</SpanGreen> , only User updated , no Role added to user{" "}
@@ -104,4 +170,26 @@ const add_role_to_user = `	@Override
 		return userRepository.save(_userDB);
 	}`;
 
+const controller_no_dto = `	@PutMapping("/addRoleUpdateUser/{userPid}")
+	public ResponseEntity<?> addRoleUpdateUser(@RequestBody UserEntity userEntity, @PathVariable("userPid") long userPid) {
+		UserEntity returnedValue = userServiceImpl.addRoleUpdateUser(userPid, userEntity);
+		return new ResponseEntity<Object>(returnedValue, null, HttpStatus.CREATED);
+	}`;
+
+const controller_with__dto = `	@PutMapping("/addRoleUpdateUser/{userPid}")
+	public ResponseEntity<?> addRoleUpdateUser(@RequestBody UserEntity userEntity, @PathVariable("userPid") long userPid) {
+		UserEntity updateUser = userServiceImpl.addRoleUpdateUser(userPid, userEntity);
+		UserDto returnedValue = new UserDto();
+		BeanUtils.copyProperties(updateUser, returnedValue);
+		return new ResponseEntity<Object>(returnedValue, null, HttpStatus.CREATED);
+	}`;
+
 const hibernate_no_cascade = `Hibernate: update users_tb set email=?, name=?, password=?, pid=? where id=?`;
+
+//
+const with_cascade = `    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonManagedReference
+    private Set<RoleEntity> roles;`;
+
+const hibernate_cascade_persist = `Hibernate: insert into roles_tb (pid, role, user_id) values (?, ?, ?)
+Hibernate: update users_tb set email=?, name=?, password=?, pid=? where id=?`;
