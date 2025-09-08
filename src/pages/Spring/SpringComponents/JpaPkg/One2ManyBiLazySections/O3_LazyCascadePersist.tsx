@@ -13,6 +13,9 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
         <strong>CascadeType.PERSIST</strong> - means save. When saving the parent, the children will also be saved automatically.
       </div>
       <div>
+        it only propagates when <SpanGreen>SQL insert</SpanGreen> queries are executed (<SpanRed>Not UPDATE</SpanRed> etc...)
+      </div>
+      <div>
         In the following sections , I will add each cascade type at a time. <br />I will examine the <strong>Persistent Context</strong> and{" "}
         <strong>DataBase</strong> with and w/o the cascade type.
         <ULDecimal>

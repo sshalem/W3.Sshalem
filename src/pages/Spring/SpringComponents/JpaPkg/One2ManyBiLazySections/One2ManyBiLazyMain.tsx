@@ -16,7 +16,7 @@ import OO_DtoVsEntity from "./OO_DtoVsEntity";
 const o1_IntroO2M = "1. Intro";
 const o2_SetupEntityO2M = "2. Setup Entities";
 const o3_LazyCascadePersist = "3. CascadeType Persist (save)";
-const o4_LazyCascadeMerge = "4. CascadeTyep Merge (update)";
+const o4_LazyCascadeMerge = "4. CascadeType Merge (update)";
 const o5_LazyCascadeRemove = "5. CascadeType Remove (delete)";
 const o6_LazyCascadeRefresh = "6. CascadeType Refresh";
 const o7_LazyCascadeDetach = "7. CascadeType Detach";
