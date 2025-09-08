@@ -5,8 +5,8 @@ import O1_IntroO2M from "./O1_IntroO2M";
 import O3_LazyCascadePersist from "./O3_LazyCascadePersist";
 import O4_LazyCascadeMerge from "./O4_LazyCascadeMerge";
 import O5_LazyCascadeRemove from "./O5_LazyCascadeRemove";
-import O6_LazyCascadeRefresh from "./O6_LazyCascadeRefresh";
-import O7_LazyCascadeDetach from "./O7_LazyCascadeDetach";
+import O6_LazyCascadeDetach from "./O6_LazyCascadeDetach";
+import O7_LazyCascadeRefresh from "./O7_LazyCascadeRefresh";
 import OO_DtoVsEntity from "./OO_DtoVsEntity";
 
 // ===========================================
@@ -18,8 +18,8 @@ const o2_SetupEntityO2M = "2. Setup Entities";
 const o3_LazyCascadePersist = "3. CascadeType Persist (save)";
 const o4_LazyCascadeMerge = "4. CascadeType Merge (update)";
 const o5_LazyCascadeRemove = "5. CascadeType Remove (delete)";
-const o6_LazyCascadeRefresh = "6. CascadeType Refresh";
-const o7_LazyCascadeDetach = "7. CascadeType Detach";
+const o6_LazyCascadeDetach = "6. CascadeType Detach";
+const o7_LazyCascadeRefresh = "7. CascadeType Refresh";
 const oo_DtovsEntity = "3_1_ DTO vs Entity";
 
 // ===========================================
@@ -33,8 +33,8 @@ const anchorList: string[] = [
   oo_DtovsEntity,
   o4_LazyCascadeMerge,
   o5_LazyCascadeRemove,
-  o6_LazyCascadeRefresh,
-  o7_LazyCascadeDetach,
+  o6_LazyCascadeDetach,
+  o7_LazyCascadeRefresh,
 ];
 
 // ============================================
@@ -94,8 +94,8 @@ const One2ManyBiLazyMain = () => {
       <OO_DtoVsEntity anchor={oo_DtovsEntity}></OO_DtoVsEntity>
       <O4_LazyCascadeMerge anchor={o4_LazyCascadeMerge}></O4_LazyCascadeMerge>
       <O5_LazyCascadeRemove anchor={o5_LazyCascadeRemove}></O5_LazyCascadeRemove>
-      <O6_LazyCascadeRefresh anchor={o6_LazyCascadeRefresh}></O6_LazyCascadeRefresh>
-      <O7_LazyCascadeDetach anchor={o7_LazyCascadeDetach}></O7_LazyCascadeDetach>
+      <O6_LazyCascadeDetach anchor={o6_LazyCascadeDetach}></O6_LazyCascadeDetach>
+      <O7_LazyCascadeRefresh anchor={o7_LazyCascadeRefresh}></O7_LazyCascadeRefresh>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

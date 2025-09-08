@@ -3,7 +3,7 @@ import { JavaHighlight, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O7_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
+const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -108,7 +108,7 @@ const O7_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O7_LazyCascadeDetach;
+export default O6_LazyCascadeDetach;
 
 const attached_entity = `Parent parent = em.find(Parent.class, 1L);
 parent.setName("new name"); 
