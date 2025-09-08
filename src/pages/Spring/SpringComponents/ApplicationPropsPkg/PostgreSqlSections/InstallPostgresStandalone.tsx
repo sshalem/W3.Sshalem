@@ -1,5 +1,4 @@
 import { BatchHighlight, SpanBlue } from "../../../../../components/Highlight";
-import psql_data_folder from "../../../../../assets/psql_data_folder.jpg";
 import batch_command from "../../../../../assets/batch_command.jpg";
 import start_postgresql_server from "../../../../../assets/start_postgresql_server.jpg";
 import stop_postgresql_server from "../../../../../assets/stop_postgresql_server.jpg";
