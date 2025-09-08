@@ -1,14 +1,26 @@
+import { SpanGreen, SpanRed } from "../Highlight";
+
 const TableCompareMerge = () => {
   const cascadeMergeComparison = [
     {
-      action: "Parent Modified, Child added or modified",
-      withCascadeMerge: "Parent and children Merges (Updates) ",
-      withoutCascadeMerge: "Only parent Merges (Updates)  ",
+      operation: "Parent update",
+      withCascadeMerge: "✅ Merged (Update) automatically",
+      withoutCascadeMerge: "✅ Merged (Update) automatically",
     },
     {
-      action: "Parent Modified, Child added or modified",
-      withCascadeMerge: "Saved automatically",
-      withoutCascadeMerge: "Only parent Merges (Updates) , (Unless explicitly Merging Child)",
+      operation: "Existing child update",
+      withCascadeMerge: "✅ Merged (Update) automatically",
+      withoutCascadeMerge: "❌ Ignored unless manually merge()",
+    },
+    {
+      operation: "New child added",
+      withCascadeMerge: "✅ Merged (Update) automatically",
+      withoutCascadeMerge: "❌ Must persist() manually",
+    },
+    {
+      operation: "Child removed (with orphanRemoval)",
+      withCascadeMerge: "✅ Merged (Update) automatically",
+      withoutCascadeMerge: "❌ Ignored unless manually removed",
     },
   ];
 
@@ -20,15 +32,19 @@ const TableCompareMerge = () => {
         <table className="min-w-full border-collapse">
           <thead className="bg-blue-500 text-lg text-white">
             <tr>
-              <th className="border border-gray-300 px-3 py-2 text-start font-medium">action</th>
-              <th className="border border-gray-300 px-3 py-2 text-start font-medium">with Cascade Merge</th>
-              <th className="border border-gray-300 px-3 py-2 text-start font-medium">without Cascade Merge</th>
+              <th className="border border-gray-300 px-3 py-2 text-start font-medium">Operation on Parent/Children</th>
+              <th className="border border-gray-300 px-3 py-2 text-start font-medium">
+                <SpanGreen>With</SpanGreen>CascadeType.MERGE
+              </th>
+              <th className="border border-gray-300 px-3 py-2 text-start font-medium">
+                <SpanRed>Without</SpanRed>CascadeType.MERGE
+              </th>
             </tr>
           </thead>
           <tbody>
             {cascadeMergeComparison.map((row, index) => (
               <tr key={index}>
-                <td className="border border-gray-300 px-6 py-3">{row.action}</td>
+                <td className="border border-gray-300 px-6 py-3">{row.operation}</td>
                 <td className="border border-gray-300 px-6 py-3">{row.withCascadeMerge}</td>
                 <td className="border border-gray-300 px-6 py-3">{row.withoutCascadeMerge}</td>
               </tr>
