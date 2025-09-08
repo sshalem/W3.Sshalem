@@ -7,7 +7,7 @@ import O4_LazyCascadeMerge from "./O4_LazyCascadeMerge";
 import O5_LazyCascadeRemove from "./O5_LazyCascadeRemove";
 import O6_LazyCascadeRefresh from "./O6_LazyCascadeRefresh";
 import O7_LazyCascadeDetach from "./O7_LazyCascadeDetach";
-import OO_DtovsEntity from "./OO_DtovsEntity";
+import OO_DtoVsEntity from "./OO_DtoVsEntity";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -91,7 +91,7 @@ const One2ManyBiLazyMain = () => {
       <O1_IntroO2M anchor={o1_IntroO2M}></O1_IntroO2M>
       <O2_SetupEntityO2M anchor={o2_SetupEntityO2M}></O2_SetupEntityO2M>
       <O3_LazyCascadePersist anchor={o3_LazyCascadePersist}></O3_LazyCascadePersist>
-      <OO_DtovsEntity anchor={oo_DtovsEntity}></OO_DtovsEntity>
+      <OO_DtoVsEntity anchor={oo_DtovsEntity}></OO_DtoVsEntity>
       <O4_LazyCascadeMerge anchor={o4_LazyCascadeMerge}></O4_LazyCascadeMerge>
       <O5_LazyCascadeRemove anchor={o5_LazyCascadeRemove}></O5_LazyCascadeRemove>
       <O6_LazyCascadeRefresh anchor={o6_LazyCascadeRefresh}></O6_LazyCascadeRefresh>

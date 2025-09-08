@@ -3,7 +3,7 @@ import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highligh
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const OO_DtovsEntity = ({ anchor }: { anchor: string }) => {
+const OO_DtoVsEntity = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -57,4 +57,4 @@ const OO_DtovsEntity = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default OO_DtovsEntity;
+export default OO_DtoVsEntity;
