@@ -11,7 +11,7 @@ import O5_SpringTxMngmnt from "./O5_SpringTxMngmnt";
 // ===========================================
 
 const o1_IntroTxMngmt = "1. Intro TX Mangmnt";
-const o2_InMemoryVsDB = "2. Spring InMemory Vs DB";
+const o2_InMemoryVsDB = "2. InMemory Vs Persistent Context Vs DB";
 const o3_SaveFlushCommit = "3. Save, Flush, Commit";
 const o4_HibernateSession = "4. Hibernate Session";
 const o5_SpringTxMngmnt = "5. Spring Tx Management";
