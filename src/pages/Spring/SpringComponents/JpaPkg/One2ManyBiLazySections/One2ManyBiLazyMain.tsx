@@ -8,6 +8,7 @@ import O5_LazyCascadeRemove from "./O5_LazyCascadeRemove";
 import O6_LazyCascadeDetach from "./O6_LazyCascadeDetach";
 import O7_LazyCascadeRefresh from "./O7_LazyCascadeRefresh";
 import OO_DtoVsEntity from "./OO_DtoVsEntity";
+import O8_OrphanRemoval from "./O8_OrphanRemoval";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -20,6 +21,7 @@ const o4_LazyCascadeMerge = "4. CascadeType Merge (update)";
 const o5_LazyCascadeRemove = "5. CascadeType Remove (delete)";
 const o6_LazyCascadeDetach = "6. CascadeType Detach";
 const o7_LazyCascadeRefresh = "7. CascadeType Refresh";
+const o8_OrphanRemoval = "8. Orphan Removal";
 const oo_DtovsEntity = "3_1_ DTO vs Entity";
 
 // ===========================================
@@ -35,6 +37,7 @@ const anchorList: string[] = [
   o5_LazyCascadeRemove,
   o6_LazyCascadeDetach,
   o7_LazyCascadeRefresh,
+  o8_OrphanRemoval,
 ];
 
 // ============================================
@@ -96,6 +99,7 @@ const One2ManyBiLazyMain = () => {
       <O5_LazyCascadeRemove anchor={o5_LazyCascadeRemove}></O5_LazyCascadeRemove>
       <O6_LazyCascadeDetach anchor={o6_LazyCascadeDetach}></O6_LazyCascadeDetach>
       <O7_LazyCascadeRefresh anchor={o7_LazyCascadeRefresh}></O7_LazyCascadeRefresh>
+      <O8_OrphanRemoval anchor={o8_OrphanRemoval}></O8_OrphanRemoval>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
