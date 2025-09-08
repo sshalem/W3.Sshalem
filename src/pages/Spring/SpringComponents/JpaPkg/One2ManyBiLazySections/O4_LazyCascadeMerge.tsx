@@ -42,9 +42,8 @@ const O4_LazyCascadeMerge = ({ anchor }: { anchor: string }) => {
         <span className="text-lg font-semibold">❌ What You Won’t See in the Database Automatically</span>
         <ULdisc>
           <Li>
-            Changes to <SpanRed>child entities will NOT be persisted or merged</SpanRed> unless you <strong>explicitly</strong> call
-            <Span>entityManager.merge(child)</Span> or <Span>entityManager.persist(child)</Span> <strong>yourself</strong> (This is why we add CASCADE
-            MERGE ).
+            Changes to child entities <strong>will NOT be persisted or merged</strong> unless you <strong>explicitly</strong> call{" "}
+            <strong>entityManager.merge(child)</strong> or <strong>entityManager.persist(child)</strong> yourself (This is why we add CASCADE MERGE ).
           </Li>
           <Li>
             The <SpanGreen>parent update will be saved</SpanGreen>, but the <SpanRed>child changes will be ignored</SpanRed> unless manually handled.
