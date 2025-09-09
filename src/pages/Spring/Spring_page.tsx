@@ -8,6 +8,10 @@ import DropDownJpa from "./DropSpringPage/DropDownJpa";
 import DropDownRest from "./DropSpringPage/DropDownRest";
 import DropDownIDE from "./DropSpringPage/DropDownIDE";
 import DropDownInterviewQuestions from "./DropSpringPage/DropDownInterviewQuestions";
+import DropDownCaching from "./DropSpringPage/DropDownCaching";
+import DropDownSecurity from "./DropSpringPage/DropDownSecurity";
+import DropDownAop from "./DropSpringPage/DropDownAop";
+import DropDownExceptionHandling from "./DropSpringPage/DropDownExceptionHandling";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,6 +47,10 @@ const Spring_page = () => {
             <DropDownLogging />
             <DropDownJpa />
             <DropDownRest />
+            <DropDownExceptionHandling />
+            <DropDownSecurity />
+            <DropDownCaching />
+            <DropDownAop />
             <DropDownInterviewQuestions />
           </div>
         </article>

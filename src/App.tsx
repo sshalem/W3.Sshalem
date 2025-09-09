@@ -121,6 +121,16 @@ import {
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
 } from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/intex";
+import { CaffeineMain, EhCacheMain, HazelcastMain, InfinispanMain, RedisMain, SimpleDefaultMain } from "./pages/Spring/SpringComponents/CachingPkg";
+import { JwtMain, OAuth2Main } from "./pages/Spring/SpringComponents/SecurityPkg";
+import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/AopPkg";
+import {
+  ConfigMsgControllerMain,
+  ConfigMsgPropertiesMain,
+  CustomAtControllerAdviceMain,
+  CustomErrMsgMain,
+  RuntimeMain,
+} from "./pages/Spring/SpringComponents/ExceptionsPkg";
 
 const router = createBrowserRouter(
   [
@@ -204,11 +214,40 @@ const router = createBrowserRouter(
             { path: "spring-doc", element: <SpringDoc /> },
             { path: "swagger", element: <Swagger /> },
             { path: "open-AI", element: <OpenAI /> },
-            { path: "exception-handling", element: <ExceptionHandling /> },
+            {
+              path: "exception-handling",
+              element: <ExceptionHandling />,
+              children: [
+                { path: "runtime", element: <RuntimeMain /> },
+                { path: "config-msg-app-props", element: <ConfigMsgPropertiesMain /> },
+                { path: "config-msg-at-controller", element: <ConfigMsgControllerMain /> },
+                { path: "custom-error-msg", element: <CustomErrMsgMain /> },
+                { path: "custom-error-msg-controller-advice", element: <CustomAtControllerAdviceMain /> },
+              ],
+            },
             { path: "transaction-management", element: <TransactionManagement /> },
-            { path: "caching", element: <Caching /> },
-            { path: "aop", element: <Aop /> },
-            { path: "spring-security", element: <SpringSecurity /> },
+            {
+              path: "caching",
+              element: <Caching />,
+              children: [
+                { path: "simple-default", element: <SimpleDefaultMain /> },
+                { path: "caffeine", element: <CaffeineMain /> },
+                { path: "ehCache", element: <EhCacheMain /> },
+                { path: "redis", element: <RedisMain /> },
+                { path: "hazelcast", element: <HazelcastMain /> },
+                { path: "infinispan", element: <InfinispanMain /> },
+              ],
+            },
+            { path: "aop", element: <Aop />, children: [{ path: "before-advice", element: <BeforeAdviceMain /> }] },
+
+            {
+              path: "security",
+              element: <SpringSecurity />,
+              children: [
+                { path: "jwt", element: <JwtMain /> },
+                { path: "oauth2", element: <OAuth2Main /> },
+              ],
+            },
             {
               path: "interview-questions",
               element: <InterviewQuestions />,
