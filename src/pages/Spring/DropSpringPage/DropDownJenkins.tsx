@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const DropDownJenkins = () => {
   const [showList, setShowList] = useState<boolean>(false);
@@ -41,7 +41,8 @@ const DropDownJenkins = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/* <SideDropdownLink sideDropDownNavName="Architecture" internalLink="/spring/junit/architecture" /> */}
+        <SideDropdownLink sideDropDownNavName="CI/CD" internalLink="/spring/jenkins/ci-cd" />
+        <SideDropdownLink sideDropDownNavName="Jenkins Server Install" internalLink="/spring/jenkins/server-install" />
       </div>
     </section>
   );

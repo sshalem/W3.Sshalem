@@ -29,6 +29,7 @@ import {
   ExceptionHandling,
   Ide,
   InterviewQuestions,
+  Jenkins,
   JUnit,
   Logging,
   Rest,
@@ -133,6 +134,7 @@ import {
 } from "./pages/Spring/SpringComponents/ExceptionsPkg";
 import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/SpringIOPkg";
 import { ArchitectureMain } from "./pages/Spring/SpringComponents/JUnitPkg";
+import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/JenkinsPkg";
 
 const router = createBrowserRouter(
   [
@@ -263,6 +265,14 @@ const router = createBrowserRouter(
               children: [
                 { path: "architecture", element: <ArchitectureMain /> },
                 { path: "Excel", element: <ExcelMain /> },
+              ],
+            },
+            {
+              path: "jenkins",
+              element: <Jenkins />,
+              children: [
+                { path: "ci-cd", element: <CICDMain /> },
+                { path: "server-install", element: <JenkinsServerMain /> },
               ],
             },
             {

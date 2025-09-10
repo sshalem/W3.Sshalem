@@ -11,4 +11,5 @@ export { default as Aop } from "./AopPkg/Aop";
 export { default as SpringSecurity } from "./SecurityPkg/SpringSecurity";
 export { default as SpringIO } from "./SpringIOPkg/SpringIO";
 export { default as JUnit } from "./JUnitPkg/JUnit";
+export { default as Jenkins } from "./JenkinsPkg/Jenkins";
 export { default as InterviewQuestions } from "./InterviewQuestionsPkg/InterviewQuestions";
