@@ -12,6 +12,9 @@ import DropDownCaching from "./DropSpringPage/DropDownCaching";
 import DropDownSecurity from "./DropSpringPage/DropDownSecurity";
 import DropDownAop from "./DropSpringPage/DropDownAop";
 import DropDownExceptionHandling from "./DropSpringPage/DropDownExceptionHandling";
+import DropDownSpringIO from "./DropSpringPage/DropDownSpringIO";
+import DropDownJUnit from "./DropSpringPage/DropDownJUnit";
+import DropDownJenkins from "./DropSpringPage/DropDownJenkins";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -51,6 +54,9 @@ const Spring_page = () => {
             <DropDownSecurity />
             <DropDownCaching />
             <DropDownAop />
+            <DropDownSpringIO />
+            <DropDownJUnit />
+            <DropDownJenkins />
             <DropDownInterviewQuestions />
           </div>
         </article>

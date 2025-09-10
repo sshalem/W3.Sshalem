@@ -24,20 +24,21 @@ import {
 
 import {
   Aop,
+  ApplicationProperties,
   Caching,
   ExceptionHandling,
   Ide,
-  OpenAI,
+  InterviewQuestions,
+  JUnit,
+  Logging,
   Rest,
-  SpringDoc,
   SpringHome,
+  SpringIO,
   SpringSecurity,
-  Swagger,
   TransactionManagement,
 } from "./pages/Spring/SpringComponents";
 
 import {
-  ApplicationProperties,
   DBeaverMain,
   DBInitMain,
   H2Main,
@@ -57,7 +58,7 @@ import {
   PaginationSortingMain,
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/JpaPkg";
-import { Logging, LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
+import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
 import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
@@ -113,14 +114,13 @@ import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanCom
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 // import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
-import { SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/RestApiPkg";
-import InterviewQuestions from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/InterviewQuestions";
+import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 import {
   JavaInUseMain,
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/intex";
+} from "./pages/Spring/SpringComponents/InterviewQuestionsPkg";
 import { CaffeineMain, EhCacheMain, HazelcastMain, InfinispanMain, RedisMain, SimpleDefaultMain } from "./pages/Spring/SpringComponents/CachingPkg";
 import { JwtMain, OAuth2Main } from "./pages/Spring/SpringComponents/SecurityPkg";
 import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/AopPkg";
@@ -131,6 +131,8 @@ import {
   CustomErrMsgMain,
   RuntimeMain,
 } from "./pages/Spring/SpringComponents/ExceptionsPkg";
+import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/SpringIOPkg";
+import { ArchitectureMain } from "./pages/Spring/SpringComponents/JUnitPkg";
 
 const router = createBrowserRouter(
   [
@@ -209,12 +211,10 @@ const router = createBrowserRouter(
                 { path: "stream-data", element: <StreamDataMain /> },
                 { path: "sse", element: <SseMain /> },
                 { path: "websocket", element: <WebSocketMain /> },
+                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
                 { path: "stream-large-response", element: <StreamLargeResponseMain /> },
               ],
             },
-            { path: "spring-doc", element: <SpringDoc /> },
-            { path: "swagger", element: <Swagger /> },
-            { path: "open-AI", element: <OpenAI /> },
             {
               path: "exception-handling",
               element: <ExceptionHandling />,
@@ -247,6 +247,22 @@ const router = createBrowserRouter(
               children: [
                 { path: "jwt", element: <JwtMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
+              ],
+            },
+            {
+              path: "io",
+              element: <SpringIO />,
+              children: [
+                { path: "file-upload", element: <FileUploadMain /> },
+                { path: "Excel", element: <ExcelMain /> },
+              ],
+            },
+            {
+              path: "junit",
+              element: <JUnit />,
+              children: [
+                { path: "architecture", element: <ArchitectureMain /> },
+                { path: "Excel", element: <ExcelMain /> },
               ],
             },
             {

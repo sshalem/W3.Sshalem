@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownRest = () => {
+const DropDownSpringIO = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownRest = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/rest")) {
+    if (location.pathname.includes("spring/io")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,21 +34,18 @@ const DropDownRest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" topicName="RestAPI" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/io" topicName="Spring IO" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
-        <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />
-        <SideDropdownLink sideDropDownNavName="Web Socket" internalLink="/spring/rest/websocket" />
-        <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
-        <SideDropdownLink sideDropDownNavName="Stream Large Response" internalLink="/spring/rest/stream-large-response" />
+        <SideDropdownLink sideDropDownNavName="File Upload" internalLink="/spring/io/file-upload" />
+        <SideDropdownLink sideDropDownNavName="Excel" internalLink="/spring/io/excel" />
       </div>
     </section>
   );
 };
 
-export default DropDownRest;
+export default DropDownSpringIO;
