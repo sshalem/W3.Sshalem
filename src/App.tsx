@@ -113,7 +113,7 @@ import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanCom
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
 // import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
-import { SseMain, StreamDataMain, StreamLargeResponseMain } from "./pages/Spring/SpringComponents/RestApiPkg";
+import { SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/RestApiPkg";
 import InterviewQuestions from "./pages/Spring/SpringComponents/InterviewQuestionsPkg/InterviewQuestions";
 import {
   JavaInUseMain,
@@ -208,6 +208,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "stream-data", element: <StreamDataMain /> },
                 { path: "sse", element: <SseMain /> },
+                { path: "websocket", element: <WebSocketMain /> },
                 { path: "stream-large-response", element: <StreamLargeResponseMain /> },
               ],
             },

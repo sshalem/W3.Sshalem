@@ -18,7 +18,6 @@ const DropDownRest = () => {
   };
 
   useEffect(() => {
-    // if (location.pathname.substring(8).includes("rest")) {
     if (location.pathname.includes("spring/rest")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
@@ -44,6 +43,7 @@ const DropDownRest = () => {
       >
         <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
         <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />
+        <SideDropdownLink sideDropDownNavName="Web Socket" internalLink="/spring/rest/websocket" />
         <SideDropdownLink sideDropDownNavName="Stream Large Response" internalLink="/spring/rest/stream-large-response" />
       </div>
     </section>
