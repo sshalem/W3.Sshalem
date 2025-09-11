@@ -57,6 +57,7 @@ import {
   MappingLibsMain,
   One2ManyBiLazyMain,
   PaginationSortingMain,
+  StoredProceduresFunctionsMain,
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/JpaPkg";
 import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
@@ -204,6 +205,7 @@ const router = createBrowserRouter(
                 { path: "pagination-sorting", element: <PaginationSortingMain /> },
                 { path: "many2many-bi-lazy", element: <Many2ManyBiLazyMain /> },
                 { path: "one2many-bi-lazy", element: <One2ManyBiLazyMain /> },
+                { path: "stored-procedures-functions", element: <StoredProceduresFunctionsMain /> },
               ],
             },
             {

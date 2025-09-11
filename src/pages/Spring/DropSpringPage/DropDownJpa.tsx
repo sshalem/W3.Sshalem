@@ -48,6 +48,7 @@ const DropDownJpa = () => {
         <SideDropdownLink sideDropDownNavName="Entity validation" internalLink="/spring/jpa/entity-validation" />
         <SideDropdownLink sideDropDownNavName="Transaction Management" internalLink="/spring/jpa/transaction-management" />
         <SideDropdownLink sideDropDownNavName="JPQL" internalLink="/spring/jpa/jpql" />
+        <SideDropdownLink sideDropDownNavName="Stored Procedures & Functions" internalLink="/spring/jpa/stored-procedures-functions" />
         <SideDropdownLink sideDropDownNavName="Auditing" internalLink="/spring/jpa/auditing" />
         <SideDropdownLink sideDropDownNavName="Mapping Libs" internalLink="/spring/jpa/mapping-libs" />
       </div>
