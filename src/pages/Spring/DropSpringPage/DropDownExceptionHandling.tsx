@@ -46,12 +46,12 @@ const DropDownExceptionHandling = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Runtime Handle" internalLink="/spring/exception-handling/runtime" />
-        <SideDropdownLink sideDropDownNavName="Config msg at App.props" internalLink="/spring/exception-handling/config-msg-app-props" />
-        <SideDropdownLink sideDropDownNavName="Config msg at controller" internalLink="/spring/exception-handling/config-msg-at-controller" />
-        <SideDropdownLink sideDropDownNavName="Custom err msg" internalLink="/spring/exception-handling/custom-error-msg" />
+        <SideDropdownLink sideDropDownNavName="1. Runtime Handle" internalLink="/spring/exception-handling/runtime" />
+        <SideDropdownLink sideDropDownNavName="2. Config msg at App.props" internalLink="/spring/exception-handling/config-msg-app-props" />
+        <SideDropdownLink sideDropDownNavName="3. Config msg at controller" internalLink="/spring/exception-handling/config-msg-at-controller" />
+        <SideDropdownLink sideDropDownNavName="4. Custom err msg" internalLink="/spring/exception-handling/custom-error-msg" />
         <SideDropdownLink
-          sideDropDownNavName="Custom err msg ctrl.advice"
+          sideDropDownNavName="5. Custom err msg ctrl.advice"
           internalLink="/spring/exception-handling/custom-error-msg-controller-advice"
         />
       </div>

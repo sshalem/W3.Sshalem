@@ -1,17 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O1_IntroConfigMsgProps from "./O1_IntroConfigMsgProps";
+import O2_TestConfigMsgProps from "./O2_TestConfigMsgProps";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_IntroConfigMsgProps = "1. Intro Config Msg Props";
+const o2_TestConfigMsgProps = "2. Config Msg Props";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_IntroConfigMsgProps, o2_TestConfigMsgProps];
 
 // ============================================
 // ============================================
@@ -64,8 +67,8 @@ const ConfigMsgPropertiesMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_IntroConfigMsgProps anchor={o1_IntroConfigMsgProps}></O1_IntroConfigMsgProps>
+      <O2_TestConfigMsgProps anchor={o2_TestConfigMsgProps}></O2_TestConfigMsgProps>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
