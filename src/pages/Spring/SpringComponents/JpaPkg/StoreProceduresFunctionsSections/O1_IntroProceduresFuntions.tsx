@@ -5,7 +5,7 @@ const O1_IntroProceduresFuntions = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <div>
         <Anchor
-          description="Spring boot Stored Procedures & Functions"
+          description="JAVA Techie - Spring boot Stored Procedures & Functions"
           href="https://www.youtube.com/watch?v=oWbKtmtPGpg&ab_channel=JavaTechie"
         ></Anchor>
       </div>
