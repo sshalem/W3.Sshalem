@@ -1,20 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroConfigMsgProps from "./O1_IntroConfigMsgProps";
-import O2_TestConfigMsgProps from "./O2_TestConfigMsgProps";
+import O3_TestConfigMsgProps from "./O3_TestConfigMsgProps";
+import O2_CodeMsgProperties from "./O2_CodeMsgProperties";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_IntroConfigMsgProps = "1. Intro Config Msg Props";
-const o2_TestConfigMsgProps = "2. Config Msg Props";
+const o2_CodeMsgProperties = "2. Code snippet";
+const o3_TestConfigMsgProps = "3. Test Config Msg Props";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroConfigMsgProps, o2_TestConfigMsgProps];
+const anchorList: string[] = [o1_IntroConfigMsgProps, o2_CodeMsgProperties, o3_TestConfigMsgProps];
 
 // ============================================
 // ============================================
@@ -68,7 +70,8 @@ const ConfigMsgPropertiesMain = () => {
       />
       {/* End Contents */}
       <O1_IntroConfigMsgProps anchor={o1_IntroConfigMsgProps}></O1_IntroConfigMsgProps>
-      <O2_TestConfigMsgProps anchor={o2_TestConfigMsgProps}></O2_TestConfigMsgProps>
+      <O2_CodeMsgProperties anchor={o2_CodeMsgProperties}></O2_CodeMsgProperties>
+      <O3_TestConfigMsgProps anchor={o3_TestConfigMsgProps}></O3_TestConfigMsgProps>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

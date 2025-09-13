@@ -1,18 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_Introduction from "./O1_Introduction";
+import O2_InstallKafka from "./O2_InstallKafka";
+import O4_KafkaMessgaeOrdering from "../KafkaMsgOrderingSections/O1_KafkaMessgaeOrdering";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_Introduction = "1. Introduction";
+const o2_InstallKafka = "2. Install Kafka";
+const o4_KafkaMessgaeOrdering = "4. Messgae Ordering";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Introduction];
+const anchorList: string[] = [o1_Introduction, o2_InstallKafka, o4_KafkaMessgaeOrdering];
 
 // ============================================
 // ============================================
@@ -66,6 +70,8 @@ const KafkaIntroMain = () => {
       />
       {/* End Contents */}
       <O1_Introduction anchor={o1_Introduction} />
+      <O2_InstallKafka anchor={o2_InstallKafka}></O2_InstallKafka>
+      <O4_KafkaMessgaeOrdering anchor={o4_KafkaMessgaeOrdering}></O4_KafkaMessgaeOrdering>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

@@ -36,11 +36,11 @@ export default O3_TestRuntime;
 
 const exception_message_format = `{
     "timestamp": "",
-    "status": 500, - thats HTTP code
-    "error": "Internal Server Error",
-    "trace": "trace logging as shown in our backend server ",
-    "message": "error message that server retruns ",
-    "path": "/customer/karin - this is the urk path"
+    "status": ""
+    "error": "",
+    "trace": "",
+    "message": "",
+    "path": ""
 }`;
 
 const postman = `{

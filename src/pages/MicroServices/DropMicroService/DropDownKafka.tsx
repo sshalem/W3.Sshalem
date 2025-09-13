@@ -42,6 +42,7 @@ const DropDownKafka = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Kafka Intro" internalLink="/microservices/kafka/intro" />
+        <SideDropdownLink sideDropDownNavName="Kafka Message Ordering" internalLink="/microservices/kafka/message-ordering" />
       </div>
     </section>
   );

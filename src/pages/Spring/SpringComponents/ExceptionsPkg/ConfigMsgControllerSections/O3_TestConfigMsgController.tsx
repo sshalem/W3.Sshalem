@@ -3,7 +3,7 @@ import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Hig
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O2_TestConfigMsgProps = ({ anchor }: { anchor: string }) => {
+const O3_TestConfigMsgController = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -21,20 +21,15 @@ const O2_TestConfigMsgProps = ({ anchor }: { anchor: string }) => {
       </section>
 
       <section>
-        We can see that the message is more clear w/o the <SpanGreen>stacktrace</SpanGreen> (I <SpanRed>disable</SpanRed> it in the{" "}
-        <strong>propereties</strong> file ,set it to <SpanRed>never</SpanRed> )<JavaHighlight javaCode={postman}></JavaHighlight>
+        We can see that I got only the messsage of the exception , handled by the catch block. But, what if I want to have same pattern message as
+        before , sent in the ResponseEntity ? For that, see section 4 , how I make a Class will all relevant fields , and return it as A
+        ResponseEntity.
+        <JavaHighlight javaCode={postman}></JavaHighlight>
       </section>
     </MainChildArea>
   );
 };
 
-export default O2_TestConfigMsgProps;
+export default O3_TestConfigMsgController;
 
-const postman = `{
-    "timestamp": "2025-09-11T09:17:56.839+00:00",
-    "status": 500,
-    "error": "Internal Server Error",
-    "exception": "com.hem.exception.NameAlreadyExistException",
-    "message": "Name karin already exist",
-    "path": "/customer/karin"
-}`;
+const postman = `Name karin already exist`;

@@ -61,7 +61,7 @@ import {
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/JpaPkg";
 import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
-import { Docker, Eureka, Kafka, KafkaIntroMain, MicroServiceHome, RabbitMQ, RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents";
+import { Docker, Eureka, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
 import {
@@ -132,10 +132,13 @@ import {
   CustomAtControllerAdviceMain,
   CustomErrMsgMain,
   RuntimeMain,
+  TimestampConfigMain,
 } from "./pages/Spring/SpringComponents/ExceptionsPkg";
 import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/SpringIOPkg";
 import { ArchitectureMain } from "./pages/Spring/SpringComponents/JUnitPkg";
 import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/JenkinsPkg";
+import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/KafkaPkg";
+import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/RabbitMQPkg";
 
 const router = createBrowserRouter(
   [
@@ -228,6 +231,7 @@ const router = createBrowserRouter(
                 { path: "config-msg-at-controller", element: <ConfigMsgControllerMain /> },
                 { path: "custom-error-msg", element: <CustomErrMsgMain /> },
                 { path: "custom-error-msg-controller-advice", element: <CustomAtControllerAdviceMain /> },
+                { path: "timestamp-error-config", element: <TimestampConfigMain /> },
               ],
             },
             { path: "transaction-management", element: <TransactionManagement /> },
@@ -306,7 +310,10 @@ const router = createBrowserRouter(
             {
               path: "kafka",
               element: <Kafka />,
-              children: [{ path: "intro", element: <KafkaIntroMain /> }],
+              children: [
+                { path: "intro", element: <KafkaIntroMain /> },
+                { path: "message-ordering", element: <KafkaMsgOrderingMain /> },
+              ],
             },
             {
               path: "rabbitmq",
