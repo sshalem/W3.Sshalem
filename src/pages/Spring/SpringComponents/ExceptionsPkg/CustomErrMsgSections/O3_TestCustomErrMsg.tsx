@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
