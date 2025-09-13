@@ -1,17 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O1_IntroCustomErrMsg from "./O1_IntroCustomErrMsg";
+import O2_CodeCustomErrMsg from "./O2_CodeCustomErrMsg";
+import O3_TestCustomErrMsg from "./O3_TestCustomErrMsg";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_IntroCustomErrMsg = "1. Intro";
+const o2_CodeCustomErrMsg = "2. Code Snippet";
+const o3_TestCustomErrMsg = "3. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_IntroCustomErrMsg, o2_CodeCustomErrMsg, o3_TestCustomErrMsg];
 
 // ============================================
 // ============================================
@@ -65,7 +70,9 @@ const CustomErrMsgMain = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_IntroCustomErrMsg anchor={o1_IntroCustomErrMsg}></O1_IntroCustomErrMsg>
+      <O2_CodeCustomErrMsg anchor={o2_CodeCustomErrMsg}></O2_CodeCustomErrMsg>
+      <O3_TestCustomErrMsg anchor={o3_TestCustomErrMsg}></O3_TestCustomErrMsg>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

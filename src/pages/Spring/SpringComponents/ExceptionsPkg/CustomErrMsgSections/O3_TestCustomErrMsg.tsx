@@ -1,9 +1,9 @@
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O3_TestConfigMsgController = ({ anchor }: { anchor: string }) => {
+const O3_TestCustomErrMsg = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -21,15 +21,22 @@ const O3_TestConfigMsgController = ({ anchor }: { anchor: string }) => {
       </section>
 
       <section>
-        We can see that I got only the messsage of the exception , handled by the catch block. But, what if I want to have same pattern message as
-        before , sent in the ResponseEntity ? For that, see section 4 , how I make a Class will all relevant fields , and return it as A
-        ResponseEntity.
+        We can see that the message is with the Message Class fields. <br />
+        But, the Code ini COntroller is to long. <br />
+        For that, I will Implenment in section 5, <SpanGreen>ControllerAdvice</SpanGreen>
         <JavaHighlight javaCode={postman}></JavaHighlight>
       </section>
     </MainChildArea>
   );
 };
 
-export default O3_TestConfigMsgController;
+export default O3_TestCustomErrMsg;
 
-const postman = `Name karin already exist`;
+const postman = `{
+    "timestamp": "2025-09-13T22:08:35.104+00:00",
+    "statusCode": 500,
+    "error": "Internal Server Error",
+    "exception": "com.chem.exception.NameAlreadyExistException",
+    "message": "Name karin already exist",
+    "uriDescription": "uri=/customer/karin"
+}`;

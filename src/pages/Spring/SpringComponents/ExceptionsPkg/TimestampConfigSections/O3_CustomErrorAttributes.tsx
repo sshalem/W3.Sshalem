@@ -1,7 +1,7 @@
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 
-const O2_CustomErrorAttributes = ({ anchor }: { anchor: string }) => {
+const O3_CustomErrorAttributes = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -13,7 +13,7 @@ const O2_CustomErrorAttributes = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_CustomErrorAttributes;
+export default O3_CustomErrorAttributes;
 
 const code = `import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;

@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O3_GlobalJacksonConfig = ({ anchor }: { anchor: string }) => {
+const O2_GlobalJacksonConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
@@ -26,7 +26,7 @@ const O3_GlobalJacksonConfig = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_GlobalJacksonConfig;
+export default O2_GlobalJacksonConfig;
 
 const code = `# Set default timezone for Jackson
 spring.jackson.time-zone=Asia/Jerusalem

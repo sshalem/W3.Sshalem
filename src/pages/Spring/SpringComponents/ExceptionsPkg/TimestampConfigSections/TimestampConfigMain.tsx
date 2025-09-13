@@ -1,24 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroTimestamp from "./O1_IntroTimestamp";
-import O2_CustomErrorAttributes from "./O2_CustomErrorAttributes";
 import O4_ControllerAdvice from "./O4_ControllerAdvice";
-import O3_GlobalJacksonConfig from "./O3_GlobalJacksonConfig";
+import O2_GlobalJacksonConfig from "./O2_GlobalJacksonConfig";
+import O3_CustomErrorAttributes from "./O3_CustomErrorAttributes";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_IntroTimestamp = "1. Intro Timestamp";
-const o2_CustomErrorAttributes = "2. Custom ErrorAttributes";
-const o3_GlobalJacksonConfig = "3. Global Jackson Config";
+const o2_GlobalJacksonConfig = "2. Global Jackson Config";
+const o3_CustomErrorAttributes = "3. Custom ErrorAttributes";
 const o4_ControllerAdvice = "4. ControllerAdvice";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroTimestamp, o2_CustomErrorAttributes, o3_GlobalJacksonConfig, o4_ControllerAdvice];
+const anchorList: string[] = [o1_IntroTimestamp, o2_GlobalJacksonConfig, o3_CustomErrorAttributes, o4_ControllerAdvice];
 
 // ============================================
 // ============================================
@@ -73,8 +73,8 @@ const TimestampConfigMain = () => {
       {/* End Contents */}
 
       <O1_IntroTimestamp anchor={o1_IntroTimestamp}></O1_IntroTimestamp>
-      <O2_CustomErrorAttributes anchor={o2_CustomErrorAttributes}></O2_CustomErrorAttributes>
-      <O3_GlobalJacksonConfig anchor={o3_GlobalJacksonConfig}></O3_GlobalJacksonConfig>
+      <O2_GlobalJacksonConfig anchor={o2_GlobalJacksonConfig}></O2_GlobalJacksonConfig>
+      <O3_CustomErrorAttributes anchor={o3_CustomErrorAttributes}></O3_CustomErrorAttributes>
       <O4_ControllerAdvice anchor={o4_ControllerAdvice}></O4_ControllerAdvice>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
