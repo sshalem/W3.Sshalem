@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_SetupEntitiesM2M from "./O1_SetupEntitiesM2M";
+import O1_SetupEntitiesM2M from "./O2_SetupEntitiesM2M";
 
 // ===========================================
 // ==     content menu (title name)         ==
