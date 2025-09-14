@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
-import { SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 
