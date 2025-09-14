@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroCustomCtrlAdvice from "./O1_IntroCustomCtrlAdvice";
-import O2_CodeCustomCtrlAdvice from "./O2_CodeCustomCtrlAdvice";
-import O3_TestCustomCtrlAdvice from "./O3_TestCustomCtrlAdvice";
+import O1_IntroCustomCtrlAdvice from "./O1_IntroCustomCtrlAdviceProd";
+import O2_CodeCustomCtrlAdvice from "./O2_CodeCustomCtrlAdviceProd";
+import O3_TestCustomCtrlAdvice from "./O3_TestCustomCtrlAdviceProd";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -21,7 +21,7 @@ const anchorList: string[] = [o1_IntroCustomCtrlAdvice, o2_CodeCustomCtrlAdvice,
 // ============================================
 // ============================================
 
-const CustomCtrlAdviceProdMain = () => {
+const CustomAtControllerAdviceMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -78,4 +78,4 @@ const CustomCtrlAdviceProdMain = () => {
   );
 };
 
-export default CustomCtrlAdviceProdMain;
+export default CustomAtControllerAdviceMain;

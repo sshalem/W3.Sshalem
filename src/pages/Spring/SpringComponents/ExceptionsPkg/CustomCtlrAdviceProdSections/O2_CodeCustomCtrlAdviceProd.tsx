@@ -1,9 +1,9 @@
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O2_CodeCustomErrMsg = ({ anchor }: { anchor: string }) => {
+const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       Code implementation
@@ -36,21 +36,13 @@ const O2_CodeCustomErrMsg = ({ anchor }: { anchor: string }) => {
         <JavaHighlight javaCode={service}></JavaHighlight>
         <DivDoubleBorder>Controller</DivDoubleBorder>
         In controller , I changed the code to return my custom message , instead of returing only the error meassge of the thrown exception.
-        <br />
-        <div className="my-4">
-          <SpanRed>Note</SpanRed>
-        </div>
-        <div className="ml-8">
-          No message will be displayed in spring console , since error is inside try/catch block , and the catch block does NOT throw another
-          exception.
-        </div>
         <JavaHighlight javaCode={controller}></JavaHighlight>
       </section>
     </MainChildArea>
   );
 };
 
-export default O2_CodeCustomErrMsg;
+export default O2_CodeCustomCtrlAdviceProd;
 
 const application_properties = `# We don't need to config`;
 
