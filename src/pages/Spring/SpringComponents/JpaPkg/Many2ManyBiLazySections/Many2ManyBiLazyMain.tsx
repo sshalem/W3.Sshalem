@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_SetupEntitiesM2M from "./O2_SetupEntitiesM2M";
+import O1_IntroM2M from "./O1_IntroM2M";
+import O2_SetupEntitiesM2M from "./O2_SetupEntitiesM2M";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_SetupEntitiesM2M = "1. Setup Entities";
+const o1_IntroM2M = "1. Intro Many2Many";
+const o2_SetupEntitiesM2M = "2. Setup Entities";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_SetupEntitiesM2M];
+const anchorList: string[] = [o1_IntroM2M, o2_SetupEntitiesM2M];
 
 // ============================================
 // ============================================
@@ -66,7 +68,8 @@ const Many2ManyBiLazyMain = () => {
       />
       {/* End Contents */}
 
-      <O1_SetupEntitiesM2M anchor={o1_SetupEntitiesM2M}></O1_SetupEntitiesM2M>
+      <O1_IntroM2M anchor={o1_IntroM2M}></O1_IntroM2M>
+      <O2_SetupEntitiesM2M anchor={o2_SetupEntitiesM2M}></O2_SetupEntitiesM2M>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
