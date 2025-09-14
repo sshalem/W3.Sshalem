@@ -22,8 +22,16 @@ const O3_TestCustomCtrlAdvice = ({ anchor }: { anchor: string }) => {
 
       <section>
         We can see that the message is with the Message Class fields. <br />
-        But, the Code ini COntroller is to long. <br />
-        For that, I will Implenment in section 5, <SpanGreen>ControllerAdvice</SpanGreen>
+        In section 6 , I will Implenment the production code snippet with some differences.
+        <ULdisc>
+          <Li>
+            I will use <SpanGreen>@RestControllerAdvice</SpanGreen>
+          </Li>
+          <Li>
+            I will create a HashMap with all relevant fields I wnat to send in response (Instead of creating class
+            <strong>ExceptionErrorMEssage</strong> )
+          </Li>
+        </ULdisc>
         <JavaHighlight javaCode={postman}></JavaHighlight>
       </section>
     </MainChildArea>

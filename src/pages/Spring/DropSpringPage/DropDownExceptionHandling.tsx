@@ -54,7 +54,9 @@ const DropDownExceptionHandling = () => {
           sideDropDownNavName="5. Custom err msg ctrl.advice"
           internalLink="/spring/exception-handling/custom-error-msg-controller-advice"
         />
-        <SideDropdownLink sideDropDownNavName="6. Timestamp error config" internalLink="/spring/exception-handling/timestamp-error-config" />
+        <SideDropdownLink sideDropDownNavName="6. (Prod) @RestCtlAdvc" internalLink="/spring/exception-handling/custom-rest-controller-advice" />
+        <SideDropdownLink sideDropDownNavName="7. Timestamp error config" internalLink="/spring/exception-handling/timestamp-error-config" />
+        {/*  */}
       </div>
     </section>
   );

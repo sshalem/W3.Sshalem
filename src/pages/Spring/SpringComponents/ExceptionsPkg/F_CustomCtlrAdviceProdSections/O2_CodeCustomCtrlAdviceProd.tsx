@@ -1,7 +1,5 @@
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
 
 const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,23 +12,16 @@ const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
         ></GitHubLiAnchor>
       </GitHub>
       <section>
-        <div>I added 2 files</div>
-        <ULdisc>
-          <Li>
-            <SpanSky>ENUM</SpanSky> - to describe the Error message
-          </Li>
-          <Li>
-            <SpanSky>Message class</SpanSky> - with fields <strong>timestamp, , statusCode, error, exception, message, uriDescription; </strong>
-          </Li>
-        </ULdisc>
         <DivDoubleBorder>application.properties</DivDoubleBorder>
         <ApplicationPropertiesHighlight propertiesCode={application_properties}></ApplicationPropertiesHighlight>
         <DivDoubleBorder>ENUM</DivDoubleBorder>
         <JavaHighlight javaCode={enum_code}></JavaHighlight>
-        <DivDoubleBorder>Message class</DivDoubleBorder>
-        <JavaHighlight javaCode={message_class}></JavaHighlight>
+        {/* <DivDoubleBorder>Message class</DivDoubleBorder>
+        <JavaHighlight javaCode={message_class}></JavaHighlight> */}
         <DivDoubleBorder>Exception</DivDoubleBorder>
         <JavaHighlight javaCode={exception}></JavaHighlight>
+        <DivDoubleBorder>@RestControllerAdvice</DivDoubleBorder>
+        <JavaHighlight javaCode={rest_controller_advice}></JavaHighlight>
         <DivDoubleBorder>Service</DivDoubleBorder>
         <JavaHighlight javaCode={service}></JavaHighlight>
         <DivDoubleBorder>Controller</DivDoubleBorder>
@@ -67,26 +58,6 @@ const enum_code = `public enum ErrorMessages {
 	}
 }`;
 
-const message_class = `package com.chem.exception;
-
-import java.util.Date;
-
-public class ExceptionErrorMessage {
-
-	private Date timestamp;
-	private int statusCode;
-	private String error;
-	private String exception;
-	private String message;
-	private String uriDescription;
-
-	public ExceptionErrorMessage() {
-		super();
-	}
-
-	// Getters/Setters
-}`;
-
 const exception = `public class NameAlreadyExistException extends RuntimeException {
 	private static final long serialVersionUID = -6209521422884301225L;
 
@@ -95,18 +66,56 @@ const exception = `public class NameAlreadyExistException extends RuntimeExcepti
 	}
 }`;
 
-const service = `import com.hre.exception.NameAlreadyExistException;
+const rest_controller_advice = `@RestControllerAdvice
+public class AppExceptionsHandler {
 
-@Component
+    private String getCurrentTimestamp() {
+        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Jerusalem")); // or systemDefault()
+        return now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss z"));
+    }
+
+    @ExceptionHandler(value = {ResourceNotFoundException.class})
+    public ResponseEntity<Object> handleUserServiceException(ResourceNotFoundException ex, WebRequest request) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", getCurrentTimestamp());
+        response.put("statusCode", HttpStatus.NOT_FOUND.value());
+        response.put("error", HttpStatus.valueOf(HttpStatus.NOT_FOUND.value()).getReasonPhrase());
+        response.put("exception", ResourceNotFoundException.class.getName());
+        response.put("message", ex.getMessage());
+        response.put("uriDescription", request.getDescription(false));
+        return new ResponseEntity<>(response, new HttpHeaders(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(value = {Exception.class})
+    public ResponseEntity<Object> handleOtherExceptions(Exception ex, WebRequest request) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", getCurrentTimestamp());
+        response.put("statusCode", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        response.put("error", HttpStatus.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()).getReasonPhrase());
+        response.put("exception", ex.getClass().getCanonicalName());
+        response.put("message", ex.getMessage());
+        response.put("uriDescription", request.getDescription(false));
+        return new ResponseEntity<>(response, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+}`;
+
+const service = `@Component
 public class CustomerService {
 
-	private final String NAME = "karin";
+    public final String NAME = "unknown";
 
-	public String testMethod(String name) {
-		if (name.equals(this.NAME))
-			throw new NameAlreadyExistException("Name " + this.NAME + " already exist");
-		return name;
-	}
+    public String getName(String name) {
+        if (!name.equals(this.NAME))
+            throw new ResourceNotFoundException(ErrorMessagesEnum.NO_RECORD_FOUND.getErrorMessage());
+        return name;
+    }
+
+    public UserEntity createUser(UserEntity userEntity) {
+        if (userEntity.getFirstName().equals("karin")) {
+            throw new IllegalArgumentException(ErrorMessagesEnum.INTERNAL_SERVER_ERROR.getErrorMessage());
+        }
+        return userEntity;
+    }
 }`;
 
 const controller = `@RestController
@@ -116,19 +125,18 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    /**
+     * Since I have AppExceptionsHandler who handles all Exceptions for my Rest API
+     * Thus code doesn't need to have a try/catch clause
+     */
+    
     @GetMapping("/{name}")
-    public ResponseEntity<Object> getName(@PathVariable("name") String name, WebRequest request) {
-        try {
-            return new ResponseEntity<Object>(customerService.getName(name), new HttpHeaders(), HttpStatus.OK);
-        } catch (Exception em) {
-            ExceptionErrorMessage errorMessage = new ExceptionErrorMessage();
-            errorMessage.setTimestamp(new Date());
-            errorMessage.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            errorMessage.setError(HttpStatus.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()).getReasonPhrase());
-            errorMessage.setException(NameAlreadyExistException.class.getName());
-            errorMessage.setMessage(em.getMessage());
-            errorMessage.setUriDescription(request.getDescription(false));
-            return new ResponseEntity<Object>(errorMessage, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<Object> getName(@PathVariable("name") String name) {
+        return new ResponseEntity<Object>(customerService.getName(name), new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Object> createUser(@RequestBody UserEntity userEntity) {
+        return new ResponseEntity<Object>(customerService.createUser(userEntity), new HttpHeaders(), HttpStatus.OK);
     }
 }`;
