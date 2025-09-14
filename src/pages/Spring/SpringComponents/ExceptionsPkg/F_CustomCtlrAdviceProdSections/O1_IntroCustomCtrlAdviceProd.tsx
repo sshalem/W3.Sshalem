@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanGreen, SpanSky } from "../../../../../components/Highlight";
+import { SpanGreen, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
