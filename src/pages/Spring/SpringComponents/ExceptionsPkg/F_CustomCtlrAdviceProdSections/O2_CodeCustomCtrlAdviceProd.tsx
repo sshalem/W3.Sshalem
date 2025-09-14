@@ -9,8 +9,8 @@ const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
       Code implementation
       <GitHub>
         <GitHubLiAnchor
-          description="Config Exception Message via applicationProperties"
-          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/B_config_ExceptionMessage_applicationProperties"
+          description="Custom Exception @RestControllerAdvice (Production code)"
+          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/F_RestControllerAdviceCustom"
         ></GitHubLiAnchor>
       </GitHub>
       <section>
@@ -22,7 +22,6 @@ const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanSky>Message class</SpanSky> - with fields <strong>timestamp, , statusCode, error, exception, message, uriDescription; </strong>
           </Li>
-          <Li></Li>
         </ULdisc>
         <DivDoubleBorder>application.properties</DivDoubleBorder>
         <ApplicationPropertiesHighlight propertiesCode={application_properties}></ApplicationPropertiesHighlight>

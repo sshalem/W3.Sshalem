@@ -17,8 +17,8 @@ const O2_CodeCustomCtrlAdvice = ({ anchor }: { anchor: string }) => {
       Code implementation
       <GitHub>
         <GitHubLiAnchor
-          description="Config Exception Message via applicationProperties"
-          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/B_config_ExceptionMessage_applicationProperties"
+          description="Custom Exception Message @ControllerAdvice"
+          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/E_ControllerAdvice_Custom_ExceptionErrorMessage"
         ></GitHubLiAnchor>
       </GitHub>
       <section>

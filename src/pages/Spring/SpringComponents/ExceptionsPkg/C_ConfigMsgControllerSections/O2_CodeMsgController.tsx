@@ -7,8 +7,8 @@ const O2_CodeMsgController = ({ anchor }: { anchor: string }) => {
       Code implementation
       <GitHub>
         <GitHubLiAnchor
-          description="Config Exception Message via applicationProperties"
-          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/B_config_ExceptionMessage_applicationProperties"
+          description="Config Exception Message at Controller"
+          gitLink="https://github.com/sshalem/Spring-Boot/tree/main/04-Exception-Handling/C_config_ExceptionMessage_AtController"
         ></GitHubLiAnchor>
       </GitHub>
       <section>
