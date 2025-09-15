@@ -1,1 +1,1 @@
-export { default as ArchitectureMain } from "./ArchtectureSections/ArchitectureMain";
+export { default as JunitArchitectureMain } from "./JunitArchitectureSections/JunitArchitectureMain";

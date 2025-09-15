@@ -138,7 +138,7 @@ import {
 } from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
 
 import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S10_SpringIOPkg";
-import { ArchitectureMain } from "./pages/Spring/SpringComponents/S11_JUnitPkg";
+import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S11_JUnitPkg";
 import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S12_JenkinsPkg";
 import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/KafkaPkg";
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/RabbitMQPkg";
@@ -170,6 +170,20 @@ import {
   StoredProceduresFunctionsMain,
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
+import Architecture from "./pages/MicroServices/MicroServiceComponents/ArchitecturePkg/Architecture";
+import {
+  APIGatewayMain,
+  ConfigManagementMain,
+  DataManagementMain,
+  DistributedTracingMonitoringMain,
+  InterServiceCommMain,
+  LoadBalancingMain,
+  ResilienceFaultToleranceMain,
+  ServiceDiscoveryMain,
+} from "./pages/MicroServices/MicroServiceComponents/ArchitecturePkg";
+import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg/SecurityMicroServ";
+import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg";
+import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
 
 const router = createBrowserRouter(
   [
@@ -300,8 +314,8 @@ const router = createBrowserRouter(
               path: "junit",
               element: <JUnit />,
               children: [
-                { path: "architecture", element: <ArchitectureMain /> },
-                { path: "Excel", element: <ExcelMain /> },
+                { path: "architecture", element: <JunitArchitectureMain /> },
+                // { path: "", element: < /> },
               ],
             },
             {
@@ -331,6 +345,20 @@ const router = createBrowserRouter(
           element: <MicroServices_page />,
           children: [
             { index: true, element: <MicroServiceHome /> },
+            {
+              path: "architecture",
+              element: <Architecture />,
+              children: [
+                { path: "service-discovery", element: <ServiceDiscoveryMain /> },
+                { path: "api-gateway", element: <APIGatewayMain /> },
+                { path: "config-management", element: <ConfigManagementMain /> },
+                { path: "inter-service-communication", element: <InterServiceCommMain /> },
+                { path: "load-balancing", element: <LoadBalancingMain /> },
+                { path: "resilience-fault-tolerance", element: <ResilienceFaultToleranceMain /> },
+                { path: "distributed-tracing", element: <DistributedTracingMonitoringMain /> },
+                { path: "data-management", element: <DataManagementMain /> },
+              ],
+            },
             { path: "docker", element: <Docker /> },
             {
               path: "eureka",
@@ -352,6 +380,14 @@ const router = createBrowserRouter(
               path: "rabbitmq",
               element: <RabbitMQ />,
               children: [{ path: "intro", element: <RabbitMQIntroMain /> }],
+            },
+            {
+              path: "security-microservice",
+              element: <SecurityMicroServ />,
+              children: [
+                { path: "intro", element: <IntroMicroServSecurityMain /> },
+                { path: "project", element: <ProjectWithSecurityMain /> },
+              ],
             },
           ],
         },

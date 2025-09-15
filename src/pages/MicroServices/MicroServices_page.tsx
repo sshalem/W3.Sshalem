@@ -6,6 +6,8 @@ import DropDownEureka from "./DropMicroService/DropDownEureka";
 import DropDownKafka from "./DropMicroService/DropDownKafka";
 import DropDownRabbitMQ from "./DropMicroService/DropDownRabbitMQ";
 import DropDownDocker from "./DropMicroService/DropDownDocker";
+import DropDownMicroServSecurity from "./DropMicroService/DropDownMicroServSecurity";
+import DropDownArchitecture from "./DropMicroService/DropDownArchitecture";
 
 const MicroServices_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -36,12 +38,13 @@ const MicroServices_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-
             <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
+            <DropDownArchitecture />
             <DropDownDocker />
             <DropDownKafka />
             <DropDownRabbitMQ />
             <DropDownEureka />
+            <DropDownMicroServSecurity />
           </div>
         </article>
       )}

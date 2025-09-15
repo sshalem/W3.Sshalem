@@ -1,22 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O1_WhaIsLoadBalance from "./O1_WhaIsLoadBalance";
 
-// ===========================================
-// ==     content menu (title name)         ==
-// ===========================================
+// =============================================================================================================
 
-const xxx_intro = "xxx Intro";
+const o1_WhaIsLoadBalance = "1. What Is Load Balancing";
 
-// ===========================================
-// == Update anchorList with  content menu  ==
-// ===========================================
+// =============================================================================================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_WhaIsLoadBalance];
 
-// ============================================
-// ============================================
+// =============================================================================================================
 
-const ArchitectureMain = () => {
+const LoadBalancingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -65,11 +61,11 @@ const ArchitectureMain = () => {
       />
       {/* End Contents */}
 
-      {/* <XXXIntro anchor={xxx_intro} /> */}
+      <O1_WhaIsLoadBalance anchor={o1_WhaIsLoadBalance} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ArchitectureMain;
+export default LoadBalancingMain;
