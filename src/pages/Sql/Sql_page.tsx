@@ -3,6 +3,7 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownBasicConepts from "./DropSql/DropDownBasicConepts";
+import DropDownOperatorStatements from "./DropSql/DropDownOperatorStatements";
 
 const Sql_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -35,6 +36,7 @@ const Sql_page = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="SQL Home" internalLink="/sql" />
             <DropDownBasicConepts />
+            <DropDownOperatorStatements />
           </div>
         </article>
       )}

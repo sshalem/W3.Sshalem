@@ -30,13 +30,13 @@ import {
   Ide,
   InterviewQuestions,
   Jenkins,
+  Jpa,
   JUnit,
   Logging,
   Rest,
   SpringHome,
   SpringIO,
   SpringSecurity,
-  TransactionManagement,
 } from "./pages/Spring/SpringComponents";
 
 import {
@@ -47,20 +47,9 @@ import {
   MySqlMain,
   PostgresqlMain,
   ProfileMain,
-} from "./pages/Spring/SpringComponents/ApplicationPropsPkg";
-import {
-  AuditingMain,
-  EntityValidationMain,
-  Jpa,
-  JpqlMain,
-  Many2ManyBiLazyMain,
-  MappingLibsMain,
-  One2ManyBiLazyMain,
-  PaginationSortingMain,
-  StoredProceduresFunctionsMain,
-  TransactionManagementMain,
-} from "./pages/Spring/SpringComponents/JpaPkg";
-import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/LoggingPkg";
+} from "./pages/Spring/SpringComponents/S2_ApplicationPropsPkg";
+
+import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/S3_LoggingPkg";
 import { Docker, Eureka, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
@@ -109,23 +98,35 @@ import {
   DeployNetlifyMain,
   DeployRenderMain,
 } from "./pages/DevOps/DevOpsComponents";
+
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
-import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/IdePkg";
-// import { MappingLibs, MapStructMain, ModelMapperMain } from "./pages/Spring/SpringComponents/MappingLibsPkg";
-import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/RestApiPkg";
+import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
+import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/S5_RestApiPkg";
+
 import {
+  GenZCareerMain,
   JavaInUseMain,
+  JavaTechieMain,
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/InterviewQuestionsPkg";
-import { CaffeineMain, EhCacheMain, HazelcastMain, InfinispanMain, RedisMain, SimpleDefaultMain } from "./pages/Spring/SpringComponents/CachingPkg";
-import { JwtMain, OAuth2Main } from "./pages/Spring/SpringComponents/SecurityPkg";
-import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/AopPkg";
+} from "./pages/Spring/SpringComponents/S13_InterviewQuestionsPkg";
+
+import {
+  CaffeineMain,
+  EhCacheMain,
+  HazelcastMain,
+  InfinispanMain,
+  RedisMain,
+  SimpleDefaultMain,
+} from "./pages/Spring/SpringComponents/S8_CachingPkg";
+
+import { JwtMain, OAuth2Main } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
+import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
 import {
   ConfigMsgControllerMain,
   ConfigMsgPropertiesMain,
@@ -134,12 +135,41 @@ import {
   CustomErrMsgMain,
   RuntimeMain,
   TimestampConfigMain,
-} from "./pages/Spring/SpringComponents/ExceptionsPkg";
-import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/SpringIOPkg";
-import { ArchitectureMain } from "./pages/Spring/SpringComponents/JUnitPkg";
-import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/JenkinsPkg";
+} from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
+
+import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S10_SpringIOPkg";
+import { ArchitectureMain } from "./pages/Spring/SpringComponents/S11_JUnitPkg";
+import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S12_JenkinsPkg";
 import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/KafkaPkg";
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/RabbitMQPkg";
+import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
+import {
+  AliasMain,
+  BetweenMain,
+  DistinctMain,
+  InMain,
+  IsNullMain,
+  LikeMain,
+  LimitMain,
+  LogicalOperatorsMain,
+  OrderByMain,
+  RegexMain,
+  SelectMain,
+  UseMain,
+  WhereClauseMain,
+} from "./pages/Sql/SqlComponents/OperatorStatementsPkg";
+
+import {
+  AuditingMain,
+  EntityValidationMain,
+  JpqlMain,
+  Many2ManyBiLazyMain,
+  MappingLibsMain,
+  One2ManyBiLazyMain,
+  PaginationSortingMain,
+  StoredProceduresFunctionsMain,
+  TransactionManagementMain,
+} from "./pages/Spring/SpringComponents/S4_JpaPkg";
 
 const router = createBrowserRouter(
   [
@@ -236,7 +266,6 @@ const router = createBrowserRouter(
                 { path: "timestamp-error-config", element: <TimestampConfigMain /> },
               ],
             },
-            { path: "transaction-management", element: <TransactionManagement /> },
             {
               path: "caching",
               element: <Caching />,
@@ -291,6 +320,8 @@ const router = createBrowserRouter(
                 { path: "loop-stream-parallel-stream", element: <LoopStreamParallelStreamMain /> },
                 { path: "multithread-block-queue", element: <MultiThreadBlockQueueMain /> },
                 { path: "java-in-use", element: <JavaInUseMain /> },
+                { path: "java-techie", element: <JavaTechieMain /> },
+                { path: "gen-z-career", element: <GenZCareerMain /> },
               ],
             },
           ],
@@ -368,6 +399,25 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <SqlHome /> },
             { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
+            {
+              path: "operator-statements",
+              element: <OperatorStatements />,
+              children: [
+                { path: "use", element: <UseMain /> },
+                { path: "select", element: <SelectMain /> },
+                { path: "alias", element: <AliasMain /> },
+                { path: "distinct", element: <DistinctMain /> },
+                { path: "where", element: <WhereClauseMain /> },
+                { path: "logical-operator", element: <LogicalOperatorsMain /> },
+                { path: "in", element: <InMain /> },
+                { path: "between", element: <BetweenMain /> },
+                { path: "like", element: <LikeMain /> },
+                { path: "regex", element: <RegexMain /> },
+                { path: "is-null", element: <IsNullMain /> },
+                { path: "order-by", element: <OrderByMain /> },
+                { path: "limit", element: <LimitMain /> },
+              ],
+            },
           ],
         },
         {

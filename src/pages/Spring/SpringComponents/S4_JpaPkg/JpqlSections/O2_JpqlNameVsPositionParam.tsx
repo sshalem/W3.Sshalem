@@ -1,6 +1,6 @@
 import { MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
-import ULdisc from "./../../../../../components/ui/ULdisc";
+import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O2_JpqlNameVsPositionParam = ({ anchor }: { anchor: string }) => {
   return (

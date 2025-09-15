@@ -3,3 +3,5 @@ export { default as StreamRecordsInstantlyMain } from "./StreamRecordsInstantlyS
 export { default as LoopStreamParallelStreamMain } from "./LoopStreamParallelStreamSections/LoopStreamParallelStreamMain";
 export { default as MultiThreadBlockQueueMain } from "./MultiThreadBlockQueueSections/MultiThreadBlockQueueMain";
 export { default as JavaInUseMain } from "./JavaInUseSections/JavaInUseMain";
+export { default as JavaTechieMain } from "./JavaTechieSections/JavaTechieMain";
+export { default as GenZCareerMain } from "./GenZCarrerSections/GenZCareerMain";

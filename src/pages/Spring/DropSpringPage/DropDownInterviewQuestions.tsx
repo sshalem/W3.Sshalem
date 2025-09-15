@@ -50,6 +50,8 @@ const DropDownInterviewQuestions = () => {
         <SideDropdownLink sideDropDownNavName="Loop Stream Par Stream" internalLink="/spring/interview-questions/loop-stream-parallel-stream" />
         <SideDropdownLink sideDropDownNavName="MultiThread Block Queue" internalLink="/spring/interview-questions/multithread-block-queue" />
         <SideDropdownLink sideDropDownNavName="JavaInUse Question" internalLink="/spring/interview-questions/java-in-use" />
+        <SideDropdownLink sideDropDownNavName="JavaTechie Questions" internalLink="/spring/interview-questions/java-techie" />
+        <SideDropdownLink sideDropDownNavName="GenZ Career" internalLink="/spring/interview-questions/gen-z-career" />
       </div>
     </section>
   );
