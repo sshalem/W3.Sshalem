@@ -22,6 +22,14 @@ const O1_JavaTechieInterview = ({ anchor }: { anchor: string }) => {
       <div>
         <Anchor description="Part 5 - Spring Interview" href="https://www.youtube.com/watch?v=FDowW7NAjmw&ab_channel=JavaTechie"></Anchor>
       </div>
+      <div>
+        <Anchor description="Part 6 - Spring Interview" href="https://www.youtube.com/watch?v=RKLjZ0jfQIQ&ab_channel=JavaTechie"></Anchor>
+      </div>
+      <div>
+        <Anchor description="Part 7 - Spring Interview" href="https://www.youtube.com/watch?v=fWHo7RDUMhA&ab_channel=JavaTechie"></Anchor>
+      </div>
+
+      {/*  */}
     </MainChildArea>
   );
 };
