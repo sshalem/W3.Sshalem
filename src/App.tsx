@@ -51,7 +51,6 @@ import {
 
 import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/S3_LoggingPkg";
 import { Docker, Eureka, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
-import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/EurekaPkg";
 
 import {
   SpecificationDocument,
@@ -140,8 +139,7 @@ import {
 import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S10_SpringIOPkg";
 import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S11_JUnitPkg";
 import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S12_JenkinsPkg";
-import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/KafkaPkg";
-import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/RabbitMQPkg";
+
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
 import {
   AliasMain,
@@ -170,7 +168,7 @@ import {
   StoredProceduresFunctionsMain,
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
-import Architecture from "./pages/MicroServices/MicroServiceComponents/ArchitecturePkg/Architecture";
+import Architecture from "./pages/MicroServices/MicroServiceComponents/M_ArchitecturePkg/Architecture";
 import {
   APIGatewayMain,
   ConfigManagementMain,
@@ -180,10 +178,13 @@ import {
   LoadBalancingMain,
   ResilienceFaultToleranceMain,
   ServiceDiscoveryMain,
-} from "./pages/MicroServices/MicroServiceComponents/ArchitecturePkg";
-import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg/SecurityMicroServ";
-import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg";
-import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
+} from "./pages/MicroServices/MicroServiceComponents/M_ArchitecturePkg";
+import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg/SecurityMicroServ";
+import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg";
+import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
+import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M_KafkaPkg";
+import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
+import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
 
 const router = createBrowserRouter(
   [
