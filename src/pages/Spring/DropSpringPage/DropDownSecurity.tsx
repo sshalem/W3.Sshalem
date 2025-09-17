@@ -41,6 +41,8 @@ const DropDownSecurity = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        {/*  */}
+        <SideDropdownLink sideDropDownNavName="Spring Security" internalLink="/spring/security/spring-security" />
         <SideDropdownLink sideDropDownNavName="JWT" internalLink="/spring/security/jwt" />
         <SideDropdownLink sideDropDownNavName="OAuth2" internalLink="/spring/security/oauth2" />
       </div>

@@ -1,10 +1,10 @@
 import { IMG, MainChildArea } from "../../../../../components";
-import JWT_security_1 from "../../../../../assets/JWT_security_1.jpg";
+import security_2 from "../../../../../assets/security_2.jpg";
 
 const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <IMG img_name={JWT_security_1}></IMG>
+      <IMG img_name={security_2}></IMG>
     </MainChildArea>
   );
 };
