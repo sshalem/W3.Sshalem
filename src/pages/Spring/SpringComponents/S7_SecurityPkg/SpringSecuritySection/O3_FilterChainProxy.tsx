@@ -86,45 +86,6 @@ const O3_FilterChainProxy = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={example}></JavaHighlight>
         </article>
       </section>
-      <hr />
-      <section className="my-4">
-        <p className="text-lg font-semibold">🏗️ Structure</p>
-        <article>
-          <ULdisc>
-            <Li>
-              <strong>FilterChainProxy</strong> holds a list of <strong>SecurityFilterChains</strong>.
-            </Li>
-            <Li>
-              Each SecurityFilterChain:
-              <ULdisc>
-                <Li>Has a RequestMatcher (to decide which requests it applies to).</Li>
-                <Li>Has a list of filters (like authentication, authorization, CSRF, etc.).</Li>
-              </ULdisc>
-            </Li>
-          </ULdisc>
-        </article>
-      </section>
-      <hr />
-      <section className="my-4">
-        <p className="text-lg font-semibold">🌐 Request Flow</p>
-        <article>
-          <p className="my-4">👍 here’s a clear diagram of the request flow with FilterChainProxy in Spring Security:</p>
-          <ULdisc>
-            <Li>
-              <strong>DelegatingFilterProxy</strong> is just a bridge between Servlet container filters and Spring-managed beans.
-            </Li>
-            <Li>FilterChainProxy is where Spring Security kicks in.</Li>
-            <Li>
-              It decides which <strong>SecurityFilterChain</strong> applies, based on the request path (/api/**, /admin/**, etc.).
-            </Li>
-            <Li>The chosen chain runs its filters in strict order.</Li>
-            <Li>
-              Finally, the request continues to the <strong>DispatcherServlet</strong>, and your controller executes.
-            </Li>
-          </ULdisc>
-          <JavaHighlight javaCode={code}></JavaHighlight>
-        </article>
-      </section>
     </MainChildArea>
   );
 };
@@ -148,52 +109,3 @@ public SecurityFilterChain formLoginSecurity(HttpSecurity http) throws Exception
         .formLogin();
     return http.build();
 }`;
-
-const code = ` ┌───────────────────────┐
- │   Incoming Request    │
- └──────────┬────────────┘
-            │
-            ▼
- ┌───────────────────────────────┐
- │   Servlet Filter Chain        │
- │   (all filters registered)    │
- └──────────┬────────────────────┘
-            │
-            ▼
- ┌───────────────────────────────┐
- │ DelegatingFilterProxy         │  <-- Registered in web.xml / auto by Spring Boot
- │ (Delegates to Spring bean)    │
- └──────────┬────────────────────┘
-            │
-            ▼
- ┌───────────────────────────────┐
- │ FilterChainProxy              │  <-- Core Spring Security filter
- │  - Holds list of              │
- │    SecurityFilterChains       │
- └──────────┬────────────────────┘
-            │
-            ▼
-    Match Request against
-    configured SecurityFilterChains
-            │
- ┌──────────▼───────────────────────────────────┐
- │ SecurityFilterChain (matched)                │
- │  - RequestMatcher                            │
- │  - List of Filters:                          │
- │    • SecurityContextPersistenceFilter        │
- │    • UsernamePasswordAuthenticationFilter    │
- │    • BasicAuthenticationFilter               │
- │    • BearerTokenAuthenticationFilter         │
- │    • ExceptionTranslationFilter              │
- │    • FilterSecurityInterceptor               │
- │    • ... etc.                                │  
- └──────────┬───────────────────────────────────┘
-            │
-   Execute filters in order
-            │
-            ▼
- ┌───────────────────────┐
- │   DispatcherServlet   │
- │   (Controller layer)  │
- └───────────────────────┘
-`;
