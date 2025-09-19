@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroJwt from "./O1_IntroJwt";
+import O2_SessionBasedAuth from "./O2_SessionBasedAuth";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_IntroJwt = "1. Intro Jwt";
+const o2_SessionBasedAuth = "2. SessionBasedAuthentication";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroJwt];
+const anchorList: string[] = [o1_IntroJwt, o2_SessionBasedAuth];
 
 // ============================================
 // ============================================
@@ -67,6 +69,7 @@ const JwtMain = () => {
       {/* End Contents */}
 
       <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
+      <O2_SessionBasedAuth anchor={o2_SessionBasedAuth}></O2_SessionBasedAuth>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

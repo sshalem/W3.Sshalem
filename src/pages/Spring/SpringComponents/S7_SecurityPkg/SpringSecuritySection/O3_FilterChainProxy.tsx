@@ -1,7 +1,6 @@
 import { Anchor, IMG, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
+import { SpanGreen } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
-import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import security_3 from "../../../../../assets/security_3.jpg";
 
