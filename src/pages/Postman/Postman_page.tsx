@@ -3,6 +3,8 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownMultipleRequest from "./DropPostman/DropDownMultipleRequest";
+import DropDownEnvironment from "./DropPostman/DropDownEnvironment";
+import DropDownCollection from "./DropPostman/DropDownCollection";
 
 const Postman_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -34,6 +36,8 @@ const Postman_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Postman Home" internalLink="/postman" />
+            <DropDownCollection />
+            <DropDownEnvironment />
             <DropDownMultipleRequest />
           </div>
         </article>

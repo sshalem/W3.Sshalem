@@ -101,7 +101,7 @@ import {
 import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
-import { MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
+import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
 import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/S5_RestApiPkg";
@@ -185,6 +185,7 @@ import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponent
 import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M_KafkaPkg";
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
+import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 
 const router = createBrowserRouter(
   [
@@ -500,6 +501,15 @@ const router = createBrowserRouter(
           element: <Postman_page />,
           children: [
             { index: true, element: <PostmanHome /> },
+            { path: "collection", element: <CollectionMain /> },
+            {
+              path: "environment",
+              element: <Environment />,
+              children: [
+                { path: "setup", element: <EnvironmentSetupMain /> },
+                // { path: "environment-setup", element: <EnvironmentSetupMain /> },
+              ],
+            },
             { path: "multiple-http-requests", element: <MultipleHttpRequestMain /> },
           ],
         },

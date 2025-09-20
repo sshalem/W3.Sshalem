@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import properties from "react-syntax-highlighter/dist/esm/languages/prism/properties";
-import { prism as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vscDarkPlus as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
@@ -32,13 +32,16 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
           style={PROPERTIES_STYLE}
           // showLineNumbers={true}
           customStyle={{
-            fontSize: "0.85rem",
-            backgroundColor: "#fbfbfb",
+            // fontSize: "0.8rem",
+            fontSizeAdjust: "0.53",
+            // backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
             // width: "60rem",
             display: "flex",
+            borderRadius: "5px",
+
             // height: "20rem",
           }}
         >
