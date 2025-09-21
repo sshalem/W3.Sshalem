@@ -3,6 +3,8 @@ import { ContentMenu, Loading } from "../../../../components";
 import O1_IntroCollection from "./O1_IntroCollection";
 import O2_CreateCollection from "./O2_CreateCollection";
 import O3_CollectionVariables from "./O3_CollectionVariables";
+import O4_AddUseVariables from "./O4_AddUseVariables";
+import O5_VariablesProgramaticaly from "./O5_VariablesProgramaticaly";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -11,12 +13,14 @@ import O3_CollectionVariables from "./O3_CollectionVariables";
 const o1_IntroCollection = "1. Intro Collection";
 const o2_CreateCollection = "2. Create Collection";
 const o3_CollectionVariables = "3. Collection Variables";
+const o4_AddUseVariables = "4. Add & Use Variables";
+const o5_VariablesProgramaticaly = "5. add/set/clear variables programaticaly";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroCollection, o2_CreateCollection, o3_CollectionVariables];
+const anchorList: string[] = [o1_IntroCollection, o2_CreateCollection, o3_CollectionVariables, o4_AddUseVariables, o5_VariablesProgramaticaly];
 
 // ============================================
 // ============================================
@@ -73,6 +77,8 @@ const CollectionMain = () => {
       <O1_IntroCollection anchor={o1_IntroCollection} />
       <O2_CreateCollection anchor={o2_CreateCollection}></O2_CreateCollection>
       <O3_CollectionVariables anchor={o3_CollectionVariables}></O3_CollectionVariables>
+      <O4_AddUseVariables anchor={o4_AddUseVariables}></O4_AddUseVariables>
+      <O5_VariablesProgramaticaly anchor={o5_VariablesProgramaticaly}></O5_VariablesProgramaticaly>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
