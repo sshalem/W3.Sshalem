@@ -12,7 +12,7 @@ const O5_VariablesProgramaticaly = ({ anchor }: { anchor: string }) => {
           <div>🔹 Programmatically Set/Update Collection Variables</div>
           <ULdisc>
             <Li>
-              In order to be able programticaly get/set/clear values , we need to use <strong>script</strong>
+              In order to be able <strong>programticaly get/set/clear</strong> values , we need to use <strong>script</strong>
             </Li>
             <Li>
               In <strong>Pre-request</strong> or <strong>Post-response</strong> , write a Script that will set/get/clear data I need
