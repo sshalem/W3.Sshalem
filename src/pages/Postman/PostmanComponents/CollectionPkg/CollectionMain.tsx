@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../components";
 import O1_IntroCollection from "./O1_IntroCollection";
 import O2_CreateCollection from "./O2_CreateCollection";
+import O3_CollectionVariables from "./O3_CollectionVariables";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -9,12 +10,13 @@ import O2_CreateCollection from "./O2_CreateCollection";
 
 const o1_IntroCollection = "1. Intro Collection";
 const o2_CreateCollection = "2. Create Collection";
+const o3_CollectionVariables = "3. Collection Variables";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroCollection, o2_CreateCollection];
+const anchorList: string[] = [o1_IntroCollection, o2_CreateCollection, o3_CollectionVariables];
 
 // ============================================
 // ============================================
@@ -70,6 +72,7 @@ const CollectionMain = () => {
 
       <O1_IntroCollection anchor={o1_IntroCollection} />
       <O2_CreateCollection anchor={o2_CreateCollection}></O2_CreateCollection>
+      <O3_CollectionVariables anchor={o3_CollectionVariables}></O3_CollectionVariables>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
