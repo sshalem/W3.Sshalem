@@ -44,13 +44,34 @@ const O6_AuthenticationApproach = ({ anchor }: { anchor: string }) => {
       <hr />
       <section className="my-4">
         <p className="my-4 text-lg font-semibold">🧩 JWT Based Authentication</p>
-        <ULdisc>
-          <Li>User logs in → server validates credentials.</Li>
-          <Li>Server generates a JWT (signed token with user info/claims).</Li>
-          <Li>Token is sent to the client (usually stored in localStorage or as a cookie).</Li>
-          <Li>On each request, the client sends the token in the Authorization header (e.g., Bearer token).</Li>
-          <Li>Server verifies the signature — no need to look up session in storage.</Li>
-        </ULdisc>
+        <section className="my-4">
+          <p>
+            <strong>JWT</strong> - Json Web Token
+          </p>
+          <p>
+            one of the best ways to secure ways to communicate between Client and Server. <br />
+            The Advantage of Using JWT , because it completely follows stateless authentication mechanism. <br />
+          </p>
+        </section>
+        <section className="my-4">
+          <p className="my-4 text-lg font-semibold">
+            🧩 What <strong>Stateless</strong> Authentication Mechanism means?
+          </p>
+          <p>
+            <strong>Stateless</strong> Authentication Mechanism means , all the users input or user state, are{" "}
+            <SpanRed>never saved in server memory or cookies</SpanRed>.
+          </p>
+        </section>
+        <article className="my-8">
+          <p className="text-lg font-semibold">🔑 How JWT works:</p>
+          <ULdisc>
+            <Li>User logs in → server validates credentials.</Li>
+            <Li>Server generates a JWT (signed token with user info/claims).</Li>
+            <Li>Token is sent to the client (usually stored in localStorage or as a cookie).</Li>
+            <Li>On each request, the client sends the token in the Authorization header (e.g., Bearer token).</Li>
+            <Li>Server verifies the signature — no need to look up session in storage.</Li>
+          </ULdisc>
+        </article>
         <article className="my-4">
           <div className="text-lg font-semibold">🔑 Why JWT is considered stateless?</div>
           <ULdisc>
