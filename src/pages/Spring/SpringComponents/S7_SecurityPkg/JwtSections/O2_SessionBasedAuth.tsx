@@ -7,6 +7,14 @@ const O2_SessionBasedAuth = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-4">
+        <div>
+          in this section I will show the difference between 2 approaches:
+          <ULdisc>
+            <Li>Session-based Authentication.</Li>
+            <Li>JWT-based Authentication.</Li>
+          </ULdisc>
+        </div>
+        <hr />
         <p className="my-4 text-lg font-semibold">🧩 What is Session Based Authentication?</p>
         <p>First, we’re gonna take a look at a simple method that popular websites used in the past</p>
         <article>

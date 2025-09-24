@@ -1,5 +1,4 @@
-import { IMG, MainChildArea } from "../../../../../components";
-import security_2 from "../../../../../assets/security_2.jpg";
+import { MainChildArea } from "../../../../../components";
 import { SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
@@ -13,6 +12,22 @@ const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
         <p>
           one of the best ways to secure ways to communicate between Client and Server. <br />
           The Advantage of Using JWT , because it completely follows stateless authentication mechanism. <br />
+        </p>
+        <article>
+          {/* <ULdisc>
+            <Li></Li>
+            <Li></Li>
+            <Li></Li>
+            <Li></Li>
+          </ULdisc> */}
+        </article>
+      </section>
+      <hr />
+      <section className="my-4">
+        <p className="my-4 text-lg font-semibold">
+          🧩 What <strong>Stateless</strong> Authentication Mechanism means?
+        </p>
+        <p>
           <strong>Stateless</strong> Authentication Mechanism means , all the users input or user state, are{" "}
           <SpanRed>never saved in server memory or cookies</SpanRed>.
         </p>
@@ -26,24 +41,6 @@ const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
         </article>
       </section>
       <hr />
-      <section className="my-4">
-        <p className="my-4 text-lg font-semibold">🧩 Why JWT is Stateless?</p>
-        <p>
-          First, we set the <strong>session creation policy</strong> to <strong>STATELESS</strong>. <br />
-          This does not disable session management in the underlying web server; <br />
-          instead, it instructs Spring Security to no longer create or use an HTTP session for storing the authentication object.
-        </p>
-        <article>
-          {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-        </article>
-      </section>
-      <hr />
-      <IMG img_name={security_2}></IMG>
     </MainChildArea>
   );
 };
