@@ -31,7 +31,7 @@ const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
         <PrismLightSyntaxHighlighter
           language="jsx"
           style={vscDarkPlus}
-          showLineNumbers={true}
+          // showLineNumbers={true}
           customStyle={{
             fontSizeAdjust: "0.57",
             // width: "60rem",

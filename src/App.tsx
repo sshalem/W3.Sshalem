@@ -124,7 +124,7 @@ import {
   SimpleDefaultMain,
 } from "./pages/Spring/SpringComponents/S8_CachingPkg";
 
-import { JwtMain, OAuth2Main, SpringSecurityMain } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
+import { JwtStatelessMain, OAuth2Main, SpringSecurityMain } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
 import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
 import {
   ConfigMsgControllerMain,
@@ -301,7 +301,7 @@ const router = createBrowserRouter(
               element: <SpringSecurity />,
               children: [
                 { path: "spring-security", element: <SpringSecurityMain /> },
-                { path: "jwt", element: <JwtMain /> },
+                { path: "jwt-stateless", element: <JwtStatelessMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
               ],
             },

@@ -1,25 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroJwt from "./O1_IntroJwt";
-import O2_SessionBasedAuth from "./O2_SessionBasedAuth";
+import O2_JwtTokenStructure from "./O2_JwtTokenStructure";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_IntroJwt = "1. Intro Jwt";
-const o2_SessionBasedAuth = "2. SessionBasedAuthentication";
+const o2_JwtTokenStructure = "2. JWT token structure";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroJwt, o2_SessionBasedAuth];
+const anchorList: string[] = [o1_IntroJwt, o2_JwtTokenStructure];
 
 // ============================================
 // ============================================
 
-const JwtMain = () => {
+const JwtStatelessMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -69,11 +69,11 @@ const JwtMain = () => {
       {/* End Contents */}
 
       <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
-      <O2_SessionBasedAuth anchor={o2_SessionBasedAuth}></O2_SessionBasedAuth>
+      <O2_JwtTokenStructure anchor={o2_JwtTokenStructure}></O2_JwtTokenStructure>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default JwtMain;
+export default JwtStatelessMain;
