@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroJwt from "./O1_IntroJwt";
-import O2_JwtTokenStructure from "./O2_JwtTokenStructure";
 import OX_Jwtstateless from "./OX_Jwtstateless";
 import O3_JwtDependencies from "./O3_JwtDependencies";
 
@@ -72,8 +70,6 @@ const JwtStatelessMain = () => {
       />
       {/* End Contents */}
 
-      <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
-      <O2_JwtTokenStructure anchor={o2_JwtTokenStructure}></O2_JwtTokenStructure>
       <O3_JwtDependencies anchor={o3_JwtDependencies}></O3_JwtDependencies>
       <OX_Jwtstateless anchor={oX_Jwtstateless}></OX_Jwtstateless>
 
