@@ -124,7 +124,7 @@ import {
   SimpleDefaultMain,
 } from "./pages/Spring/SpringComponents/S8_CachingPkg";
 
-import { JwtStatelessMain, OAuth2Main, SpringSecurityMain } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
+import { JwtMain, OAuth2Main, SpringSecurityMain } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
 import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
 import {
   ConfigMsgControllerMain,
@@ -186,6 +186,7 @@ import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/Micr
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
+import JwtImplMain from "./pages/Spring/SpringComponents/S7_SecurityPkg/JwtImplSections/JwtImplMain";
 
 const router = createBrowserRouter(
   [
@@ -301,7 +302,8 @@ const router = createBrowserRouter(
               element: <SpringSecurity />,
               children: [
                 { path: "spring-security", element: <SpringSecurityMain /> },
-                { path: "jwt-stateless", element: <JwtStatelessMain /> },
+                { path: "jwt", element: <JwtMain /> },
+                { path: "jwt-implementation", element: <JwtImplMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
               ],
             },

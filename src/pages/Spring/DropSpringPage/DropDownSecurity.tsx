@@ -43,7 +43,8 @@ const DropDownSecurity = () => {
       >
         {/*  */}
         <SideDropdownLink sideDropDownNavName="Spring Security" internalLink="/spring/security/spring-security" />
-        <SideDropdownLink sideDropDownNavName="JWT stateless" internalLink="/spring/security/jwt-stateless" />
+        <SideDropdownLink sideDropDownNavName="JWT Introduction" internalLink="/spring/security/jwt" />
+        <SideDropdownLink sideDropDownNavName="JWT Implementation" internalLink="/spring/security/jwt-implementation" />
         <SideDropdownLink sideDropDownNavName="OAuth2" internalLink="/spring/security/oauth2" />
       </div>
     </section>
