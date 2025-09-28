@@ -3,6 +3,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroJwt from "./O1_IntroJwt";
 import O2_JwtTokenStructure from "./O2_JwtTokenStructure";
 import O0_links from "./O0_links";
+import O3_JwtAuthFlow from "./O3_JwtAuthFlow";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -11,12 +12,13 @@ import O0_links from "./O0_links";
 const o0_links = "links";
 const o1_IntroJwt = "1. Intro Jwt";
 const o2_JwtTokenStructure = "2. JWT token structure";
+const o3_JwtAuthFlow = "3. Jwt Authentication Flow";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_links, o1_IntroJwt, o2_JwtTokenStructure];
+const anchorList: string[] = [o0_links, o1_IntroJwt, o2_JwtTokenStructure, o3_JwtAuthFlow];
 
 // ============================================
 // ============================================
@@ -73,6 +75,7 @@ const JwtMain = () => {
       <O0_links anchor={o0_links}></O0_links>
       <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
       <O2_JwtTokenStructure anchor={o2_JwtTokenStructure}></O2_JwtTokenStructure>
+      <O3_JwtAuthFlow anchor={o3_JwtAuthFlow}></O3_JwtAuthFlow>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
