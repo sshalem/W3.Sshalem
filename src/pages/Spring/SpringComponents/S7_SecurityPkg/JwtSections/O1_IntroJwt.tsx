@@ -87,6 +87,44 @@ const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
+        <p className="my-4 text-lg font-semibold">🧩 Why disable CSRF if we use JWT?</p>
+
+        <p className="my-4">1. What CSRF protection is for?</p>
+        <ULdisc>
+          <Li>
+            CSRF (Cross-Site Request Forgery) protection in Spring Security is mainly needed when your app uses stateful session-based authentication
+            with cookies.
+          </Li>
+          <Li>In that model, the browser automatically sends the session cookie with every request.</Li>
+          <Li>
+            That means if a malicious site tricks the user’s browser into making a request to your app, the session cookie goes along for the ride →
+            possible CSRF attack.
+          </Li>
+        </ULdisc>
+        <p className="my-4">2. Why JWT is different?</p>
+        <ULdisc>
+          <Li>
+            With JWT-based authentication, we usually go <strong>stateless</strong>:
+            <ULdisc>
+              <Li>No server-side session.</Li>
+              <Li>
+                The client (browser, mobile app, etc.) explicitly attaches the JWT (usually in the Authorization: Bearer <strong>{"<token>"}</strong>{" "}
+                header).
+              </Li>
+            </ULdisc>
+          </Li>
+          <Li>
+            Since the browser does not automatically attach the JWT like it does with cookies, an attacker cannot force the browser to “accidentally”
+            send it.
+          </Li>
+          <Li>
+            This makes <SpanRed>CSRF protection unnecessary in this scenario</SpanRed>.
+          </Li>
+        </ULdisc>
+      </section>
+      <hr />
+
+      <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 The key point:</p>
 
         <ULdisc>

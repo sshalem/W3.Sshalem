@@ -41,11 +41,14 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🧩 Payload</p>
+        <p className="my-4 text-lg font-semibold">🧩 Payload (Claim)</p>
         <p>
           The second part of the token is the payload, which contains the <SpanSky>claims</SpanSky>.
         </p>
         <p>Claims are statements about an entity (typically, the user) and additional data</p>
+        <p>
+          The Payload (Claim) helps us to answer: <strong>What do we want to store in JWT</strong> ?
+        </p>
         <p>There are three types of claims: </p>
         <ULdisc>
           <Li>
@@ -69,6 +72,17 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
           The payload is then <SpanSky>Base64Url</SpanSky> encoded to form the second part of the JSON Web Token.
         </p>
         An example payload could be:
+        <ULdisc>
+          <Li>
+            <strong>iss</strong> (Issuer): who issues the JWT
+          </Li>
+          <Li>
+            <strong>iat</strong> (Issued at): time the JWT was issued at
+          </Li>
+          <Li>
+            <strong>exp</strong> (Expiration Time): JWT expiration time
+          </Li>
+        </ULdisc>
         <JsxHighlight jsxCode={jwt_payload}></JsxHighlight>
       </section>
       <hr />
@@ -105,9 +119,13 @@ const jwt_header = `{
 }`;
 
 const jwt_payload = `{
-  "sub": "1234567890",
-  "name": "John Doe",
-  "admin": true
+  "userId": "abcd12345ghijk",
+  "username": "shabtay.shalem@mail.com",
+  "email": "contact@bezkoder.com",
+  // standard fields
+  "iss": "Shabtay , author of w3sshalem",
+  "iat": 1570238918,
+  "exp": 1570238992
 }`;
 
 const jwt_signature = `HMACSHA256(

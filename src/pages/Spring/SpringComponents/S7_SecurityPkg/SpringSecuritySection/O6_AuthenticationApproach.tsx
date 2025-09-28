@@ -1,4 +1,6 @@
-import { MainChildArea } from "../../../../../components";
+import { IMG, MainChildArea } from "../../../../../components";
+import security_6 from "../../../../../assets/security_6.jpg";
+import security_7 from "../../../../../assets/security_7.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
@@ -40,6 +42,7 @@ const O6_AuthenticationApproach = ({ anchor }: { anchor: string }) => {
             <Li>On each request, the client sends the cookie → server looks up the session → authenticates the user.</Li>
           </ULdisc>
         </article>
+        <IMG img_name={security_6}></IMG>
       </section>
       <hr />
       <section className="my-4">
@@ -72,6 +75,7 @@ const O6_AuthenticationApproach = ({ anchor }: { anchor: string }) => {
             <Li>Server verifies the signature — no need to look up session in storage.</Li>
           </ULdisc>
         </article>
+        <IMG img_name={security_7}></IMG>
         <article className="my-4">
           <div className="text-lg font-semibold">🔑 Why JWT is considered stateless?</div>
           <ULdisc>
