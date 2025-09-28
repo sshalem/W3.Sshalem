@@ -6,6 +6,7 @@ import {
   // vs,
   // ghcolors,
   // coy,
+  // prism
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import { prism as XML_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -30,13 +31,27 @@ const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
         {isCopied ? "copied" : "copy"}
       </button>
       <div>
-        <PrismLightSyntaxHighlighter
+        {/* <PrismLightSyntaxHighlighter
           language="xml"
           style={XML_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
             backgroundColor: "#fbfbfb",
+            outlineStyle: "solid",
+            outlineWidth: "1px",
+            outlineColor: "#dddddd",
+            // width: "60rem",
+            display: "flex",
+          }}
+        > */}
+        <PrismLightSyntaxHighlighter
+          language="xml"
+          style={XML_STYLE}
+          // showLineNumbers={true}
+          customStyle={{
+            fontSize: "0.85rem",
+            // backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
