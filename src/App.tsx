@@ -160,6 +160,7 @@ import {
 import {
   AuditingMain,
   EntityValidationMain,
+  JpaLoggingMain,
   JpqlMain,
   Many2ManyBiLazyMain,
   MappingLibsMain,
@@ -257,6 +258,7 @@ const router = createBrowserRouter(
                 { path: "many2many-bi-lazy", element: <Many2ManyBiLazyMain /> },
                 { path: "one2many-bi-lazy", element: <One2ManyBiLazyMain /> },
                 { path: "stored-procedures-functions", element: <StoredProceduresFunctionsMain /> },
+                { path: "logging-jpa-hibernate", element: <JpaLoggingMain /> },
               ],
             },
             {

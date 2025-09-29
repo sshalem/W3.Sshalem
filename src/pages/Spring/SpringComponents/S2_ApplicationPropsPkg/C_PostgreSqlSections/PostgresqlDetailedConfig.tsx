@@ -41,8 +41,13 @@ spring.output.ansi.enabled=always
 # disable OSIV
 spring.jpa.open-in-view=false
 
-# show the SQl queries in a vertical way
+# ---- JPA logging ----
+spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
+
+# ---- Hibernate logging ----
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 
 # if this is not set to false i get 
 # java.lang.reflect.InvocationTargetException: null - when I play the project

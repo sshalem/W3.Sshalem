@@ -33,5 +33,13 @@ spring.jpa.generate-ddl=true
 # see the project of LAZY Loading, I explain it there
 spring.jpa.open-in-view=false
 
+# ---- JPA logging ----
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# ---- Hibernate logging ----
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
 # console color enabled
 spring.output.ansi.enabled=always`;

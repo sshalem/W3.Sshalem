@@ -23,16 +23,19 @@ spring.jpa.generate-ddl=true
 # console color enabled
 spring.output.ansi.enabled=always
 
-### spring.jpa.show-sql=true & 
-### logging.level.org.hibernate.SQL=debug 
-### Do the same , but with difference
+### spring.jpa.show-sql=true AND logging.level.org.hibernate.SQL=debug , Do the same , 
+### but with difference?
 
+# ---- JPA logging ----
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 # show the the logging w/o the the time stamp and the package name 
 # Hibernate: drop table if exists customer
 
-logging.level.org.hibernate.SQL=debug
-# shows the logging as below: with the time satamp and the package name 
+# ---- Hibernate logging ----
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+# shows the logging as below: with the time stamp and the package name 
 # 2021-04-21 12:02:27.553 DEBUG 496 --- [  restartedMain] org.hibernate.SQL   : drop table if exists customer
 
 # shows the statistics regarding the SQL queries

@@ -19,6 +19,16 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 # same as 
 # spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
 
+
+# ---- JPA logging ----
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# ---- Hibernate logging ----
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+
 # Enabling H2 Console
 spring.h2.console.enabled=true
 

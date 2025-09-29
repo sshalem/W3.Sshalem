@@ -1,8 +1,8 @@
 export { default as ApplicationProperties } from "./ApplicationProperties";
-export { default as H2Main } from "./H2SqlSections/H2Main";
-export { default as MySqlMain } from "./MySqlSections/MySqlMain";
-export { default as PostgresqlMain } from "./PostgreSqlSections/PostgresqlMain";
-export { default as MongoDBMain } from "./MongoDbSections/MongoDBMain";
-export { default as DBeaverMain } from "./DBeaverSections/DBeaverMain";
-export { default as ProfileMain } from "./ProfilesSection/ProfileMain";
-export { default as DBInitMain } from "./DBInitialization/DBInitMain";
+export { default as H2Main } from "./A_H2SqlSections/H2Main";
+export { default as MySqlMain } from "./B_MySqlSections/MySqlMain";
+export { default as PostgresqlMain } from "./C_PostgreSqlSections/PostgresqlMain";
+export { default as MongoDBMain } from "./D_MongoDbSections/MongoDBMain";
+export { default as DBeaverMain } from "./E_DBeaverSections/DBeaverMain";
+export { default as ProfileMain } from "./F_ProfilesSection/ProfileMain";
+export { default as DBInitMain } from "./G_DBInitialization/DBInitMain";

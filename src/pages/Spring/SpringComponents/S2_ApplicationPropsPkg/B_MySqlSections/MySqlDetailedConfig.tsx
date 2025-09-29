@@ -52,9 +52,11 @@ spring.jpa.generate-ddl=true
 # console color enabled
 spring.output.ansi.enabled=always
 
-
-# spring.jpa.show-sql=true
+# ---- JPA logging ----
+spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
+
+# ---- Hibernate logging ----
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 
