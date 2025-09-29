@@ -5,7 +5,7 @@ import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const Ox_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
+const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -182,7 +182,7 @@ const Ox_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default Ox_JwtAuthFilter;
+export default O10_JwtAuthFilter;
 
 const code_java = `package com.backend.jwt;
 

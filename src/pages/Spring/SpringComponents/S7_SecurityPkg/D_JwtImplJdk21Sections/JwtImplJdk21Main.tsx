@@ -1,31 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroJwt from "./O1_IntroJwt";
-import O2_JwtTokenStructure from "./O2_JwtTokenStructure";
-import O0_links from "./O0_links";
-import O4_JwtAuthFlow from "./O4_JwtAuthFlow";
-import O3_JwtDependencies from "./O3_JwtDependencies";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_links = "links";
-const o1_IntroJwt = "1. Intro Jwt";
-const o2_JwtTokenStructure = "2. JWT token structure";
-const o3_JwtDependencies = `3. Jwt Dependencies`;
-const o4_JwtAuthFlow = "4. Jwt Authentication Flow";
+const o1_IntroJwtImpl = "1. Intro Jwt Implementation";
+const o2_SpringBootVersion = "2. Spring Version 2.6.11 & JDK";
+const ox_POM = "x. Dependencies & POM";
+const ox_PackageLayout = "x. Package Layout";
+const ox_JwtTokenUtil = "x. JwtTokenUtil";
+const ox_JwtAuthFilter = "x. JwtAuthenticationFilter";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_links, o1_IntroJwt, o2_JwtTokenStructure, o3_JwtDependencies, o4_JwtAuthFlow];
+const anchorList: string[] = [o1_IntroJwtImpl, o2_SpringBootVersion, ox_POM, ox_PackageLayout, ox_JwtTokenUtil, ox_JwtAuthFilter];
 
 // ============================================
 // ============================================
 
-const JwtMain = () => {
+const JwtImplJdk21Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -74,15 +70,16 @@ const JwtMain = () => {
       />
       {/* End Contents */}
 
-      <O0_links anchor={o0_links}></O0_links>
-      <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
-      <O2_JwtTokenStructure anchor={o2_JwtTokenStructure}></O2_JwtTokenStructure>
-      <O3_JwtDependencies anchor={o3_JwtDependencies}></O3_JwtDependencies>
-      <O4_JwtAuthFlow anchor={o4_JwtAuthFlow}></O4_JwtAuthFlow>
+      {/* <O1_IntroJwtImpl anchor={o1_IntroJwtImpl}></O1_IntroJwtImpl>
+      <O2_SpringBootVersion anchor={o2_SpringBootVersion}></O2_SpringBootVersion>
+      <Ox_POM anchor={ox_POM}></Ox_POM>
+      <Ox_PackageLayout anchor={ox_PackageLayout}></Ox_PackageLayout>
+      <Ox_JwtTokenUtil anchor={ox_JwtTokenUtil}></Ox_JwtTokenUtil>
+      <Ox_JwtAuthFilter anchor={ox_JwtAuthFilter}></Ox_JwtAuthFilter> */}
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default JwtMain;
+export default JwtImplJdk21Main;

@@ -1,7 +1,7 @@
 import { IMG, MainChildArea } from "../../../../../components";
 import security_8 from "../../../../../assets/security_8.jpg";
 
-const Ox_PackageLayout = ({ anchor }: { anchor: string }) => {
+const O3_PackageLayout = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -22,4 +22,4 @@ const Ox_PackageLayout = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default Ox_PackageLayout;
+export default O3_PackageLayout;

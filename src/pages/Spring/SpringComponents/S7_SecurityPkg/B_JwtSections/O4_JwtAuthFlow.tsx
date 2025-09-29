@@ -5,7 +5,7 @@ import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
 
-const O3_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
+const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -30,7 +30,7 @@ const O3_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_JwtAuthFlow;
+export default O4_JwtAuthFlow;
 
 const jwt_login = `@RestController
 @RequestMapping(path = "/auth")

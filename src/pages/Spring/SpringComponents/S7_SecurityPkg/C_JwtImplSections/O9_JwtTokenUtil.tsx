@@ -4,7 +4,7 @@ import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const Ox_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
+const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -38,7 +38,7 @@ const Ox_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default Ox_JwtTokenUtil;
+export default O9_JwtTokenUtil;
 
 const code_java = `package com.backend.jwt;
 
