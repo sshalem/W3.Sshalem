@@ -5,7 +5,7 @@ import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 
-const O2_POM = ({ anchor }: { anchor: string }) => {
+const O1_POM = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -50,7 +50,7 @@ const O2_POM = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_POM;
+export default O1_POM;
 
 const pom = `<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">

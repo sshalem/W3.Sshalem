@@ -20,9 +20,9 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
             I use <SpanBlue>Postman</SpanBlue> for testing
           </Li>
           <Li>
-            GitHub project link ⇨{" "}
+            🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="08-Spring-Security/03_JWT/O2-jwt-with-authorities"
+              description="Spring-Security/03_JWT/O2-jwt-with-authorities"
               href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-with-authorities"
             ></Anchor>{" "}
           </Li>

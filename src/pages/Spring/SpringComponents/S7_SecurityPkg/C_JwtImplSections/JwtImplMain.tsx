@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O2_POM from "./O2_POM";
+import O1_POM from "./O1_POM";
+import O2_ApplicationProperties from "./O2_ApplicationProperties";
 import O3_PackageLayout from "./O3_PackageLayout";
 
 import O0_IntroJwtImpl from "./O0_IntroJwtImpl";
-import O1_ApplicationProperties from "./O1_ApplicationProperties";
 import O4_Entity from "./O4_Entity";
 import O5_Repository from "./O5_Repository";
 import O6_Service from "./O6_Service";
@@ -24,8 +24,8 @@ import O16_Test from "./O16_Test";
 // ===========================================
 
 const o0_IntroJwtImpl = "Intro Jwt Implementation";
-const o1_ApplicationProperties = "1. Application Properties";
-const o2_POM = "2. Dependencies & POM";
+const o1_POM = "1. Dependencies & POM";
+const o2_ApplicationProperties = "2. Application Properties";
 const o3_PackageLayout = "3. Package Layout";
 const o4_Entity = "4. Entity";
 const o5_Repository = "5. Repository";
@@ -47,8 +47,8 @@ const o16_Test = "16. Test";
 
 const anchorList: string[] = [
   o0_IntroJwtImpl,
-  o1_ApplicationProperties,
-  o2_POM,
+  o1_POM,
+  o2_ApplicationProperties,
   o3_PackageLayout,
   o4_Entity,
   o5_Repository,
@@ -118,8 +118,8 @@ const JwtImplMain = () => {
       {/* End Contents */}
 
       <O0_IntroJwtImpl anchor={o0_IntroJwtImpl}></O0_IntroJwtImpl>
-      <O1_ApplicationProperties anchor={o1_ApplicationProperties}></O1_ApplicationProperties>
-      <O2_POM anchor={o2_POM}></O2_POM>
+      <O1_POM anchor={o1_POM}></O1_POM>
+      <O2_ApplicationProperties anchor={o2_ApplicationProperties}></O2_ApplicationProperties>
       <O3_PackageLayout anchor={o3_PackageLayout}></O3_PackageLayout>
       <O4_Entity anchor={o4_Entity}></O4_Entity>
       <O5_Repository anchor={o5_Repository}></O5_Repository>
