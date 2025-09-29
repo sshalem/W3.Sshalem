@@ -17,6 +17,7 @@ import O12_SecurityConfig from "./O12_SecurityConfig";
 import O13_Exceptions from "./O13_Exceptions";
 import O14_Model from "./O14_Model";
 import O15_Controller from "./O15_Controller";
+import O16_Test from "./O16_Test";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -38,6 +39,7 @@ const o12_SecurityConfig = "12. SecurityConfig";
 const o13_Exceptions = "13. Exceptions";
 const o14_Model = "14. Model";
 const o15_Controller = "15. Controller";
+const o16_Test = "16. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -60,6 +62,7 @@ const anchorList: string[] = [
   o13_Exceptions,
   o14_Model,
   o15_Controller,
+  o16_Test,
 ];
 
 // ============================================
@@ -130,6 +133,7 @@ const JwtImplMain = () => {
       <O13_Exceptions anchor={o13_Exceptions}></O13_Exceptions>
       <O14_Model anchor={o14_Model}></O14_Model>
       <O15_Controller anchor={o15_Controller}></O15_Controller>
+      <O16_Test anchor={o16_Test}></O16_Test>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
