@@ -186,7 +186,7 @@ import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/Micr
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
-import JwtImplMain from "./pages/Spring/SpringComponents/S7_SecurityPkg/JwtImplSections/JwtImplMain";
+import JwtImplMain from "./pages/Spring/SpringComponents/S7_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
 const router = createBrowserRouter(
   [
