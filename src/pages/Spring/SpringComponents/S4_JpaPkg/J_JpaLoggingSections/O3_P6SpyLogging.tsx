@@ -54,10 +54,13 @@ const xml_pom = `
 </dependency>
 `;
 
-const properties = `spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver
+const properties = `# <--- MySql --->
+spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver
 spring.datasource.url=jdbc:p6spy:mysql://localhost:3306/mydb
-spring.datasource.username=myuser
-spring.datasource.password=mypassword
+
+# <--- H2 --->
+spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver
+spring.datasource.url=jdbc:p6spy:h2:mem:testdb
 `;
 
 const spy_properties = `# Log file location (optional – defaults to system out)
