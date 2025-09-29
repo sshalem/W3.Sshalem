@@ -1,5 +1,6 @@
 import { Answer, MainChildArea, Question } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -52,6 +53,49 @@ const OO_DtoVsEntity = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
         </Answer>
+        <Question>
+          <div className="text-lg font-semibold">
+            With Fetch Lazy , we Add annotations of <SpanGrey>@JsonManagedReference / @JsonBackReference</SpanGrey> ? What they do?
+          </div>
+        </Question>
+        <Answer>
+          These annotations tell Jackson:
+          <ULdisc>
+            <Li>
+              <SpanGrey>Serialize</SpanGrey> this relationship, but <SpanGrey>prevent infinite recursion</SpanGrey> in bidirectional associations.
+            </Li>
+            <Li>
+              When Jackson serializes <SpanGrey>UserEntity</SpanGrey>, it sees roles and says: ➡️
+              <strong>"I need to serialize this collection too."</strong>
+            </Li>
+            <Li>
+              But since roles is LAZY and the Hibernate session is already closed (transaction ended before serialization), it tries to initialize the
+              proxy → <SpanGrey>💥 LazyInitializationException</SpanGrey> .
+            </Li>
+          </ULdisc>
+        </Answer>
+        <Question>
+          <div className="text-lg font-semibold">
+            🔹 Why <SpanGrey>@JsonIgnore</SpanGrey> solved it
+          </div>
+        </Question>
+        <Answer>
+          Jackson simply skips the roles field during <SpanGrey>serialization</SpanGrey>.
+          <ULdisc>
+            <Li>➡️ That means it never tries to touch the lazy proxy.</Li>
+            <Li>➡️ No lazy load attempt → no error.</Li>
+          </ULdisc>
+        </Answer>
+        So, the difference is:
+        <ULdisc>
+          <Li>
+            <strong>@JsonManagedReference / @JsonBackReference</strong> → Jackson does serialize the relationship → triggers lazy loading, to prevent
+            this, we retrun DTO in contrller layer
+          </Li>
+          <Li>
+            <strong>@JsonIgnore</strong> → Jackson skips the relationship → No Serialization → no lazy loading, no error.
+          </Li>
+        </ULdisc>
       </section>
     </MainChildArea>
   );

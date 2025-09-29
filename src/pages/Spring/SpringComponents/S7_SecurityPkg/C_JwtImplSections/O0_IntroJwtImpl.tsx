@@ -1,5 +1,5 @@
 import { Anchor, MainChildArea } from "../../../../../components";
-import { SpanBlue } from "../../../../../components/Highlight";
+import { SpanBlue, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -11,7 +11,8 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
         In this implementations:
         <ULdisc>
           <Li>
-            I use Spring boot version <SpanBlue>2.6.11</SpanBlue>
+            I use Spring boot version <SpanBlue>2.6.11</SpanBlue>. <br />
+            <SpanRed>Note</SpanRed> : from Spring boot 2.7 , the SecurityConfig is changed (See in the code )
           </Li>
           <Li>
             I use <SpanBlue>jdk-11</SpanBlue> version
