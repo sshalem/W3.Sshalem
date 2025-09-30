@@ -1,4 +1,4 @@
-import { MainChildArea } from "../../../../../components";
+import { Anchor, MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import Li from "../../../../../components/ui/Li";
@@ -7,6 +7,20 @@ import ULdisc from "../../../../../components/ui/ULdisc";
 const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
+        <ULdisc>
+          <Li>
+            🔑 GitHub project link ⇨{" "}
+            <Anchor
+              description="Spring boot Version v2.6.11 - JwtTokenUtil"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/jwt/JwtTokenUtil.java"
+            ></Anchor>{" "}
+          </Li>
+        </ULdisc>
+      </section>
+      <hr />
+
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔑 JwtTokenUtil</p>
 

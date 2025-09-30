@@ -1,4 +1,4 @@
-import { IMG, MainChildArea } from "../../../../../components";
+import { Anchor, IMG, MainChildArea } from "../../../../../components";
 import { XmlHighlight } from "../../../../../components/Highlight";
 import security_9 from "../../../../../assets/security_9.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -13,6 +13,20 @@ const O1_POM = ({ anchor }: { anchor: string }) => {
 
   return (
     <MainChildArea anchor={anchor}>
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
+        <ULdisc>
+          <Li>
+            🔑 GitHub project link ⇨{" "}
+            <Anchor
+              description="Spring boot Version v2.6.11 - POM & Dependencies"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/pom.xml"
+            ></Anchor>{" "}
+          </Li>
+        </ULdisc>
+      </section>
+      <hr />
+
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 Dependencies + POM file</p>
         <article>

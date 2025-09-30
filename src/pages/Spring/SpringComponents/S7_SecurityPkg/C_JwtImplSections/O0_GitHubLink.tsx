@@ -1,8 +1,8 @@
 import { Anchor, MainChildArea } from "../../../../../components";
-import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
+import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O15_Controller = ({ anchor }: { anchor: string }) => {
+const O0_GitHubLink = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -11,21 +11,11 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - controller"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/controller"
+              description="Spring-Security jwt-authorities Spring boot Version v2.6.11"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
-      </section>
-      <hr />
-
-      <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🧩 Dependencies + POM file</p>
-        <article>
-          <ULdisc>
-            <Li></Li>
-          </ULdisc>
-        </article>
       </section>
       <hr />
 
@@ -41,4 +31,4 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O15_Controller;
+export default O0_GitHubLink;
