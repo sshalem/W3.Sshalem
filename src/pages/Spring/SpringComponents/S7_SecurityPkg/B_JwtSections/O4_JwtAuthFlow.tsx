@@ -4,6 +4,7 @@ import security_7 from "../../../../../assets/security_7.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
+import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 
 const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,6 +12,7 @@ const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 Jwt Login Process flow</p>
         <IMG img_name={security_7}></IMG>
+        <p className="my-4 text-lg font-semibold">🧩 Auhtnetication Flow</p>
         <ULdisc>
           <Li>
             A client (frontend app, Postman, etc.) sends a <SpanGreen>POST /login</SpanGreen> or <SpanGreen>POST /authenticate</SpanGreen> request
@@ -21,6 +23,17 @@ const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
           <Li>Server Send JWT Back to Client</Li>
           <Li>The client stores the token (usually in localStorage or sessionStorage for web apps, or Secure Storage in mobile apps).</Li>
           <Li>For each subsequent request, the client sends the JWT in the Authorization header</Li>
+        </ULdisc>
+        <p className="my-4 text-lg font-semibold">🧩 Validation Flow</p>
+        <ULdisc>
+          <Li>
+            For every request (<SpanGreen>GET /POST /PUT /DELETE</SpanGreen>) a client (frontend app, Postman, etc.) sends, <br />
+            It must send a<SpanGrey>Authorization header</SpanGrey> with <SpanGrey>{"Bearer <token>"}</SpanGrey>
+          </Li>
+          <Li>
+            This <SpanGrey>{"Bearer <token>"}</SpanGrey>, will be validated in the <SpanGrey>JwtAuthenticationFilter</SpanGrey>
+          </Li>
+          <Li>On JWT token is valid , Server will continue processing the request.</Li>
         </ULdisc>
         <JavaHighlight javaCode={jwt_login}></JavaHighlight>
       </section>
