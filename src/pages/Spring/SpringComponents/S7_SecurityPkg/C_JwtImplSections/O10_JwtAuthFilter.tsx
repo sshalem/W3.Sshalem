@@ -94,6 +94,41 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </section>
       <hr />
+
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold">
+          🔑 Authentication flow with <SpanGrey>JwtAuthenticationFilter</SpanGrey>{" "}
+        </p>
+
+        <ULdisc>
+          <Li>User sends username + password to /auth/login.</Li>
+          <Li>
+            Spring Security calls your <SpanGrey>UserDetailsService.loadUserByUsername</SpanGrey> .
+          </Li>
+          <Li>
+            The <SpanGrey>AuthenticationManager</SpanGrey> checks the password and the account flags:
+            <ULdisc>
+              <Li>
+                <SpanGrey>isEnabled()</SpanGrey>
+              </Li>
+              <Li>
+                <SpanGrey>isAccountNonLocked()</SpanGrey>
+              </Li>
+              <Li>
+                <SpanGrey>isAccountNonExpired()</SpanGrey>
+              </Li>
+              <Li>
+                <SpanGrey>isCredentialsNonExpired()</SpanGrey>
+              </Li>
+              <Li>If any of them is false, it throws a specific exception.</Li>
+            </ULdisc>
+          </Li>
+          <Li>If authentication succeeds, you generate a JWT and send it back.</Li>
+          <Li>Subsequent requests use the JWT in Authorization: Bearer ....</Li>
+        </ULdisc>
+      </section>
+      <hr />
+
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">
           🔹 Why set the Authentication in <SpanGrey>SecurityContextHolder</SpanGrey>?
