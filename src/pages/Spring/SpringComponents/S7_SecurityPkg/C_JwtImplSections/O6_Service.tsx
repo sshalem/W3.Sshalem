@@ -2,8 +2,14 @@ import { MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { JavaHighlight } from "../../../../../components/Highlight";
+import { useMemo } from "react";
 
 const O6_Service = ({ anchor }: { anchor: string }) => {
+  // 1. I Memoize Syntax Highlighter , for better perfromance
+  // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
+  const renderUserServiceImpl = useMemo(() => <JavaHighlight javaCode={user_service_impl} />, [user_service_impl]);
+  const renderRoleServiceImpl = useMemo(() => <JavaHighlight javaCode={role_service_impl} />, [role_service_impl]);
+
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -20,13 +26,13 @@ const O6_Service = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 UserServiceImpl</p>
-        <JavaHighlight javaCode={user_service_impl}></JavaHighlight>
+        {renderUserServiceImpl}
       </section>
       <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 RoleServiceImpl</p>
-        <JavaHighlight javaCode={role_service_impl}></JavaHighlight>
+        {renderRoleServiceImpl}
       </section>
       <hr />
 

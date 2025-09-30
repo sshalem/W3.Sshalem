@@ -2,8 +2,12 @@ import { MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { JavaHighlight } from "../../../../../components/Highlight";
+import { useMemo } from "react";
 
 const O5_Repository = ({ anchor }: { anchor: string }) => {
+  const renderUserRepository = useMemo(() => <JavaHighlight javaCode={user_repo} />, [user_repo]);
+  const renderRoleRepository = useMemo(() => <JavaHighlight javaCode={role_repo} />, [role_repo]);
+
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -20,13 +24,13 @@ const O5_Repository = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 UserRepository</p>
-        <JavaHighlight javaCode={user_repo}></JavaHighlight>
+        {renderUserRepository}
       </section>
       <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 RoleRepository</p>
-        <JavaHighlight javaCode={role_repo}></JavaHighlight>
+        {renderRoleRepository}
       </section>
       <hr />
 

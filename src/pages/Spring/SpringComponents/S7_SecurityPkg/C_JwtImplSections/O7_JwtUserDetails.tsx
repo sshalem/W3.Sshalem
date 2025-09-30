@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
@@ -5,6 +6,9 @@ import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O7_JwtUserDetails = ({ anchor }: { anchor: string }) => {
+  // 1. I Memoize Syntax Highlighter , for better perfromance
+  // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
+  const renderJwtUserDetails = useMemo(() => <JavaHighlight javaCode={jwt_user_details} />, [jwt_user_details]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -27,7 +31,7 @@ const O7_JwtUserDetails = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
         </article>
-        <JavaHighlight javaCode={jwt_user_details}></JavaHighlight>
+        {renderJwtUserDetails}
       </section>
       <hr />
 

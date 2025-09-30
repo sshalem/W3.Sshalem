@@ -219,7 +219,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
 export default O10_JwtAuthFilter;
 
-const code_java = `package com.backend.jwt;
+const code_java = `package com.O2.jwt;
 
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -229,10 +229,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -253,13 +257,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+            
         final String authorizationHeader = request.getHeader("Authorization");
 
         try {
             if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
                 String jwtToken = authorizationHeader.substring(7);
+
                 if (jwtTokenUtil.validateToken(jwtToken) && SecurityContextHolder.getContext().getAuthentication() == null) {
+
                     String email = jwtTokenUtil.extractUsernameFromToken(jwtToken);
+                    LOGGER.info("JwtAuthenticationFilter validates user --> loadUserByUsername(email)");
                     UserDetails userDetails = jwtUserDetailsService.loadUserByUsername(email);
                     UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                             userDetails,
@@ -269,7 +277,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(authToken);
                 }
             }
-        } catch (ExpiredJwtException | BadCredentialsException ex) {
+        } catch (ExpiredJwtException | BadCredentialsException | UsernameNotFoundException | DisabledException |
+                 LockedException | AccountExpiredException ex) {
             LOGGER.error(ex.getMessage());
             request.setAttribute("exception", ex);
         }
