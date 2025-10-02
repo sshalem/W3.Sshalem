@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O0_GitHubJdk21Link from "./O0_GitHubJdk21Link";
+import O0_IntroJdk21JwtImpl from "./O0_IntroJdk21JwtImpl";
+import O1_POMJdk from "./O1_POMJdk";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroJwtImpl = "1. Intro Jwt Implementation";
-const o2_SpringBootVersion = "2. Spring Version 2.6.11 & JDK";
-const ox_POM = "x. Dependencies & POM";
-const ox_PackageLayout = "x. Package Layout";
-const ox_JwtTokenUtil = "x. JwtTokenUtil";
-const ox_JwtAuthFilter = "x. JwtAuthenticationFilter";
+const o0_IntroJdk21JwtImpl = "Intro Jwt Impl";
+const o0_GitHubJdk21Link = "GitHub Link";
+const o1_POMJdk = "1. Dependencies & POM";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroJwtImpl, o2_SpringBootVersion, ox_POM, ox_PackageLayout, ox_JwtTokenUtil, ox_JwtAuthFilter];
+const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_POMJdk];
 
 // ============================================
 // ============================================
@@ -70,12 +70,9 @@ const JwtImplJdk21Main = () => {
       />
       {/* End Contents */}
 
-      {/* <O1_IntroJwtImpl anchor={o1_IntroJwtImpl}></O1_IntroJwtImpl>
-      <O2_SpringBootVersion anchor={o2_SpringBootVersion}></O2_SpringBootVersion>
-      <Ox_POM anchor={ox_POM}></Ox_POM>
-      <Ox_PackageLayout anchor={ox_PackageLayout}></Ox_PackageLayout>
-      <Ox_JwtTokenUtil anchor={ox_JwtTokenUtil}></Ox_JwtTokenUtil>
-      <Ox_JwtAuthFilter anchor={ox_JwtAuthFilter}></Ox_JwtAuthFilter> */}
+      <O0_GitHubJdk21Link anchor={o0_GitHubJdk21Link}></O0_GitHubJdk21Link>
+      <O0_IntroJdk21JwtImpl anchor={o0_IntroJdk21JwtImpl}></O0_IntroJdk21JwtImpl>
+      <O1_POMJdk anchor={o1_POMJdk}></O1_POMJdk>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

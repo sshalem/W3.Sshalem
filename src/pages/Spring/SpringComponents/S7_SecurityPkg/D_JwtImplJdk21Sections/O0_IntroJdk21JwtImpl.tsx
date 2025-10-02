@@ -3,7 +3,7 @@ import { SpanBlue, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
+const O0_IntroJdk21JwtImpl = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -11,11 +11,11 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
         In this implementations:
         <ULdisc>
           <Li>
-            I use Spring boot version <SpanBlue>2.6.11</SpanBlue>. <br />
+            I use Spring boot version <SpanBlue>3.5.6</SpanBlue>. <br />
             <SpanRed>Note</SpanRed> : from Spring boot 2.7 , the SecurityConfig is changed (See in the code )
           </Li>
           <Li>
-            I use <SpanBlue>jdk-11</SpanBlue> version
+            I use <SpanBlue>jdk-21</SpanBlue> version
           </Li>
           <Li>
             I use <SpanBlue>Postman</SpanBlue> for testing
@@ -23,8 +23,8 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11"
+              description="Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -43,4 +43,4 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O0_IntroJwtImpl;
+export default O0_IntroJdk21JwtImpl;
