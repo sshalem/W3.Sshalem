@@ -1,6 +1,6 @@
 import { MainChildArea } from "../../../../../components";
 
-const JsxIntro = ({ anchor }: { anchor: string }) => {
+const O1_JsxIntro = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}>Add any content here</MainChildArea>;
 };
-export default JsxIntro;
+export default O1_JsxIntro;

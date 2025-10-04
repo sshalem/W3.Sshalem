@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import JsxIntro from "./JsxIntro";
+import O1_JsxIntro from "./O1_JsxIntro";
+import O2_ParentChildProps from "./O2_ParentChildProps";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const jsx_intro = "jsx intro";
+const o1_jsx_intro = "jsx intro";
+const o2_ParentChildProps = "2. Parent Child Props";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [jsx_intro];
+const anchorList: string[] = [o1_jsx_intro, o2_ParentChildProps];
 
 // ============================================
 // ============================================
@@ -66,7 +68,8 @@ const JsxMain = () => {
       />
       {/* End Contents */}
 
-      <JsxIntro anchor={jsx_intro} />
+      <O1_JsxIntro anchor={o1_jsx_intro} />
+      <O2_ParentChildProps anchor={o2_ParentChildProps}></O2_ParentChildProps>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
