@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O0_GitHubJdk21Link from "./O0_GitHubJdk21Link";
 import O0_IntroJdk21JwtImpl from "./O0_IntroJdk21JwtImpl";
-import O1_POMJdk from "./O1_POMJdk";
+import O1_SecurityConfig from "./O1_SecurityConfig";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -10,13 +10,13 @@ import O1_POMJdk from "./O1_POMJdk";
 
 const o0_IntroJdk21JwtImpl = "Intro Jwt Impl";
 const o0_GitHubJdk21Link = "GitHub Link";
-const o1_POMJdk = "1. Dependencies & POM";
+const o1_SecurityConfig = "1. Security Config";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_POMJdk];
+const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_SecurityConfig];
 
 // ============================================
 // ============================================
@@ -70,9 +70,9 @@ const JwtImplJdk21Main = () => {
       />
       {/* End Contents */}
 
-      <O0_GitHubJdk21Link anchor={o0_GitHubJdk21Link}></O0_GitHubJdk21Link>
       <O0_IntroJdk21JwtImpl anchor={o0_IntroJdk21JwtImpl}></O0_IntroJdk21JwtImpl>
-      <O1_POMJdk anchor={o1_POMJdk}></O1_POMJdk>
+      <O0_GitHubJdk21Link anchor={o0_GitHubJdk21Link}></O0_GitHubJdk21Link>
+      <O1_SecurityConfig anchor={o1_SecurityConfig}></O1_SecurityConfig>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
