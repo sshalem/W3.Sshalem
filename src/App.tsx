@@ -124,7 +124,13 @@ import {
   SimpleDefaultMain,
 } from "./pages/Spring/SpringComponents/S8_CachingPkg";
 
-import { JwtImplJdk21Main, JwtMain, OAuth2Main, SpringSecurityMain } from "./pages/Spring/SpringComponents/S7_SecurityPkg";
+import {
+  JwtImplJdk21Main,
+  JwtMain,
+  MultipleJwtSecurityConfigMain,
+  OAuth2Main,
+  SpringSecurityMain,
+} from "./pages/Spring/SpringComponents/S7_SecurityPkg";
 import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
 import {
   ConfigMsgControllerMain,
@@ -307,6 +313,7 @@ const router = createBrowserRouter(
                 { path: "jwt", element: <JwtMain /> },
                 { path: "jwt-implementation", element: <JwtImplMain /> },
                 { path: "jwt-impl-jdk21-spring-boot-v3-5-6", element: <JwtImplJdk21Main /> },
+                { path: "jwt-multiple-config", element: <MultipleJwtSecurityConfigMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
               ],
             },
