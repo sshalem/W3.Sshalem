@@ -2,7 +2,7 @@ import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../../components";
 import { SpanBlue } from "../../../../../components/Highlight";
 
-const DBInitIntro = ({ anchor }: { anchor: string }) => {
+const O1_DBInitIntro = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-2">In this section , Let's see how we can :</div>
@@ -53,4 +53,4 @@ const DBInitIntro = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitIntro;
+export default O1_DBInitIntro;

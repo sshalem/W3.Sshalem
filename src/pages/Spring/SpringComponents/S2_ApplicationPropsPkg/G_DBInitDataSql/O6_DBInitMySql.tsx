@@ -1,25 +1,26 @@
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
-import db_init_8 from "../../../../../assets/db_init_8.jpg";
+import db_init_7 from "../../../../../assets/db_init_7.jpg";
 
-const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
+const O6_DBInitMySql = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
-        here is how we config Postgres with <SpanBlue>data.sql</SpanBlue>
+        here is how we config MySql with <SpanBlue>data.sql</SpanBlue>
         <div>
           <ul className="my-4 ml-16 list-decimal">
             <li className="my-1">
               <div>folder/files layout</div>
-              <IMG img_name={db_init_8}></IMG>
+              <IMG img_name={db_init_7}></IMG>
             </li>
             <li className="my-1">
               <div>
-                create <SpanBlue>application-Postgres.properties</SpanBlue>file
+                create <SpanBlue>application-MySql.properties</SpanBlue>file
               </div>
-              <DivDoubleBorder>application-Postgres.properties</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={applicationPropsPostGresqlProfileCode}></ApplicationPropertiesHighlight>
+              <DivDoubleBorder>application-MySql.properties</DivDoubleBorder>
+              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMySqlProfileCode}></ApplicationPropertiesHighlight>
             </li>
+
             <li className="my-1">
               <div>
                 config main <SpanBlue>application.properties</SpanBlue>
@@ -29,10 +30,10 @@ const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
             </li>
             <li className="my-1">
               <div>
-                <SpanBlue>data-PostGreSql.sql</SpanBlue>
+                <SpanBlue>data-MySql.sql</SpanBlue> code , inside folder <SpanBlue>DB_initialization_scripts</SpanBlue>
               </div>
-              <DivDoubleBorder>data-PostGreSql.sql</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={dataPostGreSql}></ApplicationPropertiesHighlight>
+              <DivDoubleBorder>data-MySql.sql</DivDoubleBorder>
+              <ApplicationPropertiesHighlight propertiesCode={dataMySql}></ApplicationPropertiesHighlight>
             </li>
           </ul>
         </div>
@@ -41,10 +42,10 @@ const DBInitPostgresql = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitPostgresql;
+export default O6_DBInitMySql;
 
-const applicationPropsMainCode = `# Postgres is the name of the profile : application-Postgres.properties
-spring.profiles.active=Postgres
+const applicationPropsMainCode = `# MySql is the name of the profile : application-MySql.properties
+spring.profiles.active=MySql
 
 # console color enabled
 spring.output.ansi.enabled=always
@@ -63,22 +64,25 @@ server.error.whitelabel.enabled=true
 spring.devtools.restart.enabled=true
 `;
 
-const applicationPropsPostGresqlProfileCode = `# ===============================
+const applicationPropsMySqlProfileCode = `# ===============================
 # 		DATA SOURCE
 # =============================== 
-spring.datasource.url=jdbc:postgresql://localhost/e-commerce
-spring.datasource.username=postgres
-spring.datasource.password=postgres
+spring.datasource.url=jdbc:mysql://localhost:3306/e-commerce?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
 
-
-###############################
-# Spring will create a schema
-###############################
-spring.jpa.hibernate.ddl-auto=create-drop
+# ===============================
+# 	 	JPA / HIBERNATE
+# ===============================
+spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
+spring.jpa.open-in-view=false
 #spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.generate_statistics=true
 #spring.jpa.properties.hibernate.format_sql=true
+
+# When using java version JDK11 use with mysql dialect
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 # ==========================================
 #  we must add this config as well for 
@@ -86,13 +90,10 @@ spring.jpa.generate-ddl=true
 # ==========================================
 spring.sql.init.mode=always
 spring.jpa.defer-datasource-initialization=true
-spring.sql.init.platform=PostGreSql
-spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-PostGreSql.sql
-
-# Allows Hibernate to generate SQL optimized for a particular DBMS
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.sql.init.platform=MySql
+spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-MySql.sql
 `;
 
-const dataPostGreSql = `insert into role(role_id, role) values (1, 'ADMIN');
+const dataMySql = `insert into role(role_id, role) values (1, 'ADMIN');
 insert into role(role_id, role) values (2, 'COMPANY');
 insert into role(role_id, role) values (3, 'CUSTOMER');`;

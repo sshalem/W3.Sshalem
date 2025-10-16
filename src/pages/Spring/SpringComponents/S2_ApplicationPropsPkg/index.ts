@@ -5,4 +5,6 @@ export { default as PostgresqlMain } from "./C_PostgreSqlSections/PostgresqlMain
 export { default as MongoDBMain } from "./D_MongoDbSections/MongoDBMain";
 export { default as DBeaverMain } from "./E_DBeaverSections/DBeaverMain";
 export { default as ProfileMain } from "./F_ProfilesSection/ProfileMain";
-export { default as DBInitMain } from "./G_DBInitialization/DBInitMain";
+export { default as DBInitDataSqlMain } from "./G_DBInitDataSql/DBInitDataSqlMain";
+export { default as DBInitPostConstructMain } from "./H_DBInitPostConstruct/DBInitPostConstructMain";
+export { default as DBInitCommandLineRunnerMain } from "./I_DBInitCommandLineRunner/DBInitCommandLineRunnerMain";

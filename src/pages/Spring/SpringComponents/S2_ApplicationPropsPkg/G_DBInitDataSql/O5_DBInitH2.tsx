@@ -2,7 +2,7 @@ import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_6 from "../../../../../assets/db_init_6.jpg";
 
-const DBInitH2 = ({ anchor }: { anchor: string }) => {
+const O5_DBInitH2 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       here is how we config H2 with <SpanBlue>data.sql</SpanBlue>
@@ -41,7 +41,7 @@ const DBInitH2 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitH2;
+export default O5_DBInitH2;
 
 const applicationPropsMainCode = `# H2 is the name of the profile : application-H2.properties
 spring.profiles.active=H2

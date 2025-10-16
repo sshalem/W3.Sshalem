@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../..
 import db_init_1 from "../../../../../assets/db_init_1.jpg";
 import db_init_2 from "../../../../../assets/db_init_2.jpg";
 
-const DBSchemaSql = ({ anchor }: { anchor: string }) => {
+const O2_DBInitSchemaSql = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       In Spring Boot, <SpanBlue>schema.sql</SpanBlue> is a SQL script file used to define and initialize the database schema (i.e., tables,
@@ -103,7 +103,7 @@ const DBSchemaSql = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBSchemaSql;
+export default O2_DBInitSchemaSql;
 
 const propertiesDefaultCode = `spring.jpa.hibernate.ddl-auto=create  # or update, validate, etc.
 `;

@@ -41,7 +41,9 @@ import {
 
 import {
   DBeaverMain,
-  DBInitMain,
+  DBInitCommandLineRunnerMain,
+  DBInitDataSqlMain,
+  DBInitPostConstructMain,
   H2Main,
   MongoDBMain,
   MySqlMain,
@@ -238,7 +240,9 @@ const router = createBrowserRouter(
                 { path: "mongodb", element: <MongoDBMain /> },
                 { path: "dbeaver", element: <DBeaverMain /> },
                 { path: "profiles", element: <ProfileMain /> },
-                { path: "db-initialization", element: <DBInitMain /> },
+                { path: "db-initialization", element: <DBInitDataSqlMain /> },
+                { path: "post-construct-initialization", element: <DBInitPostConstructMain /> },
+                { path: "command-line-initialization", element: <DBInitCommandLineRunnerMain /> },
               ],
             },
             {

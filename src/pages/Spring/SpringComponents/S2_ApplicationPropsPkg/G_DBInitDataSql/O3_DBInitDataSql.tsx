@@ -3,7 +3,7 @@ import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../..
 import db_init_3 from "../../../../../assets/db_init_3.jpg";
 import db_init_4 from "../../../../../assets/db_init_4.jpg";
 
-const DBDataSql = ({ anchor }: { anchor: string }) => {
+const O3_DBInitDataSql = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <SpanBlue>data.sql</SpanBlue> is an SQL file commonly used in Spring Boot ,that contains SQL statements to{" "}
@@ -111,7 +111,7 @@ const DBDataSql = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBDataSql;
+export default O3_DBInitDataSql;
 
 const dataSqlCode = `spring.sql.init.mode=always
 spring.jpa.hibernate.ddl-auto=create

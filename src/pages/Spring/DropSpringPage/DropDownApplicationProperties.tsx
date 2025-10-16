@@ -55,7 +55,9 @@ const DropDownApplicationProperties = () => {
         <SideDropdownLink sideDropDownNavName="MongoDB" internalLink="/spring/application-properties/mongodb" />
         <SideDropdownLink sideDropDownNavName="DBeaver" internalLink="/spring/application-properties/dbeaver" />
         <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/spring/application-properties/profiles" />
-        <SideDropdownLink sideDropDownNavName="DB Initialization" internalLink="/spring/application-properties/db-initialization" />
+        <SideDropdownLink sideDropDownNavName="DB Init data.sql" internalLink="/spring/application-properties/db-initialization" />
+        <SideDropdownLink sideDropDownNavName="DB Init @PostConstruct" internalLink="/spring/application-properties/post-construct-initialization" />
+        <SideDropdownLink sideDropDownNavName="DB Init CommandLineRunner" internalLink="/spring/application-properties/command-line-initialization" />
       </div>
     </section>
   );

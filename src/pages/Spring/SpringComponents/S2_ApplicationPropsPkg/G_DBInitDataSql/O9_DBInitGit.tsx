@@ -1,6 +1,6 @@
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
-const DBInitGit = ({ anchor }: { anchor: string }) => {
+const O9_DBInitGit = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <GitHub>
@@ -33,4 +33,4 @@ const DBInitGit = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitGit;
+export default O9_DBInitGit;

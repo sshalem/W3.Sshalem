@@ -2,7 +2,7 @@ import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_5 from "../../../../../assets/db_init_5.jpg";
 
-const DBInitPlatform = ({ anchor }: { anchor: string }) => {
+const O4_DBInitPlatform = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       The <SpanBlue>spring.sql.init.platform</SpanBlue> property in Spring Boot is used to select a platform-specific SQL script (like
@@ -51,4 +51,4 @@ const DBInitPlatform = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitPlatform;
+export default O4_DBInitPlatform;

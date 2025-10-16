@@ -2,7 +2,7 @@ import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_9 from "../../../../../assets/db_init_9.jpg";
 
-const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
+const O8_DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
@@ -49,7 +49,7 @@ const DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBInitMultipleProfiles;
+export default O8_DBInitMultipleProfiles;
 
 const applicationPropsMainCode = `#spring.profiles.active=H2
 spring.profiles.active=MySql
