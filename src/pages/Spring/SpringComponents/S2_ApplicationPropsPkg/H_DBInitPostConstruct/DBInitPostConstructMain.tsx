@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_PostConstructIntro from "./O1_PostConstructIntro";
+import O2_PostConstructImpl from "./O2_PostConstructImpl";
 
 // =============================================================================================================
 
 const o1_PostConstructIntro = "1. @PostConstruct Intro";
+const o2_PostConstructImpl = `2. @PostConstruct example`;
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_PostConstructIntro];
+const anchorList: string[] = [o1_PostConstructIntro, o2_PostConstructImpl];
 
 // =============================================================================================================
 
@@ -61,6 +63,7 @@ const DBInitPostConstructMain = () => {
       />
       {/* End Contents */}
       <O1_PostConstructIntro anchor={o1_PostConstructIntro} />
+      <O2_PostConstructImpl anchor={o2_PostConstructImpl}></O2_PostConstructImpl>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

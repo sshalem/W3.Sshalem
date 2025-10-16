@@ -1,25 +1,32 @@
-import { IMG, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
-import db_init_6 from "../../../../../assets/db_init_6.jpg";
+import { MainChildArea } from "../../../../../components";
+import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";
+import Li from "../../../../../components/ui/Li";
+import ULDecimal from "../../../../../components/ui/ULDecimal";
 
 const O1_PostConstructIntro = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      here is how we config H2 with <SpanBlue>data.sql</SpanBlue>
-      <div>
-        <ul className="my-4 ml-16 list-decimal">
-          <li className="my-1">
-            <div>folder/files layout</div>
-            <IMG img_name={db_init_6}></IMG>
-          </li>
-          <li className="my-1">
-            <div>
-              create <SpanBlue>application-H2.properties</SpanBlue>file
-            </div>
-            <DivDoubleBorder>application-H2.properties</DivDoubleBorder>
-          </li>
-        </ul>
-      </div>
+      <section className="my-8">
+        ⭐⭐⭐ <br /> <br /> what is the difference between <SpanGrey>CommandLineRunner</SpanGrey> to <SpanGrey>@PostConstruct</SpanGrey> and{" "}
+        <SpanGrey>data.sql</SpanGrey> ?
+        <br />
+        <br />
+        ⭐⭐⭐ <br /> <br /> <SpanGrey>CommandLineRunner</SpanGrey> , <SpanGrey>@PostConstruct</SpanGrey>, and <SpanGrey>data.sql</SpanGrey> are three
+        different mechanisms in Spring Boot used for <br /> <strong>initializing data or running logic at application startup</strong>, <br /> but
+        they serve different purposes, have different scopes, and are executed at different phases of the app lifecycle.
+        <TableCompareDBInit></TableCompareDBInit>
+        <p className="text-lg font-semibold">⏱️ Order of Execution</p>
+        <div className="my-8">
+          <p>If you use all three, this is roughly the order:</p>
+          <ULDecimal>
+            <Li>schema.sql (if present)</Li>
+            <Li>data.sql</Li>
+            <Li>Beans initialized → @PostConstruct methods run</Li>
+            <Li>Spring context ready → CommandLineRunner.run() executed</Li>
+          </ULDecimal>
+        </div>
+      </section>
     </MainChildArea>
   );
 };
