@@ -4,6 +4,7 @@ import O1_IntroJpql from "./O1_IntroJpql";
 import O2_JpqlNameVsPositionParam from "./O2_JpqlNameVsPositionParam";
 import O3_QuerySingleEntityTable from "./O3_QuerySingleEntityTable";
 import O4_QueryJoinedEntityTable from "./O4_QueryJoinedEntityTable";
+import O5_QueryJoinFetchDistinct from "./O5_QueryJoinFetchDistinct";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,12 +14,19 @@ const o1_IntroJpql = "1. Intro";
 const o2_JpqlNameVsPositionParam = "2. Name Params Vs Position Param";
 const o3_QuerySingleEntityTable = "3. Query Single Entity/Table";
 const o4_QueryJoinedEntityTable = "4. Query Joined Entity/Table";
+const o5_QueryJoinFetchDistinct = "5. Query Join Fetch Distinct";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroJpql, o2_JpqlNameVsPositionParam, o3_QuerySingleEntityTable, o4_QueryJoinedEntityTable];
+const anchorList: string[] = [
+  o1_IntroJpql,
+  o2_JpqlNameVsPositionParam,
+  o3_QuerySingleEntityTable,
+  o4_QueryJoinedEntityTable,
+  o5_QueryJoinFetchDistinct,
+];
 
 // ============================================
 // ============================================
@@ -76,6 +84,7 @@ const JpqlMain = () => {
       <O2_JpqlNameVsPositionParam anchor={o2_JpqlNameVsPositionParam}></O2_JpqlNameVsPositionParam>
       <O3_QuerySingleEntityTable anchor={o3_QuerySingleEntityTable}></O3_QuerySingleEntityTable>
       <O4_QueryJoinedEntityTable anchor={o4_QueryJoinedEntityTable}></O4_QueryJoinedEntityTable>
+      <O5_QueryJoinFetchDistinct anchor={o5_QueryJoinFetchDistinct}></O5_QueryJoinFetchDistinct>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

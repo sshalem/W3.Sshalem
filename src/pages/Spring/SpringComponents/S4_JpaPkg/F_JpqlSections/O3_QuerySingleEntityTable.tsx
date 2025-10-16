@@ -31,8 +31,8 @@ const O3_QuerySingleEntityTable = ({ anchor }: { anchor: string }) => {
           </ULdisc>
           <SpanSky>Named Parameter</SpanSky>
           <JavaHighlight javaCode={id_named_param}></JavaHighlight>
-          <SpanSky>Position Parameter</SpanSky>
-          <JavaHighlight javaCode={id_position_param}></JavaHighlight>
+          {/* <SpanSky>Position Parameter</SpanSky>
+          <JavaHighlight javaCode={id_position_param}></JavaHighlight> */}
           <SpanSky>Native SQL</SpanSky>
           <br />
           <SpanRed>(Always use Named Parameter with Native SQL) </SpanRed>
@@ -84,8 +84,8 @@ public class UserEntity {
 const id_named_param = `@Query("SELECT user from UserEntity user WHERE user.id=:id")
 UserEntity findById(@Param("id") long id);`;
 
-const id_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1")
-UserEntity findById(long id);`;
+// const id_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1")
+// UserEntity findById(long id);`;
 
 const id_native_query = `@Query(value = "SELECT * FROM USERS_TB WHERE id=:id", nativeQuery = true)
 UserEntity findById(@Param("id") long id);`;

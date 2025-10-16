@@ -31,8 +31,8 @@ const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
           </ULdisc>
           <SpanSky>Named Parameter</SpanSky>
           <JavaHighlight javaCode={id_named_param}></JavaHighlight>
-          <SpanSky>Position Parameter</SpanSky>
-          <JavaHighlight javaCode={id_position_param}></JavaHighlight>
+          {/* <SpanSky>Position Parameter</SpanSky>
+          <JavaHighlight javaCode={id_position_param}></JavaHighlight> */}
           <SpanSky>Native SQL</SpanSky>
           <br />
           <SpanRed>(Always use Named Parameter with Native SQL) </SpanRed>
@@ -47,13 +47,13 @@ const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
           </ULdisc>
           <SpanSky>Named Parameter</SpanSky>
           <JavaHighlight javaCode={id_name_named_param}></JavaHighlight>
-          <SpanSky>Position Parameter</SpanSky> - is related to the position of the value in the query. <br />I prefer to use Named Parameters. From
+          {/* <SpanSky>Position Parameter</SpanSky> - is related to the position of the value in the query. <br />I prefer to use Named Parameters. From
           now on , I will show Only 2 options
           <ULdisc>
             <Li>Named Parameters</Li>
             <Li>Native SQL query</Li>
           </ULdisc>
-          <JavaHighlight javaCode={id_name_position_param}></JavaHighlight>
+          <JavaHighlight javaCode={id_name_position_param}></JavaHighlight> */}
           <SpanSky>Native SQL</SpanSky>
           <br />
           <SpanRed>(Always use Named Parameter with Native SQL) </SpanRed>
@@ -84,8 +84,8 @@ public class UserEntity {
 const id_named_param = `@Query("SELECT user from UserEntity user WHERE user.id=:id")
 UserEntity findById(@Param("id") long id);`;
 
-const id_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1")
-UserEntity findById(long id);`;
+// const id_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1")
+// UserEntity findById(long id);`;
 
 const id_native_query = `@Query(value = "SELECT * FROM USERS_TB WHERE id=:id", nativeQuery = true)
 UserEntity findById(@Param("id") long id);`;
@@ -96,8 +96,8 @@ UserEntity findById(@Param("id") long id);`;
 const id_name_named_param = `@Query("SELECT user from UserEntity user WHERE user.id=:id AND user.name=:name")
 UserEntity jpqlFindByIdAndName(@Param("id") long id, @Param("name") String name);`;
 
-const id_name_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1 AND user.name = ?2")
-UserEntity posFindByIdAndName(@Param("id") long id, @Param("name") String name);`;
+// const id_name_position_param = `@Query("SELECT user from UserEntity user WHERE user.id = ?1 AND user.name = ?2")
+// UserEntity posFindByIdAndName(@Param("id") long id, @Param("name") String name);`;
 
 const id_name_native_query = `@Query(value = "SELECT * FROM USERS_TB WHERE id=:id AND name=:name", nativeQuery = true)
 UserEntity nativeFindByIdAndName(@Param("id") long id, @Param("name") String name);`;
