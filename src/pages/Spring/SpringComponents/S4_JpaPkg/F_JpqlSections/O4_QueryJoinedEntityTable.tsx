@@ -1,9 +1,5 @@
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanSky, SpanTeal } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULDecimal from "../../../../../components/ui/ULDecimal";
-import ULdisc from "../../../../../components/ui/ULdisc";
-import SpanRed from "../../../../../components/Highlight/SpanRed";
 
 const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
   return (
@@ -35,7 +31,6 @@ const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={id_position_param}></JavaHighlight> */}
           <SpanSky>Native SQL</SpanSky>
           <br />
-          <SpanRed>(Always use Named Parameter with Native SQL) </SpanRed>
           <JavaHighlight javaCode={id_native_query}></JavaHighlight>
         </article>
         <article>
@@ -56,7 +51,6 @@ const O4_QueryJoinedEntityTable = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={id_name_position_param}></JavaHighlight> */}
           <SpanSky>Native SQL</SpanSky>
           <br />
-          <SpanRed>(Always use Named Parameter with Native SQL) </SpanRed>
           <JavaHighlight javaCode={id_name_native_query}></JavaHighlight>
         </article>
       </section>

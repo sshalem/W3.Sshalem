@@ -1,6 +1,4 @@
-import { MainChildArea } from "../../../../../components";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 
 const O5_LazyCascadeRemove = ({ anchor }: { anchor: string }) => {
   return (

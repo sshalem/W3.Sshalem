@@ -1,7 +1,5 @@
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O8_OrphanRemoval = ({ anchor }: { anchor: string }) => {
   return (

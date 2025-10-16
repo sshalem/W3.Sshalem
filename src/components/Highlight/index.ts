@@ -11,5 +11,6 @@ export { default as SpanBlue } from "./SpanBlue";
 export { default as SpanSky } from "./SpanSky";
 export { default as SpanCyan } from "./SpanCyan";
 export { default as SpanTeal } from "./SpanTeal";
+export { default as SpanGrey } from "./SpanGrey";
 
 export { default as DivDoubleBorder } from "./DivDoubleBorder";

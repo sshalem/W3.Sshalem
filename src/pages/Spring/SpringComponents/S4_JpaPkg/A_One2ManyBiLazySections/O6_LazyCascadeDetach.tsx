@@ -1,7 +1,5 @@
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanRed } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
   return (

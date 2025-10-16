@@ -1,8 +1,6 @@
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import TableCompareMerge from "../../../../../components/Tables/TableCompareMerge";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O4_LazyCascadeMerge = ({ anchor }: { anchor: string }) => {
   return (

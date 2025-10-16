@@ -1,17 +1,12 @@
-import { Anchor, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
-import SpanRed from "../../../../../components/Highlight/SpanRed";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import ULDecimal from "../../../../../components/ui/ULDecimal";
+import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
         <div>
-          There are cases where we need to use <SpanGrey>JOIN FETCH</SpanGrey> along with <SpanGrey>DISTINCT</SpanGrey> way to fetch data from DB ,
+          There are cases where we need to use <SpanGrey>JOIN FETCH</SpanGrey> along with <SpanGrey>DISTINCT</SpanGrey> , to fetch data from DB ,
           becasue:
           <ULdisc>
             <Li>
@@ -72,6 +67,14 @@ const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
             <Li>Always use DISTINCT in the QUERY when doing JOIN FETCH to avoid duplications</Li>
           </ULDecimal>
           <JavaHighlight javaCode={user_repository}></JavaHighlight>
+          <ULdisc>
+            <Li>Console shows only 1 SQL query performed</Li>
+            <Li>used DISTINCT keyword</Li>
+            <Li>
+              We see twice <SpanGrey>left join</SpanGrey> , since User/Role are mapped as ManyToMany
+            </Li>
+          </ULdisc>
+          <JavaHighlight javaCode={sql_query}></JavaHighlight>
         </article>
         {/*  */}
       </section>
@@ -149,3 +152,22 @@ public class JwtUserDetailsService implements UserDetailsService {
 		return new JwtUserDetails(userEntity);
 	}
 }`;
+
+const sql_query = `    select
+        distinct ue1_0.user_id,
+        ue1_0.email,
+        ue1_0.name,
+        ue1_0.password,
+        r1_0.user_id,
+        r1_1.role_id,
+        r1_1.role 
+    from
+        users_tb ue1_0 
+    left join
+        user_role r1_0 
+            on ue1_0.user_id=r1_0.user_id 
+    left join
+        roles_tb r1_1 
+            on r1_1.role_id=r1_0.role_id 
+    where
+        ue1_0.email=?`;

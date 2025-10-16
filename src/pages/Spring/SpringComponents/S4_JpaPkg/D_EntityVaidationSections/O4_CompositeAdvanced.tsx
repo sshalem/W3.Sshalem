@@ -1,7 +1,5 @@
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanTeal } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O4_CompositeAdvanced = ({ anchor }: { anchor: string }) => {
   return (

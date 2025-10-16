@@ -14,7 +14,7 @@ const o1_IntroJpql = "1. Intro";
 const o2_JpqlNameVsPositionParam = "2. Name Params Vs Position Param";
 const o3_QuerySingleEntityTable = "3. Query Single Entity/Table";
 const o4_QueryJoinedEntityTable = "4. Query Joined Entity/Table";
-const o5_QueryJoinFetchDistinct = "5. Query Join Fetch Distinct";
+const o5_QueryJoinFetchDistinct = "5. JOIN FETCH (Distinct)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==

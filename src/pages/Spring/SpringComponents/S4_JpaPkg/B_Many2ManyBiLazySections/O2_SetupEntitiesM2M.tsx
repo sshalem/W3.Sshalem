@@ -1,7 +1,5 @@
-import { Anchor, MainChildArea } from "../../../../../components";
+import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O2_SetupEntitiesM2M = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +17,7 @@ const O2_SetupEntitiesM2M = ({ anchor }: { anchor: string }) => {
           Here I will show the best practice for setting up a Bi-Directional <SpanSky>@ManyToMany</SpanSky> mapping Fetch Lazy. The entire code in the
           GitRepo , includes :
           <ULdisc>
-            <Li>Full Entity defenition (Incluuding hashcode, equals , G/T/ToStr)</Li>
+            <Li>Full Entity defenition (Including hashcode, equals , G/T/ToStr)</Li>
             <Li>JpaRepositorioes for both entities , with multiple queries examples</Li>
             <Li>Service layer , icluding logic for all possibles options (add, update , delete , delete all , etc...)</Li>
             <Li>Contrller layer</Li>

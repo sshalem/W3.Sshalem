@@ -1,9 +1,6 @@
-import { Anchor, Answer, IMG, MainChildArea, Question } from "../../../../../components";
+import { Anchor, Answer, IMG, Li, MainChildArea, Question, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, JsxHighlight, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULDecimal from "../../../../../components/ui/ULDecimal";
 import jpa_01 from "../../../../../assets/jpa_01.jpg";
-import ULdisc from "../../../../../components/ui/ULdisc";
 import { Link } from "react-router-dom";
 
 const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {

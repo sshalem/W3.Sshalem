@@ -1,8 +1,5 @@
-import { Answer, MainChildArea, Question } from "../../../../../components";
-import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
+import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
+import { SpanBlue, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const OO_DtoVsEntity = ({ anchor }: { anchor: string }) => {
   return (

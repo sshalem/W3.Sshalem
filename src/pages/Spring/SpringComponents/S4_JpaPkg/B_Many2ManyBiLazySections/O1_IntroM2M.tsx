@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { MainChildArea } from "../../../../../components";
-import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
-import ULdisc from "../../../../../components/ui/ULdisc";
-import Li from "../../../../../components/ui/Li";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
   return (
@@ -53,12 +51,13 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
             We define an <strong>owning side</strong> and an <strong>inverse side</strong>:
             <ULdisc>
               <Li>
-                <strong>Owning side</strong> → define <strong>@JoinTable</strong>, <strong>Helper methods</strong>
-                <strong>cascade type</strong> and <strong>fetch (Lazy) </strong> . Hibernate checks this side when persisting.
+                <SpanGrey>Owning side</SpanGrey> → define <SpanGrey>@JoinTable</SpanGrey>, <SpanGrey>Helper methods</SpanGrey>
+                <SpanGrey>cascade type</SpanGrey> and <SpanGrey>fetch (Lazy) </SpanGrey> . Hibernate checks this side when persisting.
               </Li>
               <Li>
-                <strong>Inverse side</strong> → uses <strong>mappedBy</strong>, define <strong>fetch (Lazy) </strong> (both sides need to be defined
-                with Fetch type) . <br /> <strong>NO</strong> helper methods, <strong>NO</strong> Cascade. Hibernate ignores updates here.
+                <SpanGrey>Inverse side</SpanGrey> → uses <SpanGrey>mappedBy</SpanGrey>, define <SpanGrey>fetch (Lazy) </SpanGrey> (both sides need to
+                be defined with Fetch type) . <br /> <SpanRed>NO</SpanRed> helper methods, <SpanRed>NO</SpanRed> Cascade. Hibernate ignores updates
+                here.
               </Li>
             </ULdisc>
           </Li>
