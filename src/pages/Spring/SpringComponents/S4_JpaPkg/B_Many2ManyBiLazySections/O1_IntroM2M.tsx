@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
@@ -10,15 +9,12 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
           Basic concepts are covered in <strong>@OneToMany</strong> intro section (<strong>In-memory, persistent context, Cascade type</strong> )
         </p>
         <p>
-          for more comprehansive see{" "}
-          <Link to={"/spring/jpa/transaction-management"} className="tracking-wider text-blue-500">
-            Tansaction Management setions 1-5
-          </Link>
+          for more comprehansive see <Anchor description="Tansaction Management setions 1-5" href="/spring/jpa/transaction-management"></Anchor>
         </p>
       </div>
       <article>
         Important Notes
-        <ULdisc>
+        <ULDecimal>
           <Li>Always use helper methods (addRole, removeRole) → avoids inconsistent states between both sides.</Li>
           <Li>
             Don’t use <strong>orphanRemoval</strong> with <strong>@ManyToMany</strong> (doesn’t make sense, because the role can belong to multiple
@@ -31,35 +27,51 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
           <Li>
             Prefer <SpanGreen>Set</SpanGreen> over <SpanRed>List</SpanRed> to avoid duplicates in join tables.
           </Li>
-        </ULdisc>
+        </ULDecimal>
       </article>
       <hr />
-      <article className="mt-4">
-        In <strong>@ManyToMany</strong>
+      <article className="mt-8">
+        In <SpanGrey>@ManyToMany</SpanGrey>
         <ULdisc>
           <Li>
-            There is no <SpanRed>parent–child</SpanRed> hierarchy.
+            There is no <SpanGrey>parent–child</SpanGrey> hierarchy (This hierarchy refers only to <SpanGrey>@OneToMany</SpanGrey> ).
           </Li>
           <Li>Both entities are considered equals. For example:</Li>{" "}
           <ULdisc>
             <Li>Student ↔ Course</Li>
           </ULdisc>
           <Li>
-            Neither side is the parent. (Only in <strong>@OneToMany</strong> we refer this way <strong>Parent ↔ Child</strong>)
-          </Li>
-          <Li>
-            We define an <strong>owning side</strong> and an <strong>inverse side</strong>:
-            <ULdisc>
+            We define an <SpanGrey>owning side</SpanGrey> and an <SpanGrey>inverse side</SpanGrey>
+            <ULDecimal>
               <Li>
-                <SpanGrey>Owning side</SpanGrey> → define <SpanGrey>@JoinTable</SpanGrey>, <SpanGrey>Helper methods</SpanGrey>
-                <SpanGrey>cascade type</SpanGrey> and <SpanGrey>fetch (Lazy) </SpanGrey> . Hibernate checks this side when persisting.
+                Owning side → define :
+                <ULdisc>
+                  <Li>
+                    <SpanGrey>@JoinTable</SpanGrey>
+                  </Li>
+                  <Li>Helper methods</Li>
+                  <Li>
+                    <SpanGrey>cascade type</SpanGrey> and <SpanGrey>fetch (Lazy) </SpanGrey> .
+                  </Li>
+                  <Li>Hibernate checks this side when persisting.</Li>
+                </ULdisc>
               </Li>
               <Li>
-                <SpanGrey>Inverse side</SpanGrey> → uses <SpanGrey>mappedBy</SpanGrey>, define <SpanGrey>fetch (Lazy) </SpanGrey> (both sides need to
-                be defined with Fetch type) . <br /> <SpanRed>NO</SpanRed> helper methods, <SpanRed>NO</SpanRed> Cascade. Hibernate ignores updates
-                here.
+                Inverse side → uses:
+                <ULdisc>
+                  <Li>
+                    <SpanGrey>mappedBy</SpanGrey>
+                  </Li>
+                  <Li>
+                    define <SpanGrey>fetch (Lazy) </SpanGrey> (both sides need to be defined with Fetch type) .
+                  </Li>
+                  <Li>
+                    <SpanRed>NO</SpanRed> helper methods, <SpanRed>NO</SpanRed> Cascade.
+                  </Li>
+                  <Li>Hibernate ignores updates here.</Li>
+                </ULdisc>
               </Li>
-            </ULdisc>
+            </ULDecimal>
           </Li>
         </ULdisc>
       </article>
