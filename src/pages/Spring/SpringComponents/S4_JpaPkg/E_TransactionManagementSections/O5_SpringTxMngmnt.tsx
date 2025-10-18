@@ -1,7 +1,5 @@
-import { MainChildArea } from "../../../../../components";
-import { SpanTeal } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { SpanGrey, SpanTeal } from "../../../../../components/Highlight";
 
 const O5_SpringTxMngmnt = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,7 +27,7 @@ const O5_SpringTxMngmnt = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>A logical unit of work that can include one or more database operations (queries, inserts, updates, deletes).</Li>
               <Li>
-                Guarantees <strong>ACID</strong> properties:
+                Guarantees <SpanGrey>ACID</SpanGrey> properties:
                 <ULdisc>
                   <Li>
                     <strong>A</strong>tomicity: All or nothing.
