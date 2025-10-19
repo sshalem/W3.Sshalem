@@ -1,6 +1,7 @@
 import { FaDiamond } from "react-icons/fa6";
-import { MainChildArea } from "../../../../../components";
-import { SpanBlue } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal } from "../../../../../components";
+import { SpanBlue, SpanGrey } from "../../../../../components/Highlight";
+import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";
 
 const O1_DBInitIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -49,6 +50,26 @@ const O1_DBInitIntro = ({ anchor }: { anchor: string }) => {
           </a>
         </div>
       </div>
+      <section className="my-8">
+        ⭐⭐⭐ <br /> <br /> what is the difference between <SpanGrey>CommandLineRunner</SpanGrey> to <SpanGrey>@PostConstruct</SpanGrey> and{" "}
+        <SpanGrey>data.sql</SpanGrey> ?
+        <br />
+        <br />
+        ⭐⭐⭐ <br /> <br /> <SpanGrey>CommandLineRunner</SpanGrey> , <SpanGrey>@PostConstruct</SpanGrey>, and <SpanGrey>data.sql</SpanGrey> are three
+        different mechanisms in Spring Boot used for <br /> <strong>initializing data or running logic at application startup</strong>, <br /> but
+        they serve different purposes, have different scopes, and are executed at different phases of the app lifecycle.
+        <TableCompareDBInit></TableCompareDBInit>
+        <p className="text-lg font-semibold">⏱️ Order of Execution</p>
+        <div className="my-8">
+          <p>If you use all three, this is roughly the order:</p>
+          <ULDecimal>
+            <Li>schema.sql (if present)</Li>
+            <Li>data.sql</Li>
+            <Li>Beans initialized → @PostConstruct methods run</Li>
+            <Li>Spring context ready → CommandLineRunner.run() executed</Li>
+          </ULDecimal>
+        </div>
+      </section>
     </MainChildArea>
   );
 };
