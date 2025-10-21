@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const D5_DropDownAudit = () => {
   const [showList, setShowList] = useState<boolean>(false);
@@ -42,7 +42,9 @@ const D5_DropDownAudit = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/* <SideDropdownLink sideDropDownNavName="OneToMany (Bi Lazy)" internalLink="/spring/jpa/one2many-bi-lazy" /> */}
+        <SideDropdownLink sideDropDownNavName="JPA Audit" internalLink="/spring/audit/jpa-audit" />
+        <SideDropdownLink sideDropDownNavName="Hibernate envars audit" internalLink="/spring/audit/hibernate-envars-audit" />
+        <SideDropdownLink sideDropDownNavName="Spring data envar Audit" internalLink="/spring/audit/spring-envars-audit" />
       </div>
     </section>
   );

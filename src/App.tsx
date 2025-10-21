@@ -198,7 +198,7 @@ import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServ
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
-import { JpaAuditMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
+import { HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
 
 const router = createBrowserRouter(
   [
@@ -277,7 +277,11 @@ const router = createBrowserRouter(
             {
               path: "audit",
               element: <Auditing />,
-              children: [{ path: "jpa-audit", element: <JpaAuditMain /> }],
+              children: [
+                { path: "jpa-audit", element: <JpaAuditMain /> },
+                { path: "hibernate-envars-audit", element: <HibernateEnvarsMain /> },
+                { path: "spring-envars-audit", element: <SpringDataEnvarsMain /> },
+              ],
             },
             {
               path: "exception-handling",
