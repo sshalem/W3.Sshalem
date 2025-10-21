@@ -8,14 +8,16 @@ const LoggingPropsIntro = ({ anchor }: { anchor: string }) => {
       packages that I import.
       <ULdisc>
         <Li>
-          💡 Global logging level - <SpanGrey>logging.level.root=INFO</SpanGrey>
+          <SpanGrey>logging.level.root=INFO</SpanGrey> - 💡 Global logging level
         </Li>
         <Li>
-          💡 Log only a specific package in detail - <SpanGrey>logging.level.com.example.myapp.service=DEBUG</SpanGrey>
+          <SpanGrey>logging.level.com.example.myapp.service=DEBUG</SpanGrey> - 💡 Log only a specific package in detail
         </Li>
         <Li>
-          💡 Another example to log only a specific package in detail -
-          <SpanGrey>logging.level.org.springframework.security.web.FilterChainProxy=TRACE</SpanGrey>
+          <SpanGrey>logging.level.org.springframework.security.web.FilterChainProxy=TRACE</SpanGrey> - 💡 log package in detail
+        </Li>
+        <Li>
+          <SpanGrey>logging.level.org.springframework.orm.jpa=debug</SpanGrey> - 💡log package <SpanGrey>org.springframework.orm.jpa</SpanGrey>
         </Li>
       </ULdisc>
       In the Example Below Spring Boot tells to
