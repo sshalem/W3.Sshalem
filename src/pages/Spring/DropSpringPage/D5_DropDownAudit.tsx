@@ -43,8 +43,9 @@ const D5_DropDownAudit = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="JPA Audit" internalLink="/spring/audit/jpa-audit" />
-        <SideDropdownLink sideDropDownNavName="Hibernate envars audit" internalLink="/spring/audit/hibernate-envars-audit" />
+        <SideDropdownLink sideDropDownNavName="Hibernate envars Audit" internalLink="/spring/audit/hibernate-envars-audit" />
         <SideDropdownLink sideDropDownNavName="Spring data envar Audit" internalLink="/spring/audit/spring-envars-audit" />
+        <SideDropdownLink sideDropDownNavName="Combine Jpa + Envars" internalLink="/spring/audit/combine-jpa-envars-audit" />
       </div>
     </section>
   );

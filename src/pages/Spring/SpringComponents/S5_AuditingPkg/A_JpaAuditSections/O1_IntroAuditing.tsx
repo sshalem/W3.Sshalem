@@ -8,6 +8,24 @@ const O1_IntroAuditing = ({ anchor }: { anchor: string }) => {
       {/*  */}
       {/*  */}
       <article className="my-8">
+        <p className="my-2">
+          In modern applications, auditing plays a crucial role in <SpanGrey>tracking changes made to data over time</SpanGrey>. <br />
+          <strong>data auditing</strong> is no longer a luxury — it’s a necessity. <br />
+          <br />
+          There are <strong> 3 ways</strong> to add Auditing to application, <br />
+          sound similar but serve different levels of auditing detail and use cases.
+          <ULDecimal>
+            <Li>
+              ✅ <SpanGrey>Spring Data JPA Auditing</SpanGrey>
+            </Li>
+            <Li>
+              ✅ <SpanGrey>Hibernate Envers</SpanGrey>
+            </Li>
+            <Li>
+              ✅ <SpanGrey>Spring Data Envers</SpanGrey>
+            </Li>
+          </ULDecimal>
+        </p>
         {/*  */}
         {/*  */}
         <article className="my-8">
@@ -38,25 +56,8 @@ const O1_IntroAuditing = ({ anchor }: { anchor: string }) => {
             project , where I have multiple users (ADMIN, COMPANY, CUSTOMER) , thus I config it accordingly (Use this for multiple type of users).
           </div>
         </article>
-        <p className="my-2">
-          In modern applications, auditing plays a crucial role in <SpanGrey>tracking changes made to data over time</SpanGrey>. <br />
-          <strong>data auditing</strong> is no longer a luxury — it’s a necessity. <br />
-          There are 3 ways to add Auditing to application, sound similar but serve different levels of auditing detail and use cases.
-          <ULDecimal>
-            <Li>
-              ✅ <SpanGrey>Spring Data JPA Auditing</SpanGrey>
-            </Li>
-            <Li>
-              ✅ <SpanGrey>Hibernate Envers</SpanGrey>
-            </Li>
-            <Li>
-              ✅ <SpanGrey>Spring Data Envers</SpanGrey>
-            </Li>
-          </ULDecimal>
-        </p>
       </article>
       <TableAuditingCompare></TableAuditingCompare>
-      <hr />
 
       {/*  */}
       {/*  */}

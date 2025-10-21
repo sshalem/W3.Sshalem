@@ -1,29 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroAuditing from "./O1_IntroAuditing";
-import O2_SpringJpaAudit from "./O2_SpringJpaAudit";
-import O3_HibernateEnvars from "./O3_HibernateEnvars";
-import O4_SpringDataEnvars from "./O4_SpringDataEnvars";
+import O1_CombinedAudit from "./O1_CombinedAudit";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroAuditing = "1. Intro";
-const o2_SpringJpaAudit = "2. JPA Audit";
-const o3_HibernateEnvars = "3. Hibernate Envars";
-const o4_SpringDataEnvars = "4. Spring Data Envars";
+const o1_CombinedAudit = "1. Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroAuditing, o2_SpringJpaAudit, o3_HibernateEnvars, o4_SpringDataEnvars];
+const anchorList: string[] = [o1_CombinedAudit];
 
 // ============================================
 // ============================================
 
-const AuditingMain = () => {
+const CombinedAuditMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -72,14 +66,11 @@ const AuditingMain = () => {
       />
       {/* End Contents */}
 
-      <O1_IntroAuditing anchor={o1_IntroAuditing}></O1_IntroAuditing>
-      <O2_SpringJpaAudit anchor={o2_SpringJpaAudit}></O2_SpringJpaAudit>
-      <O3_HibernateEnvars anchor={o3_HibernateEnvars}></O3_HibernateEnvars>
-      <O4_SpringDataEnvars anchor={o4_SpringDataEnvars}></O4_SpringDataEnvars>
+      <O1_CombinedAudit anchor={o1_CombinedAudit}></O1_CombinedAudit>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default AuditingMain;
+export default CombinedAuditMain;

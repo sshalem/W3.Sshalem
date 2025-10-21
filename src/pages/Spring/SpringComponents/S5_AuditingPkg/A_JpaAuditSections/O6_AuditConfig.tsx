@@ -68,7 +68,6 @@ const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
       </article>
-      <hr />
     </MainChildArea>
   );
 };

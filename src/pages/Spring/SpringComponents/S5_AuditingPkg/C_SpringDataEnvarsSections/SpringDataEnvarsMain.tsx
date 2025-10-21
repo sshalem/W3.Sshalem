@@ -1,24 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroAuditing from "./O1_IntroAuditing";
+import O1_IntroSpringEnvars from "./O1_IntroSpringEnvars";
 import O2_SpringJpaAudit from "./O2_SpringJpaAudit";
-import O3_HibernateEnvars from "./O3_HibernateEnvars";
-import O4_SpringDataEnvars from "./O4_SpringDataEnvars";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroAuditing = "1. Intro";
-const o2_SpringJpaAudit = "2. JPA Audit";
-const o3_HibernateEnvars = "3. Hibernate Envars";
-const o4_SpringDataEnvars = "4. Spring Data Envars";
+const o1_IntroSpringEnvars = "1. Intro";
+const o2_SpringJpaAudit = "2. Spring Envars";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroAuditing, o2_SpringJpaAudit, o3_HibernateEnvars, o4_SpringDataEnvars];
+const anchorList: string[] = [o1_IntroSpringEnvars, o2_SpringJpaAudit];
 
 // ============================================
 // ============================================
@@ -72,10 +68,8 @@ const SpringDataEnvarsMain = () => {
       />
       {/* End Contents */}
 
-      <O1_IntroAuditing anchor={o1_IntroAuditing}></O1_IntroAuditing>
+      <O1_IntroSpringEnvars anchor={o1_IntroSpringEnvars}></O1_IntroSpringEnvars>
       <O2_SpringJpaAudit anchor={o2_SpringJpaAudit}></O2_SpringJpaAudit>
-      <O3_HibernateEnvars anchor={o3_HibernateEnvars}></O3_HibernateEnvars>
-      <O4_SpringDataEnvars anchor={o4_SpringDataEnvars}></O4_SpringDataEnvars>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -23,7 +23,6 @@ const O7_TestApp = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
       </article>
-      <hr />
     </MainChildArea>
   );
 };

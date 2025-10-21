@@ -99,7 +99,6 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={audit_aware_multiple_users}></JavaHighlight>
         </ULdisc>
       </article>
-      <hr />
     </MainChildArea>
   );
 };

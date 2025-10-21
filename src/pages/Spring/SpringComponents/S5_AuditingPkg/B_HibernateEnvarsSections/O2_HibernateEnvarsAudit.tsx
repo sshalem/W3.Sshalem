@@ -1,12 +1,12 @@
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 
-const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
+const O2_HibernateEnvarsAudit = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article className="my-8">
-        <p className="my-6 text-xl font-semibold">🔑 Spring Data Envars Auditing: What It Can Do?</p>
-        You can automatically populate: (It does same as Hibernate Envars, but Hibernate is more felx when it comes to QUeries)
+        <p className="my-6 text-xl font-semibold">🔑 Hibernate Envars Auditing: What It Can Do?</p>
+        You can automatically populate:
         <ULdisc>
           <Li>
             <SpanGrey>Tracks timestamps</SpanGrey> (timestamp)
@@ -36,4 +36,4 @@ const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_SpringJpaAudit;
+export default O2_HibernateEnvarsAudit;

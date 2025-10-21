@@ -167,7 +167,6 @@ import {
 } from "./pages/Sql/SqlComponents/OperatorStatementsPkg";
 
 import {
-  AuditingMain,
   EntityValidationMain,
   JpaLoggingMain,
   JpqlMain,
@@ -198,7 +197,7 @@ import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServ
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
-import { HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
+import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
 
 const router = createBrowserRouter(
   [
@@ -265,7 +264,6 @@ const router = createBrowserRouter(
                 { path: "transaction-management", element: <TransactionManagementMain /> },
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
-                { path: "auditing", element: <AuditingMain /> },
                 { path: "jpql", element: <JpqlMain /> },
                 { path: "pagination-sorting", element: <PaginationSortingMain /> },
                 { path: "many2many-bi-lazy", element: <Many2ManyBiLazyMain /> },
@@ -281,6 +279,7 @@ const router = createBrowserRouter(
                 { path: "jpa-audit", element: <JpaAuditMain /> },
                 { path: "hibernate-envars-audit", element: <HibernateEnvarsMain /> },
                 { path: "spring-envars-audit", element: <SpringDataEnvarsMain /> },
+                { path: "combine-jpa-envars-audit", element: <CombinedAuditMain /> },
               ],
             },
             {

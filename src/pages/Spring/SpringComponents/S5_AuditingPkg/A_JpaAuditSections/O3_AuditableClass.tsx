@@ -41,7 +41,6 @@ const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
           </Li>
           <JavaHighlight javaCode={autidatble}></JavaHighlight>
         </ULdisc>
-        <hr />
         {/*  */}
         {/*  */}
       </article>

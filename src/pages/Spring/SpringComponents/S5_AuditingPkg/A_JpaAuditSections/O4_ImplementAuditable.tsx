@@ -21,7 +21,6 @@ const O4_ImplementAuditable = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={entity}></JavaHighlight>
         </ULdisc>
       </article>
-      <hr />
     </MainChildArea>
   );
 };
