@@ -35,7 +35,7 @@ const D3_DropDownLogging = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" topicName="Logging" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" topicName="3. Logging" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

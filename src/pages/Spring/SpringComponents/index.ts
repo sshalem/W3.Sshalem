@@ -8,8 +8,9 @@ export { default as ExceptionHandling } from "./S6_ExceptionsPkg/ExceptionHandli
 export { default as Rest } from "./S7_RestApiPkg/Rest";
 export { default as SpringSecurity } from "./S8_SecurityPkg/SpringSecurity";
 export { default as Aop } from "./S9_AopPkg/Aop";
-export { default as Caching } from "./S10_CachingPkg/Caching";
-export { default as SpringIO } from "./S11_SpringIOPkg/SpringIO";
-export { default as JUnit } from "./S12_JUnitPkg/JUnit";
-export { default as Jenkins } from "./S13_JenkinsPkg/Jenkins";
-export { default as InterviewQuestions } from "./S14_InterviewQuestionsPkg/InterviewQuestions";
+export { default as TransactionManagement } from "./S10_TransactionManagementPkg/TransactionManagement";
+export { default as Caching } from "./S11_CachingPkg/Caching";
+export { default as SpringIO } from "./S12_SpringIOPkg/SpringIO";
+export { default as JUnit } from "./S13_JUnitPkg/JUnit";
+export { default as Jenkins } from "./S14_JenkinsPkg/Jenkins";
+export { default as InterviewQuestions } from "./S15_InterviewQuestionsPkg/InterviewQuestions";

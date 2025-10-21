@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D10_DropDownCaching = () => {
+const D15_DropDownInterviewQuestions = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const D10_DropDownCaching = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/caching")) {
+    if (location.pathname.includes("spring/interview-questions")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,22 +34,27 @@ const D10_DropDownCaching = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/caching" topicName="Cache" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/spring/interview-questions"
+        topicName="15. Interview Questions"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Simple (default)" internalLink="/spring/caching/simple-default" />
-        <SideDropdownLink sideDropDownNavName="Caffeine" internalLink="/spring/caching/caffeine" />
-        <SideDropdownLink sideDropDownNavName="EhCache" internalLink="/spring/caching/ehCache" />
-        <SideDropdownLink sideDropDownNavName="Redis (Distributed)" internalLink="/spring/caching/redis" />
-        <SideDropdownLink sideDropDownNavName="Hazelcast (Distributed)" internalLink="/spring/caching/hazelcast" />
-        <SideDropdownLink sideDropDownNavName="Infinispan (Distributed)" internalLink="/spring/caching/infinispan" />
+        <SideDropdownLink sideDropDownNavName="Stream Records Instantly" internalLink="/spring/interview-questions/stream-records-instantly" />
+        <SideDropdownLink sideDropDownNavName="Loop Stream Par Stream" internalLink="/spring/interview-questions/loop-stream-parallel-stream" />
+        <SideDropdownLink sideDropDownNavName="MultiThread Block Queue" internalLink="/spring/interview-questions/multithread-block-queue" />
+        <SideDropdownLink sideDropDownNavName="JavaInUse Question" internalLink="/spring/interview-questions/java-in-use" />
+        <SideDropdownLink sideDropDownNavName="JavaTechie Questions" internalLink="/spring/interview-questions/java-techie" />
+        <SideDropdownLink sideDropDownNavName="GenZ Career" internalLink="/spring/interview-questions/gen-z-career" />
       </div>
     </section>
   );
 };
 
-export default D10_DropDownCaching;
+export default D15_DropDownInterviewQuestions;

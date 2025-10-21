@@ -35,7 +35,7 @@ const D9_DropDownAop = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/aop" topicName="AOP" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/aop" topicName="9. AOP" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

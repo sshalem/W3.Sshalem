@@ -6,5 +6,4 @@ export { default as MappingLibsMain } from "./H_MappingLibsSections/MappingLibsM
 export { default as PaginationSortingMain } from "./C_PaginationSortingSections/PaginationSortingMain";
 export { default as JpqlMain } from "./F_JpqlSections/JpqlMain";
 export { default as StoredProceduresFunctionsMain } from "./G_StoreProceduresFunctionsSections/StoredProceduresFunctionsMain";
-export { default as TransactionManagementMain } from "./E_TransactionManagementSections/TransactionManagementMain";
 export { default as JpaLoggingMain } from "./I_JpaLoggingSections/JpaLoggingMain";

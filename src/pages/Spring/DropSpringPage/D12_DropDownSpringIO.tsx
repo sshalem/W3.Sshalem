@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D11_DropDownSpringIO = () => {
+const D12_DropDownSpringIO = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -34,7 +34,7 @@ const D11_DropDownSpringIO = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/io" topicName="Spring IO" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/io" topicName="12. Spring IO" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -48,4 +48,4 @@ const D11_DropDownSpringIO = () => {
   );
 };
 
-export default D11_DropDownSpringIO;
+export default D12_DropDownSpringIO;

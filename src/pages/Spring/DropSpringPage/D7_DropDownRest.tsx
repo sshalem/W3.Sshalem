@@ -34,7 +34,7 @@ const D7_DropDownRest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" topicName="Rest API ,SSE ,WebSocket" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" topicName="7. Rest API ,SSE ,WebSocket" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

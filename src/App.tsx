@@ -38,6 +38,7 @@ import {
   SpringHome,
   SpringIO,
   SpringSecurity,
+  TransactionManagement,
 } from "./pages/Spring/SpringComponents";
 
 import {
@@ -116,7 +117,7 @@ import {
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/S14_InterviewQuestionsPkg";
+} from "./pages/Spring/SpringComponents/S15_InterviewQuestionsPkg";
 
 import {
   CaffeineMain,
@@ -125,7 +126,7 @@ import {
   InfinispanMain,
   RedisMain,
   SimpleDefaultMain,
-} from "./pages/Spring/SpringComponents/S10_CachingPkg";
+} from "./pages/Spring/SpringComponents/S11_CachingPkg";
 
 import {
   JwtImplJdk21Main,
@@ -145,9 +146,9 @@ import {
   TimestampConfigMain,
 } from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
 
-import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S11_SpringIOPkg";
-import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S12_JUnitPkg";
-import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S13_JenkinsPkg";
+import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S12_SpringIOPkg";
+import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S13_JUnitPkg";
+import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S14_JenkinsPkg";
 
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
 import {
@@ -175,7 +176,6 @@ import {
   One2ManyBiLazyMain,
   PaginationSortingMain,
   StoredProceduresFunctionsMain,
-  TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
 import Architecture from "./pages/MicroServices/MicroServiceComponents/M_ArchitecturePkg/Architecture";
 import {
@@ -198,6 +198,7 @@ import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/Environm
 import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
 import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
+import { TransactionManagementMain } from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
 
 const router = createBrowserRouter(
   [
@@ -261,7 +262,6 @@ const router = createBrowserRouter(
               path: "jpa",
               element: <Jpa />,
               children: [
-                { path: "transaction-management", element: <TransactionManagementMain /> },
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
                 { path: "jpql", element: <JpqlMain /> },
@@ -319,6 +319,11 @@ const router = createBrowserRouter(
               ],
             },
             { path: "aop", element: <Aop />, children: [{ path: "before-advice", element: <BeforeAdviceMain /> }] },
+            {
+              path: "transaction-management",
+              element: <TransactionManagement />,
+              children: [{ path: "concepts", element: <TransactionManagementMain /> }],
+            },
             {
               path: "caching",
               element: <Caching />,

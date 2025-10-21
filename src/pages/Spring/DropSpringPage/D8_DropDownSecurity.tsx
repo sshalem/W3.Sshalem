@@ -34,7 +34,7 @@ const D8_DropDownSecurity = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/security" topicName="Security" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/security" topicName="8. Security" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

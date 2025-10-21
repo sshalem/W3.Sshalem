@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D1_DropDownIDE = () => {
+const D10_DropDownTransactionManagement = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,8 +18,7 @@ const D1_DropDownIDE = () => {
   };
 
   useEffect(() => {
-    // if (location.pathname.substring(8).includes("logging")) {
-    if (location.pathname.includes("spring/ide")) {
+    if (location.pathname.includes("spring/transaction-management")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,18 +34,22 @@ const D1_DropDownIDE = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/ide" topicName="1. IDE's" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/spring/transaction-management"
+        topicName="10. Transaction Management"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="STS" internalLink="/spring/ide/sts" />
-        <SideDropdownLink sideDropDownNavName="IntelliJ" internalLink="/spring/ide/intellij" />
+        <SideDropdownLink sideDropDownNavName="Trx Manage Concepts" internalLink="/spring/transaction-management/concepts" />
       </div>
     </section>
   );
 };
 
-export default D1_DropDownIDE;
+export default D10_DropDownTransactionManagement;

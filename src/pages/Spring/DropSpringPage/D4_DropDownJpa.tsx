@@ -35,7 +35,7 @@ const D4_DropDownJpa = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jpa" topicName="JPA" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jpa" topicName="4. JPA" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

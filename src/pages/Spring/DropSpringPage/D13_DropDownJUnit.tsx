@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D12_DropDownJUnit = () => {
+const D13_DropDownJUnit = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -34,7 +34,7 @@ const D12_DropDownJUnit = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/junit" topicName="JUnit" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/junit" topicName="13. JUnit" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -47,4 +47,4 @@ const D12_DropDownJUnit = () => {
   );
 };
 
-export default D12_DropDownJUnit;
+export default D13_DropDownJUnit;

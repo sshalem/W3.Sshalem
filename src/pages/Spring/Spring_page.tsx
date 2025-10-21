@@ -11,11 +11,12 @@ import D6_DropDownExceptionHandling from "./DropSpringPage/D6_DropDownExceptionH
 import D7_DropDownRest from "./DropSpringPage/D7_DropDownRest";
 import D8_DropDownSecurity from "./DropSpringPage/D8_DropDownSecurity";
 import D9_DropDownAop from "./DropSpringPage/D9_DropDownAop";
-import D10_DropDownCaching from "./DropSpringPage/D10_DropDownCaching";
-import D11_DropDownSpringIO from "./DropSpringPage/D11_DropDownSpringIO";
-import D12_DropDownJUnit from "./DropSpringPage/D12_DropDownJUnit";
-import D13_DropDownJenkins from "./DropSpringPage/D13_DropDownJenkins";
-import D14_DropDownInterviewQuestions from "./DropSpringPage/D14_DropDownInterviewQuestions";
+import D10_DropDownTransactionManagement from "./DropSpringPage/D10_DropDownTransactionManagement";
+import D11_DropDownCaching from "./DropSpringPage/D11_DropDownCaching";
+import D12_DropDownSpringIO from "./DropSpringPage/D12_DropDownSpringIO";
+import D13_DropDownJUnit from "./DropSpringPage/D13_DropDownJUnit";
+import D14_DropDownJenkins from "./DropSpringPage/D14_DropDownJenkins";
+import D15_DropDownInterviewQuestions from "./DropSpringPage/D15_DropDownInterviewQuestions";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -55,11 +56,12 @@ const Spring_page = () => {
             <D7_DropDownRest />
             <D8_DropDownSecurity />
             <D9_DropDownAop />
-            <D10_DropDownCaching />
-            <D11_DropDownSpringIO />
-            <D12_DropDownJUnit />
-            <D13_DropDownJenkins />
-            <D14_DropDownInterviewQuestions />
+            <D10_DropDownTransactionManagement />
+            <D11_DropDownCaching />
+            <D12_DropDownSpringIO />
+            <D13_DropDownJUnit />
+            <D14_DropDownJenkins />
+            <D15_DropDownInterviewQuestions />
           </div>
         </article>
       )}

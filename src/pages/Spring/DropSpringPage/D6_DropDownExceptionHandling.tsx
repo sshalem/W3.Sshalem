@@ -38,7 +38,7 @@ const D6_DropDownExceptionHandling = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/spring/exception-handling"
-        topicName="Exception Handling"
+        topicName="6. Exception Handling"
       />
 
       <div

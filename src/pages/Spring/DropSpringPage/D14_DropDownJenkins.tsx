@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D13_DropDownJenkins = () => {
+const D14_DropDownJenkins = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -34,7 +34,7 @@ const D13_DropDownJenkins = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jenkins" topicName="Jenkins (CI/CD)" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jenkins" topicName="14. Jenkins (CI/CD)" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -48,4 +48,4 @@ const D13_DropDownJenkins = () => {
   );
 };
 
-export default D13_DropDownJenkins;
+export default D14_DropDownJenkins;

@@ -35,7 +35,7 @@ const D5_DropDownAudit = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/audit" topicName="Auditing" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/audit" topicName="5. Auditing" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

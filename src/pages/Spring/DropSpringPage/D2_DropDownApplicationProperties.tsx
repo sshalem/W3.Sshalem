@@ -39,7 +39,7 @@ const D2_DropDownApplicationProperties = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/spring/application-properties"
-        topicName="Application properties"
+        topicName="2. Application properties"
       />
 
       <div
