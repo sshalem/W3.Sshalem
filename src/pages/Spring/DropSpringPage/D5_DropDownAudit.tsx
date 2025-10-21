@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../../components";
+import { SideDropDownTopic } from "../../../components";
 
-const DropDownLogging = () => {
+const D5_DropDownAudit = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,8 +18,8 @@ const DropDownLogging = () => {
   };
 
   useEffect(() => {
-    // if (location.pathname.substring(8).includes("logging")) {
-    if (location.pathname.includes("spring/logging")) {
+    // if (location.pathname.substring(8).includes("jpa")) {
+    if (location.pathname.includes("spring/audit")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,20 +35,17 @@ const DropDownLogging = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" topicName="Logging" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/audit" topicName="Auditing" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Log Util" internalLink="/spring/logging/LogUtil" />
-        <SideDropdownLink sideDropDownNavName="SLF4J (Logback)" internalLink="/spring/logging/slf4j-logback" />
-        <SideDropdownLink sideDropDownNavName="Log File" internalLink="/spring/logging/log-file" />
-        <SideDropdownLink sideDropDownNavName="Logging Properties" internalLink="/spring/logging/logging-props" />
+        {/* <SideDropdownLink sideDropDownNavName="OneToMany (Bi Lazy)" internalLink="/spring/jpa/one2many-bi-lazy" /> */}
       </div>
     </section>
   );
 };
 
-export default DropDownLogging;
+export default D5_DropDownAudit;

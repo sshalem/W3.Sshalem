@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownRest = () => {
+const D14_DropDownInterviewQuestions = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownRest = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/rest")) {
+    if (location.pathname.includes("spring/interview-questions")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,21 +34,27 @@ const DropDownRest = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" topicName="Rest API ,SSE ,WebSocket" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/spring/interview-questions"
+        topicName="Interview Questions"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
-        <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />
-        <SideDropdownLink sideDropDownNavName="Web Socket" internalLink="/spring/rest/websocket" />
-        <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
-        <SideDropdownLink sideDropDownNavName="Stream Large Response" internalLink="/spring/rest/stream-large-response" />
+        <SideDropdownLink sideDropDownNavName="Stream Records Instantly" internalLink="/spring/interview-questions/stream-records-instantly" />
+        <SideDropdownLink sideDropDownNavName="Loop Stream Par Stream" internalLink="/spring/interview-questions/loop-stream-parallel-stream" />
+        <SideDropdownLink sideDropDownNavName="MultiThread Block Queue" internalLink="/spring/interview-questions/multithread-block-queue" />
+        <SideDropdownLink sideDropDownNavName="JavaInUse Question" internalLink="/spring/interview-questions/java-in-use" />
+        <SideDropdownLink sideDropDownNavName="JavaTechie Questions" internalLink="/spring/interview-questions/java-techie" />
+        <SideDropdownLink sideDropDownNavName="GenZ Career" internalLink="/spring/interview-questions/gen-z-career" />
       </div>
     </section>
   );
 };
 
-export default DropDownRest;
+export default D14_DropDownInterviewQuestions;

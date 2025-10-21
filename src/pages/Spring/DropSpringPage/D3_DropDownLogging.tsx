@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownJUnit = () => {
+const D3_DropDownLogging = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,8 @@ const DropDownJUnit = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/junit")) {
+    // if (location.pathname.substring(8).includes("logging")) {
+    if (location.pathname.includes("spring/logging")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +35,20 @@ const DropDownJUnit = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/junit" topicName="JUnit" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/logging" topicName="Logging" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Architecture" internalLink="/spring/junit/architecture" />
+        <SideDropdownLink sideDropDownNavName="Log Util" internalLink="/spring/logging/LogUtil" />
+        <SideDropdownLink sideDropDownNavName="SLF4J (Logback)" internalLink="/spring/logging/slf4j-logback" />
+        <SideDropdownLink sideDropDownNavName="Log File" internalLink="/spring/logging/log-file" />
+        <SideDropdownLink sideDropDownNavName="Logging Properties" internalLink="/spring/logging/logging-props" />
       </div>
     </section>
   );
 };
 
-export default DropDownJUnit;
+export default D3_DropDownLogging;

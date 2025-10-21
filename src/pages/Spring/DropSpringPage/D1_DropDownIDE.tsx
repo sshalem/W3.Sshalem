@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownIDE = () => {
+const D1_DropDownIDE = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -49,4 +49,4 @@ const DropDownIDE = () => {
   );
 };
 
-export default DropDownIDE;
+export default D1_DropDownIDE;

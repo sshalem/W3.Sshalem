@@ -25,6 +25,7 @@ import {
 import {
   Aop,
   ApplicationProperties,
+  Auditing,
   Caching,
   ExceptionHandling,
   Ide,
@@ -106,7 +107,7 @@ import { BatchHome } from "./pages/Batch/BatchComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
-import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/S5_RestApiPkg";
+import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/S7_RestApiPkg";
 
 import {
   GenZCareerMain,
@@ -115,7 +116,7 @@ import {
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/S13_InterviewQuestionsPkg";
+} from "./pages/Spring/SpringComponents/S14_InterviewQuestionsPkg";
 
 import {
   CaffeineMain,
@@ -124,7 +125,7 @@ import {
   InfinispanMain,
   RedisMain,
   SimpleDefaultMain,
-} from "./pages/Spring/SpringComponents/S8_CachingPkg";
+} from "./pages/Spring/SpringComponents/S10_CachingPkg";
 
 import {
   JwtImplJdk21Main,
@@ -132,7 +133,7 @@ import {
   MultipleJwtSecurityConfigMain,
   OAuth2Main,
   SpringSecurityMain,
-} from "./pages/Spring/SpringComponents/S7_SecurityPkg";
+} from "./pages/Spring/SpringComponents/S8_SecurityPkg";
 import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
 import {
   ConfigMsgControllerMain,
@@ -144,9 +145,9 @@ import {
   TimestampConfigMain,
 } from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
 
-import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S10_SpringIOPkg";
-import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S11_JUnitPkg";
-import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S12_JenkinsPkg";
+import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S11_SpringIOPkg";
+import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S12_JUnitPkg";
+import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S13_JenkinsPkg";
 
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
 import {
@@ -195,7 +196,9 @@ import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/Micr
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
-import JwtImplMain from "./pages/Spring/SpringComponents/S7_SecurityPkg/C_JwtImplSections/JwtImplMain";
+import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
+
+import { JpaAuditMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
 
 const router = createBrowserRouter(
   [
@@ -272,15 +275,9 @@ const router = createBrowserRouter(
               ],
             },
             {
-              path: "rest",
-              element: <Rest />,
-              children: [
-                { path: "stream-data", element: <StreamDataMain /> },
-                { path: "sse", element: <SseMain /> },
-                { path: "websocket", element: <WebSocketMain /> },
-                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
-                { path: "stream-large-response", element: <StreamLargeResponseMain /> },
-              ],
+              path: "audit",
+              element: <Auditing />,
+              children: [{ path: "jpa-audit", element: <JpaAuditMain /> }],
             },
             {
               path: "exception-handling",
@@ -296,19 +293,16 @@ const router = createBrowserRouter(
               ],
             },
             {
-              path: "caching",
-              element: <Caching />,
+              path: "rest",
+              element: <Rest />,
               children: [
-                { path: "simple-default", element: <SimpleDefaultMain /> },
-                { path: "caffeine", element: <CaffeineMain /> },
-                { path: "ehCache", element: <EhCacheMain /> },
-                { path: "redis", element: <RedisMain /> },
-                { path: "hazelcast", element: <HazelcastMain /> },
-                { path: "infinispan", element: <InfinispanMain /> },
+                { path: "stream-data", element: <StreamDataMain /> },
+                { path: "sse", element: <SseMain /> },
+                { path: "websocket", element: <WebSocketMain /> },
+                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
+                { path: "stream-large-response", element: <StreamLargeResponseMain /> },
               ],
             },
-            { path: "aop", element: <Aop />, children: [{ path: "before-advice", element: <BeforeAdviceMain /> }] },
-
             {
               path: "security",
               element: <SpringSecurity />,
@@ -319,6 +313,19 @@ const router = createBrowserRouter(
                 { path: "jwt-impl-jdk21-spring-boot-v3-5-6", element: <JwtImplJdk21Main /> },
                 { path: "jwt-multiple-config", element: <MultipleJwtSecurityConfigMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
+              ],
+            },
+            { path: "aop", element: <Aop />, children: [{ path: "before-advice", element: <BeforeAdviceMain /> }] },
+            {
+              path: "caching",
+              element: <Caching />,
+              children: [
+                { path: "simple-default", element: <SimpleDefaultMain /> },
+                { path: "caffeine", element: <CaffeineMain /> },
+                { path: "ehCache", element: <EhCacheMain /> },
+                { path: "redis", element: <RedisMain /> },
+                { path: "hazelcast", element: <HazelcastMain /> },
+                { path: "infinispan", element: <InfinispanMain /> },
               ],
             },
             {

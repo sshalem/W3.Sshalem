@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSpringIO = () => {
+const D11_DropDownSpringIO = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -48,4 +48,4 @@ const DropDownSpringIO = () => {
   );
 };
 
-export default DropDownSpringIO;
+export default D11_DropDownSpringIO;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownJpa = () => {
+const D4_DropDownJpa = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -57,4 +57,4 @@ const DropDownJpa = () => {
   );
 };
 
-export default DropDownJpa;
+export default D4_DropDownJpa;

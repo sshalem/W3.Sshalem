@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownApplicationProperties = () => {
+const D2_DropDownApplicationProperties = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -63,4 +63,4 @@ const DropDownApplicationProperties = () => {
   );
 };
 
-export default DropDownApplicationProperties;
+export default D2_DropDownApplicationProperties;

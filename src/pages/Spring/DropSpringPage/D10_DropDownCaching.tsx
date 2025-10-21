@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSecurity = () => {
+const D10_DropDownCaching = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownSecurity = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/security")) {
+    if (location.pathname.includes("spring/caching")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,24 +34,22 @@ const DropDownSecurity = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/security" topicName="Security" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/caching" topicName="Cache" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        {/*  */}
-        <SideDropdownLink sideDropDownNavName="Spring Security" internalLink="/spring/security/spring-security" />
-        <SideDropdownLink sideDropDownNavName="JWT Introduction" internalLink="/spring/security/jwt" />
-        <SideDropdownLink sideDropDownNavName="JWT Spring v2.6.11" internalLink="/spring/security/jwt-implementation" />
-        <SideDropdownLink sideDropDownNavName="JWT Spring v3.5.6" internalLink="/spring/security/jwt-impl-jdk21-spring-boot-v3-5-6" />
-        <SideDropdownLink sideDropDownNavName="JWT Multiple Config" internalLink="/spring/security/jwt-multiple-config" />
-        {/*  */}
-        <SideDropdownLink sideDropDownNavName="OAuth2" internalLink="/spring/security/oauth2" />
+        <SideDropdownLink sideDropDownNavName="Simple (default)" internalLink="/spring/caching/simple-default" />
+        <SideDropdownLink sideDropDownNavName="Caffeine" internalLink="/spring/caching/caffeine" />
+        <SideDropdownLink sideDropDownNavName="EhCache" internalLink="/spring/caching/ehCache" />
+        <SideDropdownLink sideDropDownNavName="Redis (Distributed)" internalLink="/spring/caching/redis" />
+        <SideDropdownLink sideDropDownNavName="Hazelcast (Distributed)" internalLink="/spring/caching/hazelcast" />
+        <SideDropdownLink sideDropDownNavName="Infinispan (Distributed)" internalLink="/spring/caching/infinispan" />
       </div>
     </section>
   );
 };
 
-export default DropDownSecurity;
+export default D10_DropDownCaching;

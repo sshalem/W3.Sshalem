@@ -1,16 +1,28 @@
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
-const O4_HibernateEnvars = ({ anchor }: { anchor: string }) => {
+const O4_SpringDataEnvars = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article className="my-8">
         <p className="my-6 text-xl font-semibold">🔑 With Spring Data JPA Auditing: What It Can Do</p>
+        <p className="my-2">
+          See GitHub project{" "}
+          <Anchor
+            description="SPring 2.7.18 spring-data/envers/docs/"
+            href="https://docs.spring.io/spring-data/envers/docs/current/reference/html/#core.repository-populators"
+          ></Anchor>
+        </p>
+        <p className="my-2">
+          See GitHub project{" "}
+          <Anchor
+            description="Spring boot 3.5.5 /spring-data/jpa/reference/envers.html"
+            href="https://docs.spring.io/spring-data/jpa/reference/envers.html"
+          ></Anchor>
+        </p>
         You can automatically populate:
         <ULdisc>
-          <Li>
-            <SpanGrey>createdAt</SpanGrey> (timestamp)
-          </Li>
+          <Li>Spring Docs</Li>
           <Li>
             <SpanGrey>updatedOn</SpanGrey> (timestamp)
           </Li>
@@ -24,10 +36,6 @@ const O4_HibernateEnvars = ({ anchor }: { anchor: string }) => {
             But it <SpanRed>cannot</SpanRed> track <SpanRed>What changed</SpanRed>
           </Li>
         </ULdisc>
-        <p className="my-2">
-          See GitHub project{" "}
-          <Anchor description="O1-Audit-Spring-JPA" href="https://github.com/sshalem/Spring-Boot/tree/main/10-Auditing/O1-Audit-Spring-JPA"></Anchor>
-        </p>
       </article>
       <hr />
       {/*  */}
@@ -186,7 +194,7 @@ const O4_HibernateEnvars = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_HibernateEnvars;
+export default O4_SpringDataEnvars;
 
 const autidatble = `import java.time.LocalDateTime;
 

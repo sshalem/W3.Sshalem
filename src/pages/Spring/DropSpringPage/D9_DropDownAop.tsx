@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownJenkins = () => {
+const D9_DropDownAop = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,8 @@ const DropDownJenkins = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("spring/jenkins")) {
+    // if (location.pathname.substring(8).includes("logging")) {
+    if (location.pathname.includes("spring/aop")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,18 +35,17 @@ const DropDownJenkins = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/jenkins" topicName="Jenkins (CI/CD)" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/aop" topicName="AOP" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="CI/CD" internalLink="/spring/jenkins/ci-cd" />
-        <SideDropdownLink sideDropDownNavName="Jenkins Server Install" internalLink="/spring/jenkins/server-install" />
+        <SideDropdownLink sideDropDownNavName="Before Advice" internalLink="/spring/aop/before-advice" />
       </div>
     </section>
   );
 };
 
-export default DropDownJenkins;
+export default D9_DropDownAop;

@@ -1,7 +1,7 @@
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
-const O5_SpringDataEnvars = ({ anchor }: { anchor: string }) => {
+const O3_HibernateEnvars = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <article className="my-8">
@@ -186,7 +186,7 @@ const O5_SpringDataEnvars = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_SpringDataEnvars;
+export default O3_HibernateEnvars;
 
 const autidatble = `import java.time.LocalDateTime;
 

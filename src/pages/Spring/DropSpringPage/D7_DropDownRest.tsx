@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownAop = () => {
+const D7_DropDownRest = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,8 +18,7 @@ const DropDownAop = () => {
   };
 
   useEffect(() => {
-    // if (location.pathname.substring(8).includes("logging")) {
-    if (location.pathname.includes("spring/aop")) {
+    if (location.pathname.includes("spring/rest")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,17 +34,21 @@ const DropDownAop = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/aop" topicName="AOP" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/spring/rest" topicName="Rest API ,SSE ,WebSocket" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Before Advice" internalLink="/spring/aop/before-advice" />
+        <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
+        <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />
+        <SideDropdownLink sideDropDownNavName="Web Socket" internalLink="/spring/rest/websocket" />
+        <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
+        <SideDropdownLink sideDropDownNavName="Stream Large Response" internalLink="/spring/rest/stream-large-response" />
       </div>
     </section>
   );
 };
 
-export default DropDownAop;
+export default D7_DropDownRest;

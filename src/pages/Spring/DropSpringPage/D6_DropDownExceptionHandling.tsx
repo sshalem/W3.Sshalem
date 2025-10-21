@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownExceptionHandling = () => {
+const D6_DropDownExceptionHandling = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -62,4 +62,4 @@ const DropDownExceptionHandling = () => {
   );
 };
 
-export default DropDownExceptionHandling;
+export default D6_DropDownExceptionHandling;
