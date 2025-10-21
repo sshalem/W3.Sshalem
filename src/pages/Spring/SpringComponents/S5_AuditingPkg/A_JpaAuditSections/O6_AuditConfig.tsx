@@ -19,7 +19,7 @@ const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
                 <SpanGrey>@Configuration</SpanGrey>
               </Li>
               <Li>
-                <SpanGrey>@EnableJpaAuditing</SpanGrey>
+                <SpanGrey>@EnableJpaAuditing(auditorAwareRef = "auditorProvider")</SpanGrey>
               </Li>
               <Li>
                 create a <SpanGrey>@Bean</SpanGrey> of <SpanGrey>AuditorAwareImpl</SpanGrey>
@@ -80,7 +80,7 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
-@EnableJpaAuditing
+@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 public class AuditConfig {
 
 	@Bean
