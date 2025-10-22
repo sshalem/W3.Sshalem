@@ -198,7 +198,7 @@ import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/Environm
 import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
 import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
-import { TransactionManagementMain } from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
+import { PropagationMain, RollbackMain, TransactionManagementMain } from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
 
 const router = createBrowserRouter(
   [
@@ -322,7 +322,11 @@ const router = createBrowserRouter(
             {
               path: "transaction-management",
               element: <TransactionManagement />,
-              children: [{ path: "concepts", element: <TransactionManagementMain /> }],
+              children: [
+                { path: "concepts", element: <TransactionManagementMain /> },
+                { path: "propagation", element: <PropagationMain /> },
+                { path: "rollback", element: <RollbackMain /> },
+              ],
             },
             {
               path: "caching",

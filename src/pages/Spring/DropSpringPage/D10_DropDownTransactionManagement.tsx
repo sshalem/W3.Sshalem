@@ -47,6 +47,10 @@ const D10_DropDownTransactionManagement = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Trx Manage Concepts" internalLink="/spring/transaction-management/concepts" />
+        <SideDropdownLink sideDropDownNavName="Transactionl" internalLink="/spring/transaction-management/transactional" />
+        <SideDropdownLink sideDropDownNavName="Propagation" internalLink="/spring/transaction-management/propagation" />
+        <SideDropdownLink sideDropDownNavName="Rollback" internalLink="/spring/transaction-management/rollback" />
+        <SideDropdownLink sideDropDownNavName="Isolation" internalLink="/spring/transaction-management/isolation" />
       </div>
     </section>
   );
