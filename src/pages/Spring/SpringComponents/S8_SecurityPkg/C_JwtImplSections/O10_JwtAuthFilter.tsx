@@ -217,16 +217,6 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
         </p>
         <JavaHighlight javaCode={code_java}></JavaHighlight>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

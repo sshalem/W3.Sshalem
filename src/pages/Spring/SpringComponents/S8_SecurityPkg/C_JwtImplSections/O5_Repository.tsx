@@ -46,16 +46,6 @@ const O5_Repository = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 RoleRepository</p>
         {renderRoleRepository}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

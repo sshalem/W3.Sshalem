@@ -153,16 +153,6 @@ const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

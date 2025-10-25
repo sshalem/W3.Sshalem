@@ -47,7 +47,6 @@ const O3_FilterChainProxy = ({ anchor }: { anchor: string }) => {
         </article>
       </section>
       <IMG img_name={security_3}></IMG>
-      <hr />
     </MainChildArea>
   );
 };

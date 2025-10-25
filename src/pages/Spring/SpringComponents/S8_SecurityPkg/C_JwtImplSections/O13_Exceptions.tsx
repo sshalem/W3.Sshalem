@@ -27,16 +27,6 @@ const O13_Exceptions = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

@@ -71,16 +71,6 @@ const O16_Test = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

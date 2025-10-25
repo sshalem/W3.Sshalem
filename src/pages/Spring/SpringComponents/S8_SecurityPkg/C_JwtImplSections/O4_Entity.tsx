@@ -43,16 +43,6 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 RoleEntity</p>
         <JavaHighlight javaCode={role_entity}></JavaHighlight>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

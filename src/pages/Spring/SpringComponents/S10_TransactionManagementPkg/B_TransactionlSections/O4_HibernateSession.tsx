@@ -171,6 +171,8 @@ const O4_HibernateSession = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </article>
+
+          <hr />
           {/*  */}
           {/*  */}
         </section>

@@ -104,7 +104,6 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
           The payload is then <SpanSky>Base64Url</SpanSky> encoded to form the second part of the JSON Web Token.
         </p>
       </section>
-      <hr />
     </MainChildArea>
   );
 };

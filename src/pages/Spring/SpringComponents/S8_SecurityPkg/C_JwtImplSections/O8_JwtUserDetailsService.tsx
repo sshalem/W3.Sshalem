@@ -45,16 +45,6 @@ const O8_JwtUserDetailsService = ({ anchor }: { anchor: string }) => {
         </p>
         {renderJwtUserDetailsService}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

@@ -24,16 +24,6 @@ const O3_PackageLayout = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 Package Lyout of JWT security Implementation</p>
         <IMG img_name={security_8}></IMG>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

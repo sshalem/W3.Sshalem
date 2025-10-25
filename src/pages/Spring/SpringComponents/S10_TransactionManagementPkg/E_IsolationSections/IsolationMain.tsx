@@ -1,33 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O2_InMemoryVsDB from "./O2_InMemoryVsDB";
-import O3_SaveFlushCommit from "./O3_SaveFlushCommit";
-import O4_HibernateSession from "./O4_HibernateSession";
-import O1_IntroTxMngmt from "./O1_IntroTxMngmt";
-import O5_TransactionMngmnt from "./O5_TransactionMngmnt";
-import O6_WhatIsTransaction from "./O6_WhatIsTransaction";
+import O1_IntroIsolation from "./O1_IntroIsolation";
+import O2_DirtyRead from "./O2_DirtyRead";
+import O3_NonRepeatableRead from "./O3_NonRepeatableRead";
+import O4_PhantomRead from "./O4_PhantomRead";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroTxMngmt = "1. Intro TX Mangmnt";
-const o2_InMemoryVsDB = "2. InMemory Vs Persistent Context Vs DB";
-const o3_SaveFlushCommit = "3. Save, Flush, Commit";
-const o4_HibernateSession = "4. Hibernate Session";
-const o5_TransactionMngmnt = "5. Transaction Management";
-const o6_WhatIsTransaction = "6. What is Transaction (ACID)";
+const o1_IntroIsolation = "1. Intro Isolation";
+const o2_DirtyRead = "2. Dirty Read";
+const o3_NonRepeatableRead = "3. Non-Repeatable Read";
+const o4_PhantomRead = "4. Phantom Read";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroTxMngmt, o2_InMemoryVsDB, o3_SaveFlushCommit, o4_HibernateSession, o5_TransactionMngmnt, o6_WhatIsTransaction];
+const anchorList: string[] = [o1_IntroIsolation, o2_DirtyRead, o3_NonRepeatableRead, o4_PhantomRead];
 
 // ============================================
 // ============================================
 
-const TransactionManagementMain = () => {
+const IsolationMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -75,16 +71,14 @@ const TransactionManagementMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_IntroTxMngmt anchor={o1_IntroTxMngmt}></O1_IntroTxMngmt>
-      <O2_InMemoryVsDB anchor={o2_InMemoryVsDB}></O2_InMemoryVsDB>
-      <O3_SaveFlushCommit anchor={o3_SaveFlushCommit}></O3_SaveFlushCommit>
-      <O4_HibernateSession anchor={o4_HibernateSession}></O4_HibernateSession>
-      <O5_TransactionMngmnt anchor={o5_TransactionMngmnt}></O5_TransactionMngmnt>
-      <O6_WhatIsTransaction anchor={o6_WhatIsTransaction}></O6_WhatIsTransaction>
+      <O1_IntroIsolation anchor={o1_IntroIsolation}></O1_IntroIsolation>
+      <O2_DirtyRead anchor={o2_DirtyRead}></O2_DirtyRead>
+      <O3_NonRepeatableRead anchor={o3_NonRepeatableRead}></O3_NonRepeatableRead>
+      <O4_PhantomRead anchor={o4_PhantomRead}></O4_PhantomRead>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default TransactionManagementMain;
+export default IsolationMain;

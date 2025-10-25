@@ -42,7 +42,6 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
 
         <XmlHighlight xmlCode={jwt_dependencies}></XmlHighlight>
       </section>
-      <hr />
     </MainChildArea>
   );
 };

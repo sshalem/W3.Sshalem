@@ -48,16 +48,6 @@ const O6_Service = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 RoleServiceImpl</p>
         {renderRoleServiceImpl}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

@@ -47,16 +47,6 @@ const O7_JwtUserDetails = ({ anchor }: { anchor: string }) => {
         </article>
         {renderJwtUserDetails}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

@@ -51,14 +51,6 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
       </section>
       <hr />
       <JavaHighlight javaCode={auth_controller}></JavaHighlight>
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

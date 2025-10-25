@@ -36,7 +36,6 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
         <p>You always need at least these three:</p>
         <XmlHighlight xmlCode={pom}></XmlHighlight>
       </section>
-      <hr />
     </MainChildArea>
   );
 };

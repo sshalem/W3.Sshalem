@@ -53,15 +53,6 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
         </p>
         {renderSecurityConfigDsl}
       </section>
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

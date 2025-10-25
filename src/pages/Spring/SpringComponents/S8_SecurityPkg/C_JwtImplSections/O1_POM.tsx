@@ -55,16 +55,6 @@ const O1_POM = ({ anchor }: { anchor: string }) => {
         <IMG img_name={security_9}></IMG>
         {renderPOM}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

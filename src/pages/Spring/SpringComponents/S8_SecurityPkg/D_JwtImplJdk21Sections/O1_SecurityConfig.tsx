@@ -40,16 +40,6 @@ const O1_SecurityConfig = ({ anchor }: { anchor: string }) => {
 
         {renderSecurityConfigDsl}
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };

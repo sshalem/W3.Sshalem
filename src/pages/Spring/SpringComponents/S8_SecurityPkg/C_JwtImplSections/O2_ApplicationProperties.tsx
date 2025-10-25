@@ -72,16 +72,6 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
         Code of main <SpanGrey>application.properties</SpanGrey> where I define which environment (DB) ichoose to work with
         <ApplicationPropertiesHighlight propertiesCode={properties_main}></ApplicationPropertiesHighlight>
       </section>
-      <hr />
-
-      <article>
-        {/* <ULdisc>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-            <Li></Li>
-          </ULdisc> */}
-      </article>
     </MainChildArea>
   );
 };
