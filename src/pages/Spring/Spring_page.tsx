@@ -12,11 +12,12 @@ import D7_DropDownRest from "./DropSpringPage/D7_DropDownRest";
 import D8_DropDownSecurity from "./DropSpringPage/D8_DropDownSecurity";
 import D9_DropDownAop from "./DropSpringPage/D9_DropDownAop";
 import D10_DropDownTransactionManagement from "./DropSpringPage/D10_DropDownTransactionManagement";
-import D11_DropDownCaching from "./DropSpringPage/D11_DropDownCaching";
-import D12_DropDownSpringIO from "./DropSpringPage/D12_DropDownSpringIO";
-import D13_DropDownJUnit from "./DropSpringPage/D13_DropDownJUnit";
-import D14_DropDownJenkins from "./DropSpringPage/D14_DropDownJenkins";
-import D15_DropDownInterviewQuestions from "./DropSpringPage/D15_DropDownInterviewQuestions";
+import D11_DropDownSpringBatch from "./DropSpringPage/D11_DropDownSpringBatch";
+import D12_DropDownCaching from "./DropSpringPage/D12_DropDownCaching";
+import D13_DropDownSpringIO from "./DropSpringPage/D13_DropDownSpringIO";
+import D14_DropDownJUnit from "./DropSpringPage/D14_DropDownJUnit";
+import D15_DropDownJenkins from "./DropSpringPage/D15_DropDownJenkins";
+import D16_DropDownInterviewQuestions from "./DropSpringPage/D16_DropDownInterviewQuestions";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -57,11 +58,12 @@ const Spring_page = () => {
             <D8_DropDownSecurity />
             <D9_DropDownAop />
             <D10_DropDownTransactionManagement />
-            <D11_DropDownCaching />
-            <D12_DropDownSpringIO />
-            <D13_DropDownJUnit />
-            <D14_DropDownJenkins />
-            <D15_DropDownInterviewQuestions />
+            <D11_DropDownSpringBatch />
+            <D12_DropDownCaching />
+            <D13_DropDownSpringIO />
+            <D14_DropDownJUnit />
+            <D15_DropDownJenkins />
+            <D16_DropDownInterviewQuestions />
           </div>
         </article>
       )}

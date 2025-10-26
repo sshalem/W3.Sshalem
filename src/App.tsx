@@ -35,6 +35,7 @@ import {
   JUnit,
   Logging,
   Rest,
+  SpringBatch,
   SpringHome,
   SpringIO,
   SpringSecurity,
@@ -117,7 +118,7 @@ import {
   LoopStreamParallelStreamMain,
   MultiThreadBlockQueueMain,
   StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/S15_InterviewQuestionsPkg";
+} from "./pages/Spring/SpringComponents/S16_InterviewQuestionsPkg";
 
 import {
   CaffeineMain,
@@ -126,7 +127,7 @@ import {
   InfinispanMain,
   RedisMain,
   SimpleDefaultMain,
-} from "./pages/Spring/SpringComponents/S11_CachingPkg";
+} from "./pages/Spring/SpringComponents/S12_CachingPkg";
 
 import {
   JwtImplJdk21Main,
@@ -146,9 +147,9 @@ import {
   TimestampConfigMain,
 } from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
 
-import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S12_SpringIOPkg";
-import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S13_JUnitPkg";
-import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S14_JenkinsPkg";
+import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S13_SpringIOPkg";
+import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S14_JUnitPkg";
+import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S15_JenkinsPkg";
 
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
 import {
@@ -205,6 +206,7 @@ import {
   TransactionalMain,
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
+import { BatchPartitioningMain, BatchProcessMain } from "./pages/Spring/SpringComponents/S11_SpringBatchPkg";
 
 const router = createBrowserRouter(
   [
@@ -334,6 +336,14 @@ const router = createBrowserRouter(
                 { path: "propagation", element: <PropagationMain /> },
                 { path: "rollback", element: <RollbackMain /> },
                 { path: "isolation", element: <IsolationMain /> },
+              ],
+            },
+            {
+              path: "batch",
+              element: <SpringBatch />,
+              children: [
+                { path: "process", element: <BatchProcessMain /> },
+                { path: "partitioning", element: <BatchPartitioningMain /> },
               ],
             },
             {
