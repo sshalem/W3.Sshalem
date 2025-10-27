@@ -48,6 +48,14 @@ const TopNavbar = () => {
               MyProjects
             </Link>
           </div>
+          <div className="ml-16 inline-block h-full align-middle">
+            <input
+              type="text"
+              className="rounded-md border-2 border-blue-700 px-2 py-1 tracking-widest text-blue-700 placeholder-blue-200 placeholder:italic focus:outline-none"
+              spellCheck="false"
+              placeholder="search ..."
+            />
+          </div>
         </nav>
       </article>
     </section>
