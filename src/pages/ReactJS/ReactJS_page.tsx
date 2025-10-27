@@ -7,6 +7,7 @@ import DropDownRouter from "./DropReactJS/DropDownRouter";
 import DropDownTypeScript from "./DropReactJS/DropDownTypeScript";
 import DropDownSetup from "./DropReactJS/DropDownSetup";
 import DropDownPagination from "./DropReactJS/DropDownPagination";
+import DropDownFlexSearch from "./DropReactJS/DropDownFlexSearch";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,6 +44,7 @@ const ReactJS_page = () => {
             <DropDownTypeScript />
             <DropDownRouter />
             <DropDownPagination />
+            <DropDownFlexSearch />
           </div>
         </article>
       )}

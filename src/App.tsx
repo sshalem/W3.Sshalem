@@ -69,6 +69,7 @@ import {
 import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 
 import {
+  FlexSearch,
   IntroMain,
   JsxMain,
   Pagination,
@@ -457,6 +458,7 @@ const router = createBrowserRouter(
             { path: "typescript", element: <TypeScript />, children: [{ path: "introduction", element: <IntroMain /> }] },
             { path: "router", element: <ReactRouter />, children: [{ path: "install", element: <RouterMain /> }] },
             { path: "pagination", element: <Pagination /> },
+            { path: "flex-search", element: <FlexSearch /> },
           ],
         },
         {
