@@ -1,26 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O0_links from "./O0_links";
+import O0_HashEncodeEncrypt from "./O0_HashEncodeEncrypt";
 import O1_IntroJwt from "./O1_IntroJwt";
 import O2_JwtTokenStructure from "./O2_JwtTokenStructure";
-import O0_links from "./O0_links";
-import O4_JwtAuthFlow from "./O4_JwtAuthFlow";
-import O3_JwtDependencies from "./O3_JwtDependencies";
+import O3_JJWT from "./O3_JJWT";
+import O4_JwtDependencies from "./O4_JwtDependencies";
+import O5_JwtAuthFlow from "./O5_JwtAuthFlow";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o0_links = "links";
+const o0_HashEncodeEncrypt = "Hashing, Encoding, Encrypting";
 const o1_IntroJwt = "1. Intro Jwt";
 const o2_JwtTokenStructure = "2. JWT token structure";
-const o3_JwtDependencies = `3. Jwt Dependencies`;
-const o4_JwtAuthFlow = "4. Jwt Authentication Flow";
+const o3_JJWT = "3. JJWT library";
+const o4_JwtDependencies = `4. Jwt Dependencies`;
+const o5_JwtAuthFlow = "5. Jwt Authentication Flow";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_links, o1_IntroJwt, o2_JwtTokenStructure, o3_JwtDependencies, o4_JwtAuthFlow];
+const anchorList: string[] = [o0_links, o0_HashEncodeEncrypt, o1_IntroJwt, o2_JwtTokenStructure, o3_JJWT, o4_JwtDependencies, o5_JwtAuthFlow];
 
 // ============================================
 // ============================================
@@ -75,10 +79,12 @@ const JwtMain = () => {
       {/* End Contents */}
 
       <O0_links anchor={o0_links}></O0_links>
+      <O0_HashEncodeEncrypt anchor={o0_HashEncodeEncrypt}></O0_HashEncodeEncrypt>
       <O1_IntroJwt anchor={o1_IntroJwt}></O1_IntroJwt>
       <O2_JwtTokenStructure anchor={o2_JwtTokenStructure}></O2_JwtTokenStructure>
-      <O3_JwtDependencies anchor={o3_JwtDependencies}></O3_JwtDependencies>
-      <O4_JwtAuthFlow anchor={o4_JwtAuthFlow}></O4_JwtAuthFlow>
+      <O3_JJWT anchor={o3_JJWT}></O3_JJWT>
+      <O4_JwtDependencies anchor={o4_JwtDependencies}></O4_JwtDependencies>
+      <O5_JwtAuthFlow anchor={o5_JwtAuthFlow}></O5_JwtAuthFlow>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
