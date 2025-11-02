@@ -10,7 +10,10 @@ const Navbar = () => {
   const [enableLeftScrolling, setEnableLeftScrolling] = useState<boolean>(false);
   const [enableRightScrolling, setEnableRightScrolling] = useState<boolean>(true);
 
-  const intervalRef = useRef<number | null>(null);
+  // const intervalRef = useRef<number | null>(null);
+
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   let location = useLocation();
 
   const navRef = useRef<HTMLDivElement | null>(null);
