@@ -42,7 +42,6 @@ const DropDownFlexSearch = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Global Search" internalLink="/reactJS/flex-search/global-search" />
-        <SideDropdownLink sideDropDownNavName="Index script" internalLink="/reactJS/flex-search/index-script" />
         <SideDropdownLink sideDropDownNavName="Flex Search" internalLink="/reactJS/flex-search/flex-search" />
       </div>
     </section>

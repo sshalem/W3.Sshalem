@@ -6,7 +6,6 @@ export { default as TypeScript } from "./TypeScriptPkg/TypeScript";
 export { default as ReactRouter } from "./RouterPkg/Router";
 export { default as RouterMain } from "./RouterPkg/RouterInstallSections/RouterMain";
 export { default as GlobalSearchMain } from "./FlexSearchPkg/A_GlobalSearchSections/GlobalSearchMain";
-export { default as IndexScriptMain } from "./FlexSearchPkg/B_IndexScriptSections/IndexScriptMain";
 export { default as FlexSearchMain } from "./FlexSearchPkg/C_FlexSearchSections/FlexSearchMain";
 export { default as Setup } from "./SetupPkg/Setup";
 export { default as Pagination } from "./PaginationPkg/Pagination";

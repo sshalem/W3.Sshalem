@@ -72,7 +72,6 @@ import {
   FlexSearch,
   FlexSearchMain,
   GlobalSearchMain,
-  IndexScriptMain,
   IntroMain,
   JsxMain,
   Pagination,
@@ -466,7 +465,6 @@ const router = createBrowserRouter(
               element: <FlexSearch />,
               children: [
                 { path: "global-search", element: <GlobalSearchMain /> },
-                { path: "index-script", element: <IndexScriptMain /> },
                 { path: "flex-search", element: <FlexSearchMain /> },
               ],
             },

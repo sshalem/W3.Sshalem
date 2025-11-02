@@ -1,7 +1,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 
-const O1_IntroIndexScript = ({ anchor }: { anchor: string }) => {
+const O3_IndexScript = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -38,4 +38,4 @@ const O1_IntroIndexScript = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_IntroIndexScript;
+export default O3_IndexScript;
