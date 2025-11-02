@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { SiStudyverse } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
+import TopNavbarSearch from "./TopNavbarSearch";
 
 const TopNavbar = () => {
   // this will takes the url path : only from the hash sign
@@ -48,13 +49,14 @@ const TopNavbar = () => {
               MyProjects
             </Link>
           </div>
-          <div className="ml-16 inline-block h-full align-middle">
-            <input
+          <div className="relative ml-16 inline-flex h-full align-middle">
+            <TopNavbarSearch></TopNavbarSearch>
+            {/* <input
               type="text"
               className="rounded-md border-2 border-blue-700 px-2 py-1 tracking-widest text-blue-700 placeholder-blue-200 placeholder:italic focus:outline-none"
               spellCheck="false"
               placeholder="search ..."
-            />
+            /> */}
           </div>
         </nav>
       </article>

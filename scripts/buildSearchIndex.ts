@@ -1,3 +1,4 @@
+import { log } from "console";
 import fs from "fs";
 import path from "path";
 
@@ -43,6 +44,7 @@ function readPages(dir: string = PAGES_DIR): Page[] {
     }
   }
 
+  console.log(pages);
   return pages;
 }
 

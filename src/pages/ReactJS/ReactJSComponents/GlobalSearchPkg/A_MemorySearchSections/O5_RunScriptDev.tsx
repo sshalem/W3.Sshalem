@@ -1,5 +1,6 @@
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import search_index from "../../../../../assets/search_index.jpg";
 
 const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
   return (
@@ -44,6 +45,10 @@ const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
           </p>
           <JsxHighlight jsxCode={scripts_build_search}></JsxHighlight>
         </div>
+        <article className="my-4">
+          this command runs and creates a <SpanGrey>searchIndex.json</SpanGrey> file inside <SpanGrey>public</SpanGrey> folder
+          <IMG img_name={search_index}></IMG>
+        </article>
       </section>
     </MainChildArea>
   );
