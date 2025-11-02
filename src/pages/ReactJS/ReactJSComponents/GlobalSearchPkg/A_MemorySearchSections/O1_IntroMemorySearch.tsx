@@ -1,7 +1,7 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
-const O1_IntroGlobalSearch = ({ anchor }: { anchor: string }) => {
+const O1_IntroMemorySearch = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -57,7 +57,18 @@ const O1_IntroGlobalSearch = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Build a lightweight index (e.g., JSON file)</Li>
           <Li>
-            Use a search library like <strong>FlexSearch</strong> , <strong>Fuse.js</strong>
+            If you want fuzzy search with indexing but easier TypeScript support than FlexSearch
+            <ULdisc>
+              <Li>
+                <SpanGrey>Fuse.js</SpanGrey> → very lightweight, zero build issues, TypeScript ready.
+              </Li>
+              <Li>
+                <SpanGrey>Lunr.js</SpanGrey> → full-text search, small JSON index, also TS compatible.
+              </Li>
+              <Li>
+                <SpanGrey>FlexSearch</SpanGrey> - <SpanRed>I did not succeed to work with it in TypeScript</SpanRed>
+              </Li>
+            </ULdisc>
           </Li>
           <Li>create a Client-side search component</Li>
           <Li>On each target page, ensure important sections have IDs so #anchor navigation works</Li>
@@ -67,4 +78,4 @@ const O1_IntroGlobalSearch = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_IntroGlobalSearch;
+export default O1_IntroMemorySearch;

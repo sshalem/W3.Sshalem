@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownFlexSearch = () => {
+const DropDownSearch = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownFlexSearch = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/flex-search")) {
+    if (location.pathname.includes("reactJS/global-search")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,18 +34,17 @@ const DropDownFlexSearch = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/flex-search" topicName="FlexSearch" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/global-search" topicName="Global Search" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Global Search" internalLink="/reactJS/flex-search/global-search" />
-        <SideDropdownLink sideDropDownNavName="Flex Search" internalLink="/reactJS/flex-search/flex-search" />
+        <SideDropdownLink sideDropDownNavName="Memory Search" internalLink="/reactJS/global-search/memory-search" />
       </div>
     </section>
   );
 };
 
-export default DropDownFlexSearch;
+export default DropDownSearch;

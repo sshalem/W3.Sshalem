@@ -69,11 +69,10 @@ import {
 import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
 
 import {
-  FlexSearch,
-  FlexSearchMain,
-  GlobalSearchMain,
+  GlobalSearch,
   IntroMain,
   JsxMain,
+  MemorySearchMain,
   Pagination,
   ReactBasics,
   ReactJSHome,
@@ -461,12 +460,9 @@ const router = createBrowserRouter(
             { path: "router", element: <ReactRouter />, children: [{ path: "install", element: <RouterMain /> }] },
             { path: "pagination", element: <Pagination /> },
             {
-              path: "flex-search",
-              element: <FlexSearch />,
-              children: [
-                { path: "global-search", element: <GlobalSearchMain /> },
-                { path: "flex-search", element: <FlexSearchMain /> },
-              ],
+              path: "global-search",
+              element: <GlobalSearch />,
+              children: [{ path: "memory-search", element: <MemorySearchMain /> }],
             },
           ],
         },
