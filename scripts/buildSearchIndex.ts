@@ -1,4 +1,3 @@
-import { log } from "console";
 import fs from "fs";
 import path from "path";
 
@@ -20,12 +19,25 @@ function readPages(dir: string = PAGES_DIR): Page[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const entry of entries) {
+    console.log("--- entry --- ");
+    console.log(entry);
+    console.log("--- dir --- ");
+    console.log(dir);
+
+    console.log(" --------------------------------------------------- ");
+    console.log(" --------------------------------------------------- ");
+    console.log(" --------------------------------------------------- ");
+
+    console.log(" ");
+    console.log(" ");
+    console.log(" ");
+
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
       // Recurse into subfolder
       pages.push(...readPages(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith(".tsx")) {
+    } else if (entry.isFile() && entry.name.endsWith(".tsx") && !entry.name.includes("Main") && !entry.name.includes("DropDown")) {
       const content = fs.readFileSync(fullPath, "utf-8");
       // Generate URL relative to src/pages
       const relativePath = path.relative(PAGES_DIR, fullPath);
@@ -44,7 +56,7 @@ function readPages(dir: string = PAGES_DIR): Page[] {
     }
   }
 
-  console.log(pages);
+  // console.log(pages);
   return pages;
 }
 

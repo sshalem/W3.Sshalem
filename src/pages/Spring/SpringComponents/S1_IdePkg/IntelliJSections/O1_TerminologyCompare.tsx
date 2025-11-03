@@ -1,3 +1,6 @@
+// O1_TerminologyCompare
+// /spring/ide/intellij#1.Terminologycompare
+
 import { MainChildArea } from "../../../../../components";
 import TableCompareTerminology from "../../../../../components/Tables/TableCompareTerminology";
 
