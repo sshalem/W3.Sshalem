@@ -94,7 +94,8 @@ function readPages(dir: string = PAGES_DIR): Page[] {
 
   for (const entry of entries) {
     console.log(entry);
-    console.log(dir);
+
+    console.log("dir : " + dir);
 
     console.log(" --------------------------------------------------- ");
     console.log(" --------------------------------------------------- ");
@@ -111,7 +112,10 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       // Generate URL relative to src/pages
       const relativePath = path.relative(PAGES_DIR, fullPath);
 
+      console.log("PAGES_DIR : " + PAGES_DIR);
+      console.log("fullPath : " + fullPath);
       console.log("relativePath : " + relativePath);
+
       const url =
         "/" +
         relativePath
