@@ -1,6 +1,6 @@
 /*
-O1_TerminologyCompare
 /spring/ide/intellij#1.Terminologycompare
+O1_TerminologyCompare
 */
 
 import { MainChildArea } from "../../../../../components";

@@ -1,5 +1,7 @@
-// O2_IntellijConfigPlugins
-// /spring/ide/intellij#2.IntellijPlugins+config
+/*
+/spring/ide/intellij#2.IntellijPlugins+config
+O2_IntellijConfigPlugins
+*/
 
 import { Anchor, IMG, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder } from "../../../../../components/Highlight";

@@ -27,18 +27,13 @@ function readPages(dir: string = PAGES_DIR): Page[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const entry of entries) {
-    // console.log(entry);
-
-    // console.log("dir : " + dir);
-
-    console.log(" --------------------------------------------------- ");
-
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
       // Recurse into subfolder
       pages.push(...readPages(fullPath));
     } else if (entry.isFile() && entry.name.endsWith(".tsx") && !entry.name.includes("Main") && !entry.name.includes("DropDown")) {
+      console.log(" --------------------------------------------------- ");
       const lines = readSpecificLine(fullPath);
 
       const content = fs.readFileSync(fullPath, "utf-8");
@@ -49,16 +44,13 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       lines.forEach((line) => {
         console.log(line);
       });
-      // console.log("PAGES_DIR : " + PAGES_DIR);
-      // console.log("fullPath : " + fullPath);
-      // console.log("relativePath : " + relativePath);
 
-      const url =
-        "/" +
-        relativePath
-          .replace(/\\/g, "/")
-          .replace(/\.tsx$/, "")
-          .toLowerCase();
+      const url = lines[0];
+      // "/" +
+      //   relativePath
+      //     .replace(/\\/g, "/")
+      //     .replace(/\.tsx$/, "")
+      //     .toLowerCase();
 
       pages.push({
         title: path.basename(entry.name, ".tsx"),

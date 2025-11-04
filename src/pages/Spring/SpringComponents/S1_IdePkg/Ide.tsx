@@ -1,3 +1,7 @@
+/*
+/spring/ide
+Ide
+*/
 import { Outlet, useLocation } from "react-router-dom";
 import TableIdeCompare from "../../../../components/Tables/TableIdeCompare";
 

@@ -12,10 +12,13 @@ const TopNavbarSearch = () => {
   }, []);
 
   const handleSearch = (q: string) => {
+    console.log(q);
+
     setQuery(q);
+
     if (!q) return setResults([]);
-    const r = pages.filter((p) => p.title.toLowerCase().includes(q.toLowerCase()) || p.content.toLowerCase().includes(q.toLowerCase()));
-    setResults(r);
+    const res = pages.filter((page) => page.title.toLowerCase().includes(q.toLowerCase()) || page.content.toLowerCase().includes(q.toLowerCase()));
+    setResults(res);
   };
 
   return (
@@ -28,10 +31,10 @@ const TopNavbarSearch = () => {
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
       />
-      <ul className="absolute top-14 mb-5 w-80 bg-white p-2 text-black">
-        {results.map((r) => (
-          <li key={r.url}>
-            <a href={r.url}>{r.title}</a>
+      <ul className="absolute top-10 mb-5 w-80 bg-white text-black">
+        {results.map((res, index) => (
+          <li key={index} className="p-2">
+            <a href={res.url}>{res.title}</a>
           </li>
         ))}
       </ul>

@@ -1,5 +1,7 @@
-// O3_DevTools
-// /spring/ide/intellij#3.DevTools
+/*
+/spring/ide/intellij#3.DevTools
+O3_DevTools
+*/
 
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen, XmlHighlight } from "../../../../../components/Highlight";

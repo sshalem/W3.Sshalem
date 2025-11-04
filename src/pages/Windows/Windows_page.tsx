@@ -1,6 +1,6 @@
 /*
 /windows
-Windows_page
+Windows_pages
 */
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
