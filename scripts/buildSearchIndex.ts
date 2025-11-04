@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import readline from "readline";
 
 interface Page {
   title: string;
@@ -46,11 +45,6 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       });
 
       const url = lines[0];
-      // "/" +
-      //   relativePath
-      //     .replace(/\\/g, "/")
-      //     .replace(/\.tsx$/, "")
-      //     .toLowerCase();
 
       pages.push({
         title: path.basename(entry.name, ".tsx"),
@@ -60,7 +54,6 @@ function readPages(dir: string = PAGES_DIR): Page[] {
     }
   }
 
-  // console.log(pages);
   return pages;
 }
 

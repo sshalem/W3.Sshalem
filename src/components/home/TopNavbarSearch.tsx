@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const TopNavbarSearch = () => {
   const [pages, setPages] = useState<any[]>([]);
@@ -34,7 +35,7 @@ const TopNavbarSearch = () => {
       <ul className="absolute top-[78px] mb-5 w-80 bg-zinc-300 px-4 text-black">
         {results.map((res, index) => (
           <li key={index} className="p-[2px]">
-            <a href={res.url}>{res.title}</a>
+            <Link to={res.url}>{res.title}</Link>
           </li>
         ))}
       </ul>
