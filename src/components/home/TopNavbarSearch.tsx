@@ -30,6 +30,8 @@ const TopNavbarSearch = () => {
     setResults(res);
   };
 
+  // I want to make the width of drop down of the search functionaly ,
+  // to dynamic, meaning to change according the length of the String
   return (
     <div>
       <input
