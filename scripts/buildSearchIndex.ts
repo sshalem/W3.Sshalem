@@ -8,78 +8,12 @@ interface Page {
   content: string;
 }
 
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-
-// const filePath: string = path.join("your", "file", "path.txt"); // Adjust the path
-// const lineNumberToRead: number = 2;
-
-// const readSpecificLine = async (filePath: string, lineNumber: number): Promise<string | null> => {
-//   const fileStream = fs.createReadStream(filePath);
-
-//   const rl = readline.createInterface({
-//     input: fileStream,
-//     crlfDelay: Infinity,
-//   });
-
-//   let currentLine = 0;
-//   for await (const line of rl) {
-//     currentLine++;
-//     if (currentLine === lineNumber) {
-//       rl.close(); // Optional: stop reading after the desired line
-//       return line;
-//     }
-//   }
-
-//   return null; // Line not found
-// };
-
-// readSpecificLine(filePath, lineNumberToRead)
-//   .then((line) => {
-//     if (line !== null) {
-//       console.log(`Line ${lineNumberToRead}: ${line}`);
-//     } else {
-//       console.log(`Line ${lineNumberToRead} not found.`);
-//     }
-//   })
-//   .catch((error) => {
-//     console.error("Error reading file:", error);
-//   });
-
-const filePath = path.join("your", "file", "path.txt"); // Adjust the path accordingly
-const lineNumberToRead = 2;
-
-const readSpecificLine = async (filePath: string, lineNumber: number) => {
-  const fileStream = fs.createReadStream(filePath);
-
-  const rl = readline.createInterface({
-    input: fileStream,
-    crlfDelay: Infinity,
-  });
-
-  let currentLine = 0;
-  for await (const line of rl) {
-    currentLine++;
-    if (currentLine === lineNumber) {
-      console.log(`Line ${lineNumber}: ${line}`);
-      rl.close(); // Optional: stop reading after the desired line
-      break;
-    }
-  }
-};
-
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
-// ******************************************************************************************************
+function readSpecificLine(filePath: string): string[] {
+  const data: string = fs.readFileSync(filePath, "utf8");
+  const dataSplitted: string[] = data.split("\n"); // splits the file into an array of lines.
+  const extractLines: string[] = dataSplitted.slice(1, 3); // extracts lines 2 and 3 (index 1 and 2).
+  return extractLines;
+}
 
 const PAGES_DIR = path.resolve("src/pages");
 const OUTPUT_FILE = path.resolve("public/searchIndex.json");
@@ -93,12 +27,10 @@ function readPages(dir: string = PAGES_DIR): Page[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const entry of entries) {
-    console.log(entry);
+    // console.log(entry);
 
-    console.log("dir : " + dir);
+    // console.log("dir : " + dir);
 
-    console.log(" --------------------------------------------------- ");
-    console.log(" --------------------------------------------------- ");
     console.log(" --------------------------------------------------- ");
 
     const fullPath = path.join(dir, entry.name);
@@ -107,14 +39,19 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       // Recurse into subfolder
       pages.push(...readPages(fullPath));
     } else if (entry.isFile() && entry.name.endsWith(".tsx") && !entry.name.includes("Main") && !entry.name.includes("DropDown")) {
-      // readSpecificLine(filePath, lineNumberToRead);
+      const lines = readSpecificLine(fullPath);
+
       const content = fs.readFileSync(fullPath, "utf-8");
       // Generate URL relative to src/pages
       const relativePath = path.relative(PAGES_DIR, fullPath);
 
-      console.log("PAGES_DIR : " + PAGES_DIR);
       console.log("fullPath : " + fullPath);
-      console.log("relativePath : " + relativePath);
+      lines.forEach((line) => {
+        console.log(line);
+      });
+      // console.log("PAGES_DIR : " + PAGES_DIR);
+      // console.log("fullPath : " + fullPath);
+      // console.log("relativePath : " + relativePath);
 
       const url =
         "/" +
