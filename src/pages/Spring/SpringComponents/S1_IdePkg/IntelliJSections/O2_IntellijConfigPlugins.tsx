@@ -1,6 +1,6 @@
 /*
 /spring/ide/intellij#2.IntellijPlugins+config
-O2_IntellijConfigPlugins
+Intellij Plugins + config --> (SPRING)(IDE's)(IntelliJ)
 */
 
 import { Anchor, IMG, MainChildArea } from "../../../../../components";

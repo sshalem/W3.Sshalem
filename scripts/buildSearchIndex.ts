@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 interface Page {
-  title: string;
+  component: string;
   url: string;
   content: string;
 }
@@ -22,9 +22,7 @@ const OUTPUT_FILE = path.resolve("public/searchIndex.json");
 // ******************************
 function readPages(dir: string = PAGES_DIR): Page[] {
   const pages: Page[] = [];
-
   const entries = fs.readdirSync(dir, { withFileTypes: true });
-
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
 
@@ -32,22 +30,14 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       // Recurse into subfolder
       pages.push(...readPages(fullPath));
     } else if (entry.isFile() && entry.name.endsWith(".tsx") && !entry.name.includes("Main") && !entry.name.includes("DropDown")) {
-      console.log(" --------------------------------------------------- ");
       const lines = readSpecificLine(fullPath);
-
       const content = fs.readFileSync(fullPath, "utf-8");
-      // Generate URL relative to src/pages
-      const relativePath = path.relative(PAGES_DIR, fullPath);
-
-      console.log("fullPath : " + fullPath);
-      lines.forEach((line) => {
-        console.log(line);
-      });
 
       const url = lines[0];
+      const page = lines[1];
 
       pages.push({
-        title: path.basename(entry.name, ".tsx"),
+        component: page,
         url,
         content,
       });
