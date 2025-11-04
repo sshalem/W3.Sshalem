@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/h2#Osiv
+OSIV --> (SPRING)(ApplicationProperties)(H2)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 

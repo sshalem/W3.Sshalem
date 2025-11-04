@@ -1,3 +1,8 @@
+/*
+/spring/application-properties//h2#H2DBeaver
+H2 DBeaver --> (SPRING)(ApplicationProperties)(H2)
+*/
+
 import { MainChildArea } from "../../../../../components";
 
 const H2Dbeaver = ({ anchor }: { anchor: string }) => {

@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/h2#H2DBBasicConfig
+H2 DB Basic Config --> (SPRING)(ApplicationProperties)(H2)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
 

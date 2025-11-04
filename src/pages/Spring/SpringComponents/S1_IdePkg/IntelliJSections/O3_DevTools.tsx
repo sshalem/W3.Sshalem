@@ -1,6 +1,6 @@
 /*
 /spring/ide/intellij#3.DevTools
-O3_DevTools
+DevTools --> (SPRING)(IDE's)(IntelliJ)
 */
 
 import { IMG, MainChildArea } from "../../../../../components";
