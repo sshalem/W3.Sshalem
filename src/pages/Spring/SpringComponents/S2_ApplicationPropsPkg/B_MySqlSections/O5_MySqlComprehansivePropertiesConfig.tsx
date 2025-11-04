@@ -1,7 +1,11 @@
+/*
+/spring/application-properties/mysql#5.MysqlComprehansiveProperties
+Mysql Comprehansive Properties --> (SPRING)(ApplicationProperties)(MySql)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
 
-const MySqlComprehansivePropertiesConfig = ({ anchor }: { anchor: string }) => {
+const O5_MySqlComprehansivePropertiesConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
@@ -9,7 +13,7 @@ const MySqlComprehansivePropertiesConfig = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default MySqlComprehansivePropertiesConfig;
+export default O5_MySqlComprehansivePropertiesConfig;
 
 const mysql_comprehansive_config = `spring.datasource.url=jdbc:mysql://localhost:3306/{the_name_of_Schema_in_DB}?useSSL=false&serverTimezone=UTC
 spring.datasource.username=root

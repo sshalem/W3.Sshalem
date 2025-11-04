@@ -1,7 +1,11 @@
+/*
+/spring/application-properties/mysql#4.MysqlDetailed
+Mysql Detailed --> (SPRING)(ApplicationProperties)(MySql)
+*/
 import { Answer, MainChildArea, Question } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
-const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
+const O4_MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <Question>
@@ -27,7 +31,7 @@ const MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default MySqlDetailedConfig;
+export default O4_MySqlDetailedConfig;
 
 const propertiesCode = `logging.level.org.hibernate.SQL=DEBUG
 # Once I insert Data to DB , it will show the meta data inserted

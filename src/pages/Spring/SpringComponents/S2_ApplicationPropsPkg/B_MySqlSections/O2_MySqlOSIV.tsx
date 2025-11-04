@@ -1,7 +1,11 @@
+/*
+/spring/application-properties/mysql#2.Osiv
+Osiv --> (SPRING)(ApplicationProperties)(MySql)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
-const MySqlOSIV = ({ anchor }: { anchor: string }) => {
+const O2_MySqlOSIV = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-4">
@@ -14,7 +18,7 @@ const MySqlOSIV = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default MySqlOSIV;
+export default O2_MySqlOSIV;
 
 const osiv = `# Disable OSIV
 spring.jpa.open-in-view=false`;

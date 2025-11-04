@@ -1,6 +1,10 @@
+/*
+/spring/application-properties/mysql#6.Mysqlgithub
+Mysql git hub --> (SPRING)(ApplicationProperties)(MySql)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
-const MySqlGitHub = ({ anchor }: { anchor: string }) => {
+const O6_MySqlGitHub = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <GitHub>
@@ -19,4 +23,4 @@ const MySqlGitHub = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default MySqlGitHub;
+export default O6_MySqlGitHub;

@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/postgresql#PostgresqlDetailedConfig
+Postgresql Detailed Config --> (SPRING)(ApplicationProperties)(Postgresql)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 

@@ -1,7 +1,11 @@
+/*
+/spring/application-properties/mysql#1.MysqlDialect
+Mysql Dialect --> (SPRING)(ApplicationProperties)(MySql)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
-const MysqlDialect = ({ anchor }: { anchor: string }) => {
+const O1_MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-4">
@@ -20,7 +24,7 @@ const MysqlDialect = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default MysqlDialect;
+export default O1_MysqlDialect;
 
 const mysql_jdk8 = `# MySql Dialect for to use with MySql 8 on JDK8 is MySQL5Dialect
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect`;

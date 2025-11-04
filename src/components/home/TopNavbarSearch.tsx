@@ -18,7 +18,7 @@ const TopNavbarSearch = () => {
   };
 
   const handleSearch = (q: string) => {
-    console.log(q);
+    // console.log(q);
     setQuery(q);
     if (!q) {
       return setResults([]);
@@ -26,6 +26,7 @@ const TopNavbarSearch = () => {
     const res = pages.filter(
       (page) => page.component.toLowerCase().includes(q.toLowerCase()) || page.content.toLowerCase().includes(q.toLowerCase()),
     );
+
     setResults(res);
   };
 
@@ -39,14 +40,16 @@ const TopNavbarSearch = () => {
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
       />
-      <ul className="absolute top-[78px] mb-5 w-96 bg-zinc-300 px-4 text-sm text-black">
-        {results.map((res, index) => (
-          <li key={index} className="p-[2px]">
-            <Link to={res.url} onClick={handleClearSearch}>
-              {res.component}
-            </Link>
-          </li>
-        ))}
+      <ul className="absolute top-[78px] w-auto max-w-fit bg-zinc-200 font-mono text-sm text-black">
+        {results.map((res, index) => {
+          return (
+            <li key={index} className="hover:w-auto hover:bg-blue-200 hover:text-black">
+              <Link to={res.url} onClick={handleClearSearch}>
+                <span className="ml-4">{res.component}</span>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

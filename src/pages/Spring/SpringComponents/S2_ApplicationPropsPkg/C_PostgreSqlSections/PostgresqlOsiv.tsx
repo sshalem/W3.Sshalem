@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/postgresql#Osiv
+Osiv --> (SPRING)(ApplicationProperties)(Osiv)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 
