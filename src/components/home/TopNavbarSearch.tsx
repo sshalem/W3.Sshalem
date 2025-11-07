@@ -5,9 +5,14 @@ const TopNavbarSearch = () => {
   const [pages, setPages] = useState<any[]>([]);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<any[]>([]);
-  const [width, setWidth] = useState<number>();
-  const ulRef = useRef<HTMLUListElement | null>(null);
-  const liRefs = useRef<(HTMLLIElement | null)[]>([]);
+  // const [width, setWidth] = useState<number>();
+  const [widths, setWidths] = useState<number[]>([]);
+
+  // const ulRef = useRef<HTMLUListElement | null>(null);
+  // Since the liRefs is inside a map iterration, thus I set it as an array
+  // So I could catch each liRef (Otherwise only the first liRefs is treated, the rest are null)
+  // const liRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const measureRef = useRef<HTMLSpanElement>(null);
 
   const handleClearSearch = () => {
     setResults([]);
@@ -28,11 +33,17 @@ const TopNavbarSearch = () => {
   };
 
   useEffect(() => {
-    if (ulRef.current !== null) {
-      const newWidth = ulRef.current.clientWidth + 220;
-      setWidth(newWidth);
+    if (measureRef.current) {
+      console.log(results.length);
+      const newWidths = results.map((res) => {
+        measureRef.current!.textContent = res.component;
+        return measureRef.current!.offsetWidth + 32; // Add padding/margin if needed
+      });
+
+      setWidths(newWidths);
+      console.log(newWidths);
     }
-  }, [query]);
+  }, [results]);
 
   useEffect(() => {
     fetch("/searchIndex.json")
@@ -52,20 +63,37 @@ const TopNavbarSearch = () => {
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
       />
-      <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black" style={{ width: `${width}px` }} ref={ulRef}>
+      {/* <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black" style={{ width: `${width}px` }} ref={ulRef}> */}
+      {/*  <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black" ref={ulRef}> */}
+      <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black">
         {results.map((res, index) => {
           return (
-            <li
-              key={index}
-              className="hover:bg-blue-200 hover:text-black"
-              ref={(el) => {
-                liRefs.current[index] = el;
-              }}
-            >
-              <Link to={res.url} onClick={handleClearSearch}>
-                <span className="ml-4">{res.component}</span>
-              </Link>
-            </li>
+            <>
+              {/* Hidden span for measuring text width */}
+              <span
+                ref={measureRef}
+                style={{
+                  position: "absolute",
+                  visibility: "hidden",
+                  whiteSpace: "nowrap",
+                  fontSize: "14px",
+                  fontFamily: "monospace",
+                }}
+              />
+
+              <li
+                key={index}
+                className="hover:bg-blue-200 hover:text-black"
+                // ref={(el) => {
+                //   liRefs.current[index] = el;
+                // }}
+                style={{ width: `${widths[index]}px` }}
+              >
+                <Link to={res.url} onClick={handleClearSearch}>
+                  <span className="ml-4">{res.component}</span>
+                </Link>
+              </li>
+            </>
           );
         })}
       </ul>
@@ -73,3 +101,18 @@ const TopNavbarSearch = () => {
   );
 };
 export default TopNavbarSearch;
+
+//  <div
+//    style={{
+//      position: "absolute",
+//      visibility: "hidden",
+//      whiteSpace: "nowrap",
+//      fontSize: "16px",
+//      fontFamily: "Arial",
+//    }}
+//    ref={(el) => {
+//      divRefs.current[index] = el;
+//    }}
+//  >
+//    {res.component}
+//  </div>;
