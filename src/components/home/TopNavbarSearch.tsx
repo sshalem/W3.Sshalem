@@ -34,14 +34,14 @@ const TopNavbarSearch = () => {
 
   useEffect(() => {
     if (measureRef.current) {
-      console.log(results.length);
+      // console.log(results.length);
       const newWidths = results.map((res) => {
         measureRef.current!.textContent = res.component;
         return measureRef.current!.offsetWidth + 32; // Add padding/margin if needed
       });
 
       setWidths(newWidths);
-      console.log(newWidths);
+      // console.log(newWidths);
     }
   }, [results]);
 
@@ -69,7 +69,6 @@ const TopNavbarSearch = () => {
         {results.map((res, index) => {
           return (
             <>
-              {/* Hidden span for measuring text width */}
               <span
                 ref={measureRef}
                 style={{
