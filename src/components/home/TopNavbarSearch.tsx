@@ -12,7 +12,9 @@ const TopNavbarSearch = () => {
   // Since the liRefs is inside a map iterration, thus I set it as an array
   // So I could catch each liRef (Otherwise only the first liRefs is treated, the rest are null)
   // const liRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const measureRef = useRef<HTMLSpanElement>(null);
+  // const measureRef = useRef<HTMLSpanElement>(null);
+
+  const measureRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   const handleClearSearch = () => {
     setResults([]);
@@ -34,14 +36,15 @@ const TopNavbarSearch = () => {
 
   useEffect(() => {
     if (measureRef.current) {
-      // console.log(results.length);
       const newWidths = results.map((res) => {
-        measureRef.current!.textContent = res.component;
-        return measureRef.current!.offsetWidth + 32; // Add padding/margin if needed
+        measureRef.current!.forEach((r) => {
+          r!.textContent = res.component;
+        });
+        // measureRef.current!.textContent = res.component;
+        // return measureRef.current!.offsetWidth + 200; // Add padding/margin if needed
       });
 
       setWidths(newWidths);
-      // console.log(newWidths);
     }
   }, [results]);
 
@@ -70,7 +73,9 @@ const TopNavbarSearch = () => {
           return (
             <>
               <span
-                ref={measureRef}
+                ref={(el) => {
+                  measureRef.current[index] = el;
+                }}
                 style={{
                   position: "absolute",
                   visibility: "hidden",
@@ -80,14 +85,7 @@ const TopNavbarSearch = () => {
                 }}
               />
 
-              <li
-                key={index}
-                className="hover:bg-blue-200 hover:text-black"
-                // ref={(el) => {
-                //   liRefs.current[index] = el;
-                // }}
-                style={{ width: `${widths[index]}px` }}
-              >
+              <li key={index} className="hover:bg-blue-200 hover:text-black" style={{ width: `${widths[index]}px` }}>
                 <Link to={res.url} onClick={handleClearSearch}>
                   <span className="ml-4">{res.component}</span>
                 </Link>
