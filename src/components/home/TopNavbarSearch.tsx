@@ -8,12 +8,6 @@ const TopNavbarSearch = () => {
   // const [width, setWidth] = useState<number>();
   const [widths, setWidths] = useState<number[]>([]);
 
-  // const ulRef = useRef<HTMLUListElement | null>(null);
-  // Since the liRefs is inside a map iterration, thus I set it as an array
-  // So I could catch each liRef (Otherwise only the first liRefs is treated, the rest are null)
-  // const liRefs = useRef<(HTMLLIElement | null)[]>([]);
-  // const measureRef = useRef<HTMLSpanElement>(null);
-
   const measureRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   const handleClearSearch = () => {
@@ -72,8 +66,6 @@ const TopNavbarSearch = () => {
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
       />
-      {/* <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black" style={{ width: `${width}px` }} ref={ulRef}> */}
-      {/*  <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black" ref={ulRef}> */}
       <ul className="absolute top-[78px] bg-zinc-200 font-mono text-sm text-black">
         {results.map((res, index) => {
           return (
