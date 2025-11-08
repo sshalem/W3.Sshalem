@@ -22,7 +22,6 @@ const TopNavbarSearch = () => {
   };
 
   const handleSearch = (q: string) => {
-    // console.log(q);
     setQuery(q);
     if (!q) {
       return setResults([]);
@@ -30,21 +29,28 @@ const TopNavbarSearch = () => {
     const res = pages.filter(
       (page) => page.component.toLowerCase().includes(q.toLowerCase()) || page.content.toLowerCase().includes(q.toLowerCase()),
     );
-
     setResults(res);
   };
 
   useEffect(() => {
     if (measureRef.current) {
-      const newWidths = results.map((res) => {
-        measureRef.current!.forEach((r) => {
-          r!.textContent = res.component;
-        });
-        // measureRef.current!.textContent = res.component;
-        // return measureRef.current!.offsetWidth + 200; // Add padding/margin if needed
-      });
+      // measureRef.current.forEach((i) => console.log(i?.textContent));
 
-      setWidths(newWidths);
+      const newWidths = results.map((res) => {
+        // I still havn't figure out , why to add only to [0] element of the array
+        // (1) set measureRef with textContent , so it will be assign the right width to the text
+        // (2) set offsetWidth to that text
+        let textContentWidth: number = 0;
+        if (measureRef.current![0]) {
+          measureRef.current![0].textContent = res.component;
+          textContentWidth = measureRef.current![0].offsetWidth + 50; // Add padding/margin if needed
+        }
+        return textContentWidth;
+      });
+      // I want to create all elements in the array to be same length ,
+      // This will make hovering als be same length for all elements
+      const updatedToMaxWidth = newWidths.map(() => newWidths.reduce((acc, num) => (num > acc ? num : acc), newWidths[0]));
+      setWidths(updatedToMaxWidth);
     }
   }, [results]);
 
