@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/connect-with-filezilla
-connect-with-filezilla
+connect-with-filezilla --> (DEVOPS)(LINUX)(connect with FileZilla)
 */
 import { MainChildArea } from "../../../../../components";
 

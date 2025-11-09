@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/tomcat-install#O4_start_tomcat
-O4_start_tomcat
+start_tomcat --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";

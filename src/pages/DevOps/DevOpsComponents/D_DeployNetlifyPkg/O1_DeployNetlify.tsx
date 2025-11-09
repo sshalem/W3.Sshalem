@@ -1,3 +1,7 @@
+/*
+/devops/netlify#1.confignetlifyforSPA
+config netlify for SPA --> (DEVOPS)(Netlify)(config netlify for SPA)
+*/
 import { MainChildArea } from "../../../../components";
 import { SpanBlue, SpanRed } from "../../../../components/Highlight";
 

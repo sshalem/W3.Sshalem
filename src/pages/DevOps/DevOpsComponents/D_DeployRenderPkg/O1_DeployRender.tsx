@@ -1,3 +1,7 @@
+/*
+/devops/render#1.RenderDeploy
+Render Deploy --> (DEVOPS)(Netlify)(Render Deploy)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
 
 const O1_DeployRender = ({ anchor }: { anchor: string }) => {

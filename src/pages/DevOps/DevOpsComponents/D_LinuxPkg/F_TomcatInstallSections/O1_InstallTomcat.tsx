@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/tomcat-install#O1_Install_tomcat_on_linux
-O1_Install_tomcat_on_linux
+Install_tomcat_on_linux --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";

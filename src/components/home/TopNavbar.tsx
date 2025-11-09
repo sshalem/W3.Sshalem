@@ -13,7 +13,7 @@ const TopNavbar = () => {
   };
 
   useEffect(() => {
-    console.log(hash);
+    // console.log(hash);
 
     // Checks if url with hash is present
     if (hash) {

@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/mysql-install#O1_mysql_install
+mysql_install --> (DEVOPS)(LINUX)(Linux MySql Install)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
 const O1_MySqlInstall = ({ anchor }: { anchor: string }) => {

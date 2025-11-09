@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/connect-with-ssh#connect_to_server_ssh
-connect_to_server_ssh
+connect_to_server_ssh --> (DEVOPS)(LINUX)(connect with SSH)
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";

@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/setup-server#03_Config_account
-03_Config_account
+Config_account --> (DEVOPS)(LINUX)(Linux Server setup)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanRed } from "../../../../../components/Highlight";

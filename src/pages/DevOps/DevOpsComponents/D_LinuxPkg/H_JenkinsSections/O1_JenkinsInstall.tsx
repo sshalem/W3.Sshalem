@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/jenkins-install#O1_jenkins_install
+jenkins_install --> (DEVOPS)(LINUX)(Linux MySql Install)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
 const O1_JenkinsInstall = ({ anchor }: { anchor: string }) => {

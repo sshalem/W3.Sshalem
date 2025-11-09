@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/jdk-install#01_JDK_Install
+JDK_Install --> (DEVOPS)(LINUX)(Linux Server setup)
+*/
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";

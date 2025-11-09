@@ -1,6 +1,6 @@
 /*
 /devops/linux-server/connect-with-ssh#ssh_connection_timeout_issue
-ssh_connection_timeout_issue
+ssh_connection_timeout_issue --> (DEVOPS)(LINUX)(connect with SSH)
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue } from "../../../../../components/Highlight";
