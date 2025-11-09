@@ -1,3 +1,7 @@
+/*
+/devops/linux-server
+Linux_Server
+*/
 import { Outlet, useLocation } from "react-router-dom";
 
 const Linux_Server = () => {

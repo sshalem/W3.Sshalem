@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/create-server#create_linode_server
+create_linode_server
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import linode_1 from "../../../../../assets/linode_1.jpg";
 import linode_2 from "../../../../../assets/linode_2.jpg";

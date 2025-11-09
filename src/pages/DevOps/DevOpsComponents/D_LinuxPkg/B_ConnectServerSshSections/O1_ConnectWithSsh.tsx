@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/connect-with-ssh#connect_to_server_ssh
+connect_to_server_ssh
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import linode_5 from "../../../../../assets/linode_5.jpg";

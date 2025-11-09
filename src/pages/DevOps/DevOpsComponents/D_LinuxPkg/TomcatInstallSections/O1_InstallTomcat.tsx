@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/tomcat-install#O1_Install_tomcat_on_linux
+O1_Install_tomcat_on_linux
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 

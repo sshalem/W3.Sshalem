@@ -5,7 +5,6 @@ const TopNavbarSearch = () => {
   const [pages, setPages] = useState<any[]>([]);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<any[]>([]);
-  // const [width, setWidth] = useState<number>();
   const [widths, setWidths] = useState<number[]>([]);
 
   const measureRef = useRef<(HTMLSpanElement | null)[]>([]);
@@ -35,6 +34,7 @@ const TopNavbarSearch = () => {
         // (1) set measureRef with textContent , so it will be assign the right width to the text
         // (2) set offsetWidth to that text
         let textContentWidth: number = 0;
+
         if (measureRef.current![0]) {
           measureRef.current![0].textContent = res.component;
           textContentWidth = measureRef.current![0].offsetWidth + 50; // Add padding/margin if needed
@@ -96,18 +96,3 @@ const TopNavbarSearch = () => {
   );
 };
 export default TopNavbarSearch;
-
-//  <div
-//    style={{
-//      position: "absolute",
-//      visibility: "hidden",
-//      whiteSpace: "nowrap",
-//      fontSize: "16px",
-//      fontFamily: "Arial",
-//    }}
-//    ref={(el) => {
-//      divRefs.current[index] = el;
-//    }}
-//  >
-//    {res.component}
-//  </div>;

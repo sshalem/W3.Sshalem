@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/setup-server#04_Firewall_Config
+04_Firewall_Config
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanGreen } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";

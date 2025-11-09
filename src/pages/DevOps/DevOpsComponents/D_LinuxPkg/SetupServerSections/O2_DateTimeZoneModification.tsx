@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/setup-server#02_Date_Time_Zone
+02_Date_Time_Zone
+*/
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";

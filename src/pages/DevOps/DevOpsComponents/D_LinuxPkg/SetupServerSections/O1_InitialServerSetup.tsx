@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/setup-server#01_Initial_Server_Setup
+01_Initial_Server_Setup
+*/
 import { MainChildArea } from "../../../../../components";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 

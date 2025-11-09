@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/connect-with-ssh#ssh_connection_timeout_issue
+ssh_connection_timeout_issue
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue } from "../../../../../components/Highlight";
 import linode_6 from "../../../../../assets/linode_6.jpg";

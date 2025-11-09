@@ -1,3 +1,7 @@
+/*
+/devops/linux-server/connect-with-filezilla
+connect-with-filezilla
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O1_ConnectFileZilla = ({ anchor }: { anchor: string }) => {
