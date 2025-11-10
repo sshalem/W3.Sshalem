@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#7.Postgresdatasql
+Postgres data sql --> (SPRING)(ApplicationProperties)(Postgres data sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_8 from "../../../../../assets/db_init_8.jpg";

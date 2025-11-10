@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#2.Schemasql
+Schema sql --> (SPRING)(ApplicationProperties)(Schema sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_1 from "../../../../../assets/db_init_1.jpg";

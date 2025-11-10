@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/command-line-initialization#2.CommandLineRunnerexample
+CommandLineRunner example --> (SPRING)(ApplicationProperties)(CommlineRunner example)
+*/
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";

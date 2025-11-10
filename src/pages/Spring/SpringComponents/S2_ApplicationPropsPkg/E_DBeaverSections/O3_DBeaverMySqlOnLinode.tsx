@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/dbeaver#DBeaverWithMysql
+DBeaver With Mysql On Linode Server  --> (SPRING)(ApplicationProperties)(DBeaverMySqlOnLinode)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {

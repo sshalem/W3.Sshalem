@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#5.H2datasql
+H2 data sql --> (SPRING)(ApplicationProperties)(H2 data sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_6 from "../../../../../assets/db_init_6.jpg";

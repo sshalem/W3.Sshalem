@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#6.Mysqldatasql
+Mysql data sql --> (SPRING)(ApplicationProperties)(Mysql data sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_7 from "../../../../../assets/db_init_7.jpg";

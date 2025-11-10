@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/post-construct-initialization#2.@PostConstructexample
+@PostConstruct example --> (SPRING)(ApplicationProperties)(2.@PostConstruct example)
+*/
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";

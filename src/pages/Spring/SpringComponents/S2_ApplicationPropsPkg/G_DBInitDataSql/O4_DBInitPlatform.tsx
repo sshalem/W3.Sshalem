@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#4.platform
+platform --> (SPRING)(ApplicationProperties)(platform)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_5 from "../../../../../assets/db_init_5.jpg";

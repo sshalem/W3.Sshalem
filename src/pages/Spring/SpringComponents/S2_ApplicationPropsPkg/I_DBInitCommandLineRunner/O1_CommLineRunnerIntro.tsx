@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/command-line-initialization#1.CommlineRunnerIntro
+CommlineRunner Intro --> (SPRING)(ApplicationProperties)(CommlineRunner Intro)
+*/
 import { MainChildArea } from "../../../../../components";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";

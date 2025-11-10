@@ -1,11 +1,15 @@
+/*
+/spring/application-properties/profiles#Profileconfig
+Profile H2 --> (SPRING)(ApplicationProperties)(ProfileH2)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
-import profile_mysql from "../../../../../assets/profile_mysql.jpg";
+import profile_h2 from "../../../../../assets/profile_h2.jpg";
 
-const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
+const ProfileH2Config = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <IMG img_name={profile_mysql}></IMG>
+      <IMG img_name={profile_h2}></IMG>
       <div className="my-5">
         <DivDoubleBorder>application.properties</DivDoubleBorder>
       </div>
@@ -13,15 +17,15 @@ const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <DivDoubleBorder>application-h2.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={configMysqlProps} />
+      <ApplicationPropertiesHighlight propertiesCode={configH2Props} />
     </MainChildArea>
   );
 };
 
-export default ProfileMySqlConfig;
+export default ProfileH2Config;
 
-const defaultProps = `#spring.profiles.active=h2
-spring.profiles.active=mysql
+const defaultProps = `spring.profiles.active=h2
+#spring.profiles.active=mysql
 #spring.profiles.active=postgres
 
 # console color enabled
@@ -52,41 +56,34 @@ server.error.whitelabel.enabled=true
 # ===========================================
 spring.devtools.restart.enabled=true`;
 
-const configMysqlProps = `# ===============================
-# 		DATA SOURCE
-# =============================== 
-spring.datasource.url=jdbc:mysql://localhost:3306/e-commerce?useSSL=false&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=root
+const configH2Props = `spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
-# ===============================
-# 	 	JPA / HIBERNATE
-# ===============================
- 
+# Enabling H2 Console
+spring.h2.console.enabled=true
+
+# Custom H2 Console URL from /h2-console to /h2
+spring.h2.console.path=/h2
+
 #Spring will create a schema
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.generate-ddl=true
 #spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.generate_statistics=true
-spring.jpa.open-in-view=false
 #spring.jpa.properties.hibernate.format_sql=true
 
-# When using java version JDK11 use with mysql dialect
-#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+spring.jpa.open-in-view=false
 
-# ==========================================
-#  we must add this config as well for 
-#  schema.sql and data.sql could work
-# ==========================================
-
-# this is in order to use data.sql for mysql connection 
-# by setting the platform as "shMysql"
-# then modifying "data.sql" to "data-shMysql.sql"
-spring.sql.init.platform=Mysql
-
-# to initialize using "data.sql" file set the 2 following parameters
+###########################################
+# to initialize using data.sql file    ##
+###########################################
 spring.sql.init.mode=always
-spring.jpa.defer-datasource-initialization=true
+#spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql, classpath:DB_initialization_scripts/data-H2extra.sql
+spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-H2.sql
+spring.sql.init.platform=H2
 
-spring.sql.init.data-locations=classpath:DB_initialization_scripts/data-MySql.sql
+spring.jpa.defer-datasource-initialization=true
 `;

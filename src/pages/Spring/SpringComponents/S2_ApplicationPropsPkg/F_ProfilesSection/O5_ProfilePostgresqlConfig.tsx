@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/profiles#ProfilePostgreSql
+Profile PostgreSql --> (SPRING)(ApplicationProperties)(ProfilePostgreSql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
 import profile_postgres from "../../../../../assets/profile_postgres.jpg";

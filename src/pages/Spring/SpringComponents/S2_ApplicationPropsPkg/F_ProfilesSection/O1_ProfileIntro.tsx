@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/profiles#ProfileIntro
+Profile Intro  --> (SPRING)(ApplicationProperties)(ProfileIntro)
+*/
 import { FaDiamond } from "react-icons/fa6";
 import { Answer, MainChildArea, Question } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";

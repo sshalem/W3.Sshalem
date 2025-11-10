@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ProfileIntro from "./ProfileIntro";
-import ProfileConfig from "./ProfileConfig";
-import ProfileH2Config from "./ProfileH2Config";
-import ProfileMySqlConfig from "./ProfileMySqlConfig";
-import ProfilePostgresqlConfig from "./ProfilePostgresqlConfig";
+import ProfileIntro from "./O1_ProfileIntro";
+import ProfileConfig from "./O2_ProfileConfig";
+import ProfileH2Config from "./O3_ProfileH2Config";
+import ProfileMySqlConfig from "./O4_ProfileMySqlConfig";
+import ProfilePostgresqlConfig from "./O5_ProfilePostgresqlConfig";
 
 // =============================================================================================================
 

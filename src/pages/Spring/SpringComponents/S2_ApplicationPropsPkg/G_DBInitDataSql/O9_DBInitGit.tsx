@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#9.DBinitgit
+DB init git --> (SPRING)(ApplicationProperties)(DB init git)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
 const O9_DBInitGit = ({ anchor }: { anchor: string }) => {

@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#1.DataSqlintro
+Data Sql intro --> (SPRING)(ApplicationProperties)(DataSqlintro)
+*/
 import { FaDiamond } from "react-icons/fa6";
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { SpanBlue, SpanGrey } from "../../../../../components/Highlight";

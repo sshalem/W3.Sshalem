@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/post-construct-initialization#1.@PostConstructIntro
+@PostConstruct Intro --> (SPRING)(ApplicationProperties)(@PostConstruct Intro)
+*/
 import { MainChildArea } from "../../../../../components";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";

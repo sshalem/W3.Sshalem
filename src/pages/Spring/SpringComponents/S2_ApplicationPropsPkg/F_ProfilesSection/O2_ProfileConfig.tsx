@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/profiles#Profileconfig
+Profile config --> (SPRING)(ApplicationProperties)(Profileconfig)
+*/
 import { FaDiamond } from "react-icons/fa6";
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, BatchHighlight, DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";

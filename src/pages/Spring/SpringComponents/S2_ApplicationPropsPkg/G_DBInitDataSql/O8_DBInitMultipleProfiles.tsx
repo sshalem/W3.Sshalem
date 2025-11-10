@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#8.Multipleprofilesanddatasql
+Multiple profiles and data sql --> (SPRING)(ApplicationProperties)(Multiple profiles and data sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_9 from "../../../../../assets/db_init_9.jpg";

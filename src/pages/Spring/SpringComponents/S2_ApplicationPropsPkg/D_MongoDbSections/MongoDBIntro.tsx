@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/mongodb#MongoDBintro
+MongoDB Intro --> (SPRING)(ApplicationProperties)(MongoDB Intro)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const MongoDBIntro = ({ anchor }: { anchor: string }) => {

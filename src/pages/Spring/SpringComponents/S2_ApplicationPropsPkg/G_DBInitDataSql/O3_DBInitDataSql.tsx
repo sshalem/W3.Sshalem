@@ -1,3 +1,7 @@
+/*
+/spring/application-properties/db-initialization#3.Datasql
+Data sql --> (SPRING)(ApplicationProperties)(Data sql)
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_3 from "../../../../../assets/db_init_3.jpg";
