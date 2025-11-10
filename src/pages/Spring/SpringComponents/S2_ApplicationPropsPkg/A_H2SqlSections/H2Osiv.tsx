@@ -2,10 +2,27 @@
 /spring/application-properties/h2#Osiv
 OSIV --> (SPRING)(ApplicationProperties)(H2)
 */
+import { useLocation } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { useEffect } from "react";
 
 const H2Osiv = ({ anchor }: { anchor: string }) => {
+  // this will takes the url path : only from the hash sign
+  // example : #about, #MyProjects
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // Checks if url with hash is present
+    if (hash) {
+      // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
+      const el = document.getElementById(hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <MainChildArea anchor={anchor}>
       <div className="my-4">

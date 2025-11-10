@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, type To } from "react-router-dom";
 
 const TopNavbarSearch = () => {
   const [pages, setPages] = useState<any[]>([]);
@@ -90,6 +90,18 @@ const TopNavbarSearch = () => {
         style={{ height: `${ulHeight}px` }}
       >
         {results.map((res, index) => {
+          const url = res.url.split("#")[0];
+          const hashUrl = res.url.substring(res.url.indexOf("#"));
+
+          console.log(url);
+          console.log(hashUrl);
+
+          // if (res.url.includes("#")) {
+          //   console.log("includes hash : " + res.url);
+          // } else {
+          //   console.log("NO hash : " + res.url);
+          // }
+
           return (
             <>
               <span
@@ -106,7 +118,7 @@ const TopNavbarSearch = () => {
               />
 
               <li key={index} className="py-1 hover:bg-blue-200 hover:text-black" style={{ width: `${widths[index]}px` }}>
-                <Link to={res.url} onClick={handleClearSearch}>
+                <Link to={{ pathname: url, hash: hashUrl } satisfies To} onClick={handleClearSearch}>
                   <span className="ml-4">{res.component}</span>
                 </Link>
               </li>
