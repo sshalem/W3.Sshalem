@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#8.OrphanRemoval
+Orphan Removal --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
 

@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#3.CascadeTypePersist(save)
+CascadeType Persist (save) --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Anchor, Answer, IMG, Li, MainChildArea, Question, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, JsxHighlight, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import jpa_01 from "../../../../../assets/jpa_01.jpg";

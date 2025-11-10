@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#6.CascadeTypeDetach
+CascadeType Detach --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanRed } from "../../../../../components/Highlight";
 

@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#2.SetupEntities
+Setup Entities --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 

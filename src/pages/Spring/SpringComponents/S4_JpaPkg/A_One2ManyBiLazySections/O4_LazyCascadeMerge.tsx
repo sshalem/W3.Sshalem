@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#4.CascadeTypeMerge(update)
+CascadeType Merge (update --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import TableCompareMerge from "../../../../../components/Tables/TableCompareMerge";

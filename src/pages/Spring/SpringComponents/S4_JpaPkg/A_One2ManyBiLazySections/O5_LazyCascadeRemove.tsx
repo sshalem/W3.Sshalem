@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#5.CascadeTypeRemove(delete)
+CascadeType Merge (delete) --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 
 const O5_LazyCascadeRemove = ({ anchor }: { anchor: string }) => {

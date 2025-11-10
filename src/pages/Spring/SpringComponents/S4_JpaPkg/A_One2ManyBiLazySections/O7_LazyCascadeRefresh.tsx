@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#7.CascadeTypeRefresh
+CascadeType Refresh --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Answer, MainChildArea, Question } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
 

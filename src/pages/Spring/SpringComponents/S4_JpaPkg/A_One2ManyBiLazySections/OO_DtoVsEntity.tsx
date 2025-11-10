@@ -1,3 +1,7 @@
+/*
+/spring/jpa/one2many-bi-lazy#3_1_DTOvsEntity
+DTO vs Entity --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+*/
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
