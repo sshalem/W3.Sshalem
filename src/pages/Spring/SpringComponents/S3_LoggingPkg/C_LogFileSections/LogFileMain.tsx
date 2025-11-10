@@ -1,26 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import Slf4jLinks from "./Slf4jLinks";
-import Slf4jRollingFileSetup from "./Slf4jRollingFileSetup";
-import Slf4jGitHub from "./Slf4jGitHub";
-import Slf4jUtil from "./Slf4jUtil";
-import Slf4jReProduceLogbackPattern from "./Slf4jReProduceLogbackPattern";
+import LogFileIntro from "./O1_LogFileIntro";
+import LogFileLinux from "./O3_LogFileLinux";
+import LogFileDevWindows from "./O2_LogFileDevWindows";
 
 // =============================================================================================================
 
-const slf4j_links = "slf4j links";
-const slf4j_rolling_file_setup = "slf4j rolling file setup";
-const slf4j_git_hub = "slf4j git hub";
-const slf4j_util = "slf4j (Logback) util";
-const slf4j_produce_logback_pattern = "slf4j produce logback pattern";
+const log_file_intro = "log file intro";
+const log_file_linux = "log file linux";
+const log_file_dev_windows = "log file dev windows";
 
 // =============================================================================================================
 
-const anchorList: string[] = [slf4j_links, slf4j_util, slf4j_produce_logback_pattern, slf4j_rolling_file_setup, slf4j_git_hub];
+const anchorList: string[] = [log_file_intro, log_file_dev_windows, log_file_linux];
 
 // =============================================================================================================
 
-const Slf4jLogbackMain = () => {
+const LogFileMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +31,8 @@ const Slf4jLogbackMain = () => {
     }
   };
 
+  // // Why I have 2 useEffect functions?
+  // // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
@@ -63,15 +61,13 @@ const Slf4jLogbackMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <Slf4jLinks anchor={slf4j_links} />
-      <Slf4jUtil anchor={slf4j_util} />
-      <Slf4jReProduceLogbackPattern anchor={slf4j_produce_logback_pattern} />
-      <Slf4jRollingFileSetup anchor={slf4j_rolling_file_setup} />
-      <Slf4jGitHub anchor={slf4j_git_hub} />
+      <LogFileIntro anchor={log_file_intro} />
+      <LogFileDevWindows anchor={log_file_dev_windows} />
+      <LogFileLinux anchor={log_file_linux} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default Slf4jLogbackMain;
+export default LogFileMain;

@@ -1,22 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import LogFileIntro from "./LogFileIntro";
-import LogFileLinux from "./LogFileLinux";
-import LogFileDevWindows from "./LogFileDevWindows";
+import BasicLogging from "./O1_BasicLogging";
+import LoggerSlf4jLogback from "./O2_LoggerSlf4jLogback";
+import PojoAsJson from "./O4_PojoAsJson";
+import JsonObject from "./O3_JsonObject";
+import LogUtilClass from "./O5_LogUtilClass";
+import LogGitHub from "./O6_LogGitHub";
 
 // =============================================================================================================
 
-const log_file_intro = "log file intro";
-const log_file_linux = "log file linux";
-const log_file_dev_windows = "log file dev windows";
+const basic_logging = "basic logging";
+const logger_slf4j_logback = "logger Slf4j Logback";
+const json_object = "json object";
+const pojo_as_json_in_console = "pojo as json in console";
+const log_util_class = "log util class";
+const log_git_hub = "git hub";
 
 // =============================================================================================================
 
-const anchorList: string[] = [log_file_intro, log_file_dev_windows, log_file_linux];
+const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, pojo_as_json_in_console, log_util_class, log_git_hub];
 
 // =============================================================================================================
 
-const LogFileMain = () => {
+const LogUtilMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +53,10 @@ const LogFileMain = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 200);
+
   if (isLoading) {
     return <Loading />;
   }
@@ -61,13 +71,15 @@ const LogFileMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <LogFileIntro anchor={log_file_intro} />
-      <LogFileDevWindows anchor={log_file_dev_windows} />
-      <LogFileLinux anchor={log_file_linux} />
-
+      <BasicLogging anchor={basic_logging} />
+      <LoggerSlf4jLogback anchor={logger_slf4j_logback} />
+      <JsonObject anchor={json_object} />
+      <PojoAsJson anchor={pojo_as_json_in_console} />
+      <LogUtilClass anchor={log_util_class} />
+      <LogGitHub anchor={log_git_hub} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default LogFileMain;
+export default LogUtilMain;

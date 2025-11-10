@@ -1,28 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import BasicLogging from "./BasicLogging";
-import LoggerSlf4jLogback from "./LoggerSlf4jLogback";
-import PojoAsJson from "./PojoAsJson";
-import JsonObject from "./JsonObject";
-import LogUtilClass from "./LogUtilClass";
-import LogGitHub from "./LogGitHub";
+import Slf4jLinks from "./O1_Slf4jLinks";
+import Slf4jRollingFileSetup from "./O4_Slf4jRollingFileSetup";
+import Slf4jGitHub from "./O5_Slf4jGitHub";
+import Slf4jUtil from "./O2_Slf4jUtil";
+import Slf4jReProduceLogbackPattern from "./O3_Slf4jReProduceLogbackPattern";
 
 // =============================================================================================================
 
-const basic_logging = "basic logging";
-const logger_slf4j_logback = "logger Slf4j Logback";
-const json_object = "json object";
-const pojo_as_json_in_console = "pojo as json in console";
-const log_util_class = "log util class";
-const log_git_hub = "git hub";
+const slf4j_links = "slf4j links";
+const slf4j_rolling_file_setup = "slf4j rolling file setup";
+const slf4j_git_hub = "slf4j git hub";
+const slf4j_util = "slf4j (Logback) util";
+const slf4j_produce_logback_pattern = "slf4j produce logback pattern";
 
 // =============================================================================================================
 
-const anchorList: string[] = [basic_logging, logger_slf4j_logback, json_object, pojo_as_json_in_console, log_util_class, log_git_hub];
+const anchorList: string[] = [slf4j_links, slf4j_util, slf4j_produce_logback_pattern, slf4j_rolling_file_setup, slf4j_git_hub];
 
 // =============================================================================================================
 
-const LogUtilMain = () => {
+const Slf4jLogbackMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -37,8 +35,6 @@ const LogUtilMain = () => {
     }
   };
 
-  // // Why I have 2 useEffect functions?
-  // // 1. useEffect with setTimeout
   useEffect(() => {
     if (ulRef.current !== null) {
       sessionStorage.setItem("scrollHeight", JSON.stringify(ulRef.current.scrollHeight));
@@ -52,10 +48,6 @@ const LogUtilMain = () => {
     }, 200);
     return () => clearTimeout(timer);
   }, []);
-
-  // setTimeout(() => {
-  //   setIsLoading(false);
-  // }, 200);
 
   if (isLoading) {
     return <Loading />;
@@ -71,15 +63,15 @@ const LogUtilMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <BasicLogging anchor={basic_logging} />
-      <LoggerSlf4jLogback anchor={logger_slf4j_logback} />
-      <JsonObject anchor={json_object} />
-      <PojoAsJson anchor={pojo_as_json_in_console} />
-      <LogUtilClass anchor={log_util_class} />
-      <LogGitHub anchor={log_git_hub} />
+      <Slf4jLinks anchor={slf4j_links} />
+      <Slf4jUtil anchor={slf4j_util} />
+      <Slf4jReProduceLogbackPattern anchor={slf4j_produce_logback_pattern} />
+      <Slf4jRollingFileSetup anchor={slf4j_rolling_file_setup} />
+      <Slf4jGitHub anchor={slf4j_git_hub} />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default LogUtilMain;
+export default Slf4jLogbackMain;
