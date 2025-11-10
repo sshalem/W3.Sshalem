@@ -1,3 +1,7 @@
+/*
+/spring/logging/LogUtil#basiclogging
+logger Slf4j Logback --> (SPRING)(Logging)(LogUtil)
+*/
 import { ContentAnchor } from "../../../../../components";
 import { JavaHighlight, SpanBlue, SpanGreen, XmlHighlight } from "../../../../../components/Highlight";
 

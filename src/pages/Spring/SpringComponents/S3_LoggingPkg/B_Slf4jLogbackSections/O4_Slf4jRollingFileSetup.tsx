@@ -1,3 +1,7 @@
+/*
+/spring/logging/slf4j-logback#slf4jrollingfilesetup
+Slf4j Rolling File --> (SPRING)(Logging)(Slf4j (Logback))
+*/
 import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";

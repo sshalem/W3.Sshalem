@@ -1,3 +1,7 @@
+/*
+/spring/logging/slf4j-logback#slf4jproducelogbackpattern
+Slf4j ReProduce Logback Pattern --> (SPRING)(Logging)(Slf4j (Logback))
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
 

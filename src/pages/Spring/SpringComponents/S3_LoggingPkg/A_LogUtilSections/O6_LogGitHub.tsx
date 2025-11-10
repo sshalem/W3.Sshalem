@@ -1,3 +1,7 @@
+/*
+/spring/logging/LogUtil#github
+Log git hub --> (SPRING)(Logging)(LogUtil)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
 const LogGitHub = ({ anchor }: { anchor: string }) => {

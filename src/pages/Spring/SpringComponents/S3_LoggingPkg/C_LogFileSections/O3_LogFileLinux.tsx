@@ -1,3 +1,7 @@
+/*
+/spring/logging/log-file#logfilelinux
+Log File Linux --> (SPRING)(Logging)(Log File)
+*/
 import { Answer, IMG, MainChildArea, Question } from "../../../../../components";
 import { BatchHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import logging_linux from "../../../../../assets/logging_linux.jpg";

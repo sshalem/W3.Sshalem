@@ -1,3 +1,7 @@
+/*
+/spring/logging/LogUtil#basiclogging
+Basic Logging --> (SPRING)(Logging)(LogUtil)
+*/
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 

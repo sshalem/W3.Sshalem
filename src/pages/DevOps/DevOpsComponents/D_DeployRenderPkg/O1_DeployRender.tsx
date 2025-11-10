@@ -1,6 +1,6 @@
 /*
 /devops/render#1.RenderDeploy
-Render Deploy --> (DEVOPS)(Netlify)(Render Deploy)
+Render Deploy --> (DEVOPS)(Render)
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
 

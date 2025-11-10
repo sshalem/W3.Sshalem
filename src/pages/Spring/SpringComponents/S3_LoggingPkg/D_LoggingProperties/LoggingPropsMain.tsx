@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import LoggingPropsIntro from "./LoggingPropsIntro";
+import LoggingPropsIntro from "./O1_LoggingPropsIntro";
 
 // =============================================================================================================
 

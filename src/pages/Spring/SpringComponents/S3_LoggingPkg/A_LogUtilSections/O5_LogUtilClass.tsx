@@ -1,3 +1,7 @@
+/*
+/spring/logging/LogUtil#logutilclass
+Log Util Class --> (SPRING)(Logging)(LogUtil)
+*/
 import { useMemo } from "react";
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanBlue } from "../../../../../components/Highlight";

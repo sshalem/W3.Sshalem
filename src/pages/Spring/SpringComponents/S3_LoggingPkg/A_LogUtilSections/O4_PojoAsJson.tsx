@@ -1,3 +1,7 @@
+/*
+/spring/logging/LogUtil#pojoasjsoninconsole
+Pojo As Json --> (SPRING)(Logging)(LogUtil)
+*/
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
