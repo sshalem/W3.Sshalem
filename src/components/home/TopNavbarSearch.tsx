@@ -29,8 +29,6 @@ const TopNavbarSearch = () => {
 
   useEffect(() => {
     if (liRef.current) {
-      // measureRef.current.forEach((i) => console.log(i?.textContent));
-
       const newWidths = results.map((res) => {
         // I still havn't figure out , why to add only to [0] element of the array
         // (1) set measureRef with textContent , so it will be assign the right width to the text
@@ -92,16 +90,6 @@ const TopNavbarSearch = () => {
         {results.map((res, index) => {
           const url = res.url.split("#")[0];
           const hashUrl = res.url.substring(res.url.indexOf("#"));
-
-          console.log(url);
-          console.log(hashUrl);
-
-          // if (res.url.includes("#")) {
-          //   console.log("includes hash : " + res.url);
-          // } else {
-          //   console.log("NO hash : " + res.url);
-          // }
-
           return (
             <>
               <span
