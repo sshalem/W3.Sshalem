@@ -18,7 +18,7 @@ const O1_InitialServerSetup = ({ anchor }: { anchor: string }) => {
       // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
       const el = document.getElementById(hash.substring(1));
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        el.scrollIntoView({ behavior: "instant" });
       }
     }
   }, [hash]);
