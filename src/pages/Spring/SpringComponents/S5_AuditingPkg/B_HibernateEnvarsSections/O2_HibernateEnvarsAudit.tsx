@@ -1,3 +1,7 @@
+/*
+/spring/audit/hibernate-envars-audit#2.HibernateEnvars
+Hibernate Envars --> (SPRING)(Auditing)(hibernate envars audit)
+*/
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 

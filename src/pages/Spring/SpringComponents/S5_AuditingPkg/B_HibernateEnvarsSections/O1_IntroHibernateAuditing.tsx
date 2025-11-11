@@ -1,3 +1,7 @@
+/*
+/spring/audit/hibernate-envars-audit#1.Intro
+Intro --> (SPRING)(Auditing)(hibernate envars audit)
+*/
 import { Anchor, Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 import TableAuditingCompare from "../../../../../components/Tables/TableAuditingCompare";
