@@ -2,9 +2,26 @@
 /devops/linux-server/jenkins-install#O1_jenkins_install
 jenkins_install --> (DEVOPS)(LINUX)(Linux MySql Install)
 */
+import { useEffect } from "react";
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
+import { useLocation } from "react-router-dom";
 
 const O1_JenkinsInstall = ({ anchor }: { anchor: string }) => {
+  // this will takes the url path : only from the hash sign
+  // example : #about, #MyProjects
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // Checks if url with hash is present
+    if (hash) {
+      // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
+      const el = document.getElementById(hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <MainChildArea anchor={anchor}>
       <GitHub>

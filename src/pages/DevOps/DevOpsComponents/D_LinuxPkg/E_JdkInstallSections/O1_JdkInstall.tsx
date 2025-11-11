@@ -2,12 +2,29 @@
 /devops/linux-server/jdk-install#01_JDK_Install
 JDK_Install --> (DEVOPS)(LINUX)(Linux Server setup)
 */
+import { useLocation } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 import SpanRed from "../../../../../components/Highlight/SpanRed";
+import { useEffect } from "react";
 
 const O1_JdkInstall = ({ anchor }: { anchor: string }) => {
+  // this will takes the url path : only from the hash sign
+  // example : #about, #MyProjects
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // Checks if url with hash is present
+    if (hash) {
+      // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
+      const el = document.getElementById(hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <MainChildArea anchor={anchor}>
       From Digital Ocean :

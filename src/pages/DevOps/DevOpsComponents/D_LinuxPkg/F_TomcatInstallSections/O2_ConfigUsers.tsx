@@ -6,8 +6,25 @@ import { IMG, MainChildArea } from "../../../../../components";
 import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 import tomcat_6 from "../../../../../assets/tomcat_6.jpg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const O2_ConfigUsers = ({ anchor }: { anchor: string }) => {
+  // this will takes the url path : only from the hash sign
+  // example : #about, #MyProjects
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // Checks if url with hash is present
+    if (hash) {
+      // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
+      const el = document.getElementById(hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <MainChildArea anchor={anchor}>
       <ul className="my-4 ml-8 list-decimal">
