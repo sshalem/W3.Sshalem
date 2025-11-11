@@ -1,3 +1,7 @@
+/*
+/spring/jpa/logging-jpa-hibernate#1.Jpalogging
+Jpa logging --> (SPRING)(JPA)(logging-jpa-hibernate)
+*/
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
 

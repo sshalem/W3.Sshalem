@@ -1,3 +1,7 @@
+/*
+/spring/jpa/jpql#5.JOINFETCH(Distinct)
+JOIN FETCH (Distinct) --> (SPRING)(JPA)(JPQL)
+*/
 import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 

@@ -1,3 +1,7 @@
+/*
+/spring/jpa/jpql#6.QueryDates
+Query Dates --> (SPRING)(JPA)(JPQL)
+*/
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 

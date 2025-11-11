@@ -1,6 +1,6 @@
 /*
-/spring/jpa/entity-validation#5.ExampleDtoBeanValidation
-Example Dto Bean Validation --> (SPRING)(JPA)(entity validation)
+/spring/jpa/jpql#1.Intro
+Intro --> (SPRING)(JPA)(JPQL)
 */
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";

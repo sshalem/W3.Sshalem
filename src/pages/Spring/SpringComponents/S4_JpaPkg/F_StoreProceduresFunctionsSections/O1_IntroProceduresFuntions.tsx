@@ -1,3 +1,7 @@
+/*
+/spring/jpa/stored-procedures-functions#1.IntroProceduresFuntions
+Intro Procedures Funtions --> (SPRING)(JPA)(Stored Proc Functions)
+*/
 import { Anchor, MainChildArea } from "../../../../../components";
 
 const O1_IntroProceduresFuntions = ({ anchor }: { anchor: string }) => {

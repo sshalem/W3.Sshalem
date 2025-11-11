@@ -1,3 +1,7 @@
+/*
+/spring/jpa/mapping-libs#1.CompareLibs
+Compare Libs --> (SPRING)(JPA)(Mapping Libs)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O1_CompareLibs = ({ anchor }: { anchor: string }) => {

@@ -1,3 +1,7 @@
+/*
+/spring/jpa/logging-jpa-hibernate#3.P6Spylogging
+P6Spy logging --> (SPRING)(JPA)(logging-jpa-hibernate)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, XmlHighlight } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";

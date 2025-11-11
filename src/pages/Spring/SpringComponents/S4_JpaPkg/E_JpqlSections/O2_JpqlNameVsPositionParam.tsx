@@ -1,3 +1,7 @@
+/*
+/spring/jpa/jpql#2.NameParamsVsPositionParam
+Name Params Vs Position Param --> (SPRING)(JPA)(JPQL)
+*/
 import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanSky } from "../../../../../components/Highlight";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 
