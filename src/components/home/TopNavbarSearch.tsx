@@ -91,7 +91,7 @@ const TopNavbarSearch = () => {
           const url = res.url.split("#")[0];
           const hashUrl = res.url.substring(res.url.indexOf("#"));
           return (
-            <>
+            <div key={index}>
               <span
                 ref={(el) => {
                   liRef.current[index] = el;
@@ -105,12 +105,12 @@ const TopNavbarSearch = () => {
                 }}
               />
 
-              <li key={index} className="py-1 hover:bg-blue-200 hover:text-black" style={{ width: `${widths[index]}px` }}>
+              <li className="py-1 hover:bg-blue-200 hover:text-black" style={{ width: `${widths[index]}px` }}>
                 <Link to={{ pathname: url, hash: hashUrl } satisfies To} onClick={handleClearSearch}>
                   <span className="ml-4">{res.component}</span>
                 </Link>
               </li>
-            </>
+            </div>
           );
         })}
       </ul>

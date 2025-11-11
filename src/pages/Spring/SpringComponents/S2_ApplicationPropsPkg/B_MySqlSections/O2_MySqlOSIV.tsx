@@ -12,13 +12,15 @@ const O2_MySqlOSIV = ({ anchor }: { anchor: string }) => {
   // example : #about, #MyProjects
   const { hash } = useLocation();
 
+  // Checks if url with hash is present
+  // [1] remove '#' from hash
+  // [2] find the element with assigned hash ,
+  // "id" is found inside MainChildArea
   useEffect(() => {
-    // Checks if url with hash is present
     if (hash) {
-      // [1] remove '#' from hash [2] find the element with assigned hash , for example :  id="about",  id="MyProjects"
       const el = document.getElementById(hash.substring(1));
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        el.scrollIntoView({ behavior: "instant" });
       }
     }
   }, [hash]);

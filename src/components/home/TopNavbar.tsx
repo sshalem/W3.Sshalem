@@ -19,9 +19,11 @@ const TopNavbar = () => {
     if (hash) {
       // 1. remove '#' from hash
       // 2. find the element with assigned hash , for example
-      // id="about",
-      // id="MyProjects"
+      // id="about" (id is in AboutMe.tsx)
+      // id="MyProjects" (id is in MyProjects.tsx)
       const el = document.getElementById(hash.substring(1));
+      console.log(el);
+
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
       }

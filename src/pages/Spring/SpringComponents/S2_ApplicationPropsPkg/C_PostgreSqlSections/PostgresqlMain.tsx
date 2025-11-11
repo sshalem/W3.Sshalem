@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import InstallPostgresStandalone from "./InstallPostgresStandalone";
-import PostgresqlOsiv from "./PostgresqlOsiv";
-import PostgresqlDetailedConfig from "./PostgresqlDetailedConfig";
+import InstallPostgresStandalone from "./C_InstallPostgresStandalone";
+import PostgresqlOsiv from "./B_PostgresqlOsiv";
+import PostgresqlDetailedConfig from "./A_PostgresqlDetailedConfig";
 import { ContentMenu, Loading } from "../../../../../components";
 
 // =============================================================================================================
