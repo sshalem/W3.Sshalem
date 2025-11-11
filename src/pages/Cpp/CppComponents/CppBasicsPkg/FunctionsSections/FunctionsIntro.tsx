@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { MainChildArea } from "../../../../../components";
 
 const FunctionsIntro = ({ anchor }: { anchor: string }) => {

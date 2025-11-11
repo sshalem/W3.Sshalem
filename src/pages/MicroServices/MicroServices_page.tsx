@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";

@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { MainChildArea } from "../../../../components";
 
 const SpringTopics = ({ anchor }: { anchor: string }) => {

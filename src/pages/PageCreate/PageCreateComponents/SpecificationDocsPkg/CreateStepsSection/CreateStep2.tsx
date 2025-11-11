@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
 import page_create_2 from "../../../../../assets/page_create_2.jpg";

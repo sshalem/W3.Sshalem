@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
 import { DivDoubleBorder, JsxHighlight, SpanGreen } from "../../../../components/Highlight";
 import pagination_2 from "../../../../assets/pagination_2.jpg";

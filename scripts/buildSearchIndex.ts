@@ -11,6 +11,7 @@ function readSpecificLine(filePath: string): string[] {
   const data: string = fs.readFileSync(filePath, "utf8");
   const dataSplitted: string[] = data.split("\n"); // splits the file into an array of lines.
   const extractLines: string[] = dataSplitted.slice(1, 3); // extracts lines 2 and 3 (index 1 and 2).
+  // retrun an array with 2 elements only
   return extractLines;
 }
 
@@ -36,11 +37,18 @@ function readPages(dir: string = PAGES_DIR): Page[] {
       const url = lines[0];
       const page = lines[1];
 
-      pages.push({
-        component: page,
-        url,
-        content,
-      });
+      // Since I read from a file , it may contain invisible charachters like \r\n (Windows)
+      // thus, the string won't be empty str === "" , thats why I trim it
+
+      if (url === "};\r" || url.length === 1 || url.startsWith("import {") || page === "};\r" || page.length === 1 || page.startsWith("import {")) {
+        // I don't want to phave pages that include the above to be pushed into the array pf pages
+      } else {
+        pages.push({
+          component: page,
+          url,
+          content,
+        });
+      }
     }
   }
 

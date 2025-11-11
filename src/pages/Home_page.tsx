@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { AboutMe, MyProjects } from "../components";
 
 const Home = () => {

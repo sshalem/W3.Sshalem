@@ -1,7 +1,3 @@
-/*
-/windows/port-check#O1_git
-O1_Git
-*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
 
 const O1_Git = ({ anchor }: { anchor: string }) => {

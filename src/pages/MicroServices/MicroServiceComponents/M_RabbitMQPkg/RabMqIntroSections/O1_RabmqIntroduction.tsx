@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { Anchor, MainChildArea } from "../../../../../components";
 
 const O1_RabmqIntroduction = ({ anchor }: { anchor: string }) => {

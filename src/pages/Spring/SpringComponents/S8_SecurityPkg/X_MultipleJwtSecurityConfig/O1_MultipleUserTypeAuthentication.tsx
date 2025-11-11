@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { Anchor, MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -11,7 +15,7 @@ const O1_MultipleUserTypeAuthentication = ({ anchor }: { anchor: string }) => {
         <p>example :</p>
         <ULdisc>
           <Li>assume we have an Admin and a Customer , or Company</Li>
-          <Li>Each one of them has a different fields in them (For instance Customer has Id, credit card ,etc... , Company has</Li>
+          <Li>Each one of them has a different fields in them (For instance Customer has Id, credit card ,etc...) , Company has</Li>
           <Li>Thus, we cannot have one UserDetailsService</Li>
           <Li>In this tutorial I will show how to implement it</Li>
           <Li>

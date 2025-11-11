@@ -1,3 +1,7 @@
+/*
+/spring/security/jwt#2.JWTtokenstructure
+JWT token structure --> (SPRING)(Security)(jwt)
+*/
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";

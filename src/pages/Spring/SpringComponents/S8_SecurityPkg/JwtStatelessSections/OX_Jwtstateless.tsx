@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import security_2 from "../../../../../assets/security_2.jpg";
 

@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O2_InstallKafka = ({ anchor }: { anchor: string }) => {

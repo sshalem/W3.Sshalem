@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { MainChildArea } from "../../../../../components";
 
 const JsArrayIntro = ({ anchor }: { anchor: string }) => {

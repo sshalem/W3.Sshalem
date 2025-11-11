@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { IMG, MainChildArea } from "../../../../../components";
 import typescript_1 from "../../../../../assets/typescript_1.jpg";
 import { JsxHighlight, SpanGreen } from "../../../../../components/Highlight";

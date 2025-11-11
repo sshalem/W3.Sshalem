@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O1_JsxIntro = ({ anchor }: { anchor: string }) => {

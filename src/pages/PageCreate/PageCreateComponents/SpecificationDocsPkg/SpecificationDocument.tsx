@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { IMG } from "../../../../components";
 import page_create_spec_doc from "../../../../assets/page_create_spec_doc.jpg";

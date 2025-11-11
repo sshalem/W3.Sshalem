@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
 import search_index from "../../../../../assets/search_index.jpg";

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, type To } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TopNavbarSearch = () => {
   const [pages, setPages] = useState<any[]>([]);
@@ -59,6 +59,8 @@ const TopNavbarSearch = () => {
   }, []);
 
   // 👇 Detect clicks outside Drop Down List
+  // If I click on any place outside the Drop Down
+  // This will make the  Drop Down to be closed
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (divRef.current && !divRef.current.contains(event.target as Node)) {
@@ -106,7 +108,7 @@ const TopNavbarSearch = () => {
               />
 
               <li className="py-1 hover:bg-blue-200 hover:text-black" style={{ width: `${widths[index]}px` }}>
-                <Link to={{ pathname: url, hash: hashUrl } satisfies To} onClick={handleClearSearch}>
+                <Link to={{ pathname: url, hash: hashUrl }} onClick={handleClearSearch}>
                   <span className="ml-4">{res.component}</span>
                 </Link>
               </li>

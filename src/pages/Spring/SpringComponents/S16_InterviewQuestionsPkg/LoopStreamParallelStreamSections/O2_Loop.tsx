@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { Anchor, MainChildArea } from "../../../../../components";
 
 const O2_Loop = ({ anchor }: { anchor: string }) => {

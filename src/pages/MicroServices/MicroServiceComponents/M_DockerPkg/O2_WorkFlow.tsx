@@ -1,3 +1,7 @@
+/*
+
+
+*/
 import { IMG, MainChildArea } from "../../../../components";
 import docker_2 from "../../../../assets/docker_2.jpg";
 import ULDecimal from "../../../../components/ui/ULDecimal";
