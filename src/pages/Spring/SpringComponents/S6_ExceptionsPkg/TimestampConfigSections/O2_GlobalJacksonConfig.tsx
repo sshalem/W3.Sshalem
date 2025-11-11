@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/timestamp-error-config#2.GlobalJacksonConfig
+Global Jackson Config --> (SPRING)(Exception Handling)(timestamp error config)
+*/
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";

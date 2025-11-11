@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/config-msg-at-controller#2.Codesnippet
+Code snippet --> (SPRING)(Exception Handling)(config msg at controller)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
 

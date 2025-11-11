@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/config-msg-app-props#3.TestConfigMsgProps
+Test Config Msg Props --> (SPRING)(Exception Handling)(config msg app props)
+*/
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";

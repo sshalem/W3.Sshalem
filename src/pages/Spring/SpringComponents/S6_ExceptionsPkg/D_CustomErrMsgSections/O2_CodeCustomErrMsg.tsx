@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/custom-error-msg#2.CodeSnippet
+Code Snippet --> (SPRING)(Exception Handling)(custom err msg)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";

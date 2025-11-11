@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/custom-rest-controller-advice#2.CodeSnippet
+Code Snippet --> (SPRING)(Exception Handling)((PROD) @RestCtlAdvc)
+*/
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
 

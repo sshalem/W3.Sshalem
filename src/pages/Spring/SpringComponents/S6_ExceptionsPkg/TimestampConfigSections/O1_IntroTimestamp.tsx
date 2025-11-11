@@ -1,3 +1,7 @@
+/*
+/spring/exception-handling/timestamp-error-config#1.IntroTimestamp
+Intro Timestamp --> (SPRING)(Exception Handling)(timestamp error config)
+*/
 import { MainChildArea } from "../../../../../components";
 import { SpanBlue } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
