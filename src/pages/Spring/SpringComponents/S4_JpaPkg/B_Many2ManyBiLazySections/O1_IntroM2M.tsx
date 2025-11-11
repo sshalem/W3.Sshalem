@@ -1,3 +1,7 @@
+/*
+/spring/jpa/many2many-bi-lazy#1.IntroMany2Many
+Intro Many2Many --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
+*/
 import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 

@@ -1,3 +1,7 @@
+/*
+/spring/jpa/many2many-bi-lazy#2.SetupEntities
+Setup Entities --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
+*/
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";
 
@@ -8,7 +12,7 @@ const O2_SetupEntitiesM2M = ({ anchor }: { anchor: string }) => {
         <div>
           <Anchor
             description="GitHub - @ManyToMany Fetch Lazy"
-            href="https://github.com/sshalem/Spring-Boot/tree/main/02-JPA/10-Many2Many-Bi-Lazy"
+            href="https://github.com/sshalem/Spring-Boot/tree/main/02-JPA/O4-Many2Many-Bi-Lazy"
           ></Anchor>
         </div>
       </section>

@@ -2,12 +2,20 @@
 /spring/jpa/one2many-bi-lazy#2.SetupEntities
 Setup Entities --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
-import { MainChildArea } from "../../../../../components";
+import { Anchor, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 
 const O2_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <section>
+        <div>
+          <Anchor
+            description="GitHub - @OneToMany Bi Fetch Lazy"
+            href="https://github.com/sshalem/Spring-Boot/tree/main/02-JPA/O2-One2Many-Bi-Lazy"
+          ></Anchor>
+        </div>
+      </section>
       <section>
         Here I will show the best practice for setting up a Bi-Directional <SpanSky>OneToMany</SpanSky> mapping.
       </section>
