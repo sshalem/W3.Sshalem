@@ -17,9 +17,9 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
         Let's see few concepts before diving into <SpanSky>@OneToMany</SpanSky>
       </p>
       <p>
-        for more comprehansive see{" "}
-        <Link to={"/spring/jpa/transaction-management"} className="tracking-wider text-blue-500">
-          Tansaction Management setions 1-5
+        for Tansaction Management concepts see{" "}
+        <Link to={"/spring/transaction-management/concepts"} className="tracking-wider text-blue-500">
+          Tansaction-Management-concepts-page
         </Link>
       </p>
 

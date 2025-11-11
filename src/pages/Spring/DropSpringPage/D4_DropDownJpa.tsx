@@ -46,7 +46,6 @@ const D4_DropDownJpa = () => {
         <SideDropdownLink sideDropDownNavName="ManyToMany (Bi Lazy)" internalLink="/spring/jpa/many2many-bi-lazy" />
         <SideDropdownLink sideDropDownNavName="Pagination Sort" internalLink="/spring/jpa/pagination-sorting" />
         <SideDropdownLink sideDropDownNavName="Entity validation" internalLink="/spring/jpa/entity-validation" />
-        <SideDropdownLink sideDropDownNavName="Transaction Management" internalLink="/spring/jpa/transaction-management" />
         <SideDropdownLink sideDropDownNavName="JPQL" internalLink="/spring/jpa/jpql" />
         <SideDropdownLink sideDropDownNavName="Stored Proc & Functions" internalLink="/spring/jpa/stored-procedures-functions" />
         <SideDropdownLink sideDropDownNavName="Mapping Libs" internalLink="/spring/jpa/mapping-libs" />

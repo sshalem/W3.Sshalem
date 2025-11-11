@@ -1,3 +1,7 @@
+/*
+/spring/jpa/entity-validation#2.SizeRangeConstraints
+Size Range Constraints --> (SPRING)(JPA)(entity validation)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O2_SizeRangeConstraints = ({ anchor }: { anchor: string }) => {

@@ -2,8 +2,9 @@
 /spring/jpa/many2many-bi-lazy#1.IntroMany2Many
 Intro Many2Many --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
 */
-import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Link } from "react-router-dom";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { SpanCyan, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,8 +13,12 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
         <p>
           Basic concepts are covered in <strong>@OneToMany</strong> intro section (<strong>In-memory, persistent context, Cascade type</strong> )
         </p>
+
         <p>
-          for more comprehansive see <Anchor description="Tansaction Management setions 1-5" href="/spring/jpa/transaction-management"></Anchor>
+          for Tansaction Management concepts see{" "}
+          <Link to={"/spring/transaction-management/concepts"} className="tracking-wider text-blue-500">
+            Tansaction-Management-concepts-page
+          </Link>
         </p>
       </div>
       <article>
@@ -48,12 +53,14 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
             We define an <SpanGrey>owning side</SpanGrey> and an <SpanGrey>inverse side</SpanGrey>
             <ULDecimal>
               <Li>
-                Owning side → define :
+                <SpanCyan>Owning side</SpanCyan> → define :
                 <ULdisc>
                   <Li>
                     <SpanGrey>@JoinTable</SpanGrey>
                   </Li>
-                  <Li>Helper methods</Li>
+                  <Li>
+                    <SpanGrey>Helper methods</SpanGrey>
+                  </Li>
                   <Li>
                     <SpanGrey>cascade type</SpanGrey> and <SpanGrey>fetch (Lazy) </SpanGrey> .
                   </Li>
@@ -61,7 +68,7 @@ const O1_IntroM2M = ({ anchor }: { anchor: string }) => {
                 </ULdisc>
               </Li>
               <Li>
-                Inverse side → uses:
+                <SpanCyan>Inverse side</SpanCyan> → uses:
                 <ULdisc>
                   <Li>
                     <SpanGrey>mappedBy</SpanGrey>

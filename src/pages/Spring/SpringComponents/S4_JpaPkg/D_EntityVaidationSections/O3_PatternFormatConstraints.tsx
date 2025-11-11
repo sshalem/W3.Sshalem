@@ -1,3 +1,7 @@
+/*
+/spring/jpa/entity-validation#3.PatternFormatConstraints
+Pattern Format Constraints --> (SPRING)(JPA)(entity validation)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O3_PatternFormatConstraints = ({ anchor }: { anchor: string }) => {

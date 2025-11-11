@@ -1,3 +1,7 @@
+/*
+/spring/jpa/entity-validation#1.BasicConstraints
+Basic Constraints --> (SPRING)(JPA)(entity validation)
+*/
 import { MainChildArea } from "../../../../../components";
 
 const O1_BasicConstraints = ({ anchor }: { anchor: string }) => {
