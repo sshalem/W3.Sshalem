@@ -8,27 +8,8 @@ import dbeaver_postgres_2 from "../../../../../assets/dbeaver_postgres_2.jpg";
 import dbeaver_postgres_3 from "../../../../../assets/dbeaver_postgres_3.jpg";
 import { SpanBlue, SpanRed, SpanTeal } from "../../../../../components/Highlight";
 import { IMG, MainChildArea } from "../../../../../components";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 const DBeaverPostgresql = ({ anchor }: { anchor: string }) => {
-  // this will takes the url path : only from the hash sign
-  // example : #about, #MyProjects
-  const { hash } = useLocation();
-
-  // Checks if url with hash is present
-  // [1] remove '#' from hash
-  // [2] find the element with assigned hash ,
-  // "id" is found inside MainChildArea
-  useEffect(() => {
-    if (hash) {
-      const el = document.getElementById(hash.substring(1));
-      if (el) {
-        el.scrollIntoView({ behavior: "instant" });
-      }
-    }
-  }, [hash]);
-
   return (
     <MainChildArea anchor={anchor}>
       <div>In order to connect a single DB with DBeaver follow these steps.</div>
