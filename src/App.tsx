@@ -111,7 +111,15 @@ import { BatchHome } from "./pages/Batch/BatchComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
-import { OpenApiSwaggerMain, SseMain, StreamDataMain, StreamLargeResponseMain, WebSocketMain } from "./pages/Spring/SpringComponents/S7_RestApiPkg";
+import {
+  CorsMain,
+  OpenApiSwaggerMain,
+  RestMain,
+  SseMain,
+  StreamDataMain,
+  StreamLargeResponseMain,
+  WebSocketMain,
+} from "./pages/Spring/SpringComponents/S7_RestApiPkg";
 
 import {
   GenZCareerMain,
@@ -309,10 +317,13 @@ const router = createBrowserRouter(
               path: "rest",
               element: <Rest />,
               children: [
-                { path: "stream-data", element: <StreamDataMain /> },
+                // RestMain
+                { path: "rest-api", element: <RestMain /> },
+                { path: "cors", element: <CorsMain /> },
+                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
                 { path: "sse", element: <SseMain /> },
                 { path: "websocket", element: <WebSocketMain /> },
-                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
+                { path: "stream-data", element: <StreamDataMain /> },
                 { path: "stream-large-response", element: <StreamLargeResponseMain /> },
               ],
             },

@@ -41,10 +41,12 @@ const D7_DropDownRest = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
+        <SideDropdownLink sideDropDownNavName="Rest API" internalLink="/spring/rest/rest-api" />
+        <SideDropdownLink sideDropDownNavName="CORS" internalLink="/spring/rest/cors" />
+        <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
         <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />
         <SideDropdownLink sideDropDownNavName="Web Socket" internalLink="/spring/rest/websocket" />
-        <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
+        <SideDropdownLink sideDropDownNavName="Stream Data" internalLink="/spring/rest/stream-data" />
         <SideDropdownLink sideDropDownNavName="Stream Large Response" internalLink="/spring/rest/stream-large-response" />
       </div>
     </section>
