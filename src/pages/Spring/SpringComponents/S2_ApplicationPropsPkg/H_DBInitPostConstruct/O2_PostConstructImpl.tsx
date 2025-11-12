@@ -57,7 +57,7 @@ const O2_PostConstructImpl = ({ anchor }: { anchor: string }) => {
               <Li>App is ready to accept requests</Li>
             </ULDecimal>
           </div>
-          <JavaHighlight javaCode={post_construct}></JavaHighlight>
+          <JavaHighlight javaCode={person_post_construct}></JavaHighlight>
         </div>
       </section>
     </MainChildArea>
@@ -66,27 +66,29 @@ const O2_PostConstructImpl = ({ anchor }: { anchor: string }) => {
 
 export default O2_PostConstructImpl;
 
-const post_construct = `@Service
-public class ProductDaoImpl implements ProductDao {
+const person_post_construct = `@Service
+public class PersonServiceImpl implements PersonService {
 
-	@Autowired
-	private ProductRepository productRepository;
+  @Autowired
+	private PersonRepository personRepository;
+
+	@Override
+	public List<Person> getAllPersons() {
+		return personRepository.findAll();
+	}
 
 	@PostConstruct
 	public void initDB() {
+		List<Person> persons = IntStream.rangeClosed(1, 10)
+				.mapToObj(i -> {
+					return new Person(
+							UUID.randomUUID().toString().replaceAll("[^A-Za-z]", ""), 
+							UUID.randomUUID().toString().replaceAll("[^A-Za-z]", ""), 
+							new Random().nextInt(100), 
+							new Random().nextBoolean() ? "male" : "female");
+				})
+				.collect(Collectors.toList());
 		
-		List<ProductEntity> _products = 
-				IntStream
-					.rangeClosed(1, 200)
-					.mapToObj(i -> new ProductEntity("product" + i, new Random().nextInt(100), new Random().nextInt(50_000)))
-					.collect(Collectors.toList());
-		
-		productRepository.saveAll(_products);
+		personRepository.saveAll(persons);
 	}
-
-	@Override
-	public List<ProductEntity> getAllProducts() {
-		return productRepository.findAll();
-	}
-
 }`;
