@@ -1,20 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_RestIntro from "./O1_RestIntro";
-import O2_RestCodeSnippets from "./O2_RestCodeSnippets";
+import O2_RequestMapping from "./O2_RequestMapping";
+import O3_IndependentAnnotations from "./O3_IndependentAnnotations";
+import Ox_RestCodeSnippets from "./Ox_RestCodeSnippets";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_RestIntro = "1. Rest Intro";
-const o2_RestCodeSnippets = "2. Rest Code Snippets";
+const o2_RequestMapping = "2. @RequestMapping";
+const o3_IndependentAnnotations = "3. Parameter Independent Annotations";
+const ox_RestCodeSnippets = "3. Rest Code Snippets";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_RestIntro, o2_RestCodeSnippets];
+const anchorList: string[] = [o1_RestIntro, o2_RequestMapping, o3_IndependentAnnotations, ox_RestCodeSnippets];
 
 // ============================================
 // ============================================
@@ -69,7 +73,9 @@ const RestMain = () => {
       {/* End Contents */}
 
       <O1_RestIntro anchor={o1_RestIntro}></O1_RestIntro>
-      <O2_RestCodeSnippets anchor={o2_RestCodeSnippets}></O2_RestCodeSnippets>
+      <O2_RequestMapping anchor={o2_RequestMapping}></O2_RequestMapping>
+      <O3_IndependentAnnotations anchor={o3_IndependentAnnotations}></O3_IndependentAnnotations>
+      <Ox_RestCodeSnippets anchor={ox_RestCodeSnippets}></Ox_RestCodeSnippets>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
