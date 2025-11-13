@@ -1,8 +1,8 @@
 const TableCompareParameterAnnotations = () => {
   const annotations = [
     { annotation: "@RequestBody", purpose: "Binds the HTTP request body to a Java object (JSON/XML → Object)." },
-    { annotation: "@PathVariable", purpose: "Extracts a value from the URI path." },
-    { annotation: "@RequestParam", purpose: "Extracts query parameters from the URL." },
+    { annotation: "@PathVariable", purpose: "Extracts a value from the URI path. (Use for mandatory identifiers)" },
+    { annotation: "@RequestParam", purpose: "Extracts query parameters from the URL. (Use for optional or filtering parameters)" },
     { annotation: "@RequestHeader", purpose: "Reads HTTP headers." },
     { annotation: "@CookieValue", purpose: "Reads cookies from the request." },
     { annotation: "@ModelAttribute", purpose: "Binds form data or query params to a model object." },

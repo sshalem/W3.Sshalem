@@ -1,11 +1,11 @@
 /*
 /spring/rest/rest-api#1.RestIntro
-Rest Intro --> (SPRING)(rest)(rest-api)
+Rest API Intro --> (SPRING)(rest)(rest-api)
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 
-const O1_RestIntro = ({ anchor }: { anchor: string }) => {
+const O1_RestApiIntro = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -78,4 +78,4 @@ const O1_RestIntro = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_RestIntro;
+export default O1_RestApiIntro;
