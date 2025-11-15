@@ -3,7 +3,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_RestIntro from "./O1_RestApiIntro";
 import O2_RequestMapping from "./O2_RequestMapping";
 import O3_IndependentAnnotations from "./O3_IndependentAnnotations";
-import O4_RestCodeSnippets from "./O4_RestCodeSnippets";
+import O4_RestCodeSnippets from "./O6_ResponseEntity";
 
 // ===========================================
 // ==     content menu (title name)         ==

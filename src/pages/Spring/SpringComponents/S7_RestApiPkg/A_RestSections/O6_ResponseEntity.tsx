@@ -6,7 +6,7 @@ Rest Code Snippets --> (SPRING)(rest)(rest-api)
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 
-const O4_RestCodeSnippets = ({ anchor }: { anchor: string }) => {
+const O6_ResponseEntity = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-10">
@@ -128,7 +128,7 @@ const O4_RestCodeSnippets = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_RestCodeSnippets;
+export default O6_ResponseEntity;
 
 const request_body = `@PostMapping(path = "/postMethod", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public Person createPerson(@RequestBody Person person) {
