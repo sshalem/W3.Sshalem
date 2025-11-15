@@ -1,6 +1,6 @@
 /*
-/spring/rest/rest-api#2.RestCodeSnippets
-Rest Code Snippets --> (SPRING)(rest)(rest-api)
+/spring/rest/rest-api#5.@RequestParam
+@RequestParam --> (SPRING)(rest)(rest-api)
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
