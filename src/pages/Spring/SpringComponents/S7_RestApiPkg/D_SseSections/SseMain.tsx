@@ -1,17 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O2_SseMultipleData from "./O2_SseMultipleData";
+import O1_SseIntro from "./O1_SseIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_Intro = "1. Intro";
+const o1_SseIntro = "1. Sse Intro";
+const o2_SseMultipleData = "2. Multiple Data";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Intro];
+const anchorList: string[] = [o1_SseIntro, o2_SseMultipleData];
 
 // ============================================
 // ============================================
@@ -65,7 +68,8 @@ const SseMain = () => {
       />
       {/* End Contents */}
 
-      {/* <O1_Intro anchor={o1_Intro}></O1_Intro> */}
+      <O1_SseIntro anchor={o1_SseIntro}></O1_SseIntro>
+      <O2_SseMultipleData anchor={o2_SseMultipleData}></O2_SseMultipleData>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
