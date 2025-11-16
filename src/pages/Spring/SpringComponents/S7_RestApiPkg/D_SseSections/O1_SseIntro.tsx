@@ -1,6 +1,6 @@
 /*
-/spring/rest/cors#1.CorsIntro
-Cors Intro --> (SPRING)(rest)(rest-api)
+/spring/rest/sse#1.SSEIntro
+SSE Intro --> (SPRING)(rest)(SSE)
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";

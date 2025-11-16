@@ -7,8 +7,8 @@ import O1_SseIntro from "./O1_SseIntro";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_SseIntro = "1. Sse Intro";
-const o2_SseMultipleData = "2. Multiple Data";
+const o1_SseIntro = "1. SSE Intro";
+const o2_SseMultipleData = "2. SSE Multiple Data";
 
 // ===========================================
 // == Update anchorList with  content menu  ==

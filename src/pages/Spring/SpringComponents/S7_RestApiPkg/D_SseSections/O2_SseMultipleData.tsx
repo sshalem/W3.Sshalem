@@ -1,6 +1,6 @@
 /*
-/spring/rest/cors#2.CorsCodeSnippets
-Cors Code Snippets --> (SPRING)(rest)(rest-api)
+/spring/rest/sse#2.SSEMultipleData
+SSE Multiple Data --> (SPRING)(rest)(SSE)
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
@@ -10,9 +10,8 @@ const O2_SseMultipleData = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-4 text-2xl font-semibold">✅ CORS with Spring Security (for secured applications)</article>
-        Let’s build a full Spring Boot example using an SSEStore component to manage all connected clients. This approach is clean, scalable, and
-        separates SSE management from your controller logic. We’ll include:
+        Let’s build a full Spring Boot example using an SseEmiterStore component to manage all connected clients. <br />
+        This approach is clean, scalable, and separates SSE management from your controller logic. We’ll include:
         <ULdisc>
           <Li>SseEmiterStore component</Li>
           <Li>Controller to connect clients</Li>
