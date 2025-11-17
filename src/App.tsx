@@ -140,8 +140,10 @@ import {
 } from "./pages/Spring/SpringComponents/S12_CachingPkg";
 
 import {
-  JwtImplJdk21Main,
   JwtMain,
+  JwtRefreshTokenV3_5_7Main,
+  JwtV3_5_6Main,
+  JwtV_2_6_11Main,
   MultipleJwtSecurityConfigMain,
   OAuth2Main,
   SpringSecurityMain,
@@ -206,7 +208,6 @@ import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/Micr
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
 import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
-import JwtImplMain from "./pages/Spring/SpringComponents/S8_SecurityPkg/C_JwtImplSections/JwtImplMain";
 
 import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
 import {
@@ -333,8 +334,9 @@ const router = createBrowserRouter(
               children: [
                 { path: "spring-security", element: <SpringSecurityMain /> },
                 { path: "jwt", element: <JwtMain /> },
-                { path: "jwt-implementation", element: <JwtImplMain /> },
-                { path: "jwt-impl-jdk21-spring-boot-v3-5-6", element: <JwtImplJdk21Main /> },
+                { path: "jwt-v2-6-11", element: <JwtV_2_6_11Main /> },
+                { path: "jwt-v3-5-6", element: <JwtV3_5_6Main /> },
+                { path: "jwt-refresh-token-v3-5-7", element: <JwtRefreshTokenV3_5_7Main /> },
                 { path: "jwt-multiple-config", element: <MultipleJwtSecurityConfigMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
               ],

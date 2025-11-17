@@ -71,7 +71,7 @@ const anchorList: string[] = [
 // ============================================
 // ============================================
 
-const JwtImplMain = () => {
+const JwtV_2_6_11Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -142,4 +142,4 @@ const JwtImplMain = () => {
   );
 };
 
-export default JwtImplMain;
+export default JwtV_2_6_11Main;

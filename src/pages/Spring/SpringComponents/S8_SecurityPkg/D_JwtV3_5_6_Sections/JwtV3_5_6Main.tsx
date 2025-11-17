@@ -21,7 +21,7 @@ const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_Secur
 // ============================================
 // ============================================
 
-const JwtImplJdk21Main = () => {
+const JwtV3_5_6Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -79,4 +79,4 @@ const JwtImplJdk21Main = () => {
   );
 };
 
-export default JwtImplJdk21Main;
+export default JwtV3_5_6Main;
