@@ -1,12 +1,12 @@
 /*
-
-
+/spring/security/jwt-implementation#GitHubLink
+GitHub Link  --> (SPRING)(Security)(jwt-implementation)
 */
 import { Anchor, MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O0_GitHubJdk21Link = ({ anchor }: { anchor: string }) => {
+const O0_GitHubLink = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -15,8 +15,8 @@ const O0_GitHubJdk21Link = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring-Security jwt-authorities Spring boot Version v3.5.6"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6"
+              description="Spring-Security jwt-authorities Spring boot Version v2.6.11"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -25,4 +25,4 @@ const O0_GitHubJdk21Link = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O0_GitHubJdk21Link;
+export default O0_GitHubLink;
