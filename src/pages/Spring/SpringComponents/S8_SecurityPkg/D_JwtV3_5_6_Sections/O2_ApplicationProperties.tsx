@@ -18,8 +18,8 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - resources/application.Properties"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/resources"
+              description="Spring boot v3.5.6 - resources/application.Properties"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -44,8 +44,8 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
             <Li>
               🔑 GitHub link ⇨{" "}
               <Anchor
-                description="Spring-Security/03_JWT/O2-jwt-with-authorities/src/main/resources"
-                href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-with-authorities/src/main/resources"
+                description="08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
+                href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
               ></Anchor>{" "}
             </Li>
           </ULdisc>
@@ -63,18 +63,11 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
             <Li>
               <SpanBlue>data-PostGreSql.sql</SpanBlue>
             </Li>
-            <Li>
-              🔑 GitHub link ⇨{" "}
-              <Anchor
-                description="Spring-Security/03_JWT/O2-jwt-with-authorities/src/main/resources"
-                href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-with-authorities/src/main/resources"
-              ></Anchor>{" "}
-            </Li>
           </ULdisc>
         </article>
         <IMG img_name={security_10}></IMG>
         Code of main <SpanGrey>application.properties</SpanGrey> where I define which environment (DB) ichoose to work with
-        <ApplicationPropertiesHighlight propertiesCode={properties_main}></ApplicationPropertiesHighlight>
+        <ApplicationPropertiesHighlight propertiesCode={properties_mains}></ApplicationPropertiesHighlight>
       </section>
     </MainChildArea>
   );
@@ -82,13 +75,12 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
 
 export default O2_ApplicationProperties;
 
-const properties_main = `server.port=8080
+const properties_mains = `server.port=8080
 spring.profiles.active=h2
 #spring.profiles.active=mysql
 #spring.profiles.active=postgres
 
 spring.output.ansi.enabled=always
-
 
 jwt.signing.key=weferuogp8734thq3ncf3948u9\\
 				p3cnj4fx0-3m8uf3t[83ucnygh\\
@@ -98,25 +90,14 @@ jwt.signing.key=weferuogp8734thq3ncf3948u9\\
 				u9p3cnj4fx0-3m8uf3t[83ucny\\
 				ghfenhadf8ayh9ep9r8vfergec
 
-#logging.level.org.springframework.web=trace
-#logging.level.org.springframework.core=trace
-#logging.level.org.springframework.security.web=trace
-#logging.level.org.springframework.security.web.access=trace
- 
-#logging.level.org.springframework.security=trace
-#logging.level.org.springframework.security.authentication=trace
-#logging.level.org.springframework.security.authentication.dao=trace
-
-# To Trace filters in Security Chain
-#logging.level.org.springframework.security.web.FilterChainProxy=TRACE
-
+# ---- JPA logging ----
+#spring.jpa.show-sql=true
 #spring.jpa.properties.hibernate.format_sql=true
 
-server.error.include-binding-errors=always
-server.error.include-exception=true
-server.error.include-message=always
-server.error.include-stacktrace=never
-server.error.whitelabel.enabled=true
+# ---- Hibernate logging ----
+logging.level.org.hibernate.SQL=DEBUG
+#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
 
 # ===========================================
 # 	dev-tools (Need to add dependency)

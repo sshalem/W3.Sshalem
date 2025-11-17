@@ -24,7 +24,7 @@ import O0_GitHubLink from "./O0_GitHubLink";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_IntroJwtImpl = "Intro Jwt Implementation";
+const o0_IntroJwtImpl = "Intro Jwt v3.5.6";
 const o0_GitHubLink = `GitHub Link`;
 const o1_POM = "1. Dependencies & POM";
 const o2_ApplicationProperties = "2. Application Properties";
