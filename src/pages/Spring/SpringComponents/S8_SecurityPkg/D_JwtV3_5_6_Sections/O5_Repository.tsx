@@ -15,13 +15,12 @@ const O5_Repository = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
         <ULdisc>
           <Li>
-            🔑 GitHub project link ⇨{" "}
+            🔑 GitHub project link ⇨ &nbsp;
             <Anchor
-              description="Spring boot Version v2.6.11 - repository"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/repository"
+              description="Spring boot v3.5.6 - repository"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/repository"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -83,8 +82,8 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
 	@Query("SELECT ue FROM UserEntity ue JOIN ue.roles AS rl WHERE rl.role=:role")
 	List<UserEntity> jpqlFindUsersWithRole(@Param("role") String role);
 
-	@Query("SELECT ur FROM UserEntity user JOIN user.roles AS ur WHERE user.email=? 1")
-	List<RoleEntity> jpqlFindAllRolesOfUserByEmail(String email);
+	@Query("SELECT ur FROM UserEntity user JOIN user.roles AS ur WHERE user.email=:email")
+	List<RoleEntity> jpqlFindAllRolesOfUserByEmail(@Param("email") String email);
 }
 `;
 
@@ -110,4 +109,6 @@ public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
 
 	@Query("SELECT reuse FROM RoleEntity re JOIN re.users AS reuse WHERE re.role=:role")
 	List<UserEntity> jpqlFindUsersWithRole(@Param("role") String role);
-}`;
+
+}
+`;

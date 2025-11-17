@@ -13,13 +13,12 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
         <ULdisc>
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - JwtAuthenticationFilter"
-              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/jwt/JwtAuthenticationFilter.java"
+              description="Spring boot v3.5.6 - JwtAuthenticationFilter"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/jwt/JwtAuthenticationFilter.java"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -230,17 +229,10 @@ export default O10_JwtAuthFilter;
 const code_java = `package com.O2.jwt;
 
 import java.io.IOException;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -248,7 +240,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+
 import io.jsonwebtoken.ExpiredJwtException;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
@@ -265,15 +262,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-            
         final String authorizationHeader = request.getHeader("Authorization");
 
         try {
             if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
                 String jwtToken = authorizationHeader.substring(7);
-
                 if (jwtTokenUtil.validateToken(jwtToken) && SecurityContextHolder.getContext().getAuthentication() == null) {
-
                     String email = jwtTokenUtil.extractUsernameFromToken(jwtToken);
                     LOGGER.info("JwtAuthenticationFilter validates user --> loadUserByUsername(email)");
                     UserDetails userDetails = jwtUserDetailsService.loadUserByUsername(email);
@@ -285,11 +279,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(authToken);
                 }
             }
-        } catch (ExpiredJwtException | BadCredentialsException | UsernameNotFoundException | DisabledException |
-                 LockedException | AccountExpiredException ex) {
+        } catch (ExpiredJwtException | BadCredentialsException | UsernameNotFoundException ex) {
             LOGGER.error(ex.getMessage());
             request.setAttribute("exception", ex);
         }
         filterChain.doFilter(request, response);
     }
-}`;
+}
+`;

@@ -12,18 +12,16 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
         <ULdisc>
           <Li>
-            🔑 GitHub project link ⇨{" "}
+            🔑 GitHub project link ⇨ &nbsp;
             <Anchor
-              description="Spring-Security jwt-authorities Spring boot Version v2.6.11 - Entity"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/entity"
+              description="Spring-Security jwt-authorities Spring boot v3.5.6 - Entity"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/entity"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
       </section>
-      <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 Entity</p>
@@ -35,13 +33,11 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
       </section>
-      <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 UserEntity</p>
         <JavaHighlight javaCode={user_entity}></JavaHighlight>
       </section>
-      <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 RoleEntity</p>
@@ -56,23 +52,23 @@ export default O4_Entity;
 const user_entity = `package com.O2.entity;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "USERS_TB")
@@ -85,14 +81,17 @@ public class UserEntity {
 	 * 
 	 * MySql DB :
 	 * 			@GeneratedValue(strategy = GenerationType.IDENTITY)
+	 * 
+	 * PostGresql DB:
+	 * 			
 	 *
 	 * With PostGresql DB :     
-	 * 				@SequenceGenerator(name = "userseq", initialValue = 20001, allocationSize = 50)
-	 *				@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userseq")
+	 * 				@SequenceGenerator(name = "studentseq", initialValue = 20001, allocationSize = 50)
+	 *				@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "studentseq")
 	 *
-	 *if we look in the data.postgres.sql we can see that the id's start from 1 for each table
-	 * With postgresql , even though I have user id's from 1-10 , when I attempt to create a new record w/o specifiyng the ID
-	 * It pulls the value from sequence (1) thus I can get unique violation
+	 *if we look in the data.postgres.sql we can see that the id's satrt from 1 for each table
+	 * With postgresql , even though i have user id's from 1-10 , when I attempt to create a new record w/o specifiyng the ID
+	 * It pulls the value from sequence (1) thus i can get unique violation
 	 */
 	@Id
 	@SequenceGenerator(name = "userseq", initialValue = 20001, allocationSize = 50)
@@ -107,7 +106,6 @@ public class UserEntity {
 	@JoinTable(name = "user_role",
 			joinColumns = { @JoinColumn(name = "user_id") }, 
 			inverseJoinColumns = { @JoinColumn(name = "role_id") })
-//	@JsonManagedReference
 	@JsonIgnore
 	private Set<RoleEntity> roles = new HashSet<>();
 
@@ -179,13 +177,7 @@ public class UserEntity {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + (int) (id ^ (id >>> 32));
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		return result;
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -197,43 +189,28 @@ public class UserEntity {
 		if (getClass() != obj.getClass())
 			return false;
 		UserEntity other = (UserEntity) obj;
-		if (email == null) {
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
-			return false;
-		if (id != other.id)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		return true;
-	}
-}`;
+		return id == other.id;
+	}	
+}
+`;
 
 const role_entity = `package com.O2.entity;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "ROLES_TB")
@@ -305,11 +282,7 @@ public class RoleEntity {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		result = prime * result + ((role == null) ? 0 : role.hashCode());
-		return result;
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -321,13 +294,7 @@ public class RoleEntity {
 		if (getClass() != obj.getClass())
 			return false;
 		RoleEntity other = (RoleEntity) obj;
-		if (id != other.id)
-			return false;
-		if (role == null) {
-			if (other.role != null)
-				return false;
-		} else if (!role.equals(other.role))
-			return false;
-		return true;
+		return id == other.id;
 	}
-}`;
+}
+`;

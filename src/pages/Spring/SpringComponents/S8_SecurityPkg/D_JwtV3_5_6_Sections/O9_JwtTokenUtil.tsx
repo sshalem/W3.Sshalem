@@ -17,8 +17,8 @@ const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - JwtTokenUtil"
-              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/jwt/JwtTokenUtil.java"
+              description="Spring boot v3.5.6 - JwtTokenUtil"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/jwt/JwtTokenUtil.java"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -60,13 +60,11 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -82,12 +80,13 @@ public class JwtTokenUtil implements Serializable {
 	private static final long serialVersionUID = 3540583232420968407L;
 	private final Logger LOGGER = LoggerFactory.getLogger(JwtTokenUtil.class);
 
-//  -> set to 3 seconds, and check Expired Exception
-//	public static final long EXPIRATION_TIME = 1000 * 3;
-//	-> this is 200 seconds
-	public static final long EXPIRATION_TIME = 1000 * 200;
-//	-> 1000 * 60 * 15; // -> 15 minutes
-//	public static final long EXPIRATION_TIME = 1000 * 60 * 15;
+//	 -> set to 3 seconds, and check Expired Exception
+//	 public static final long EXPIRATION_TIME = 1000 * 3;
+//	 -> this is 200 seconds
+	 public static final long EXPIRATION_TIME = 1000 * 200;
+//	 -> 1000 * 60 * 15; // -> 15 minutes
+//	 public static final long EXPIRATION_TIME = 1000 * 60 * 15;
+
 
 	@Value("\${jwt.signing.key}")
 	private String secretKey;
@@ -122,9 +121,10 @@ public class JwtTokenUtil implements Serializable {
 		} catch (SignatureException | MalformedJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
 			LOGGER.error(ex.getMessage());
 			throw new BadCredentialsException("INVALID_CREDENTIALS", ex);
-		} catch (ExpiredJwtException | DisabledException | LockedException | AccountExpiredException ex) {
+		} catch (ExpiredJwtException ex) {
 			LOGGER.error(ex.getMessage());
 			throw ex;
 		}
-    }
-}`;
+	}
+}
+`;

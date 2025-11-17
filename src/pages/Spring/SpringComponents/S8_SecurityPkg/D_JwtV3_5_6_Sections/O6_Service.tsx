@@ -22,8 +22,8 @@ const O6_Service = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - service"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/service"
+              description="Spring boot v3.5.6 - service"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/service"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -139,7 +139,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Transactional
 	public UserEntity getUserByEmail(String email) {
 		LOGGER.info("invoke getUserByEmail()");
 
@@ -207,6 +206,7 @@ public class UserServiceImpl implements UserService {
 	public void deleteAllUsers() {
 		userRepository.deleteAll();
 	}
+
 }`;
 
 const role_service_impl = `package com.O2.service;
@@ -379,4 +379,5 @@ public class RoleServiceImpl implements RoleService {
 		}
 		roleRepository.deleteAll();
 	}
-}`;
+}
+`;
