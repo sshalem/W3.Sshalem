@@ -38,7 +38,7 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
         </article>
       </section>
       <hr />
-
+ 
       <section className="my-8">
         <p className="font-semibold">
           🔑 <SpanGrey>SecurityConfig with DSL lambda</SpanGrey> code
