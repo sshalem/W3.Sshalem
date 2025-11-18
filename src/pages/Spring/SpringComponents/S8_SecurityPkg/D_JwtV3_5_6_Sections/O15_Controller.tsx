@@ -5,8 +5,9 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanCyan } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { Link } from "react-router-dom";
 
 const O15_Controller = ({ anchor }: { anchor: string }) => {
   return (
@@ -26,13 +27,36 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
-        <p className="font-semibold">🛑 Important note</p>
+        <p className="text-xl font-semibold">🛑 Why Logout Not Implemented?</p>
         <ULdisc>
           <Li>
-            I did not implement <SpanGrey>Logout</SpanGrey> method in this project.
+            <strong>Question</strong> : Why I did not implement <SpanGrey>Logout</SpanGrey> method in this project?
+          </Li>
+          <Li>When I use pure stateless JWTs (JWT for access token + JWT for refresh tokens) , they are stored in DB.</Li>
+          <Li>
+            Thus , FrontEnd is responsible to delete both Tokens <SpanGrey>access_token</SpanGrey> and <SpanGrey>refresh_token</SpanGrey>
           </Li>
           <Li>
-            ✅ I implemented it in the project where I implemtnet <SpanGrey>RefreshToken</SpanGrey>.
+            On <SpanGrey>Logout</SpanGrey>
+            <ULdisc>
+              <Li>FrontEnd deletes accessToken</Li>
+              <Li>FrontEnd deletes refreshToken</Li>
+              <Li>Server does nothing, Since tokens are stateless, server cannot invalidate them anyway.</Li>
+            </ULdisc>
+          </Li>
+          <Li>In this implementation I don't save the Refresh_Token in DB, I just generate it </Li>
+          <Li>
+            <SpanCyan>Therefore , no need to implement Logout when I use pure stateless</SpanCyan>
+          </Li>
+          <Li>
+            The most secure way is (Refresh token rotation + DB) (see &nbsp;
+            <Link
+              to={"/spring/security/jwt-refresh-token-v3-5-7"}
+              className="rounded-md bg-sky-200 p-[0.15rem] tracking-wide text-blue-700 hover:text-blue-700 hover:underline"
+            >
+              jwt-refresh-token-v3-5-7
+            </Link>
+            ) . <SpanGrey>RefreshToken stored DB</SpanGrey>.
           </Li>
         </ULdisc>
       </section>
@@ -44,12 +68,12 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
         <article>
           🔑 Why I do <SpanGrey>(JwtUserDetails) authenticate.getPrincipal()</SpanGrey>?
           <ULdisc>
-            <Li>✅ No extra DB call — I already have the authenticated JwtUserDetails inside the Authentication object.</Li>
-            <Li>✅ Standard Spring Security way (this is why the Principal exists).</Li>
+            <Li>No extra DB call — I already have the authenticated JwtUserDetails inside the Authentication object.</Li>
+            <Li>Standard Spring Security way (this is why the Principal exists).</Li>
           </ULdisc>
           🔑 Then Why, During request filtering (JWT validation), I call <SpanGrey>jwtUserDetailsService.loadUserByUsername(email)</SpanGrey> again?
           <ULdisc>
-            <Li>✅ It's because I only have the JWT’s subject (username) and need to reconstruct UserDetails for the SecurityContext.</Li>
+            <Li>It's because I only have the JWT’s subject (username) and need to reconstruct UserDetails for the SecurityContext.</Li>
           </ULdisc>
         </article>
       </section>

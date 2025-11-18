@@ -20,7 +20,11 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🔑 GitHub link</p>
         <ULdisc>
           <Li>
-            🔑 GitHub project link ⇨ <Anchor description="Spring boot v3.5.6 - SecurityConfig" href=""></Anchor>{" "}
+            🔑 GitHub project link ⇨{" "}
+            <Anchor
+              description="Spring boot v3.5.6 - SecurityConfig"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/config/SecurityConfig.java"
+            ></Anchor>{" "}
           </Li>
         </ULdisc>
       </section>
@@ -38,7 +42,7 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
         </article>
       </section>
       <hr />
- 
+
       <section className="my-8">
         <p className="font-semibold">
           🔑 <SpanGrey>SecurityConfig with DSL lambda</SpanGrey> code

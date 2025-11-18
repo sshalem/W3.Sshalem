@@ -15,21 +15,11 @@ const O13_Exceptions = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - exceptions"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/exceptions"
-            ></Anchor>{" "}
+              description="Spring boot v3.5.6 - exceptions"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/exceptions"
+            ></Anchor>
           </Li>
         </ULdisc>
-      </section>
-      <hr />
-
-      <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🧩 Dependencies + POM file</p>
-        <article>
-          <ULdisc>
-            <Li></Li>
-          </ULdisc>
-        </article>
       </section>
     </MainChildArea>
   );

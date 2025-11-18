@@ -16,8 +16,8 @@ const O11_JwtAuthenticationEntryPoint = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot Version v2.6.11 - JwtAuthenticationEntryPoint"
-              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v2-6-11/src/main/java/com/O2/jwt/JwtAuthenticationEntryPoint.java"
+              description="Spring boot v3.5.6 - JwtAuthenticationEntryPoint"
+              href="https://github.com/sshalem/Spring-Boot/blob/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/jwt/JwtAuthenticationEntryPoint.java"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
