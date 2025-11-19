@@ -57,4 +57,8 @@ function readPages(dir: string = PAGES_DIR): Page[] {
 
 const pages = readPages();
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(pages, null, 50));
+console.log("------------------------------------------------------");
 console.log("✅ searchIndex.json created with subfolders included!");
+console.log("------------------------------------------------------");
+console.log("");
+console.log("");

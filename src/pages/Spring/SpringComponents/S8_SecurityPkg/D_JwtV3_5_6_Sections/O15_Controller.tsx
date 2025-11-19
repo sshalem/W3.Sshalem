@@ -124,6 +124,16 @@ public class JwtAuthenticationController {
 	@Autowired
 	private UserServiceImpl userServiceImpl;
 
+
+    /**
+		 * 🔑 Why I do (JwtUserDetails) authenticate.getPrincipal()? 
+		 * ✅ No extra DB call — I already have the authenticated JwtUserDetails inside the Authentication object. 
+		 * ✅ Standard Spring Security way (this is why the Principal exists). 
+		 * 
+		 * 🔑 Then Why, During request filtering (JWT validation), I call jwtUserDetailsService.loadUserByUsername(email) again? 
+		 * ✅ It's because I only have the JWT’s subject (username) and need to reconstruct UserDetails for the SecurityContext.
+		 */
+
 	/**
 	 * Login Request
 	 */

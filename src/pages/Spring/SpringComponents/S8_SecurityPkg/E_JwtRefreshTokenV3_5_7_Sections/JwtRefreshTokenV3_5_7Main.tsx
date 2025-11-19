@@ -1,22 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O0_GitHubJdk21Link from "./O0_GitHubJdk21Link";
-import O0_IntroJdk21JwtImpl from "./O0_IntroJdk21JwtImpl";
-import O1_SecurityConfig from "./O1_SecurityConfig";
+import O1_IntroRefreshToken from "./O1_IntroRefreshToken";
+import O2_BestPractice from "./O2_BestPractice";
+import O3_Controller from "./O3_Controller";
+import O0_GitHubLink from "./O0_GitHubLink";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_IntroJdk21JwtImpl = "Intro Jwt Impl";
-const o0_GitHubJdk21Link = "GitHub Link";
-const o1_SecurityConfig = "1. Security Config";
+const o0_GitHubLink = "GitHub Link";
+const o1_IntroRefreshToken = "1. Intro Jwt refresh token";
+const o2_BestPractice = "2. Best Practice";
+const o3_Controller = "3. Controller";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_SecurityConfig];
+const anchorList: string[] = [o0_GitHubLink, o1_IntroRefreshToken, o2_BestPractice, o3_Controller];
 
 // ============================================
 // ============================================
@@ -70,9 +72,10 @@ const JwtRefreshTokenV3_5_7Main = () => {
       />
       {/* End Contents */}
 
-      <O0_IntroJdk21JwtImpl anchor={o0_IntroJdk21JwtImpl}></O0_IntroJdk21JwtImpl>
-      <O0_GitHubJdk21Link anchor={o0_GitHubJdk21Link}></O0_GitHubJdk21Link>
-      <O1_SecurityConfig anchor={o1_SecurityConfig}></O1_SecurityConfig>
+      <O0_GitHubLink anchor={o0_GitHubLink}></O0_GitHubLink>
+      <O1_IntroRefreshToken anchor={o1_IntroRefreshToken}></O1_IntroRefreshToken>
+      <O2_BestPractice anchor={o2_BestPractice}></O2_BestPractice>
+      <O3_Controller anchor={o3_Controller}></O3_Controller>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
