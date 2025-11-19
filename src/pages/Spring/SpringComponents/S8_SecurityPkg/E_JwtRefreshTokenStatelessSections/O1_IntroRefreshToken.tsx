@@ -68,28 +68,6 @@ const O1_IntroRefreshToken = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">✅ How it works in Spring Boot</p>
-        <ULdisc>
-          <Li>Access Token: Short-lived JWT for API calls.</Li>
-          <Li>Refresh Token: Long-lived token stored securely.</Li>
-          <Li>
-            Flow:
-            <ULDecimal>
-              <Li>
-                User logs in → Server issues <SpanGrey>access token</SpanGrey> + <SpanGrey>refresh token</SpanGrey>.
-              </Li>
-              <Li>
-                Access token expires → Client sends refresh token to <SpanGrey>/refresh</SpanGrey> endpoint.
-              </Li>
-              <Li>Server validates refresh token → Issues new access token.</Li>
-            </ULDecimal>
-          </Li>
-        </ULdisc>
-      </section>
-
-      <hr />
-
-      <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔑 JWT Refresh Token Implementation summary</p>
         In this implementations:
         <ULdisc>

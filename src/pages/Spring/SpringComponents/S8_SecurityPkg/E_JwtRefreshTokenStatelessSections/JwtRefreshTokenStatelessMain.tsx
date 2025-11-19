@@ -23,7 +23,7 @@ const anchorList: string[] = [o0_GitHubLink, o1_IntroRefreshToken, o2_BestPracti
 // ============================================
 // ============================================
 
-const JwtRefreshTokenV3_5_7Main = () => {
+const JwtRefreshTokenStatelessMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -82,4 +82,4 @@ const JwtRefreshTokenV3_5_7Main = () => {
   );
 };
 
-export default JwtRefreshTokenV3_5_7Main;
+export default JwtRefreshTokenStatelessMain;

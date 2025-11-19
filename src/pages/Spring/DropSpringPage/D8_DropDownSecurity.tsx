@@ -46,8 +46,8 @@ const D8_DropDownSecurity = () => {
         <SideDropdownLink sideDropDownNavName="JWT Introduction" internalLink="/spring/security/jwt" />
         <SideDropdownLink sideDropDownNavName="JWT v2.6.11 (Deprecated)" internalLink="/spring/security/jwt-v2-6-11" />
         <SideDropdownLink sideDropDownNavName="JWT v3.5.6" internalLink="/spring/security/jwt-v3-5-6" />
-        <SideDropdownLink sideDropDownNavName="JWT Refresh Token" internalLink="/spring/security/jwt-refresh-token-v3-5-7" />
-        <SideDropdownLink sideDropDownNavName="JWT Refresh Token in DB" internalLink="/spring/security/jwt-refresh-token-in-DB-v3-5-7" />
+        <SideDropdownLink sideDropDownNavName="JWT Refresh Token (Stateless)" internalLink="/spring/security/jwt-refresh-token-stateless" />
+        <SideDropdownLink sideDropDownNavName="JWT Refresh Token in DB" internalLink="/spring/security/jwt-refresh-token-in-DB" />
         <SideDropdownLink sideDropDownNavName="JWT Multiple Config" internalLink="/spring/security/jwt-multiple-config" />
         {/*  */}
         <SideDropdownLink sideDropDownNavName="OAuth2" internalLink="/spring/security/oauth2" />

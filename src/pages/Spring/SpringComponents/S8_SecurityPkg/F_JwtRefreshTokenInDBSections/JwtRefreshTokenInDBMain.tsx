@@ -21,7 +21,7 @@ const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_Secur
 // ============================================
 // ============================================
 
-const JwtRefreshTokenInDBV3_5_7Main = () => {
+const JwtRefreshTokenInDBMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -79,4 +79,4 @@ const JwtRefreshTokenInDBV3_5_7Main = () => {
   );
 };
 
-export default JwtRefreshTokenInDBV3_5_7Main;
+export default JwtRefreshTokenInDBMain;
