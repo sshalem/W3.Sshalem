@@ -6,7 +6,7 @@ import { MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
-const O2_BestPractice = ({ anchor }: { anchor: string }) => {
+const O3_BestPractice = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -23,4 +23,4 @@ const O2_BestPractice = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_BestPractice;
+export default O3_BestPractice;

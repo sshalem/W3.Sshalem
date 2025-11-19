@@ -1,26 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroRefreshToken from "./O1_IntroRefreshToken";
-import O2_BestPractice from "./O2_BestPractice";
-import O3_Controller from "./O3_Controller";
 import O0_GitHubLink from "./O0_GitHubLink";
-import O4_Test from "./O4_Test";
+import O1_IntroRefreshToken from "./O1_IntroRefreshToken";
+import O2_refreshTokenStatelessProsCons from "./O2_refreshTokenStatelessProsCons";
+import O3_BestPractice from "./O3_BestPractice";
+import O4_Controller from "./O4_Controller";
+import O5_Test from "./O5_Test";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o0_GitHubLink = "GitHub Link";
-const o1_IntroRefreshToken = "1. Intro Jwt refresh token";
-const o2_BestPractice = "2. Best Practice";
-const o3_Controller = "3. Controller";
-const o4_Test = "4. Test";
+const o1_IntroRefreshToken = "1. Intro Jwt refresh token(stateless)";
+const o2_refreshTokenStatelessProsCons = "2. RefreshToken Stateless Pros/Cons";
+const o3_BestPractice = "3. Best Practice";
+const o4_Controller = "4. Controller";
+const o5_Test = "5. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_GitHubLink, o1_IntroRefreshToken, o2_BestPractice, o3_Controller, o4_Test];
+const anchorList: string[] = [o0_GitHubLink, o1_IntroRefreshToken, o2_refreshTokenStatelessProsCons, o3_BestPractice, o4_Controller, o5_Test];
 
 // ============================================
 // ============================================
@@ -76,9 +78,10 @@ const JwtRefreshTokenStatelessMain = () => {
 
       <O0_GitHubLink anchor={o0_GitHubLink}></O0_GitHubLink>
       <O1_IntroRefreshToken anchor={o1_IntroRefreshToken}></O1_IntroRefreshToken>
-      <O2_BestPractice anchor={o2_BestPractice}></O2_BestPractice>
-      <O3_Controller anchor={o3_Controller}></O3_Controller>
-      <O4_Test anchor={o4_Test}></O4_Test>
+      <O2_refreshTokenStatelessProsCons anchor={o2_refreshTokenStatelessProsCons}></O2_refreshTokenStatelessProsCons>
+      <O3_BestPractice anchor={o3_BestPractice}></O3_BestPractice>
+      <O4_Controller anchor={o4_Controller}></O4_Controller>
+      <O5_Test anchor={o5_Test}></O5_Test>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

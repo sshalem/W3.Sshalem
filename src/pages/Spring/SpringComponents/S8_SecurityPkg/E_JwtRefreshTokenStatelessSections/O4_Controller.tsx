@@ -10,7 +10,7 @@ import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
-const O3_Controller = ({ anchor }: { anchor: string }) => {
+const O4_Controller = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
   const renderSecurityConfigDsl = useMemo(() => <JavaHighlight javaCode={security_config} />, [security_config]);
@@ -104,7 +104,7 @@ const O3_Controller = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_Controller;
+export default O4_Controller;
 
 const security_config = `package com.backend.controller;
 
@@ -247,7 +247,7 @@ public class JwtAuthenticationController {
 					final String accessToken = jwtTokenUtil.generateToken(userDetails);								
 					return ResponseEntity.status(HttpStatus.CREATED).body(new JwtTokenResponse(name, accessToken, refreshToken));				
 			} catch (Exception ex) {					
-					return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", ex.getMessage()));				
+					return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", "refreshToken expired , need to re-login"));					
 			}
 		}
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("error", "Refresh token is missing"));
