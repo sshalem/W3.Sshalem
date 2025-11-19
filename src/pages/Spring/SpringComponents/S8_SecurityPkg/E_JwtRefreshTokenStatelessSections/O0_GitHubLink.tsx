@@ -15,8 +15,8 @@ const O0_GitHubLink = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨ &nbsp;
             <Anchor
-              description="Spring-Security refresh-token (pure stateles) "
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O3-jwt-refresh-token-v3-5-7"
+              description="Spring-Security refresh-token (stateles) "
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O3-jwt-refresh-token-stateless"
             ></Anchor>
           </Li>
         </ULdisc>
