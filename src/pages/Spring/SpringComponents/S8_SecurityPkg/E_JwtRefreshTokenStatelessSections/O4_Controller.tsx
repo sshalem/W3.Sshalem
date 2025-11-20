@@ -21,16 +21,10 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
         <article>
           <ULdisc>
             <Li>
-              Thus, I only implement code for <SpanGrey>refreshToken</SpanGrey> on Controller layer
+              I only implement code for <SpanGrey>refreshToken</SpanGrey> on Controller layer
             </Li>
             <Li>
-              When User successfully login :
-              <ULDecimal>
-                <Li>
-                  Backend creates an <SpanGrey>accessToken</SpanGrey> and <SpanGrey>refreshToken</SpanGrey>
-                </Li>
-                <Li></Li>
-              </ULDecimal>
+              Thus, only the <SpanGrey>Controller</SpanGrey> code is inthis example
             </Li>
           </ULdisc>
         </article>

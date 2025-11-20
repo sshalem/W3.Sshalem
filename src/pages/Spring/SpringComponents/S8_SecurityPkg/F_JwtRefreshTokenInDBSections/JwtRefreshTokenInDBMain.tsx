@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O0_GitHubJdk21Link from "./O0_GitHubJdk21Link";
-import O0_IntroJdk21JwtImpl from "./O0_IntroJdk21JwtImpl";
-import O1_SecurityConfig from "./O1_SecurityConfig";
+import O1_IntroRefreshTokenInDBRotation from "./O1_IntroRefreshTokenInDBRotation";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o0_IntroJdk21JwtImpl = "Intro Jwt Impl";
+const o1_IntroRefreshTokenInDBRotation = "1. Intro RefreshToken In DB Rotation";
 const o0_GitHubJdk21Link = "GitHub Link";
 const o1_SecurityConfig = "1. Security Config";
 
@@ -16,7 +15,7 @@ const o1_SecurityConfig = "1. Security Config";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_IntroJdk21JwtImpl, o0_GitHubJdk21Link, o1_SecurityConfig];
+const anchorList: string[] = [o0_IntroJdk21JwtImpl, o1_IntroRefreshTokenInDBRotation, o0_GitHubJdk21Link, o1_SecurityConfig];
 
 // ============================================
 // ============================================
@@ -70,10 +69,7 @@ const JwtRefreshTokenInDBMain = () => {
       />
       {/* End Contents */}
 
-      <O0_IntroJdk21JwtImpl anchor={o0_IntroJdk21JwtImpl}></O0_IntroJdk21JwtImpl>
-      <O0_GitHubJdk21Link anchor={o0_GitHubJdk21Link}></O0_GitHubJdk21Link>
-      <O1_SecurityConfig anchor={o1_SecurityConfig}></O1_SecurityConfig>
-
+      <O1_IntroRefreshTokenInDBRotation anchor={o1_IntroRefreshTokenInDBRotation}></O1_IntroRefreshTokenInDBRotation>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
