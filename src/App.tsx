@@ -141,6 +141,7 @@ import {
 
 import {
   JwtMain,
+  JwtRefreshTokenInDBHttpOnlyMain,
   JwtRefreshTokenInDBMain,
   JwtRefreshTokenStatelessMain,
   JwtV3_5_6Main,
@@ -339,6 +340,7 @@ const router = createBrowserRouter(
                 { path: "jwt-v3-5-6", element: <JwtV3_5_6Main /> },
                 { path: "jwt-refresh-token-stateless", element: <JwtRefreshTokenStatelessMain /> },
                 { path: "jwt-refresh-token-in-DB", element: <JwtRefreshTokenInDBMain /> },
+                { path: "jwt-refresh-token-httpOnly", element: <JwtRefreshTokenInDBHttpOnlyMain /> },
                 { path: "jwt-multiple-config", element: <MultipleJwtSecurityConfigMain /> },
                 { path: "oauth2", element: <OAuth2Main /> },
               ],

@@ -5,5 +5,6 @@ export { default as JwtV_2_6_11Main } from "./C_JwtV2_6_11_Sections/JwtV_2_6_11M
 export { default as JwtV3_5_6Main } from "./D_JwtV3_5_6_Sections/JwtV3_5_6Main";
 export { default as JwtRefreshTokenStatelessMain } from "./E_JwtRefreshTokenStatelessSections/JwtRefreshTokenStatelessMain";
 export { default as JwtRefreshTokenInDBMain } from "./F_JwtRefreshTokenInDBSections/JwtRefreshTokenInDBMain";
+export { default as JwtRefreshTokenInDBHttpOnlyMain } from "./G_JwtRefreshTokenInDBHttpOnlySections/JwtRefreshTokenInDBHttpOnlyMain";
 
 export { default as MultipleJwtSecurityConfigMain } from "./X_MultipleJwtSecurityConfig/MultipleJwtSecurityConfigMain";
