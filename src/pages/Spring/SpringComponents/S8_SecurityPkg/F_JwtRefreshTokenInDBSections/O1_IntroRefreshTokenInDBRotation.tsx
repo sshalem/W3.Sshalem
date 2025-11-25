@@ -2,92 +2,73 @@
 
 
 */
-import { Anchor, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanBlue, SpanGrey, SpanRed } from "../../../../../components/Highlight";
-import Li from "../../../../../components/ui/Li";
-import ULdisc from "../../../../../components/ui/ULdisc";
+import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import security_refresh_db_1 from "../../../../../assets/security_refresh_db_1.jpg";
+import { SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <section className="my-8">
-        Implementing a <SpanGrey>refresh token</SpanGrey> alongside <SpanGrey>JWT</SpanGrey> in a Spring Boot application is important for several
-        reasons
-        <p className="my-4 text-lg font-semibold">✅ Why JWT alone is not enough?</p>
-        <ULDecimal>
-          <Li>
-            <strong>
-              Because JWTs are <SpanGrey>stateless</SpanGrey> and <SpanGrey>self-contained</SpanGrey>
-            </strong>
-            : Once issued, they cannot be revoked or changed until they expire.
-          </Li>
-          <Li>
-            Because JWTs are <strong>Short-lived access tokens</strong> : To reduce risk if a token is stolen, JWTs usually have a short expiration
-            time (e.g., 15 minutes).
-          </Li>
-          <Li>
-            <SpanRed>Inconvenient Problem to user</SpanRed> : If the token expires, the user would need to log in again, which is inconvenient.
-          </Li>
-        </ULDecimal>
-      </section>
-
+      Ask the following question:
+      <ULDecimal>
+        <Li>With Rotation : I can rotate unlimited times.</Li>
+        <Li>Every rotation stores another new token in the DB and revokes the previous one. (set it as true)</Li>
+        <Li>❗ Note — need to mark old tokens as invalid and and keep them in DB , as long as user is log in</Li>
+      </ULDecimal>
       <hr />
-
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">✅ Why use Refresh Tokens?</p>
-        <p>A refresh token solves this by:</p>
-        <ULDecimal>
-          <Li>
-            <strong>Extending session without re-login</strong>
-            <ULdisc>
-              <Li>The client uses the refresh token to request a new access token when the old one expires.</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Improved security</strong>
-            <ULdisc>
-              <Li>Access tokens are short-lived, reducing exposure if compromised.</Li>
-              <Li>Refresh tokens can be stored securely (e.g., in HTTP-only cookies).</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Revocation capability</strong>
-            <ULdisc>
-              <Li>Refresh tokens can be stored in a database and invalidated if needed (e.g., user logs out or password changes).</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Better UX</strong>
-            <ULdisc>
-              <Li>Users stay logged in without frequent re-authentication.</Li>
-            </ULdisc>
-          </Li>
-        </ULDecimal>
+        <p className="my-4 text-lg font-semibold">🔥 3. BEST Practice: Create a new row for each rotation</p>
+        <p>Every new RefreshToken = new row in DB</p>
+        <IMG img_name={security_refresh_db_1}></IMG>
       </section>
-
       <hr />
-
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔑 JWT Refresh Token Implementation summary</p>
-        In this implementations:
+        <p className="my-4 text-lg font-semibold"> ⚠️ 4. If you want ONLY rotation field (no revoked), here's the problem</p>
         <ULdisc>
+          <Li>RT1 and RT2 are destroyed from memory</Li>
+          <Li>You have no way of detecting replay attacks</Li>
+          <Li>You cannot detect if someone uses an older token</Li>
+          <Li>You lose audit trail</Li>
+          <Li>You cannot locate “which refresh token was reused"</Li>
           <Li>
-            I use Spring boot version <SpanBlue>3.5.7</SpanBlue>.
-          </Li>
-          <Li>
-            I use <SpanBlue>jdk-21</SpanBlue> version
-          </Li>
-          <Li>
-            I use <SpanBlue>Postman</SpanBlue> for testing
-          </Li>
-          <Li>
-            🔑 GitHub project link ⇨ &nbsp;
-            <Anchor
-              description="Spring-Security refresh-token (stateles)"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O3-jwt-refresh-token-stateless"
-            ></Anchor>
+            <SpanRed>This defeats the security purpose of rotation.</SpanRed>
           </Li>
         </ULdisc>
+        <p>✔ Best approach:</p>
+        <ULdisc>
+          <Li>Keep revoked boolean</Li>
+          <Li>Add rotation integer for counting</Li>
+          <Li>Store each token as a new row</Li>
+        </ULdisc>
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> ✅ Keep revoked tokens for a short time — then delete</p>
+        <p>When you rotate refresh tokens:</p>
+        <ULdisc>
+          <Li>The previous token becomes revoked = true</Li>
+          <Li>The new token becomes the active one</Li>
+        </ULdisc>
+        <p>But you do NOT delete the revoked token immediately, because:</p>
+        <p>❗ Why keep revoked tokens temporarily?</p>
+        <ULDecimal>
+          <Li>
+            Replay attack detection <br />
+            If a hacker steals RT1 and sends it after RT2 was already issued… <br />
+            If you deleted RT1, you won’t know someone used an old token.
+          </Li>
+          <Li>
+            Audit trail <br /> Knowing how many rotations, failures, or suspicious events occurred is valuable.
+          </Li>
+          <Li>
+            Debugging <br />
+            Helps track token misuse.
+          </Li>
+        </ULDecimal>
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> 📝 What is Best Practice Cleanup Rule</p>
       </section>
     </MainChildArea>
   );

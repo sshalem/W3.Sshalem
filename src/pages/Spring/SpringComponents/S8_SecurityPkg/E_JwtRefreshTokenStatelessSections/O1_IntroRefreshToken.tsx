@@ -2,8 +2,8 @@
 
 
 */
-import { Anchor, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanBlue, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { MainChildArea, ULDecimal } from "../../../../../components";
+import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -34,60 +34,95 @@ const O1_IntroRefreshToken = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">✅ Why use Refresh Tokens?</p>
-        <p>A refresh token solves this by:</p>
-        <ULDecimal>
-          <Li>
-            <strong>Extending session without re-login</strong>
-            <ULdisc>
-              <Li>The client uses the refresh token to request a new access token when the old one expires.</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Improved security</strong>
-            <ULdisc>
-              <Li>Access tokens are short-lived, reducing exposure if compromised.</Li>
-              <Li>Refresh tokens can be stored securely (e.g., in HTTP-only cookies).</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Revocation capability</strong>
-            <ULdisc>
-              <Li>Refresh tokens can be stored in a database and invalidated if needed (e.g., user logs out or password changes).</Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            <strong>Better UX</strong>
-            <ULdisc>
-              <Li>Users stay logged in without frequent re-authentication.</Li>
-            </ULdisc>
-          </Li>
-        </ULDecimal>
+        <p className="my-4 text-lg font-semibold">✅ 1. What is a Refresh Token?</p>
+        <p>
+          A <strong>refresh token</strong> is a long-lived token used to obtain a <strong>new access token</strong> when the{" "}
+          <strong>access token expires</strong>.
+        </p>
+        <ULdisc>
+          <Li>Access Token (short-lived) → Contains user info (JWT claims), used for each request</Li>
+          <Li>Refresh Token (long-lived) → Used only for generating new access tokens</Li>
+          <Li>Access tokens can expire in 15 min – 1 hour</Li>
+          <Li>Refresh tokens can last days, weeks, or months</Li>
+        </ULdisc>
       </section>
 
       <hr />
 
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔑 JWT Refresh Token Implementation summary</p>
-        In this implementations:
+        <p className="my-4 text-lg font-semibold">✅ 2. Why Use Refresh Token?</p>
         <ULdisc>
           <Li>
-            I use Spring boot version <SpanBlue>3.5.7</SpanBlue>.
+            Because JWT is <strong>stateless</strong> — once created, it cannot be revoked or changed.
           </Li>
           <Li>
-            I use <SpanBlue>jdk-21</SpanBlue> version
-          </Li>
-          <Li>
-            I use <SpanBlue>Postman</SpanBlue> for testing
-          </Li>
-          <Li>
-            🔑 GitHub project link ⇨ &nbsp;
-            <Anchor
-              description="Spring-Security refresh-token (stateles)"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O3-jwt-refresh-token-stateless"
-            ></Anchor>
+            {" "}
+            Because JWTs are Short-lived access tokens : To reduce risk <SpanGrey>if a token is stolen</SpanGrey>.
           </Li>
         </ULdisc>
+        <p></p>
+        <p></p>
+        <p>So we need a mechanism to:</p>
+        <ULdisc>
+          <Li>✔ Continue the user session when access token expires</Li>
+          <Li>✔ Reduce login frequency</Li>
+          <Li>✔ Improve security with rotation (optional)</Li>
+        </ULdisc>
+      </section>
+
+      <hr />
+
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold">✅ 3. Where to Store Refresh Token?</p>
+        <p>
+          <strong>Option A</strong> — Secure HTTP-Only Cookie (<SpanGreen>Best Practice</SpanGreen> )
+        </p>
+        <ULdisc>
+          <Li>Not accessible by JavaScript</Li>
+          <Li>Protected by browser security</Li>
+          <Li>Ideal for web apps</Li>
+        </ULdisc>
+        <p>
+          <strong>Option B</strong> — Authorization header
+        </p>
+        <ULdisc>
+          <Li>Not recommended for long-lived tokens.</Li>
+        </ULdisc>
+      </section>
+
+      <hr />
+
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold">✅ 4. Two Main Strategies</p>
+        <p className="my-3">
+          <strong>Strategy A</strong> — Refresh Token Rotation (Highly Secured)
+        </p>
+        <p>Every time the client refreshes, you:</p>
+        <ULDecimal>
+          <Li>Mark the old RT as revoked</Li>
+          <Li>Issue a new refresh token + new access token</Li>
+          <Li>Save the new RT in the DB</Li>
+        </ULDecimal>
+        Prevents replay attacks.
+        <p className="my-3">
+          Use this when:
+          <ULdisc>
+            <Li>✔ You store refresh tokens in DB</Li>
+            <Li>✔ You want maximum security</Li>
+          </ULdisc>
+        </p>
+        <p className="mb-3 mt-5">
+          <strong>Strategy B</strong> — Fixed Refresh Token (Simpler)
+        </p>
+        <p>You generate one refresh token, store it in DB or cookie, and use it until it expires.</p>
+        <p className="my-3">
+          Use this when:
+          <ULdisc>
+            <Li>✔ You want simpler implementation</Li>
+            <Li>✔ Not storing refresh tokens in DB</Li>
+            <Li>✔ You only validate expiration + signature</Li>
+          </ULdisc>
+        </p>
       </section>
     </MainChildArea>
   );
