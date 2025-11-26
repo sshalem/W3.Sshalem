@@ -4,7 +4,7 @@
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import security_refresh_db_1 from "../../../../../assets/security_refresh_db_1.jpg";
-import { SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
@@ -64,14 +64,78 @@ const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
             Debugging <br />
             Helps track token misuse.
           </Li>
+          <Li>A user may have multiple sessions (phone, laptop, tablet). You must not delete their other refresh tokens because one expired.</Li>
         </ULDecimal>
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> 📝 What is Best Practice Cleanup Rule</p>
+        <p className="my-4 text-lg font-semibold"> ❓ What happens when a refresh token expires?</p>
+        Do NOT delete <SpanGrey>all tokens</SpanGrey> for that user.
+        <ULdisc>
+          <Li>
+            ✔ Delete or archive just that expired token{" "}
+            <ULdisc>
+              Expired tokens have no value and cannot be used. <br />
+              You may delete them with a scheduled job (cron) every X hours.
+            </ULdisc>
+          </Li>
+          <Li>
+            ✔ Keep other valid tokens
+            <ULdisc>
+              A user may have multiple sessions (phone, laptop, tablet). <br />
+              You must not delete their other refresh tokens because one expired.
+            </ULdisc>
+          </Li>
+        </ULdisc>
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> 🚫 When Do You Delete ALL Refresh Tokens?</p>
+        You only delete all refresh tokens when:
+        <ULdisc>
+          <Li>
+            ✔ The user logs out from all devices
+            <ULdisc>(e.g., "Logout from all devices" button)</ULdisc>
+          </Li>
+          <Li>
+            ✔ An account is compromised
+            <ULdisc>(Security reason)</ULdisc>
+          </Li>
+          <Li>
+            ✔ Admin invalidates all sessions manually
+            <ULdisc>(Security reason)</ULdisc>
+          </Li>
+        </ULdisc>{" "}
+        Otherwise , never delete all tokens just because one expired.
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> 🔍 What Happens During Refresh-Token Rotation?</p>
+        Example:
+        <ULdisc>
+          <Li>RT1 → used once → rotated → becomes revoked</Li>
+          <Li>RT2 → active</Li>
+          <Li>RT2 used → rotated → RT3 active</Li>
+        </ULdisc>{" "}
+        If RT2 expires, you delete RT2 only. <br />
+        RT3 is still valid.
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> 🧹 Cleanup Strategy (Best Practice)</p>
+        <ULdisc>
+          <Li>Scheduled cleanup job:</Li>
+          <Li>This keeps the DB small.</Li>
+        </ULdisc>
+        <JavaHighlight javaCode={cron}></JavaHighlight>
       </section>
     </MainChildArea>
   );
 };
 
 export default O1_IntroRefreshTokenInDBRotation;
+
+const cron = `@Scheduled(cron = "0 0 * * * *") // every hour
+public void cleanupExpiredTokens() {
+    refreshTokenRepository.deleteByExpiresAtBefore(Instant.now());
+}`;
