@@ -9,21 +9,25 @@ import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/High
 const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      Ask the following question:
-      <ULDecimal>
-        <Li>With Rotation : I can rotate unlimited times.</Li>
-        <Li>Every rotation stores another new token in the DB and revokes the previous one. (set it as true)</Li>
-        <Li>❗ Note — need to mark old tokens as invalid and and keep them in DB , as long as user is log in</Li>
-      </ULDecimal>
-      <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold">🔥 3. BEST Practice: Create a new row for each rotation</p>
-        <p>Every new RefreshToken = new row in DB</p>
+        <p className="my-4 text-xl font-semibold">🔥 1. BEST Practice: Create a new row for each rotation</p>
+        <p className="text-lg font-semibold">✔ Best approach:</p>
+        <ULdisc>
+          <Li>
+            Keep <SpanGrey>revoked</SpanGrey> boolean
+          </Li>
+          <Li>
+            Add <SpanGrey>rotation</SpanGrey> integer for counting
+          </Li>
+          <Li>
+            Store each token as <SpanGrey>a new row</SpanGrey>
+          </Li>
+        </ULdisc>
         <IMG img_name={security_refresh_db_1}></IMG>
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> ⚠️ 4. If you want ONLY rotation field (no revoked), here's the problem</p>
+        <p className="my-4 text-xl font-semibold"> ⚠️ 2. Whats the problem If I have ONLY rotation field (no revoked) ?</p>
         <ULdisc>
           <Li>RT1 and RT2 are destroyed from memory</Li>
           <Li>You have no way of detecting replay attacks</Li>
@@ -34,86 +38,58 @@ const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
             <SpanRed>This defeats the security purpose of rotation.</SpanRed>
           </Li>
         </ULdisc>
-        <p>✔ Best approach:</p>
-        <ULdisc>
-          <Li>Keep revoked boolean</Li>
-          <Li>Add rotation integer for counting</Li>
-          <Li>Store each token as a new row</Li>
-        </ULdisc>
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> ✅ Keep revoked tokens for a short time — then delete</p>
-        <p>When you rotate refresh tokens:</p>
-        <ULdisc>
-          <Li>The previous token becomes revoked = true</Li>
-          <Li>The new token becomes the active one</Li>
-        </ULdisc>
-        <p>But you do NOT delete the revoked token immediately, because:</p>
-        <p>❗ Why keep revoked tokens temporarily?</p>
-        <ULDecimal>
-          <Li>
-            Replay attack detection <br />
-            If a hacker steals RT1 and sends it after RT2 was already issued… <br />
-            If you deleted RT1, you won’t know someone used an old token.
-          </Li>
-          <Li>
-            Audit trail <br /> Knowing how many rotations, failures, or suspicious events occurred is valuable.
-          </Li>
-          <Li>
-            Debugging <br />
-            Helps track token misuse.
-          </Li>
-          <Li>A user may have multiple sessions (phone, laptop, tablet). You must not delete their other refresh tokens because one expired.</Li>
-        </ULDecimal>
-      </section>
-      <hr />
-      <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> ❓ What happens when a refresh token expires?</p>
+        <p className="my-4 text-xl font-semibold"> ❓ 3. What happens when a refresh token expires?</p>
         Do NOT delete <SpanGrey>all tokens</SpanGrey> for that user.
         <ULdisc>
           <Li>
-            ✔ Delete or archive just that expired token{" "}
+            ✔ Delete or archive <SpanGrey>Only</SpanGrey> the expired token{" "}
             <ULdisc>
               Expired tokens have no value and cannot be used. <br />
               You may delete them with a scheduled job (cron) every X hours.
             </ULdisc>
           </Li>
           <Li>
-            ✔ Keep other valid tokens
+            ✔ Why Keep other valid tokens?
             <ULdisc>
-              A user may have multiple sessions (phone, laptop, tablet). <br />
-              You must not delete their other refresh tokens because one expired.
+              Because, A user may have multiple sessions (phone, laptop, tablet). <br />
+              You must <SpanGrey>NOT delete</SpanGrey> their other refresh tokens because one expired.
             </ULdisc>
           </Li>
         </ULdisc>
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> 🚫 When Do You Delete ALL Refresh Tokens?</p>
-        You only delete all refresh tokens when:
+        <p className="my-4 text-xl font-semibold"> 🚫 4. When Do You Delete ALL Refresh Tokens?</p>
+        NOTE : <SpanRed>never delete all tokens just because one expired</SpanRed> <br />
+        <p className="my-3">
+          You only <SpanGrey>delete all refresh tokens </SpanGrey> when:
+        </p>
         <ULdisc>
           <Li>
-            ✔ The user logs out from all devices
-            <ULdisc>(e.g., "Logout from all devices" button)</ULdisc>
+            ✔ The user <strong className="underline">logs out from all devices</strong> - (e.g., "Logout from all devices" button)
           </Li>
-          <Li>
-            ✔ An account is compromised
-            <ULdisc>(Security reason)</ULdisc>
-          </Li>
-          <Li>
-            ✔ Admin invalidates all sessions manually
-            <ULdisc>(Security reason)</ULdisc>
-          </Li>
-        </ULdisc>{" "}
-        Otherwise , never delete all tokens just because one expired.
+          <Li>✔ An account is compromised - (Security reason)</Li>
+          <Li>✔ Admin invalidates all sessions manually - (Security reason)</Li>
+        </ULdisc>
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> 🔍 What Happens During Refresh-Token Rotation?</p>
+        <p className="my-4 text-lg font-semibold"> 🔍 5. What Happens During Refresh-Token Rotation?</p>
+        <p>When I rotate refresh tokens:</p>
+        <ULdisc>
+          <Li>
+            The previous token becomes <SpanGrey>revoked = true</SpanGrey> , meaning
+          </Li>
+          <Li>
+            The new token becomes the <SpanGrey>active</SpanGrey> one
+          </Li>
+        </ULdisc>
         Example:
         <ULdisc>
-          <Li>RT1 → used once → rotated → becomes revoked</Li>
+          <Li>RT1 → used once → rotated → becomes revoked (inactive)</Li>
           <Li>RT2 → active</Li>
           <Li>RT2 used → rotated → RT3 active</Li>
         </ULdisc>{" "}
@@ -122,7 +98,31 @@ const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
       </section>
       <hr />
       <section className="my-8">
-        <p className="my-4 text-lg font-semibold"> 🧹 Cleanup Strategy (Best Practice)</p>
+        <p className="my-4 text-lg font-semibold">❗6. Why keep revoked tokens temporarily?</p>
+
+        <p>But you do NOT delete the revoked token immediately, because:</p>
+        <ULDecimal>
+          <Li>
+            <strong>Replay attack detection</strong> <br />
+            If a hacker steals RT1 and sends it after RT2 was already issued… <br />
+            If you deleted RT1, you won’t know someone used an old token.
+          </Li>
+          <Li>
+            <strong>Audit trail</strong> <br /> Knowing how many rotations, failures, or suspicious events occurred is valuable.
+          </Li>
+          <Li>
+            <strong>Debugging</strong> <br />
+            Helps track token misuse.
+          </Li>
+          <Li>
+            <strong>multiple sessions</strong> <br /> A user may have multiple sessions (phone, laptop, tablet). You must not delete their other
+            refresh tokens because one expired.
+          </Li>
+        </ULDecimal>
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-4 text-lg font-semibold"> 🧹 7. Cleanup Strategy (Best Practice)</p>
         <ULdisc>
           <Li>Scheduled cleanup job:</Li>
           <Li>This keeps the DB small.</Li>
