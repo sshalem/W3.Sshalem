@@ -4,8 +4,8 @@ DBeaver With Mysql On Linode Server  --> (SPRING)(ApplicationProperties)(DBeaver
 */
 import { MainChildArea } from "../../../../../components";
 
-const DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {
+const O4_DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}></MainChildArea>;
 };
 
-export default DBeaverMySqlOnLinode;
+export default O4_DBeaverMySqlOnLinode;

@@ -4,7 +4,7 @@ DBeaver git hub --> (SPRING)(ApplicationProperties)(DBeavergithub)
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
-const DBeaverGitHub = ({ anchor }: { anchor: string }) => {
+const O7_DBeaverGitHub = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <GitHub>
@@ -23,4 +23,4 @@ const DBeaverGitHub = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBeaverGitHub;
+export default O7_DBeaverGitHub;

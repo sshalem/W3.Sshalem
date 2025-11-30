@@ -1,22 +1,34 @@
 import { useEffect, useRef, useState } from "react";
-import DBeaverVersion from "./O1_DBeaverVersion";
-import DBeaverMySql from "./O2_DBeaverMySql";
-import DBeaverMySqlOnLinode from "./O3_DBeaverMySqlOnLinode";
-import DBeaverPostgresql from "./O4_DBeaverPostgresql";
-import DBeaverGitHub from "./O5_DBeaverGitHub";
+import O1_DBeaverVersion from "./O1_DBeaverVersion";
+import O2_DBeaverMySqlSingleDB from "./O2_DBeaverMySqlSingleDB";
+import O3_DBeaverMySqlAllDB from "./O3_DBeaverMySqlAllDB";
+import O4_DBeaverMySqlOnLinode from "./O4_DBeaverMySqlOnLinode";
+import O5_DBeaverPostgresqlSingleDB from "./O5_DBeaverPostgresqlSingleDB";
+import O6_DBeaverPostgresqlAllDB from "./O6_DBeaverPostgresqlAllDB";
+import O7_DBeaverGitHub from "./O7_DBeaverGitHub";
 import { ContentMenu, Loading } from "../../../../../components";
 
 // =============================================================================================================
 
-const dbeaver_version = "DBeaver Version";
-const dbeaver_mysql = "DBeaver With Mysql";
-const dbeaver_mysql_on_linode = "DBeaver With Mysql On Linode Server";
-const dbeaver_postgresql = "DBeaver With Postgresql";
-const dbeaver_git_hub = "DBeaver git hub";
+const o1_DBeaverVersion = "1. DBeaver Version";
+const o2_DBeaverMySqlSingleDB = "2. DBeaver Mysql";
+const o3_DBeaverMySqlAllDB = "3. DBeaver MySql All DB";
+const o4_DBeaverMySqlOnLinode = "4. DBeaver Mysql On Linode Server";
+const o5_DBeaverPostgresqlSingleDB = "5. DBeaver Postgresql single DB";
+const o6_DBeaverPostgresqlAllDB = "6. DBeaver Postgresql All DB";
+const o7_DBeaverGitHub = "7. DBeaver git hub";
 
 // =============================================================================================================
 
-const anchorList: string[] = [dbeaver_version, dbeaver_mysql, dbeaver_mysql_on_linode, dbeaver_postgresql, dbeaver_git_hub];
+const anchorList: string[] = [
+  o1_DBeaverVersion,
+  o2_DBeaverMySqlSingleDB,
+  o3_DBeaverMySqlAllDB,
+  o4_DBeaverMySqlOnLinode,
+  o5_DBeaverPostgresqlSingleDB,
+  o6_DBeaverPostgresqlAllDB,
+  o7_DBeaverGitHub,
+];
 
 // =============================================================================================================
 
@@ -71,11 +83,13 @@ const DBeaverMain = () => {
       />
       {/* End Contents */}
 
-      <DBeaverVersion anchor={dbeaver_version} />
-      <DBeaverMySql anchor={dbeaver_mysql} />
-      <DBeaverMySqlOnLinode anchor={dbeaver_mysql_on_linode} />
-      <DBeaverPostgresql anchor={dbeaver_postgresql} />
-      <DBeaverGitHub anchor={dbeaver_git_hub} />
+      <O1_DBeaverVersion anchor={o1_DBeaverVersion} />
+      <O2_DBeaverMySqlSingleDB anchor={o2_DBeaverMySqlSingleDB} />
+      <O3_DBeaverMySqlAllDB anchor={o3_DBeaverMySqlAllDB} />
+      <O4_DBeaverMySqlOnLinode anchor={o4_DBeaverMySqlOnLinode} />
+      <O5_DBeaverPostgresqlSingleDB anchor={o5_DBeaverPostgresqlSingleDB} />
+      <O6_DBeaverPostgresqlAllDB anchor={o6_DBeaverPostgresqlAllDB} />
+      <O7_DBeaverGitHub anchor={o7_DBeaverGitHub} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

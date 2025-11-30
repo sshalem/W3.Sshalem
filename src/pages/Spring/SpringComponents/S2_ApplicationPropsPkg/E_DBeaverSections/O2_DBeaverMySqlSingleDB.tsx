@@ -11,7 +11,7 @@ import dbeaver_mysql_3 from "../../../../../assets/dbeaver_mysql_3.jpg";
 import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import { IMG, MainChildArea } from "../../../../../components";
 
-const DBeaverMySql = ({ anchor }: { anchor: string }) => {
+const O2_DBeaverMySqlSingleDB = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <ul className="mx-8 list-disc">
@@ -52,4 +52,4 @@ const DBeaverMySql = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default DBeaverMySql;
+export default O2_DBeaverMySqlSingleDB;
