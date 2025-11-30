@@ -10,17 +10,17 @@ const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-4 text-xl font-semibold">🔥 1. BEST Practice: Create a new row for each rotation</p>
-        <p className="text-lg font-semibold">✔ Best approach:</p>
+        <p className="my-4 text-xl font-semibold">🔥 1. BEST Practice</p>
+        <p className="text-lg font-semibold">✔ Best approach : Create a new row for each rotation (Rotation means to create new Refresh Token)</p>
         <ULdisc>
+          <Li>
+            Store each token as <SpanGrey>a new row</SpanGrey>
+          </Li>
           <Li>
             Keep <SpanGrey>revoked</SpanGrey> boolean
           </Li>
           <Li>
             Add <SpanGrey>rotation</SpanGrey> integer for counting
-          </Li>
-          <Li>
-            Store each token as <SpanGrey>a new row</SpanGrey>
           </Li>
         </ULdisc>
         <IMG img_name={security_refresh_db_1}></IMG>
