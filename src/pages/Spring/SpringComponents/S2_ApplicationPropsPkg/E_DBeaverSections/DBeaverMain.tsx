@@ -11,11 +11,11 @@ import { ContentMenu, Loading } from "../../../../../components";
 // =============================================================================================================
 
 const o1_DBeaverVersion = "1. DBeaver Version";
-const o2_DBeaverMySqlSingleDB = "2. DBeaver Mysql";
-const o3_DBeaverMySqlAllDB = "3. DBeaver MySql All DB";
+const o2_DBeaverMySqlSingleDB = "2. DBeaver Mysql connect single DB";
+const o3_DBeaverMySqlAllDB = "3. DBeaver MySql connect All DB";
 const o4_DBeaverMySqlOnLinode = "4. DBeaver Mysql On Linode Server";
-const o5_DBeaverPostgresqlSingleDB = "5. DBeaver Postgresql single DB";
-const o6_DBeaverPostgresqlAllDB = "6. DBeaver Postgresql All DB";
+const o5_DBeaverPostgresqlSingleDB = "5. DBeaver Postgresql connect single DB";
+const o6_DBeaverPostgresqlAllDB = "6. DBeaver Postgresql connect All DB";
 const o7_DBeaverGitHub = "7. DBeaver git hub";
 
 // =============================================================================================================
