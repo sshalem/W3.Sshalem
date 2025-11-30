@@ -16,6 +16,3 @@ const O4_DBeaverMySqlOnLinode = ({ anchor }: { anchor: string }) => {
 };
 
 export default O4_DBeaverMySqlOnLinode;
-
-// gitLink={""}
-// description=}
