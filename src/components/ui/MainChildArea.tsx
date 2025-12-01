@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import ContentAnchor from "./ContentAnchor";
 import { useEffect } from "react";
 
 interface MainChildAreaProps {
@@ -27,7 +26,7 @@ const MainChildArea = ({ anchor, children }: MainChildAreaProps) => {
 
   return (
     <section className="my-10 mb-28 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+      <article className="mb-8 inline-block rounded-md bg-blue-600 px-2 py-2 font-semibold capitalize tracking-wider text-white">{anchor}</article>
       <article>{children}</article>
       <div className="mt-20">
         <hr />

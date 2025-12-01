@@ -6,7 +6,7 @@ import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../compon
 import security_refresh_db_1 from "../../../../../assets/security_refresh_db_1.jpg";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
-const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
+const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -133,7 +133,7 @@ const O1_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_IntroRefreshTokenInDBRotation;
+export default O0_IntroRefreshTokenInDBRotation;
 
 const cron = `@Scheduled(cron = "0 0 * * * *") // every hour
 public void cleanupExpiredTokens() {

@@ -1,6 +1,6 @@
 /*
-/spring/security/jwt-implementation#GitHubLink
-GitHub Link  --> (SPRING)(Security)(jwt-implementation)
+
+
 */
 import { Anchor, MainChildArea } from "../../../../../components";
 import Li from "../../../../../components/ui/Li";
@@ -15,8 +15,8 @@ const O0_GitHubLink = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨ &nbsp;
             <Anchor
-              description="Spring-Security refresh-token (stateles) "
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O3-jwt-refresh-token-stateless"
+              description="Spring-Security refresh-token in DB"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O4-jwt-refresh-token-DB"
             ></Anchor>
           </Li>
         </ULdisc>
