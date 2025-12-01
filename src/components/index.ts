@@ -4,7 +4,7 @@ export { default as Navbar } from "./Navbar";
 export { default as GridLayout } from "./ui/GridLayout";
 export { default as AboutMe } from "./home/AboutMe";
 export { default as MyProjects } from "./home/MyProjects";
-export { default as ContentAnchor } from "./ui/ContentAnchor";
+// export { default as ContentAnchor } from "./ui/ContentAnchor";
 export { default as ContentMenu } from "./ui/ContentMenu";
 export { default as CaretDown } from "./Caret/CaretDown";
 export { default as CaretUp } from "./Caret/CaretUp";

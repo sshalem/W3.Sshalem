@@ -2,13 +2,12 @@
 /spring/logging/LogUtil#jsonobject
 json object --> (SPRING)(Logging)(LogUtil)
 */
-import { ContentAnchor } from "../../../../../components";
+import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
+    <MainChildArea anchor={anchor}>
       <div className="mt-2">
         <SpanBlue>JSON</SpanBlue> - JavaScript Object Notation . JSON object are key/value pairs :
         <ul className="mx-8 list-disc">
@@ -38,7 +37,7 @@ const JsonObject = ({ anchor }: { anchor: string }) => {
 
       <div className="my-5">nested Json Object with Array</div>
       <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
-    </article>
+    </MainChildArea>
   );
 };
 

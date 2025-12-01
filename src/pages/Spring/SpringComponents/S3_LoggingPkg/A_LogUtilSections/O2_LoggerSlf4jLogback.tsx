@@ -2,14 +2,12 @@
 /spring/logging/LogUtil#basiclogging
 logger Slf4j Logback --> (SPRING)(Logging)(LogUtil)
 */
-import { ContentAnchor } from "../../../../../components";
+import { MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanBlue, SpanGreen, XmlHighlight } from "../../../../../components/Highlight";
 
 const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
   return (
-    <article className="mb-10 mt-5 scroll-mt-[1.5rem]" id={anchor.replace(/ /g, "")}>
-      <ContentAnchor anchor={anchor} />
-
+    <MainChildArea anchor={anchor}>
       <div>
         to display description in console <SpanGreen>with TimeStamp</SpanGreen> with I will use the <SpanBlue>SLF4J (Logback)</SpanBlue>. <br />
         <SpanBlue>Logback</SpanBlue> &nbsp; is part of spring boot so , There is no need to add any Dependency , as long as we have at least one
@@ -38,7 +36,7 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={slf4jCode} />
         </div>
       </div>
-    </article>
+    </MainChildArea>
   );
 };
 

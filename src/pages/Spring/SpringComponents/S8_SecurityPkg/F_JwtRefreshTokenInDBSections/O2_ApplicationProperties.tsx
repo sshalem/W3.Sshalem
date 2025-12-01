@@ -85,11 +85,11 @@ spring.devtools.restart.enabled=true
 
 spring.output.ansi.enabled=always
 
-jwt.signing.key=weferuogp8734thq3ncf3948u9\
-				p3cnj4fx0-3m8uf3t[83ucnygh\
-				fenhadf8ayh9ep9r8fghbsakfo\
-				jinfcoer83ucnyghfenhadf8ay\
-				h9ep9r8fghbsakfojinfcoer48\
-				u9p3cnj4fx0-3m8uf3t[83ucny\
+jwt.signing.key=weferuogp8734thq3ncf3948u9\\
+				p3cnj4fx0-3m8uf3t[83ucnygh\\
+				fenhadf8ayh9ep9r8fghbsakfo\\
+				jinfcoer83ucnyghfenhadf8ay\\
+				h9ep9r8fghbsakfojinfcoer48\\
+				u9p3cnj4fx0-3m8uf3t[83ucny\\
 				ghfenhadf8ayh9ep9r8vfergec
 `;
