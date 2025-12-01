@@ -1,6 +1,6 @@
 /*
-/spring/application-properties/dbeaver#DBeaverWithMysql
-DBeaver With Mysql --> (SPRING)(ApplicationProperties)(DBeaverMySql)
+
+
 */
 
 import { FaDiamond } from "react-icons/fa6";

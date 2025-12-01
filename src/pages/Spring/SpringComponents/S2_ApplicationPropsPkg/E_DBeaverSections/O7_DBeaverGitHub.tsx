@@ -1,6 +1,6 @@
 /*
-/spring/application-properties/dbeaver#DBeavergithub
-DBeaver git hub --> (SPRING)(ApplicationProperties)(DBeavergithub)
+ 
+
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 

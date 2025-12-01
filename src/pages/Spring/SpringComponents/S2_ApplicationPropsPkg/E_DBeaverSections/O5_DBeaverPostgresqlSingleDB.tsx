@@ -1,6 +1,6 @@
 /*
-/spring/application-properties/dbeaver#DBeaverWithPostgresql
-DBeaver With Postgresql  --> (SPRING)(ApplicationProperties)(DBeaverWithPostgresql)
+
+
 */
 import { FaDiamond } from "react-icons/fa6";
 import dbeaver_postgres_1 from "../../../../../assets/dbeaver_postgres_1.jpg";

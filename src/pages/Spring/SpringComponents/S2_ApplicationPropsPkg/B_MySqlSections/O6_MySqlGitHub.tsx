@@ -1,6 +1,6 @@
 /*
-/spring/application-properties/mysql#6.Mysqlgithub
-Mysql git hub --> (SPRING)(ApplicationProperties)(MySql)
+
+
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 
@@ -9,14 +9,8 @@ const O6_MySqlGitHub = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <GitHub>
         <GitHubLiAnchor
-          gitLink={
-            "https://github.com/sshalem/Spring-Boot/blob/main/01-Application-Properties-Logging/05_PostgreSql/4_Connect_Postgres_with_DBeaver.md"
-          }
-          description={"Git - Connect Postgres with DBeaver"}
-        />
-        <GitHubLiAnchor
-          gitLink={"https://github.com/sshalem/DevOps/blob/main/Deploy_to_Tomcat/01_Create_Linode_Linux_Server.md#6_3_remotely_connect_with_dbeaver"}
-          description={"Git - Connect dbeaver to MySql on linux server"}
+          gitLink={"https://github.com/sshalem/Spring-Boot/blob/main/01-Application-Properties-Logging/03_MySql/MySql.application.properties"}
+          description={"Git - MySql"}
         />
       </GitHub>
     </MainChildArea>
