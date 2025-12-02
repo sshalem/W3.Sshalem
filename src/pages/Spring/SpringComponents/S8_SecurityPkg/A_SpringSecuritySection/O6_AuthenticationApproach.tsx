@@ -1,6 +1,6 @@
 /*
-/spring/security/spring-security#6.SessionvsJWTAuthentication
-Session vs JWT Authentication --> (SPRING)(Security)(Spring Security)
+
+
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import security_6 from "../../../../../assets/security_6.jpg";

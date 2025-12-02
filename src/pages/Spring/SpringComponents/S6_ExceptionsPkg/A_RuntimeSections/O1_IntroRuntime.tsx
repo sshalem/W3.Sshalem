@@ -1,6 +1,6 @@
 /*
 /spring/exception-handling/runtime#1.IntroRuntimeException
-Intro RuntimeException --> (SPRING)(Exception Handling)(runtime)
+RuntimeException --> (SPRING)(Exception Handling)(runtime)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanRed } from "../../../../../components/Highlight";

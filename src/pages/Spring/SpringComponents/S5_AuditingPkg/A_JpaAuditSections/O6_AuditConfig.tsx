@@ -1,6 +1,6 @@
 /*
-/spring/audit/jpa-audit#6.AuditConfigclass
-AuditConfig class --> (SPRING)(Auditing)(Jpa Audit)
+
+
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";

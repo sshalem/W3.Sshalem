@@ -1,6 +1,6 @@
 /*
-/spring/rest/sse#2.SSEMultipleData
-SSE Multiple Data --> (SPRING)(rest)(SSE)
+
+
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";

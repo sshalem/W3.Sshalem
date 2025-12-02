@@ -1,6 +1,6 @@
 /*
-/spring/exception-handling/custom-error-msg#3.Test
-Test --> (SPRING)(Exception Handling)(custom err msg)
+
+
 */
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";

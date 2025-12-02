@@ -1,6 +1,6 @@
 /*
-/spring/exception-handling/timestamp-error-config#3.CustomErrorAttributes
-Custom ErrorAttributes --> (SPRING)(Exception Handling)(timestamp error config)
+
+
 */
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";

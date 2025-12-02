@@ -1,6 +1,6 @@
 /*
 /spring/rest/sse#1.SSEIntro
-SSE Intro --> (SPRING)(rest)(SSE)
+SSE ServerSendEventIntro --> (SPRING)(rest)(SSE)
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";

@@ -1,6 +1,6 @@
 /*
 /spring/security/jwt#1.IntroJwt
-Intro Jwt --> (SPRING)(Security)(jwt)
+Jwt Intro --> (SPRING)(Security)(jwt)
 */
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";

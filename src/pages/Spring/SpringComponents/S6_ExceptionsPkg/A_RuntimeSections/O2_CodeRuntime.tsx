@@ -1,6 +1,6 @@
 /*
-/spring/exception-handling/runtime#2.CodeRuntimeException
-Code RuntimeException --> (SPRING)(Exception Handling)(runtime)
+
+
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";

@@ -1,6 +1,6 @@
 /*
-/spring/rest/cors#2.CorsCodeSnippets
-Cors Code Snippets --> (SPRING)(rest)(rest-api)
+
+
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";

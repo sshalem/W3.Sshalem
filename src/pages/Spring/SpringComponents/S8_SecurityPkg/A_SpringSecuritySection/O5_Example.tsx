@@ -1,6 +1,6 @@
 /*
-/spring/security/spring-security#5.LogFiltersExample
-Log Filters Example --> (SPRING)(Security)(Spring Security)
+
+
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, JavaHighlight } from "../../../../../components/Highlight";

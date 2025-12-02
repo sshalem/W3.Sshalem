@@ -1,6 +1,6 @@
 /*
-/spring/audit/jpa-audit#4.ImplementAuditableonentityclass
-Implement Auditable on entity class --> (SPRING)(Auditing)(Jpa Audit)
+
+
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";
