@@ -4,6 +4,17 @@ import O0_IntroRefreshTokenInDBRotation from "./O0_IntroRefreshTokenInDBRotation
 import O0_GitHubLink from "./O0_GitHubLink";
 import O1_POM from "./O1_POM";
 import O2_ApplicationProperties from "./O2_ApplicationProperties";
+import O3_PackageLayout from "./O3_PackageLayout";
+import O4_Entity from "./O4_Entity";
+import O5_Repository from "./O5_Repository";
+import O6_Service from "./O6_Service";
+import O7_JwtUserDetails from "./O7_JwtUserDetails";
+import O8_JwtUserDetailsService from "./O8_JwtUserDetailsService";
+import O9_JwtTokenUtil from "./O9_JwtTokenUtil";
+import O10_JwtAuthFilter from "./O10_JwtAuthFilter";
+import O11_JwtAuthenticationEntryPoint from "./O11_JwtAuthenticationEntryPoint";
+import O12_SecurityConfig from "./O12_SecurityConfig";
+import O13_SecurityConstants from "./O13_SecurityConstants";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -23,10 +34,11 @@ const o9_JwtTokenUtil = "9. JwtTokenUtil";
 const o10_JwtAuthFilter = "10. JwtAuthenticationFilter";
 const o11_JwtAuthenticationEntryPoint = "11. JwtAuthenticationEntryPoint";
 const o12_SecurityConfig = "12. SecurityConfig";
-const o13_Exceptions = "13. Exceptions";
-const o14_Model = "14. Model";
-const o15_Controller = "15. Controller";
-const o16_Test = "16. Test";
+const o13_SecurityConstants = "13. SecurityConstants";
+const o14_Exceptions = "14. Exceptions";
+const o15_Model = "15. Model";
+const o16_Controller = "16. Controller";
+const o17_Test = "17. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -47,10 +59,11 @@ const anchorList: string[] = [
   o10_JwtAuthFilter,
   o11_JwtAuthenticationEntryPoint,
   o12_SecurityConfig,
-  o13_Exceptions,
-  o14_Model,
-  o15_Controller,
-  o16_Test,
+  o13_SecurityConstants,
+  o14_Exceptions,
+  o15_Model,
+  o16_Controller,
+  o17_Test,
 ];
 
 // ============================================
@@ -108,6 +121,17 @@ const JwtRefreshTokenInDBMain = () => {
       <O0_IntroRefreshTokenInDBRotation anchor={o0_IntroRefreshTokenInDBRotation} />
       <O1_POM anchor={o1_POM} />
       <O2_ApplicationProperties anchor={o2_ApplicationProperties} />
+      <O3_PackageLayout anchor={o3_PackageLayout} />
+      <O4_Entity anchor={o4_Entity} />
+      <O5_Repository anchor={o5_Repository} />
+      <O6_Service anchor={o6_Service} />
+      <O7_JwtUserDetails anchor={o7_JwtUserDetails} />
+      <O8_JwtUserDetailsService anchor={o8_JwtUserDetailsService} />
+      <O9_JwtTokenUtil anchor={o9_JwtTokenUtil} />
+      <O10_JwtAuthFilter anchor={o10_JwtAuthFilter} />
+      <O11_JwtAuthenticationEntryPoint anchor={o11_JwtAuthenticationEntryPoint} />
+      <O12_SecurityConfig anchor={o12_SecurityConfig} />
+      <O13_SecurityConstants anchor={o13_SecurityConstants} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

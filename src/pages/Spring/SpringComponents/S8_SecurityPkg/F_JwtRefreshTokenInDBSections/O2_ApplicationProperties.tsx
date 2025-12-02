@@ -18,8 +18,8 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨{" "}
             <Anchor
-              description="Spring boot v3.5.6 - resources/application.Properties"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
+              description="O4-jwt-refresh-token-DB - resources/application.Properties"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O4-jwt-refresh-token-DB/src/main/resources"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
@@ -44,8 +44,8 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
             <Li>
               🔑 GitHub link ⇨{" "}
               <Anchor
-                description="08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
-                href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/resources"
+                description="O4-jwt-refresh-token-DB - resources/application.Properties"
+                href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O4-jwt-refresh-token-DB/src/main/resources"
               ></Anchor>{" "}
             </Li>
           </ULdisc>
