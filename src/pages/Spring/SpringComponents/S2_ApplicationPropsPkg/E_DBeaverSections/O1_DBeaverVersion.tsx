@@ -1,6 +1,6 @@
 /*
 /spring/application-properties/dbeaver#DBeaverVersion
-DBeaver Version --> (SPRING)(ApplicationProperties)(DBeaverVersion)
+DBeaver --> (SPRING)(ApplicationProperties)(DBeaverVersion)
 */
 import dbeaver_version from "../../../../../assets/dbeaver_version.jpg";
 import { IMG, MainChildArea } from "../../../../../components";
