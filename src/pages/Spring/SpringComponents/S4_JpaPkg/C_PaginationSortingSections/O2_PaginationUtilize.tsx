@@ -1,6 +1,6 @@
 /*
-/spring/jpa/pagination-sorting#2.Paginationutilize
-Pagination utilize --> (SPRING)(JPA)(pagination sort)
+
+
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";

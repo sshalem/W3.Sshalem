@@ -1,6 +1,6 @@
 /*
-/spring/jpa/jpql#3.QuerySingleEntity/Table
-Query Single Entity/Table --> (SPRING)(JPA)(JPQL)
+
+
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanSky, SpanTeal } from "../../../../../components/Highlight";

@@ -1,6 +1,6 @@
 /*
 /spring/jpa/pagination-sorting#1.IntroPagniation
-Intro Pagniation --> (SPRING)(JPA)(pagination sort)
+Pagniation --> (SPRING)(JPA)(pagination sort)
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed, SpanTeal } from "../../../../../components/Highlight";

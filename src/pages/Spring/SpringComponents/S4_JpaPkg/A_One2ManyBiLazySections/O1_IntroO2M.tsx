@@ -1,6 +1,6 @@
 /*
 /spring/jpa/one2many-bi-lazy#1.Intro
-Intro --> (SPRING)(JPA)(OneToMany (Bi Lazy))
+OneToMany --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";

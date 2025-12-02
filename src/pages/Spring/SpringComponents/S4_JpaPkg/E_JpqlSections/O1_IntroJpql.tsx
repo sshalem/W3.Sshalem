@@ -1,6 +1,6 @@
 /*
 /spring/jpa/jpql#1.Intro
-Intro --> (SPRING)(JPA)(JPQL)
+JPQL --> (SPRING)(JPA)(JPQL)
 */
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";

@@ -1,6 +1,6 @@
 /*
-/spring/jpa/entity-validation#5.ExampleDtoBeanValidation
-Example Dto Bean Validation --> (SPRING)(JPA)(entity validation)
+
+
 */
 import { MainChildArea } from "../../../../../components";
 import { JavaHighlight } from "../../../../../components/Highlight";

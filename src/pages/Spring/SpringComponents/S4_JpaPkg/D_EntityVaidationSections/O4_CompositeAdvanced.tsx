@@ -1,6 +1,6 @@
 /*
-/spring/jpa/entity-validation#4.CompositeAdvanced
-Composite Advanced --> (SPRING)(JPA)(entity validation)
+
+
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanTeal } from "../../../../../components/Highlight";

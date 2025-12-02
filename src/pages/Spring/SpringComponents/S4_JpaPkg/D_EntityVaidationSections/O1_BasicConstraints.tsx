@@ -1,6 +1,6 @@
 /*
 /spring/jpa/entity-validation#1.BasicConstraints
-Basic Constraints --> (SPRING)(JPA)(entity validation)
+Constraints --> (SPRING)(JPA)(entity validation)
 */
 import { MainChildArea } from "../../../../../components";
 

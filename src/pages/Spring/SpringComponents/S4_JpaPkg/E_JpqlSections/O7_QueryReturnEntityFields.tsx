@@ -1,6 +1,6 @@
 /*
-/spring/jpa/jpql#7.ReturnSpecificEntityFields
-Return Specific Entity Fields --> (SPRING)(JPA)(JPQL)
+
+
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";

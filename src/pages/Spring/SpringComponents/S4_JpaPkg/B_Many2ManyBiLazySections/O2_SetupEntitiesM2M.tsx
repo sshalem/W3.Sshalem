@@ -1,6 +1,6 @@
 /*
-/spring/jpa/many2many-bi-lazy#2.SetupEntities
-Setup Entities --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
+
+
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";

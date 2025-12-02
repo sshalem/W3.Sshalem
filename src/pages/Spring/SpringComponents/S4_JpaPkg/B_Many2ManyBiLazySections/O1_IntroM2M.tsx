@@ -1,6 +1,6 @@
 /*
 /spring/jpa/many2many-bi-lazy#1.IntroMany2Many
-Intro Many2Many --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
+Many2Many --> (SPRING)(JPA)(ManyToMany (Bi Lazy))
 */
 import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";

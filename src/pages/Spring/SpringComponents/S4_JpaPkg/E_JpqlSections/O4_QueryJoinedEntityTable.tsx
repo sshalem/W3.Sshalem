@@ -1,6 +1,6 @@
 /*
-/spring/jpa/jpql#4.QueryJoinedEntity/Table
-Query Joined Entity/Table --> (SPRING)(JPA)(JPQL)
+
+
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanSky, SpanTeal } from "../../../../../components/Highlight";

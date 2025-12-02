@@ -1,6 +1,6 @@
 /*
-/spring/jpa/pagination-sorting#3.PagablecountQuery
-Pagable countQuery --> (SPRING)(JPA)(pagination sort)
+
+
 */
 import { Anchor, Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { JavaHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
