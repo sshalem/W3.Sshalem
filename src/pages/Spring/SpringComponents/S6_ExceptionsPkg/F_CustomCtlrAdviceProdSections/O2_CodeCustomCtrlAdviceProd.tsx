@@ -82,8 +82,8 @@ public class AppExceptionsHandler {
     public ResponseEntity<Object> handleUserServiceException(ResourceNotFoundException ex, WebRequest request) {
         Map<String, Object> response = new HashMap<>();
         response.put("timestamp", getCurrentTimestamp());
-        response.put("statusCode", HttpStatus.NOT_FOUND.value());
-        response.put("error", HttpStatus.valueOf(HttpStatus.NOT_FOUND.value()).getReasonPhrase());
+		    response.put("statusCode", HttpStatus.CONFLICT.value());
+		    response.put("error", HttpStatus.valueOf(HttpStatus.CONFLICT.value()).getReasonPhrase());
         response.put("exception", ResourceNotFoundException.class.getName());
         response.put("message", ex.getMessage());
         response.put("uriDescription", request.getDescription(false));

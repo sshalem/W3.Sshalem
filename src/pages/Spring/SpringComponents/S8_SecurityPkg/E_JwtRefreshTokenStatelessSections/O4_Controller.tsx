@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea, ULDecimal } from "../../../../../components";
-import { JavaHighlight, SpanCyan, SpanGreen } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanCyan, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
@@ -36,7 +36,7 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
           <Li>Access Token: Short-lived JWT for API calls.</Li>
           <Li>Refresh Token: Long-lived token stored securely.</Li>
           <Li>
-            In this implementation Refresh token is <SpanGreen>stateless</SpanGreen>, meaning its not saved in DB.
+            In this implementation Refresh token is <SpanGreen>stateless</SpanGreen>, meaning its <SpanRed>not saved in DB</SpanRed>.
           </Li>
           <Li>
             Flow:
@@ -63,7 +63,10 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
           <Li>
             <strong>Question</strong> : Why I did not implement <SpanGrey>Logout</SpanGrey> method in this project?
           </Li>
-          <Li>When I use pure stateless JWTs (JWT for access token + JWT for refresh tokens) , they are stored in DB.</Li>
+          <Li>
+            When I use <SpanGrey>pure stateless JWTs</SpanGrey> (JWT for access token + JWT for refresh tokens) , they are{" "}
+            <SpanRed>NOT stored in DB</SpanRed>.
+          </Li>
           <Li>
             Thus , FrontEnd is responsible to delete both Tokens <SpanGrey>access_token</SpanGrey> and <SpanGrey>refresh_token</SpanGrey>
           </Li>
@@ -80,14 +83,16 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
             <SpanCyan>Therefore , no need to implement Logout when I use pure stateless</SpanCyan>
           </Li>
           <Li>
-            The most secure way is (Refresh token rotation + DB) (see &nbsp;
+            The most secure way is (Refresh token rotation + DB )
+            <br />
+            <SpanGrey>RefreshToken </SpanGrey> stored in DB +<SpanGrey>RefreshToken</SpanGrey> send as HttpOnly cookie (see &nbsp;
             <Link
-              to={"/spring/security/jwt-refresh-token-v3-5-7"}
+              to={"/spring/security/jwt-refresh-token-httpOnly"}
               className="rounded-md bg-sky-200 p-[0.15rem] tracking-wide text-blue-700 hover:text-blue-700 hover:underline"
             >
-              jwt-refresh-token-v3-5-7
+              jwt-refresh-token-httpOnly
             </Link>
-            ) . <SpanGrey>RefreshToken stored DB</SpanGrey>.
+            ) .
           </Li>
         </ULdisc>
       </section>

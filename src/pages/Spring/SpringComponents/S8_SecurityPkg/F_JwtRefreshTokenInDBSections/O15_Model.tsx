@@ -15,8 +15,8 @@ const O15_Model = ({ anchor }: { anchor: string }) => {
           <Li>
             🔑 GitHub project link ⇨ &nbsp;
             <Anchor
-              description="Spring boot  v3.5.6 - model"
-              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O2-jwt-authorities-v3-5-6/src/main/java/com/O2/model"
+              description="O4-jwt-refresh-token-DB - model"
+              href="https://github.com/sshalem/Spring-Boot/tree/main/08-Spring-Security/03_JWT/O4-jwt-refresh-token-DB/src/main/java/com/backend/model"
             ></Anchor>{" "}
           </Li>
         </ULdisc>
