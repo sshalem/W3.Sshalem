@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanCyan } from "../../../../../components/Highlight";
+import { JavaHighlight } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
@@ -31,36 +31,29 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
       <hr />
 
       <section className="my-8">
-        <p className="text-xl font-semibold">🔥 Logout Implemented</p>
+        <p className="text-xl font-semibold">🧩 Logout Implemented</p>
+
         <ULdisc>
-          <Li>
-            <strong>Question</strong> : Why I did not implement <SpanGrey>Logout</SpanGrey> method in this project?
-          </Li>
-          <Li>When I use pure stateless JWTs (JWT for access token + JWT for refresh tokens) , they are stored in DB.</Li>
-          <Li>
-            Thus , FrontEnd is responsible to delete both Tokens <SpanGrey>access_token</SpanGrey> and <SpanGrey>refresh_token</SpanGrey>
-          </Li>
-          <Li>
-            On <SpanGrey>Logout</SpanGrey>
-            <ULdisc>
-              <Li>FrontEnd deletes accessToken</Li>
-              <Li>FrontEnd deletes refreshToken</Li>
-              <Li>Server does nothing, Since tokens are stateless, server cannot invalidate them anyway.</Li>
-            </ULdisc>
-          </Li>
           <Li>In this implementation I save the Refresh_Token in DB </Li>
           <Li>
-            <SpanCyan>Therefore , no need to implement Logout when I use pure stateless</SpanCyan>
+            Thus, On <SpanGrey>Logout</SpanGrey>
+            <ULdisc>
+              <Li>FrontEnd deletes accessToken + refreshToken</Li>
+              <Li>Backend Also deletes RefreshToken from DB.</Li>
+            </ULdisc>
           </Li>
+
           <Li>
-            The most secure way is (Refresh token rotation + DB) (see &nbsp;
+            The most secure way is (Refresh token rotation + DB )
+            <br />
+            <SpanGrey>RefreshToken </SpanGrey> stored in DB +<SpanGrey>RefreshToken</SpanGrey> send as HttpOnly cookie (see &nbsp;
             <Link
-              to={"/spring/security/jwt-refresh-token-v3-5-7"}
+              to={"/spring/security/jwt-refresh-token-httpOnly"}
               className="rounded-md bg-sky-200 p-[0.15rem] tracking-wide text-blue-700 hover:text-blue-700 hover:underline"
             >
-              jwt-refresh-token-v3-5-7
+              jwt-refresh-token-httpOnly
             </Link>
-            ) . <SpanGrey>RefreshToken stored DB</SpanGrey>.
+            ) .
           </Li>
         </ULdisc>
       </section>
@@ -85,7 +78,7 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>Controller Advice</SpanGrey> code
+          🔑 <SpanGrey>JWT Authentication Controller </SpanGrey> code
         </p>
         {renderAuthController}
       </section>
