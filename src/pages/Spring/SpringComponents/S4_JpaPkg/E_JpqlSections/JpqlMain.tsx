@@ -7,6 +7,7 @@ import O4_QueryJoinedEntityTable from "./O4_QueryJoinedEntityTable";
 import O5_QueryJoinFetchDistinct from "./O5_QueryJoinFetchDistinct";
 import O6_QueryDates from "./O6_QueryDates";
 import O7_QueryReturnEntityFields from "./O7_QueryReturnEntityFields";
+import O8_DeleteQuery from "./O8_DeleteQuery";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -19,6 +20,7 @@ const o4_QueryJoinedEntityTable = "4. Query Joined Entity/Table";
 const o5_QueryJoinFetchDistinct = "5. JOIN FETCH (Distinct)";
 const o6_QueryDates = "6. Query Dates";
 const o7_QueryReturnEntityFields = "7. Return Specific Entity Fields";
+const o8_DeleteQuery = "8. Delete Query";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -32,6 +34,7 @@ const anchorList: string[] = [
   o5_QueryJoinFetchDistinct,
   o6_QueryDates,
   o7_QueryReturnEntityFields,
+  o8_DeleteQuery,
 ];
 
 // ============================================
@@ -93,6 +96,7 @@ const JpqlMain = () => {
       <O5_QueryJoinFetchDistinct anchor={o5_QueryJoinFetchDistinct}></O5_QueryJoinFetchDistinct>
       <O6_QueryDates anchor={o6_QueryDates}></O6_QueryDates>
       <O7_QueryReturnEntityFields anchor={o7_QueryReturnEntityFields}></O7_QueryReturnEntityFields>
+      <O8_DeleteQuery anchor={o8_DeleteQuery} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
