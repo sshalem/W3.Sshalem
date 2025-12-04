@@ -4,6 +4,7 @@
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
+import TableTwoColCompareTransactionException from "../../../../../components/Tables/TableTwoColCompareTransactionException";
 
 const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,6 +22,11 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
             Behavior of <SpanGrey>checked exceptions</SpanGrey> vs <SpanGrey>runtime exceptions</SpanGrey> in Spring transactions
           </Li>
         </ULdisc>
+      </section>
+      <hr />
+      <section className="my-8">
+        <p className="my-6 text-xl font-semibold">🚦 What happens if an exception occurs inside a Transaction?</p>
+        <TableTwoColCompareTransactionException></TableTwoColCompareTransactionException>
       </section>
     </MainChildArea>
   );
