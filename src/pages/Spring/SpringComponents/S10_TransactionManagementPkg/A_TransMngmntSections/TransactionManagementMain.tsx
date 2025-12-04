@@ -6,6 +6,9 @@ import O4_HibernateSession from "./O4_HibernateSession";
 import O1_IntroTxMngmt from "./O1_IntroTxMngmt";
 import O5_TransactionMngmnt from "./O5_TransactionMngmnt";
 import O6_WhatIsTransaction from "./O6_WhatIsTransaction";
+import O7_TransactionalRepositoryMethods from "./O7_TransactionalRepositoryMethods";
+import O8_AtomicOperations from "./O8_AtomicOperations";
+import O9_TransactionalWithException from "./O9_TransactionalWithException";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -17,12 +20,25 @@ const o3_SaveFlushCommit = "3. Save, Flush, Commit";
 const o4_HibernateSession = "4. Hibernate Session";
 const o5_TransactionMngmnt = "5. Transaction Management";
 const o6_WhatIsTransaction = "6. What is Transaction (ACID)";
+const o7_TransactionalRepositoryMethods = "7. Transactional Repository Methods";
+const o8_AtomicOperations = "8. Atomic Operations";
+const o9_TransactionalWithException = "9. Exception thrown in @Transactional";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroTxMngmt, o2_InMemoryVsDB, o3_SaveFlushCommit, o4_HibernateSession, o5_TransactionMngmnt, o6_WhatIsTransaction];
+const anchorList: string[] = [
+  o1_IntroTxMngmt,
+  o2_InMemoryVsDB,
+  o3_SaveFlushCommit,
+  o4_HibernateSession,
+  o5_TransactionMngmnt,
+  o6_WhatIsTransaction,
+  o7_TransactionalRepositoryMethods,
+  o8_AtomicOperations,
+  o9_TransactionalWithException,
+];
 
 // ============================================
 // ============================================
@@ -81,6 +97,9 @@ const TransactionManagementMain = () => {
       <O4_HibernateSession anchor={o4_HibernateSession}></O4_HibernateSession>
       <O5_TransactionMngmnt anchor={o5_TransactionMngmnt}></O5_TransactionMngmnt>
       <O6_WhatIsTransaction anchor={o6_WhatIsTransaction}></O6_WhatIsTransaction>
+      <O7_TransactionalRepositoryMethods anchor={o7_TransactionalRepositoryMethods} />
+      <O8_AtomicOperations anchor={o8_AtomicOperations}></O8_AtomicOperations>
+      <O9_TransactionalWithException anchor={o9_TransactionalWithException}></O9_TransactionalWithException>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
