@@ -8,11 +8,13 @@ import O5_QueryJoinFetchDistinct from "./O5_QueryJoinFetchDistinct";
 import O6_QueryDates from "./O6_QueryDates";
 import O7_QueryReturnEntityFields from "./O7_QueryReturnEntityFields";
 import O8_DeleteQuery from "./O8_DeleteQuery";
+import O0_SpringDataRepositoryMethods from "./O0_SpringDataRepositoryMethods";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
+const o0_SpringDataRepositoryMethods = `Spring Data Repository M ethods`;
 const o1_IntroJpql = "1. Intro";
 const o2_JpqlNameVsPositionParam = "2. Name Params Vs Position Param";
 const o3_QuerySingleEntityTable = "3. Query Single Entity/Table";
@@ -27,6 +29,7 @@ const o8_DeleteQuery = "8. Delete Query";
 // ===========================================
 
 const anchorList: string[] = [
+  o0_SpringDataRepositoryMethods,
   o1_IntroJpql,
   o2_JpqlNameVsPositionParam,
   o3_QuerySingleEntityTable,
@@ -89,6 +92,7 @@ const JpqlMain = () => {
       />
       {/* End Contents */}
 
+      <O0_SpringDataRepositoryMethods anchor={o0_SpringDataRepositoryMethods}></O0_SpringDataRepositoryMethods>
       <O1_IntroJpql anchor={o1_IntroJpql}></O1_IntroJpql>
       <O2_JpqlNameVsPositionParam anchor={o2_JpqlNameVsPositionParam}></O2_JpqlNameVsPositionParam>
       <O3_QuerySingleEntityTable anchor={o3_QuerySingleEntityTable}></O3_QuerySingleEntityTable>

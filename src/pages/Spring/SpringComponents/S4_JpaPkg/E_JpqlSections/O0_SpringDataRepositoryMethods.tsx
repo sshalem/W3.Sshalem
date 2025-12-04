@@ -6,6 +6,12 @@ const O0_SpringDataRepositoryMethods = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8">
+          If you want, I can also show you:
+          <ULdisc>
+            <Li>Why this sometimes fails due to self-invocation (VERY important)</Li>
+            <Li>How to test commit behavior correctly</Li>
+            <Li>The logging config to actually see transaction boundaries</Li>
+          </ULdisc>
           <p className="text-lg font-semibold">🧩 1. Delete - using Data Repository methods</p>
         </article>
         In this example I delete : <br />
