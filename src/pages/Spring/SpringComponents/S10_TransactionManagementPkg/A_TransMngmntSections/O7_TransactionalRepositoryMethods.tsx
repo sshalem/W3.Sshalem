@@ -38,11 +38,35 @@ const O7_TransactionalRepositoryMethods = ({ anchor }: { anchor: string }) => {
         </div>
       </section>
       <hr />
+
+      <section className="my-8">
+        <p className="my-6 text-xl font-semibold">✔️ What counts as a “Spring Data repository method”?</p>
+        <ULdisc>
+          <Li>
+            Methods inherited from <SpanGrey>CrudRepository</SpanGrey>, <SpanGrey>JpaRepository</SpanGrey> → <SpanGrey>findAll()</SpanGrey>,
+            <SpanGrey>findById()</SpanGrey>,<SpanGrey>save()</SpanGrey>, …
+          </Li>
+          <Li>
+            Custom <strong>derived query methods</strong> based on naming conventions → <SpanGrey>findByEmail(String email)</SpanGrey>,{" "}
+            <SpanGrey>findByNameAndAge(String name, int age)</SpanGrey>, <SpanGrey>existsByEmail(String email)</SpanGrey>
+          </Li>
+          <Li>
+            Custom <strong>query methods using @Query</strong> → @Query("SELECT ...")
+          </Li>
+        </ULdisc>
+      </section>
+
+      <hr />
+
       <section className="my-8">
         <p className="my-6 text-xl font-semibold">🔑 Why This Matters for Transactions</p>
         <article>
           <div className="mt-4">
             <ULdisc>
+              <Li>
+                All of these methods participate in Spring Data’s transaction and persistence behavior (<strong>flush, commit, rollback</strong> ),
+                unless you override it with your own <SpanGrey>@Transactional</SpanGrey> rules.
+              </Li>
               <Li>
                 Since <SpanGrey>Spring Data repository methods</SpanGrey> are already <SpanGreen>Transactional</SpanGreen> in many cases
               </Li>

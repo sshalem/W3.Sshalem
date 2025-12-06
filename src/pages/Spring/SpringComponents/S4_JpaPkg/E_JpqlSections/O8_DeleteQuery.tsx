@@ -31,8 +31,10 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
           <Li>Row deleted from DB</Li>
           <Li>
             <SpanRed>Why Row deleted from DB?</SpanRed>
+            <ULdisc>
+              <Li>Because , It's a Data Repository method</Li>
+            </ULdisc>
           </Li>
-          <Li>Because , Data Repository methods</Li>
         </ULdisc>
         <JavaHighlight javaCode={code_1}></JavaHighlight>
       </section>

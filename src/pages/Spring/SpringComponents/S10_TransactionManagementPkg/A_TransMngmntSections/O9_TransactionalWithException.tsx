@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import TableTwoColCompareTransactionException from "../../../../../components/Tables/TableTwoColCompareTransactionException";
 
 const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
@@ -55,7 +55,7 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
           <JavaHighlight javaCode={rollback_default}></JavaHighlight>
         </article>
         <article>
-          <div className="my-8 text-2xl font-semibold"> ❌ Example — Commit even if failure happens</div>
+          <div className="my-8 text-2xl font-semibold"> ✔ Example — Commit even if failure happens</div>
           <ULdisc>
             <Li>Outcome : ✔ Save is committed (NOT rolled back)</Li>
             <Li>
@@ -66,12 +66,16 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
         </article>
         <article>
           <div className="my-8 text-2xl font-semibold"> 🎯 How to control rollback behavior manually</div>
-          <p>Roll back on a checked exception:</p>
+          <p>
+            <strong>Rollback</strong> on a <SpanGrey>Checked Exceptions</SpanGrey>:
+          </p>
           <ULdisc>
             <Li>→ Rollback happens</Li>
           </ULdisc>
           <JavaHighlight javaCode={checked_exception}></JavaHighlight>
-          <p>Prevent rollback for runtime exceptions:</p>
+          <p>
+            <SpanRed>Prevent</SpanRed> <strong>rollback</strong> for <SpanGrey>Runtime Exceptions</SpanGrey>:
+          </p>
           <ULdisc>
             <Li>→ Commit still happens</Li>
           </ULdisc>
