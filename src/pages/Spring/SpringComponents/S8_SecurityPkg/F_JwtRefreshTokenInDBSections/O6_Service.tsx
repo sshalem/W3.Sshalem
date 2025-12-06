@@ -393,9 +393,7 @@ public class RoleServiceImpl implements RoleService {
 
 }`;
 
-const refresh_token_service_impl = `package com.backend.service;
-
-import java.time.Instant;
+const refresh_token_service_impl = `import java.time.Instant;
 import java.util.UUID;
 
 import org.slf4j.Logger;
@@ -403,6 +401,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.backend.config.SecurityConstants;
 import com.backend.entity.RefreshTokenEntity;
@@ -434,8 +433,10 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 	 * 		update Rotation
 	 * 		save it in DB for track
 	 * ✅ Then Generate new RefreshToken 
+	 * ✅ I Don't Roll Back RefreshTokenExpiredException is thrown
 	 *********************************************************************/
 	@Override
+	@Transactional(noRollbackFor = RefreshTokenExpiredException.class)
 	public String generateRefreshToken(String email, String invokedMethod, String oldRefreshToken) {
 
 		LOGGER.info("invoke generateRefreshToken()");
@@ -443,9 +444,6 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 		UserEntity userEntity = userRepository.findByEmail(email);
 		if (userEntity == null)
 			throw new ResourceNotFoundException("User with Email : " + email + " , Not Exist");
-
-		System.out.println(Instant.now());
-		
 		
 		RefreshTokenEntity newRefreshTokenEntity = new RefreshTokenEntity();
 		newRefreshTokenEntity.setUserEntity(userEntity);
@@ -454,17 +452,20 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 		newRefreshTokenEntity.setRevoked(false);
 
 		if (invokedMethod.equals(SecurityConstants.INVOKED_LOGIN_URL)) {
+			newRefreshTokenEntity.setRefTokenUuid(UUID.randomUUID());
 			newRefreshTokenEntity.setRotate(1);
 		} else if (invokedMethod.equals(SecurityConstants.INVOKED_REFRESH_URL)) {
 			RefreshTokenEntity _oldRefreshTokenEntity = refreshTokenRepository.findByToken(oldRefreshToken).get();
 			int rotate = _oldRefreshTokenEntity.getRotate();
-			if (rotate > 3) {
-				refreshTokenRepository.deleteAll();
+			if (rotate > 2) {				
+																
+				refreshTokenRepository.deleteByUuid(_oldRefreshTokenEntity.getRefTokenUuid());
 				throw new RefreshTokenExpiredException("Refresh token expired. Please send new Login request");
 			} else {
-				newRefreshTokenEntity.setRotate(rotate + 1); 
 				_oldRefreshTokenEntity.setRevoked(true);
-				refreshTokenRepository.save(_oldRefreshTokenEntity);
+				newRefreshTokenEntity.setRefTokenUuid(_oldRefreshTokenEntity.getRefTokenUuid());
+				newRefreshTokenEntity.setRotate(rotate + 1);								
+				refreshTokenRepository.save(_oldRefreshTokenEntity);				
 			}
 		}
 
