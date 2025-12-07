@@ -6,7 +6,9 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownJavaBasics from "./DropJava/DropDownJavaBasics";
+import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
+import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
+import J2_DropDownDesignPatternCreational from "./DropJava/J2_DropDownDesignPatternCreational";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -38,7 +40,9 @@ const Java_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Java Home" internalLink="/java" />
-            <DropDownJavaBasics />
+            <J1_DropDownJavaBasics />
+            <J2_DropDownDesignPatternCreational />
+            <J9_DropDownJavaInterviewQuestions />
           </div>
         </article>
       )}

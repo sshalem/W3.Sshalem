@@ -220,6 +220,13 @@ import {
   TransactionManagementMain,
 } from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
 import { BatchPartitioningMain, BatchProcessMain } from "./pages/Spring/SpringComponents/S11_SpringBatchPkg";
+import {
+  AbstractFactoryMain,
+  BuilderMain,
+  FactoryMain,
+  PrototypeMain,
+  SingletonMain,
+} from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg";
 
 const router = createBrowserRouter(
   [
@@ -507,6 +514,20 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <JavaHome /> },
             { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "design-patterns-creational",
+              element: <JavaBasics />,
+              children: [
+                { path: "singleton", element: <SingletonMain /> },
+                { path: "prototype", element: <PrototypeMain /> },
+                { path: "builder", element: <BuilderMain /> },
+                { path: "factory", element: <FactoryMain /> },
+                { path: "abstract-factory", element: <AbstractFactoryMain /> },
+              ],
+            },
+            { path: "design-patterns-structural", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            { path: "design-patterns-behavioral", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            { path: "java-interview-questions", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
           ],
         },
         {

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownJavaBasics = () => {
+const J1_DropDownJavaBasics = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -47,4 +47,4 @@ const DropDownJavaBasics = () => {
   );
 };
 
-export default DropDownJavaBasics;
+export default J1_DropDownJavaBasics;
