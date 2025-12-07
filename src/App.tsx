@@ -227,6 +227,7 @@ import {
   PrototypeMain,
   SingletonMain,
 } from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg";
+import DesignPatternCreational from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg/DesignPatternCreational";
 
 const router = createBrowserRouter(
   [
@@ -516,7 +517,7 @@ const router = createBrowserRouter(
             { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
             {
               path: "design-patterns-creational",
-              element: <JavaBasics />,
+              element: <DesignPatternCreational />,
               children: [
                 { path: "singleton", element: <SingletonMain /> },
                 { path: "prototype", element: <PrototypeMain /> },

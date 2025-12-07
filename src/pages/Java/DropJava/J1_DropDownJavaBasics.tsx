@@ -34,7 +34,7 @@ const J1_DropDownJavaBasics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/basics" topicName="Java Basics" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/basics" topicName="1. Java Basics" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

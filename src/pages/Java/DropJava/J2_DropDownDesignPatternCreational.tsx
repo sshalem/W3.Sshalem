@@ -38,7 +38,7 @@ const J2_DropDownDesignPatternCreational = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/java/design-patterns-creational"
-        topicName="Design Patterns Creational"
+        topicName="2. Design Patterns Creational"
       />
 
       <div
