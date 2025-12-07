@@ -38,7 +38,7 @@ const J9_DropDownJavaInterviewQuestions = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/java/java-interview-questions"
-        topicName="Java Interview questions"
+        topicName="9. Java Interview questions"
       />
 
       <div
