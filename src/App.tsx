@@ -81,7 +81,7 @@ import {
   Setup,
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
-import { JavaBasics, JavaHome, ArrayMain } from "./pages/Java/JavaComponents";
+import { JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
@@ -228,6 +228,9 @@ import {
   SingletonMain,
 } from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg";
 import DesignPatternCreational from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg/DesignPatternCreational";
+import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
+import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
+import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 
 const router = createBrowserRouter(
   [
@@ -528,7 +531,11 @@ const router = createBrowserRouter(
             },
             { path: "design-patterns-structural", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
             { path: "design-patterns-behavioral", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
-            { path: "java-interview-questions", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "java-interview-questions",
+              element: <JavaInterviewQuestions />,
+              children: [{ path: "collections", element: <CollectionsQuestionsMain /> }],
+            },
           ],
         },
         {

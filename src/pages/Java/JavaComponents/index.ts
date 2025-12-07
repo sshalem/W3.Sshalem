@@ -1,3 +1,4 @@
 export { default as JavaHome } from "./JavaHome";
 export { default as JavaBasics } from "./J1_JavaBasicsPkg/JavaBasics";
-export { default as ArrayMain } from "./J1_JavaBasicsPkg/ArraySections/ArrayMain";
+export { default as DesignPatternCreational } from "./J2_DesignPatternCreationalPkg/DesignPatternCreational";
+export { default as JavaInterviewQuestions } from "./J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
