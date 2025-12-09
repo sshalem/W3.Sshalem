@@ -123,12 +123,21 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <p className="text-lg font-semibold">🧩 1. Delete - using Derived Method</p>
         </article>
-        In this example I delete : <br />
+        Best way to implement the delete and w.o rollBack when RuntimeException is thrown : <br />
         <ULdisc>
           <Li>Derived Method that uses the Email field</Li>
+          <Li>
+            Do NOT annotated repository method with <SpanGrey>@Transactinoal</SpanGrey>
+          </Li>
+          <Li>
+            Annoted the service layer with <SpanGrey>@Transactinoal</SpanGrey>
+          </Li>
+          <Li>
+            add metaData of <SpanGrey>@Transactional(noRollbackFor = RuntimeException.class)</SpanGrey>
+          </Li>
         </ULdisc>
-        <TableFiveColCompareDeleteByEmail />
         <JavaHighlight javaCode={derived_delete_by_email}></JavaHighlight>
+        <TableFiveColCompareDeleteByEmail />
       </section>
     </MainChildArea>
   );
@@ -203,7 +212,7 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Transactional
+	@Transactional(noRollbackFor = RuntimeException.class)
 	public UserEntity createAndDeleteByEmailDerivedMethod(UserEntity user) {
 		if (currentEmailCount > 2) {
 			userRepository.deleteByEmail(user.getEmail());
