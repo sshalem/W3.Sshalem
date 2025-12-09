@@ -1,5 +1,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import TableFiveColCompareDeleteByEmail from "../../../../../components/Tables/TableFiveColCompareDeleteByEmail";
+import TableFiveColCompareDeleteById from "../../../../../components/Tables/TableFiveColCompareDeleteById";
 
 const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,16 +17,11 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
             Spring Data automatically applies <SpanGrey>@Transactional</SpanGrey> behavior to CRUD methods in the repository interfaces that extend
           </Li>
           <Li>
-            ✔ <SpanGrey>Write</SpanGrey> operations (save, delete, deleteById, etc.){" "}
-            <ULdisc>
-              → run inside a <SpanGrey>Transaction</SpanGrey>
-            </ULdisc>
+            ✔ <SpanGrey>Write</SpanGrey> operations (save, delete, deleteById, etc.) → run inside a <SpanGrey>Transaction</SpanGrey>
           </Li>
           <Li>
-            ✔ <SpanGrey>Read-only</SpanGrey> operations (findById, findAll, etc.)
-            <ULdisc>
-              → run inside a transaction marked <SpanGrey>@Transactional(readOnly = true)</SpanGrey>
-            </ULdisc>
+            ✔ <SpanGrey>Read-only</SpanGrey> operations (findById, findAll, etc.) → run inside a transaction marked{" "}
+            <SpanGrey>@Transactional(readOnly = true)</SpanGrey>
           </Li>
         </ULdisc>
         <p className="my-4 inline-block rounded-md bg-red-600 p-2 font-semibold text-white">Important Note :</p>
@@ -118,6 +115,7 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <JavaHighlight javaCode={code_1}></JavaHighlight>
+        <TableFiveColCompareDeleteById />
       </section>
 
       <hr />
@@ -129,6 +127,7 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Derived Method that uses the Email field</Li>
         </ULdisc>
+        <TableFiveColCompareDeleteByEmail />
         <JavaHighlight javaCode={derived_delete_by_email}></JavaHighlight>
       </section>
     </MainChildArea>
@@ -207,9 +206,7 @@ public class UserService {
 	@Transactional
 	public UserEntity createAndDeleteByEmailDerivedMethod(UserEntity user) {
 		if (currentEmailCount > 2) {
-
 			userRepository.deleteByEmail(user.getEmail());
-			userRepository.flush();
 			throw new RuntimeException("Check if RollBack from DB performed");
 		}
 		currentEmailCount++;
