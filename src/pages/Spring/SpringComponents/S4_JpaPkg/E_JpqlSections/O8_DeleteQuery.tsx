@@ -1,17 +1,84 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        When <SpanGrey>delete</SpanGrey> operetion is executed , there might be situations , where :
+        <div>Here I will show the best practice to delete Entity /Entities from DB.</div>
         <ULdisc>
           <Li>
-            the <SpanGrey>delete SQL</SpanGrey> <SpanRed>not executed</SpanRed>
+            Spring Data repository methods like <SpanGrey>deleteById(...)</SpanGrey>, <SpanGrey>save(...)</SpanGrey>,{" "}
+            <SpanGrey>findById(...)</SpanGrey> etc., are <SpanGrey>Transactional</SpanGrey> behind the scenes.
           </Li>
           <Li>
-            the <SpanGrey>delete SQL</SpanGrey> <SpanGreen>executed</SpanGreen> , BUT, Row in DB still exist (because Operations is Rolled Back)
+            Spring Data automatically applies <SpanGrey>@Transactional</SpanGrey> behavior to CRUD methods in the repository interfaces that extend
+          </Li>
+          <Li>
+            ✔ <SpanGrey>Write</SpanGrey> operations (save, delete, deleteById, etc.){" "}
+            <ULdisc>
+              → run inside a <SpanGrey>Transaction</SpanGrey>
+            </ULdisc>
+          </Li>
+          <Li>
+            ✔ <SpanGrey>Read-only</SpanGrey> operations (findById, findAll, etc.)
+            <ULdisc>
+              → run inside a transaction marked <SpanGrey>@Transactional(readOnly = true)</SpanGrey>
+            </ULdisc>
+          </Li>
+        </ULdisc>
+        <p className="my-4 inline-block rounded-md bg-red-600 p-2 font-semibold text-white">Important Note :</p>
+        <ULdisc>
+          <Li>
+            Service-level <SpanGrey>@Transactional</SpanGrey> overrides behavior
+          </Li>
+          <Li>
+            If I annotate a service method with <SpanGrey>@Transactional</SpanGrey> , the <SpanGrey>outer</SpanGrey> transaction overrides the{" "}
+            <SpanGrey>Inner</SpanGrey>
+            transaction
+          </Li>
+          <Li>This way , the service layer now controls commit/rollback behavior.</Li>
+          <Li>Example : </Li>
+        </ULdisc>
+        <JavaHighlight javaCode={override_tranactional}></JavaHighlight>
+      </section>
+
+      <hr />
+      <section className="my-8 text-lg font-semibold">Reorganize later</section>
+      <section className="my-8">
+        <article className="my-4 text-lg font-semibold">🔍 Why JPQL Delete → One SQL DELETE</article>
+        <div>Because this is a bulk delete</div>
+        <div>
+          Hibernate translates this directly into one SQL statement: <SpanGrey>DELETE FROM user_entity WHERE email = ?</SpanGrey>
+        </div>
+        <ULdisc>
+          <Li>✔ No SELECT</Li>
+          <Li>✔ No per-entity delete</Li>
+          <Li>✔ Removes all matching rows in a single DB operation</Li>
+          <Li>✔ Fast and efficient</Li>
+        </ULdisc>
+        <JavaHighlight javaCode={bulk_delete}></JavaHighlight>
+      </section>
+
+      <section className="my-8">
+        <article className="my-4 text-lg font-semibold">🔍 Why deleteByEmail → SELECT + Multiple DELETEs</article>
+        <div>This is a derived method from Spring Data JPA.</div>
+        <div>Spring resolves it as:</div>
+        <ULdisc>
+          <Li>1️⃣ First, SELECT rows to delete → so it can load entities </Li>
+          <Li>2️⃣ Then Hibernate performs one DELETE per entity</Li>
+          <Li>SQL log example:</Li>
+          <JavaHighlight javaCode={derived_delete}></JavaHighlight>
+          <Li>
+            This allows:
+            <ULdisc>
+              <Li>Entity listeners (@PreRemove, @PostRemove)</Li>
+              <Li>Cascades (@OneToMany, etc.)</Li>
+              <Li>Version checking (optimistic locking)</Li>
+              <Li>
+                But, it is <SpanGrey>slower and does multiple SQL operations</SpanGrey>.
+              </Li>
+            </ULdisc>
           </Li>
         </ULdisc>
       </section>
@@ -23,16 +90,30 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
         </article>
         In this example I delete : <br />
         <ULdisc>
-          <Li>using Data Repository methods</Li>
+          <Li>using Data Repository methods (Derived Method)</Li>
           <Li>
             No <SpanGrey>@Transactional</SpanGrey> annotation on service method
           </Li>
-          <Li>SQL delete executed</Li>
+          <Li>SQL of delete executed</Li>
           <Li>Row deleted from DB</Li>
           <Li>
-            <SpanRed>Why Row deleted from DB?</SpanRed>
+            Why Row deleted from DB if method i Service Layer is NOT annotated with <SpanRed>@Transactionl</SpanRed> ?
             <ULdisc>
-              <Li>Because , It's a Data Repository method</Li>
+              <Li>
+                Spring Data repository methods like deleteById(...), save(...), findById(...), etc., are <SpanGrey>Transactional</SpanGrey> behind the
+                scenes.
+              </Li>
+              <Li>
+                Spring Data automatically applies <SpanGrey>@Transactional</SpanGrey> behavior to CRUD methods in the repository interfaces that
+                extend
+              </Li>
+              <Li>
+                ✔ <SpanGrey>Write</SpanGrey> operations (save, delete, deleteById, etc.) → run inside a <SpanGrey>Transaction</SpanGrey>
+              </Li>
+              <Li>
+                ✔ <SpanGrey>Read-only</SpanGrey> operations (findById, findAll, etc.) → run inside a transaction marked{" "}
+                <SpanGrey>@Transactional(readOnly = true)</SpanGrey>
+              </Li>
             </ULdisc>
           </Li>
         </ULdisc>
@@ -43,6 +124,23 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
 };
 
 export default O8_DeleteQuery;
+
+const bulk_delete = `@Modifying
+@Query("DELETE FROM UserEntity u WHERE u.email = :email")
+void deleteUserByEmailJPQL(String email);
+`;
+
+const derived_delete = `SELECT * FROM user_entity WHERE email = ?
+DELETE FROM user_entity WHERE id = ?
+DELETE FROM user_entity WHERE id = ?
+...
+`;
+
+const override_tranactional = `@Transactional
+public void doSomething() {
+    userRepository.deleteById(1L);
+    throw new RuntimeException(); // Rollback entire transaction
+}`;
 
 const code_1 = `@Service
 public class UserService {
