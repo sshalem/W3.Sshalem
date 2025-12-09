@@ -119,6 +119,18 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         <JavaHighlight javaCode={code_1}></JavaHighlight>
       </section>
+
+      <hr />
+      <section className="my-8">
+        <article className="my-8">
+          <p className="text-lg font-semibold">🧩 1. Delete - using Derived Method</p>
+        </article>
+        In this example I delete : <br />
+        <ULdisc>
+          <Li>Derived Method that uses the Email field</Li>
+        </ULdisc>
+        <JavaHighlight javaCode={derived_delete_by_email}></JavaHighlight>
+      </section>
     </MainChildArea>
   );
 };
@@ -150,12 +162,57 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public UserEntity deleteAndCreateTest(UserEntity user) {
-		if (current > 2) {
+	public UserEntity createAndDeleteById(UserEntity user) {
+		if (currentIdCount > 2) {
 			userRepository.deleteById(1L);
-			throw new RuntimeException("Check if delete User finsished or RollBack from DB performed");
+			throw new RuntimeException("Check if RollBack from DB performed");
 		}
-		current++;
+		currentIdCount++;
+		return userRepository.save(user);
+	}
+
+}`;
+
+const derived_delete_by_email = `package com.delete.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.delete.entity.UserEntity;
+
+@Repository
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+  void deleteByEmail(String email);
+}
+
+
+
+
+package com.delete.service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.delete.entity.UserEntity;
+import com.delete.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	public static int currentIdCount = 1;
+	public static int currentEmailCount = 1;
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Transactional
+	public UserEntity createAndDeleteByEmailDerivedMethod(UserEntity user) {
+		if (currentEmailCount > 2) {
+
+			userRepository.deleteByEmail(user.getEmail());
+			userRepository.flush();
+			throw new RuntimeException("Check if RollBack from DB performed");
+		}
+		currentEmailCount++;
 		return userRepository.save(user);
 	}
 
