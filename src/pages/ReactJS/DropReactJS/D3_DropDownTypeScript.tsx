@@ -34,7 +34,7 @@ const DropDownTypeScript = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/typescript" topicName="TypeScript" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/typescript" topicName="3. TypeScript" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

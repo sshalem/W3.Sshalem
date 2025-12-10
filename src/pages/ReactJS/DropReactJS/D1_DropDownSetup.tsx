@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropDownTopic } from "../../../components";
 
-const DropDownPagination = () => {
+const DropDownSetup = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownPagination = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/pagination")) {
+    if (location.pathname.includes("reactJS/setup")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -38,18 +38,17 @@ const DropDownPagination = () => {
         enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/reactJS/pagination"
-        topicName="Pagination"
+        internalLink="/reactJS/setup"
+        topicName="1. Setup Project"
       />
+
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
-      >
-        {/*  */}
-      </div>
+      ></div>
     </section>
   );
 };
 
-export default DropDownPagination;
+export default DropDownSetup;

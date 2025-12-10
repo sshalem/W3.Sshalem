@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownReactBasics = () => {
+const DropDownReactInterviewQuestions = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownReactBasics = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/basics")) {
+    if (location.pathname.includes("reactJS/reactjs-interview-questions")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +34,22 @@ const DropDownReactBasics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="React Basics" />
+      <SideDropDownTopic
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/reactJS/reactjs-interview-questions"
+        topicName="7. Reactjs interview questions"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="JSX" internalLink="/reactJS/basics/jsx" />
+        <SideDropdownLink sideDropDownNavName="Memory Search" internalLink="/reactJS/reactjs-interview-questions/memory-search" />
       </div>
     </section>
   );
 };
 
-export default DropDownReactBasics;
+export default DropDownReactInterviewQuestions;

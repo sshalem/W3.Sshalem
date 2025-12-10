@@ -34,7 +34,7 @@ const DropDownRouter = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/router" topicName="Router" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/router" topicName="4. Router" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

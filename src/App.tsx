@@ -76,6 +76,7 @@ import {
   Pagination,
   ReactBasics,
   ReactJSHome,
+  ReactJSInterviewQuestions,
   ReactRouter,
   RouterMain,
   Setup,
@@ -484,14 +485,46 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <ReactJSHome /> },
             { path: "setup", element: <Setup /> },
-            { path: "basics", element: <ReactBasics />, children: [{ path: "jsx", element: <JsxMain /> }] },
-            { path: "typescript", element: <TypeScript />, children: [{ path: "introduction", element: <IntroMain /> }] },
-            { path: "router", element: <ReactRouter />, children: [{ path: "install", element: <RouterMain /> }] },
+            {
+              path: "basics",
+              element: <ReactBasics />,
+              children: [
+                { path: "jsx", element: <JsxMain /> },
+                { path: "jsx", element: <JsxMain /> },
+              ],
+            },
+            {
+              path: "typescript",
+              element: <TypeScript />,
+              children: [
+                { path: "introduction", element: <IntroMain /> },
+                { path: "introduction", element: <IntroMain /> },
+              ],
+            },
+            {
+              path: "router",
+              element: <ReactRouter />,
+              children: [
+                { path: "install", element: <RouterMain /> },
+                { path: "install", element: <RouterMain /> },
+              ],
+            },
             { path: "pagination", element: <Pagination /> },
             {
               path: "global-search",
               element: <GlobalSearch />,
-              children: [{ path: "memory-search", element: <MemorySearchMain /> }],
+              children: [
+                { path: "memory-search", element: <MemorySearchMain /> },
+                { path: "memory-search", element: <MemorySearchMain /> },
+              ],
+            },
+            {
+              path: "reactjs-interview-questions",
+              element: <ReactJSInterviewQuestions />,
+              children: [
+                { path: "memory-search", element: <MemorySearchMain /> },
+                { path: "memory-search", element: <MemorySearchMain /> },
+              ],
             },
           ],
         },

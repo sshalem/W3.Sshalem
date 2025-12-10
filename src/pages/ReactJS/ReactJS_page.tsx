@@ -6,12 +6,13 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownBasics from "./DropReactJS/DropDownReactBasics";
-import DropDownRouter from "./DropReactJS/DropDownRouter";
-import DropDownTypeScript from "./DropReactJS/DropDownTypeScript";
-import DropDownSetup from "./DropReactJS/DropDownSetup";
-import DropDownPagination from "./DropReactJS/DropDownPagination";
-import DropDownSearch from "./DropReactJS/DropDownSearch";
+import DropDownBasics from "./DropReactJS/D2_DropDownReactBasics";
+import DropDownRouter from "./DropReactJS/D4_DropDownRouter";
+import DropDownTypeScript from "./DropReactJS/D3_DropDownTypeScript";
+import DropDownSetup from "./DropReactJS/D1_DropDownSetup";
+import DropDownPagination from "./DropReactJS/D5_DropDownPagination";
+import DropDownSearch from "./DropReactJS/D6_DropDownSearch";
+import DropDownReactInterviewQuestions from "./DropReactJS/D7_DropDownReactInterviewQuestions";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -49,6 +50,7 @@ const ReactJS_page = () => {
             <DropDownRouter />
             <DropDownPagination />
             <DropDownSearch />
+            <DropDownReactInterviewQuestions />
           </div>
         </article>
       )}

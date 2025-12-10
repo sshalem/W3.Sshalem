@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSearch = () => {
+const DropDownReactBasics = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownSearch = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/global-search")) {
+    if (location.pathname.includes("reactJS/basics")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +34,17 @@ const DropDownSearch = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/global-search" topicName="Global Search" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="2. React Basics" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Memory Search" internalLink="/reactJS/global-search/memory-search" />
+        <SideDropdownLink sideDropDownNavName="JSX" internalLink="/reactJS/basics/jsx" />
       </div>
     </section>
   );
 };
 
-export default DropDownSearch;
+export default DropDownReactBasics;

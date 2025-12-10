@@ -6,8 +6,8 @@ import { MainChildArea } from "../../../../../components";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
-import Question from "./../../../../../components/ui/Question";
-import Answer from "./../../../../../components/ui/Answer";
+import Question from "../../../../../components/ui/Question";
+import Answer from "../../../../../components/ui/Answer";
 import { JsxHighlight } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
