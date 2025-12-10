@@ -393,7 +393,9 @@ public class RoleServiceImpl implements RoleService {
 
 }`;
 
-const refresh_token_service_impl = `import java.time.Instant;
+const refresh_token_service_impl = `package com.backend.service;
+
+import java.time.Instant;
 import java.util.UUID;
 
 import org.slf4j.Logger;
@@ -458,8 +460,7 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 			RefreshTokenEntity _oldRefreshTokenEntity = refreshTokenRepository.findByToken(oldRefreshToken).get();
 			int rotate = _oldRefreshTokenEntity.getRotate();
 			if (rotate > 2) {				
-																
-				refreshTokenRepository.deleteByUuid(_oldRefreshTokenEntity.getRefTokenUuid());
+				refreshTokenRepository.deleteByRefTokenUuid(_oldRefreshTokenEntity.getRefTokenUuid());
 				throw new RefreshTokenExpiredException("Refresh token expired. Please send new Login request");
 			} else {
 				_oldRefreshTokenEntity.setRevoked(true);
@@ -502,8 +503,17 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 
 	
 	@Override
-	@Scheduled(cron = "0 0 */2 * * *") 
+	@Transactional
+	@Scheduled(cron = "0/30 * * * * *", zone = "Asia/Jerusalem")	
 	public void scheduledRefreshTokenCleanup() {
+		LOGGER.warn("scheduledRefreshTokenCleanup() --> cleanup" );
 		refreshTokenRepository.deleteByExpiryDateBefore(Instant.now());		
 	}
+	
+//	@Override
+//	@Transactional
+//	@Scheduled(cron = "0 0 */2 * * *" , zone = "Asia/Jerusalem") 
+//	public void scheduledRefreshTokenCleanup() {
+//		refreshTokenRepository.deleteByExpiryDateBefore(Instant.now());		
+//	}
 }`;
