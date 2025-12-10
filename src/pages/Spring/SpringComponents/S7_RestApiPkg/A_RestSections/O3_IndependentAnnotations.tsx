@@ -4,7 +4,7 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import TableCompareParameterAnnotations from "../../../../../components/Tables/TableCompareParameterAnnotations";
+import TableCompareParameterAnnotations from "../../../../../components/Tables/Table_2ColCompareParameterAnnotations";
 
 const O3_IndependentAnnotations = ({ anchor }: { anchor: string }) => {
   return (

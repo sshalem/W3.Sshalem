@@ -8,7 +8,11 @@ const DesignPatternCreational = () => {
   let location = useLocation();
   return (
     <section>
-      {location.pathname === "/java/design-patterns-creational" ? <div className="text-3xl">Design Pattern Creational Main ...</div> : <Outlet />}
+      {location.pathname === "/java/design-patterns-creational" ? (
+        <div className="text-3xl">Deal with object creation — making it controlled, flexible, and scalable.</div>
+      ) : (
+        <Outlet />
+      )}
     </section>
   );
 };

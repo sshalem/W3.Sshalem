@@ -1,4 +1,4 @@
-const TableCompareOrphanVsCascadeRemove = () => {
+const Table_4ColCompareOrphanVsCascadeRemove = () => {
   const behaviors = [
     {
       orphanRemoval: "❌ false",
@@ -56,4 +56,4 @@ const TableCompareOrphanVsCascadeRemove = () => {
   );
 };
 
-export default TableCompareOrphanVsCascadeRemove;
+export default Table_4ColCompareOrphanVsCascadeRemove;

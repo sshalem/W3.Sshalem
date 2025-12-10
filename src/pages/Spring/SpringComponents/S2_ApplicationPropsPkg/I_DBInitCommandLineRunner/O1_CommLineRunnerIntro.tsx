@@ -4,7 +4,7 @@ CommlineRunner Intro --> (SPRING)(ApplicationProperties)(CommlineRunner Intro)
 */
 import { MainChildArea } from "../../../../../components";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";
+import TableCompareDBInit from "../../../../../components/Tables/Table_4ColCompareDBInit";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 

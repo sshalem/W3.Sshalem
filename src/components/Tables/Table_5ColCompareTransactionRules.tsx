@@ -1,4 +1,4 @@
-const TableFiveColCompareTransactionRules = () => {
+const Table_5ColCompareTransactionRules = () => {
   const isolationLevels = [
     {
       ExceptionType: "RuntimeException (unchecked)",
@@ -52,4 +52,4 @@ const TableFiveColCompareTransactionRules = () => {
   );
 };
 
-export default TableFiveColCompareTransactionRules;
+export default Table_5ColCompareTransactionRules;

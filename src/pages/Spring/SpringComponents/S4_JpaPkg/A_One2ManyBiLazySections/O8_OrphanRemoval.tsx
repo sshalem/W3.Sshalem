@@ -3,7 +3,7 @@
 Orphan Removal --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
+import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/Table_4ColCompareOrphanVsCascadeRemove";
 
 const O8_OrphanRemoval = ({ anchor }: { anchor: string }) => {
   return (

@@ -1,4 +1,4 @@
-const TableIsolationLevelCompare = () => {
+const Table_6ColIsolationLevelCompare = () => {
   const isolationLevels = [
     {
       isolationLevel: "READ_UNCOMMITTED",
@@ -68,4 +68,4 @@ const TableIsolationLevelCompare = () => {
   );
 };
 
-export default TableIsolationLevelCompare;
+export default Table_6ColIsolationLevelCompare;

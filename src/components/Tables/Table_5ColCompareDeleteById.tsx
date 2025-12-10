@@ -1,4 +1,4 @@
-const TableFiveColCompareDeleteById = () => {
+const Table_5ColCompareDeleteById = () => {
   const isolationLevels = [
     {
       repository: "✅ Yes , By Default",
@@ -59,4 +59,4 @@ const TableFiveColCompareDeleteById = () => {
   );
 };
 
-export default TableFiveColCompareDeleteById;
+export default Table_5ColCompareDeleteById;

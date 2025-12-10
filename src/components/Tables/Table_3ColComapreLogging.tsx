@@ -1,4 +1,4 @@
-const TableComapreLogging = () => {
+const Table_3ColComapreLogging = () => {
   const data = [
     {
       name: "(none)",
@@ -48,4 +48,4 @@ const TableComapreLogging = () => {
   );
 };
 
-export default TableComapreLogging;
+export default Table_3ColComapreLogging;

@@ -4,7 +4,7 @@
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
-import TableFiveColCompareDeleteJPQL from "../../../../../components/Tables/TableFiveColCompareDeleteJPQL";
+import TableFiveColCompareDeleteJPQL from "../../../../../components/Tables/Table_5ColCompareDeleteJPQL";
 
 const O11_DeleteQueryJPQLMethod = ({ anchor }: { anchor: string }) => {
   return (

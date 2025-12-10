@@ -7,8 +7,9 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
-import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
 import J2_DropDownDesignPatternCreational from "./DropJava/J2_DropDownDesignPatternCreational";
+import J3_DropDownDesignPatternStructural from "./DropJava/J3_DropDownDesignPatternStructural";
+import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -42,6 +43,7 @@ const Java_page = () => {
             <SideBarLink pageName="Java Home" internalLink="/java" />
             <J1_DropDownJavaBasics />
             <J2_DropDownDesignPatternCreational />
+            <J3_DropDownDesignPatternStructural />
             <J9_DropDownJavaInterviewQuestions />
           </div>
         </article>

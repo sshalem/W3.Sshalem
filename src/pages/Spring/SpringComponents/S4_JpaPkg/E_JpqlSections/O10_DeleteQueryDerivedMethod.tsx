@@ -5,7 +5,7 @@
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
-import TableFiveColCompareDeleteByEmail from "../../../../../components/Tables/TableFiveColCompareDeleteByEmail";
+import TableFiveColCompareDeleteByEmail from "../../../../../components/Tables/Table_5ColCompareDeleteByEmail";
 
 const O10_DeleteQueryDerivedMethod = ({ anchor }: { anchor: string }) => {
   return (

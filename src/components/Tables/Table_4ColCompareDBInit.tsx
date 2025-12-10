@@ -1,4 +1,4 @@
-const TableCompareDBInit = () => {
+const Table_4ColCompareDBInit = () => {
   const startupMethods = [
     {
       feature: "Type",
@@ -68,4 +68,4 @@ const TableCompareDBInit = () => {
   );
 };
 
-export default TableCompareDBInit;
+export default Table_4ColCompareDBInit;

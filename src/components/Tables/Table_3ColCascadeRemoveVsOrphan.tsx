@@ -1,4 +1,4 @@
-const TableCascadeRemoveVsOrphan = () => {
+const Table_3ColCascadeRemoveVsOrphan = () => {
   const scenarios = [
     {
       scenario: "Delete parent and all children",
@@ -45,4 +45,4 @@ const TableCascadeRemoveVsOrphan = () => {
   );
 };
 
-export default TableCascadeRemoveVsOrphan;
+export default Table_3ColCascadeRemoveVsOrphan;

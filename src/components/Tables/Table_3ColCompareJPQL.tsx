@@ -1,4 +1,4 @@
-const TableCompareJPQL = () => {
+const Table_3ColCompareJPQL = () => {
   const data = [
     {
       feature: "Target",
@@ -60,4 +60,4 @@ const TableCompareJPQL = () => {
   );
 };
 
-export default TableCompareJPQL;
+export default Table_3ColCompareJPQL;

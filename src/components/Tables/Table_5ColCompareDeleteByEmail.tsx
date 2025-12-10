@@ -1,4 +1,4 @@
-const TableFiveColCompareDeleteJPQL = () => {
+const Table_5ColCompareDeleteByEmail = () => {
   const isolationLevels = [
     {
       repository: "❌ NO",
@@ -18,7 +18,7 @@ const TableFiveColCompareDeleteJPQL = () => {
       repository: "❌ NO",
       serviceLayer: "✅ Yes",
       exception: "❌ NO",
-      SQL: "✅ Yes",
+      SQL: "❌ NO",
       DB: "❌ NO , rollingBack",
     },
     {
@@ -32,7 +32,7 @@ const TableFiveColCompareDeleteJPQL = () => {
       repository: "✅ Yes",
       serviceLayer: "✅ Yes",
       exception: "❌ NO",
-      SQL: "✅ Yes",
+      SQL: "❌ NO",
       DB: "❌ NO , rollingBack",
     },
     {
@@ -80,4 +80,4 @@ const TableFiveColCompareDeleteJPQL = () => {
   );
 };
 
-export default TableFiveColCompareDeleteJPQL;
+export default Table_5ColCompareDeleteByEmail;

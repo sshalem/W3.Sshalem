@@ -1,4 +1,4 @@
-const TableComapreHashEncodeEncrypt = () => {
+const Table_4ColComapreHashEncodeEncrypt = () => {
   const comparisonData = [
     {
       feature: "Reversible",
@@ -62,4 +62,4 @@ const TableComapreHashEncodeEncrypt = () => {
   );
 };
 
-export default TableComapreHashEncodeEncrypt;
+export default Table_4ColComapreHashEncodeEncrypt;

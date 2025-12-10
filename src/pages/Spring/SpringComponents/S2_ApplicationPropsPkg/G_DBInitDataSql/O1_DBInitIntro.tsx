@@ -5,7 +5,7 @@ Data Sql intro --> (SPRING)(ApplicationProperties)(DataSqlintro)
 import { FaDiamond } from "react-icons/fa6";
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { SpanBlue, SpanGrey } from "../../../../../components/Highlight";
-import TableCompareDBInit from "../../../../../components/Tables/TableCompareDBInit";
+import TableCompareDBInit from "../../../../../components/Tables/Table_4ColCompareDBInit";
 
 const O1_DBInitIntro = ({ anchor }: { anchor: string }) => {
   return (

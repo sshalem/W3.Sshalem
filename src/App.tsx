@@ -81,7 +81,7 @@ import {
   Setup,
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
-import { JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
+import { DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
@@ -529,7 +529,14 @@ const router = createBrowserRouter(
                 { path: "abstract-factory", element: <AbstractFactoryMain /> },
               ],
             },
-            { path: "design-patterns-structural", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "design-patterns-structural",
+              element: <DesignPatternStructural />,
+              children: [
+                { path: "array", element: <ArrayMain /> },
+                { path: "array", element: <ArrayMain /> },
+              ],
+            },
             { path: "design-patterns-behavioral", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
             {
               path: "java-interview-questions",

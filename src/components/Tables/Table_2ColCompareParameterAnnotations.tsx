@@ -1,4 +1,4 @@
-const TableCompareParameterAnnotations = () => {
+const Table_2ColCompareParameterAnnotations = () => {
   const annotations = [
     { annotation: "@RequestBody", purpose: "Binds the HTTP request body to a Java object (JSON/XML → Object)." },
     { annotation: "@PathVariable", purpose: "Extracts a value from the URI path. (Use for mandatory identifiers)" },
@@ -33,4 +33,4 @@ const TableCompareParameterAnnotations = () => {
   );
 };
 
-export default TableCompareParameterAnnotations;
+export default Table_2ColCompareParameterAnnotations;

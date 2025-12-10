@@ -4,7 +4,7 @@ CascadeType Merge (update --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
-import TableCompareMerge from "../../../../../components/Tables/TableCompareMerge";
+import TableCompareMerge from "../../../../../components/Tables/Table_3ColCompareMerge";
 
 const O4_LazyCascadeMerge = ({ anchor }: { anchor: string }) => {
   return (

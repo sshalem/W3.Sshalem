@@ -4,7 +4,7 @@
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
-import TableFiveColCompareDeleteById from "../../../../../components/Tables/TableFiveColCompareDeleteById";
+import TableFiveColCompareDeleteById from "../../../../../components/Tables/Table_5ColCompareDeleteById";
 
 const O9_DeleteQueryDataRepositoryMethod = ({ anchor }: { anchor: string }) => {
   return (

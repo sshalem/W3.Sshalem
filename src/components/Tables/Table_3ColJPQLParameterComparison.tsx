@@ -1,4 +1,4 @@
-const TableJPQLParameterComparison = () => {
+const Table_3ColJPQLParameterComparison = () => {
   const jpqlParameterComparison = [
     { feature: "Syntax", namedParameters: ":paramName", positionedParameters: "?1, ?2, etc." },
     { feature: "Readability", namedParameters: "✅ High", positionedParameters: "❌ Lower" },
@@ -34,4 +34,4 @@ const TableJPQLParameterComparison = () => {
   );
 };
 
-export default TableJPQLParameterComparison;
+export default Table_3ColJPQLParameterComparison;

@@ -4,7 +4,7 @@ Terminology compare --> (SPRING)(IDE's)(IntelliJ)
 */
 
 import { MainChildArea } from "../../../../../components";
-import TableCompareTerminology from "../../../../../components/Tables/TableCompareTerminology";
+import TableCompareTerminology from "../../../../../components/Tables/Table_2ColCompareTerminology";
 
 const O1_TerminologyCompare = ({ anchor }: { anchor: string }) => {
   return (

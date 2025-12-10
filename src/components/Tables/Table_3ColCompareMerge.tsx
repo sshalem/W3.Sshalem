@@ -1,6 +1,6 @@
 import { SpanGreen, SpanRed } from "../Highlight";
 
-const TableCompareMerge = () => {
+const Table_3ColCompareMerge = () => {
   const cascadeMergeComparison = [
     {
       operation: "Parent update",
@@ -56,4 +56,4 @@ const TableCompareMerge = () => {
   );
 };
 
-export default TableCompareMerge;
+export default Table_3ColCompareMerge;

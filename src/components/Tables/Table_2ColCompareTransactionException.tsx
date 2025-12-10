@@ -1,4 +1,4 @@
-const TableTwoColCompareTransactionException = () => {
+const Table_2ColCompareTransactionException = () => {
   const exceptionRules = [
     { exceptionType: "RuntimeException (unchecked)", rollback: "Yes ❌ (rollback)" },
     { exceptionType: "Error", rollback: "Yes ❌ (rollback)" },
@@ -27,4 +27,4 @@ const TableTwoColCompareTransactionException = () => {
   );
 };
 
-export default TableTwoColCompareTransactionException;
+export default Table_2ColCompareTransactionException;

@@ -1,4 +1,4 @@
-const TableEntityValidation = () => {
+const Table_3ColEntityValidation = () => {
   const data = [
     {
       feature: "Mapping style",
@@ -60,4 +60,4 @@ const TableEntityValidation = () => {
   );
 };
 
-export default TableEntityValidation;
+export default Table_3ColEntityValidation;

@@ -4,7 +4,7 @@
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
-import TableTwoColCompareTransactionException from "../../../../../components/Tables/TableTwoColCompareTransactionException";
+import TableTwoColCompareTransactionException from "../../../../../components/Tables/Table_2ColCompareTransactionException";
 
 const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
   return (

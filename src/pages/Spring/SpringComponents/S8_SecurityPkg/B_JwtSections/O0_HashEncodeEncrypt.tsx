@@ -4,7 +4,7 @@ Hashing, Encoding, Encrypting --> (SPRING)(Security)(jwt)
 */
 import { MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
-import TableComapreHashEncodeEncrypt from "../../../../../components/Tables/TableComapreHashEncodeEncrypt";
+import TableComapreHashEncodeEncrypt from "../../../../../components/Tables/Table_4ColComapreHashEncodeEncrypt";
 import Li from "../../../../../components/ui/Li";
 
 const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {

@@ -4,7 +4,7 @@ Delete Query --> (SPRING)(JPA)(Delete Query)
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { JavaHighlight, SpanGrey, SpanTeal } from "../../../../../components/Highlight";
-import TableFiveColCompareTransactionRules from "../../../../../components/Tables/TableFiveColCompareTransactionRules";
+import TableFiveColCompareTransactionRules from "../../../../../components/Tables/Table_5ColCompareTransactionRules";
 
 const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
   return (

@@ -4,7 +4,7 @@ Intro --> (SPRING)(Auditing)(Jpa Audit)
 */
 import { Anchor, Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
-import TableAuditingCompare from "../../../../../components/Tables/TableAuditingCompare";
+import TableAuditingCompare from "../../../../../components/Tables/Table_4ColAuditingCompare";
 
 const O1_IntroAuditing = ({ anchor }: { anchor: string }) => {
   return (

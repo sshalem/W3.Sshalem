@@ -1,4 +1,4 @@
-const TableAuditingCompare = () => {
+const Table_4ColAuditingCompare = () => {
   const auditingComparison = [
     {
       feature: "Purpose",
@@ -98,4 +98,4 @@ const TableAuditingCompare = () => {
   );
 };
 
-export default TableAuditingCompare;
+export default Table_4ColAuditingCompare;

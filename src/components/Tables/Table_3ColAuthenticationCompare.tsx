@@ -1,4 +1,4 @@
-const TableAuthenticationCompare = () => {
+const Table_3ColAuthenticationCompare = () => {
   const authComparison = [
     {
       feature: "Storage",
@@ -51,4 +51,4 @@ const TableAuthenticationCompare = () => {
   );
 };
 
-export default TableAuthenticationCompare;
+export default Table_3ColAuthenticationCompare;

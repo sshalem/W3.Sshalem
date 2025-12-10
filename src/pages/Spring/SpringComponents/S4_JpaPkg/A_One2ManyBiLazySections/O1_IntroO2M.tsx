@@ -5,7 +5,7 @@ OneToMany --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
-import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/TableCompareOrphanVsCascadeRemove";
+import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/Table_4ColCompareOrphanVsCascadeRemove";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";

@@ -5,7 +5,7 @@ JPQL --> (SPRING)(JPA)(JPQL)
 import { MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import TableCompareJPQL from "../../../../../components/Tables/TableCompareJPQL";
+import TableCompareJPQL from "../../../../../components/Tables/Table_3ColCompareJPQL";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 

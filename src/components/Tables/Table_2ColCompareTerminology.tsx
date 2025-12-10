@@ -1,4 +1,4 @@
-const TableCompareTerminology = () => {
+const Table_2ColCompareTerminology = () => {
   const data = [
     {
       sts: "worksapce",
@@ -48,4 +48,4 @@ const TableCompareTerminology = () => {
   );
 };
 
-export default TableCompareTerminology;
+export default Table_2ColCompareTerminology;

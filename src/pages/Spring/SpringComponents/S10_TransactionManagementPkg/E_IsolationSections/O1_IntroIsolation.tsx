@@ -4,7 +4,7 @@
 */
 import { Anchor, MainChildArea } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
-import TableIsolationLevelCompare from "../../../../../components/Tables/TableIsolationLevelCompare";
+import TableIsolationLevelCompare from "../../../../../components/Tables/Table_6ColIsolationLevelCompare";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
