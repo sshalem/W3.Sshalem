@@ -10,6 +10,7 @@ import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
 import J2_DropDownDesignPatternCreational from "./DropJava/J2_DropDownDesignPatternCreational";
 import J3_DropDownDesignPatternStructural from "./DropJava/J3_DropDownDesignPatternStructural";
 import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
+import J4_DropDownDesignPatternBehavioral from "./DropJava/J4_DropDownDesignPatternBehavioral";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -44,6 +45,7 @@ const Java_page = () => {
             <J1_DropDownJavaBasics />
             <J2_DropDownDesignPatternCreational />
             <J3_DropDownDesignPatternStructural />
+            <J4_DropDownDesignPatternBehavioral />
             <J9_DropDownJavaInterviewQuestions />
           </div>
         </article>

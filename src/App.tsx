@@ -231,6 +231,7 @@ import DesignPatternCreational from "./pages/Java/JavaComponents/J2_DesignPatter
 import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
 import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
+import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 
 const router = createBrowserRouter(
   [
@@ -537,7 +538,14 @@ const router = createBrowserRouter(
                 { path: "array", element: <ArrayMain /> },
               ],
             },
-            { path: "design-patterns-behavioral", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "design-patterns-behavioral",
+              element: <DesignPatternBehavioral />,
+              children: [
+                { path: "array", element: <ArrayMain /> },
+                { path: "array", element: <ArrayMain /> },
+              ],
+            },
             {
               path: "java-interview-questions",
               element: <JavaInterviewQuestions />,
