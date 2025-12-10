@@ -1,21 +1,42 @@
-const TableFiveColCompareDeleteById = () => {
+const TableFiveColCompareDeleteJPQL = () => {
   const isolationLevels = [
     {
-      repository: "✅ Yes , By Default",
+      repository: "❌ NO",
+      serviceLayer: "❌ NO",
+      exception: "❌ NO",
+      SQL: "❌ NO",
+      DB: "❌ NO",
+    },
+    {
+      repository: "✅ Yes",
       serviceLayer: "❌ NO",
       exception: "❌ NO",
       SQL: "✅ Yes",
       DB: "✅ Yes",
     },
     {
-      repository: "✅ Yes , By Default",
+      repository: "❌ NO",
       serviceLayer: "✅ Yes",
       exception: "❌ NO",
-      SQL: "❌ NO",
+      SQL: "✅ Yes",
       DB: "❌ NO , rollingBack",
     },
     {
-      repository: "✅ Yes , By Default",
+      repository: "❌ NO",
+      serviceLayer: "✅ Yes",
+      exception: "✅ Yes",
+      SQL: "✅ Yes",
+      DB: "✅ Yes",
+    },
+    {
+      repository: "✅ Yes",
+      serviceLayer: "✅ Yes",
+      exception: "❌ NO",
+      SQL: "✅ Yes",
+      DB: "❌ NO , rollingBack",
+    },
+    {
+      repository: "✅ Yes",
       serviceLayer: "✅ Yes",
       exception: "✅ Yes",
       SQL: "✅ Yes",
@@ -25,7 +46,7 @@ const TableFiveColCompareDeleteById = () => {
 
   return (
     <section className="my-8">
-      <h1 className="mb-4 text-xl font-bold">🔐 DB behaior when Exception thrown after deleteById(...)</h1>
+      <h1 className="mb-4 text-xl font-bold">🔐 DB behaior when Exception thrown after deleteByEmail(...)</h1>
       {/*  */}
       <div className="overflow-x-auto rounded-lg shadow-md">
         <table className="min-w-full border-collapse">
@@ -35,7 +56,7 @@ const TableFiveColCompareDeleteById = () => {
               <th className="w-3/12 border border-gray-300 px-3 py-2 text-start font-medium">Annotate repository method as @Transactional</th>
               <th className="w-3/12 border border-gray-300 px-3 py-2 text-start font-medium">Annotate serviceLayer method as @Transactional</th>
               <th className="w-1/5 border border-gray-300 px-3 py-2 text-start font-medium">
-                MetaData method with "noRollBack=RuntimeException.class"
+                serviceLayer MetaData method with "noRollBack=RuntimeException.class"
               </th>
               <th className="w-2/12 border border-gray-300 px-3 py-2 text-start font-medium">SQL delete executed</th>
               <th className="w-2/12 border border-gray-300 px-3 py-2 text-start font-medium">Delete from DB</th>
@@ -59,4 +80,4 @@ const TableFiveColCompareDeleteById = () => {
   );
 };
 
-export default TableFiveColCompareDeleteById;
+export default TableFiveColCompareDeleteJPQL;

@@ -19,7 +19,7 @@ const TableFiveColCompareDeleteByEmail = () => {
       serviceLayer: "✅ Yes",
       exception: "❌ NO",
       SQL: "❌ NO",
-      DB: "❌ NO",
+      DB: "❌ NO , rollingBack",
     },
     {
       repository: "❌ NO",
@@ -33,7 +33,7 @@ const TableFiveColCompareDeleteByEmail = () => {
       serviceLayer: "✅ Yes",
       exception: "❌ NO",
       SQL: "❌ NO",
-      DB: "❌ NO",
+      DB: "❌ NO , rollingBack",
     },
     {
       repository: "✅ Yes",
@@ -46,7 +46,7 @@ const TableFiveColCompareDeleteByEmail = () => {
 
   return (
     <section className="my-8">
-      <h1 className="mb-4 text-2xl font-bold">🔐 DB behaior when Exception thrown after deleteByEmail(...)</h1>
+      <h1 className="mb-4 text-xl font-bold">🔐 DB behaior when Exception thrown after deleteByEmail(...)</h1>
       {/*  */}
       <div className="overflow-x-auto rounded-lg shadow-md">
         <table className="min-w-full border-collapse">

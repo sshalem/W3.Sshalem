@@ -9,6 +9,9 @@ import O6_QueryDates from "./O6_QueryDates";
 import O7_QueryReturnEntityFields from "./O7_QueryReturnEntityFields";
 import O8_DeleteQuery from "./O8_DeleteQuery";
 import O0_SpringDataRepositoryMethods from "./O0_SpringDataRepositoryMethods";
+import O9_DeleteQueryDataRepositoryMethod from "./O9_DeleteQueryDataRepositoryMethod";
+import O10_DeleteQueryDerivedMethod from "./O10_DeleteQueryDerivedMethod";
+import O11_DeleteQueryJPQLMethod from "./O11_DeleteQueryJPQLMethod";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -23,6 +26,9 @@ const o5_QueryJoinFetchDistinct = "5. JOIN FETCH (Distinct)";
 const o6_QueryDates = "6. Query Dates";
 const o7_QueryReturnEntityFields = "7. Return Specific Entity Fields";
 const o8_DeleteQuery = "8. Delete Query";
+const o9_DeleteQueryDataRepositoryMethod = "9. Delete Query Repository Method";
+const o10_DeleteQueryDerivedMethod = "10. Delete Query Derived Method";
+const o11_DeleteQueryJPQLMethod = "11.Delete Query JPQL Method";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -38,6 +44,9 @@ const anchorList: string[] = [
   o6_QueryDates,
   o7_QueryReturnEntityFields,
   o8_DeleteQuery,
+  o9_DeleteQueryDataRepositoryMethod,
+  o10_DeleteQueryDerivedMethod,
+  o11_DeleteQueryJPQLMethod,
 ];
 
 // ============================================
@@ -101,6 +110,9 @@ const JpqlMain = () => {
       <O6_QueryDates anchor={o6_QueryDates}></O6_QueryDates>
       <O7_QueryReturnEntityFields anchor={o7_QueryReturnEntityFields}></O7_QueryReturnEntityFields>
       <O8_DeleteQuery anchor={o8_DeleteQuery} />
+      <O9_DeleteQueryDataRepositoryMethod anchor={o9_DeleteQueryDataRepositoryMethod} />
+      <O10_DeleteQueryDerivedMethod anchor={o10_DeleteQueryDerivedMethod} />
+      <O11_DeleteQueryJPQLMethod anchor={o11_DeleteQueryJPQLMethod} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
