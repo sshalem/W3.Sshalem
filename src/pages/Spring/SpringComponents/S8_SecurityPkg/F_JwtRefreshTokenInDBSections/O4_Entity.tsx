@@ -364,6 +364,7 @@ const refresh_entity = `package com.backend.entity;
 
 import java.time.Instant;
 import java.util.Objects;
+import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -385,8 +386,14 @@ public class RefreshTokenEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+//	@Column(columnDefinition = "uuid", nullable = false)	
+	private UUID refTokenUuid;
+
 	@Column(nullable = false, unique = true)
 	private String token;
+
+	@Column(nullable = false)
+	private Instant createdAt;
 
 	@Column(nullable = false)
 	private Instant expiryDate;
@@ -395,7 +402,7 @@ public class RefreshTokenEntity {
 	private int rotate;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", nullable = true)
+	@JoinColumn(name = "user_id", nullable = false) // I set nullable = false since child cannot exist w/o parent
 	@JsonIgnore
 	private UserEntity userEntity;
 
@@ -411,12 +418,28 @@ public class RefreshTokenEntity {
 		this.id = id;
 	}
 
+	public UUID getRefTokenUuid() {
+		return refTokenUuid;
+	}
+
+	public void setRefTokenUuid(UUID refTokenUuid) {
+		this.refTokenUuid = refTokenUuid;
+	}
+
 	public String getToken() {
 		return token;
 	}
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public Instant getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Instant createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	public Instant getExpiryDate() {
@@ -426,7 +449,7 @@ public class RefreshTokenEntity {
 	public void setExpiryDate(Instant expiryDate) {
 		this.expiryDate = expiryDate;
 	}
-	
+
 	public boolean isRevoked() {
 		return revoked;
 	}
@@ -466,6 +489,6 @@ public class RefreshTokenEntity {
 			return false;
 		RefreshTokenEntity other = (RefreshTokenEntity) obj;
 		return id == other.id;
-	}	
-}
-`;
+	}
+
+}`;
