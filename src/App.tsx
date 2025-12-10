@@ -233,6 +233,7 @@ import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterview
 import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
+import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
 
 const router = createBrowserRouter(
   [
@@ -521,10 +522,7 @@ const router = createBrowserRouter(
             {
               path: "reactjs-interview-questions",
               element: <ReactJSInterviewQuestions />,
-              children: [
-                { path: "memory-search", element: <MemorySearchMain /> },
-                { path: "memory-search", element: <MemorySearchMain /> },
-              ],
+              children: [{ path: "superup", element: <SuperupMain /> }],
             },
           ],
         },

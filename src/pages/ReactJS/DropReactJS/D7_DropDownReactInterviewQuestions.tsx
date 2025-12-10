@@ -46,7 +46,7 @@ const DropDownReactInterviewQuestions = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Memory Search" internalLink="/reactJS/reactjs-interview-questions/memory-search" />
+        <SideDropdownLink sideDropDownNavName="Superup" internalLink="/reactJS/reactjs-interview-questions/superup" />
       </div>
     </section>
   );
