@@ -6,9 +6,10 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import D1_DropDownGipsyKings from "./DropGuitar/D2_DropDownGipsyKings";
-import D2_DropDownFlamenco from "./DropGuitar/D3_DropDownFlamenco";
-import DropDownGuitarGeneral from "./DropGuitar/D1_DropDownGuitarGeneral";
+import D1_DropDownGuitarGeneral from "./DropGuitar/D1_DropDownGuitarGeneral";
+import D2_DropDownGipsyKings from "./DropGuitar/D2_DropDownGipsyKings";
+import D3_DropDownFlamenco from "./DropGuitar/D3_DropDownFlamenco";
+import D4_DropDownAntonGlushkin from "./DropGuitar/D4_DropDownAntonGlushkin";
 
 const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -40,9 +41,10 @@ const Guitar_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Guitar Home" internalLink="/guitar" />
-            <DropDownGuitarGeneral />
-            <D1_DropDownGipsyKings />
-            <D2_DropDownFlamenco />
+            <D1_DropDownGuitarGeneral />
+            <D2_DropDownGipsyKings />
+            <D3_DropDownFlamenco />
+            <D4_DropDownAntonGlushkin />
           </div>
         </article>
       )}

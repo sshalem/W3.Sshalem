@@ -234,7 +234,7 @@ import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
-import { Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
+import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
 import { SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
@@ -674,6 +674,10 @@ const router = createBrowserRouter(
                 { path: "solea", element: <SoleaMain /> },
                 // { path: "allegria", element: <AllegriaMain /> },
               ],
+            },
+            {
+              path: "anton-glushkin",
+              element: <AntonGlushkinMain />,
             },
           ],
         },

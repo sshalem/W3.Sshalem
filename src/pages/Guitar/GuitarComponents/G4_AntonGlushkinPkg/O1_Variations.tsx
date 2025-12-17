@@ -5,7 +5,7 @@
 import { MainChildArea } from "../../../../components";
 import YouTubeVideo from "../../../../components/YouTubeVideo";
 
-const O2_EmotionalChord = ({ anchor }: { anchor: string }) => {
+const O1_Variations = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px", minHeight: "50vh" }}>
@@ -17,6 +17,7 @@ const O2_EmotionalChord = ({ anchor }: { anchor: string }) => {
           }}
         >
           <YouTubeVideo videoId="XtuZZhb2cb8" />
+          <YouTubeVideo videoId="n9Dqslb17m0" />
           <YouTubeVideo videoId="tCQmLmODnxs" />
           <YouTubeVideo videoId="ot0J0_h9s3A" />
           <YouTubeVideo videoId="l1Q0b0fwFkI" />
@@ -24,10 +25,11 @@ const O2_EmotionalChord = ({ anchor }: { anchor: string }) => {
           <YouTubeVideo videoId="bcmvC3gi7xU" />
           <YouTubeVideo videoId="AkOmgAfEIdc" />
           <YouTubeVideo videoId="NTYoMHMg2a8" />
+          <YouTubeVideo videoId="gsTTUdvvy7M" />
           <YouTubeVideo videoId="gkCaP17tJ40" />
         </div>
       </div>
     </MainChildArea>
   );
 };
-export default O2_EmotionalChord;
+export default O1_Variations;

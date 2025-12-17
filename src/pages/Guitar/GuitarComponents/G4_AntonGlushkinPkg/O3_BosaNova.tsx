@@ -5,7 +5,7 @@
 import { MainChildArea } from "../../../../components";
 import YouTubeVideo from "../../../../components/YouTubeVideo";
 
-const O2_EmotionalChord = ({ anchor }: { anchor: string }) => {
+const O3_BosaNova = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px", minHeight: "50vh" }}>
@@ -30,4 +30,4 @@ const O2_EmotionalChord = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O2_EmotionalChord;
+export default O3_BosaNova;

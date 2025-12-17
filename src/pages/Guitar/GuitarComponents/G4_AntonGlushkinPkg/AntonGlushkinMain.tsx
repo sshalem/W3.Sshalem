@@ -3,11 +3,13 @@ import { ContentMenu, Loading } from "../../../../components";
 import O1_Variations from "./O1_Variations";
 import O2_EmotionalChord from "./O2_EmotionalChord";
 import O3_BosaNova from "./O3_BosaNova";
+import O0_YouTubeChannel from "./O0_YouTubeChannel";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
+const o0_YouTubeChannel = "Anton Glushkin YouTubeChannel";
 const o1_Variations = "1. Variations";
 const o2_EmotionalChord = "2. Emotional Chord";
 const o3_BosaNova = "3. Bosa Nova";
@@ -16,12 +18,12 @@ const o3_BosaNova = "3. Bosa Nova";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Variations, o2_EmotionalChord, o3_BosaNova];
+const anchorList: string[] = [o0_YouTubeChannel, o1_Variations, o2_EmotionalChord, o3_BosaNova];
 
 // ============================================
 // ============================================
 
-const GeneralMain = () => {
+const AntonGlushkinMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -68,7 +70,7 @@ const GeneralMain = () => {
         showContent={showContent}
         ulRef={ulRef}
       />
-
+      <O0_YouTubeChannel anchor={o0_YouTubeChannel} />
       <O1_Variations anchor={o1_Variations} />
       <O2_EmotionalChord anchor={o2_EmotionalChord} />
       <O3_BosaNova anchor={o3_BosaNova} />
@@ -77,4 +79,4 @@ const GeneralMain = () => {
     </section>
   );
 };
-export default GeneralMain;
+export default AntonGlushkinMain;

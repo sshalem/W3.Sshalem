@@ -1,12 +1,12 @@
 interface YouTubeVideoProps {
   videoId: string;
-  width?: string; // e.g. "100%" or "560px"
-  height?: string; // e.g. "315px"
+  videoWidth?: string; // e.g. "100%" or "560px"
+  videoHeight?: string; // e.g. "315px"
 }
 
-const YouTubeVideo = ({ videoId, width = "100%", height = "315px" }: YouTubeVideoProps) => {
+const YouTubeVideo = ({ videoId, videoWidth = "100%", videoHeight = "375px" }: YouTubeVideoProps) => {
   return (
-    <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+    <div style={{ position: "relative", paddingBottom: "25%", overflow: "hidden", height: "375px", width: "100%" }}>
       <iframe
         src={`https://www.youtube.com/embed/${videoId}`}
         title="YouTube video player"
@@ -16,8 +16,8 @@ const YouTubeVideo = ({ videoId, width = "100%", height = "315px" }: YouTubeVide
           position: "absolute",
           top: 0,
           left: 0,
-          width: width,
-          height: height,
+          width: videoWidth,
+          height: videoHeight,
           borderRadius: "8px",
           border: "none", // <-- replace frameBorder
         }}
