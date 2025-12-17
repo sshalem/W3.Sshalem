@@ -9,6 +9,7 @@ export { default as TomcatInstallMain } from "./D_LinuxPkg/F_TomcatInstallSectio
 export { default as MySqlnstallMain } from "./D_LinuxPkg/G_MySqlSections/MySqlnstallMain";
 export { default as JenkinsMain } from "./D_LinuxPkg/H_JenkinsSections/JenkinsMain";
 export { default as FileZillaMain } from "./D_LinuxPkg/C_ConnectFileZillaSections/FileZillaMain";
+export { default as GitMain } from "./D_GitPkg/GitMain";
 
 export { default as DeployNetlifyMain } from "./D_DeployNetlifyPkg/DeployNetlifyMain";
 export { default as DeployRenderMain } from "./D_DeployRenderPkg/DeployRenderMain";

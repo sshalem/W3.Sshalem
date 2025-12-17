@@ -104,6 +104,7 @@ import {
   FileZillaMain,
   DeployNetlifyMain,
   DeployRenderMain,
+  GitMain,
 } from "./pages/DevOps/DevOpsComponents";
 
 import { GitHome } from "./pages/Git/GitComponents";
@@ -625,6 +626,7 @@ const router = createBrowserRouter(
           element: <DevOps_page />,
           children: [
             { index: true, element: <DevOpsHome /> },
+            { path: "git", element: <GitMain /> },
             { path: "react-on-spring", element: <ReactOnSpringMain /> },
             { path: "netlify", element: <DeployNetlifyMain /> },
             { path: "render", element: <DeployRenderMain /> },

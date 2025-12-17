@@ -15,6 +15,7 @@ export { default as ReactJS_page } from "./ReactJS/ReactJS_page";
 export { default as Spring_page } from "./Spring/Spring_page";
 export { default as Sql_page } from "./Sql/Sql_page";
 export { default as Windows_page } from "./Windows/Windows_page";
+export { default as Guitar_page } from "./Guitar/Guitar_page";
 
 export { default as Error_page } from "./Error_page";
 export { default as Home_page } from "./Home_page";

@@ -6,14 +6,15 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownNetlify from "./DropDevOps/DropDownNetlify";
-import DropDownRender from "./DropDevOps/DropDownRender";
-import DropDownTomcat from "./DropDevOps/DropDownTomcat";
-import DropDownReactOnSpring from "./DropDevOps/DropDownReactOnSpring";
-import DropDownLinux from "./DropDevOps/DropDownLinux";
-import DropDownGit from "./DropDevOps/DropDownGit";
+import DropDownBasics from "./DropGuitar/D2_DropDownReactBasics";
+import DropDownRouter from "./DropGuitar/D4_DropDownRouter";
+import DropDownTypeScript from "./DropGuitar/D3_DropDownTypeScript";
+import DropDownSetup from "./DropGuitar/D1_DropDownSetup";
+import DropDownPagination from "./DropGuitar/D5_DropDownPagination";
+import DropDownSearch from "./DropGuitar/D6_DropDownSearch";
+import DropDownReactInterviewQuestions from "./DropGuitar/D7_DropDownReactInterviewQuestions";
 
-const DevOps_page = () => {
+const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -42,13 +43,14 @@ const DevOps_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="DevOps Home" internalLink="/devops" />
-            <DropDownGit />
-            <DropDownReactOnSpring />
-            <DropDownNetlify />
-            <DropDownRender />
-            <DropDownTomcat />
-            <DropDownLinux />
+            <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
+            <DropDownSetup />
+            <DropDownBasics />
+            <DropDownTypeScript />
+            <DropDownRouter />
+            <DropDownPagination />
+            <DropDownSearch />
+            <DropDownReactInterviewQuestions />
           </div>
         </article>
       )}
@@ -59,4 +61,4 @@ const DevOps_page = () => {
   );
 };
 
-export default DevOps_page;
+export default Guitar_page;
