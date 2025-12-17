@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropdownLink, SideDropDownTopic } from "../../../components";
+import { SideDropDownTopic } from "../../../components";
 
 const D4_DropDownAntonGlushkin = () => {
   const [showList, setShowList] = useState<boolean>(false);
