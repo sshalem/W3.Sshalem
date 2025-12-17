@@ -236,7 +236,7 @@ import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatter
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
-import { SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
+import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
 
 const router = createBrowserRouter(
@@ -671,8 +671,10 @@ const router = createBrowserRouter(
               path: "flamenco",
               element: <Flamenco />,
               children: [
+                // flamenco-basics
+                { path: "flamenco-basics", element: <FlamencoBasicsMain /> },
                 { path: "solea", element: <SoleaMain /> },
-                // { path: "allegria", element: <AllegriaMain /> },
+                { path: "rumba", element: <RumbaMain /> },
               ],
             },
             {

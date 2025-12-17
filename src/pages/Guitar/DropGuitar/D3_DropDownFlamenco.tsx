@@ -47,7 +47,9 @@ const D3_DropDownFlamenco = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="solea" internalLink="/guitar/flamenco/solea" />
+        <SideDropdownLink sideDropDownNavName="Flamenco Basics" internalLink="/guitar/flamenco/flamenco-basics" />
+        <SideDropdownLink sideDropDownNavName="Solea" internalLink="/guitar/flamenco/solea" />
+        <SideDropdownLink sideDropDownNavName="Rumba" internalLink="/guitar/flamenco/rumba" />
       </div>
     </section>
   );

@@ -1,22 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
+import O1_FlamencoBasics from "./O1_RumbaBasics";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const xxx_intro = "xxx Intro";
+const o1_FlamencoBasics = "1. Flamenco Basics";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [xxx_intro];
+const anchorList: string[] = [o1_FlamencoBasics];
 
 // ============================================
 // ============================================
 
-const SoleaMain = () => {
+const RumbaMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -64,7 +65,7 @@ const SoleaMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      {/* <O1_DeployNetlify anchor={o1_DeployNetlify} /> */}
+      <O1_FlamencoBasics anchor={o1_FlamencoBasics} />
       {/* <XXXIntro anchor={xxx_intro} /> */}
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
@@ -72,4 +73,4 @@ const SoleaMain = () => {
   );
 };
 
-export default SoleaMain;
+export default RumbaMain;
