@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D1_DropDownGipsyKings = () => {
+const D3_DropDownFlamenco = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const D1_DropDownGipsyKings = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("guitar/gipsy-kings")) {
+    if (location.pathname.includes("guitar/flamenco")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -38,8 +38,8 @@ const D1_DropDownGipsyKings = () => {
         // enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/guitar/gipsy-kings"
-        topicName="1. Gipsy Kings"
+        internalLink="/guitar/flamenco"
+        topicName="3. Flamenco"
       />
 
       <div
@@ -47,10 +47,10 @@ const D1_DropDownGipsyKings = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="allegria" internalLink="/guitar/gipsy-kings/allegria" />
+        <SideDropdownLink sideDropDownNavName="solea" internalLink="/guitar/flamenco/solea" />
       </div>
     </section>
   );
 };
 
-export default D1_DropDownGipsyKings;
+export default D3_DropDownFlamenco;

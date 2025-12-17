@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSetup = () => {
+const D2_DropDownGipsyKings = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownSetup = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("guitar/setup")) {
+    if (location.pathname.includes("guitar/gipsy-kings")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,20 +35,22 @@ const DropDownSetup = () => {
   return (
     <section>
       <SideDropDownTopic
-        enableCaret={false}
+        // enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/reactJS/setup"
-        topicName="1. Setup Project"
+        internalLink="/guitar/gipsy-kings"
+        topicName="2. Gipsy Kings"
       />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
-      ></div>
+      >
+        <SideDropdownLink sideDropDownNavName="allegria" internalLink="/guitar/gipsy-kings/allegria" />
+      </div>
     </section>
   );
 };
 
-export default DropDownSetup;
+export default D2_DropDownGipsyKings;

@@ -6,7 +6,9 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import D1_DropDownGipsyKings from "./DropGuitar/D1_DropDownGipsyKings";
+import D1_DropDownGipsyKings from "./DropGuitar/D2_DropDownGipsyKings";
+import D2_DropDownFlamenco from "./DropGuitar/D3_DropDownFlamenco";
+import DropDownGuitarGeneral from "./DropGuitar/D1_DropDownGuitarGeneral";
 
 const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -38,7 +40,9 @@ const Guitar_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Guitar Home" internalLink="/guitar" />
+            <DropDownGuitarGeneral />
             <D1_DropDownGipsyKings />
+            <D2_DropDownFlamenco />
           </div>
         </article>
       )}

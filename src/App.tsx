@@ -234,9 +234,10 @@ import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
-import { GuitarHome } from "./pages/Guitar/GuitarComponents";
-import GipsyKings from "./pages/Guitar/GuitarComponents/G1_GipsyKingsPkg/GipsyKings";
-import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G1_GipsyKingsPkg";
+import { Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
+import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
+import { SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
+import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
 
 const router = createBrowserRouter(
   [
@@ -655,11 +656,23 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <GuitarHome /> },
             {
+              path: "general",
+              element: <GeneralMain />,
+            },
+            {
               path: "gipsy-kings",
               element: <GipsyKings />,
               children: [
                 { path: "allegria", element: <AllegriaMain /> },
-                { path: "allegria", element: <AllegriaMain /> },
+                // { path: "allegria", element: <AllegriaMain /> },
+              ],
+            },
+            {
+              path: "flamenco",
+              element: <Flamenco />,
+              children: [
+                { path: "solea", element: <SoleaMain /> },
+                // { path: "allegria", element: <AllegriaMain /> },
               ],
             },
           ],
