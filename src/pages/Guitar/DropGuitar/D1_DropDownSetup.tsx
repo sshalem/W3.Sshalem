@@ -18,7 +18,7 @@ const DropDownSetup = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/setup")) {
+    if (location.pathname.includes("guitar/setup")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {

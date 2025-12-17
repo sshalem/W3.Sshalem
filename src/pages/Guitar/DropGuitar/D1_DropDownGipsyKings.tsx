@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownReactBasics = () => {
+const D1_DropDownGipsyKings = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownReactBasics = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/basics")) {
+    if (location.pathname.includes("guitar/gipsy-kings")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,17 +34,23 @@ const DropDownReactBasics = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/basics" topicName="2. React Basics" />
+      <SideDropDownTopic
+        // enableCaret={false}
+        showList={showList}
+        handleOpenList={handleOpenList}
+        internalLink="/guitar/gipsy-kings"
+        topicName="1. Gipsy Kings"
+      />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="JSX" internalLink="/reactJS/basics/jsx" />
+        <SideDropdownLink sideDropDownNavName="allegria" internalLink="/guitar/gipsy-kings/allegria" />
       </div>
     </section>
   );
 };
 
-export default DropDownReactBasics;
+export default D1_DropDownGipsyKings;

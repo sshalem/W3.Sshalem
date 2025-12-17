@@ -6,7 +6,7 @@ import {
   DevOps_page,
   Error_page,
   FullStack_page,
-  Git_page,
+  Guitar_page,
   Home_page,
   HTML_CSS_page,
   Java_page,
@@ -107,7 +107,6 @@ import {
   GitMain,
 } from "./pages/DevOps/DevOpsComponents";
 
-import { GitHome } from "./pages/Git/GitComponents";
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { BatchHome } from "./pages/Batch/BatchComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
@@ -235,6 +234,9 @@ import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
+import { GuitarHome } from "./pages/Guitar/GuitarComponents";
+import GipsyKings from "./pages/Guitar/GuitarComponents/G1_GipsyKingsPkg/GipsyKings";
+import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G1_GipsyKingsPkg";
 
 const router = createBrowserRouter(
   [
@@ -647,7 +649,21 @@ const router = createBrowserRouter(
             },
           ],
         },
-        { path: "git", element: <Git_page />, children: [{ index: true, element: <GitHome /> }] },
+        {
+          path: "guitar",
+          element: <Guitar_page />,
+          children: [
+            { index: true, element: <GuitarHome /> },
+            {
+              path: "gipsy-kings",
+              element: <GipsyKings />,
+              children: [
+                { path: "allegria", element: <AllegriaMain /> },
+                { path: "allegria", element: <AllegriaMain /> },
+              ],
+            },
+          ],
+        },
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
         { path: "batch", element: <Batch_page />, children: [{ index: true, element: <BatchHome /> }] },
         {

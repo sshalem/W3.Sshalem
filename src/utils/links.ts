@@ -14,7 +14,7 @@ export const links: string[] = [
   "/sql",
   "/python",
   "/devops",
-  "/git",
+  "/guitar",
   "/linux",
   "/batch",
   "/postman",
@@ -43,5 +43,3 @@ export const links: string[] = [
 // "/18",
 // "/19",
 // "/20",
-
-

@@ -6,13 +6,7 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownBasics from "./DropGuitar/D2_DropDownReactBasics";
-import DropDownRouter from "./DropGuitar/D4_DropDownRouter";
-import DropDownTypeScript from "./DropGuitar/D3_DropDownTypeScript";
-import DropDownSetup from "./DropGuitar/D1_DropDownSetup";
-import DropDownPagination from "./DropGuitar/D5_DropDownPagination";
-import DropDownSearch from "./DropGuitar/D6_DropDownSearch";
-import DropDownReactInterviewQuestions from "./DropGuitar/D7_DropDownReactInterviewQuestions";
+import D1_DropDownGipsyKings from "./DropGuitar/D1_DropDownGipsyKings";
 
 const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,14 +37,8 @@ const Guitar_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
-            <DropDownSetup />
-            <DropDownBasics />
-            <DropDownTypeScript />
-            <DropDownRouter />
-            <DropDownPagination />
-            <DropDownSearch />
-            <DropDownReactInterviewQuestions />
+            <SideBarLink pageName="Guitar Home" internalLink="/guitar" />
+            <D1_DropDownGipsyKings />
           </div>
         </article>
       )}

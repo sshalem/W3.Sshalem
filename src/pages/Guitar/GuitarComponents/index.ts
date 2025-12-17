@@ -1,12 +1,1 @@
-export { default as ReactJSHome } from "./GuitarHome";
-export { default as Setup } from "./R1_SetupPkg/Setup";
-export { default as ReactBasics } from "./R2_ReactBasicsPkg/ReactBasics";
-export { default as JsxMain } from "./R2_ReactBasicsPkg/JsxSections/JsxMain";
-export { default as IntroMain } from "./R3_TypeScriptPkg/IntroSections/IntroMain";
-export { default as TypeScript } from "./R3_TypeScriptPkg/TypeScript";
-export { default as ReactRouter } from "./R4_RouterPkg/Router";
-export { default as RouterMain } from "./R4_RouterPkg/RouterInstallSections/RouterMain";
-export { default as Pagination } from "./R5_PaginationPkg/Pagination";
-export { default as MemorySearchMain } from "./R6_GlobalSearchPkg/A_MemorySearchSections/MemorySearchMain";
-export { default as GlobalSearch } from "./R6_GlobalSearchPkg/GlobalSearch";
-export { default as ReactJSInterviewQuestions } from "./R7_ReactJSInterviewQuestionsPkg/ReactJSInterviewQuestions";
+export { default as GuitarHome } from "./GuitarHome";

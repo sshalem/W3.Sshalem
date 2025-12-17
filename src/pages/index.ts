@@ -2,7 +2,6 @@ export { default as Batch_page } from "./Batch/Batch_page";
 export { default as Cpp_page } from "./Cpp/Cpp_page";
 export { default as DevOps_page } from "./DevOps/DevOps_page";
 export { default as FullStack_page } from "./FullStack/FullStack_page";
-export { default as Git_page } from "./Git/Git_page";
 export { default as HTML_CSS_page } from "./HTML_CSS/HTML_CSS_page";
 export { default as Java_page } from "./Java/Java_page";
 export { default as JavaScript_page } from "./JavaScript/JavaScript_page";
