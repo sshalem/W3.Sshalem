@@ -3,14 +3,14 @@
 
 */
 import { GitHub, GitHubLiAnchor } from "../../../components";
-import { BatchHighlight, SpanGreen } from "../../../components/Highlight";
+import { BatchHighlight, SpanGrey } from "../../../components/Highlight";
 
 const GitHome = () => {
   return (
     <section>
       <div className="bg-teal-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">GitHome Home ...</div>
       <article className="my-8">
-        <SpanGreen>Git_all.bat</SpanGreen> script , that runs several commands
+        <SpanGrey>Git_all.bat</SpanGrey> script , that runs several commands
         <BatchHighlight batchCode={git_commands}></BatchHighlight>
       </article>
       <GitHub>

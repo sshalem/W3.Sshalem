@@ -3,14 +3,14 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
-import { BatchHighlight, SpanGreen } from "../../../../components/Highlight";
+import { BatchHighlight, SpanGrey } from "../../../../components/Highlight";
 
 const O1_Commands = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
         <article className="my-8">
-          <SpanGreen>Git_all.bat</SpanGreen> script , that runs several commands
+          <SpanGrey>Git_all.bat</SpanGrey> script , that runs several commands
           <BatchHighlight batchCode={git_commands}></BatchHighlight>
         </article>
         <GitHub>
