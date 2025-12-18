@@ -82,7 +82,7 @@ import {
   Setup,
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
-import { DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
+import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
@@ -227,17 +227,19 @@ import {
   FactoryMain,
   PrototypeMain,
   SingletonMain,
-} from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg";
-import DesignPatternCreational from "./pages/Java/JavaComponents/J2_DesignPatternCreationalPkg/DesignPatternCreational";
+} from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg";
+import DesignPatternCreational from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg/DesignPatternCreational";
 import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
 import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
-import DesignPatternBehavioral from "./pages/Java/JavaComponents/J4_DesignPatternBehavioralPkg/DesignPatternBehavioral";
+import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
 import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
+import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_ArraysSections/ArraysMain";
+import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
 
 const router = createBrowserRouter(
   [
@@ -554,6 +556,18 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <JavaHome /> },
             { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "data-structures",
+              element: <DataStructures />,
+              children: [
+                { path: "arrays", element: <ArraysMain /> },
+                { path: "list", element: <ListMain /> },
+                { path: "set", element: <SetMain /> },
+                { path: "map", element: <MapMain /> },
+                { path: "queue", element: <QueueMain /> },
+                { path: "concurent", element: <ConcurrentDataMain /> },
+              ],
+            },
             {
               path: "design-patterns-creational",
               element: <DesignPatternCreational />,

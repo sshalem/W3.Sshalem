@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const J3_DropDownDesignPatternStructural = () => {
+const J2_DropDownDataStructure = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const J3_DropDownDesignPatternStructural = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("java/design-patterns-structural")) {
+    if (location.pathname.includes("java/data-structures")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,26 +34,22 @@ const J3_DropDownDesignPatternStructural = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/java/design-patterns-structural"
-        topicName="3. Design Patterns Structural"
-      />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/data-structures" topicName="2. Data Structures" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Singleton" internalLink="/java/design-patterns-structural/singleton" />
-        <SideDropdownLink sideDropDownNavName="Prototype" internalLink="/java/design-patterns-structural/prototype" />
-        <SideDropdownLink sideDropDownNavName="Builder" internalLink="/java/design-patterns-structural/builder" />
-        <SideDropdownLink sideDropDownNavName="Factory" internalLink="/java/design-patterns-structural/factory" />
-        <SideDropdownLink sideDropDownNavName="Abstract Factory" internalLink="/java/design-patterns-structural/abstract-factory" />
+        <SideDropdownLink sideDropDownNavName="Array" internalLink="/java/data-structures/arrays" />
+        <SideDropdownLink sideDropDownNavName="List" internalLink="/java/data-structures/list" />
+        <SideDropdownLink sideDropDownNavName="Set" internalLink="/java/data-structures/set" />
+        <SideDropdownLink sideDropDownNavName="Map" internalLink="/java/data-structures/map" />
+        <SideDropdownLink sideDropDownNavName="Queue" internalLink="/java/data-structures/queue" />
+        <SideDropdownLink sideDropDownNavName="Concurent" internalLink="/java/data-structures/concurent" />
       </div>
     </section>
   );
 };
 
-export default J3_DropDownDesignPatternStructural;
+export default J2_DropDownDataStructure;

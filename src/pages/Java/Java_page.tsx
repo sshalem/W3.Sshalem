@@ -7,10 +7,11 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
-import J2_DropDownDesignPatternCreational from "./DropJava/J2_DropDownDesignPatternCreational";
-import J3_DropDownDesignPatternStructural from "./DropJava/J3_DropDownDesignPatternStructural";
+import J3_DropDownDesignPatternCreational from "./DropJava/J3_DropDownDesignPatternCreational";
+import J4_DropDownDesignPatternStructural from "./DropJava/J4_DropDownDesignPatternStructural";
+import J5_DropDownDesignPatternBehavioral from "./DropJava/J5_DropDownDesignPatternBehavioral";
 import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
-import J4_DropDownDesignPatternBehavioral from "./DropJava/J4_DropDownDesignPatternBehavioral";
+import J2_DropDownDataStructure from "./DropJava/J2_DropDownDataStructure";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,9 +44,10 @@ const Java_page = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="Java Home" internalLink="/java" />
             <J1_DropDownJavaBasics />
-            <J2_DropDownDesignPatternCreational />
-            <J3_DropDownDesignPatternStructural />
-            <J4_DropDownDesignPatternBehavioral />
+            <J2_DropDownDataStructure />
+            <J3_DropDownDesignPatternCreational />
+            <J4_DropDownDesignPatternStructural />
+            <J5_DropDownDesignPatternBehavioral />
             <J9_DropDownJavaInterviewQuestions />
           </div>
         </article>

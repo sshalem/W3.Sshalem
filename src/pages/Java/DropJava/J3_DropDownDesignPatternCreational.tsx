@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const J2_DropDownDesignPatternCreational = () => {
+const J3_DropDownDesignPatternCreational = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -38,7 +38,7 @@ const J2_DropDownDesignPatternCreational = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/java/design-patterns-creational"
-        topicName="2. Design Patterns Creational"
+        topicName="3. Design Patterns Creational"
       />
 
       <div
@@ -56,4 +56,4 @@ const J2_DropDownDesignPatternCreational = () => {
   );
 };
 
-export default J2_DropDownDesignPatternCreational;
+export default J3_DropDownDesignPatternCreational;
