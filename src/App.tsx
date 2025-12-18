@@ -230,7 +230,16 @@ import {
 } from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg";
 import DesignPatternCreational from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg/DesignPatternCreational";
 import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
-import { ArrayMain } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
+import {
+  ArrayMain,
+  GcHeapStackMain,
+  InputOutputMain,
+  Java8Main,
+  MethodsMain,
+  MultiThreadingMain,
+  OopMain,
+  StringMain,
+} from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
@@ -240,6 +249,7 @@ import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarC
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
 import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_ArraysSections/ArraysMain";
 import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
+import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_BasicsSections/JavaFundamentalMain";
 
 const router = createBrowserRouter(
   [
@@ -555,7 +565,22 @@ const router = createBrowserRouter(
           element: <Java_page />,
           children: [
             { index: true, element: <JavaHome /> },
-            { path: "basics", element: <JavaBasics />, children: [{ path: "array", element: <ArrayMain /> }] },
+            {
+              path: "basics",
+              element: <JavaBasics />,
+              children: [
+                { path: "java-fundamental", element: <JavaFundamentalMain /> },
+                { path: "array", element: <ArrayMain /> },
+                { path: "string", element: <StringMain /> },
+                { path: "methods", element: <MethodsMain /> },
+                { path: "oop", element: <OopMain /> },
+                { path: "collections", element: <CollectionMain /> },
+                { path: "io", element: <InputOutputMain /> },
+                { path: "multithreading", element: <MultiThreadingMain /> },
+                { path: "gc-heap-stack", element: <GcHeapStackMain /> },
+                { path: "java8", element: <Java8Main /> },
+              ],
+            },
             {
               path: "data-structures",
               element: <DataStructures />,

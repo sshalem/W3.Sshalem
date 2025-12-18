@@ -41,7 +41,16 @@ const J1_DropDownJavaBasics = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        <SideDropdownLink sideDropDownNavName="Java Fundamental" internalLink="/java/basics/java-fundamental" />
         <SideDropdownLink sideDropDownNavName="Array" internalLink="/java/basics/array" />
+        <SideDropdownLink sideDropDownNavName="String" internalLink="/java/basics/string" />
+        <SideDropdownLink sideDropDownNavName="Methods" internalLink="/java/basics/methods" />
+        <SideDropdownLink sideDropDownNavName="OOP" internalLink="/java/basics/oop" />
+        <SideDropdownLink sideDropDownNavName="Collections" internalLink="/java/basics/collections" />
+        <SideDropdownLink sideDropDownNavName="I/O" internalLink="/java/basics/io" />
+        <SideDropdownLink sideDropDownNavName="Multithreading" internalLink="/java/basics/multithreading" />
+        <SideDropdownLink sideDropDownNavName="GC, Heap, Stack" internalLink="/java/basics/gc-heap-stack" />
+        <SideDropdownLink sideDropDownNavName="JAVA 8" internalLink="/java/basics/java8" />
       </div>
     </section>
   );
