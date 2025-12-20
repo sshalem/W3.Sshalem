@@ -4,7 +4,7 @@
 */
 import { MainChildArea } from "../../../../../components";
 
-const CollectionsIntro = ({ anchor }: { anchor: string }) => {
+const JavaCollectionsIntro = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}>Add any content here</MainChildArea>;
 };
-export default CollectionsIntro;
+export default JavaCollectionsIntro;

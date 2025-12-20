@@ -3,7 +3,7 @@ export { default as ArrayMain } from "./B_ArraySections/ArrayMain";
 export { default as StringMain } from "./C_StringSections/StringMain";
 export { default as MethodsMain } from "./D_MethodsSections/MethodsMain";
 export { default as OopMain } from "./E_OopSections/OopMain";
-export { default as CollectionsMain } from "./F_CollectionsSections/CollectionsMain";
+export { default as JavaCollectionsMain } from "./F_CollectionsSections/JavaCollectionsMain";
 export { default as InputOutputMain } from "./G_InputOutputSections/InputOutputMain";
 export { default as MultiThreadingMain } from "./H_MultiThreadingSections/MultiThreadingMain";
 export { default as GcHeapStackMain } from "./I_GcHeapStackSections/GcHeapStackMain";

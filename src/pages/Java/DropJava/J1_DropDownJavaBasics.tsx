@@ -49,7 +49,7 @@ const J1_DropDownJavaBasics = () => {
         <SideDropdownLink sideDropDownNavName="Collections" internalLink="/java/basics/collections" />
         <SideDropdownLink sideDropDownNavName="I/O" internalLink="/java/basics/io" />
         <SideDropdownLink sideDropDownNavName="Multithreading" internalLink="/java/basics/multithreading" />
-        <SideDropdownLink sideDropDownNavName="GC, Heap, Stack" internalLink="/java/basics/gc-heap-stack" />
+        <SideDropdownLink sideDropDownNavName="Stack, Heap, Garbage Collect" internalLink="/java/basics/gc-heap-stack" />
         <SideDropdownLink sideDropDownNavName="JAVA 8" internalLink="/java/basics/java8" />
       </div>
     </section>

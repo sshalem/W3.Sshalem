@@ -4,19 +4,21 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./GcHeapStackIntro";
+import O1_StackHeapMemory from "./O1_StackHeapMemory";
+import O2_GarbageCollector from "./O2_GarbageCollector";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o1_StackHeapMemory = "1. Stack/Heap Memory";
+const o2_GarbageCollector = "2. Garbage Collector";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o1_StackHeapMemory, o2_GarbageCollector];
 
 // ============================================
 // ============================================
@@ -70,7 +72,8 @@ const GcHeapStackMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O1_StackHeapMemory anchor={o1_StackHeapMemory} />
+      <O2_GarbageCollector anchor={o2_GarbageCollector} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
