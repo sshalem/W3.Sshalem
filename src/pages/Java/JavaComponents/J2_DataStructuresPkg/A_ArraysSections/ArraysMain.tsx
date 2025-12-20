@@ -4,19 +4,19 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./ArraysIntro";
+import O1_ArraysStracture from "./O1_ArraysStracture";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o1_ArraysStracture = "1. Arrays Stracture";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o1_ArraysStracture];
 
 // ============================================
 // ============================================
@@ -70,7 +70,7 @@ const ArraysMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O1_ArraysStracture anchor={o1_ArraysStracture} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
