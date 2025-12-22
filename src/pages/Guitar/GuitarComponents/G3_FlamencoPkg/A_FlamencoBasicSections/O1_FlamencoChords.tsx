@@ -3,11 +3,20 @@
 
 */
 import { MainChildArea } from "../../../../../components";
+import GuitarGrid from "../../../../../components/Guitar/GuitarGrid";
 import YouTubeVideo from "../../../../../components/YouTubeVideo";
 
 const O1_FlamencoChords = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <section className="my-8">
+        <div className="p-6">
+          <GuitarGrid stringName="A" fret={5} rhythm="↓" />
+          <GuitarGrid stringName="D" fret={7} rhythm="↑" />
+          <GuitarGrid stringName="e" fret={3} rhythm="x" />
+        </div>
+      </section>
+
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px", minHeight: "50vh" }}>
         <div
           style={{
