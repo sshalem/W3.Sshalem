@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_FlamencoBasics from "./O1_FlamencoBasics";
+import O1_FlamencoChords from "./O1_FlamencoChords";
+import O2_FlamencoBasics from "./O2_FlamencoBasics";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_FlamencoBasics = "1. Flamenco Basics";
+const o1_FlamencoChords = "1. Flamenco Chords";
+const o2_FlamencoBasics = "2. Flamenco Basics";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_FlamencoBasics];
+const anchorList: string[] = [o1_FlamencoChords, o2_FlamencoBasics];
 
 // ============================================
 // ============================================
@@ -65,7 +67,8 @@ const FlamencoBasicsMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_FlamencoBasics anchor={o1_FlamencoBasics} />
+      <O1_FlamencoChords anchor={o1_FlamencoChords} />
+      <O2_FlamencoBasics anchor={o2_FlamencoBasics} />
       {/* <XXXIntro anchor={xxx_intro} /> */}
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>

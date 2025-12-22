@@ -17,10 +17,16 @@ const O1_RumbaBasics = ({ anchor }: { anchor: string }) => {
           }}
         >
           <YouTubeVideo videoId="h879X16JUlI" />
-          <YouTubeVideo videoId="I3jWsoQ8W8g" />
-          <YouTubeVideo videoId="KySpArbAQPg" />
-          <YouTubeVideo videoId="LOKkTYpIjxg" />
-          <YouTubeVideo videoId="hUhKKhlEaEY" />
+          <YouTubeVideo videoId="bxFPo2JdyQ4" />
+          <YouTubeVideo videoId="wpA7_S6F5Nw" />
+          <YouTubeVideo videoId="t2ePG28cQyM" />
+          <YouTubeVideo videoId="U3FFwPi-e_4" />
+          <YouTubeVideo videoId="0AnbgxLLlD4" />
+          <YouTubeVideo videoId="0KlJ369Avb8" />
+          <YouTubeVideo videoId="R9gsRjsDHxI" />
+          <YouTubeVideo videoId="B_cCJ3m7L8A" />
+          <YouTubeVideo videoId="rcxk0pAkSYg" />
+          <YouTubeVideo videoId="Po2Kw7JbzNY" />
         </div>
       </div>
     </MainChildArea>

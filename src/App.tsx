@@ -245,12 +245,13 @@ import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInt
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
-import { AllegriaMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
+import { AllegriaMain, LoveAndLiberteMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
 import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
 import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_ArraysSections/ArraysMain";
 import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
 import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_BasicsSections/JavaFundamentalMain";
+import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
 
 const router = createBrowserRouter(
   [
@@ -704,7 +705,8 @@ const router = createBrowserRouter(
               element: <GipsyKings />,
               children: [
                 { path: "allegria", element: <AllegriaMain /> },
-                // { path: "allegria", element: <AllegriaMain /> },
+                { path: "love-and-liberte", element: <LoveAndLiberteMain /> },
+                { path: "generic", element: <GenericSongsMain /> },
               ],
             },
             {

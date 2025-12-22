@@ -47,7 +47,9 @@ const D2_DropDownGipsyKings = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="allegria" internalLink="/guitar/gipsy-kings/allegria" />
+        <SideDropdownLink sideDropDownNavName="Allegria" internalLink="/guitar/gipsy-kings/allegria" />
+        <SideDropdownLink sideDropDownNavName="Love And Liberte" internalLink="/guitar/gipsy-kings/love-and-liberte" />
+        <SideDropdownLink sideDropDownNavName="generic" internalLink="/guitar/gipsy-kings/generic" />
       </div>
     </section>
   );
