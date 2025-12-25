@@ -47,11 +47,12 @@ const DropDownLinux = () => {
         <SideDropdownLink sideDropDownNavName="2. connect with SSH" internalLink="/devops/linux-server/connect-with-ssh" />
         <SideDropdownLink sideDropDownNavName="3. connect with FileZilla" internalLink="/devops/linux-server/connect-with-filezilla" />
         <SideDropdownLink sideDropDownNavName="4. Linux server setup" internalLink="/devops/linux-server/setup-server" />
-        <SideDropdownLink sideDropDownNavName="5. Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
-        <SideDropdownLink sideDropDownNavName="6. Linux NGINX Install" internalLink="/devops/linux-server/nginx-install" />
-        <SideDropdownLink sideDropDownNavName="7. Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
-        <SideDropdownLink sideDropDownNavName="8. Linux MySql Install" internalLink="/devops/linux-server/mysql-install" />
-        <SideDropdownLink sideDropDownNavName="9. Linux Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
+        <SideDropdownLink sideDropDownNavName="5. JDK Install" internalLink="/devops/linux-server/jdk-install" />
+        <SideDropdownLink sideDropDownNavName="6. NGINX Install" internalLink="/devops/linux-server/nginx-install" />
+        <SideDropdownLink sideDropDownNavName="7. Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
+        <SideDropdownLink sideDropDownNavName="8. Deploy" internalLink="/devops/linux-server/deploy" />
+        <SideDropdownLink sideDropDownNavName="9. MySql Install" internalLink="/devops/linux-server/mysql-install" />
+        <SideDropdownLink sideDropDownNavName="10. Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
       </div>
     </section>
   );

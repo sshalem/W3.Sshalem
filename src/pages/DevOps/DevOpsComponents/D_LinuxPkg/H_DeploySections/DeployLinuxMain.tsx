@@ -21,7 +21,7 @@ const anchorList: string[] = [o1_DeploySpringJar, o2_JdkRemove, o3_Jdk21Install]
 // ============================================
 // ============================================
 
-const DeployMain = () => {
+const DeployLinuxMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -76,4 +76,4 @@ const DeployMain = () => {
     </section>
   );
 };
-export default DeployMain;
+export default DeployLinuxMain;

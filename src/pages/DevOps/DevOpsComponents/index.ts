@@ -13,6 +13,7 @@ export { default as FileZillaMain } from "./D_LinuxPkg/C_ConnectFileZillaSection
 export { default as GitMain } from "./D_GitPkg/GitMain";
 
 export { default as DeployNetlifyMain } from "./D_DeployNetlifyPkg/DeployNetlifyMain";
+export { default as DeployLinuxMain } from "./D_LinuxPkg/H_DeploySections/DeployLinuxMain";
 export { default as DeployRenderMain } from "./D_DeployRenderPkg/DeployRenderMain";
 
 export { default as NginxInstallMain } from "./D_LinuxPkg/F_NginxInstallSections/NginxInstallMain";

@@ -106,6 +106,7 @@ import {
   DeployRenderMain,
   GitMain,
   NginxInstallMain,
+  DeployLinuxMain,
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -687,6 +688,7 @@ const router = createBrowserRouter(
                 { path: "jdk-install", element: <JdkInstallMain /> },
                 { path: "nginx-install", element: <NginxInstallMain /> },
                 { path: "tomcat-install", element: <TomcatInstallMain /> },
+                { path: "deploy", element: <DeployLinuxMain /> },
                 { path: "mysql-install", element: <MySqlnstallMain /> },
                 { path: "jenkins-install", element: <JenkinsMain /> },
               ],
