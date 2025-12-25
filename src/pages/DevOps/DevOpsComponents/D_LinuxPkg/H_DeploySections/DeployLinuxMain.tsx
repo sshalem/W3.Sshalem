@@ -1,22 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_DeploySpringJar from "./O1_DeploySpringJar";
-import O2_JdkRemove from "./O2_DeploySpringNginx";
-import O3_Jdk21Install from "./O3_DeployReactJsNginx";
+
+import O1_CreateJarWar from "./O1_CreateJarWar";
+import O2_DeploySpringJarOnLinux from "./O2_DeploySpringJarOnLinux";
+import O3_DeployJarNginx from "./O3_DeployJarNginx";
+import O4_DeployReactJsNginx from "./O4_DeployReactJsNginx";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DeploySpringJar = "1. Deploy Spring Jar file";
-const o2_JdkRemove = "2. Deploy Spring on NGINX";
-const o3_Jdk21Install = "3. Deploy React on NGINX";
+const o1_CreateJarWar = "1. Create Jar/War";
+const o2_DeploySpringJarOnLinux = "2. Deploy JAR/WAR on Linux";
+const o3_DeployJarNginx = "3. Deploy JAR on Nginx";
+const o4_DeployReactJsNginx = "4. Deploy ReactJs on Nginx";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DeploySpringJar, o2_JdkRemove, o3_Jdk21Install];
+const anchorList: string[] = [o1_CreateJarWar, o2_DeploySpringJarOnLinux, o3_DeployJarNginx, o4_DeployReactJsNginx];
 
 // ============================================
 // ============================================
@@ -69,9 +72,11 @@ const DeployLinuxMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_DeploySpringJar anchor={o1_DeploySpringJar} />
-      <O2_JdkRemove anchor={o2_JdkRemove} />
-      <O3_Jdk21Install anchor={o3_Jdk21Install} />
+      <O1_CreateJarWar anchor={o1_CreateJarWar} />
+      <O2_DeploySpringJarOnLinux anchor={o2_DeploySpringJarOnLinux} />
+      <O3_DeployJarNginx anchor={o3_DeployJarNginx} />
+      <O4_DeployReactJsNginx anchor={o4_DeployReactJsNginx} />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

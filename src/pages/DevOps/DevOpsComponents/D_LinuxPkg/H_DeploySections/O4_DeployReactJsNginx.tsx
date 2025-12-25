@@ -6,7 +6,7 @@ import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
-const O3_DeployReactJsNginx = ({ anchor }: { anchor: string }) => {
+const O4_DeployReactJsNginx = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       ✅ Install JDK 21 on Ubuntu 22.04 (recommended) Installed JDK packages.
@@ -23,7 +23,7 @@ const O3_DeployReactJsNginx = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O3_DeployReactJsNginx;
+export default O4_DeployReactJsNginx;
 
 const jdk_install = `java -version 
 sudo apt update

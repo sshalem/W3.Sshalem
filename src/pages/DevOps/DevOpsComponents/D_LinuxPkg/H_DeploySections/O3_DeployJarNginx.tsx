@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
-const O2_DeploySpringNginx = ({ anchor }: { anchor: string }) => {
+const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       If you want to keep the server clean:
@@ -22,7 +22,7 @@ const O2_DeploySpringNginx = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O2_DeploySpringNginx;
+export default O3_DeployJarNginx;
 
 const jdk_list = `apt list --installed | grep -i openjdk`;
 const jdk_remove = `sudo apt remove openjdk-17-jdk
