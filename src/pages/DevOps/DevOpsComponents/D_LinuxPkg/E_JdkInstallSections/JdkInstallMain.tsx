@@ -1,18 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_JdkInstall from "./O1_JdkInstall";
+import O2_JdkRemove from "./O2_JdkRemove";
+import O3_Jdk21Install from "./O3_Jdk21Install";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const O1_jdk_install = "01_JDK_Install";
+const o1_jdk_install = "1. JDK 17 Install";
+const o2_JdkRemove = "2. JDK Remove";
+const o3_Jdk21Install = "3. JDK 21 Install";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [O1_jdk_install];
+const anchorList: string[] = [o1_jdk_install, o2_JdkRemove, o3_Jdk21Install];
 
 // ============================================
 // ============================================
@@ -65,7 +69,9 @@ const JdkInstallMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_JdkInstall anchor={O1_jdk_install}></O1_JdkInstall>
+      <O1_JdkInstall anchor={o1_jdk_install}></O1_JdkInstall>
+      <O2_JdkRemove anchor={o2_JdkRemove} />
+      <O3_Jdk21Install anchor={o3_Jdk21Install} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
