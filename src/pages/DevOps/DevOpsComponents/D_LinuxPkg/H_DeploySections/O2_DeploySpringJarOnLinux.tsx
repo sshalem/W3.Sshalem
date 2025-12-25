@@ -9,8 +9,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-6 text-2xl font-semibold"> 1️⃣ Build the JAR locally</p>
-
+        <p className="my-8 text-2xl font-semibold"> 1️⃣ Build the JAR locally</p>
         <article className="my-8 text-xl font-semibold">✅ Option 1 : Build the JAR</article>
         <ULdisc>
           <Li>Open Terminal with the path where project resides</Li>
@@ -26,7 +25,6 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
             <SpanGrey>0.0.1-SNAPSHOT</SpanGrey> is version
           </Li>
         </ULdisc>
-
         <article className="my-8 text-xl font-semibold">✅ Option 2 : Build the JAR with custom app name</article>
         <ULdisc>
           <Li>
@@ -40,7 +38,6 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
           </Li>
           <XmlHighlight xmlCode={custom_app_name} />
         </ULdisc>
-
         <article className="my-8 text-xl font-semibold">✅ Option 3 : Command-line solution (works only if you wire it)</article>
         <ULdisc>
           <Li>
@@ -63,10 +60,8 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
             <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
           </Li>
         </ULdisc>
-
         <hr />
-
-        <p className="my-6 text-2xl font-semibold"> 2️⃣ Connect to your Linode server</p>
+        <p className="my-8 text-2xl font-semibold"> 2️⃣ Connect to your Linode server</p>
         <ULdisc>
           <Li>
             connect to Linode server with SSH connection (to get the IP info , login to Linode server)
@@ -74,7 +69,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <hr />
-        <p className="my-6 text-2xl font-semibold"> 3️⃣ create a dedicated folder</p>
+        <p className="my-8 text-2xl font-semibold"> 3️⃣ create a dedicated folder</p>
         <ULdisc>
           <Li>
             create a dedicated folder under <SpanGrey>/opt</SpanGrey> directory
@@ -92,13 +87,42 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <hr />
-        <p className="my-6 text-2xl font-semibold"> 4️⃣ Upload the JAR to Linode</p>
+        <p className="my-8 text-2xl font-semibold"> 4️⃣ Upload the JAR to Linode</p>
         <ULdisc>
           <Li>
             Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
           </Li>
-          <Li>Run command below, which copies the JAR file to a dedicated folder (on Linode Linux server)</Li>
-          <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+          <Li>
+            Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
+            <ULdisc>
+              <Li>
+                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
+              </Li>
+              <Li>
+                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
+              </Li>
+            </ULdisc>
+            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+          </Li>
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-2xl font-semibold"> 5️⃣ Run the JAR (basic)</p>
+        <ULdisc>
+          <Li>
+            Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
+          </Li>
+          <Li>
+            Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
+            <ULdisc>
+              <Li>
+                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
+              </Li>
+              <Li>
+                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
+              </Li>
+            </ULdisc>
+            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+          </Li>
         </ULdisc>
       </section>
     </MainChildArea>
@@ -114,7 +138,7 @@ const connect_to_linode = `ssh root@139.162.148.144`;
 
 const mkdir_folder = `mkdir -p /opt/springboot`;
 
-const scp_jar = `scp target/your-app-name.jar root@YOUR_LINODE_IP:/opt/springboot/`;
+const scp_jar = `scp target/{my-app-name}.jar root@{LINODE_SERVER_IP}:/opt/springboot/`;
 
 const jar_organized = `/opt/springboot/app.jar
 /opt/springboot/logs/
