@@ -2,15 +2,16 @@
 
 
 */
-import { Li, MainChildArea, ULDecimal } from "../../../../../components";
+import { IMG, MainChildArea } from "../../../../../components";
+import maven_1 from "../../../../../assets/maven_1.jpg";
+import Table_5ColCompareMaven from "../../../../../components/Tables/Table_5ColCompareMaven";
 
 const O1_DeploySpringJar = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <ULDecimal>
-        <Li>maven clean</Li>
-        <Li>maven install</Li>
-      </ULDecimal>
+      These are Spring tool suite maven options (when right click and choose run as):
+      <IMG img_name={maven_1}></IMG>
+      <Table_5ColCompareMaven />
     </MainChildArea>
   );
 };
