@@ -43,14 +43,15 @@ const DropDownLinux = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="create linode server" internalLink="/devops/linux-server/create-server" />
-        <SideDropdownLink sideDropDownNavName="connect with SSH" internalLink="/devops/linux-server/connect-with-ssh" />
-        <SideDropdownLink sideDropDownNavName="connect with FileZilla" internalLink="/devops/linux-server/connect-with-filezilla" />
-        <SideDropdownLink sideDropDownNavName="Linux server setup" internalLink="/devops/linux-server/setup-server" />
-        <SideDropdownLink sideDropDownNavName="Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
-        <SideDropdownLink sideDropDownNavName="Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
-        <SideDropdownLink sideDropDownNavName="Linux MySql Install" internalLink="/devops/linux-server/mysql-install" />
-        <SideDropdownLink sideDropDownNavName="Linux Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
+        <SideDropdownLink sideDropDownNavName="1. create linode server" internalLink="/devops/linux-server/create-server" />
+        <SideDropdownLink sideDropDownNavName="2. connect with SSH" internalLink="/devops/linux-server/connect-with-ssh" />
+        <SideDropdownLink sideDropDownNavName="3. connect with FileZilla" internalLink="/devops/linux-server/connect-with-filezilla" />
+        <SideDropdownLink sideDropDownNavName="4. Linux server setup" internalLink="/devops/linux-server/setup-server" />
+        <SideDropdownLink sideDropDownNavName="5. Linux JDK Install" internalLink="/devops/linux-server/jdk-install" />
+        <SideDropdownLink sideDropDownNavName="6. Linux NGINX Install" internalLink="/devops/linux-server/nginx-install" />
+        <SideDropdownLink sideDropDownNavName="7. Linux Tomcat Install" internalLink="/devops/linux-server/tomcat-install" />
+        <SideDropdownLink sideDropDownNavName="8. Linux MySql Install" internalLink="/devops/linux-server/mysql-install" />
+        <SideDropdownLink sideDropDownNavName="9. Linux Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
       </div>
     </section>
   );

@@ -105,6 +105,7 @@ import {
   DeployNetlifyMain,
   DeployRenderMain,
   GitMain,
+  NginxInstallMain,
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -684,6 +685,7 @@ const router = createBrowserRouter(
                 { path: "connect-with-filezilla", element: <FileZillaMain /> },
                 { path: "setup-server", element: <SetupServerMain /> },
                 { path: "jdk-install", element: <JdkInstallMain /> },
+                { path: "nginx-install", element: <NginxInstallMain /> },
                 { path: "tomcat-install", element: <TomcatInstallMain /> },
                 { path: "mysql-install", element: <MySqlnstallMain /> },
                 { path: "jenkins-install", element: <JenkinsMain /> },
