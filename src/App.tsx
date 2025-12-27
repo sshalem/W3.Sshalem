@@ -107,6 +107,7 @@ import {
   GitMain,
   NginxInstallMain,
   DeployLinuxMain,
+  Nginx,
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -676,6 +677,7 @@ const router = createBrowserRouter(
             { path: "react-on-spring", element: <ReactOnSpringMain /> },
             { path: "netlify", element: <DeployNetlifyMain /> },
             { path: "render", element: <DeployRenderMain /> },
+            { path: "nginx", element: <Nginx />, children: [{ path: "nginx-install", element: <NginxInstallMain /> }] },
             { path: "tomcat", element: <Tomcat />, children: [{ path: "react-on-tomcat", element: <ReactOnTomcatMain /> }] },
             {
               path: "linux-server",
@@ -686,7 +688,6 @@ const router = createBrowserRouter(
                 { path: "connect-with-filezilla", element: <FileZillaMain /> },
                 { path: "setup-server", element: <SetupServerMain /> },
                 { path: "jdk-install", element: <JdkInstallMain /> },
-                { path: "nginx-install", element: <NginxInstallMain /> },
                 { path: "tomcat-install", element: <TomcatInstallMain /> },
                 { path: "deploy", element: <DeployLinuxMain /> },
                 { path: "mysql-install", element: <MySqlnstallMain /> },

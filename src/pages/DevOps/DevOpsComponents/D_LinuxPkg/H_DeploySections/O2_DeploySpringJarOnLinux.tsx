@@ -9,6 +9,15 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
+        <div className="my-4">
+          <span className="text-xl">
+            <SpanGrey>Clarification</SpanGrey>
+          </span>{" "}
+        </div>
+        <ULdisc>
+          <Li>Spring Boot applications are typically packaged as JAR files with an embedded Tomcat and run using java -jar</Li>
+          <Li>Thus, It's possible to upload JAR file and run it as a standalone</Li>
+        </ULdisc>
         <p className="my-8 text-2xl font-semibold"> 1️⃣ Build the JAR locally</p>
         <ULdisc>
           <Li>
@@ -74,21 +83,9 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
         <hr />
         <p className="my-8 text-2xl font-semibold"> 5️⃣ Run the JAR (basic)</p>
         <ULdisc>
-          <Li>
-            Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
-          </Li>
-          <Li>
-            Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
-            <ULdisc>
-              <Li>
-                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
-              </Li>
-              <Li>
-                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
-              </Li>
-            </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
-          </Li>
+          <Li>In Linux terminal write the command below</Li>
+
+          <ApplicationPropertiesHighlight propertiesCode={_7_} />
         </ULdisc>
       </section>
     </MainChildArea>
@@ -107,3 +104,5 @@ const scp_jar = `scp target/{my-app-name}.jar root@{LINODE_SERVER_IP}:/opt/sprin
 const jar_organized = `/opt/springboot/app.jar
 /opt/springboot/logs/
 /opt/springboot/config/`;
+
+const _7_ = `java -jar your-app.jar`;

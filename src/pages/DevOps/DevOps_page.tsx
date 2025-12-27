@@ -12,6 +12,7 @@ import DropDownTomcat from "./DropDevOps/DropDownTomcat";
 import DropDownReactOnSpring from "./DropDevOps/DropDownReactOnSpring";
 import DropDownLinux from "./DropDevOps/DropDownLinux";
 import DropDownGit from "./DropDevOps/DropDownGit";
+import DropDownNginx from "./DropDevOps/DropDownNginx";
 
 const DevOps_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -47,6 +48,7 @@ const DevOps_page = () => {
             <DropDownReactOnSpring />
             <DropDownNetlify />
             <DropDownRender />
+            <DropDownNginx />
             <DropDownTomcat />
             <DropDownLinux />
           </div>
