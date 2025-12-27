@@ -2,8 +2,8 @@
 
 
 */
-import { MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -45,6 +45,39 @@ const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
           <ApplicationPropertiesHighlight propertiesCode={_7_} />
         </ULdisc>
         <hr />
+        <div className="my-4 text-xl"> 7️⃣ Important NGINX paths (you’ll use these a lot)</div>
+        <ULDecimal>
+          <Li>
+            <p className="inline-block w-[18rem]">
+              <SpanGrey>/etc/nginx/nginx.conf</SpanGrey>
+            </p>
+            - Main config
+          </Li>
+          <Li>
+            <p className="inline-block w-[18rem]">
+              <SpanGrey>/etc/nginx/sites-available/</SpanGrey>
+            </p>
+            - Site configs
+          </Li>
+          <Li>
+            <p className="inline-block w-[18rem]">
+              <SpanGrey>/etc/nginx/sites-enabled/</SpanGrey>
+            </p>
+            - Enabled sites
+          </Li>
+          <Li>
+            <p className="inline-block w-[18rem]">
+              <SpanGrey>/var/www/html</SpanGrey>
+            </p>
+            - Web root (default)
+          </Li>
+          <Li>
+            <p className="inline-block w-[18rem]">
+              <SpanGrey>/var/log/nginx/</SpanGrey>
+            </p>
+            - Logs
+          </Li>
+        </ULDecimal>
       </section>
     </MainChildArea>
   );
