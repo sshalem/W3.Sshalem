@@ -110,6 +110,7 @@ import {
   Nginx,
   DeployJarNginxMain,
   DeployReactNginxMain,
+  MavenCreateJarMain,
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
@@ -684,6 +685,7 @@ const router = createBrowserRouter(
               element: <Nginx />,
               children: [
                 { path: "nginx-install", element: <NginxInstallMain /> },
+                { path: "maven-create-jar", element: <MavenCreateJarMain /> },
                 { path: "deploy-jar", element: <DeployJarNginxMain /> },
                 { path: "deploy-react", element: <DeployReactNginxMain /> },
               ],

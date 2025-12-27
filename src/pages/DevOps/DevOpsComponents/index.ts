@@ -22,5 +22,6 @@ export { default as ReactOnTomcatMain } from "./D_TomcatPkg/B_DeployReactOnTomca
 
 export { default as Nginx } from "./D_NginxPkg/Nginx";
 export { default as NginxInstallMain } from "./D_NginxPkg/A_InstallNginxSections/NginxInstallMain";
-export { default as DeployJarNginxMain } from "./D_NginxPkg/B_DeployJarNginxSections/DeployJarNginxMain";
-export { default as DeployReactNginxMain } from "./D_NginxPkg/C_DeployReactNginxSections/DeployReactNginxMain";
+export { default as MavenCreateJarMain } from "./D_NginxPkg/B_CreatJarSections/MavenCreateJarMain";
+export { default as DeployJarNginxMain } from "./D_NginxPkg/C_DeployJarNginxSections/DeployJarNginxMain";
+export { default as DeployReactNginxMain } from "./D_NginxPkg/D_DeployReactNginxSections/DeployReactNginxMain";
