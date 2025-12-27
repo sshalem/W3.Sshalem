@@ -11,7 +11,7 @@ import O4_DeployReactJsNginx from "./O4_DeployReactJsNginx";
 // ===========================================
 
 const o1_CreateJar = "1. Create Jar";
-const o2_DeploySpringJarOnLinux = "2. Deploy JAR/WAR on Linux";
+const o2_DeploySpringJarOnLinux = "2. Deploy JAR on Linux";
 const o3_DeployJarNginx = "3. Deploy JAR on Nginx";
 const o4_DeployReactJsNginx = "4. Deploy ReactJs on Nginx";
 

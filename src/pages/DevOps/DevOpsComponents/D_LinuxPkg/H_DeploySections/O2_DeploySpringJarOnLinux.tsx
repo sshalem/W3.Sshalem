@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey, XmlHighlight } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
   return (
