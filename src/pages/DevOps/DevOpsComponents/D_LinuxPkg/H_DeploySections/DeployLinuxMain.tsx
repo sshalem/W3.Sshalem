@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
-import O1_CreateJarWar from "./O1_CreateJarWar";
+import O1_CreateJar from "./O1_CreateJar";
 import O2_DeploySpringJarOnLinux from "./O2_DeploySpringJarOnLinux";
 import O3_DeployJarNginx from "./O3_DeployJarNginx";
 import O4_DeployReactJsNginx from "./O4_DeployReactJsNginx";
@@ -10,7 +10,7 @@ import O4_DeployReactJsNginx from "./O4_DeployReactJsNginx";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_CreateJarWar = "1. Create Jar/War";
+const o1_CreateJar = "1. Create Jar";
 const o2_DeploySpringJarOnLinux = "2. Deploy JAR/WAR on Linux";
 const o3_DeployJarNginx = "3. Deploy JAR on Nginx";
 const o4_DeployReactJsNginx = "4. Deploy ReactJs on Nginx";
@@ -19,7 +19,7 @@ const o4_DeployReactJsNginx = "4. Deploy ReactJs on Nginx";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateJarWar, o2_DeploySpringJarOnLinux, o3_DeployJarNginx, o4_DeployReactJsNginx];
+const anchorList: string[] = [o1_CreateJar, o2_DeploySpringJarOnLinux, o3_DeployJarNginx, o4_DeployReactJsNginx];
 
 // ============================================
 // ============================================
@@ -72,7 +72,7 @@ const DeployLinuxMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_CreateJarWar anchor={o1_CreateJarWar} />
+      <O1_CreateJar anchor={o1_CreateJar} />
       <O2_DeploySpringJarOnLinux anchor={o2_DeploySpringJarOnLinux} />
       <O3_DeployJarNginx anchor={o3_DeployJarNginx} />
       <O4_DeployReactJsNginx anchor={o4_DeployReactJsNginx} />
