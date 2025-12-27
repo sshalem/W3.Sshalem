@@ -42,6 +42,7 @@ const DropDownTomcat = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        <SideDropdownLink sideDropDownNavName="Tomcat install" internalLink="/devops/tomcat/tomcat-install" />
         <SideDropdownLink sideDropDownNavName="Deploy React on Tomcat" internalLink="/devops/tomcat/react-on-tomcat" />
       </div>
     </section>

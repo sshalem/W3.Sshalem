@@ -43,6 +43,8 @@ const DropDownNginx = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="NGINX install" internalLink="/devops/nginx/nginx-install" />
+        <SideDropdownLink sideDropDownNavName="Deploy Jar" internalLink="/devops/nginx/deploy-jar" />
+        <SideDropdownLink sideDropDownNavName="Deploy ReactJS" internalLink="/devops/nginx/deploy-react" />
       </div>
     </section>
   );
