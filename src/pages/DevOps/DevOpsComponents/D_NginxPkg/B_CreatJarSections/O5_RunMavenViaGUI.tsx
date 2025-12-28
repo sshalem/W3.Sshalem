@@ -31,7 +31,7 @@ const O5_RunMavenViaGUI = ({ anchor }: { anchor: string }) => {
               Under the project, open the drop down of <strong>Lifecycle</strong>
             </Li>
             <Li>
-              select <SpanGrey>clean</SpanGrey> and then select <SpanGrey>package</SpanGrey>
+              Double click on <SpanGrey>clean</SpanGrey> and then Double click on <SpanGrey>package</SpanGrey>
             </Li>
           </ULdisc>
           <IMG img_name={maven_2}></IMG>
