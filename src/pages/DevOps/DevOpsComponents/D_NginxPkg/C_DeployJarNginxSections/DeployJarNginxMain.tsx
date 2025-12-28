@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
-import O1_CreateJar from "./O1_CreateJar";
+import O1_DifferenceArchitecture from "./O1_DifferenceArchitecture";
 import O2_DeployJarLinux from "./O2_DeployJarLinux";
 import O3_DeployJarNginx from "./O3_DeployJarNginx";
 
@@ -9,7 +9,7 @@ import O3_DeployJarNginx from "./O3_DeployJarNginx";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_CreateJar = "1. Create Jar (Maven)";
+const o1_DifferenceArchitecture = "1. two Different Architectures";
 const o2_DeployJarLinux = "2. Deploy Jar on Linux";
 const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
 
@@ -17,7 +17,7 @@ const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreateJar, o2_DeployJarLinux, o3_DeployJarNginx];
+const anchorList: string[] = [o1_DifferenceArchitecture, o2_DeployJarLinux, o3_DeployJarNginx];
 
 // ============================================
 // ============================================
@@ -70,7 +70,7 @@ const DeployJarNginxMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_CreateJar anchor={o1_CreateJar} />
+      <O1_DifferenceArchitecture anchor={o1_DifferenceArchitecture} />
       <O2_DeployJarLinux anchor={o2_DeployJarLinux} />
       <O3_DeployJarNginx anchor={o3_DeployJarNginx} />
 

@@ -2,8 +2,8 @@
 
 
 */
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { SpanGrey } from "../../../../../components/Highlight";
 
 const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,99 +13,93 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <div className="my-4">
           <span className="text-xl">
             <SpanGrey>Clarification</SpanGrey>
-          </span>
+          </span>{" "}
         </div>
-        <ULdisc>
-          <Li>NGINX does not run Java or Spring Boot applications directly.</Li>
-          <Li>NGINX is a reverse proxy / web server, not a Java application server.</Li>
-          <Li>Spring Boot applications are typically packaged as JAR files with an embedded Tomcat and run using java -jar.</Li>
-          <Li>NGINX can then be used in front to handle things like domain names, SSL, and load balancing.</Li>
-        </ULdisc>
-        <p className="my-8 text-2xl font-semibold"> 1️⃣ Build the JAR locally</p>
-        <ULdisc>
-          <Li>
-            Run command (For custom name see option 3 in prev section):
-            <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
-          </Li>
-        </ULdisc>
+        <article className="my-8">
+          When you deploy a Spring Boot (or any Java) JAR on Linux, you generally have two common architectures:
+          <ULDecimal>
+            <Li>
+              <strong>Run the JAR directly</strong> and expose it to clients
+            </Li>
+            <Li>
+              <strong>Run the JAR behind NGINX</strong> (reverse proxy)
+            </Li>
+          </ULDecimal>
+          They differ in <strong>security</strong>, <strong>performance</strong>, <strong>scalability</strong>, and{" "}
+          <strong>operational control</strong>.
+        </article>
         <hr />
-        <p className="my-8 text-2xl font-semibold"> 2️⃣ Connect to your Linode server</p>
-        <ULdisc>
-          <Li>
-            connect to Linode server with SSH connection (to get the IP info , login to Linode server)
-            <ApplicationPropertiesHighlight propertiesCode={connect_to_linode} />
-          </Li>
-        </ULdisc>
-        <hr />
-        <p className="my-8 text-2xl font-semibold"> 3️⃣ create a dedicated folder</p>
-        <ULdisc>
-          <Li>
-            create a dedicated folder under <SpanGrey>/opt</SpanGrey> directory
+        {/*  */}
+
+        <article className="my-8">
+          <div className="my-4 text-xl font-semibold">2️⃣ Deploying the JAR behind NGINX (recommended for production)</div>
+          <ULdisc>
+            <p className="my-4 text-lg">✅ Pros</p>
             <ULdisc>
-              <Li>
-                <SpanGrey>/opt</SpanGrey> is a standard Linux directory for <strong>optional / third-party software</strong>
-              </Li>
-              <Li>
-                <SpanGrey>/opt</SpanGrey> is commonly used for deployed apps
-              </Li>
+              <p className="my-4 text-lg">🔐 Security</p>
+              <ULdisc>
+                <Li>Java app is not internet-facing</Li>
+                <Li>
+                  NGINX provides:
+                  <ULdisc>
+                    <Li>Rate limiting</Li>
+                    <Li>IP filtering</Li>
+                    <Li>Request size limits</Li>
+                    <Li>Basic auth</Li>
+                  </ULdisc>
+                  <Li>SSL termination is easier and faster</Li>
+                </Li>
+              </ULdisc>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={mkdir_folder} />
-            <Li>Example of keeping Spring Boot JARs organized:</Li>
-            <ApplicationPropertiesHighlight propertiesCode={jar_organized} />
-          </Li>
-        </ULdisc>
-        <hr />
-        <p className="my-8 text-2xl font-semibold"> 4️⃣ Upload the JAR to Linode</p>
-
-        <ULdisc>
-          <Li>
-            with <SpanGrey>FileZilla</SpanGrey>
-          </Li>
-          <Li>
-            with <SpanGrey>scp</SpanGrey> command using terminal
-          </Li>
-        </ULdisc>
-
-        <ULdisc>
-          <Li>
-            Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
-          </Li>
-          <Li>
-            Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
             <ULdisc>
-              <Li>
-                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
-              </Li>
-              <Li>
-                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
-              </Li>
+              <p className="my-4 text-lg">🚀 Performance</p>
+              <ULdisc>
+                <Li>
+                  NGINX handles:
+                  <ULdisc>
+                    <Li>Slow clients</Li>
+                    <Li>Connection keep-alive</Li>
+                    <Li>Static files (JS, CSS, images)</Li>
+                  </ULdisc>
+                  <Li>Java app focuses on business logic</Li>
+                </Li>
+              </ULdisc>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
-          </Li>
-        </ULdisc>
-        <hr />
-        <p className="my-8 text-2xl font-semibold"> 5️⃣ Run the JAR (basic)</p>
-        <ULdisc>
-          <Li>In Linux terminal write the command below</Li>
+            <ULdisc>
+              <p className="my-4 text-lg">🔁 Scalability & Reliability</p>
+              <ULdisc>
+                <Li>Easy load balancing</Li>
+                <Li>Zero-downtime deployments</Li>
+                <Li>Graceful restarts</Li>
+                <Li>Health checks</Li>
+              </ULdisc>
+            </ULdisc>
+            <ULdisc>
+              <p className="my-4 text-lg">⚙️ Operational Benefits</p>
+              <ULdisc>
+                <Li>Centralized logging</Li>
+                <Li>Request buffering</Li>
+                <Li>Easy redirects (HTTP → HTTPS)</Li>
+                <Li>Can proxy to multiple services</Li>
+              </ULdisc>
+            </ULdisc>
+          </ULdisc>
+          <ULdisc>
+            <p className="my-4 text-lg">❌ Cons</p>
+            <ULdisc>
+              <Li>Extra component to manage</Li>
+              <Li>Slightly more complex setup</Li>
+            </ULdisc>
+          </ULdisc>
 
-          <ApplicationPropertiesHighlight propertiesCode={_7_} />
-        </ULdisc>
+          <ULdisc>
+            <p className="my-4 text-lg">⚠️ Common issues</p>
+          </ULdisc>
+        </article>
+
+        {/*  */}
       </section>
     </MainChildArea>
   );
 };
 export default O3_DeployJarNginx;
-
-const mvn_clean_package = `mvnw.cmd clean package`;
-
-const connect_to_linode = `ssh root@139.162.148.144`;
-
-const mkdir_folder = `mkdir -p /opt/springboot`;
-
-const scp_jar = `scp target/{my-app-name}.jar root@{LINODE_SERVER_IP}:/opt/springboot/`;
-
-const jar_organized = `/opt/springboot/app.jar
-/opt/springboot/logs/
-/opt/springboot/config/`;
-
-const _7_ = `java -jar your-app.jar`;
