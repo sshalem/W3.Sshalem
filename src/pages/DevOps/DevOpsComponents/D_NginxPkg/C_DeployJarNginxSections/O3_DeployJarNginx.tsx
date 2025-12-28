@@ -91,10 +91,6 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
               <Li>Slightly more complex setup</Li>
             </ULdisc>
           </ULdisc>
-
-          <ULdisc>
-            <p className="my-4 text-lg">⚠️ Common issues</p>
-          </ULdisc>
         </article>
 
         {/*  */}
