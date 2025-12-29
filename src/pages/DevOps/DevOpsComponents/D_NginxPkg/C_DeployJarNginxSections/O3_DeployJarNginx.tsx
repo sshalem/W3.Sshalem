@@ -187,7 +187,14 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Create Config:</Li>
           <ApplicationPropertiesHighlight propertiesCode={_11_} />
-          <Li>Paste this :</Li>
+          <Li>
+            Paste this :
+            <ULdisc>
+              <Li>
+                <SpanGrey>your_domain_or_ip</SpanGrey> = Linode server IP <SpanGrey>139.162.148.144</SpanGrey>
+              </Li>
+            </ULdisc>
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_12_} />
           <Li>Enable site:</Li>
           <ApplicationPropertiesHighlight propertiesCode={_13_} />
