@@ -2,8 +2,9 @@
 
 
 */
+import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -30,7 +31,6 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         </article>
         <hr />
         {/*  */}
-
         <article className="my-8">
           <div className="my-4 text-xl font-semibold">2️⃣ Deploying the JAR behind NGINX (recommended for production)</div>
           <ULdisc>
@@ -92,10 +92,197 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </ULdisc>
         </article>
-
         {/*  */}
+        <p className="my-8 text-2xl font-semibold"> 1️⃣ Build the JAR locally</p>
+        <ULdisc>
+          <Li>
+            See section of{" "}
+            <Link to={"/devops/nginx/maven-create-jar#2.BuildJARfile"} className="rounded-md bg-blue-400 px-2 py-1 font-semibold text-white">
+              Maven Create JAR
+            </Link>{" "}
+            for additional data.
+          </Li>
+          <Li>
+            Run command (For custom name see option 3 in prev section):
+            <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+          </Li>
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-2xl font-semibold"> 2️⃣ Connect to your Linode server</p>
+        <ULdisc>
+          <Li>
+            connect to Linode server with SSH connection (to get the IP info , login to Linode server)
+            <ApplicationPropertiesHighlight propertiesCode={connect_to_linode} />
+          </Li>
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-2xl font-semibold"> 3️⃣ create a dedicated folder</p>
+        <ULdisc>
+          <Li>
+            create a dedicated folder under <SpanGrey>/opt</SpanGrey> directory
+            <ULdisc>
+              <Li>
+                <SpanGrey>/opt</SpanGrey> is a standard Linux directory for <strong>optional / third-party software</strong>
+              </Li>
+              <Li>
+                <SpanGrey>/opt</SpanGrey> is commonly used for deployed apps
+              </Li>
+            </ULdisc>
+            <ApplicationPropertiesHighlight propertiesCode={mkdir_folder} />
+            <Li>Example of keeping Spring Boot JARs organized:</Li>
+            <ApplicationPropertiesHighlight propertiesCode={jar_organized} />
+          </Li>
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-2xl font-semibold"> 4️⃣ Upload the JAR to Linode</p>
+        <ULdisc>
+          <Li>
+            with <SpanGrey>FileZilla</SpanGrey>
+          </Li>
+          <Li>
+            with <SpanGrey>scp</SpanGrey> command using terminal
+          </Li>
+        </ULdisc>
+        <ULdisc>
+          <Li>
+            Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
+          </Li>
+          <Li>
+            Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
+            <ULdisc>
+              <Li>
+                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
+              </Li>
+              <Li>
+                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
+              </Li>
+            </ULdisc>
+            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+          </Li>
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-2xl font-semibold"> 5️⃣ Run the JAR (manually first w/o NGINX) </p>
+        <ULdisc>
+          <Li>Test that it works without NGINX</Li>
+          <Li>In Linux terminal write the command below</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_7_} />
+          <Li>
+            To stop it <SpanGrey>CTRL + c</SpanGrey>
+          </Li>
+        </ULdisc>
+        <hr />
+        <div className="my-4 text-xl"> 6️⃣ Run JAR in background (quick way)</div>
+        <ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_8_} />
+          <Li>Check</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_9_} />
+        </ULdisc>
+        <hr />
+        <div className="my-4 text-xl"> 7️⃣ Check NGINX status</div>
+        <ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_10_} />
+        </ULdisc>
+        <hr />
+        <div className="my-4 text-xl"> 8️⃣ Configure NGINX as reverse proxy</div>
+        <ULdisc>
+          <Li>Create Config:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_11_} />
+          <Li>Paste this :</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_12_} />
+          <Li>Enable site:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_13_} />
+          <Li>Remove default config (important):</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_14_} />
+          <Li>Test NGINX config:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_15_} />
+          <Li>Reload NGINX:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_16_} />
+        </ULdisc>
+        <hr />
+        <div className="my-4 text-xl"> 9️⃣ Access your app via NGINX</div>
+        <ULdisc>
+          <Li>Now open: (🎉 Your Spring Boot app is now served through NGINX)</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_17_} />
+        </ULdisc>
+        <hr />
+        <div className="my-4 text-xl"> 🔟 (Recommended): Run JAR as a systemd service</div>
+        This ensures:
+        <ULdisc>
+          <Li>Auto restart</Li>
+          <Li>Runs on reboot</Li>
+          <Li>Proper logs</Li>
+          <Li>Create service file:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_18_} />
+          <Li>Paste:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_19_} />
+          <Li>Reload systemd:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_20_} />
+          <Li>Start service:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_21_} />
+          <Li>Check logs:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_22_} />
+        </ULdisc>
       </section>
     </MainChildArea>
   );
 };
 export default O3_DeployJarNginx;
+
+const mvn_clean_package = `mvnw.cmd clean package`;
+
+const connect_to_linode = `ssh root@139.162.148.144`;
+
+const mkdir_folder = `mkdir -p /opt/springboot`;
+
+const scp_jar = `scp target/{my-app-name}.jar root@{LINODE_SERVER_IP}:/opt/springboot/`;
+
+const jar_organized = `/opt/springboot/app.jar
+/opt/springboot/logs/
+/opt/springboot/config/`;
+
+const _7_ = `java -jar your-app.jar`;
+const _8_ = `nohup java -jar my-app.jar > app.log 2>&1 &`;
+const _9_ = `ps aux | grep java`;
+const _10_ = `systemctl status nginx`;
+const _11_ = `sudo nano /etc/nginx/sites-available/springboot`;
+const _12_ = `server {
+    listen 80;
+    server_name your_domain_or_ip;
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_http_version 1.1;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}`;
+
+const _13_ = `sudo ln -s /etc/nginx/sites-available/springboot /etc/nginx/sites-enabled/`;
+const _14_ = `sudo rm /etc/nginx/sites-enabled/default`;
+const _15_ = `sudo nginx -t`;
+const _16_ = `sudo systemctl reload nginx`;
+const _17_ = `http://your_server_ip`;
+const _18_ = `sudo nano /etc/systemd/system/springboot.service`;
+const _19_ = `[Unit]
+Description=Spring Boot Application
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/java -jar /opt/springboot/my-app.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target`;
+
+const _20_ = `sudo systemctl daemon-reload`;
+
+const _21_ = `sudo systemctl start springboot
+sudo systemctl enable springboot`;
+
+const _22_ = `journalctl -u springboot -f`;
