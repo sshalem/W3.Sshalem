@@ -6,6 +6,7 @@ import O2_JarBehindNginx from "./O2_JarBehindNginx";
 import O3_DeployJarNginx from "./O3_DeployJarNginx";
 import O4_Systemd from "./O4_Systemd";
 import O5_ConfigSystemdJournalctl from "./O5_ConfigSystemdJournalctl";
+import O6_ConfigSystemdJournalctlAndLogFile from "./O6_ConfigSystemdJournalctlAndLogFile";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -16,12 +17,20 @@ const o2_JarBehindNginx = "2. JAR Behind Nginx";
 const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
 const o4_Systemd = "4. What is Systemd service";
 const o5_ConfigSystemdJournalctl = "5. Config systemd service with journalctl";
+const o6_ConfigSystemdJournalctlAndLogFile = "6. Best Practice : journalctl + log File";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DifferenceArchitecture, o2_JarBehindNginx, o3_DeployJarNginx, o4_Systemd, o5_ConfigSystemdJournalctl];
+const anchorList: string[] = [
+  o1_DifferenceArchitecture,
+  o2_JarBehindNginx,
+  o3_DeployJarNginx,
+  o4_Systemd,
+  o5_ConfigSystemdJournalctl,
+  o6_ConfigSystemdJournalctlAndLogFile,
+];
 
 // ============================================
 // ============================================
@@ -79,6 +88,7 @@ const DeployJarNginxMain = () => {
       <O3_DeployJarNginx anchor={o3_DeployJarNginx} />
       <O4_Systemd anchor={o4_Systemd} />
       <O5_ConfigSystemdJournalctl anchor={o5_ConfigSystemdJournalctl} />
+      <O6_ConfigSystemdJournalctlAndLogFile anchor={o6_ConfigSystemdJournalctlAndLogFile} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
