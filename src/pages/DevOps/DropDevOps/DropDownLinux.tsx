@@ -50,7 +50,7 @@ const DropDownLinux = () => {
         <SideDropdownLink sideDropDownNavName="5. JDK Install" internalLink="/devops/linux-server/jdk-install" />
         <SideDropdownLink sideDropDownNavName="6. MySql Install" internalLink="/devops/linux-server/mysql-install" />
         <SideDropdownLink sideDropDownNavName="7. Jenkins Install" internalLink="/devops/linux-server/jenkins-install" />
-        <SideDropdownLink sideDropDownNavName="8. Deploy" internalLink="/devops/linux-server/deploy" />
+        <SideDropdownLink sideDropDownNavName="8. Deploy JAR on LINUX" internalLink="/devops/linux-server/deploy" />
       </div>
     </section>
   );
