@@ -4,7 +4,7 @@
 */
 import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 
 const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -92,7 +92,10 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <div className="my-4 text-xl"> 6️⃣ Run JAR in background (quick way)</div>
         <ULdisc>
           <Li>
-            This command
+            <SpanGreen>Note</SpanGreen> : Best practice is to ran JAR file with <SpanGrey>systemd service</SpanGrey> see paragraph 🔟.
+          </Li>
+          <Li>
+            This command , is a manual Quick way to keep your app running in the background.
             <ULdisc>
               <Li>
                 runs the <SpanGrey>audit.jar</SpanGrey> in the background
@@ -102,6 +105,21 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
+          What <SpanGrey>nohup java -jar ... &</SpanGrey> does:
+          <ULdisc>
+            <Li>
+              <SpanGrey>nohup</SpanGrey> → ignores hangup signals so the process keeps running even after you log out.
+            </Li>
+            <Li>
+              <SpanGrey>java -jar /opt/springboot/audit.jar</SpanGrey> → runs your JAR.
+            </Li>
+            <Li>
+              <SpanGrey>{"> /opt/springboot/audit.log 2>&1"}</SpanGrey> → redirects both stdout and stderr to a log file.
+            </Li>
+            <Li>
+              <SpanGrey>&</SpanGrey> → runs it in the background.
+            </Li>
+          </ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_8_} />
           <Li>
             Check <SpanGrey>ps aux | grep audit.jar</SpanGrey>
@@ -126,11 +144,19 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
             Paste this :
             <ULdisc>
               <Li>
-                <SpanGrey>your_domain_or_ip</SpanGrey> = Linode server IP <SpanGrey>139.162.148.144</SpanGrey>
+                <SpanGrey>server_name</SpanGrey> = Linode server IP <SpanGrey>139.162.148.144</SpanGrey>
+              </Li>
+              <Li>
+                <SpanGrey>proxy_pass</SpanGrey> = <SpanGrey>http://localhost:8080;</SpanGrey> (Sometimes instead of localhost need to be{" "}
+                <SpanGrey>127.0.0.1</SpanGrey> )
               </Li>
             </ULdisc>
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_12_} />
+          <Li>
+            With <SpanGrey>sudo cat</SpanGrey> command check the content of file <SpanGrey>springboot</SpanGrey>
+          </Li>
+          <ApplicationPropertiesHighlight propertiesCode={_12_1_} />
           <Li>Enable site:</Li>
           <ApplicationPropertiesHighlight propertiesCode={_13_} />
           <Li>Remove default config (important):</Li>
@@ -220,7 +246,7 @@ const _10_ = `systemctl status nginx`;
 const _11_ = `sudo nano /etc/nginx/sites-available/springboot`;
 const _12_ = `server {
     listen 80;
-    server_name your_domain_or_ip;
+    server_name 139.162.148.144;
 
     location / {
         proxy_pass http://localhost:8080;
@@ -232,6 +258,8 @@ const _12_ = `server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }`;
+
+const _12_1_ = `sudo cat /etc/nginx/sites-enabled/springboot`;
 
 const _13_ = `sudo ln -s /etc/nginx/sites-available/springboot /etc/nginx/sites-enabled/`;
 const _14_ = `sudo rm /etc/nginx/sites-enabled/default`;
