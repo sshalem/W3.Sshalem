@@ -89,46 +89,22 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <hr />
-        <div className="my-4 text-xl"> 6️⃣ Run JAR in background (quick way)</div>
+        <div className="my-8 text-2xl font-semibold">
+          6️⃣ Create a <SpanGrey>systemd service</SpanGrey> for audit.jar
+        </div>
+        Create service <SpanGrey>audit.service</SpanGrey> file:
         <ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        </ULdisc>
+        Paste:
+        <ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_5_} />
+          <Li>Reload systemd, Start service , Enable auto-start on boot:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_3_} />
           <Li>
-            <SpanGreen>Note</SpanGreen> : Best practice is to ran JAR file with <SpanGrey>systemd service</SpanGrey> see paragraph 🔟.
+            Check logs using <SpanGrey>journalctl</SpanGrey> and <SpanGrey>tail</SpanGrey>
           </Li>
-          <Li>
-            This command , is a manual Quick way to keep your app running in the background.
-            <ULdisc>
-              <Li>
-                runs the <SpanGrey>audit.jar</SpanGrey> in the background
-              </Li>
-              <Li>
-                the console logs will be in file <SpanGrey>/opt/springboot/audit.log</SpanGrey>
-              </Li>
-            </ULdisc>
-          </Li>
-          What <SpanGrey>nohup java -jar ... &</SpanGrey> does:
-          <ULdisc>
-            <Li>
-              <SpanGrey>nohup</SpanGrey> → ignores hangup signals so the process keeps running even after you log out.
-            </Li>
-            <Li>
-              <SpanGrey>java -jar /opt/springboot/audit.jar</SpanGrey> → runs your JAR.
-            </Li>
-            <Li>
-              <SpanGrey>{"> /opt/springboot/audit.log 2>&1"}</SpanGrey> → redirects both stdout and stderr to a log file.
-            </Li>
-            <Li>
-              <SpanGrey>&</SpanGrey> → runs it in the background.
-            </Li>
-          </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_8_} />
-          <Li>
-            Check <SpanGrey>ps aux | grep audit.jar</SpanGrey>
-          </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_9_} />
-          <Li>
-            <SpanGrey>ss -lntp | grep java</SpanGrey> command to Check which port the app listening to
-          </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_9_1_} />
+          <ApplicationPropertiesHighlight propertiesCode={_4_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 7️⃣ Check NGINX status</div>
@@ -186,7 +162,55 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
             For <SpanGrey>systemd service</SpanGrey> explanations and config see next sections 4 ,5 ,6
           </Li>
         </ULdisc>
+        <hr />
+        <div className="my-4 text-xl">
+          ✅ Optional : Run JAR in background (But best practice is <SpanGrey>systemd service</SpanGrey> )
+        </div>
+        <ULdisc>
+          <Li>
+            <SpanGreen>Note</SpanGreen> : Best practice is to ran JAR file with <SpanGrey>systemd service</SpanGrey> see paragraph 🔟.
+          </Li>
+          <Li>
+            This command , is a manual Quick way to keep your app running in the background.
+            <ULdisc>
+              <Li>
+                runs the <SpanGrey>audit.jar</SpanGrey> in the background
+              </Li>
+              <Li>
+                the console logs will be in file <SpanGrey>/opt/springboot/audit.log</SpanGrey>
+              </Li>
+            </ULdisc>
+          </Li>
+          What <SpanGrey>nohup java -jar ... &</SpanGrey> does:
+          <ULdisc>
+            <Li>
+              <SpanGrey>nohup</SpanGrey> → ignores hangup signals so the process keeps running even after you log out.
+            </Li>
+            <Li>
+              <SpanGrey>java -jar /opt/springboot/audit.jar</SpanGrey> → runs your JAR.
+            </Li>
+            <Li>
+              <SpanGrey>{"> /opt/springboot/audit.log 2>&1"}</SpanGrey> → redirects both stdout and stderr to a log file.
+            </Li>
+            <Li>
+              <SpanGrey>&</SpanGrey> → runs it in the background.
+            </Li>
+          </ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_8_} />
+          <Li>
+            Check <SpanGrey>ps aux | grep audit.jar</SpanGrey>
+          </Li>
+          <ApplicationPropertiesHighlight propertiesCode={_9_} />
+          <Li>
+            <SpanGrey>ss -lntp | grep java</SpanGrey> command to Check which port the app listening to
+          </Li>
+          <ApplicationPropertiesHighlight propertiesCode={_9_1_} />
+        </ULdisc>
       </section>
+      {/*  */}
+      {/*  */}
+      {/*  */}
+      {/*  */}
     </MainChildArea>
   );
 };
@@ -241,3 +265,64 @@ sudo systemctl reload nginx`;
 
 const _17_ = `http://139.162.148.144
 sudo find / -name audit.log 2>/dev/null`;
+
+const _1_ = `sudo nano /etc/systemd/system/audit.service`;
+
+const _3_ = `sudo cat /etc/systemd/system/audit.service
+sudo systemctl daemon-reload
+sudo systemctl start audit
+sudo systemctl enable audit
+sudo systemctl restart audit
+sudo systemctl status audit
+# Confirm the app is listening
+ss -lntp | grep 8080`;
+
+const _4_ = `# Show all logs of your service
+# Follow logs in real-time (like tail -f):
+# Show logs since a specific time, e.g., last 1 hour:
+# Show only the last 100 lines:
+
+journalctl -u audit.service
+journalctl -u audit.service -f
+journalctl -u audit.service --since "1 hour ago"
+journalctl -u audit.service -n 100
+
+# How to view the log file
+# Check logs of the springboot service and keep updating in real-time as new log entries appear.
+# I must config it in application.properties 
+# logging.file.name=/opt/springboot/audit.log
+# logging.level.root=INFO
+# logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+
+tail -f /opt/springboot/audit.log`;
+
+const _5_ = `[Unit]
+Description=Spring Boot Application
+After=network.target
+
+[Service]
+User=root
+
+# The directory where your jar is located
+WorkingDirectory=/opt/springboot
+
+# Command to run your JAR
+ExecStart=/usr/bin/java -jar /opt/springboot/audit.jar
+
+SuccessExitStatus=143
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Best practice
+#StandardOutput=journal
+#StandardError=journal
+
+# use this, to log to a file w/o the need for application.properties config
+# This is NOT BEST PRFACTICE not good for production
+StandardOutput=append:/opt/springboot/audit.log
+StandardError=append:/opt/springboot/audit.log
+
+[Install]
+WantedBy=multi-user.target`;
