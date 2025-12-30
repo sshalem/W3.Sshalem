@@ -91,9 +91,26 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <hr />
         <div className="my-4 text-xl"> 6️⃣ Run JAR in background (quick way)</div>
         <ULdisc>
+          <Li>
+            This command
+            <ULdisc>
+              <Li>
+                runs the <SpanGrey>audit.jar</SpanGrey> in the background
+              </Li>
+              <Li>
+                the console logs will be in file <SpanGrey>/opt/springboot/audit.log</SpanGrey>
+              </Li>
+            </ULdisc>
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_8_} />
-          <Li>Check</Li>
+          <Li>
+            Check <SpanGrey>ps aux | grep audit.jar</SpanGrey>
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_9_} />
+          <Li>
+            <SpanGrey>ss -lntp | grep java</SpanGrey> command to Check which port the app listening to
+          </Li>
+          <ApplicationPropertiesHighlight propertiesCode={_9_1_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 7️⃣ Check NGINX status</div>
@@ -127,7 +144,12 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <div className="my-4 text-xl"> 9️⃣ Access your app via NGINX</div>
         <ULdisc>
           <Li>Now open: (🎉 Your Spring Boot app is now served through NGINX)</Li>
+          <Li>
+            Brose thru <SpanGrey>http://your_server_ip</SpanGrey> (verify urls are correct since I run via Postman)
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_17_} />
+          <Li>Check Location of log file</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_17_1_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 🔟 (Recommended): Run JAR as a systemd service</div>
@@ -136,15 +158,32 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
           <Li>Auto restart</Li>
           <Li>Runs on reboot</Li>
           <Li>Proper logs</Li>
-          <Li>Create service file:</Li>
+        </ULdisc>
+        Create service file:
+        <ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_18_} />
-          <Li>Paste:</Li>
+        </ULdisc>
+        Paste:
+        <ULdisc>
+          <Li>
+            <SpanGrey>User</SpanGrey> → the Linux user who runs the app
+          </Li>
+          <Li>
+            <SpanGrey>WorkingDirectory</SpanGrey> → where the JAR is located
+          </Li>
+          <Li>
+            <SpanGrey>ExecStart</SpanGrey> → how to start the JAR
+          </Li>
+          <Li>
+            <SpanGrey>Restart=always</SpanGrey> → restarts if the app crashes
+          </Li>
+          <Li>
+            Logs go to <SpanGrey>journalctl</SpanGrey>
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_19_} />
-          <Li>Reload systemd:</Li>
+          <Li>Reload systemd, Start service , Enable auto-start on boot:</Li>
           <ApplicationPropertiesHighlight propertiesCode={_20_} />
-          <Li>Start service:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_21_} />
-          <Li>Check logs:</Li>
+          <Li>Check logs of the springboot service and keep updating in real-time as new log entries appear.</Li>
           <ApplicationPropertiesHighlight propertiesCode={_22_} />
         </ULdisc>
       </section>
@@ -168,7 +207,15 @@ const jar_organized = `/opt/springboot/audit.jar
 const _7_ = `java -jar audit.jar`;
 const _8_ = `nohup java -jar /opt/springboot/audit.jar > /opt/springboot/audit.log 2>&1 &`;
 
-const _9_ = `ps aux | grep java`;
+const _9_ = `root@localhost:~# ps aux | grep audit.jar
+root     2603681  0.9 25.5 2443832 250092 pts/0  Sl   11:37   0:17 java -jar /opt/springboot/audit.jar
+root     2604057  0.0  0.2   6616  2240 pts/1    S+   12:09   0:00 grep --color=auto audit.jar
+root@localhost:~#`;
+
+const _9_1_ = `root@localhost:~# ss -lntp | grep java
+LISTEN 0      100                *:8080            *:*    users:(("java",pid=2603681,fd=9))
+root@localhost:~#`;
+
 const _10_ = `systemctl status nginx`;
 const _11_ = `sudo nano /etc/nginx/sites-available/springboot`;
 const _12_ = `server {
@@ -190,7 +237,8 @@ const _13_ = `sudo ln -s /etc/nginx/sites-available/springboot /etc/nginx/sites-
 const _14_ = `sudo rm /etc/nginx/sites-enabled/default`;
 const _15_ = `sudo nginx -t`;
 const _16_ = `sudo systemctl reload nginx`;
-const _17_ = `http://your_server_ip`;
+const _17_ = `http://139.162.148.144`;
+const _17_1_ = `sudo find / -name audit.log 2>/dev/null`;
 const _18_ = `sudo nano /etc/systemd/system/springboot.service`;
 const _19_ = `[Unit]
 Description=Spring Boot Application
@@ -198,17 +246,19 @@ After=network.target
 
 [Service]
 User=root
-ExecStart=/usr/bin/java -jar /opt/springboot/my-app.jar
+WorkingDirectory=/opt/springboot
+ExecStart=/usr/bin/java -jar /opt/springboot/audit.jar
 SuccessExitStatus=143
 Restart=always
 RestartSec=10
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target`;
 
-const _20_ = `sudo systemctl daemon-reload`;
-
-const _21_ = `sudo systemctl start springboot
+const _20_ = `sudo systemctl daemon-reload
+sudo systemctl start springboot
 sudo systemctl enable springboot`;
 
 const _22_ = `journalctl -u springboot -f`;
