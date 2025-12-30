@@ -3,8 +3,8 @@
 
 */
 import { Link } from "react-router-dom";
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -138,7 +138,9 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
         <hr />
         <div className="my-4 text-xl"> 8️⃣ Configure NGINX as reverse proxy</div>
         <ULdisc>
-          <Li>Create Config:</Li>
+          <Li>
+            Create Config file <SpanGrey>springboot</SpanGrey> inside directory of <SpanGrey>/etc/nginx/sites-available/</SpanGrey>:
+          </Li>
           <ApplicationPropertiesHighlight propertiesCode={_11_} />
           <Li>
             Paste this :
@@ -153,64 +155,36 @@ const O3_DeployJarNginx = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_12_} />
-          <Li>
-            With <SpanGrey>sudo cat</SpanGrey> command check the content of file <SpanGrey>springboot</SpanGrey>
-          </Li>
+          <ULDecimal>
+            <Li>
+              With <SpanGrey>sudo cat</SpanGrey> command check the content of file <SpanGrey>springboot</SpanGrey>
+            </Li>
+            <Li>Enable site:</Li>
+            <Li>
+              Remove default config <SpanRed>(important)</SpanRed>
+            </Li>
+            <Li>Test NGINX config:</Li>
+            <Li>Reload NGINX:</Li>
+          </ULDecimal>
           <ApplicationPropertiesHighlight propertiesCode={_12_1_} />
-          <Li>Enable site:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_13_} />
-          <Li>Remove default config (important):</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_14_} />
-          <Li>Test NGINX config:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_15_} />
-          <Li>Reload NGINX:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_16_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 9️⃣ Access your app via NGINX</div>
         <ULdisc>
-          <Li>Now open: (🎉 Your Spring Boot app is now served through NGINX)</Li>
+          <Li>Now , Spring Boot app is now served through NGINX</Li>
+          <Li></Li>
           <Li>
-            Brose thru <SpanGrey>http://your_server_ip</SpanGrey> (verify urls are correct since I run via Postman)
+            Browse thru <SpanGrey>http://your_server_ip</SpanGrey> (verify urls are correct since I run via Postman)
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_17_} />
           <Li>Check Location of log file</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_17_1_} />
+          <ApplicationPropertiesHighlight propertiesCode={_17_} />
         </ULdisc>
         <hr />
-        <div className="my-4 text-xl"> 🔟 (Recommended): Run JAR as a systemd service</div>
-        This ensures:
-        <ULdisc>
-          <Li>Auto restart</Li>
-          <Li>Runs on reboot</Li>
-          <Li>Proper logs</Li>
-        </ULdisc>
-        Create service file:
-        <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_18_} />
-        </ULdisc>
-        Paste:
+        <div className="my-8 text-xl"> 🔟 (Recommended): Run JAR as a systemd service</div>
         <ULdisc>
           <Li>
-            <SpanGrey>User</SpanGrey> → the Linux user who runs the app
+            For <SpanGrey>systemd service</SpanGrey> explanations and config see next sections 4 ,5 ,6
           </Li>
-          <Li>
-            <SpanGrey>WorkingDirectory</SpanGrey> → where the JAR is located
-          </Li>
-          <Li>
-            <SpanGrey>ExecStart</SpanGrey> → how to start the JAR
-          </Li>
-          <Li>
-            <SpanGrey>Restart=always</SpanGrey> → restarts if the app crashes
-          </Li>
-          <Li>
-            Logs go to <SpanGrey>journalctl</SpanGrey>
-          </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_19_} />
-          <Li>Reload systemd, Start service , Enable auto-start on boot:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_20_} />
-          <Li>Check logs of the springboot service and keep updating in real-time as new log entries appear.</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_22_} />
         </ULdisc>
       </section>
     </MainChildArea>
@@ -259,34 +233,11 @@ const _12_ = `server {
     }
 }`;
 
-const _12_1_ = `sudo cat /etc/nginx/sites-enabled/springboot`;
+const _12_1_ = `sudo cat /etc/nginx/sites-enabled/springboot
+sudo ln -s /etc/nginx/sites-available/springboot /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo systemctl reload nginx`;
 
-const _13_ = `sudo ln -s /etc/nginx/sites-available/springboot /etc/nginx/sites-enabled/`;
-const _14_ = `sudo rm /etc/nginx/sites-enabled/default`;
-const _15_ = `sudo nginx -t`;
-const _16_ = `sudo systemctl reload nginx`;
-const _17_ = `http://139.162.148.144`;
-const _17_1_ = `sudo find / -name audit.log 2>/dev/null`;
-const _18_ = `sudo nano /etc/systemd/system/springboot.service`;
-const _19_ = `[Unit]
-Description=Spring Boot Application
-After=network.target
-
-[Service]
-User=root
-WorkingDirectory=/opt/springboot
-ExecStart=/usr/bin/java -jar /opt/springboot/audit.jar
-SuccessExitStatus=143
-Restart=always
-RestartSec=10
-StandardOutput=journal
-StandardError=journal
-
-[Install]
-WantedBy=multi-user.target`;
-
-const _20_ = `sudo systemctl daemon-reload
-sudo systemctl start springboot
-sudo systemctl enable springboot`;
-
-const _22_ = `journalctl -u springboot -f`;
+const _17_ = `http://139.162.148.144
+sudo find / -name audit.log 2>/dev/null`;
