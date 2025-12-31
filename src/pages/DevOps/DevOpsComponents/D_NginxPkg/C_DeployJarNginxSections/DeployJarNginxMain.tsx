@@ -13,6 +13,8 @@ import O8_VerifyJarCanRunLocaly from "./O8_VerifyJarCanRunLocaly";
 import O9_CreateSystemdServiceFile from "./O9_CreateSystemdServiceFile";
 import O10_ConfigNginxReverseProxy from "./O10_ConfigNginxReverseProxy";
 import O11_TestAppViaNginx from "./O11_TestAppViaNginx";
+import O12_SecureTheSetup from "./O12_SecureTheSetup";
+import O13_EnableHttps from "./O13_EnableHttps";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -29,8 +31,8 @@ const o8_VerifyJarCanRunLocaly = "5. Verify Jar Can Run Localy";
 const o9_CreateSystemdServiceFile = "6. Create systemd service file";
 const o10_ConfigNginxReverseProxy = "7. Config NGINX Reverse Proxy";
 const o11_TestAppViaNginx = "8. Test App Via Nginx";
-// const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
-// const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
+const o12_SecureTheSetup = "9. Secure The Setup (Important)";
+const o13_EnableHttps = "10. Enable HTTPS (production-critical)";
 const oX_Systemd = "X. Systemd service (explanied)";
 
 // ===========================================
@@ -49,6 +51,7 @@ const anchorList: string[] = [
   o9_CreateSystemdServiceFile,
   o10_ConfigNginxReverseProxy,
   o11_TestAppViaNginx,
+  o12_SecureTheSetup,
   oX_Systemd,
 ];
 
@@ -114,6 +117,8 @@ const DeployJarNginxMain = () => {
       <O9_CreateSystemdServiceFile anchor={o9_CreateSystemdServiceFile} />
       <O10_ConfigNginxReverseProxy anchor={o10_ConfigNginxReverseProxy} />
       <O11_TestAppViaNginx anchor={o11_TestAppViaNginx} />
+      <O12_SecureTheSetup anchor={o12_SecureTheSetup} />
+      <O13_EnableHttps anchor={o13_EnableHttps} />
       <OX_Systemd anchor={oX_Systemd} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>

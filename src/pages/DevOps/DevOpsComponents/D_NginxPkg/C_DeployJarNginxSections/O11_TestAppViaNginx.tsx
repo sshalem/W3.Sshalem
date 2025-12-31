@@ -50,9 +50,12 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             or use the <SpanGrey>curl</SpanGrey>command (Built in Linux)
+            <ApplicationPropertiesHighlight propertiesCode={_4_} />
           </Li>
-
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Li>
+            Full verification List commands
+            <ApplicationPropertiesHighlight propertiesCode={_5_} />
+          </Li>
         </ULdisc>
       </section>
     </MainChildArea>
@@ -69,9 +72,18 @@ const _3_ = `LISTEN 0 100 127.0.0.1:8080 ... java`;
 const _4_ = `# Test the app directly which bypass NGINX (Must have "test" endpoint in RestController):
 curl http://localhost:8080/actuator/health
 
-# Test through NGINX (public) (Must have "test" endpoint in RestController)
+# Test NGINX from outside (public) (Must have "test" endpoint in RestController)
 curl http://139.162.148.144/test
 
 # Check NGINX error/access logs (very important)
 sudo tail -f /var/log/nginx/error.log
 sudo tail -f /var/log/nginx/access.log`;
+
+const _5_ = `# APP :
+sudo systemctl status audit
+ss -lntp | grep 8080
+curl http://localhost:8080
+
+# NGINX:
+curl http://139.162.148.144
+tail -f /var/log/nginx/error.log`;

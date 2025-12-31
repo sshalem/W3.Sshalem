@@ -109,10 +109,14 @@ sudo systemctl enable audit
 sudo systemctl status audit
 
 # I do not need restart on first setup.
-# For updates later (After modify audit.service , Or new audit.jar, or change environment variables or JVM options):
+# For UPDATES use following commands: (After modify audit.service , Or new audit.jar, or change environment variables or JVM options):
 sudo systemctl daemon-reload
 sudo systemctl restart audit
 sudo systemctl status audit
+# UPDATES probably occur after I config NGINX proxy ,
+# These 2 more commands are necesseray
+sudo nginx -t
+sudo systemctl reload nginx
 
 # Confirm the app is listening
 ss -lntp | grep 8080
@@ -155,9 +159,9 @@ ExecStart=/usr/bin/java -jar /opt/springboot/audit.jar
 
 SuccessExitStatus=143
 
-# Restart policy
+# restart policy
 Restart=always
-RestartSec=10
+RestartSec=5
 
 # Best practice
 #StandardOutput=journal
