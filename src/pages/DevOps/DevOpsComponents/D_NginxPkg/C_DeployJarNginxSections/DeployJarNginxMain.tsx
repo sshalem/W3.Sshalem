@@ -4,20 +4,34 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_DifferenceArchitecture from "./O1_DifferenceArchitecture";
 import O2_JarBehindNginx from "./O2_JarBehindNginx";
 import O3_DeployJarNginx from "./O3_DeployJarNginx";
-import O4_Systemd from "./O4_Systemd";
-import O5_ConfigSystemdJournalctl from "./O5_ConfigSystemdJournalctl";
-import O6_ConfigSystemdJournalctlAndLogFile from "./O6_ConfigSystemdJournalctlAndLogFile";
+import OX_Systemd from "./OX_Systemd";
+import O4_BuildJarLocaly from "./O4_BuildJarLocaly";
+import O5_ConnectToLinodeServer from "./O5_ConnectToLinodeServer";
+import O6_CreateDedicatedFolder from "./O6_CreateDedicatedFolder";
+import O7_UploadJarToLinux from "./O7_UploadJarToLinux";
+import O8_VerifyJarCanRunLocaly from "./O8_VerifyJarCanRunLocaly";
+import O9_CreateSystemdServiceFile from "./O9_CreateSystemdServiceFile";
+import O10_ConfigNginxReverseProxy from "./O10_ConfigNginxReverseProxy";
+import O11_TestAppViaNginx from "./O11_TestAppViaNginx";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DifferenceArchitecture = "1. two Different Architectures";
-const o2_JarBehindNginx = "2. JAR Behind Nginx";
-const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
-const o4_Systemd = "4. What is Systemd service";
-const o5_ConfigSystemdJournalctl = "5. Config systemd service with journalctl";
-const o6_ConfigSystemdJournalctlAndLogFile = "6. Best Practice : journalctl + log File";
+const o1_DifferenceArchitecture = "Two Different Architectures";
+const o2_JarBehindNginx = "JAR Behind Nginx";
+const o3_DeployJarNginx = "Deploy Jar on Nginx";
+const o4_BuildJarLocaly = "1. Build Jar Localy";
+const o5_ConnectToLinodeServer = "2. Connect to Linode Server";
+const o6_CreateDedicatedFolder = "3. Create Dedicated Folder";
+const o7_UploadJarToLinux = "4. Upload Jar To Linux";
+const o8_VerifyJarCanRunLocaly = "5. Verify Jar Can Run Localy";
+const o9_CreateSystemdServiceFile = "6. Create systemd service file";
+const o10_ConfigNginxReverseProxy = "7. Config NGINX Reverse Proxy";
+const o11_TestAppViaNginx = "8. Test App Via Nginx";
+// const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
+// const o3_DeployJarNginx = "3. Deploy Jar on Nginx";
+const oX_Systemd = "X. Systemd service (explanied)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -27,9 +41,15 @@ const anchorList: string[] = [
   o1_DifferenceArchitecture,
   o2_JarBehindNginx,
   o3_DeployJarNginx,
-  o4_Systemd,
-  o5_ConfigSystemdJournalctl,
-  o6_ConfigSystemdJournalctlAndLogFile,
+  o4_BuildJarLocaly,
+  o5_ConnectToLinodeServer,
+  o6_CreateDedicatedFolder,
+  o7_UploadJarToLinux,
+  o8_VerifyJarCanRunLocaly,
+  o9_CreateSystemdServiceFile,
+  o10_ConfigNginxReverseProxy,
+  o11_TestAppViaNginx,
+  oX_Systemd,
 ];
 
 // ============================================
@@ -86,9 +106,15 @@ const DeployJarNginxMain = () => {
       <O1_DifferenceArchitecture anchor={o1_DifferenceArchitecture} />
       <O2_JarBehindNginx anchor={o2_JarBehindNginx} />
       <O3_DeployJarNginx anchor={o3_DeployJarNginx} />
-      <O4_Systemd anchor={o4_Systemd} />
-      <O5_ConfigSystemdJournalctl anchor={o5_ConfigSystemdJournalctl} />
-      <O6_ConfigSystemdJournalctlAndLogFile anchor={o6_ConfigSystemdJournalctlAndLogFile} />
+      <O4_BuildJarLocaly anchor={o4_BuildJarLocaly} />
+      <O5_ConnectToLinodeServer anchor={o5_ConnectToLinodeServer} />
+      <O6_CreateDedicatedFolder anchor={o6_CreateDedicatedFolder} />
+      <O7_UploadJarToLinux anchor={o7_UploadJarToLinux} />
+      <O8_VerifyJarCanRunLocaly anchor={o8_VerifyJarCanRunLocaly} />
+      <O9_CreateSystemdServiceFile anchor={o9_CreateSystemdServiceFile} />
+      <O10_ConfigNginxReverseProxy anchor={o10_ConfigNginxReverseProxy} />
+      <O11_TestAppViaNginx anchor={o11_TestAppViaNginx} />
+      <OX_Systemd anchor={oX_Systemd} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -1,0 +1,77 @@
+/*
+
+
+*/
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+
+const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
+  return (
+    <MainChildArea anchor={anchor}>
+      <section className="my-8">
+        <div className="my-4 text-xl"> Check my app running via (behind) NGINX</div>
+        <p className="text-lg">1️⃣ Verify the JAR (Spring Boot) is running, If you use systemd (recommended)</p>
+        <ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Li>I should see:</Li>
+          <ULdisc>
+            <Li>
+              <SpanGrey>Active: active (running)</SpanGrey>
+            </Li>
+            <Li>Java process listed</Li>
+          </ULdisc>
+          {/* <ApplicationPropertiesHighlight propertiesCode={_17_} /> */}
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-lg">2️⃣ Verify the application is listening on a port</p>
+        <ULdisc>
+          <Li>Check which port your app uses (example: 8080):</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Li>Expected:</Li>
+          <Li>
+            <SpanRed>Important</SpanRed>
+            <ULdisc>
+              <Li>
+                App should listen on <SpanGrey>127.0.0.1</SpanGrey> or <SpanGrey>localhost</SpanGrey>
+              </Li>
+              <Li>NGINX will forward traffic to it</Li>
+            </ULdisc>
+          </Li>
+          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+        </ULdisc>
+        <hr />
+        <p className="my-8 text-lg">3️⃣ Test the app </p>
+        <ULdisc>
+          <Li>
+            Browse thru <SpanGrey>http://your_server_ip/endpointUrl</SpanGrey>
+          </Li>
+          <Li>
+            I can use <SpanGrey>Postman</SpanGrey>
+          </Li>
+          <Li>
+            or use the <SpanGrey>curl</SpanGrey>command (Built in Linux)
+          </Li>
+
+          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+        </ULdisc>
+      </section>
+    </MainChildArea>
+  );
+};
+export default O11_TestAppViaNginx;
+
+const _1_ = `sudo systemctl status app`;
+
+const _2_ = `ss -lntp | grep java`;
+
+const _3_ = `LISTEN 0 100 127.0.0.1:8080 ... java`;
+
+const _4_ = `# Test the app directly which bypass NGINX (Must have "test" endpoint in RestController):
+curl http://localhost:8080/actuator/health
+
+# Test through NGINX (public) (Must have "test" endpoint in RestController)
+curl http://139.162.148.144/test
+
+# Check NGINX error/access logs (very important)
+sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/access.log`;

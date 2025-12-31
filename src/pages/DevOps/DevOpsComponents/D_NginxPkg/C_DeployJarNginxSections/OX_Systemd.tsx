@@ -6,7 +6,7 @@ import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 import Table_5ColCompareJournalNohup from "../../../../../components/Tables/Table_5ColCompareJournalNohup";
 
-const O4_Systemd = ({ anchor }: { anchor: string }) => {
+const OX_Systemd = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       Here’s a step-by-step guide to deploy your Spring Boot JAR on a Linux server with NGINX:
@@ -53,4 +53,4 @@ const O4_Systemd = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O4_Systemd;
+export default OX_Systemd;
