@@ -17,6 +17,7 @@ const O1_RumbaBasics = ({ anchor }: { anchor: string }) => {
           }}
         >
           <YouTubeVideo videoId="h879X16JUlI" />
+          <YouTubeVideo videoId="U3FFwPi-e_4" />
           <YouTubeVideo videoId="bxFPo2JdyQ4" />
           <YouTubeVideo videoId="wpA7_S6F5Nw" />
           <YouTubeVideo videoId="t2ePG28cQyM" />
