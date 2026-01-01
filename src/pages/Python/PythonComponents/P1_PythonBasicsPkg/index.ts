@@ -6,3 +6,6 @@ export { default as PythonFunctionsMain } from "./E_FunctionsSections/PythonFunc
 export { default as PythonExceptionsMain } from "./F_ExceptionsSections/PythonExceptionsMain";
 export { default as PythonDataStructuresMain } from "./G_DataStructuresSections/PythonDataStructuresMain";
 export { default as ModulesPackagingMain } from "./H_ModulesPackagingSections/ModulesPackagingMain";
+export { default as FileHandlingMain } from "./I_FileHandlingSections/FileHandlingMain";
+export { default as PythonOopMain } from "./J_OopSections/PythonOopMain";
+export { default as VenvMain } from "./K_VenvSections/VenvMain";

@@ -262,6 +262,7 @@ import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSection
 import Django_page from "./pages/Django/Django_page";
 import {
   DataTypesMain,
+  FileHandlingMain,
   IfElseMain,
   LoopsMain,
   ModulesPackagingMain,
@@ -269,6 +270,8 @@ import {
   PythonDataStructuresMain,
   PythonExceptionsMain,
   PythonFunctionsMain,
+  PythonOopMain,
+  VenvMain,
 } from "./pages/Python/PythonComponents/P1_PythonBasicsPkg";
 
 const router = createBrowserRouter(
@@ -692,9 +695,9 @@ const router = createBrowserRouter(
                 { path: "exceptions", element: <PythonExceptionsMain /> },
                 { path: "data-structures", element: <PythonDataStructuresMain /> },
                 { path: "modules-packaging", element: <ModulesPackagingMain /> },
-                { path: "file-handling", element: <IfElseMain /> },
-                { path: "oop", element: <IfElseMain /> },
-                { path: "venv", element: <IfElseMain /> },
+                { path: "file-handling", element: <FileHandlingMain /> },
+                { path: "oop", element: <PythonOopMain /> },
+                { path: "venv", element: <VenvMain /> },
               ],
             },
           ],
