@@ -86,7 +86,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { DataTypesMain, PythonBasics, PythonHome, VsCodePythonMain } from "./pages/Python/PythonComponents";
+import { PythonBasics, PythonHome, VsCodePythonMain } from "./pages/Python/PythonComponents";
 import {
   ConnectToServerSshMain,
   CreateServerMain,
@@ -260,6 +260,16 @@ import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X
 import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
 import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
 import Django_page from "./pages/Django/Django_page";
+import {
+  DataTypesMain,
+  IfElseMain,
+  LoopsMain,
+  ModulesPackagingMain,
+  OperatorsMain,
+  PythonDataStructuresMain,
+  PythonExceptionsMain,
+  PythonFunctionsMain,
+} from "./pages/Python/PythonComponents/P1_PythonBasicsPkg";
 
 const router = createBrowserRouter(
   [
@@ -670,7 +680,23 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <PythonHome /> },
             { path: "vscode", element: <VsCodePythonMain /> },
-            { path: "python-basics", element: <PythonBasics />, children: [{ path: "data-types", element: <DataTypesMain /> }] },
+            {
+              path: "python-basics",
+              element: <PythonBasics />,
+              children: [
+                { path: "data-types", element: <DataTypesMain /> },
+                { path: "operators", element: <OperatorsMain /> },
+                { path: "control-flow", element: <IfElseMain /> },
+                { path: "loops", element: <LoopsMain /> },
+                { path: "functions", element: <PythonFunctionsMain /> },
+                { path: "exceptions", element: <PythonExceptionsMain /> },
+                { path: "data-structures", element: <PythonDataStructuresMain /> },
+                { path: "modules-packaging", element: <ModulesPackagingMain /> },
+                { path: "file-handling", element: <IfElseMain /> },
+                { path: "oop", element: <IfElseMain /> },
+                { path: "venv", element: <IfElseMain /> },
+              ],
+            },
           ],
         },
         {
