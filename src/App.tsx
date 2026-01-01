@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import {
-  Batch_page,
   Cpp_page,
   DevOps_page,
   Error_page,
@@ -114,7 +113,7 @@ import {
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
-import { BatchHome } from "./pages/Batch/BatchComponents";
+import { DjangoHome } from "./pages/Django/DjangoComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
@@ -260,6 +259,7 @@ import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_
 import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
 import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
 import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
+import Django_page from "./pages/Django/Django_page";
 
 const router = createBrowserRouter(
   [
@@ -751,7 +751,7 @@ const router = createBrowserRouter(
           ],
         },
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
-        { path: "batch", element: <Batch_page />, children: [{ index: true, element: <BatchHome /> }] },
+        { path: "django", element: <Django_page />, children: [{ index: true, element: <DjangoHome /> }] },
         {
           path: "postman",
           element: <Postman_page />,

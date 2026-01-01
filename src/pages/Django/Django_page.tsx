@@ -7,7 +7,7 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const Batch_page = () => {
+const Django_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSideNavbar = () => {
@@ -36,7 +36,7 @@ const Batch_page = () => {
         <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
-            <SideBarLink pageName="Batch Home" internalLink="/batch" />
+            <SideBarLink pageName="Django Home" internalLink="/django" />
           </div>
         </article>
       )}
@@ -47,4 +47,4 @@ const Batch_page = () => {
   );
 };
 
-export default Batch_page;
+export default Django_page;
