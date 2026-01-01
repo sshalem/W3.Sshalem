@@ -7,6 +7,7 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownPortCheck from "./DropWindows/DropDownPortCheck";
+import DropDownBatch from "./DropWindows/DropDownBatch";
 
 const Windows_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -39,6 +40,7 @@ const Windows_page = () => {
             <div className="h-3"></div>
             <SideBarLink pageName="Windows Home" internalLink="/windows" />
             <DropDownPortCheck />
+            <DropDownBatch />
           </div>
         </article>
       )}

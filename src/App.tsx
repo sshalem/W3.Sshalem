@@ -258,6 +258,8 @@ import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_Array
 import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
 import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_BasicsSections/JavaFundamentalMain";
 import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
+import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
+import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
 
 const router = createBrowserRouter(
   [
@@ -773,6 +775,7 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <WindowsHome /> },
             { path: "port-check", element: <PortCheckMain /> },
+            { path: "batch", element: <Batch />, children: [{ path: "ascii", element: <AsciiMain /> }] },
           ],
         },
         {
