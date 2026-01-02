@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_TerminologyCompare from "./O1_TerminologyCompare";
+import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O2_CreateNewProject from "./O2_CreateNewProject";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_terminology_compare = "1. Terminology compare";
+const o1_NewProjectSetup = "1. New Project Setup";
+const o2_CreateNewProject = "2. Create Pure Python Project";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_terminology_compare];
+const anchorList: string[] = [o1_NewProjectSetup, o2_CreateNewProject];
 
 // ============================================
 // ============================================
@@ -66,7 +68,8 @@ const PyCharmMain = () => {
       />
       {/* End Contents */}
 
-      <O1_TerminologyCompare anchor={o1_terminology_compare}></O1_TerminologyCompare>
+      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O2_CreateNewProject anchor={o2_CreateNewProject} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
