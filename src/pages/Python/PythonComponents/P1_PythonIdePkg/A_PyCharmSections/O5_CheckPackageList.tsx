@@ -14,7 +14,7 @@ const O5_CheckPackageList = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Open Terminal</Li>
           <Li>
-            run the commands Before installing any packages lets
+            run on of the commands below Before installing any packages
             <ApplicationPropertiesHighlight propertiesCode={_1_} />
           </Li>
           <Li>So far, We have only 1 packages installed. (Note : pip in Python is like npm in React) .</Li>
@@ -28,4 +28,5 @@ const O5_CheckPackageList = ({ anchor }: { anchor: string }) => {
 export default O5_CheckPackageList;
 
 const _1_ = `pip list
-pip list -v`;
+pip list -v
+pip freeze`;

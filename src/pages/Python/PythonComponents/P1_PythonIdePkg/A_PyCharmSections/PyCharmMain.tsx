@@ -4,7 +4,8 @@ import O1_NewProjectSetup from "./O1_NewProjectSetup";
 import O2_CreateNewProject from "./O2_CreateNewProject";
 import O3_ProjectFolderStructureLayout from "./O3_ProjectFOlderStructureLayout";
 import O4_VerifyVirtualEnvironment from "./O4_VerifyVirtualEnvironment";
-import O5_CheckPackageList from "./O6_CreateMainFile";
+import O5_CheckPackageList from "./O5_CheckPackageList";
+import O6_CreateMainFile from "./O6_CreateMainFile";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -15,6 +16,7 @@ const o2_CreateNewProject = "1. Create Pure Python Project";
 const o3_ProjectFolderStructureLayout = "2. Folder Structure Layout";
 const o4_VerifyVirtualEnvironment = "3. Verify Virtual Environment";
 const o5_CheckPackageList = "4. Check Package List";
+const o6_CreateMainFile = "5. Create main file";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -26,6 +28,7 @@ const anchorList: string[] = [
   o3_ProjectFolderStructureLayout,
   o4_VerifyVirtualEnvironment,
   o5_CheckPackageList,
+  o6_CreateMainFile,
 ];
 
 // ============================================
@@ -85,6 +88,7 @@ const PyCharmMain = () => {
       <O3_ProjectFolderStructureLayout anchor={o3_ProjectFolderStructureLayout} />
       <O4_VerifyVirtualEnvironment anchor={o4_VerifyVirtualEnvironment} />
       <O5_CheckPackageList anchor={o5_CheckPackageList} />
+      <O6_CreateMainFile anchor={o6_CreateMainFile} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
