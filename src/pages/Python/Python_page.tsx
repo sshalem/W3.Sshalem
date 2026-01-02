@@ -7,7 +7,7 @@ import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownPythonBasics from "./DropPython/DropDownPythonBasics";
-import DropDownPythonVsCode from "./DropPython/DropDownPythonVsCode";
+import DropDownPythonVsCode from "./DropPython/DropDownPythonGeneral";
 import DropDownPythonIde from "./DropPython/DropDownPythonIde";
 
 const Python_page = () => {

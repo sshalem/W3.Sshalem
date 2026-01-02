@@ -4,24 +4,24 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../components";
-import O1_VsCodeIntro from "./O1_VsCodeIntro";
+import O1_PythonGeneralIntro from "./O1_PythonGeneralIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_VsCodeIntro = "1. vscode Intro";
+const o1_PythonGeneralIntro = "1. Python General Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_VsCodeIntro];
+const anchorList: string[] = [o1_PythonGeneralIntro];
 
 // ============================================
 // ============================================
 
-const VsCodePythonMain = () => {
+const PythonGeneralMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,9 +70,9 @@ const VsCodePythonMain = () => {
       />
       {/* End Contents */}
 
-      <O1_VsCodeIntro anchor={o1_VsCodeIntro}></O1_VsCodeIntro>
+      <O1_PythonGeneralIntro anchor={o1_PythonGeneralIntro} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default VsCodePythonMain;
+export default PythonGeneralMain;

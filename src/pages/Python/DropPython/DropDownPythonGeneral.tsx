@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropDownTopic } from "../../../components";
 
-const DropDownPythonVsCode = () => {
+const DropDownPythonGeneral = () => {
   const [showList, setShowList] = useState<boolean>(false);
   // const [listHeight, setListHeight] = useState<number>();
   const [, setListHeight] = useState<number>();
@@ -19,7 +19,7 @@ const DropDownPythonVsCode = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("python/python-basics")) {
+    if (location.pathname.includes("python/general")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -39,11 +39,11 @@ const DropDownPythonVsCode = () => {
         enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/python/vscode"
-        topicName="VsCode with Python"
+        internalLink="/python/general"
+        topicName="Python General"
       />
     </section>
   );
 };
 
-export default DropDownPythonVsCode;
+export default DropDownPythonGeneral;
