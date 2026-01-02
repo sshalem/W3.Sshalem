@@ -4,7 +4,7 @@ import O1_NewProjectSetup from "./O1_NewProjectSetup";
 import O2_CreateNewProject from "./O2_CreateNewProject";
 import O3_ProjectFolderStructureLayout from "./O3_ProjectFOlderStructureLayout";
 import O4_VerifyVirtualEnvironment from "./O4_VerifyVirtualEnvironment";
-import O5_CheckPackageList from "./O5_CheckPackageList";
+import O5_CheckPackageList from "./O6_CreateMainFile";
 
 // ===========================================
 // ==     content menu (title name)         ==
