@@ -35,7 +35,9 @@ const O3_ProjectFolderStructureLayout = ({ anchor }: { anchor: string }) => {
             <Li>
               ✔ Activation scripts <SpanGrey>.\.venv\Scripts\activate</SpanGrey>
             </Li>
-            <Li>✔ Package scripts / command-line tools </Li>
+            <Li>
+              ✔ Package scripts / command-line tools <SpanGrey>pip.exe</SpanGrey> or <SpanGrey>django-admin.exe (if Django installed)</SpanGrey>
+            </Li>
           </ULdisc>
         </Li>
         <Li>
