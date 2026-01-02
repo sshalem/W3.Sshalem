@@ -20,14 +20,14 @@ const O3_ProjectFolderStructureLayout = ({ anchor }: { anchor: string }) => {
           environment created on Windows.
         </Li>
         <Li>
-          📁 1. Lib Folder contains
+          <strong>📁 Lib Folder contains</strong>
           <ULdisc>
             <Li>✔ All installed Python packages</Li>
             <Li>✔ Standard library files used by Python</Li>
           </ULdisc>
         </Li>
         <Li>
-          📁 2. Scripts Folder contains executable files for your virtual environment, including:
+          📁 <strong>Scripts Folder contains</strong> executable files for your virtual environment, including:
           <ULdisc>
             <Li>
               ✔ The Python interpreter <SpanGrey>.venv/Scripts/python.exe</SpanGrey>

@@ -3,20 +3,30 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_NewProjectSetup from "./O1_NewProjectSetup";
 import O2_CreateNewProject from "./O2_CreateNewProject";
 import O3_ProjectFolderStructureLayout from "./O3_ProjectFOlderStructureLayout";
+import O4_VerifyVirtualEnvironment from "./O4_VerifyVirtualEnvironment";
+import O5_CheckPackageList from "./O5_CheckPackageList";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "1. New Project Setup";
-const o2_CreateNewProject = "2. Create Pure Python Project";
-const o3_ProjectFolderStructureLayout = "3. Folder Structure Layout";
+const o1_NewProjectSetup = "New Project Setup";
+const o2_CreateNewProject = "1. Create Pure Python Project";
+const o3_ProjectFolderStructureLayout = "2. Folder Structure Layout";
+const o4_VerifyVirtualEnvironment = "3. Verify Virtual Environment";
+const o5_CheckPackageList = "4. Check Package List";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup, o2_CreateNewProject, o3_ProjectFolderStructureLayout];
+const anchorList: string[] = [
+  o1_NewProjectSetup,
+  o2_CreateNewProject,
+  o3_ProjectFolderStructureLayout,
+  o4_VerifyVirtualEnvironment,
+  o5_CheckPackageList,
+];
 
 // ============================================
 // ============================================
@@ -73,6 +83,8 @@ const PyCharmMain = () => {
       <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
       <O2_CreateNewProject anchor={o2_CreateNewProject} />
       <O3_ProjectFolderStructureLayout anchor={o3_ProjectFolderStructureLayout} />
+      <O4_VerifyVirtualEnvironment anchor={o4_VerifyVirtualEnvironment} />
+      <O5_CheckPackageList anchor={o5_CheckPackageList} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
