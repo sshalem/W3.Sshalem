@@ -1,4 +1,4 @@
 export { default as PythonHome } from "./PythonHome";
-export { default as PythonIde } from "./P1_PythonIdePkg/PythonIde";
+export { default as PythonIde } from "./P0_PythonIdePkg/PythonIde";
+export { default as PythonGeneral } from "./P1_PythonGeneralPkg/PythonGeneral";
 export { default as PythonBasics } from "./P2_PythonBasicsPkg/PythonBasics";
-export { default as PythonGeneralMain } from "./P0_PythonGeneralPkg/PythonGeneralMain";

@@ -86,7 +86,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { PythonBasics, PythonGeneralMain, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
+import { PythonBasics, PythonGeneral, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
 import {
   ConnectToServerSshMain,
   CreateServerMain,
@@ -273,7 +273,8 @@ import {
   PythonOopMain,
   VenvMain,
 } from "./pages/Python/PythonComponents/P2_PythonBasicsPkg";
-import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P1_PythonIdePkg";
+import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
+import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
 
 const router = createBrowserRouter(
   [
@@ -683,7 +684,14 @@ const router = createBrowserRouter(
           element: <Python_page />,
           children: [
             { index: true, element: <PythonHome /> },
-            { path: "general", element: <PythonGeneralMain /> },
+            {
+              path: "general",
+              element: <PythonGeneral />,
+              children: [
+                { path: "create-project", element: <CreateProjectMain /> },
+                { path: "python-git", element: <PythonGitMain /> },
+              ],
+            },
             {
               path: "ide",
               element: <PythonIde />,

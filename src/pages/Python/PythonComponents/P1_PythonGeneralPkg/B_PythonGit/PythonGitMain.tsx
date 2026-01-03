@@ -1,27 +1,25 @@
-/*
-
-
-*/
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu, Loading } from "../../../../components";
-import O1_PythonGeneralIntro from "./O1_PythonGeneralIntro";
+import { ContentMenu, Loading } from "../../../../../components";
+import O1_CopyProjectToexistingGitRepo from "./O1_CopyProjectToexistingGitRepo";
+import OX_CloneGitPythonProject from "./OX_CloneGitPythonProject";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_PythonGeneralIntro = "1. Python General Intro";
+const o1_CopyProjectToexistingGitRepo = "1. Copy Project To existing Git Repo";
+const oX_CloneGitPythonProject = "OX_CloneGitPythonProject";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_PythonGeneralIntro];
+const anchorList: string[] = [o1_CopyProjectToexistingGitRepo, oX_CloneGitPythonProject];
 
 // ============================================
 // ============================================
 
-const PythonGeneralMain = () => {
+const PythonGitMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,9 +68,12 @@ const PythonGeneralMain = () => {
       />
       {/* End Contents */}
 
-      <O1_PythonGeneralIntro anchor={o1_PythonGeneralIntro} />
+      <O1_CopyProjectToexistingGitRepo anchor={o1_CopyProjectToexistingGitRepo} />
+      <OX_CloneGitPythonProject anchor={oX_CloneGitPythonProject} />
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default PythonGeneralMain;
+
+export default PythonGitMain;

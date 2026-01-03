@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
 const DropDownPythonGeneral = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  // const [listHeight, setListHeight] = useState<number>();
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -36,12 +35,20 @@ const DropDownPythonGeneral = () => {
   return (
     <section>
       <SideDropDownTopic
-        enableCaret={false}
+        enableCaret={true}
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/python/general"
         topicName="Python General"
       />
+      <div
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
+        ref={divRef}
+      >
+        <SideDropdownLink sideDropDownNavName="Create New Project" internalLink="/python/general/create-project" />
+        <SideDropdownLink sideDropDownNavName="Git with Python" internalLink="/python/general/python-git" />
+      </div>
     </section>
   );
 };
