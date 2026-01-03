@@ -3,9 +3,8 @@
 
 */
 
-import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
-import python_1 from "../../../../../assets/python_1.jpg";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
 
 const OX_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,13 +12,26 @@ const OX_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4 text-lg font-semibold">✅ Correct Workflow in PyCharm (BEST PRACTICE)</article>
         <ULDecimal>
-          <Li>Open PyCharm and select new Project</Li>
+          <Li>Open CMD and Clone the Project</Li>
           <Li>
-            Create new <SpanGrey>Pure Python</SpanGrey> Project with the following fields below.
+            Configure the Virtual Environment in PyCharm (Key Step).
+            <ULdisc>
+              Set it manually (recommended) In PyCharm :
+              <ULdisc>
+                <Li>File → Settings → Python → Interpreter</Li>
+                <Li>Click Add Interpreter</Li>
+                <Li>Choose Virtualenv Environment</Li>
+                <Li>Select: Existing environment</Li>
+              </ULdisc>
+            </ULdisc>
           </Li>
-          <IMG img_name={python_1}></IMG>
           <Li>
-            This is how the <SpanGrey>tutorial</SpanGrey> project structure looks after setting up the project with the Virtual Environment
+            Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
+            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          </Li>
+          <Li>
+            🧠 How to Verify It’s Working , In PyCharm Terminal, run:
+            <ApplicationPropertiesHighlight propertiesCode={_2_} />
           </Li>
         </ULDecimal>
       </section>
@@ -28,3 +40,7 @@ const OX_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
 };
 
 export default OX_CloneGitPythonProject;
+
+const _1_ = `pip install -r requirements.txt`;
+
+const _2_ = `where python`;
