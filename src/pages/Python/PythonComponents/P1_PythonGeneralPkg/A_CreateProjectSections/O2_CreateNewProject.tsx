@@ -16,9 +16,6 @@ const O2_CreateNewProject = ({ anchor }: { anchor: string }) => {
           Create new <SpanGrey>Pure Python</SpanGrey> Project with the following fields below.
         </Li>
         <IMG img_name={python_1}></IMG>
-        <Li>
-          This is how the <SpanGrey>tutorial</SpanGrey> project structure looks after setting up the project with the Virtual Environment
-        </Li>
       </ULDecimal>
     </MainChildArea>
   );

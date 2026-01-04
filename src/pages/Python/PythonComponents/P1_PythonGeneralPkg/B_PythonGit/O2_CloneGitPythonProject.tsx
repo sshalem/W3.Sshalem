@@ -7,7 +7,7 @@ import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 import python_7 from "../../../../../assets/python_7.jpg";
 
-const OX_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
+const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -38,33 +38,37 @@ const OX_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
               <IMG img_name={python_7}></IMG>
             </ULdisc>
           </Li>
-          {/* <Li>
+          <Li>
             4️⃣ <SpanGrey>sanity check</SpanGrey> : Open PyCharm Terminal , type command below , → should point to <SpanGrey>(.venv)</SpanGrey>
-            <ApplicationPropertiesHighlight propertiesCode={_3_} />
+            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            or iI am in the root project directory then :
+            <ApplicationPropertiesHighlight propertiesCode={_4_1_} />
           </Li>
           <Li>
-            Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            5️⃣ Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
+            <ApplicationPropertiesHighlight propertiesCode={_5_} />
           </Li>
           <Li>
-            🧠 How to Verify It’s Working , In PyCharm Terminal, run:
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
-          </Li> */}
+            6️⃣ How to Verify It’s Working , In PyCharm Terminal, run:
+            <ApplicationPropertiesHighlight propertiesCode={_6_} />
+          </Li>
         </ULdisc>
       </section>
     </MainChildArea>
   );
 };
 
-export default OX_CloneGitPythonProject;
+export default O2_CloneGitPythonProject;
 
 const _1_ = `python -m venv .venv`;
 
-const _4_ = `pip install -r requirements.txt`;
+const _4_ = `python -c "import sys; print(sys.executable)`;
 
-const _5_ = `where python`;
+const _4_1_ = `./\.venv/\Scripts/\python -c "import sys; print(sys.executable)"`;
 
-const _6_ = `python -c "import sys; print(sys.executable)
+// # correct output : .../MyApp/.venv/Scripts/python.exe
+// # wrong output   : C:/\Program Files/\Python312/\python.exe`;
 
-# correct output : .../MyApp/.venv/Scripts/python.exe
-# wrong output   : C:/\Program Files/\Python312/\python.exe`;
+const _5_ = `pip install -r requirements.txt`;
+
+const _6_ = `where python`;

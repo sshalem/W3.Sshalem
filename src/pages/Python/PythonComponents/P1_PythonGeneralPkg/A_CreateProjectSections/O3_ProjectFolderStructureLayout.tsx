@@ -12,9 +12,13 @@ const O3_ProjectFolderStructureLayout = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <ULDecimal>
         <Li>
-          When we create a new Python project in PyCharm using a custom virtual environment <SpanGrey>(.venv)</SpanGrey>, Python automatically builds
-          a standard directory structure inside the <SpanGrey>.venv</SpanGrey>.
+          When we create a new Python project in PyCharm using a <SpanGrey>Project venv</SpanGrey> Python automatically builds
+          <SpanGrey>(.venv)</SpanGrey> (Virtual Environment) with a standard directory structure inside.
         </Li>
+        <Li>
+          This is how the <SpanGrey>tutorial</SpanGrey> project structure looks after setting up the project with the Virtual Environment
+        </Li>
+        <IMG img_name={python_2}></IMG>
         <Li>
           The two folders we’re seeing — <SpanGrey>Lib</SpanGrey> and <SpanGrey>Scripts</SpanGrey> — are normal and essential parts of any virtual
           environment created on Windows.
@@ -40,10 +44,6 @@ const O3_ProjectFolderStructureLayout = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
         </Li>
-        <Li>
-          This is how the <SpanGrey>tutorial</SpanGrey> project structure looks after setting up the project with the Virtual Environment
-        </Li>
-        <IMG img_name={python_2}></IMG>
       </ULDecimal>
     </MainChildArea>
   );

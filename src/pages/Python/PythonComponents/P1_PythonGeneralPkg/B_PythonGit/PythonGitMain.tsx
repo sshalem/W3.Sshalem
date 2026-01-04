@@ -1,20 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_AddProjectToExistingGitRepo from "./O1_AddProjectToExistingGitRepo";
-import OX_CloneGitPythonProject from "./OX_CloneGitPythonProject";
+import O2_CloneGitPythonProject from "./O2_CloneGitPythonProject";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_AddProjectToExistingGitRepo = "1. Add Project To My Python Git Repo";
-const oX_CloneGitPythonProject = "OX_CloneGitPythonProject";
+const o2_CloneGitPythonProject = "2. Clone Git Python Project";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_AddProjectToExistingGitRepo, oX_CloneGitPythonProject];
+const anchorList: string[] = [o1_AddProjectToExistingGitRepo, o2_CloneGitPythonProject];
 
 // ============================================
 // ============================================
@@ -69,7 +69,7 @@ const PythonGitMain = () => {
       {/* End Contents */}
 
       <O1_AddProjectToExistingGitRepo anchor={o1_AddProjectToExistingGitRepo} />
-      <OX_CloneGitPythonProject anchor={oX_CloneGitPythonProject} />
+      <O2_CloneGitPythonProject anchor={o2_CloneGitPythonProject} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
