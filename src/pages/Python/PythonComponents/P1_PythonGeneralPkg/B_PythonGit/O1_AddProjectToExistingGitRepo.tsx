@@ -3,7 +3,7 @@
 
 */
 
-import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_5 from "../../../../../assets/python_5.jpg";
 import python_6 from "../../../../../assets/python_6.jpg";
@@ -33,6 +33,36 @@ const O1_AddProjectToExistingGitRepo = ({ anchor }: { anchor: string }) => {
             4️⃣ <strong>Best Practice</strong> : <SpanRed>Delete</SpanRed> both directories <SpanGrey>.venv</SpanGrey> and <SpanGrey>.idea</SpanGrey>{" "}
             from Project , before commit/push to Git (the <SpanGrey>(.idea)</SpanGrey> made me lot of problems <SpanGrey>[invalid] issue</SpanGrey>{" "}
             when tried to clone the project and assign virtual venv )<IMG img_name={python_8}></IMG>
+            PyCharm caches interpreter paths in <SpanGrey>.idea</SpanGrey>
+            Thus , to fix issue of Invalid :
+            <ULdisc>
+              <Li>🔥 STEP 1 — CLOSE PYCHARM</Li>
+              <Li>
+                🔥 STEP 2 — DELETE PyCharm project <SpanGrey>.idea</SpanGrey>
+              </Li>
+              <Li>🔥 STEP 3 — If it's a repo , delte the repo , and clone it again</Li>
+              <Li>🔥 STEP 4 — OPEN PROJECT CORRECTLY (Open PyCharm → Open → select the exact folder)</Li>
+              <Li>
+                🔥 STEP 5 — CREATE interpreter (correct way)
+                <ULDecimal>
+                  <Li>File → Settings → Python Interpreter</Li>
+                  <Li>Click Add Interpreter → Add Local Interpreter</Li>
+                  <Li>Select Virtualenv Environment</Li>
+                  <Li>
+                    Choose :
+                    <ULdisc>
+                      <Li>✅ New</Li>
+                      <Li>
+                        ✅ Location <SpanGrey>D:\_Software\_Python\Python\tutorial\.venv</SpanGrey>
+                      </Li>
+                      <Li>
+                        ✅ Base interpreter: <SpanGrey>C:\Program Files\Python312\python.exe</SpanGrey>
+                      </Li>
+                    </ULdisc>
+                  </Li>
+                </ULDecimal>
+              </Li>
+            </ULdisc>
           </Li>
           <Li>
             5️⃣ Its a must to ignore the <SpanGrey>.venv</SpanGrey> and <SpanGrey>.idea</SpanGrey> from Prjects (Like ignore Node folder in ReactJs).
