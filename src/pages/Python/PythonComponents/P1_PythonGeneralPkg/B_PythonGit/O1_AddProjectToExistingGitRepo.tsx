@@ -36,6 +36,11 @@ const O1_AddProjectToExistingGitRepo = ({ anchor }: { anchor: string }) => {
             PyCharm caches interpreter paths in <SpanGrey>.idea</SpanGrey>
             Thus , to fix issue of Invalid :
             <ULdisc>
+              <Li>
+                Invalidate PyCharm caches <SpanGrey>File → Invalidate Caches / Restart → Invalidate and Restart</SpanGrey>
+              </Li>
+            </ULdisc>
+            <ULdisc>
               <Li>🔥 STEP 1 — CLOSE PYCHARM</Li>
               <Li>
                 🔥 STEP 2 — DELETE PyCharm project <SpanGrey>.idea</SpanGrey>
