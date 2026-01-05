@@ -8,3 +8,4 @@ export { default as ProfileMain } from "./F_ProfilesSection/ProfileMain";
 export { default as DBInitDataSqlMain } from "./G_DBInitDataSql/DBInitDataSqlMain";
 export { default as DBInitPostConstructMain } from "./H_DBInitPostConstruct/DBInitPostConstructMain";
 export { default as DBInitCommandLineRunnerMain } from "./I_DBInitCommandLineRunner/DBInitCommandLineRunnerMain";
+export { default as ReadFromPropertiesMain } from "./J_ReadFromPropertiesSections/ReadFromPropertiesMain";

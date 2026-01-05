@@ -51,6 +51,7 @@ import {
   MySqlMain,
   PostgresqlMain,
   ProfileMain,
+  ReadFromPropertiesMain,
 } from "./pages/Spring/SpringComponents/S2_ApplicationPropsPkg";
 
 import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/S3_LoggingPkg";
@@ -323,6 +324,7 @@ const router = createBrowserRouter(
                 { path: "db-initialization", element: <DBInitDataSqlMain /> },
                 { path: "post-construct-initialization", element: <DBInitPostConstructMain /> },
                 { path: "command-line-initialization", element: <DBInitCommandLineRunnerMain /> },
+                { path: "read-from-properties", element: <ReadFromPropertiesMain /> },
               ],
             },
             {

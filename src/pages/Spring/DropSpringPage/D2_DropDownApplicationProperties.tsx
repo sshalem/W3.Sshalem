@@ -58,6 +58,7 @@ const D2_DropDownApplicationProperties = () => {
         <SideDropdownLink sideDropDownNavName="DB Init data.sql" internalLink="/spring/application-properties/db-initialization" />
         <SideDropdownLink sideDropDownNavName="DB Init @PostConstruct" internalLink="/spring/application-properties/post-construct-initialization" />
         <SideDropdownLink sideDropDownNavName="DB Init CommandLineRunner" internalLink="/spring/application-properties/command-line-initialization" />
+        <SideDropdownLink sideDropDownNavName="Read from Properties" internalLink="/spring/application-properties/read-from-properties" />
       </div>
     </section>
   );
