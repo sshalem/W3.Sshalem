@@ -86,7 +86,7 @@ import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScrip
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-import { PythonBasics, PythonGeneral, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
+import { Django, FastApi, PythonBasics, PythonGeneral, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
 import {
   ConnectToServerSshMain,
   CreateServerMain,
@@ -113,7 +113,6 @@ import {
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
-import { DjangoHome } from "./pages/Django/DjangoComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
@@ -259,7 +258,7 @@ import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_
 import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
 import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
 import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
-import Django_page from "./pages/Django/Django_page";
+
 import {
   DataTypesMain,
   FileHandlingMain,
@@ -275,6 +274,8 @@ import {
 } from "./pages/Python/PythonComponents/P2_PythonBasicsPkg";
 import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
+import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P3_DjangoPkg";
+import CreateFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_CreateFastApiProjectSections/CreateFastApiProjectMain";
 
 const router = createBrowserRouter(
   [
@@ -717,6 +718,22 @@ const router = createBrowserRouter(
                 { path: "venv", element: <VenvMain /> },
               ],
             },
+            {
+              path: "django",
+              element: <Django />,
+              children: [
+                { path: "create-django", element: <CreateDjangoProjectMain /> },
+                // { path: "vscode", element: <VsCodeMain /> },
+              ],
+            },
+            {
+              path: "fastapi",
+              element: <FastApi />,
+              children: [
+                { path: "create-fastapi", element: <CreateFastApiProjectMain /> },
+                // { path: "vscode", element: <VsCodeMain /> },
+              ],
+            },
           ],
         },
         {
@@ -797,7 +814,6 @@ const router = createBrowserRouter(
           ],
         },
         { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
-        { path: "django", element: <Django_page />, children: [{ index: true, element: <DjangoHome /> }] },
         {
           path: "postman",
           element: <Postman_page />,

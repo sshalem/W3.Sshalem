@@ -1,4 +1,3 @@
-export { default as Batch_page } from "./Django/Django_page";
 export { default as Cpp_page } from "./Cpp/Cpp_page";
 export { default as DevOps_page } from "./DevOps/DevOps_page";
 export { default as FullStack_page } from "./FullStack/FullStack_page";

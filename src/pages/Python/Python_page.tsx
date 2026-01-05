@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import DropDownPythonBasics from "./DropPython/DropDownPythonBasics";
 import DropDownPythonGeneral from "./DropPython/DropDownPythonGeneral";
 import DropDownPythonIde from "./DropPython/DropDownPythonIde";
+import DropDownPythonDjango from "./DropPython/DropDownPythonDjango";
+import DropDownPythonFastApi from "./DropPython/DropDownPythonFastApi";
 
 const Python_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,6 +45,8 @@ const Python_page = () => {
             <DropDownPythonIde />
             <DropDownPythonGeneral />
             <DropDownPythonBasics />
+            <DropDownPythonDjango />
+            <DropDownPythonFastApi />
           </div>
         </article>
       )}
