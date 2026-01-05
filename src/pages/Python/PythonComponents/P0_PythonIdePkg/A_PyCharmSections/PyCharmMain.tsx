@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_NewProjectSetup from "./O1_NewProjectSetup";
 import O2_CreateNewProject from "./O2_CreateNewProject";
-import O3_ProjectFolderStructureLayout from "./O3_ProjectFOlderStructureLayout";
+import O3_ProjectFolderStructureLayout from "./O3_ProjectFolderStructureLayout";
 import O4_VerifyVirtualEnvironment from "./O4_VerifyVirtualEnvironment";
 import O5_CheckPackageList from "./O5_CheckPackageList";
 import O6_CreateMainFile from "./O6_CreateMainFile";
