@@ -8,12 +8,13 @@ import O5_CheckPackageList from "./O5_CheckPackageList";
 import O7_CreateMainFile from "./O7_CreateMainFile";
 import O6_RequirementsFile from "./O6_RequirementsFile";
 import O8_RunPythonProject from "./O8_RunPythonProject";
+import O0_NewProjectSetupPyCharmProfessional from "./O0_NewProjectSetupPyCharmProfessional";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
-
-const o1_NewProjectSetup = "New Project Setup";
+const o0_NewProjectSetupPyCharmProfessional = "New Project Setup PyCharm Professional";
+const o1_NewProjectSetup = "New Project Setup PyCharm CE ";
 const o2_CreateNewProject = "1. Create Pure Python Project";
 const o3_ProjectFolderStructureLayout = "2. Folder Structure Layout";
 const o4_VerifyVirtualEnvironment = "3. Verify Virtual Environment";
@@ -27,6 +28,7 @@ const o8_RunPythonProject = "7. Run Python Project";
 // ===========================================
 
 const anchorList: string[] = [
+  o0_NewProjectSetupPyCharmProfessional,
   o1_NewProjectSetup,
   o2_CreateNewProject,
   o3_ProjectFolderStructureLayout,
@@ -89,6 +91,7 @@ const CreateFastApiProjectMain = () => {
       />
       {/* End Contents */}
 
+      <O0_NewProjectSetupPyCharmProfessional anchor={o0_NewProjectSetupPyCharmProfessional} />
       <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
       <O2_CreateNewProject anchor={o2_CreateNewProject} />
       <O3_ProjectFolderStructureLayout anchor={o3_ProjectFolderStructureLayout} />
