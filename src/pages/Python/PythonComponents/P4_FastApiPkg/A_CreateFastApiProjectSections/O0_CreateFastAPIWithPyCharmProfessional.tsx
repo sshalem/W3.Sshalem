@@ -7,7 +7,7 @@ import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 import python_10 from "../../../../../assets/python_10.jpg";
 
-const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) => {
+const O0_CreateFastAPIWithPyCharmProfessional = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -38,4 +38,4 @@ const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) =
   );
 };
 
-export default O0_NewProjectSetupPyCharmProfessional;
+export default O0_CreateFastAPIWithPyCharmProfessional;
