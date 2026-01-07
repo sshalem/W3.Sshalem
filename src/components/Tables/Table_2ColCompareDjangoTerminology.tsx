@@ -16,6 +16,14 @@ const Table_2ColCompareDjangoTerminology = () => {
       Spring: "DTO Object in Spring",
       Django: "ModelSerializer",
     },
+    {
+      Spring: "application.yml",
+      Django: "settings.py",
+    },
+    {
+      Spring: "mvn spring-boot:run",
+      Django: "manage.py",
+    },
   ];
 
   return (

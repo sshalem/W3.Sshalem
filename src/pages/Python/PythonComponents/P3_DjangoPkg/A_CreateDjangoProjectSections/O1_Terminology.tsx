@@ -3,7 +3,6 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
 import Table_2ColCompareDjangoTerminology from "../../../../../components/Tables/Table_2ColCompareDjangoTerminology";
 
 const O1_Terminology = ({ anchor }: { anchor: string }) => {
