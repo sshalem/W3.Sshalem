@@ -6,7 +6,6 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 import python_12 from "../../../../../assets/python_12.jpg";
-import python_11 from "../../../../../assets/python_11.jpg";
 
 const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,7 +23,6 @@ const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) =
           <Li>sqlparse==0.5.5</Li>
           <Li>tzdata==2025.3</Li>
         </ULdisc>
-        <IMG img_name={python_11}></IMG>
       </section>
     </MainChildArea>
   );

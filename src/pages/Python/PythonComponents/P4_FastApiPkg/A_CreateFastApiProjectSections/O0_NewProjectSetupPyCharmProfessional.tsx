@@ -6,7 +6,6 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 import python_10 from "../../../../../assets/python_10.jpg";
-import python_11 from "../../../../../assets/python_11.jpg";
 
 const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) => {
   return (
@@ -34,7 +33,6 @@ const O0_NewProjectSetupPyCharmProfessional = ({ anchor }: { anchor: string }) =
           <Li>typing_extensions==4.15.0</Li>
           <Li>uvicorn==0.40.0</Li>
         </ULdisc>
-        <IMG img_name={python_11}></IMG>
       </section>
     </MainChildArea>
   );
