@@ -2,7 +2,7 @@ const TreeComponent = ({ folder, componentName }: { folder: string; componentNam
   return (
     <>
       <span className="px-[5px] py-[1px] font-mono text-[#009905]">{componentName}</span>
-      📁 <span className="px-[5px] py-[1px] font-mono text-[#009]">{folder}</span>
+      <span className="px-[5px] py-[1px] font-mono text-[#009]">{folder}</span>
     </>
   );
 };

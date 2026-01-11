@@ -4,11 +4,12 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_CreatePythonProject from "./O1_CreatePythonProject";
 import O2_InstallDjango from "./O2_InstallDjango";
 import O3_SetupDjangoProject from "./O3_SetupDjangoProject";
-import OX_SetupDjangoApp from "./OX_SetupDjangoApp";
 import OX_SpringVsDjango from "./OX_SpringVsDjango";
 import O4_RunDjangoProject from "./O4_RunDjangoProject";
 import O5_MigrateSQLiteDB from "./O5_MigrateSQLiteDB";
 import O6_RequirementsFile from "./O6_RequirementsFile";
+import O7_CreateDjangoApp from "./O7_CreateDjangoApp";
+import O8_RegisterAppInProject from "./O8_RegisterAppInProject";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -19,7 +20,8 @@ const o3_SetupDjangoProject = "3. Setup Django Project";
 const o4_RunDjangoProject = "4. Run Django Project";
 const o5_MigrateSQLiteDB = "5. Migrate SQLite DB";
 const o6_RequirementsFile = "6. create requirements.txt";
-const oX_SetupDjangoApp = "x. Setup Django Apps";
+const o7_CreateDjangoApp = "7. Create Django Apps";
+const o8_RegisterAppInProject = "8. Register App In Project";
 const oX_SpringVsDjango = "x. Spring Vs Django Terminology";
 
 // ===========================================
@@ -33,7 +35,8 @@ const anchorList: string[] = [
   o4_RunDjangoProject,
   o5_MigrateSQLiteDB,
   o6_RequirementsFile,
-  oX_SetupDjangoApp,
+  o7_CreateDjangoApp,
+  o8_RegisterAppInProject,
   oX_SpringVsDjango,
 ];
 
@@ -95,7 +98,8 @@ const CreateDjangoProjectMain = () => {
       <O4_RunDjangoProject anchor={o4_RunDjangoProject} />
       <O5_MigrateSQLiteDB anchor={o5_MigrateSQLiteDB} />
       <O6_RequirementsFile anchor={o6_RequirementsFile} />
-      <OX_SetupDjangoApp anchor={oX_SetupDjangoApp} />
+      <O7_CreateDjangoApp anchor={o7_CreateDjangoApp} />
+      <O8_RegisterAppInProject anchor={o8_RegisterAppInProject} />
       <OX_SpringVsDjango anchor={oX_SpringVsDjango} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
