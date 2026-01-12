@@ -4,19 +4,21 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_XxxxIntro from "./O1_XxxxIntro";
+import O1_ExceptionsIntro from "./O1_ExceptionsIntro";
+import O2_ExceptionsHierarchy from "./O2_ExceptionsHierarchy";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_XxxxIntro = "1. XxxxIntro";
+const o1_ExceptionsIntro = "1. Exceptions Intro";
+const o2_ExceptionsHierarchy = "2. Exceptions Hierarchy";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_XxxxIntro];
+const anchorList: string[] = [o1_ExceptionsIntro, o2_ExceptionsHierarchy];
 
 // ============================================
 // ============================================
@@ -70,7 +72,8 @@ const PythonExceptionsMain = () => {
       />
       {/* End Contents */}
 
-      <O1_XxxxIntro anchor={o1_XxxxIntro} />
+      <O1_ExceptionsIntro anchor={o1_ExceptionsIntro} />
+      <O2_ExceptionsHierarchy anchor={o2_ExceptionsHierarchy} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
