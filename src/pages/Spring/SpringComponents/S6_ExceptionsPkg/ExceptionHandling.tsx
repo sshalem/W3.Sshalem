@@ -5,7 +5,23 @@ const ExceptionHandling = () => {
 
   return (
     <section>
-      {location.pathname === "/spring/exception-handling" ? <div className="text-3xl">ExceptionHandling main page ...</div> : <Outlet />}
+      {location.pathname === "/spring/exception-handling" ? (
+        <section>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Exception Handling ...</div>
+          <article className="my-8">
+            <div>Docs/Youtube</div>
+            {/* <ULdisc>
+              <Li>
+                <a href="https://" target="_blank" className="tracking-wider text-blue-600">
+                  https://
+                </a>
+              </Li>
+            </ULdisc> */}
+          </article>
+        </section>
+      ) : (
+        <Outlet />
+      )}
     </section>
   );
 };

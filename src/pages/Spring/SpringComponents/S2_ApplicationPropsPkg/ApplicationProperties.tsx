@@ -5,7 +5,23 @@ const ApplicationProperties = () => {
 
   return (
     <section>
-      {location.pathname === "/spring/application-properties" ? <div className="text-3xl">ApplicationProperties main page ...</div> : <Outlet />}
+      {location.pathname === "/spring/application-properties" ? (
+        <section>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Application Properties ...</div>
+          <article className="my-8">
+            <div>Docs/Youtube</div>
+            {/* <ULdisc>
+              <Li>
+                <a href="https://" target="_blank" className="tracking-wider text-blue-600">
+                  https://
+                </a>
+              </Li>
+            </ULdisc> */}
+          </article>
+        </section>
+      ) : (
+        <Outlet />
+      )}
     </section>
   );
 };
