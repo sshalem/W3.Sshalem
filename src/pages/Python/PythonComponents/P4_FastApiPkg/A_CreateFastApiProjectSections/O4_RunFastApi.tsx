@@ -2,38 +2,40 @@
 
 
 */
-import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O4_RunFastApi = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <div className="my-8 text-xl font-semibold">Run FastAPI uvicorn</div>
-        <ULDecimal>
-          <Li>
-            Copy code below and paste it inside <SpanGrey>main.py</SpanGrey>
-          </Li>
-          <JsxHighlight jsxCode={_2_} />
-          <Li>Run in PyCharm terminal command below</Li>
+        <div>
+          In the terminal, go to the folder where <SpanGrey>main.py</SpanGrey> is located and run:
+        </div>
+        <ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        </ULdisc>
+        Explanation:
+        <ULdisc>
           <Li>
-            2 ways to check API
-            <ULdisc>
-              <Li>
-                <a className="tracking-wider text-blue-500" href="http://localhost:8000" target="_blank">
-                  http://localhost:8000
-                </a>
-              </Li>
-              <Li>
-                <a className="tracking-wider text-blue-500" href="http://127.0.0.1:8000/docs" target="_blank">
-                  http://127.0.0.1:8000/docs
-                </a>{" "}
-                this is swagger app
-              </Li>
-            </ULdisc>
+            <SpanGrey>main</SpanGrey> → the Python file name without <SpanGrey>.py</SpanGrey>
           </Li>
-        </ULDecimal>
+          <Li>
+            <SpanGrey>app</SpanGrey> → the FastAPI instance variable
+          </Li>
+          <Li>
+            <SpanGrey>--reload</SpanGrey> → automatic reload when you change code (<SpanGrey>for development only</SpanGrey>)
+          </Li>
+          <Li>
+            Optional: <SpanGrey>--host 0.0.0.0</SpanGrey> to make it accessible externally
+          </Li>
+          <Li>
+            Optional: <SpanGrey>--port 8000</SpanGrey> to change port
+          </Li>
+          <Li>Full example:</Li>
+          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+        </ULdisc>
       </section>
     </MainChildArea>
   );
@@ -43,11 +45,4 @@ export default O4_RunFastApi;
 
 const _1_ = `uvicorn main:app --reload`;
 
-const _2_ = `from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}`;
+const _2_ = `uvicorn main:app --reload --host 0.0.0.0 --port 8000`;

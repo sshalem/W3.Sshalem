@@ -4,6 +4,8 @@ import O1_CreatePythonProject from "./O1_CreatePythonProject";
 import O2_InstallFastAPI from "./O2_InstallFastAPI";
 import O3_RequirementsFile from "./O3_RequirementsFile";
 import O4_RunFastApi from "./O4_RunFastApi";
+import O5_Swagger from "./O5_Swagger";
+import O6_GitConfig from "./O6_GitConfig";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,12 +15,14 @@ const o1_CreatePythonProject = "1. Create Pure Python Project";
 const o2_InstallFastAPI = "2. Install Fast API";
 const o3_RequirementsFile = "3. requirements.txt File";
 const o4_RunFastApi = "4. Run FastApi (uvicorn)";
+const o5_Swagger = "5. Swagger";
+const o6_GitConfig = "6. Git ignore Config";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreatePythonProject, o2_InstallFastAPI, o3_RequirementsFile, o4_RunFastApi];
+const anchorList: string[] = [o1_CreatePythonProject, o2_InstallFastAPI, o3_RequirementsFile, o4_RunFastApi, o5_Swagger, o6_GitConfig];
 
 // ============================================
 // ============================================
@@ -76,6 +80,8 @@ const CreateFastApiProjectMain = () => {
       <O2_InstallFastAPI anchor={o2_InstallFastAPI} />
       <O3_RequirementsFile anchor={o3_RequirementsFile} />
       <O4_RunFastApi anchor={o4_RunFastApi} />
+      <O5_Swagger anchor={o5_Swagger} />
+      <O6_GitConfig anchor={o6_GitConfig} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
