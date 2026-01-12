@@ -277,6 +277,22 @@ import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_Pyth
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
 import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P3_DjangoPkg";
 import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_SetupFastApiProjectSections/SetupFastApiProjectMain";
+import {
+  AdvancedTopicsMain,
+  ApplicationStructureAndArchitectureMain,
+  BackgroundTasksAndAsyncMain,
+  CoreBasicsMain,
+  DataBaseIntegrationMain,
+  DependencyInjectionMain,
+  DeploymentAndDevOpsMain,
+  ErrorHandlingMain,
+  MiddlewareSectionsMain,
+  PerformanceAndConcurrencyMain,
+  RequestDataAmdValidationSectionsMain,
+  ResponseHandlingSectionsMain,
+  SecurityMain,
+  TestingMain,
+} from "./pages/Python/PythonComponents/P4_FastApiPkg";
 
 const router = createBrowserRouter(
   [
@@ -733,7 +749,20 @@ const router = createBrowserRouter(
               element: <FastApi />,
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
-                // { path: "vscode", element: <VsCodeMain /> },
+                { path: "core-basics", element: <CoreBasicsMain /> },
+                { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
+                { path: "response-handling", element: <ResponseHandlingSectionsMain /> },
+                { path: "dependency-injection", element: <DependencyInjectionMain /> },
+                { path: "error-handling", element: <ErrorHandlingMain /> },
+                { path: "middleware", element: <MiddlewareSectionsMain /> },
+                { path: "security", element: <SecurityMain /> },
+                { path: "background-tasks-and-async", element: <BackgroundTasksAndAsyncMain /> },
+                { path: "database-integration", element: <DataBaseIntegrationMain /> },
+                { path: "application-structure-architecture", element: <ApplicationStructureAndArchitectureMain /> },
+                { path: "testing", element: <TestingMain /> },
+                { path: "performance-concurrency", element: <PerformanceAndConcurrencyMain /> },
+                { path: "deployment-dev-ops", element: <DeploymentAndDevOpsMain /> },
+                { path: "advanced-topics", element: <AdvancedTopicsMain /> },
               ],
             },
           ],
