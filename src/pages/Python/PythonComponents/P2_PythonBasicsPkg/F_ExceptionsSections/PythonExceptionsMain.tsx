@@ -12,6 +12,7 @@ import O5_ExceptionMsg from "./O5_ExceptionMsg";
 import O6_HandleMultipleExceptions from "./O6_HandleMultipleExceptions";
 import O7_Finally from "./O7_Finally";
 import O8_RaiseException from "./O8_RaiseException";
+import O9_CustomException from "./O9_CustomException";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -25,7 +26,7 @@ const o5_ExceptionMsg = "5. Exception Msg";
 const o6_HandleMultipleExceptions = "6. Handle Multiple Exceptions";
 const o7_Finally = "7. Finally block";
 const o8_RaiseException = "8. Raise Exception";
-
+const o9_CustomException = "9. Custom Exception";
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
@@ -39,6 +40,7 @@ const anchorList: string[] = [
   o6_HandleMultipleExceptions,
   o7_Finally,
   o8_RaiseException,
+  o9_CustomException,
 ];
 
 // ============================================
@@ -101,6 +103,7 @@ const PythonExceptionsMain = () => {
       <O6_HandleMultipleExceptions anchor={o6_HandleMultipleExceptions} />
       <O7_Finally anchor={o7_Finally} />
       <O8_RaiseException anchor={o8_RaiseException} />
+      <O9_CustomException anchor={o9_CustomException} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -1,9 +1,12 @@
 // import { Prism as PrismSyntaxHighlighter } from "react-syntax-highlighter";
-// import { vscDarkPlus as JSX_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus";
+import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
+import { oneDark as PYTHON_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+PrismLightSyntaxHighlighter.registerLanguage("python", python);
 
 const PythonHighlight = ({ pythonCode }: { pythonCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
@@ -23,17 +26,19 @@ const PythonHighlight = ({ pythonCode }: { pythonCode: string }) => {
       >
         {isCopied ? "copied" : "copy"}
       </button>
-
       <div>
         <PrismLightSyntaxHighlighter
-          language="jsx"
-          style={vscDarkPlus}
+          language="python"
+          style={PYTHON_STYLE}
           // showLineNumbers={true}
           customStyle={{
-            fontSizeAdjust: "0.57",
+            fontSize: "0.85rem",
+            // backgroundColor: "#fbfbfb",
+            outlineStyle: "solid",
+            outlineWidth: "1px",
+            outlineColor: "#dddddd",
             // width: "60rem",
             display: "flex",
-            borderRadius: "7px",
           }}
         >
           {pythonCode}
