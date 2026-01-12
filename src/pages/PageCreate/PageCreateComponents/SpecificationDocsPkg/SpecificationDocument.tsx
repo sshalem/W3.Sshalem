@@ -12,6 +12,10 @@ const SpecificationDocument = () => {
     <section>
       {location.pathname === "/page_creation/specification-document" ? (
         <section>
+          <div>
+            <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Specification Document ...</div>
+            <article className="my-8"></article>
+          </div>
           <div className="my-6 text-3xl">
             <div className="css-title">Specification Documentation </div>
           </div>

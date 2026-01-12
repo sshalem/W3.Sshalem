@@ -10,11 +10,11 @@ const DesignPatternBehavioral = () => {
   return (
     <section>
       {location.pathname === "/java/design-patterns-behavioral" ? (
-        <section className="my-16">
+        <section>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Behavioral - Design Patterns ...</div>
           <article className="my-8">
-            <div className="text-3xl">Design Patterns Behavioral</div>
+            <div className="text-xl">How objects interact and communicate.</div>
           </article>
-          <div>How objects interact and communicate.</div>
           <Table_3ColDesignPatternsBehavioral />
         </section>
       ) : (

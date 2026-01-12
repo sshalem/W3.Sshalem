@@ -10,11 +10,11 @@ const DesignPatternCreational = () => {
   return (
     <section>
       {location.pathname === "/java/design-patterns-creational" ? (
-        <section className="my-16">
+        <section>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Creational - Design Patterns ...</div>
           <article className="my-8">
-            <div className="text-3xl">Design Patterns Creational</div>
+            <div className="text-xl">Deal with object creation — making it controlled, flexible, and scalable.</div>
           </article>
-          <div>Deal with object creation — making it controlled, flexible, and scalable.</div>
           <Table_3ColDesignPatternsCreational />
         </section>
       ) : (

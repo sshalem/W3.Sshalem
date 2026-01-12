@@ -10,11 +10,11 @@ const DesignPatternStructural = () => {
   return (
     <section>
       {location.pathname === "/java/design-patterns-structural" ? (
-        <section className="my-16">
+        <section>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Structural - Design Patterns ...</div>
           <article className="my-8">
-            <div className="text-3xl">Design Patterns Structural</div>
+            <div className="text-xl">Deal with composition of objects to form larger structures</div>
           </article>
-          <div>Deal with composition of objects to form larger structures.</div>
           <Table_3ColDesignPatternsStructural />
         </section>
       ) : (
