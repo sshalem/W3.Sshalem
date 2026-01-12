@@ -4,6 +4,7 @@
 */
 import { MainChildArea } from "../../../../../components";
 import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import PjvHighlight from "../../../../../components/Highlight/PjvHighlight";
 
 const O8_RaiseException = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,6 +14,7 @@ const O8_RaiseException = ({ anchor }: { anchor: string }) => {
         <br />
         to throw exception in python we use the <SpanGrey>raise</SpanGrey> keyword
         <PythonHighlight pythonCode={_1_} />
+        <PjvHighlight javaCode={_1_} />
       </section>
     </MainChildArea>
   );
