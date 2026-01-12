@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
 import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
-import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark as PYTHON_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 PrismLightSyntaxHighlighter.registerLanguage("python", python);
 
@@ -29,7 +29,7 @@ const PjvHighlight = ({ javaCode }: { javaCode: string }) => {
       <div>
         <PrismLightSyntaxHighlighter
           language="python"
-          style={JAVA_STYLE}
+          style={PYTHON_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
