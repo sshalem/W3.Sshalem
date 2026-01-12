@@ -3,10 +3,10 @@
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import java from "react-syntax-highlighter/dist/esm/languages/prism/java";
+import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
 import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("java", java);
+PrismLightSyntaxHighlighter.registerLanguage("python", python);
 
 const PjvHighlight = ({ javaCode }: { javaCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
