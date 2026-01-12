@@ -276,7 +276,7 @@ import {
 import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
 import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P3_DjangoPkg";
-import CreateFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_CreateFastApiProjectSections/CreateFastApiProjectMain";
+import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_SetupFastApiProjectSections/SetupFastApiProjectMain";
 
 const router = createBrowserRouter(
   [
@@ -732,7 +732,7 @@ const router = createBrowserRouter(
               path: "fastapi",
               element: <FastApi />,
               children: [
-                { path: "create-fastapi", element: <CreateFastApiProjectMain /> },
+                { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
                 // { path: "vscode", element: <VsCodeMain /> },
               ],
             },

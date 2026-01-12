@@ -41,7 +41,7 @@ const DropDownPythonFastApi = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Create Fast API" internalLink="/python/fastapi/create-fastapi" />
+        <SideDropdownLink sideDropDownNavName="Setup Fast API" internalLink="/python/fastapi/setup-fastapi" />
       </div>
     </section>
   );

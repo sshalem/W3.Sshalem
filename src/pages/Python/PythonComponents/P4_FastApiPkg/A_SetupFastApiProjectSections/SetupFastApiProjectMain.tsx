@@ -27,7 +27,7 @@ const anchorList: string[] = [o1_CreatePythonProject, o2_InstallFastAPI, o3_Requ
 // ============================================
 // ============================================
 
-const CreateFastApiProjectMain = () => {
+const SetupFastApiProjectMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -88,4 +88,4 @@ const CreateFastApiProjectMain = () => {
   );
 };
 
-export default CreateFastApiProjectMain;
+export default SetupFastApiProjectMain;

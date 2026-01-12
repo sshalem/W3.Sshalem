@@ -1,1 +1,1 @@
-export { default as CreateProjectMain } from "./A_CreateFastApiProjectSections/CreateFastApiProjectMain";
+export { default as CreateProjectMain } from "./A_SetupFastApiProjectSections/SetupFastApiProjectMain";
