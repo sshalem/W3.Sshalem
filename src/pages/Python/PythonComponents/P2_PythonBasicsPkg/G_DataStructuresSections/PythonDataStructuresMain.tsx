@@ -4,19 +4,33 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_DataStructures from "./O0_DataStructures";
+import O0_DataStructures from "./O0_DataStructures";
+import O1_List from "./O1_List";
+import O2_Tuple from "./O2_Tuple";
+import O3_Set from "./O3_Set";
+import O4_Dictionay from "./O4_Dictionay";
+import O5_Deque from "./O5_Deque";
+import O6_DefaultDict from "./O6_DefaultDict";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DataStructures = "1. Data Structures Intro";
+const o0_DataStructures = "Intro Data Structures";
+const o1_List = "1. List";
+const o2_Tuple = "2. Tuple";
+const o3_Set = "3. Set";
+const o4_Dictionay = "4. Dictionay";
+const o5_Deque = "5. Deque";
+const o6_DefaultDict = "6. DefaultDict";
+// const o2_Tuple = "2. Tuple";
+// const o2_Tuple = "2. Tuple";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DataStructures];
+const anchorList: string[] = [o0_DataStructures, o1_List, o2_Tuple, o3_Set, o4_Dictionay, o5_Deque, o6_DefaultDict];
 
 // ============================================
 // ============================================
@@ -69,8 +83,13 @@ const PythonDataStructuresMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      <O1_DataStructures anchor={o1_DataStructures} />
+      <O0_DataStructures anchor={o0_DataStructures} />
+      <O1_List anchor={o1_List} />
+      <O2_Tuple anchor={o2_Tuple} />
+      <O3_Set anchor={o3_Set} />
+      <O4_Dictionay anchor={o4_Dictionay} />
+      <O5_Deque anchor={o5_Deque} />
+      <O6_DefaultDict anchor={o6_DefaultDict} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 
-const O1_DataStructures = ({ anchor }: { anchor: string }) => {
+const O3_Set = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -29,4 +29,4 @@ const O1_DataStructures = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O1_DataStructures;
+export default O3_Set;

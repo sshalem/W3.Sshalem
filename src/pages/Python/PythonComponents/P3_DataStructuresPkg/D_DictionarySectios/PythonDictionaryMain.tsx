@@ -1,36 +1,22 @@
-/*
-
-
-*/
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_Loop from "./O1_Loop";
-import O2_LoopPrintInSameLine from "./O3_ElseInForLoop";
-import O3_ElseInForLoop from "./O3_ElseInForLoop";
-import O4_ContinueBreakInFor from "./O4_ContinueBreakInFor";
-import O5_NestedForLoop from "./O5_NestedForLoop";
-import O6_IterateList from "./O6_IterateList";
+import O1_Dictionary from "./O1_Dictionary";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
+const o1_Dictionary = "1. Dictionary";
 
-const o1_Loop = "1. Loop";
-const o2_LoopPrintInSameLine = "2. Loop Print In Same Line";
-const o3_ElseInForLoop = "3. Else In For Loop";
-const o4_ContinueBreakInFor = "4. Continue Break In For";
-const o5_NestedForLoop = "5. Nested For Loop";
-const o6_IterateList = "6. Iterate List";
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Loop, o2_LoopPrintInSameLine, o3_ElseInForLoop, o4_ContinueBreakInFor, o5_NestedForLoop, o6_IterateList];
+const anchorList: string[] = [o1_Dictionary];
 
 // ============================================
 // ============================================
 
-const LoopsMain = () => {
+const PythonDictionaryMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -79,15 +65,11 @@ const LoopsMain = () => {
       />
       {/* End Contents */}
 
-      <O1_Loop anchor={o1_Loop} />
-      <O2_LoopPrintInSameLine anchor={o2_LoopPrintInSameLine} />
-      <O3_ElseInForLoop anchor={o3_ElseInForLoop} />
-      <O4_ContinueBreakInFor anchor={o4_ContinueBreakInFor} />
-      <O5_NestedForLoop anchor={o5_NestedForLoop} />
-      <O6_IterateList anchor={o6_IterateList} />
+      <O1_Dictionary anchor={o1_Dictionary} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default LoopsMain;
+
+export default PythonDictionaryMain;

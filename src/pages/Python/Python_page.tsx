@@ -6,11 +6,12 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import DropDownPythonBasics from "./DropPython/DropDownPythonBasics";
-import DropDownPythonGeneral from "./DropPython/DropDownPythonGeneral";
-import DropDownPythonIde from "./DropPython/DropDownPythonIde";
-import DropDownPythonDjango from "./DropPython/DropDownPythonDjango";
-import DropDownPythonFastApi from "./DropPython/DropDownPythonFastApi";
+import D0_DropDownPythonIde from "./DropPython/D0_DropDownPythonIde";
+import D1_DropDownPythonGeneral from "./DropPython/D1_DropDownPythonGeneral";
+import D2_DropDownPythonBasics from "./DropPython/D2_DropDownPythonBasics";
+import D3_DropDownPythonDataStructure from "./DropPython/D3_DropDownPythonDataStructure";
+import D4_DropDownPythonFastApi from "./DropPython/D4_DropDownPythonFastApi";
+import D5_DropDownPythonDjango from "./DropPython/D5_DropDownPythonDjango";
 
 const Python_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -42,11 +43,12 @@ const Python_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="Python Home" internalLink="/python" />
-            <DropDownPythonIde />
-            <DropDownPythonGeneral />
-            <DropDownPythonBasics />
-            <DropDownPythonDjango />
-            <DropDownPythonFastApi />
+            <D0_DropDownPythonIde />
+            <D1_DropDownPythonGeneral />
+            <D2_DropDownPythonBasics />
+            <D3_DropDownPythonDataStructure />
+            <D4_DropDownPythonFastApi />
+            <D5_DropDownPythonDjango />
           </div>
         </article>
       )}

@@ -275,7 +275,7 @@ import {
 } from "./pages/Python/PythonComponents/P2_PythonBasicsPkg";
 import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
-import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P3_DjangoPkg";
+import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P5_DjangoPkg";
 import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_SetupFastApiProjectSections/SetupFastApiProjectMain";
 import {
   AdvancedTopicsMain,
@@ -294,6 +294,7 @@ import {
   SecurityMain,
   TestingMain,
 } from "./pages/Python/PythonComponents/P4_FastApiPkg";
+import { PythonDictionaryMain, PythonListMain, PythonSetMain, PythonTupleMain } from "./pages/Python/PythonComponents/P3_DataStructuresPkg";
 
 const router = createBrowserRouter(
   [
@@ -738,11 +739,13 @@ const router = createBrowserRouter(
               ],
             },
             {
-              path: "django",
-              element: <Django />,
+              path: "data-structure",
+              element: <PythonIde />,
               children: [
-                { path: "create-django", element: <CreateDjangoProjectMain /> },
-                // { path: "vscode", element: <VsCodeMain /> },
+                { path: "list", element: <PythonListMain /> },
+                { path: "tuple", element: <PythonTupleMain /> },
+                { path: "set", element: <PythonSetMain /> },
+                { path: "dictionary", element: <PythonDictionaryMain /> },
               ],
             },
             {
@@ -765,6 +768,14 @@ const router = createBrowserRouter(
                 { path: "performance-concurrency", element: <PerformanceAndConcurrencyMain /> },
                 { path: "deployment-dev-ops", element: <DeploymentAndDevOpsMain /> },
                 { path: "advanced-topics", element: <AdvancedTopicsMain /> },
+              ],
+            },
+            {
+              path: "django",
+              element: <Django />,
+              children: [
+                { path: "create-django", element: <CreateDjangoProjectMain /> },
+                // { path: "vscode", element: <VsCodeMain /> },
               ],
             },
           ],
