@@ -5,18 +5,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O0_IntroFunctions from "./O0_IntroFunctions";
+import O1_LambdaAnonymosFunctions from "./O1_LambdaAnonymosFunctions";
+import O2_LambdaUsage from "./O2_LambdaUsage";
+import O3_PythonComprehension from "./O3_PythonComprehension";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o0_IntroFunctions = "Intro Functions";
+const o1_LambdaAnonymosFunctions = "1. Lambda Anonymos Functions";
+const o2_LambdaUsage = "2. Lambda Usage";
+const o3_PythonComprehension = "3. Comprehension";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_IntroFunctions];
+const anchorList: string[] = [o0_IntroFunctions, o1_LambdaAnonymosFunctions, o2_LambdaUsage, o3_PythonComprehension];
 
 // ============================================
 // ============================================
@@ -71,6 +77,9 @@ const PythonFunctionsMain = () => {
       {/* End Contents */}
 
       <O0_IntroFunctions anchor={o0_IntroFunctions} />
+      <O1_LambdaAnonymosFunctions anchor={o1_LambdaAnonymosFunctions} />
+      <O2_LambdaUsage anchor={o2_LambdaUsage} />
+      <O3_PythonComprehension anchor={o3_PythonComprehension} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
