@@ -5,29 +5,10 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
 
-const O1_DataStructures = ({ anchor }: { anchor: string }) => {
+const O0_DataStructures = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-4 text-xl font-semibold">Real-world usage summary (FastAPI / Backend)</article>
-        <ULdisc>
-          <Li>
-            <SpanGrey>list</SpanGrey> - Usage frequency 🔥🔥🔥🔥🔥 Like list of objects
-          </Li>
-          <Li>
-            <SpanGrey>dict</SpanGrey> - Usage frequency 🔥🔥🔥🔥🔥
-          </Li>
-          <Li>
-            <SpanGrey>list[tuple]</SpanGrey> - Usage frequency 🔥🔥🔥🔥
-          </Li>
-          <Li>
-            <SpanGrey>set</SpanGrey> - Usage frequency 🔥🔥🔥
-          </Li>
-          <Li>
-            <SpanGrey>set[tuple]</SpanGrey> - Usage frequency 🔥🔥
-          </Li>
-        </ULdisc>
-
         <article className="my-8 text-xl font-semibold">Python built-ins data structures</article>
         <div>Python’s cover 90% of real-world use cases.</div>
         <ULDecimal>
@@ -69,7 +50,28 @@ const O1_DataStructures = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULDecimal>
       </section>
+      <hr />
+      <section className="my-8">
+        <article className="my-4 text-xl font-semibold">Real-world usage summary (FastAPI / Backend)</article>
+        <ULdisc>
+          <Li>
+            <SpanGrey>list</SpanGrey> - Usage frequency 🔥🔥🔥🔥🔥 Like list of objects
+          </Li>
+          <Li>
+            <SpanGrey>dict</SpanGrey> - Usage frequency 🔥🔥🔥🔥🔥
+          </Li>
+          <Li>
+            <SpanGrey>list[tuple]</SpanGrey> - Usage frequency 🔥🔥🔥🔥
+          </Li>
+          <Li>
+            <SpanGrey>set</SpanGrey> - Usage frequency 🔥🔥🔥
+          </Li>
+          <Li>
+            <SpanGrey>set[tuple]</SpanGrey> - Usage frequency 🔥🔥
+          </Li>
+        </ULdisc>
+      </section>
     </MainChildArea>
   );
 };
-export default O1_DataStructures;
+export default O0_DataStructures;

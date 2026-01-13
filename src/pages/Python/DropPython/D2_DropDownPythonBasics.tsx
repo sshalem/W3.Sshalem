@@ -47,10 +47,9 @@ const DropDownPythonBasics = () => {
         <SideDropdownLink sideDropDownNavName="4. loops" internalLink="/python/python-basics/loops" />
         <SideDropdownLink sideDropDownNavName="5. functions" internalLink="/python/python-basics/functions" />
         <SideDropdownLink sideDropDownNavName="6. Exceptions" internalLink="/python/python-basics/exceptions" />
-        <SideDropdownLink sideDropDownNavName="7. Data structures" internalLink="/python/python-basics/data-structures" />
-        <SideDropdownLink sideDropDownNavName="8. Modules/ Packaging" internalLink="/python/python-basics/modules-packaging" />
-        <SideDropdownLink sideDropDownNavName="9. File Handling" internalLink="/python/python-basics/file-handling" />
-        <SideDropdownLink sideDropDownNavName="10. OOP" internalLink="/python/python-basics/oop" />
+        <SideDropdownLink sideDropDownNavName="7. Modules/ Packaging" internalLink="/python/python-basics/modules-packaging" />
+        <SideDropdownLink sideDropDownNavName="8. File Handling" internalLink="/python/python-basics/file-handling" />
+        <SideDropdownLink sideDropDownNavName="9. OOP" internalLink="/python/python-basics/oop" />
         <SideDropdownLink sideDropDownNavName="10. venv" internalLink="/python/python-basics/venv" />
       </div>
     </section>

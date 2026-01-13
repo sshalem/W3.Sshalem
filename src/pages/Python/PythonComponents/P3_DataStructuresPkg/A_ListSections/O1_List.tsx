@@ -2,29 +2,39 @@
 
 
 */
-import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
-import python_13 from "../../../../../assets/python_13.jpg";
-import python_14 from "../../../../../assets/python_14.jpg";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_List = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="text-lg font-semibold">Create Pure Python project</article>
+        <div>
+          <SpanGrey>list</SpanGrey> ? What it is ?
+        </div>
         <ULDecimal>
           <Li>
-            create a new <SpanGrey>Pure Python</SpanGrey> project folder where for Django project/apps will reside
-            <IMG img_name={python_13}></IMG>
+            <SpanGrey>list</SpanGrey> — ordered, mutable (Like JAVA <SpanGrey>{"List<String> users = new ArrayList<>()"}</SpanGrey>)
           </Li>
+          <Li>Dynamic array</Li>
+          <Li>Can store mixed types</Li>
+          <Li>Most commonly used structure</Li>
           <Li>
-            Open Terminal and verify we are inside the <SpanGrey>(.venv)</SpanGrey> enviroment.
-            <IMG img_name={python_14}></IMG>
+            Java Equivalent
+            <JavaHighlight javaCode={_1_} />
           </Li>
         </ULDecimal>
+        <div className="my-4 text-lg font-semibold">Key features</div>
+        <ULdisc>
+          <Li>Keeps order</Li>
+          <Li>Allows duplicates</Li>
+          <Li>Index-based access</Li>
+        </ULdisc>
       </section>
     </MainChildArea>
   );
 };
 
 export default O1_List;
+
+const _1_ = `List<String> users = new ArrayList<>()`;

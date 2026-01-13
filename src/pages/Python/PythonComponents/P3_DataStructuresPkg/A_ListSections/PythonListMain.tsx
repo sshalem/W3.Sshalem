@@ -1,17 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_List from "./O1_List";
+import O0_DataStructures from "./O0_DataStructures";
+import O2_CreateList from "./O2_CreateList";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
+const o0_DataStructures = "Intro Data Structures";
 const o1_List = "1. list";
+const o2_CreateList = "2. Create List";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_List];
+const anchorList: string[] = [o0_DataStructures, o1_List, o2_CreateList];
 
 // ============================================
 // ============================================
@@ -64,8 +68,9 @@ const PythonListMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
+      <O0_DataStructures anchor={o0_DataStructures} />
       <O1_List anchor={o1_List} />
+      <O2_CreateList anchor={o2_CreateList} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
