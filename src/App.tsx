@@ -286,6 +286,7 @@ import {
   DependencyInjectionMain,
   DeploymentAndDevOpsMain,
   ErrorHandlingMain,
+  LoggingMain,
   MiddlewareSectionsMain,
   PerformanceAndConcurrencyMain,
   RequestDataAmdValidationSectionsMain,
@@ -750,6 +751,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
                 { path: "core-basics", element: <CoreBasicsMain /> },
+                { path: "logging-fastapi", element: <LoggingMain /> },
                 { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
                 { path: "response-handling", element: <ResponseHandlingSectionsMain /> },
                 { path: "dependency-injection", element: <DependencyInjectionMain /> },

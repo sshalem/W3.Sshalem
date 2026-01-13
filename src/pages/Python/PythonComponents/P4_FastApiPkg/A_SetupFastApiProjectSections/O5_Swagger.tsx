@@ -31,6 +31,11 @@ const O5_Swagger = ({ anchor }: { anchor: string }) => {
                 </a>{" "}
                 this is swagger app
               </Li>
+              <Li>
+                <a className="tracking-wider text-blue-500" href="http://127.0.0.1:8000/redoc" target="_blank">
+                  http://127.0.0.1:8000/redoc
+                </a>{" "}
+              </Li>
             </ULdisc>
           </Li>
         </ULDecimal>

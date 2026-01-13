@@ -1,5 +1,6 @@
 export { default as CreateProjectMain } from "./A_SetupFastApiProjectSections/SetupFastApiProjectMain";
-export { default as CoreBasicsMain } from "./B_CoreBasicsSections/CoreBasicsMain";
+export { default as CoreBasicsMain } from "./B__CoreBasicsSections/CoreBasicsMain";
+export { default as LoggingMain } from "./B_1_LoggingSections/LoggingMain";
 export { default as RequestDataAmdValidationSectionsMain } from "./C_RequestDataAmdValidationSections/RequestDataAmdValidationSectionsMain";
 export { default as ResponseHandlingSectionsMain } from "./D_ResponseHandlingSections/ResponseHandlingSectionsMain";
 export { default as DependencyInjectionMain } from "./E_DependencyInjectionSections/DependencyInjectionMain";

@@ -42,24 +42,21 @@ const DropDownPythonFastApi = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="1. Setup Fast API" internalLink="/python/fastapi/setup-fastapi" />
-        <SideDropdownLink sideDropDownNavName="2. core-basics" internalLink="/python/fastapi/core-basics" />
-        <SideDropdownLink sideDropDownNavName="3. request-and-validation" internalLink="/python/fastapi/request-and-validation" />
-        <SideDropdownLink sideDropDownNavName="4. response-handling" internalLink="/python/fastapi/response-handling" />
-        <SideDropdownLink sideDropDownNavName="5. dependency-injection" internalLink="/python/fastapi/dependency-injection" />
-        <SideDropdownLink sideDropDownNavName="6. error-handling" internalLink="/python/fastapi/error-handling" />
-        <SideDropdownLink sideDropDownNavName="7. middleware" internalLink="/python/fastapi/middleware" />
-        <SideDropdownLink sideDropDownNavName="8. error-handling" internalLink="/python/fastapi/error-handling" />
-        <SideDropdownLink sideDropDownNavName="9. security" internalLink="/python/fastapi/security" />
-        <SideDropdownLink sideDropDownNavName="10. background-tasks-and-async" internalLink="/python/fastapi/background-tasks-and-async" />
-        <SideDropdownLink sideDropDownNavName="11. database-integration" internalLink="/python/fastapi/database-integration" />
-        <SideDropdownLink
-          sideDropDownNavName="12. application-structure-architecture"
-          internalLink="/python/fastapi/application-structure-architecture"
-        />
-        <SideDropdownLink sideDropDownNavName="13. testing" internalLink="/python/fastapi/testing" />
-        <SideDropdownLink sideDropDownNavName="14. performance-concurrency" internalLink="/python/fastapi/performance-concurrency" />
-        <SideDropdownLink sideDropDownNavName="15. deployment-dev-ops" internalLink="/python/fastapi/deployment-dev-ops" />
-        <SideDropdownLink sideDropDownNavName="16. advanced-topics" internalLink="/python/fastapi/advanced-topics" />
+        <SideDropdownLink sideDropDownNavName="2. Core Basics" internalLink="/python/fastapi/core-basics" />
+        <SideDropdownLink sideDropDownNavName="3. Logging" internalLink="/python/fastapi/logging-fastapi" />
+        <SideDropdownLink sideDropDownNavName="4. Request And Validation" internalLink="/python/fastapi/request-and-validation" />
+        <SideDropdownLink sideDropDownNavName="5. Response Handling" internalLink="/python/fastapi/response-handling" />
+        <SideDropdownLink sideDropDownNavName="6. Dependency Injection" internalLink="/python/fastapi/dependency-injection" />
+        <SideDropdownLink sideDropDownNavName="7. Error Handling" internalLink="/python/fastapi/error-handling" />
+        <SideDropdownLink sideDropDownNavName="8. Middleware" internalLink="/python/fastapi/middleware" />
+        <SideDropdownLink sideDropDownNavName="9. Security" internalLink="/python/fastapi/security" />
+        <SideDropdownLink sideDropDownNavName="10. Background Tasks Async" internalLink="/python/fastapi/background-tasks-and-async" />
+        <SideDropdownLink sideDropDownNavName="11. Database Integration" internalLink="/python/fastapi/database-integration" />
+        <SideDropdownLink sideDropDownNavName="12. Structure Architecture" internalLink="/python/fastapi/application-structure-architecture" />
+        <SideDropdownLink sideDropDownNavName="13. Testing" internalLink="/python/fastapi/testing" />
+        <SideDropdownLink sideDropDownNavName="14. Performance Concurrency" internalLink="/python/fastapi/performance-concurrency" />
+        <SideDropdownLink sideDropDownNavName="15. deployment DevOps" internalLink="/python/fastapi/deployment-dev-ops" />
+        <SideDropdownLink sideDropDownNavName="16. Advanced Topics" internalLink="/python/fastapi/advanced-topics" />
       </div>
     </section>
   );

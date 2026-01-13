@@ -36,6 +36,7 @@ const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
             fontSizeAdjust: "0.57",
             // width: "60rem",
             display: "flex",
+            borderRadius: "5px",
           }}
         >
           {jsxCode}
