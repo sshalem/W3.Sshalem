@@ -3,8 +3,8 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_DefaultLogging from "./O1_DefaultLogging";
 import O2_LogginLevel from "./O2_LogginLevel";
 import O3_FastAPILogging from "./O3_FastAPILogging";
-import OX_LoggingConf from "./OX_LoggingConf";
-import OX_LoggingConfigPy from "./OX_LoggingConfigPy";
+import O4_LoggingConfigPy from "./O4_LoggingConfigPy";
+import O5_LoggingConf from "./O5_LoggingConf";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,14 +13,14 @@ import OX_LoggingConfigPy from "./OX_LoggingConfigPy";
 const o1_DefaultLogging = "1. Default Logging";
 const o2_LogginLevel = "2. Logging Level";
 const o3_FastAPILogging = "3. Fast API Logging";
-const oX_LoggingConfigPy = "oX . logging_config.py";
-const oX_LoggingConf = "oX. logging.conf";
+const o4_LoggingConfigPy = "4. logging_config.py";
+const o5_LoggingConf = "5. logging.conf";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DefaultLogging, o2_LogginLevel, o3_FastAPILogging, oX_LoggingConfigPy, oX_LoggingConf];
+const anchorList: string[] = [o1_DefaultLogging, o2_LogginLevel, o3_FastAPILogging, o4_LoggingConfigPy, o5_LoggingConf];
 
 // ============================================
 // ============================================
@@ -77,8 +77,8 @@ const LoggingMain = () => {
       <O1_DefaultLogging anchor={o1_DefaultLogging} />
       <O2_LogginLevel anchor={o2_LogginLevel} />
       <O3_FastAPILogging anchor={o3_FastAPILogging} />
-      <OX_LoggingConfigPy anchor={oX_LoggingConfigPy} />
-      <OX_LoggingConf anchor={oX_LoggingConf} />
+      <O4_LoggingConfigPy anchor={o4_LoggingConfigPy} />
+      <O5_LoggingConf anchor={o5_LoggingConf} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

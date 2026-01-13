@@ -3,15 +3,61 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_27 from "../../../../../assets/python_27.jpg";
+import python_28 from "../../../../../assets/python_28.jpg";
 
-const OX_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
+const O5_LoggingConf = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-4 text-lg font-semibold">Sample logging.conf (INI format — works for Uvicorn)</article>
-        <div>✅ Notes:</div>
+        <article className="my-4">
+          <div className="my-4 text-lg font-semibold">logging.conf (INI file)</div>
+          <p className="font-semibold">✅ Advantages</p>
+          <ULDecimal>
+            <Li>
+              Declarative — similar to Spring Boot’s application.properties
+              <ULdisc>
+                <Li>Can be edited without touching Python code.</Li>
+                <Li>Good for ops teams or devs who prefer config files.</Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              Uvicorn built-in support
+              <ULdisc>
+                <Li>
+                  <SpanGrey>uvicorn --log-config logging.conf</SpanGrey> can read it directly.
+                </Li>
+                <Li>Works for simple unified setup.</Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              Static & safe
+              <ULdisc>
+                <Li>Less chance of accidentally writing bad Python code.</Li>
+              </ULdisc>
+            </Li>
+          </ULDecimal>
+          <p className="font-semibold">❌ Disadvantages</p>
+          <ULdisc>
+            <Li>
+              Less flexible
+              <ULdisc>
+                <Li>Harder to add colored logs (colorlog doesn’t work via INI)</Li>
+                <Li>Harder to dynamically attach handlers for multiple environments.</Li>
+              </ULdisc>
+            </Li>
+            <Li>Needs exact logger names (uvicorn, uvicorn.access)</Li>
+            <Li>Harder to add conditional logic like dev/prod differences.</Li>
+          </ULdisc>
+        </article>
+        <hr />
+        <article className="my-8 text-xl font-semibold">logging.conf (INI format — works for Uvicorn)</article>
+        create a file name it <SpanGrey>logging.conf</SpanGrey>
+        <IMG img_name={python_28}></IMG>
+        <div>
+          ✅ Copy/paste code below to <SpanGrey>logging.conf</SpanGrey>
+        </div>
         <ULdisc>
           <Li>
             <SpanGrey>qualname</SpanGrey> = the logger name
@@ -51,7 +97,7 @@ const OX_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
             <Li>✅ Both Uvicorn logs and your own logs now use the same timestamped format.</Li>
             <Li>there is no color on the logging of FastAPI</Li>
             <Li>
-              <SpanGrey>*.conf</SpanGrey> is (INI file) , and we cannot aconfig it with <SpanGrey>colorlog</SpanGrey> dependency
+              <SpanGrey>*.conf</SpanGrey> is (INI file) , and we <SpanRed>cannot config it</SpanRed> with <SpanGrey>colorlog</SpanGrey> dependency
             </Li>
           </ULDecimal>
           <IMG img_name={python_27}></IMG>
@@ -61,7 +107,7 @@ const OX_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default OX_LoggingConfigPy;
+export default O5_LoggingConf;
 
 const _1_ = `[loggers]
 keys=root,uvicorn,uvicorn.error,uvicorn.access,fastapi
