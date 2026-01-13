@@ -4,19 +4,19 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_XxxxIntro from "./O1_XxxxIntro";
+import O1_DataStructures from "./O0_DataStructures";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_XxxxIntro = "1. XxxxIntro";
+const o1_DataStructures = "1. Data Structures Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_XxxxIntro];
+const anchorList: string[] = [o1_DataStructures];
 
 // ============================================
 // ============================================
@@ -70,7 +70,7 @@ const PythonDataStructuresMain = () => {
       />
       {/* End Contents */}
 
-      <O1_XxxxIntro anchor={o1_XxxxIntro} />
+      <O1_DataStructures anchor={o1_DataStructures} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
