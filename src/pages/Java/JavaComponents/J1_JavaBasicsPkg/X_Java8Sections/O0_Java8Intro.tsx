@@ -4,7 +4,7 @@
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 
-const Java8Intro = ({ anchor }: { anchor: string }) => {
+const O0_Java8Intro = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -23,4 +23,4 @@ const Java8Intro = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default Java8Intro;
+export default O0_Java8Intro;

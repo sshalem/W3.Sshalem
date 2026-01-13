@@ -4,19 +4,23 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./Java8Intro";
+import O0_Java8Intro from "./O0_Java8Intro";
+import O2_LambdaExpression from "./O2_LambdaExpression";
+import O1_FunctionalInterfaces from "./O1_FunctionalInterfaces";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o0_Java8Intro = "Intro Java 8";
+const o1_FunctionalInterfaces = "1. Functional Interfaces";
+const o2_LambdaExpression = "2. Lambda Expression";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o0_Java8Intro, o1_FunctionalInterfaces, o2_LambdaExpression];
 
 // ============================================
 // ============================================
@@ -70,7 +74,9 @@ const Java8Main = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O0_Java8Intro anchor={o0_Java8Intro} />
+      <O1_FunctionalInterfaces anchor={o1_FunctionalInterfaces} />
+      <O2_LambdaExpression anchor={o2_LambdaExpression} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

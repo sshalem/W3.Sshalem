@@ -3,8 +3,9 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_List from "./O1_List";
 import O0_DataStructures from "./O0_DataStructures";
 import O2_CreateList from "./O2_CreateList";
-import O3_ListOfObjects from "./O4_IterateList";
+import O3_ListOfObjects from "./O3_ListOfObjects";
 import O4_IterateList from "./O4_IterateList";
+import O5_ListComprehensions from "./O5_ListComprehensions";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -14,12 +15,13 @@ const o1_List = "1. list";
 const o2_CreateList = "2. Create List";
 const o3_ListOfObjects = "3. List Of Objects";
 const o4_IterateList = "4. Iterate List";
+const o5_ListComprehensions = "5. List Comprehensions";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_DataStructures, o1_List, o2_CreateList, o3_ListOfObjects, o4_IterateList];
+const anchorList: string[] = [o0_DataStructures, o1_List, o2_CreateList, o3_ListOfObjects, o4_IterateList, o5_ListComprehensions];
 
 // ============================================
 // ============================================
@@ -77,6 +79,7 @@ const PythonListMain = () => {
       <O2_CreateList anchor={o2_CreateList} />
       <O3_ListOfObjects anchor={o3_ListOfObjects} />
       <O4_IterateList anchor={o4_IterateList} />
+      <O5_ListComprehensions anchor={o5_ListComprehensions} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

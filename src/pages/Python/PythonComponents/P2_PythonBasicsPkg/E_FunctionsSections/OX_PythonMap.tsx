@@ -4,7 +4,7 @@
 */
 import { MainChildArea } from "../../../../../components";
 
-const O1_XxxxIntro = ({ anchor }: { anchor: string }) => {
+const OX_PythonMap = ({ anchor }: { anchor: string }) => {
   return <MainChildArea anchor={anchor}>Add any content here</MainChildArea>;
 };
-export default O1_XxxxIntro;
+export default OX_PythonMap;
