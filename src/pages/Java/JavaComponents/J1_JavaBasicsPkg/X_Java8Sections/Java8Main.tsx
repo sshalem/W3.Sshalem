@@ -7,6 +7,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O0_Java8Intro from "./O0_Java8Intro";
 import O2_LambdaExpression from "./O2_LambdaExpression";
 import O1_FunctionalInterfaces from "./O1_FunctionalInterfaces";
+import O3_LambdaExpressionCreation from "./O3_LambdaExpressionCreation";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -15,12 +16,13 @@ import O1_FunctionalInterfaces from "./O1_FunctionalInterfaces";
 const o0_Java8Intro = "Intro Java 8";
 const o1_FunctionalInterfaces = "1. Functional Interfaces";
 const o2_LambdaExpression = "2. Lambda Expression";
+const o3_LambdaExpressionCreation = "3. (->) Lambda how its done";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_Java8Intro, o1_FunctionalInterfaces, o2_LambdaExpression];
+const anchorList: string[] = [o0_Java8Intro, o1_FunctionalInterfaces, o2_LambdaExpression, o3_LambdaExpressionCreation];
 
 // ============================================
 // ============================================
@@ -77,6 +79,7 @@ const Java8Main = () => {
       <O0_Java8Intro anchor={o0_Java8Intro} />
       <O1_FunctionalInterfaces anchor={o1_FunctionalInterfaces} />
       <O2_LambdaExpression anchor={o2_LambdaExpression} />
+      <O3_LambdaExpressionCreation anchor={o3_LambdaExpressionCreation} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
