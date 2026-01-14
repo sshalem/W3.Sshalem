@@ -2,7 +2,7 @@
 
 
 */
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
 
 const O6_RealWorldFastAPIProjectStructure = ({ anchor }: { anchor: string }) => {
@@ -10,13 +10,6 @@ const O6_RealWorldFastAPIProjectStructure = ({ anchor }: { anchor: string }) => 
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">🏗 Real-World FastAPI Project Structure </article>
-        This is:
-        <ULdisc>
-          <Li>Pythonic</Li>
-          <Li>Scalable</Li>
-          <Li>Clean</Li>
-        </ULdisc>
-        👍 Best of both worlds.
         <ApplicationPropertiesHighlight propertiesCode={_1_} />
       </section>
     </MainChildArea>
@@ -26,26 +19,26 @@ const O6_RealWorldFastAPIProjectStructure = ({ anchor }: { anchor: string }) => 
 export default O6_RealWorldFastAPIProjectStructure;
 
 const _1_ = `app/
-├── main.py                # FastAPI app instance, include routers
-├── core/                  # Global configurations & settings
+├── main.py                # Initialize FastAPI app instance, include routers , add middleware
+├── core/                  # Global configurations & settings (App-wide config, logging, security, constants)
 │   ├── config.py          # App config (env, settings)
 │   ├── logging.py         # Logging setup
 │   └── security.py        # JWT / auth utilities
-├── db/                    # Database setup
+├── db/                    # Database setup (SQLAlchemy engine, session, base class)
 │   ├── session.py         # SQLAlchemy session / engine
 │   └── base.py            # Base class for models
-├── models/                # SQLAlchemy models (entities)
+├── models/                # SQLAlchemy models (tables / entities)
 │   └── user.py
-├── schemas/               # Pydantic models (DTOs)
+├── schemas/               # Pydantic models (DTOs) for requests & responses (DTOs)
 │   └── user.py
-├── repositories/          # DB access functions
+├── repositories/          # DB access functions / DB query functions (select, insert, update)
 │   └── user_repo.py
-├── services/              # Business logic
+├── services/              # Business logic, manipulate entities before returning DTOs
 │   └── user_service.py
 ├── api/                   # Routers / controllers
 │   └── v1/
 │       └── user_router.py
-├── utils/                 # Helper functions
+├── utils/                 # Helper functions / Reusable helpers / validators / converters
 │   └── common.py
 ├── tests/                 # Unit & integration tests
 │   └── test_user.py
