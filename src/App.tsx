@@ -280,7 +280,7 @@ import {
   AdvancedTopicsMain,
   ApplicationStructureAndArchitectureMain,
   BackgroundTasksAndAsyncMain,
-  CoreBasicsMain,
+  CRUDMain,
   DataBaseIntegrationMain,
   DependencyInjectionMain,
   DeploymentAndDevOpsMain,
@@ -751,7 +751,7 @@ const router = createBrowserRouter(
               element: <FastApi />,
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
-                { path: "core-basics", element: <CoreBasicsMain /> },
+                { path: "crud", element: <CRUDMain /> },
                 { path: "logging-fastapi", element: <LoggingMain /> },
                 { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
                 { path: "response-handling", element: <ResponseHandlingSectionsMain /> },

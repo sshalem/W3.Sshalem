@@ -17,7 +17,7 @@ const anchorList: string[] = [o1_FastAapiCode];
 // ============================================
 // ============================================
 
-const CoreBasicsMain = () => {
+const CRUDMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -73,4 +73,4 @@ const CoreBasicsMain = () => {
   );
 };
 
-export default CoreBasicsMain;
+export default CRUDMain;

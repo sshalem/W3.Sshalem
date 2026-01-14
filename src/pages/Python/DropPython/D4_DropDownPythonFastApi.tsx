@@ -42,7 +42,7 @@ const DropDownPythonFastApi = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="1. Setup Fast API" internalLink="/python/fastapi/setup-fastapi" />
-        <SideDropdownLink sideDropDownNavName="2. Core Basics" internalLink="/python/fastapi/core-basics" />
+        <SideDropdownLink sideDropDownNavName="2. CRUD" internalLink="/python/fastapi/crud" />
         <SideDropdownLink sideDropDownNavName="3. Logging" internalLink="/python/fastapi/logging-fastapi" />
         <SideDropdownLink sideDropDownNavName="4. Request And Validation" internalLink="/python/fastapi/request-and-validation" />
         <SideDropdownLink sideDropDownNavName="5. Response Handling" internalLink="/python/fastapi/response-handling" />
