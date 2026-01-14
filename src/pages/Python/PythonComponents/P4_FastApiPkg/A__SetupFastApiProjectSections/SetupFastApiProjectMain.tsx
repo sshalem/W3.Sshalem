@@ -3,10 +3,9 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_CreatePythonProject from "./O1_CreatePythonProject";
 import O2_InstallFastAPI from "./O2_InstallFastAPI";
 import O3_RequirementsFile from "./O3_RequirementsFile";
-import O4_RunFastApi from "./O4_RunFastApi";
-import O5_RunWithPlayButton from "./O5_RunWithPlayButton";
-import O6_Swagger from "./O6_Swagger";
-import O7_GitConfig from "./O7_GitConfig";
+import O4_BasicApiSetup from "./O4_BasicApiSetup";
+import O5_HowToRunFastApi from "./O5_HowToRunFastApi";
+import O6_GitConfig from "./O6_GitConfig";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -15,24 +14,15 @@ import O7_GitConfig from "./O7_GitConfig";
 const o1_CreatePythonProject = "1. Create Pure Python Project";
 const o2_InstallFastAPI = "2. Install Fast API";
 const o3_RequirementsFile = "3. requirements.txt File";
-const o4_RunFastApi = "4. Run FastApi (uvicorn)";
-const o5_RunWithPlayButton = "5. Run With Play Button";
-const o6_Swagger = "6. Swagger";
-const o7_GitConfig = "7. Git ignore Config";
+const o4_BasicApiSetup = "4. Run Basic API Setup";
+const o5_HowToRunFastApi = "5. Two options To Run FastAPI";
+const o6_GitConfig = "6. Git ignore Config";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [
-  o1_CreatePythonProject,
-  o2_InstallFastAPI,
-  o3_RequirementsFile,
-  o4_RunFastApi,
-  o5_RunWithPlayButton,
-  o6_Swagger,
-  o7_GitConfig,
-];
+const anchorList: string[] = [o1_CreatePythonProject, o2_InstallFastAPI, o3_RequirementsFile, o4_BasicApiSetup, o5_HowToRunFastApi, o6_GitConfig];
 
 // ============================================
 // ============================================
@@ -89,10 +79,9 @@ const SetupFastApiProjectMain = () => {
       <O1_CreatePythonProject anchor={o1_CreatePythonProject} />
       <O2_InstallFastAPI anchor={o2_InstallFastAPI} />
       <O3_RequirementsFile anchor={o3_RequirementsFile} />
-      <O4_RunFastApi anchor={o4_RunFastApi} />
-      <O5_RunWithPlayButton anchor={o5_RunWithPlayButton} />
-      <O6_Swagger anchor={o6_Swagger} />
-      <O7_GitConfig anchor={o7_GitConfig} />
+      <O4_BasicApiSetup anchor={o4_BasicApiSetup} />
+      <O5_HowToRunFastApi anchor={o5_HowToRunFastApi} />
+      <O6_GitConfig anchor={o6_GitConfig} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
