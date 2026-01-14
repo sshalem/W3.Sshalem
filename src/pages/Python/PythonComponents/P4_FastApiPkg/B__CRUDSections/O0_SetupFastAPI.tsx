@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JsxHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O0_SetupFastAPI = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,11 +16,13 @@ const O0_SetupFastAPI = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanGrey>main.py</SpanGrey> - it is the convention (and de-facto standard) to create the FastAPI instance in it
           </Li>
-          <Li>This file becomes the application entry point</Li>
+          <Li>
+            This file becomes the application entry point (Like <strong>main()</strong> method in Spring boot Where{" "}
+            <strong>@SpringBootApplication</strong> is)
+          </Li>
           <Li>
             what Uvicorn imports <SpanGrey>uvicorn main:app</SpanGrey>
           </Li>
-          <Li>Clear Entry Point (Like SpringBootApplication main() method)</Li>
           <Li>one place that bootstraps the app</Li>
           <Li>registers routes, middleware, events</Li>
           <JsxHighlight jsxCode={_1_} />
@@ -47,7 +49,7 @@ const O0_SetupFastAPI = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         {/*  */}
 
-        <JsxHighlight jsxCode={_2_} />
+        <PythonHighlight pythonCode={_2_} />
       </section>
     </MainChildArea>
   );

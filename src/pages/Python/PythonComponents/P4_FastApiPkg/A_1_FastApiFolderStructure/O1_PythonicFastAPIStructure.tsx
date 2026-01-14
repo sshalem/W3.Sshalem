@@ -26,10 +26,10 @@ const O1_PythonicFastAPIStructure = ({ anchor }: { anchor: string }) => {
 export default O1_PythonicFastAPIStructure;
 
 const _1_ = `app/
-├── main.py
+├── main.py  # Entry poit (Like main() method with annotaion of @SpringBootApplication)
 ├── routers/
 │   └── users.py
-├── models.py
-├── schemas.py
+├── models.py  # SQLAlchemy
+├── schemas.py # Pydantic
 └── db.py
 `;

@@ -22,7 +22,7 @@ const o4_DeleteApi = "4. DELETE";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_Pydantic, o0_SetupFastAPI, o1_GetApi, o2_PostApi, o3_PutApi, o4_DeleteApi];
+const anchorList: string[] = [o0_SetupFastAPI, o0_Pydantic, o1_GetApi, o2_PostApi, o3_PutApi, o4_DeleteApi];
 
 // ============================================
 // ============================================
