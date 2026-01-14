@@ -2,8 +2,10 @@
 
 
 */
-import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import python_29 from "../../../../../assets/python_29.jpg";
+import python_32 from "../../../../../assets/python_32.jpg";
 
 const O4_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
   return (
@@ -80,6 +82,8 @@ const O4_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
             <div className="my-4">
               2️⃣ create <SpanGrey>logging_config.py</SpanGrey> file
             </div>
+            <IMG img_name={python_29}></IMG>
+            copy/paste config code below
             <PythonHighlight pythonCode={_2_} />
           </article>
           <hr />
@@ -100,6 +104,21 @@ const O4_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
               <Li>
                 Different levels per logger:
                 <PythonHighlight pythonCode={_5_} />
+              </Li>
+            </ULdisc>
+          </article>
+          <hr />
+          <article className="my-8">
+            <div className="my-4">5️⃣ Run app</div>
+            <PythonHighlight pythonCode={_6_} />
+            for the code below , We can see all logging is working well , if we run via:
+            <ULdisc>
+              <Li>
+                Terminal with <SpanGrey>uvicorn main:app --reload</SpanGrey>
+              </Li>
+              <Li>
+                Or via the Edit Configuration I created (to run with Play ▶️ button)
+                <IMG img_name={python_32}></IMG>
               </Li>
             </ULdisc>
           </article>
@@ -206,3 +225,12 @@ setup_logging(level=logging.INFO, log_to_file=True, filename="prod.log")`;
 
 const _5_ = `logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
 logging.getLogger("uvicorn.access").setLevel(logging.INFO)`;
+
+const _6_ = `@app.get("/")
+def read_root():
+    logger.debug("Root endpoint called")
+    logger.info("Root endpoint called")
+    logger.warning("Root endpoint called")
+    logger.error("Root endpoint called")
+    logger.critical("Root endpoint called")
+    return {"message": "Hello World"}`;
