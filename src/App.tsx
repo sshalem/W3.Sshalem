@@ -275,7 +275,7 @@ import {
 import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
 import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P5_DjangoPkg";
-import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A_SetupFastApiProjectSections/SetupFastApiProjectMain";
+import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A__SetupFastApiProjectSections/SetupFastApiProjectMain";
 import {
   AdvancedTopicsMain,
   ApplicationStructureAndArchitectureMain,
@@ -285,6 +285,7 @@ import {
   DependencyInjectionMain,
   DeploymentAndDevOpsMain,
   ErrorHandlingMain,
+  FastApiFolderStructureMain,
   LoggingMain,
   MiddlewareSectionsMain,
   PerformanceAndConcurrencyMain,
@@ -751,6 +752,7 @@ const router = createBrowserRouter(
               element: <FastApi />,
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
+                { path: "folder-structure", element: <FastApiFolderStructureMain /> },
                 { path: "crud", element: <CRUDMain /> },
                 { path: "logging-fastapi", element: <LoggingMain /> },
                 { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },

@@ -1,4 +1,6 @@
-export { default as CreateProjectMain } from "./A_SetupFastApiProjectSections/SetupFastApiProjectMain";
+export { default as SetupFastApiProjectMain } from "./A__SetupFastApiProjectSections/SetupFastApiProjectMain";
+export { default as FastApiFolderStructureMain } from "./A_1_FastApiFolderStructure/FastApiFolderStructureMain";
+
 export { default as CRUDMain } from "./B__CRUDSections/CRUDMain";
 export { default as LoggingMain } from "./B_1_LoggingSections/LoggingMain";
 export { default as RequestDataAmdValidationSectionsMain } from "./C_RequestDataAmdValidationSections/RequestDataAmdValidationSectionsMain";

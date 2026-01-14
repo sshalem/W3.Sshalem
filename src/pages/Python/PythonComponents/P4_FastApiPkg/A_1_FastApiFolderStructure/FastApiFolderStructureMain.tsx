@@ -1,25 +1,40 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O0_IntroReqAndValidation from "./O0_IntroReqAndValidation";
-import O1_Pydantic from "./O1_Pydantic";
+import O1_PythonicFastAPIStructure from "./O1_PythonicFastAPIStructure";
+import O2_FeatureBasedStructure from "./O2_FeatureBasedStructure";
+import O3_SpringLikeFileStructure from "./O3_SpringLikeFileStructure";
+import O4_SpringStyleLayeredStructure from "./O4_SpringStyleLayeredStructure";
+import O5_Hybrid from "./O5_Hybrid";
+import O6_RealWorldFastAPIProjectStructure from "./O6_RealWorldFastAPIProjectStructure";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_IntroReqAndValidation = "Intro Request Validation";
-const o1_Pydantic = "1. Pydantic";
+const o1_PythonicFastAPIStructure = "1. Pythonic FastAPI Structure";
+const o2_FeatureBasedStructure = "2. Feature Based Structure";
+const o3_SpringLikeFileStructure = "3. Spring Like File Structure";
+const o4_SpringStyleLayeredStructure = "4. Spring Style Layered Structure";
+const o5_Hybrid = "5. Hybrid (Most Production FastAPI)";
+const o6_RealWorldFastAPIProjectStructure = "6. Real World FastAPI Project Structure";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_IntroReqAndValidation, o1_Pydantic];
+const anchorList: string[] = [
+  o1_PythonicFastAPIStructure,
+  o2_FeatureBasedStructure,
+  o3_SpringLikeFileStructure,
+  o4_SpringStyleLayeredStructure,
+  o5_Hybrid,
+  o6_RealWorldFastAPIProjectStructure,
+];
 
 // ============================================
 // ============================================
 
-const RequestDataAmdValidationSectionsMain = () => {
+const FastApiFolderStructureMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -68,12 +83,16 @@ const RequestDataAmdValidationSectionsMain = () => {
       />
       {/* End Contents */}
 
-      <O0_IntroReqAndValidation anchor={o0_IntroReqAndValidation} />
-      <O1_Pydantic anchor={o1_Pydantic} />
+      <O1_PythonicFastAPIStructure anchor={o1_PythonicFastAPIStructure} />
+      <O2_FeatureBasedStructure anchor={o2_FeatureBasedStructure} />
+      <O3_SpringLikeFileStructure anchor={o3_SpringLikeFileStructure} />
+      <O4_SpringStyleLayeredStructure anchor={o4_SpringStyleLayeredStructure} />
+      <O5_Hybrid anchor={o5_Hybrid} />
+      <O6_RealWorldFastAPIProjectStructure anchor={o6_RealWorldFastAPIProjectStructure} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default RequestDataAmdValidationSectionsMain;
+export default FastApiFolderStructureMain;

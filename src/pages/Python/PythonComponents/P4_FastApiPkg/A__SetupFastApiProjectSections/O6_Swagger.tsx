@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O5_Swagger = ({ anchor }: { anchor: string }) => {
+const O6_Swagger = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -44,7 +44,7 @@ const O5_Swagger = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_Swagger;
+export default O6_Swagger;
 
 const _1_ = `uvicorn main:app --reload`;
 

@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, JsxHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O1_FastAapiCode = ({ anchor }: { anchor: string }) => {
+const O0_2_ApiSetup = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -37,7 +37,7 @@ const O1_FastAapiCode = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_FastAapiCode;
+export default O0_2_ApiSetup;
 
 const _1_ = `from fastapi import FastAPI  # import FastAPI
 

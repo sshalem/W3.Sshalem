@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O6_GitConfig = ({ anchor }: { anchor: string }) => {
+const O7_GitConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -23,7 +23,7 @@ const O6_GitConfig = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O6_GitConfig;
+export default O7_GitConfig;
 
 const _1_ = `# Ignore all .venv directories in all projects
 **/.venv/
