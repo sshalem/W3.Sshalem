@@ -5,14 +5,16 @@ import O1_GetApi from "./O1_GetApi";
 import O2_PostApi from "./O2_PostApi";
 import O3_PutApi from "./O3_PutApi";
 import O4_DeleteApi from "./O4_DeleteApi";
-import O0_SetupFastAPI from "./O0_SetupFastAPI";
+import O0_MainDotPy from "./O0_MainDotPy";
+import O0_FastAPISetup from "./O0_FastAPISetup";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
+const o0_MainDotPy = "(main.py)";
 const o0_Pydantic = "Pydantic";
-const o0_SetupFastAPI = "Setup FastAPI - (main.py)";
+const o0_FastAPISetup = "Setup Project of FastAPI";
 const o1_GetApi = "1. GET";
 const o2_PostApi = "2. POST";
 const o3_PutApi = "3. PUT";
@@ -22,7 +24,7 @@ const o4_DeleteApi = "4. DELETE";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_SetupFastAPI, o0_Pydantic, o1_GetApi, o2_PostApi, o3_PutApi, o4_DeleteApi];
+const anchorList: string[] = [o0_MainDotPy, o0_Pydantic, o0_FastAPISetup, o1_GetApi, o2_PostApi, o3_PutApi, o4_DeleteApi];
 
 // ============================================
 // ============================================
@@ -76,8 +78,9 @@ const CRUDMain = () => {
       />
       {/* End Contents */}
 
-      <O0_SetupFastAPI anchor={o0_SetupFastAPI} />
+      <O0_MainDotPy anchor={o0_MainDotPy} />
       <O0_Pydantic anchor={o0_Pydantic} />
+      <O0_FastAPISetup anchor={o0_FastAPISetup} />
       <O1_GetApi anchor={o1_GetApi} />
       <O2_PostApi anchor={o2_PostApi} />
       <O3_PutApi anchor={o3_PutApi} />

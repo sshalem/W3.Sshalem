@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { JsxHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O0_SetupFastAPI = ({ anchor }: { anchor: string }) => {
+const O0_MainDotPy = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -48,14 +48,15 @@ const O0_SetupFastAPI = ({ anchor }: { anchor: string }) => {
           <Li>❌ Services</Li>
         </ULdisc>
         {/*  */}
-
+        Code below is only used in <SpanGrey>main.py</SpanGrey> with <SpanGrey>@app.get("/")</SpanGrey> , where I make instance of FastAPI <br />
+        But, The real structure , we use APIrouter (see next section)
         <PythonHighlight pythonCode={_2_} />
       </section>
     </MainChildArea>
   );
 };
 
-export default O0_SetupFastAPI;
+export default O0_MainDotPy;
 
 const _1_ = `from fastapi import FastAPI
 
