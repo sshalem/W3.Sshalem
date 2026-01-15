@@ -4,7 +4,7 @@
 */
 
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_7 from "../../../../../assets/python_7.jpg";
 import python_8 from "../../../../../assets/python_8.jpg";
 import python_9 from "../../../../../assets/python_9.jpg";
@@ -29,8 +29,16 @@ const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
             </ULdisc>
             <IMG img_name={python_9}></IMG>
           </Li>
-          <Li>If after opening the Project in PyCharm The popup message does NOT appear then (SiSu VeSimChu)</Li>
-          when tried to clone the project and assign virtual venv )<IMG img_name={python_8}></IMG>
+          <div className="text-lg font-semibold">
+            <SpanRed>Note</SpanRed>
+          </div>
+          <Li>
+            If after opening the Project in PyCharm The popup message does NOT appear then do the <SpanGreen>workaround</SpanGreen> below
+          </Li>
+          <Li>I might see this red alert , when tried to clone the project and assign virtual venv it showed as red </Li>
+          <IMG img_name={python_8}></IMG>
+          <hr />
+          <article className="my-4 text-lg font-semibold">✅ Workaround</article>
           PyCharm caches interpreter paths in <SpanGrey>.idea</SpanGrey>
           Thus , to fix issue of Invalid :<ULdisc></ULdisc>
           <ULdisc>
@@ -67,12 +75,12 @@ const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
             <Li>Otherwise I need to </Li>
           </ULdisc>
           <Li>
-            3️⃣ Create <SpanGrey>(.venv)</SpanGrey> folder , Open PyCharm Terminal , type command below (This creates a <SpanGrey>(.venv)</SpanGrey>
+            1️⃣ Create <SpanGrey>(.venv)</SpanGrey> folder , Open PyCharm Terminal , type command below (This creates a <SpanGrey>(.venv)</SpanGrey>
             folder inside your project.)
             <ApplicationPropertiesHighlight propertiesCode={_1_} />
           </Li>
           <Li>
-            4️⃣ 2 ways to Assign the <SpanGrey>(.venv)</SpanGrey> to the project :
+            2️⃣ 2 ways to Assign the <SpanGrey>(.venv)</SpanGrey> to the project :
             <ULdisc>
               Option 1 :
               <Li>
@@ -96,17 +104,17 @@ const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
           <Li>
-            4️⃣ <SpanGrey>sanity check</SpanGrey> : Open PyCharm Terminal , type command below , → should point to <SpanGrey>(.venv)</SpanGrey>
+            3️⃣ <SpanGrey>sanity check</SpanGrey> : Open PyCharm Terminal , type command below , → should point to <SpanGrey>(.venv)</SpanGrey>
             <ApplicationPropertiesHighlight propertiesCode={_4_} />
             or iI am in the root project directory then :
             <ApplicationPropertiesHighlight propertiesCode={_4_1_} />
           </Li>
           <Li>
-            5️⃣ Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
+            4️⃣ Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
             <ApplicationPropertiesHighlight propertiesCode={_5_} />
           </Li>
           <Li>
-            6️⃣ How to Verify It’s Working , In PyCharm Terminal, run:
+            5️⃣ How to Verify It’s Working , In PyCharm Terminal, run:
             <ApplicationPropertiesHighlight propertiesCode={_6_} />
           </Li>
         </ULdisc>

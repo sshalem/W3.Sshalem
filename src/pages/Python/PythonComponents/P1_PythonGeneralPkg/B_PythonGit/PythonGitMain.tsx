@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_AddProjectToExistingGitRepo from "./O1_AddProjectToExistingGitRepo";
 import O2_CloneGitPythonProject from "./O2_CloneGitPythonProject";
+import O3_GitIgnore from "./O3_GitIgnore";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -9,12 +10,13 @@ import O2_CloneGitPythonProject from "./O2_CloneGitPythonProject";
 
 const o1_AddProjectToExistingGitRepo = "1. Add Project To My Python Git Repo";
 const o2_CloneGitPythonProject = "2. Clone Git Python Project";
+const o3_GitIgnore = "3. (.gitignore) file";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_AddProjectToExistingGitRepo, o2_CloneGitPythonProject];
+const anchorList: string[] = [o1_AddProjectToExistingGitRepo, o2_CloneGitPythonProject, o3_GitIgnore];
 
 // ============================================
 // ============================================
@@ -70,6 +72,7 @@ const PythonGitMain = () => {
 
       <O1_AddProjectToExistingGitRepo anchor={o1_AddProjectToExistingGitRepo} />
       <O2_CloneGitPythonProject anchor={o2_CloneGitPythonProject} />
+      <O3_GitIgnore anchor={o3_GitIgnore} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -2,10 +2,11 @@
 
 
 */
+
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O6_GitConfig = ({ anchor }: { anchor: string }) => {
+const O3_GitIgnore = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -33,7 +34,7 @@ const O6_GitConfig = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O6_GitConfig;
+export default O3_GitIgnore;
 
 const _1_ = `# Ignore all .virtual environments directories in all projects
 **/.venv/

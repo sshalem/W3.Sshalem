@@ -88,11 +88,16 @@ const O1_AddProjectToExistingGitRepo = ({ anchor }: { anchor: string }) => {
 
 export default O1_AddProjectToExistingGitRepo;
 
-const _1_ = `# Ignore all .venv directories in all projects
+const _1_ = `# Ignore all .virtual environments directories in all projects
 **/.venv/
+**/venv/
+**/env/
 
 # Ignore all PyCharm .idea directories
 **/.idea/
-`;
+
+
+# Python cache directories in all projects
+**/__pycache__/ `;
 
 const _2_ = `Git_all.bat`;
