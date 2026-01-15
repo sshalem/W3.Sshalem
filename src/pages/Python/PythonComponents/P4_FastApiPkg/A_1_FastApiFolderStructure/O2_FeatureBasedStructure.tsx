@@ -28,12 +28,12 @@ export default O2_FeatureBasedStructure;
 
 const _1_ = `app/
 ├── main.py
-├── users/
-│   ├── router.py
-│   ├── service.py
-│   ├── repository.py
-│   ├── models.py      # SQLAlchemy
-│   └── schemas.py     # Pydantic
+├── users/ 
+│   ├── router.py (Spring  Controller)
+│   ├── service.py  (Spring  Service)
+│   ├── repository.py  (Spring  Repository)
+│   ├── models.py      # SQLAlchemy  (Spring Entity)
+│   └── schemas.py     # Pydantic  (Spring DTO)
 ├── orders/
 │   ├── router.py
 │   └── schemas.py
