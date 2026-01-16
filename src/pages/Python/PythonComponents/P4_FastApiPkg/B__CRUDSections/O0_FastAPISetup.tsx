@@ -6,7 +6,6 @@ import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { PythonHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_34 from "../../../../../assets/python_34.jpg";
 import { Link } from "react-router-dom";
-import Table_2ColCompareSpringVsFastAPI from "../../../../../components/Tables/Table_2ColCompareSpringVsFastAPI";
 
 const O0_FastAPISetup = ({ anchor }: { anchor: string }) => {
   return (
@@ -65,11 +64,7 @@ const O0_FastAPISetup = ({ anchor }: { anchor: string }) => {
             <PythonHighlight pythonCode={_1_} />
           </Li>
           <Li>
-            <SpanGrey>router.py</SpanGrey> - Like Spring <SpanGrey>controller</SpanGrey> package (or file in this example) define a router
-            <PythonHighlight pythonCode={_2_} />
-            <ULdisc>
-              <Table_2ColCompareSpringVsFastAPI />
-            </ULdisc>
+            <SpanGrey>router.py</SpanGrey> - see next section
           </Li>
         </ULdisc>
       </section>
@@ -93,9 +88,4 @@ class StudentDtoResponse(BaseModel):
     first_name: str
     last_name: str
     age: int
-`;
-
-const _2_ = `from fastapi import APIRouter
-
-router = APIRouter()
 `;

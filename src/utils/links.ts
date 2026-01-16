@@ -8,6 +8,7 @@ export const links: string[] = [
   "/java",
   "/microservices",
   "/python",
+  "/fastapi",
   "/reactJS",
   "/javascript",
   "/html_css",
