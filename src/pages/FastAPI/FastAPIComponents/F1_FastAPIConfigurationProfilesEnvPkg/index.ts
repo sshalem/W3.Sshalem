@@ -1,2 +1,3 @@
-export { default as CreateProjectMain } from "./A_CreateProjectSections/CreateProjectMain";
-export { default as PythonGitMain } from "./B_PythonGit/PythonGitMain";
+export { default as CreateProjectMain } from "./A_ConfigurationSections/ConfigurationMain";
+export { default as EnvMain } from "./B_EnvSection/EnvMain";
+export { default as ProfilesMain } from "./C_ProfilesSection/ProfilesMain";

@@ -1,27 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_AddProjectToExistingGitRepo from "./O1_AddProjectToExistingGitRepo";
-import O2_CloneGitPythonProject from "./O2_CloneGitPythonProject";
-import O3_GitIgnore from "./O3_GitIgnore";
+import O1_NewProjectSetup from "./O1_NewProjectSetup";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_AddProjectToExistingGitRepo = "1. Add Project To My Python Git Repo";
-const o2_CloneGitPythonProject = "2. Clone Git Python Project";
-const o3_GitIgnore = "3. (.gitignore) file";
+const o1_NewProjectSetup = "New Project Setup";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_AddProjectToExistingGitRepo, o2_CloneGitPythonProject, o3_GitIgnore];
+const anchorList: string[] = [o1_NewProjectSetup];
 
 // ============================================
 // ============================================
 
-const PythonGitMain = () => {
+const EnvMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,13 +66,11 @@ const PythonGitMain = () => {
       />
       {/* End Contents */}
 
-      <O1_AddProjectToExistingGitRepo anchor={o1_AddProjectToExistingGitRepo} />
-      <O2_CloneGitPythonProject anchor={o2_CloneGitPythonProject} />
-      <O3_GitIgnore anchor={o3_GitIgnore} />
+      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default PythonGitMain;
+export default EnvMain;

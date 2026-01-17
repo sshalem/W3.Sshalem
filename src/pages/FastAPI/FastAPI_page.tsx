@@ -6,12 +6,8 @@ import { Outlet } from "react-router-dom";
 import { GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import D0_DropDownPythonIde from "./DropFastAPI/D0_DropDownFastAPIIde";
-import D1_DropDownPythonGeneral from "./DropFastAPI/D1_DropDownPythonGeneral";
-import D2_DropDownPythonBasics from "./DropFastAPI/D2_DropDownPythonBasics";
-import D3_DropDownPythonDataStructure from "./DropFastAPI/D3_DropDownPythonDataStructure";
-import D4_DropDownPythonFastApi from "./DropFastAPI/D4_DropDownPythonFastApi";
-import D5_DropDownPythonDjango from "./DropFastAPI/D5_DropDownPythonDjango";
+import D0_DropDownFastAPIIde from "./DropFastAPI/D0_DropDownFastAPIIde";
+import D1_DropDownFastApiConfigEnvProfiles from "./DropFastAPI/D1_DropDownFastApiConfigEnvProfiles";
 
 const FastAPI_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -43,12 +39,8 @@ const FastAPI_page = () => {
           <div className="relative h-full w-full">
             <div className="h-3"></div>
             <SideBarLink pageName="FastAPI Home" internalLink="/fastapi" />
-            <D0_DropDownPythonIde />
-            <D1_DropDownPythonGeneral />
-            <D2_DropDownPythonBasics />
-            <D3_DropDownPythonDataStructure />
-            <D4_DropDownPythonFastApi />
-            <D5_DropDownPythonDjango />
+            <D0_DropDownFastAPIIde />
+            <D1_DropDownFastApiConfigEnvProfiles />
           </div>
         </article>
       )}

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownPythonGeneral = () => {
+const D1_DropDownFastApiConfigEnvProfiles = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownPythonGeneral = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("python/general")) {
+    if (location.pathname.includes("fastapi/ide")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -35,22 +35,23 @@ const DropDownPythonGeneral = () => {
   return (
     <section>
       <SideDropDownTopic
-        enableCaret={true}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/python/general"
-        topicName="Python General"
+        internalLink="/fastapi/config-env-profiles"
+        topicName="Config Env Profiles"
       />
+
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Create New Project" internalLink="/python/general/create-project" />
-        <SideDropdownLink sideDropDownNavName="Git with Python" internalLink="/python/general/python-git" />
+        <SideDropdownLink sideDropDownNavName="Configuration" internalLink="/fastapi/config-env-profiles/config" />
+        <SideDropdownLink sideDropDownNavName="Env" internalLink="/fastapi/config-env-profiles/env" />
+        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/fastapi/config-env-profiles/profiles" />
       </div>
     </section>
   );
 };
 
-export default DropDownPythonGeneral;
+export default D1_DropDownFastApiConfigEnvProfiles;
