@@ -9,7 +9,7 @@ const FastAPIRouter = () => {
   let location = useLocation();
   return (
     <section>
-      {location.pathname === "/python/python-basics" ? (
+      {location.pathname === "/fastapi/router" ? (
         <section>
           <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">FastAPI Router ...</div>
           <article className="my-8">

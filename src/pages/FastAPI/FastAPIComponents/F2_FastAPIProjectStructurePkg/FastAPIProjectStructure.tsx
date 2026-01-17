@@ -10,7 +10,7 @@ const FastAPIProjectStructure = () => {
 
   return (
     <section>
-      {location.pathname === "/python/general" ? (
+      {location.pathname === "/fastapi/project-structure" ? (
         <section>
           <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">FastAPI Project Structure ...</div>
           <article className="my-8">
