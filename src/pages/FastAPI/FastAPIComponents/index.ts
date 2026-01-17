@@ -4,3 +4,7 @@ export { default as FastApiConfigurationProfilesEnv } from "./F1_FastAPIConfigur
 export { default as FastAPILogging } from "./F2_FastAPILoggingPkg/FastAPILogging";
 export { default as FastAPIRouter } from "./F3_FastAPIRouterPkg/FastAPIRouter";
 export { default as FastAPIException } from "./F4_FastAPIExceptionPkg/FastAPIException";
+export { default as FastAPISQLAlchemy } from "./F5_FastAPISQLAlchemyPkg/FastAPISQLAlchemy";
+export { default as FastAPIAuditing } from "./F6_FastAPIAuditingPkg/FastAPIAuditing";
+export { default as FastAPISecurity } from "./F7_FastAPISecurityPkg/FastAPISecurity";
+export { default as FastAPICaching } from "./F8_FastAPICachingPkg/FastAPICaching";

@@ -297,12 +297,16 @@ import {
 import { PythonDictionaryMain, PythonListMain, PythonSetMain, PythonTupleMain } from "./pages/Python/PythonComponents/P3_DataStructuresPkg";
 import FastAPI_page from "./pages/FastAPI/FastAPI_page";
 import {
+  FastAPIAuditing,
+  FastAPICaching,
   FastApiConfigurationProfilesEnv,
   FastAPIException,
   FastAPIHome,
   FastAPIIde,
   FastAPILogging,
   FastAPIRouter,
+  FastAPISecurity,
+  FastAPISQLAlchemy,
 } from "./pages/FastAPI/FastAPIComponents";
 
 const router = createBrowserRouter(
@@ -719,6 +723,10 @@ const router = createBrowserRouter(
             { path: "logging", element: <FastAPILogging /> },
             { path: "router", element: <FastAPIRouter /> },
             { path: "exceptions", element: <FastAPIException /> },
+            { path: "sqlalchemy", element: <FastAPISQLAlchemy /> },
+            { path: "auditing", element: <FastAPIAuditing /> },
+            { path: "security", element: <FastAPISecurity /> },
+            { path: "caching", element: <FastAPICaching /> },
           ],
         },
         {
