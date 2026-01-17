@@ -296,7 +296,14 @@ import {
 } from "./pages/Python/PythonComponents/P4_FastApiPkg";
 import { PythonDictionaryMain, PythonListMain, PythonSetMain, PythonTupleMain } from "./pages/Python/PythonComponents/P3_DataStructuresPkg";
 import FastAPI_page from "./pages/FastAPI/FastAPI_page";
-import { FastApiConfigurationProfilesEnv, FastAPIHome, FastAPIIde } from "./pages/FastAPI/FastAPIComponents";
+import {
+  FastApiConfigurationProfilesEnv,
+  FastAPIException,
+  FastAPIHome,
+  FastAPIIde,
+  FastAPILogging,
+  FastAPIRouter,
+} from "./pages/FastAPI/FastAPIComponents";
 
 const router = createBrowserRouter(
   [
@@ -709,6 +716,9 @@ const router = createBrowserRouter(
             { index: true, element: <FastAPIHome /> },
             { path: "ide", element: <FastAPIIde /> },
             { path: "config-env-profiles", element: <FastApiConfigurationProfilesEnv /> },
+            { path: "logging", element: <FastAPILogging /> },
+            { path: "router", element: <FastAPIRouter /> },
+            { path: "exceptions", element: <FastAPIException /> },
           ],
         },
         {

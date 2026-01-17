@@ -73,7 +73,7 @@ const SpringHome = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <div className="bg-teal-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Spring Home</div>
+      <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Spring Home</div>
       <SpringTopics anchor={spring_topics} />
       <StsVersions anchor={sts_versions} />
       <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>

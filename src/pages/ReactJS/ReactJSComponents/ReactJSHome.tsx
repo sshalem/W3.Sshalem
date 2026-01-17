@@ -7,7 +7,7 @@ import { GitHub, GitHubLiAnchor } from "../../../components";
 const ReactJSHome = () => {
   return (
     <section>
-      <div className="bg-teal-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">ReactJS Home ...</div>
+      <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">ReactJS Home ...</div>
       <article>
         <GitHub>
           <GitHubLiAnchor

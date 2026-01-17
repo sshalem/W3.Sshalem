@@ -17,7 +17,7 @@ const anchorList: string[] = [o1_NewProjectSetup];
 // ============================================
 // ============================================
 
-const EnvMain = () => {
+const SetupFastApiMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -73,4 +73,4 @@ const EnvMain = () => {
   );
 };
 
-export default EnvMain;
+export default SetupFastApiMain;

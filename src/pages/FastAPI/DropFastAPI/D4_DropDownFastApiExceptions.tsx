@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const D1_DropDownFastApiConfigEnvProfiles = () => {
+const D4_DropDownFastApiExceptions = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("fastapi/config-env-profiles")) {
+    if (location.pathname.includes("fastapi/exceptions")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,24 +34,18 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/fastapi/config-env-profiles"
-        topicName="Config Env Profiles"
-      />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/exceptions" topicName="Exceptions" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Configuration" internalLink="/fastapi/config-env-profiles/config" />
-        <SideDropdownLink sideDropDownNavName="Env" internalLink="/fastapi/config-env-profiles/env" />
-        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/fastapi/config-env-profiles/profiles" />
+        <SideDropdownLink sideDropDownNavName="PyCharm" internalLink="/fastapi/exceptions/pycharm" />
+        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/exceptions/vscode" />
       </div>
     </section>
   );
 };
 
-export default D1_DropDownFastApiConfigEnvProfiles;
+export default D4_DropDownFastApiExceptions;

@@ -8,6 +8,9 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D0_DropDownFastAPIIde from "./DropFastAPI/D0_DropDownFastAPIIde";
 import D1_DropDownFastApiConfigEnvProfiles from "./DropFastAPI/D1_DropDownFastApiConfigEnvProfiles";
+import D2_DropDownFastApiLogging from "./DropFastAPI/D2_DropDownFastApiLogging";
+import D3_DropDownFastApiRouter from "./DropFastAPI/D3_DropDownFastApiRouter";
+import D4_DropDownFastApiExceptions from "./DropFastAPI/D4_DropDownFastApiExceptions";
 
 const FastAPI_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -41,6 +44,9 @@ const FastAPI_page = () => {
             <SideBarLink pageName="FastAPI Home" internalLink="/fastapi" />
             <D0_DropDownFastAPIIde />
             <D1_DropDownFastApiConfigEnvProfiles />
+            <D2_DropDownFastApiLogging />
+            <D3_DropDownFastApiRouter />
+            <D4_DropDownFastApiExceptions />
           </div>
         </article>
       )}
