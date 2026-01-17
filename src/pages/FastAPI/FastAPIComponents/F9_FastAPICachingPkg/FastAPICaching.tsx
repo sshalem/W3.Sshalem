@@ -10,9 +10,9 @@ const FastAPICaching = () => {
 
   return (
     <section>
-      {location.pathname === "/python/general" ? (
+      {location.pathname === "/fastapi/caching" ? (
         <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">FastAPI Project Structure ...</div>
+          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">FastAPI Caching ...</div>
           <article className="my-8">
             <div>Docs/Youtube</div>
             <ULdisc>
