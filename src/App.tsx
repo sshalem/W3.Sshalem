@@ -308,6 +308,7 @@ import {
   FastAPISecurity,
   FastAPISQLAlchemy,
 } from "./pages/FastAPI/FastAPIComponents";
+import { MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
 
 const router = createBrowserRouter(
   [
@@ -721,7 +722,15 @@ const router = createBrowserRouter(
             { path: "ide", element: <FastAPIIde /> },
             { path: "config-env-profiles", element: <FastApiConfigurationProfilesEnv /> },
             { path: "logging", element: <FastAPILogging /> },
-            { path: "router", element: <FastAPIRouter /> },
+            {
+              path: "router",
+              element: <FastAPIRouter />,
+              children: [
+                { path: "main-py", element: <MainPyMain /> },
+                { path: "setup-fastapi", element: <SetupFastApiMain /> },
+                { path: "pydantic", element: <PydanticMain /> },
+              ],
+            },
             { path: "exceptions", element: <FastAPIException /> },
             { path: "sqlalchemy", element: <FastAPISQLAlchemy /> },
             { path: "auditing", element: <FastAPIAuditing /> },

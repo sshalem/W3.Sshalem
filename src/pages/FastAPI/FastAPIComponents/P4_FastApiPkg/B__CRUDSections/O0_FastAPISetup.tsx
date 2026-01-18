@@ -6,7 +6,6 @@ import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { PythonHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_34 from "../../../../../assets/python_34.jpg";
 import { Link } from "react-router-dom";
-import Table_2ColCompareSpringVsFastAPI from "../../../../../components/Tables/Table_2ColCompareSpringVsFastAPI";
 
 const O0_FastAPISetup = ({ anchor }: { anchor: string }) => {
   return (

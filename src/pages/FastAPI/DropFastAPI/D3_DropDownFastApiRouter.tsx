@@ -41,8 +41,9 @@ const D3_DropDownFastApiRouter = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="PyCharm" internalLink="/fastapi/router/pycharm" />
-        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/router/vscode" />
+        <SideDropdownLink sideDropDownNavName="main.py" internalLink="/fastapi/router/main-py" />
+        <SideDropdownLink sideDropDownNavName="Pydantic" internalLink="/fastapi/router/pydantic" />
+        <SideDropdownLink sideDropDownNavName="Setup FastApi" internalLink="/fastapi/router/setup-fastapi" />
       </div>
     </section>
   );
