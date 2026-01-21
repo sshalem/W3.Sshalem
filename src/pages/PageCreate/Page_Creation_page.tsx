@@ -10,6 +10,7 @@ import DropDownSteps from "./DropPageCreation/DropDownSteps";
 import DropDownAppTree from "./DropPageCreation/DropDownAppTree";
 import DropDownComponentTree from "./DropPageCreation/DropDownComponentTree";
 import DropDownWebPageComponent from "./DropPageCreation/DropDownWebPageComponent";
+import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Page_Creation_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -37,18 +38,13 @@ const Page_Creation_page = () => {
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="Page Creation Home" internalLink="/page_creation" />
-            <DropDownSteps />
-            <DropDownAppTree />
-            <DropDownComponentTree />
-            <DropDownWebPageComponent />
-
-            {/*  */}
-          </div>
-        </article>
+        <AsideWrapperLayout>
+          <SideBarLink pageName="Page Creation Home" internalLink="/page_creation" />
+          <DropDownSteps />
+          <DropDownAppTree />
+          <DropDownComponentTree />
+          <DropDownWebPageComponent />
+        </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
         <Outlet />

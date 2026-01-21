@@ -12,6 +12,7 @@ import D2_DropDownPythonBasics from "./DropPython/D2_DropDownPythonBasics";
 import D3_DropDownPythonDataStructure from "./DropPython/D3_DropDownPythonDataStructure";
 import D4_DropDownPythonFastApi from "./DropPython/D4_DropDownPythonFastApi";
 import D5_DropDownPythonDjango from "./DropPython/D5_DropDownPythonDjango";
+import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Python_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -39,18 +40,15 @@ const Python_page = () => {
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="Python Home" internalLink="/python" />
-            <D0_DropDownPythonIde />
-            <D1_DropDownPythonGeneral />
-            <D2_DropDownPythonBasics />
-            <D3_DropDownPythonDataStructure />
-            <D4_DropDownPythonFastApi />
-            <D5_DropDownPythonDjango />
-          </div>
-        </article>
+        <AsideWrapperLayout>
+          <SideBarLink pageName="Python Home" internalLink="/python" />
+          <D0_DropDownPythonIde />
+          <D1_DropDownPythonGeneral />
+          <D2_DropDownPythonBasics />
+          <D3_DropDownPythonDataStructure />
+          <D4_DropDownPythonFastApi />
+          <D5_DropDownPythonDjango />
+        </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
         <Outlet />

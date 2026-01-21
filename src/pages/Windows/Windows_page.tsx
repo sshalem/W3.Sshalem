@@ -8,6 +8,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownPortCheck from "./DropWindows/DropDownPortCheck";
 import DropDownBatch from "./DropWindows/DropDownBatch";
+import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Windows_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -35,14 +36,11 @@ const Windows_page = () => {
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="Windows Home" internalLink="/windows" />
-            <DropDownPortCheck />
-            <DropDownBatch />
-          </div>
-        </article>
+        <AsideWrapperLayout>
+          <SideBarLink pageName="Windows Home" internalLink="/windows" />
+          <DropDownPortCheck />
+          <DropDownBatch />
+        </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
         <Outlet />

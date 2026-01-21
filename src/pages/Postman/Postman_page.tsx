@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import DropDownMultipleRequest from "./DropPostman/DropDownMultipleRequest";
 import DropDownEnvironment from "./DropPostman/DropDownEnvironment";
 import DropDownCollection from "./DropPostman/DropDownCollection";
+import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Postman_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -36,15 +37,12 @@ const Postman_page = () => {
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
-        <article className="fixed bottom-0 top-[89px] w-64 overflow-auto bg-[#E7E9EB]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="Postman Home" internalLink="/postman" />
-            <DropDownCollection />
-            <DropDownEnvironment />
-            <DropDownMultipleRequest />
-          </div>
-        </article>
+        <AsideWrapperLayout>
+          <SideBarLink pageName="Postman Home" internalLink="/postman" />
+          <DropDownCollection />
+          <DropDownEnvironment />
+          <DropDownMultipleRequest />
+        </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
         <Outlet />
