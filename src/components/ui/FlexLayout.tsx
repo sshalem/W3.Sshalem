@@ -4,7 +4,7 @@
 // children :
 // Since I use GridLayout is a wrapper component
 // I want all children comnpnent to be able to be as child for it
-const GridLayout = ({ children }: React.PropsWithChildren) => {
+const FlexLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <section className="m-auto max-w-[1750px]">
       <section className="flex flex-row">{children}</section>
@@ -12,4 +12,4 @@ const GridLayout = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-export default GridLayout;
+export default FlexLayout;

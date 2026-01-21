@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink } from "../../components";
+import { FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownJavaScriptBasics from "./DropJavaScript/DropDownJavaScriptBasics";
@@ -30,7 +30,7 @@ const JavaScript_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -45,7 +45,7 @@ const JavaScript_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 

@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink } from "../../components";
+import { FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D0_DropDownFastAPIIde from "./DropFastAPI/D0_DropDownFastAPIIde";
@@ -38,7 +38,7 @@ const FastAPI_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -61,7 +61,7 @@ const FastAPI_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 

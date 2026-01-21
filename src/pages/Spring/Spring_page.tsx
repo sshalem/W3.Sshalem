@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink } from "../../components";
+import { FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D1_DropDownIDE from "./DropSpringPage/D1_DropDownIDE";
@@ -45,7 +45,7 @@ const Spring_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
       {showSidebar && (
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">
@@ -75,7 +75,7 @@ const Spring_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 

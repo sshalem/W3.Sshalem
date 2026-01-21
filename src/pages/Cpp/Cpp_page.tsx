@@ -5,7 +5,7 @@
 import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { GridLayout, SideBarLink } from "../../components";
+import { FlexLayout, SideBarLink } from "../../components";
 import DropDownCppBasics from "./DropCpp/DropDownCppBasics";
 
 const Cpp_page = () => {
@@ -30,7 +30,7 @@ const Cpp_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -45,7 +45,7 @@ const Cpp_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 
