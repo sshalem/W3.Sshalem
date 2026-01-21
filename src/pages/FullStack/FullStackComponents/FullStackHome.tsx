@@ -2,8 +2,11 @@
 
 
 */
+
+import { Subject } from "../../../components";
+
 const FullStackHome = () => {
-  return <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">FullStack Home ...</div>;
+  return <Subject title="FullStack Home ...">{<div></div>}</Subject>;
 };
 
 export default FullStackHome;

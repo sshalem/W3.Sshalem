@@ -5,9 +5,8 @@
 import { Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import DropDownCppBasics from "./DropCpp/DropDownCppBasics";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Cpp_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

@@ -3,7 +3,7 @@
 
 */
 import { Outlet, useLocation } from "react-router-dom";
-import { GitHub, GitHubLiAnchor, Li, ULdisc } from "../../../../components";
+import { Subject } from "../../../../components";
 
 const PythonIde = () => {
   let location = useLocation();
@@ -11,24 +11,11 @@ const PythonIde = () => {
   return (
     <section>
       {location.pathname === "/python/ide" ? (
-        <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Python IDE ...</div>
-          <article className="my-8">
-            <div>Docs/Youtube</div>
-            <ULdisc>
-              <Li>
-                <a href="https://" target="_blank" className="tracking-wider text-blue-600">
-                  https://
-                </a>
-              </Li>
-            </ULdisc>
-            <GitHub>
-              <GitHubLiAnchor description="" gitLink=""></GitHubLiAnchor>
-            </GitHub>
-          </article>
-        </section>
+        <Subject title="Python IDE ...">{<div></div>}</Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );

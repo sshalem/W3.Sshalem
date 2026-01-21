@@ -3,6 +3,7 @@
 
 */
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const InterviewQuestions = () => {
   let location = useLocation();
@@ -10,21 +11,11 @@ const InterviewQuestions = () => {
   return (
     <section>
       {location.pathname === "/spring/interview-questions" ? (
-        <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Interview Questions ...</div>
-          <article className="my-8">
-            <div>Docs/Youtube</div>
-            {/* <ULdisc>
-              <Li>
-                <a href="https://" target="_blank" className="tracking-wider text-blue-600">
-                  https://
-                </a>
-              </Li>
-            </ULdisc> */}
-          </article>
-        </section>
+        <Subject title="Interview Questions ...">{<div></div>}</Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D0_DropDownPythonIde from "./DropPython/D0_DropDownPythonIde";
@@ -12,7 +12,6 @@ import D2_DropDownPythonBasics from "./DropPython/D2_DropDownPythonBasics";
 import D3_DropDownPythonDataStructure from "./DropPython/D3_DropDownPythonDataStructure";
 import D4_DropDownPythonFastApi from "./DropPython/D4_DropDownPythonFastApi";
 import D5_DropDownPythonDjango from "./DropPython/D5_DropDownPythonDjango";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Python_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

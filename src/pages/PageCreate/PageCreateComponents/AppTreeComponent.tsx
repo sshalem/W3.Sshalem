@@ -6,9 +6,9 @@ import { TreeAppBrowserRouter } from "../../../components/Tree";
 
 const AppTreeComponent = () => {
   return (
-    <div>
+    <section className="ml-2 md:ml-10">
       <TreeAppBrowserRouter />
-    </div>
+    </section>
   );
 };
 

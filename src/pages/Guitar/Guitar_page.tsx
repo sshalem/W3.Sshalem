@@ -3,14 +3,13 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D1_DropDownGuitarGeneral from "./DropGuitar/D1_DropDownGuitarGeneral";
 import D2_DropDownGipsyKings from "./DropGuitar/D2_DropDownGipsyKings";
 import D3_DropDownFlamenco from "./DropGuitar/D3_DropDownFlamenco";
 import D4_DropDownAntonGlushkin from "./DropGuitar/D4_DropDownAntonGlushkin";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

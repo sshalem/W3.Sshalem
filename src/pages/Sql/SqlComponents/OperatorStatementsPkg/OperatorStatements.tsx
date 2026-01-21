@@ -1,10 +1,19 @@
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const OperatorStatements = () => {
   let location = useLocation();
   return (
     <section>
-      {location.pathname === "/spring/operator-statements" ? <div className="text-3xl">OperatorStatements main page ...</div> : <Outlet />}
+      {location.pathname === "/sql/operator-statements" ? (
+        <Subject title="SQL Operator Statements ...">
+          <div></div>
+        </Subject>
+      ) : (
+        <main className="css-page-content">
+          <Outlet />
+        </main>
+      )}
     </section>
   );
 };

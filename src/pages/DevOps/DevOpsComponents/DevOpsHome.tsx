@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
+import { Subject } from "../../../components";
 
 const DevOpsHome = () => {
   return (
-    <section>
-      <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">DevOps Home ...</div>
+    <Subject title="DevOps Home">
       <article>
         <ul className="my-4 ml-8 list-decimal text-xl">
           <li className="my-1 text-blue-600">
@@ -23,7 +23,7 @@ const DevOpsHome = () => {
           </li>
         </ul>
       </article>
-    </section>
+    </Subject>
   );
 };
 

@@ -2,16 +2,16 @@
 
 
 */
-import { IMG } from "../../../components";
+import { IMG, Subject } from "../../../components";
 import { Tree } from "../../../components/Tree";
 import component_layout from "../../../assets/component_layout.jpg";
 
 const WebPageComponent = () => {
   return (
-    <div>
+    <Subject title="WebPage ">
       <IMG img_name={component_layout}></IMG>
       <Tree />
-    </div>
+    </Subject>
   );
 };
 

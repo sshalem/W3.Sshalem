@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownBasics from "./DropReactJS/D2_DropDownReactBasics";
@@ -13,7 +13,6 @@ import DropDownSetup from "./DropReactJS/D1_DropDownSetup";
 import DropDownPagination from "./DropReactJS/D5_DropDownPagination";
 import DropDownSearch from "./DropReactJS/D6_DropDownSearch";
 import DropDownReactInterviewQuestions from "./DropReactJS/D7_DropDownReactInterviewQuestions";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

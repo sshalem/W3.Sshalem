@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownNetlify from "./DropDevOps/DropDownNetlify";
@@ -13,7 +13,7 @@ import DropDownReactOnSpring from "./DropDevOps/DropDownReactOnSpring";
 import DropDownLinux from "./DropDevOps/DropDownLinux";
 import DropDownGit from "./DropDevOps/DropDownGit";
 import DropDownNginx from "./DropDevOps/DropDownNginx";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
+import DropDownDocker from "./DropDevOps/DropDownDocker";
 
 const DevOps_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -45,6 +45,7 @@ const DevOps_page = () => {
           <SideBarLink pageName="DevOps Home" internalLink="/devops" />
           <DropDownGit />
           <DropDownReactOnSpring />
+          <DropDownDocker />
           <DropDownNetlify />
           <DropDownRender />
           <DropDownNginx />

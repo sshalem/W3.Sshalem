@@ -6,9 +6,9 @@ import { Tree } from "../../../components/Tree";
 
 const ComponentTreeComponent = () => {
   return (
-    <div>
+    <section className="ml-2 md:ml-10">
       <Tree />
-    </div>
+    </section>
   );
 };
 

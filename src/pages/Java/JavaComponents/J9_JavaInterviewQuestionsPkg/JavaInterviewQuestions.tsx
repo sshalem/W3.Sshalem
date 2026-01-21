@@ -3,18 +3,18 @@
 
 */
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const JavaInterviewQuestions = () => {
   let location = useLocation();
   return (
     <section>
       {location.pathname === "/java/java-interview-questions" ? (
-        <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Java Interview Questions ...</div>
-          <article className="my-8">text</article>
-        </section>
+        <Subject title="Java Interview Questions ...">{<div></div>}</Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );

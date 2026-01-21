@@ -1,9 +1,15 @@
+import { Subject } from "../../../components";
+
 /*
 
 
 */
 const PageCreationHome = () => {
-  return <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Page creation Home ...</div>;
+  return (
+    <Subject title="Page creation Home ...">
+      <div></div>
+    </Subject>
+  );
 };
 
 export default PageCreationHome;

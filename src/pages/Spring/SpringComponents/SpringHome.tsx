@@ -3,7 +3,7 @@
 
 */
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu, Loading } from "../../../components";
+import { ContentMenu, Loading, Subject } from "../../../components";
 import StsVersions from "./SpringHomePkg/StsVersions";
 import SpringTopics from "./SpringHomePkg/SpringTopics";
 import SpringGuideRefrence from "./SpringHomePkg/SpringGuideRefrence";
@@ -73,10 +73,15 @@ const SpringHome = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Spring Home</div>
-      <SpringTopics anchor={spring_topics} />
-      <StsVersions anchor={sts_versions} />
-      <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
+      <Subject title="Spring Home ...">
+        {
+          <div className="css-page-content">
+            <SpringTopics anchor={spring_topics} />
+            <StsVersions anchor={sts_versions} />
+            <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
+          </div>
+        }
+      </Subject>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

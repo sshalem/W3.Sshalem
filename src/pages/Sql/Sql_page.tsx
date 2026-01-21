@@ -3,12 +3,11 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownBasicConepts from "./DropSql/DropDownBasicConepts";
 import DropDownOperatorStatements from "./DropSql/DropDownOperatorStatements";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Sql_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

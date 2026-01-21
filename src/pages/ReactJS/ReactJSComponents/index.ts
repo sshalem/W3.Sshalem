@@ -1,5 +1,5 @@
 export { default as ReactJSHome } from "./ReactJSHome";
-export { default as Setup } from "./R1_SetupPkg/Setup";
+export { default as SetupMain } from "./R1_SetupPkg/SetupMain";
 export { default as ReactBasics } from "./R2_ReactBasicsPkg/ReactBasics";
 export { default as JsxMain } from "./R2_ReactBasicsPkg/JsxSections/JsxMain";
 export { default as IntroMain } from "./R3_TypeScriptPkg/IntroSections/IntroMain";

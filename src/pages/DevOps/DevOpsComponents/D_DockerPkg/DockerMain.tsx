@@ -4,44 +4,29 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../components";
-import O1_CreateViteProject from "./O1_CreateViteProject";
-import O2_Favicon from "./O2_Favicon";
-import O3_ReactIcons from "./O3_ReactIcons";
-import O4_InstallAxios from "./O4_InstallAxios";
-import O5_Tailwindcss from "./O5_Tailwindcss";
-import O6_LoadingSpinner from "./O6_LoadingSpinner";
-import O7_InstallReactRouter from "./O7_InstallReactRouter";
+import O1_WhatIsDocker from "./O1_WhatIsDocker";
+import O2_WorkFlow from "./O2_WorkFlow";
+import O4_InstallDocker from "./O4_InstallDocker";
+import O3_InstallWSL2 from "./O3_InstallWSL2";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_CreateViteProject = "1. Create Vite Project";
-const o2_Favicon = "2. Favicon";
-const o3_ReactIcons = "3. React Icons";
-const o4_InstallAxios = "4. axios";
-const o5_Tailwindcss = "5. tailwindcss";
-const o6_LoadingSpinner = "6. Loading Spinner";
-const o7_InstallReactRouter = "7. Router";
-
+const o1_WhatIsDocker = "1. What Is Docker";
+const o2_WorkFlow = "2. Docker Work Flow";
+const o3_InstallWSL2 = "3. Install WSL2";
+const o4_InstallDocker = "4. Install Docker";
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [
-  o1_CreateViteProject,
-  o2_Favicon,
-  o3_ReactIcons,
-  o4_InstallAxios,
-  o5_Tailwindcss,
-  o6_LoadingSpinner,
-  o7_InstallReactRouter,
-];
+const anchorList: string[] = [o1_WhatIsDocker, o2_WorkFlow, o3_InstallWSL2, o4_InstallDocker];
 
 // ============================================
 // ============================================
 
-const Setup = () => {
+const DockerMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -79,7 +64,7 @@ const Setup = () => {
   }
 
   return (
-    <section>
+    <section className="ml-2 md:ml-10">
       {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
@@ -89,16 +74,13 @@ const Setup = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_CreateViteProject anchor={o1_CreateViteProject}></O1_CreateViteProject>
-      <O2_Favicon anchor={o2_Favicon}></O2_Favicon>
-      <O3_ReactIcons anchor={o3_ReactIcons}></O3_ReactIcons>
-      <O4_InstallAxios anchor={o4_InstallAxios}></O4_InstallAxios>
-      <O5_Tailwindcss anchor={o5_Tailwindcss}></O5_Tailwindcss>
-      <O6_LoadingSpinner anchor={o6_LoadingSpinner}></O6_LoadingSpinner>
-      <O7_InstallReactRouter anchor={o7_InstallReactRouter}></O7_InstallReactRouter>
+      <O1_WhatIsDocker anchor={o1_WhatIsDocker}></O1_WhatIsDocker>
+      <O2_WorkFlow anchor={o2_WorkFlow}></O2_WorkFlow>
+      <O3_InstallWSL2 anchor={o3_InstallWSL2}></O3_InstallWSL2>
+      <O4_InstallDocker anchor={o4_InstallDocker}></O4_InstallDocker>
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default Setup;
+export default DockerMain;

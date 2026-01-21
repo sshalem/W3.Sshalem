@@ -1,9 +1,15 @@
+import { Subject } from "../../../components";
+
 /*
 
 
 */
 const CppHome = () => {
-  return <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">C++ Home ...</div>;
+  return (
+    <Subject title="C++ Home ...">
+      <div></div>
+    </Subject>
+  );
 };
 
 export default CppHome;

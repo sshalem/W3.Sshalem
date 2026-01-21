@@ -79,7 +79,7 @@ import {
   ReactJSInterviewQuestions,
   ReactRouter,
   RouterMain,
-  Setup,
+  SetupMain,
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
@@ -309,6 +309,7 @@ import {
   FastAPISQLAlchemy,
 } from "./pages/FastAPI/FastAPIComponents";
 import { MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
+import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 
 const router = createBrowserRouter(
   [
@@ -561,7 +562,7 @@ const router = createBrowserRouter(
           element: <ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
-            { path: "setup", element: <Setup /> },
+            { path: "setup", element: <SetupMain /> },
             {
               path: "basics",
               element: <ReactBasics />,
@@ -825,6 +826,7 @@ const router = createBrowserRouter(
             { index: true, element: <DevOpsHome /> },
             { path: "git", element: <GitMain /> },
             { path: "react-on-spring", element: <ReactOnSpringMain /> },
+            { path: "docker", element: <DockerMain /> },
             { path: "netlify", element: <DeployNetlifyMain /> },
             { path: "render", element: <DeployRenderMain /> },
             {

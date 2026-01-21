@@ -2,8 +2,11 @@
 
 
 */
+
+import { Subject } from "../../../components";
+
 const JavaHome = () => {
-  return <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Java Home ...</div>;
+  return <Subject title="Java Home">{<div></div>}</Subject>;
 };
 
 export default JavaHome;

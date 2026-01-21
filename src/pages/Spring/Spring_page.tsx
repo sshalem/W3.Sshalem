@@ -3,8 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
-import { FaBars } from "react-icons/fa";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { useEffect, useState } from "react";
 import D1_DropDownIDE from "./DropSpringPage/D1_DropDownIDE";
 import D2_DropDownApplicationProperties from "./DropSpringPage/D2_DropDownApplicationProperties";
@@ -22,7 +21,7 @@ import D13_DropDownSpringIO from "./DropSpringPage/D13_DropDownSpringIO";
 import D14_DropDownJUnit from "./DropSpringPage/D14_DropDownJUnit";
 import D15_DropDownJenkins from "./DropSpringPage/D15_DropDownJenkins";
 import D16_DropDownInterviewQuestions from "./DropSpringPage/D16_DropDownInterviewQuestions";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
+import { FaBars } from "react-icons/fa";
 
 const Spring_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -47,7 +46,9 @@ const Spring_page = () => {
 
   return (
     <FlexLayout>
+      {/* End Bars Icon */}
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
+      {/* End Bars Icon */}
       {showSidebar && (
         <AsideWrapperLayout>
           <SideBarLink pageName="Spring Home" internalLink="/spring" />
@@ -69,7 +70,6 @@ const Spring_page = () => {
           <D16_DropDownInterviewQuestions />
         </AsideWrapperLayout>
       )}
-
       <main className="css-main-outlet">
         <Outlet />
       </main>

@@ -4,10 +4,7 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../components";
-import O1_WhatIsDocker from "./O1_WhatIsDocker";
-import O2_WorkFlow from "./O2_WorkFlow";
-import O4_InstallDocker from "./O4_InstallDocker";
-import O3_InstallWSL2 from "./O3_InstallWSL2";
+import { Link } from "react-router-dom";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -64,7 +61,7 @@ const Docker = () => {
   }
 
   return (
-    <section>
+    <section className="mx-4 md:mx-10">
       {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
@@ -74,10 +71,13 @@ const Docker = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_WhatIsDocker anchor={o1_WhatIsDocker}></O1_WhatIsDocker>
-      <O2_WorkFlow anchor={o2_WorkFlow}></O2_WorkFlow>
-      <O3_InstallWSL2 anchor={o3_InstallWSL2}></O3_InstallWSL2>
-      <O4_InstallDocker anchor={o4_InstallDocker}></O4_InstallDocker>
+      <div className="my-8 text-lg font-semibold">
+        See{" "}
+        <Link className="tracking-wide text-blue-500 underline" to={"/devops/docker"}>
+          Docker page in DevOps
+        </Link>
+      </div>
+
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

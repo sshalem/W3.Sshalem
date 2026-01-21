@@ -57,7 +57,7 @@ const ReactOnSpringMain = () => {
   }
 
   return (
-    <section>
+    <section className="ml-2 md:ml-10">
       {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}

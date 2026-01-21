@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const SecurityMicroServ = () => {
   let location = useLocation();
@@ -6,9 +7,11 @@ const SecurityMicroServ = () => {
   return (
     <section>
       {location.pathname === "/microservices/security-microservice" ? (
-        <div className="text-3xl">Security Micro Service main page ...</div>
+        <Subject title="Security Micro Service ...">{<div></div>}</Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );

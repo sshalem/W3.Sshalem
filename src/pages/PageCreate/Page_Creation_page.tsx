@@ -3,14 +3,13 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownSteps from "./DropPageCreation/DropDownSteps";
 import DropDownAppTree from "./DropPageCreation/DropDownAppTree";
 import DropDownComponentTree from "./DropPageCreation/DropDownComponentTree";
 import DropDownWebPageComponent from "./DropPageCreation/DropDownWebPageComponent";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Page_Creation_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

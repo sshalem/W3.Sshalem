@@ -3,10 +3,21 @@
 
 */
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const CppBasics = () => {
   let location = useLocation();
-  return <section>{location.pathname === "/c++/cpp-basics" ? <div className="text-3xl">Cpp Basics ...</div> : <Outlet />}</section>;
+  return (
+    <section>
+      {location.pathname === "/c++/cpp-basics" ? (
+        <Subject title="C++ Basics ...">{<div></div>}</Subject>
+      ) : (
+        <main className="css-page-content">
+          <Outlet />
+        </main>
+      )}
+    </section>
+  );
 };
 
 export default CppBasics;

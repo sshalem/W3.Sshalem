@@ -20,9 +20,7 @@ const Ide = () => {
           }
         </Subject>
       ) : (
-        <main className="css-page-content">
-          <Outlet />
-        </main>
+        <Outlet />
       )}
     </section>
   );

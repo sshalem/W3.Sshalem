@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { FlexLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
@@ -12,7 +12,6 @@ import J4_DropDownDesignPatternStructural from "./DropJava/J4_DropDownDesignPatt
 import J5_DropDownDesignPatternBehavioral from "./DropJava/J5_DropDownDesignPatternBehavioral";
 import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
 import J2_DropDownDataStructure from "./DropJava/J2_DropDownDataStructure";
-import AsideWrapperLayout from "../../components/AsideWrapperLayout";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
