@@ -42,12 +42,22 @@ const SideDropDownTopic = ({ showList, handleOpenList, topicName, internalLink, 
         {/* Enable the SideBarLink component */}
         {/* check console */}
 
-        <Link to={internalLink}>
+        {/* <Link to={internalLink}>
           <div className="text-[15px] text-base leading-[1.65]">
             {location.pathname.includes(internalLink) ? (
               <div className="bg-gray-300 pl-8 font-medium text-black">{topicName}</div>
             ) : (
               <div className="pl-8 hover:bg-gray-300">{topicName}</div>
+            )}
+          </div>
+        </Link> */}
+
+        <Link to={internalLink}>
+          <div className="text-[15px] text-base leading-[1.65]">
+            {location.pathname.includes(internalLink) ? (
+              <div className="bg-[#96c9ff] pl-8 font-medium text-black">{topicName}</div>
+            ) : (
+              <div className="pl-8 hover:bg-[#96c9ff]">{topicName}</div>
             )}
           </div>
         </Link>

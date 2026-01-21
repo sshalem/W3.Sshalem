@@ -135,15 +135,17 @@ const Navbar = () => {
     }
   }, []);
 
+  // bg-[#0f238c]
+
   return (
-    <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-gray-800 text-[13px] uppercase tracking-wider text-white">
+    <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
       <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
           ? enableLeftScrolling && (
               <button
-                className="css-blur-bg-left absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500 sm:left-12 md:left-0"
+                className="css-blur-bg-left absolute left-14 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-blue-500 sm:left-12 md:left-0"
                 onMouseDown={startLeftScroll}
                 onMouseUp={stopLeftScroll}
                 onMouseLeave={stopLeftScroll}
@@ -160,7 +162,7 @@ const Navbar = () => {
             return (
               <NavLink to={`${subject}`} key={index}>
                 {/* I substring subject from the 1 digit , since I dont want to have the '/' in the navbar for each link */}
-                <div className={`${splitPathname[1] === subject.slice(1) ? `bg-blue-600` : `hover:bg-slate-700`} px-3 py-2`}>
+                <div className={`${splitPathname[1] === subject.slice(1) ? `bg-blue-600` : `hover:bg-blue-500`} px-3 py-2`}>
                   {subject.substring(1, 50)}
                 </div>
               </NavLink>
@@ -172,7 +174,7 @@ const Navbar = () => {
         {showScrollIcons
           ? enableRightScrolling && (
               <button
-                className="css-blur-bg-right absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-slate-500"
+                className="css-blur-bg-right absolute right-0 top-0 h-[33px] w-10 bg-slate-400 px-3 hover:bg-blue-500"
                 onMouseDown={startRightScroll}
                 onMouseUp={stopRightScroll}
                 onMouseLeave={stopRightScroll}
