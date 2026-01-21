@@ -19,7 +19,7 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
     }, 1000);
   }
   return (
-    <div className="relative my-8">
+    <div className="relative my-8 ml-20 w-3/4">
       <button
         className="absolute right-[1rem] top-[0.35rem] border-2 border-black bg-[#fbfbfb] px-1 font-mono text-sm text-black transition-colors duration-100 ease-in-out hover:bg-black hover:text-white active:bg-gray-500 active:text-white"
         onClick={handleCopied}
