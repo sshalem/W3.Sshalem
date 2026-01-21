@@ -74,13 +74,11 @@ const SpringHome = () => {
       />
       {/* End Contents */}
       <Subject title="Spring Home ...">
-        {
-          <div className="css-page-content">
-            <SpringTopics anchor={spring_topics} />
-            <StsVersions anchor={sts_versions} />
-            <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
-          </div>
-        }
+        <div className="css-page-content">
+          <SpringTopics anchor={spring_topics} />
+          <StsVersions anchor={sts_versions} />
+          <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
+        </div>
       </Subject>
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
