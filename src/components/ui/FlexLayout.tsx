@@ -6,9 +6,12 @@
 // I want all children comnpnent to be able to be as child for it
 const FlexLayout = ({ children }: React.PropsWithChildren) => {
   return (
-    <section className="m-auto max-w-[1750px]">
+    <section className="">
       <section className="flex flex-row">{children}</section>
     </section>
+    // <section className="m-auto max-w-[1750px]">
+    //   <section className="flex flex-row">{children}</section>
+    // </section>
   );
 };
 
