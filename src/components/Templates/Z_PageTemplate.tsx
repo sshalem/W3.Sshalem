@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { GridLayout } from "..";
+import { FlexLayout } from "..";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
@@ -25,7 +25,7 @@ const Z_PageTemplate = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -42,7 +42,7 @@ const Z_PageTemplate = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 
