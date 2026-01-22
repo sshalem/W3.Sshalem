@@ -42,6 +42,7 @@ const DropDownCppBasics = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Functions" internalLink="/c++/cpp-basics/functions" />
+        <SideDropdownLink sideDropDownNavName="Test" internalLink="/c++/cpp-basics/test" />
       </div>
     </section>
   );

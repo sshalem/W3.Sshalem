@@ -66,7 +66,7 @@ import {
   WebPageComponent,
 } from "./pages/PageCreate/PageCreateComponents";
 
-import { CppHome, CppBasics, FunctionsMain } from "./pages/Cpp/CppComponents";
+import { CppHome, CppBasics, FunctionsMain, TestMain } from "./pages/Cpp/CppComponents";
 
 import {
   GlobalSearch,
@@ -327,7 +327,11 @@ const router = createBrowserRouter(
             {
               path: "cpp-basics",
               element: <CppBasics />,
-              children: [{ path: "functions", element: <FunctionsMain /> }],
+              children: [
+                { index: true, element: <FunctionsMain /> },
+                { path: "functions", element: <FunctionsMain /> },
+                { path: "test", element: <TestMain /> },
+              ],
             },
           ],
         },
