@@ -59,7 +59,7 @@
     @apply my-8 inline-block select-none rounded-md bg-teal-500 px-2 py-1 text-xl capitalize tracking-widest text-white;
   }
   .css-fa-bars {
-    @apply fixed left-5 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden;
+    @apply fixed left-3 top-16 z-50 cursor-pointer bg-blue-950 text-white md:hidden;
   }
 }
 

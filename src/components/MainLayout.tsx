@@ -11,7 +11,12 @@ const MainLayout = () => {
         <TopNavbar />
         <Navbar />
       </article>
-      {/* This Outlet have the Pages In it like Spring_Page.tsx , ReactJS_page.tsx etc... */}
+      {/* This Outlet contains : 
+          Pages , like Spring_Page.tsx , ReactJS_page.tsx etc... */}
+      {/* See Spring_page.tsx 
+        Each page is divded as follows:
+        1. Left side is the DropDown lost of each page
+        2. Right side is the Page Content */}
       <Outlet />
     </section>
   );

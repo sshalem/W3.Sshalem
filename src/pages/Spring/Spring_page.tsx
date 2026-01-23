@@ -44,35 +44,48 @@ const Spring_page = () => {
     return () => window.removeEventListener("resize", closeSidebar);
   }, []);
 
+  {
+    /* 
+    The Page is inside a FlexLayout.
+    Each page is divded as follows:        
+        1. Left side is the DropDown lost of each page
+        2. Right side is the Page Content */
+  }
+
   return (
     <FlexLayout>
-      {/* End Bars Icon */}
+      {/* Start Bars Icon its position absolute  */}
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
       {/* End Bars Icon */}
-      {showSidebar && (
-        <AsideWrapperLayout>
-          <SideBarLink pageName="Spring Home" internalLink="/spring" />
-          <D1_DropDownIDE />
-          <D2_DropDownApplicationProperties />
-          <D3_DropDownLogging />
-          <D4_DropDownJpa />
-          <D5_DropDownAudit />
-          <D6_DropDownExceptionHandling />
-          <D7_DropDownRest />
-          <D8_DropDownSecurity />
-          <D9_DropDownAop />
-          <D10_DropDownTransactionManagement />
-          <D11_DropDownSpringBatch />
-          <D12_DropDownCaching />
-          <D13_DropDownSpringIO />
-          <D14_DropDownJUnit />
-          <D15_DropDownJenkins />
-          <D16_DropDownInterviewQuestions />
-        </AsideWrapperLayout>
-      )}
-      <main className="css-main-outlet">
+
+      {/* Left Side of Layout */}
+      <article>
+        {showSidebar && (
+          <AsideWrapperLayout>
+            <SideBarLink pageName="Spring Home" internalLink="/spring" />
+            <D1_DropDownIDE />
+            <D2_DropDownApplicationProperties />
+            <D3_DropDownLogging />
+            <D4_DropDownJpa />
+            <D5_DropDownAudit />
+            <D6_DropDownExceptionHandling />
+            <D7_DropDownRest />
+            <D8_DropDownSecurity />
+            <D9_DropDownAop />
+            <D10_DropDownTransactionManagement />
+            <D11_DropDownSpringBatch />
+            <D12_DropDownCaching />
+            <D13_DropDownSpringIO />
+            <D14_DropDownJUnit />
+            <D15_DropDownJenkins />
+            <D16_DropDownInterviewQuestions />
+          </AsideWrapperLayout>
+        )}
+      </article>
+      {/* Right Side of Layout */}
+      <article className="css-main-outlet">
         <Outlet />
-      </main>
+      </article>
     </FlexLayout>
   );
 };
