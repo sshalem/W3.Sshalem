@@ -31,7 +31,7 @@ const TopNavbar = () => {
   }, [hash]);
 
   return (
-    <section className="fixed left-0 top-0 -z-[100] mx-auto block h-0 w-full bg-white">
+    <section className="fixed left-14 top-0 -z-[100] mx-auto block h-0 w-full bg-white">
       <article className="top-nav-font absolute left-0 right-0 top-0 z-[4] mx-auto h-14 w-full min-w-[330px] max-w-[1750px] p-0 text-[16px]">
         <nav className="inline-block">
           <Link to={"/"} onClick={handleTopOfPage}>

@@ -11,6 +11,7 @@ const MainLayout = () => {
         <TopNavbar />
         <Navbar />
       </article>
+      {/* This Outlet have the Pages In it like Spring_Page.tsx , ReactJS_page.tsx etc... */}
       <Outlet />
     </section>
   );
