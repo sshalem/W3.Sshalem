@@ -139,7 +139,7 @@ const Navbar = () => {
 
   return (
     <div className="top-nav-font fixed top-14 h-[33px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
-      <nav className="fixed left-14 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
+      <nav className="fixed left-0 right-0 top-14 z-[3] m-auto h-[33px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
@@ -155,7 +155,7 @@ const Navbar = () => {
             )
           : ""}
 
-        <div className="ml-0 flex h-[33px] overflow-hidden sm:ml-0 md:ml-0 lg:ml-0" ref={navRef}>
+        <div className="ml-10 flex h-[33px] overflow-hidden sm:ml-10 md:ml-0 lg:ml-0" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             let splitPathname: string[] = location.pathname.split("/");
