@@ -41,9 +41,10 @@ const D3_DropDownFastApiRouter = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="main.py" internalLink="/fastapi/router/main-py" />
-        <SideDropdownLink sideDropDownNavName="Pydantic" internalLink="/fastapi/router/pydantic" />
-        <SideDropdownLink sideDropDownNavName="Setup FastApi" internalLink="/fastapi/router/setup-fastapi" />
+        <SideDropdownLink sideDropDownNavName="1. main.py" internalLink="/fastapi/router/main-py" />
+        <SideDropdownLink sideDropDownNavName="2. Pydantic" internalLink="/fastapi/router/pydantic" />
+        <SideDropdownLink sideDropDownNavName="3. Setup FastApi" internalLink="/fastapi/router/setup-fastapi" />
+        <SideDropdownLink sideDropDownNavName="4. GET" internalLink="/fastapi/router/get-request" />
       </div>
     </section>
   );

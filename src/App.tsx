@@ -308,7 +308,7 @@ import {
   FastAPISecurity,
   FastAPISQLAlchemy,
 } from "./pages/FastAPI/FastAPIComponents";
-import { MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
+import { GetRequestMain, MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 
 const router = createBrowserRouter(
@@ -734,6 +734,7 @@ const router = createBrowserRouter(
                 { path: "main-py", element: <MainPyMain /> },
                 { path: "setup-fastapi", element: <SetupFastApiMain /> },
                 { path: "pydantic", element: <PydanticMain /> },
+                { path: "get-request", element: <GetRequestMain /> },
               ],
             },
             { path: "exceptions", element: <FastAPIException /> },
