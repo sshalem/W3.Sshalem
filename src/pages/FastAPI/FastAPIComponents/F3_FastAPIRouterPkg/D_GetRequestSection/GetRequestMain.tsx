@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_Pydantic from "./O1_Pydantic";
+import O1_ReturnResponse from "./O1_ReturnResponse";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_Pydantic = "1. Pydantic";
+const o1_ReturnResponse = "1. Response Object";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Pydantic];
+const anchorList: string[] = [o1_ReturnResponse];
 
 // ============================================
 // ============================================
@@ -66,7 +66,7 @@ const GetRequestMain = () => {
       />
       {/* End Contents */}
 
-      <O1_Pydantic anchor={o1_Pydantic} />
+      <O1_ReturnResponse anchor={o1_ReturnResponse} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
