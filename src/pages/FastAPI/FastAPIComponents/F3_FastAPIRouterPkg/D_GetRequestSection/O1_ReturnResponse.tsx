@@ -41,8 +41,8 @@ const O1_ReturnResponse = ({ anchor }: { anchor: string }) => {
         <SpanGrey>jsonable_encoder</SpanGrey> knows
         <ULdisc>
           <Li>
-            how to convert many non-serializable types (e.g., datetime, UUID, Decimal, and arbitrary objects with __dict__) into JSON-friendly
-            structures.
+            how to convert many non-serializable types (e.g., datetime, UUID, Decimal, and arbitrary objects with <SpanGrey>__dict__</SpanGrey> ) into
+            JSON-friendly structures.
           </Li>
           <Li>If you have a plain Python class (not a Pydantic model), encode it first with jsonable_encoder.</Li>
           <Li>
@@ -73,6 +73,7 @@ const _2_ = `from fastapi import APIRouter, Response
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from students.schemas import StudentDtoResponse
+import SpanGrey from './../../../../../components/Highlight/SpanGrey';
 
 
 # Custom JSON + status + headers (ResponseEntity-like)

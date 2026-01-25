@@ -36,7 +36,7 @@
   } */
 
   .css-main-outlet {
-    @apply ml-0 max-h-[750px] w-[1590px] min-w-[400px] overflow-auto border-r-[1px] border-solid border-zinc-300 sm:ml-0 md:ml-64;
+    @apply ml-0 max-h-[750px] w-[1625px] min-w-[400px] overflow-auto border-r-[1px] border-solid border-zinc-300 sm:ml-0 md:ml-64;
   }
 
   .css-page-content {
