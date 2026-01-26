@@ -41,7 +41,7 @@ const D4_DropDownFastApiExceptions = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="PyCharm" internalLink="/fastapi/exceptions/pycharm" />
+        <SideDropdownLink sideDropDownNavName="Default Exception" internalLink="/fastapi/exceptions/default" />
         <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/exceptions/vscode" />
       </div>
     </section>

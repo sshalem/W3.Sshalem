@@ -1,20 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_ReturnResponse from "./O1_ReturnResponse";
-import O2_ReturnVoid from "./O2_ReturnVoid";
+import O1_RawResponse from "./O1_RawResponse";
+import O2_ResponseModelWithHeaders from "./O2_ResponseModelWithHeaders";
+import O3_ReturnVoid from "./O3_ReturnVoid";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_ReturnResponse = "1. Response Object";
-const o2_ReturnVoid = "2. Return Void";
+const o1_RawResponse = "1. Raw Response";
+const o2_ResponseModelWithHeaders = "2. response_model + Headers";
+const o3_ReturnVoid = "3. Return Void";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ReturnResponse, o2_ReturnVoid];
+const anchorList: string[] = [o1_RawResponse, o2_ResponseModelWithHeaders, o3_ReturnVoid];
 
 // ============================================
 // ============================================
@@ -68,8 +70,9 @@ const GetRequestMain = () => {
       />
       {/* End Contents */}
 
-      <O1_ReturnResponse anchor={o1_ReturnResponse} />
-      <O2_ReturnVoid anchor={o2_ReturnVoid} />
+      <O1_RawResponse anchor={o1_RawResponse} />
+      <O2_ResponseModelWithHeaders anchor={o2_ResponseModelWithHeaders} />
+      <O3_ReturnVoid anchor={o3_ReturnVoid} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
