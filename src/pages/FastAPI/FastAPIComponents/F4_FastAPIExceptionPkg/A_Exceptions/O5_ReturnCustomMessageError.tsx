@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, PythonHighlight } from "../../../../../components/Highlight";
 
 const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
   return (
