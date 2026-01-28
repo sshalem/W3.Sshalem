@@ -6,7 +6,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O4_ReturnPlainClass = ({ anchor }: { anchor: string }) => {
+const O4_ReturnPlainCls = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -34,7 +34,7 @@ const O4_ReturnPlainClass = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_ReturnPlainClass;
+export default O4_ReturnPlainCls;
 
 const _1_ = `from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder

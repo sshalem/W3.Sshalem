@@ -3,7 +3,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_RawResponse from "./O1_RawResponse";
 import O2_ResponseModelWithHeaders from "./O2_ResponseModelWithHeaders";
 import O3_ReturnVoid from "./O3_ReturnVoid";
-import O4_ReturnPlainClass from "./O4_ReturnPlainClass";
+import O4_ReturnPlainCls from "./O4_ReturnPlainCls";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -12,13 +12,13 @@ import O4_ReturnPlainClass from "./O4_ReturnPlainClass";
 const o1_RawResponse = "1. Raw Response";
 const o2_ResponseModelWithHeaders = "2. response_model + Headers";
 const o3_ReturnVoid = "3. Return Void";
-const o4_ReturnPlainClass = "4. Return Plain Class (JSONRespnsoe)";
+const o4_ReturnPlainCls = "4. Return Plain Class (JSONRespnsoe)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_RawResponse, o2_ResponseModelWithHeaders, o3_ReturnVoid, o4_ReturnPlainClass];
+const anchorList: string[] = [o1_RawResponse, o2_ResponseModelWithHeaders, o3_ReturnVoid, o4_ReturnPlainCls];
 
 // ============================================
 // ============================================
@@ -75,7 +75,7 @@ const GetRequestMain = () => {
       <O1_RawResponse anchor={o1_RawResponse} />
       <O2_ResponseModelWithHeaders anchor={o2_ResponseModelWithHeaders} />
       <O3_ReturnVoid anchor={o3_ReturnVoid} />
-      <O4_ReturnPlainClass anchor={o4_ReturnPlainClass} />
+      <O4_ReturnPlainCls anchor={o4_ReturnPlainCls} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
