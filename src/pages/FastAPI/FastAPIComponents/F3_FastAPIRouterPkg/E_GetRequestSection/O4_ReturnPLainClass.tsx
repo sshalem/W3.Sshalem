@@ -3,21 +3,38 @@
 
 */
 
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O4_ReturnPLainClass = ({ anchor }: { anchor: string }) => {
+const O4_ReturnPlainClass = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        If you have a plain class and can’t change it, use <SpanGrey>JSONResponse</SpanGrey> with <SpanGrey>jsonable_encoder</SpanGrey>
+        <ULdisc>
+          <Li>
+            If I have a plain class and can’t change it, use <SpanGrey>JSONResponse</SpanGrey> with <SpanGrey>jsonable_encoder</SpanGrey>
+          </Li>
+          <Li>
+            Reminder for what I explained before :
+            <ULdisc>
+              <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
+              <Li>
+                Behind the scenes using its <SpanGrey>jsonable_encoder</SpanGrey> , It converts Python objects (including Pydantic models, datetime,
+                UUID, etc.) into JSON-compatible data using
+              </Li>
+              <Li>
+                and then puts that data into a <SpanGrey>JSONResponse</SpanGrey> .
+              </Li>
+            </ULdisc>
+          </Li>
+        </ULdisc>
         <PythonHighlight pythonCode={_1_} />
       </section>
     </MainChildArea>
   );
 };
 
-export default O4_ReturnPLainClass;
+export default O4_ReturnPlainClass;
 
 const _1_ = `from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
