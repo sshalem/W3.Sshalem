@@ -12,10 +12,7 @@ const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <h2 className="my-8 text-xl font-semibold">Custom Error message (Spring like)</h2>
         <ULdisc>
-          <Li>
-            Lets see how we can return a custom error message (Spring like)
-            <ApplicationPropertiesHighlight propertiesCode={_0_} />
-          </Li>
+          <Li>Lets see how we can return a custom error message (Spring like)</Li>
           <Li>
             Option 1 : Wrap detail with a dict
             <PythonHighlight pythonCode={_1_} />
@@ -93,13 +90,3 @@ const _2_2_ = `{
     "message": "User with email 'shalem' already exists",
     "path": "/checkError"
 }`;
-
-const _0_ = `{
-    "timestamp": "2025-09-11T09:17:56.839+00:00",
-    "status": 500,
-    "error": "Internal Server Error",
-    "exception": "UserAlreadyExistError",
-    "message": "User Shabtay already exist",
-    "path": "/user/shabtay"
-}
-`;
