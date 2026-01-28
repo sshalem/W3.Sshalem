@@ -1,31 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_DefaultBehavior from "./O1_DefaultBehavior";
+import O1_GlobalExceptionIntro from "./O1_GlobalExceptionIntro";
 import O2_PackageStructure from "./O2_PackageStructure";
-import O3_CreateCustomExceptions from "./O4_RouterAndService";
-import O4_RouterAndService from "./O4_RouterAndService";
-import O5_ReturnCustomMessageError from "./O5_ReturnCustomMessageError";
+import O3_CreateCustomExceptions from "./O3_CreateCustomExceptions";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DefaultBehavior = "1. Default Exception Behavior";
+const o1_GlobalExceptionIntro = "1. Intro Global Exception";
 const o2_PackageStructure = "2. Package Structure";
 const o3_CreateCustomExceptions = "3. Create Custom Exceptions";
-const o4_RouterAndService = "4. Raise Exception in Service/Router";
-const o5_ReturnCustomMessageError = "5. Return Custom Message Error";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DefaultBehavior, o2_PackageStructure, o3_CreateCustomExceptions, o4_RouterAndService, o5_ReturnCustomMessageError];
+const anchorList: string[] = [o1_GlobalExceptionIntro, o2_PackageStructure, o3_CreateCustomExceptions];
 
 // ============================================
 // ============================================
 
-const ExceptionsMain = () => {
+const GlobalExceptionsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -74,15 +70,13 @@ const ExceptionsMain = () => {
       />
       {/* End Contents */}
 
-      <O1_DefaultBehavior anchor={o1_DefaultBehavior} />
+      <O1_GlobalExceptionIntro anchor={o1_GlobalExceptionIntro} />
       <O2_PackageStructure anchor={o2_PackageStructure} />
       <O3_CreateCustomExceptions anchor={o3_CreateCustomExceptions} />
-      <O4_RouterAndService anchor={o4_RouterAndService} />
-      <O5_ReturnCustomMessageError anchor={o5_ReturnCustomMessageError} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ExceptionsMain;
+export default GlobalExceptionsMain;

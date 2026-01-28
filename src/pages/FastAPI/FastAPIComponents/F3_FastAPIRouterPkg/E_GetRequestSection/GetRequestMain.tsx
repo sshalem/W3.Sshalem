@@ -3,7 +3,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_RawResponse from "./O1_RawResponse";
 import O2_ResponseModelWithHeaders from "./O2_ResponseModelWithHeaders";
 import O3_ReturnVoid from "./O3_ReturnVoid";
-import O4_ReturnPlainClass from "./O4_ReturnPLainClass";
+import O4_ReturnPlainClass from "./O4_ReturnPlainClass";
 
 // ===========================================
 // ==     content menu (title name)         ==

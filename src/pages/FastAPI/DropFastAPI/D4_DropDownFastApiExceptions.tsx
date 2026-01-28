@@ -41,8 +41,8 @@ const D4_DropDownFastApiExceptions = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Default Exception" internalLink="/fastapi/exceptions/default" />
-        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/exceptions/vscode" />
+        <SideDropdownLink sideDropDownNavName="Exception FastAPI" internalLink="/fastapi/exceptions/default" />
+        <SideDropdownLink sideDropDownNavName="Global Exception Handler" internalLink="/fastapi/exceptions/global-exception" />
       </div>
     </section>
   );

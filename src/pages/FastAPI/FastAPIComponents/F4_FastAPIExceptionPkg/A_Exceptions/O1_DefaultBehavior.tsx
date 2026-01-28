@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,17 +16,25 @@ const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
         In FastAPI, the behavior is a bit different:
         <ULdisc>
           <Li>
-            If you raise a generic Python exception (e.g., RuntimeError), FastAPI returns <SpanGrey>HTTP 500</SpanGrey> with a generic body like below
-            — it does not expose the exception message by default (for safety).
+            If I raise an exception(e.g., <mark>RuntimeError</mark> )
             <PythonHighlight pythonCode={_2_} />
           </Li>
           <Li>
-            If you raise <SpanGrey>HTTPException</SpanGrey>, FastAPI send your message to the client in <PythonHighlight pythonCode={_2_} />
-            Postman shows message of <PythonHighlight pythonCode={_3_} />
+            FastAPI returns <SpanGrey>HTTP 500</SpanGrey> with a generic body like below
           </Li>
+          <Li>It does not expose the exception message by default (for safety).</Li>
+          <Li>The front End (Postman for example) will see the message below, and pythin console will show trace of the error</Li>
+          <PythonHighlight pythonCode={_3_} />
+        </ULdisc>
+      </section>
+      <hr />
+
+      <section className="my-8">
+        <h2 className="my-8 text-xl font-semibold">✅ HTTPException</h2>
+        <ULdisc>
           <Li>
-            You can also add custom exception handlers to map your exceptions to structured JSON, just like{" "}
-            <SpanGrey>Spring’s @ControllerAdvice</SpanGrey> .
+            If you raise <SpanGrey>HTTPException</SpanGrey>, <PythonHighlight pythonCode={_4_} />
+            FastAPI send the message , Example Postman shows message of <ApplicationPropertiesHighlight propertiesCode={_5_} />
           </Li>
         </ULdisc>
       </section>
@@ -37,25 +45,29 @@ const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
 export default O1_DefaultBehavior;
 
 const _1_ = `{
-    "timestamp": "",
-    "status": ""
-    "error": "",
-    "trace": "",
-    "message": "",
-    "path": ""
+    "timestamp": "2025-09-11T09:17:56.839+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "UserAlreadyExistError",
+    "message": "User Shabtay already exist",
+    "path": "/user/shabtay"
 }
 `;
 
-const _4_ = `"Internal server error"`;
+const _2_ = `@router.get("/checkError")
+def check_error():
+    if True:
+        raise RuntimeError("RuntimeError exception")`;
 
-const _2_ = `from fastapi import HTTPException
+const _3_ = `"Internal server error"`;
+
+const _4_ = `from fastapi import HTTPException
 
 @router.get("/checkError")
 def check_error():
     if True:
         raise HTTPException(detail="Internal server error", status_code=500)`;
 
-const _3_ = `{
+const _5_ = `{
     "detail": "Internal server error"
-}
-`;
+}`;
