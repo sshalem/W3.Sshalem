@@ -6,7 +6,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O4_RouterAndService = ({ anchor }: { anchor: string }) => {
+const O5_RaiseExceptionRouterAndService = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -29,7 +29,7 @@ const O4_RouterAndService = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_RouterAndService;
+export default O5_RaiseExceptionRouterAndService;
 
 const _1_ = `from exceptions.student_exceptions import UserNotFoundError
 
