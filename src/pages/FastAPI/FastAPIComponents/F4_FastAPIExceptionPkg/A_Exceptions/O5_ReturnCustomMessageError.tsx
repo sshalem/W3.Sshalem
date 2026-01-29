@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
 const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,16 +14,38 @@ const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Lets see how we can return a custom error message (Spring like)</Li>
           <Li>
-            Option 1 : Wrap detail with a dict
-            <PythonHighlight pythonCode={_1_} />
-            Postman shows :
-            <ApplicationPropertiesHighlight propertiesCode={_1_1_} />
+            <article className="flex">
+              <div>
+                <strong>
+                  <em>
+                    <mark>Option 1</mark>
+                  </em>
+                </strong>
+                : Wrap detail with a <SpanGrey>dict</SpanGrey>
+                <PythonHighlight pythonCode={_1_} />
+              </div>
+              <div>
+                Postman shows :
+                <ApplicationPropertiesHighlight propertiesCode={_1_1_} />
+              </div>
+            </article>
           </Li>
           <Li>
-            Option 2 : Return JSONResponse , this way I dont wrap it with dewtail field
-            <PythonHighlight pythonCode={_2_} />
-            Postman shows :
-            <ApplicationPropertiesHighlight propertiesCode={_2_2_} />
+            <article className="flex">
+              <div>
+                <strong>
+                  <em>
+                    <mark>Option 2</mark>
+                  </em>
+                </strong>
+                : Return JSONResponse , this way I dont wrap it with dewtail field
+                <PythonHighlight pythonCode={_2_} />
+              </div>
+              <div>
+                Postman shows :
+                <ApplicationPropertiesHighlight propertiesCode={_2_2_} />
+              </div>
+            </article>
           </Li>
         </ULdisc>
       </section>
