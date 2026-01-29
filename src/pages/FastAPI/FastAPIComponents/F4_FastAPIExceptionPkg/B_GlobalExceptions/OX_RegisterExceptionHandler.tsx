@@ -6,11 +6,13 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
 
-const O3_CreateCustomExceptions = ({ anchor }: { anchor: string }) => {
+const OX_RegisterExceptionHandler = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <h2 className="my-8 text-xl font-semibold">Create Custom Exceptions</h2>
+        <h2 className="my-8 text-xl font-semibold">
+          Register Exception Handler in <mark>main.py</mark>{" "}
+        </h2>
         <ULdisc>
           <Li>create custom exceptions, knonw as Domain exception (service-level)</Li>
           <Li>
@@ -26,14 +28,11 @@ const O3_CreateCustomExceptions = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_CreateCustomExceptions;
+export default OX_RegisterExceptionHandler;
 
 const _1_ = `class UserAlreadyExistError(Exception):
-    def __init__(self, message: str):
-        self.message = message
+    pass
 
 
 class UserNotFoundError(Exception):
-    def __init__(self, message: str):
-        self.message = message
-`;
+    pass`;

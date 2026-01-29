@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_GlobalExceptionIntro from "./O1_GlobalExceptionIntro";
 import O2_PackageStructure from "./O2_PackageStructure";
-import O3_CreateCustomExceptions from "./O3_CreateCustomExceptions";
+import O3_CreateCustomExceptions from "./OX_RegisterExceptionHandler";
 import O4_CreateGlobalHTTPExceptionHandler from "./O4_CreateGlobalHTTPExceptionHandler";
 
 // ===========================================
