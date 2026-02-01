@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_GitConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,16 +13,16 @@ const O5_GitConfig = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Best practice to config the git ignore file with following lines</Li>
           <Li>
-            Open the file <SpanGrey>.gitignore</SpanGrey> verify that the name of the :
+            Open the file <SpanYellow>.gitignore</SpanYellow> verify that the name of the :
             <ULdisc>
               <Li>
-                <SpanGrey>virtual environment</SpanGrey> - all virtual environment is igonred (example <SpanGrey>.venv</SpanGrey> )
+                <SpanYellow>virtual environment</SpanYellow> - all virtual environment is igonred (example <SpanYellow>.venv</SpanYellow> )
               </Li>
               <Li>
-                <SpanGrey>.idea</SpanGrey> of pycharm is igonred
+                <SpanYellow>.idea</SpanYellow> of pycharm is igonred
               </Li>
               <Li>
-                <SpanGrey>__pycache__</SpanGrey> folder is ignored
+                <SpanYellow>__pycache__</SpanYellow> folder is ignored
               </Li>
             </ULdisc>
           </Li>

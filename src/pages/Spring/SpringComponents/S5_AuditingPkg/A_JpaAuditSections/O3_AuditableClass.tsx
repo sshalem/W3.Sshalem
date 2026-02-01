@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
         <p className="my-6 text-xl font-semibold">✅ Step 1: Autitable Class with Audit Fields</p>
         <ULdisc>
           <Li>
-            create an <SpanGrey>Auditable</SpanGrey> class
+            create an <SpanYellow>Auditable</SpanYellow> class
           </Li>
           <Li>
             Add the Audit fields <strong>createdBy , createdDate , lastModifiedBy , lastModifiedDate</strong>{" "}
@@ -24,14 +24,14 @@ const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
             Annotate the class with :
             <ULdisc>
               <Li>
-                <SpanGrey>@MappedSuperclass</SpanGrey>
+                <SpanYellow>@MappedSuperclass</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>@EntityListeners(AuditingEntityListener.class)</SpanGrey>
+                <SpanYellow>@EntityListeners(AuditingEntityListener.class)</SpanYellow>
               </Li>
             </ULdisc>
             <Li>
-              See the fields validation I added ( <SpanGrey>insertable</SpanGrey>, <SpanGrey>nullable</SpanGrey> , <SpanGrey>updatable</SpanGrey>)
+              See the fields validation I added ( <SpanYellow>insertable</SpanYellow>, <SpanYellow>nullable</SpanYellow> , <SpanYellow>updatable</SpanYellow>)
             </Li>
           </Li>
           <Li>

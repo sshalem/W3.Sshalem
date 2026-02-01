@@ -4,26 +4,26 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_Pydantic = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="text-lg font-semibold">
-          If you know Spring Boot well, think of <SpanGrey>Pydantic</SpanGrey> as
+          If you know Spring Boot well, think of <SpanYellow>Pydantic</SpanYellow> as
         </article>
         <ULdisc>
           <Li>
             DTO + Validation +
             <strong>
-              <SpanGrey>Jackson</SpanGrey>
+              <SpanYellow>Jackson</SpanYellow>
             </strong>
             + Swagger schema — all in one
           </Li>
           <Li>Pydantic is the data validation and serialization/De-serialization engine that FastAPI is built on top of.</Li>
           <Li>
-            Since I you understand <SpanGrey>DTOs / Records</SpanGrey> in Spring Boot, then Pydantic will feel very familiar.
+            Since I you understand <SpanYellow>DTOs / Records</SpanYellow> in Spring Boot, then Pydantic will feel very familiar.
           </Li>
         </ULdisc>
       </section>
@@ -32,7 +32,7 @@ const O1_Pydantic = ({ anchor }: { anchor: string }) => {
         <strong>FastAPI</strong> uses it <strong>Pydantic</strong> to:
         <ULdisc>
           <Li>
-            validate request bodies (<SpanGrey>Request</SpanGrey> = <SpanGrey>deserialize</SpanGrey> + <SpanGrey>validate</SpanGrey> )
+            validate request bodies (<SpanYellow>Request</SpanYellow> = <SpanYellow>deserialize</SpanYellow> + <SpanYellow>validate</SpanYellow> )
           </Li>
           <Li>serialize responses</Li>
           <Li>generate OpenAPI / Swagger docs</Li>

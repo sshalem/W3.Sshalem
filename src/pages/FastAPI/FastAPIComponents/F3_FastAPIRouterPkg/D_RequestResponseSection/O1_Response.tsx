@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import SpanGreen from "./../../../../../components/Highlight/SpanGreen";
 
 const O1_Response = ({ anchor }: { anchor: string }) => {
@@ -16,10 +16,10 @@ const O1_Response = ({ anchor }: { anchor: string }) => {
           <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
           <Li>
             It converts Python objects (including Pydantic models, datetime, UUID, etc.) into JSON-compatible data using its{" "}
-            <SpanGrey>jsonable_encoder</SpanGrey> behind the scenes
+            <SpanYellow>jsonable_encoder</SpanYellow> behind the scenes
           </Li>
           <Li>
-            and then puts that data into a <SpanGrey>JSONResponse</SpanGrey> .
+            and then puts that data into a <SpanYellow>JSONResponse</SpanYellow> .
           </Li>
         </ULdisc>
 

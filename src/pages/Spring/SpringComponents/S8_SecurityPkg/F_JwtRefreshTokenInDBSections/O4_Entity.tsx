@@ -5,8 +5,7 @@
 import { Anchor, MainChildArea, ULDecimal } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O4_Entity = ({ anchor }: { anchor: string }) => {
@@ -38,10 +37,10 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
               UserEntity
               <ULdisc>
                 <Li>
-                  mapped as <SpanGrey>@ManyToMany</SpanGrey> with RoleEntity
+                  mapped as <SpanYellow>@ManyToMany</SpanYellow> with RoleEntity
                 </Li>
                 <Li>
-                  mapped as <SpanGrey>@OneToMany</SpanGrey> with RefreshEntity
+                  mapped as <SpanYellow>@OneToMany</SpanYellow> with RefreshEntity
                 </Li>
               </ULdisc>
             </Li>
@@ -49,7 +48,7 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
               RoleEntity
               <ULdisc>
                 <Li>
-                  mapped as <SpanGrey>@ManyToMany</SpanGrey> with UserEntity
+                  mapped as <SpanYellow>@ManyToMany</SpanYellow> with UserEntity
                 </Li>
               </ULdisc>
             </Li>
@@ -57,7 +56,7 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
               RefreshEntity
               <ULdisc>
                 <Li>
-                  mapped as <SpanGrey>@ManyToOne</SpanGrey> with UserEntity
+                  mapped as <SpanYellow>@ManyToOne</SpanYellow> with UserEntity
                 </Li>
               </ULdisc>
             </Li>

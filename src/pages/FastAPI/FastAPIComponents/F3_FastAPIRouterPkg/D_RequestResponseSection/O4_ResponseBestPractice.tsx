@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_ResponseBestPractice = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,11 +16,11 @@ const O4_ResponseBestPractice = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
           <Li>
-            Behind the scenes using its <SpanGrey>jsonable_encoder</SpanGrey> , It converts Python objects (including Pydantic models, datetime, UUID,
+            Behind the scenes using its <SpanYellow>jsonable_encoder</SpanYellow> , It converts Python objects (including Pydantic models, datetime, UUID,
             etc.) into JSON-compatible data using
           </Li>
           <Li>
-            and then puts that data into a <SpanGrey>JSONResponse</SpanGrey> .
+            and then puts that data into a <SpanYellow>JSONResponse</SpanYellow> .
           </Li>
         </ULdisc>
         <PythonHighlight pythonCode={_1_}></PythonHighlight>

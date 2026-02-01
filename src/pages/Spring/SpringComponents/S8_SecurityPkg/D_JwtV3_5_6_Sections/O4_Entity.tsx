@@ -5,8 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_Entity = ({ anchor }: { anchor: string }) => {
   return (
@@ -26,7 +25,7 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 Entity</p>
         <article>
-          I have 2 entities in this project , which are mapped as <SpanGrey>@ManyToMany</SpanGrey>
+          I have 2 entities in this project , which are mapped as <SpanYellow>@ManyToMany</SpanYellow>
           <ULdisc>
             <Li>UserEntity</Li>
             <Li>RoleEntity</Li>

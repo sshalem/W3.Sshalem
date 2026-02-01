@@ -4,8 +4,7 @@
 */
 import { useMemo } from "react";
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -35,16 +34,16 @@ const O7_JwtUserDetails = ({ anchor }: { anchor: string }) => {
           see that there are 4 methods that are form UserDetails that I set by default to be hardcoded.
           <ULdisc>
             <Li>
-              <SpanGrey>isAccountNonExpired()</SpanGrey> - set to true , handle by <SpanGrey>AccountExpiredException</SpanGrey>
+              <SpanYellow>isAccountNonExpired()</SpanYellow> - set to true , handle by <SpanYellow>AccountExpiredException</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>isAccountNonLocked()</SpanGrey> - set to true, handle by <SpanGrey>LockedException</SpanGrey>
+              <SpanYellow>isAccountNonLocked()</SpanYellow> - set to true, handle by <SpanYellow>LockedException</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>isCredentialsNonExpired()</SpanGrey> - set to true, handle by <SpanGrey>CredentialsExpiredException</SpanGrey>
+              <SpanYellow>isCredentialsNonExpired()</SpanYellow> - set to true, handle by <SpanYellow>CredentialsExpiredException</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>isEnabled()</SpanGrey> - set to true , handle by <SpanGrey>DisabledException</SpanGrey>
+              <SpanYellow>isEnabled()</SpanYellow> - set to true , handle by <SpanYellow>DisabledException</SpanYellow>
             </Li>
           </ULdisc>
         </article>

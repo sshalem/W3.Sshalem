@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_ReturnPlainCls = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,18 +12,18 @@ const O4_ReturnPlainCls = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <ULdisc>
           <Li>
-            If I have a plain class and can’t change it, use <SpanGrey>JSONResponse</SpanGrey> with <SpanGrey>jsonable_encoder</SpanGrey>
+            If I have a plain class and can’t change it, use <SpanYellow>JSONResponse</SpanYellow> with <SpanYellow>jsonable_encoder</SpanYellow>
           </Li>
           <Li>
             Reminder for what I explained before :
             <ULdisc>
               <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
               <Li>
-                Behind the scenes using its <SpanGrey>jsonable_encoder</SpanGrey> , It converts Python objects (including Pydantic models, datetime,
+                Behind the scenes using its <SpanYellow>jsonable_encoder</SpanYellow> , It converts Python objects (including Pydantic models, datetime,
                 UUID, etc.) into JSON-compatible data using
               </Li>
               <Li>
-                and then puts that data into a <SpanGrey>JSONResponse</SpanGrey> .
+                and then puts that data into a <SpanYellow>JSONResponse</SpanYellow> .
               </Li>
             </ULdisc>
           </Li>

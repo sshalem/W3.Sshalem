@@ -3,8 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -31,14 +30,14 @@ const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Utility for JWT ,This is a Helper class</Li>
           <Li>
-            I define it as <SpanGrey>@Component</SpanGrey> so It will be registered in context.
+            I define it as <SpanYellow>@Component</SpanYellow> so It will be registered in context.
           </Li>
         </ULdisc>
       </section>
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>JwtTokenUtil</SpanGrey> code
+          🔑 <SpanYellow>JwtTokenUtil</SpanYellow> code
         </p>
         <JavaHighlight javaCode={code_java}></JavaHighlight>
       </section>

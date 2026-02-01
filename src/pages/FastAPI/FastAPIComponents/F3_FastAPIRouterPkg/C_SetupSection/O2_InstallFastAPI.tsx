@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,10 +12,10 @@ const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-xl font-semibold">Install the FastAPI with CLI</div>
         <ULDecimal>
           <Li>
-            Open Terminal and verify <SpanGrey>(.venv)</SpanGrey> enviroment.
+            Open Terminal and verify <SpanYellow>(.venv)</SpanYellow> enviroment.
           </Li>
           <Li>
-            Install <SpanGrey>fastapi</SpanGrey> + <SpanGrey>unvicorn</SpanGrey> in one command (<SpanGrey>uvicorn</SpanGrey> is the server where
+            Install <SpanYellow>fastapi</SpanYellow> + <SpanYellow>unvicorn</SpanYellow> in one command (<SpanYellow>uvicorn</SpanYellow> is the server where
             FastAPI runs on)
             <ApplicationPropertiesHighlight propertiesCode={_1_} />
           </Li>

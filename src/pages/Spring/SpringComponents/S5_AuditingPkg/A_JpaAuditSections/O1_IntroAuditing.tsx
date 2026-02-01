@@ -3,7 +3,7 @@
 Intro --> (SPRING)(Auditing)(Jpa Audit)
 */
 import { Anchor, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import TableAuditingCompare from "../../../../../components/Tables/Table_4ColAuditingCompare";
 
 const O1_IntroAuditing = ({ anchor }: { anchor: string }) => {
@@ -13,20 +13,20 @@ const O1_IntroAuditing = ({ anchor }: { anchor: string }) => {
       {/*  */}
       <article className="my-8">
         <p className="my-2">
-          In modern applications, auditing plays a crucial role in <SpanGrey>tracking changes made to data over time</SpanGrey>. <br />
+          In modern applications, auditing plays a crucial role in <SpanYellow>tracking changes made to data over time</SpanYellow>. <br />
           <strong>data auditing</strong> is no longer a luxury — it’s a necessity. <br />
           <br />
           There are <strong> 3 ways</strong> to add Auditing to application, <br />
           sound similar but serve different levels of auditing detail and use cases.
           <ULDecimal>
             <Li>
-              ✅ <SpanGrey>Spring Data JPA Auditing</SpanGrey>
+              ✅ <SpanYellow>Spring Data JPA Auditing</SpanYellow>
             </Li>
             <Li>
-              ✅ <SpanGrey>Hibernate Envers</SpanGrey>
+              ✅ <SpanYellow>Hibernate Envers</SpanYellow>
             </Li>
             <Li>
-              ✅ <SpanGrey>Spring Data Envers</SpanGrey>
+              ✅ <SpanYellow>Spring Data Envers</SpanYellow>
             </Li>
           </ULDecimal>
         </p>

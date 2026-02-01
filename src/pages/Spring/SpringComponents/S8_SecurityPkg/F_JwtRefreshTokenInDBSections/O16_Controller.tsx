@@ -5,8 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 
@@ -36,7 +35,7 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>In this implementation I save the Refresh_Token in DB </Li>
           <Li>
-            Thus, On <SpanGrey>Logout</SpanGrey>
+            Thus, On <SpanYellow>Logout</SpanYellow>
             <ULdisc>
               <Li>FrontEnd deletes accessToken + refreshToken</Li>
               <Li>Backend Also deletes RefreshToken from DB.</Li>
@@ -46,7 +45,7 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
           <Li>
             The most secure way is (Refresh token rotation + DB )
             <br />
-            <SpanGrey>RefreshToken </SpanGrey> stored in DB +<SpanGrey>RefreshToken</SpanGrey> send as HttpOnly cookie (see &nbsp;
+            <SpanYellow>RefreshToken </SpanYellow> stored in DB +<SpanYellow>RefreshToken</SpanYellow> send as HttpOnly cookie (see &nbsp;
             <Link
               to={"/spring/security/jwt-refresh-token-httpOnly"}
               className="rounded-md bg-sky-200 p-[0.15rem] tracking-wide text-blue-700 hover:text-blue-700 hover:underline"
@@ -63,12 +62,13 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 Authentication Controller</p>
 
         <article>
-          🔑 Why I do <SpanGrey>(JwtUserDetails) authenticate.getPrincipal()</SpanGrey>?
+          🔑 Why I do <SpanYellow>(JwtUserDetails) authenticate.getPrincipal()</SpanYellow>?
           <ULdisc>
             <Li>No extra DB call — I already have the authenticated JwtUserDetails inside the Authentication object.</Li>
             <Li>Standard Spring Security way (this is why the Principal exists).</Li>
           </ULdisc>
-          🔑 Then Why, During request filtering (JWT validation), I call <SpanGrey>jwtUserDetailsService.loadUserByUsername(email)</SpanGrey> again?
+          🔑 Then Why, During request filtering (JWT validation), I call <SpanYellow>jwtUserDetailsService.loadUserByUsername(email)</SpanYellow>{" "}
+          again?
           <ULdisc>
             <Li>It's because I only have the JWT’s subject (username) and need to reconstruct UserDetails for the SecurityContext.</Li>
           </ULdisc>
@@ -78,7 +78,7 @@ const O16_Controller = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>JWT Authentication Controller </SpanGrey> code
+          🔑 <SpanYellow>JWT Authentication Controller </SpanYellow> code
         </p>
         {renderAuthController}
       </section>

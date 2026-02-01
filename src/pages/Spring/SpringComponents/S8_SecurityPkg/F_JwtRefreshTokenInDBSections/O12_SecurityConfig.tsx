@@ -5,9 +5,8 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { useMemo } from "react";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
@@ -33,10 +32,10 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
         <article>
           <ULdisc>
             <Li>
-              Need to Disable <SpanGrey>csrf()</SpanGrey>
+              Need to Disable <SpanYellow>csrf()</SpanYellow>
             </Li>
             <Li>
-              Most of the time I also add <SpanGrey>cors()</SpanGrey> , in this example I didn't do that.
+              Most of the time I also add <SpanYellow>cors()</SpanYellow> , in this example I didn't do that.
             </Li>
           </ULdisc>
         </article>
@@ -45,7 +44,7 @@ const O12_SecurityConfig = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>SecurityConfig with DSL lambda</SpanGrey> code
+          🔑 <SpanYellow>SecurityConfig with DSL lambda</SpanYellow> code
         </p>
         {renderSecurityConfigDsl}
       </section>

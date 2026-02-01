@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O2_MediaType = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,8 +32,8 @@ const O2_MediaType = ({ anchor }: { anchor: string }) => {
             For responses:
             <ULdisc>
               <Li>
-                By default, FastAPI uses <SpanGrey>JSONResponse</SpanGrey> and sets the <SpanGrey>Content-Type</SpanGrey> header to{" "}
-                <SpanGrey>application/json</SpanGrey> .
+                By default, FastAPI uses <SpanYellow>JSONResponse</SpanYellow> and sets the <SpanYellow>Content-Type</SpanYellow> header to{" "}
+                <SpanYellow>application/json</SpanYellow> .
               </Li>
             </ULdisc>
           </Li>
@@ -42,7 +42,7 @@ const O2_MediaType = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>
                 When receiving a JSON body, FastAPI automatically processes it based on the incoming{" "}
-                <SpanGrey>Content-Type: application/json</SpanGrey> header.
+                <SpanYellow>Content-Type: application/json</SpanYellow> header.
               </Li>
               <Li>
                 For other standard types like form data (application/x-www-form-urlencoded or multipart/form-data), using classes like Form() and

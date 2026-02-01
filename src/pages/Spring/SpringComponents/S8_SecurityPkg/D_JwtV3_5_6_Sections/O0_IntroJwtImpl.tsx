@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -15,14 +15,14 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
         In this implementations:
         <ULdisc>
           <Li>
-            I use Spring boot version <SpanGrey>3.5.6</SpanGrey>. <br />
+            I use Spring boot version <SpanYellow>3.5.6</SpanYellow>. <br />
           </Li>
 
           <Li>
-            I use <SpanGrey>jdk-21</SpanGrey> version
+            I use <SpanYellow>jdk-21</SpanYellow> version
           </Li>
           <Li>
-            I use <SpanGrey>Postman</SpanGrey> for testing
+            I use <SpanYellow>Postman</SpanYellow> for testing
           </Li>
           <Li>
             🔑 GitHub project link ⇨{" "}

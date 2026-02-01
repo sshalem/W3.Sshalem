@@ -5,31 +5,30 @@ JJWT library --> (SPRING)(Security)(jwt)
 import { MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import SpanCyan from "../../../../../components/Highlight/SpanCyan";
+import { SpanCyan, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_JJWT = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 JJWT (Java JWT Library)</p>
-        <SpanGrey>JJWT</SpanGrey> (Java JWT Library) is built based on the full suite of JOSE (JavaScript Object Signing and Encryption) standards,
-        including:
+        <SpanYellow>JJWT</SpanYellow> (Java JWT Library) is built based on the full suite of JOSE (JavaScript Object Signing and Encryption)
+        standards, including:
         <ULdisc>
           <Li>
-            <SpanGrey>RFC 7519</SpanGrey> – JSON Web Token ( <SpanCyan>JWT</SpanCyan> )
+            <SpanYellow>RFC 7519</SpanYellow> – JSON Web Token ( <SpanCyan>JWT</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7515</SpanGrey> – JSON Web Signature ( <SpanCyan>JWS</SpanCyan> )
+            <SpanYellow>RFC 7515</SpanYellow> – JSON Web Signature ( <SpanCyan>JWS</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7516</SpanGrey> – JSON Web Encryption ( <SpanCyan>JWE</SpanCyan> )
+            <SpanYellow>RFC 7516</SpanYellow> – JSON Web Encryption ( <SpanCyan>JWE</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7517</SpanGrey> – JSON Web Key ( <SpanCyan>JWK</SpanCyan> )
+            <SpanYellow>RFC 7517</SpanYellow> – JSON Web Key ( <SpanCyan>JWK</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7518</SpanGrey> – JSON Web Algorithms ( <SpanCyan>JWA</SpanCyan> )
+            <SpanYellow>RFC 7518</SpanYellow> – JSON Web Algorithms ( <SpanCyan>JWA</SpanCyan> )
           </Li>
         </ULdisc>
       </section>

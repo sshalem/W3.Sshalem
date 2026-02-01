@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_ResponseModelWithHeaders = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O2_ResponseModelWithHeaders = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <ULdisc>
           <Li>
-            We can return a normal Python object (validated by <SpanGrey>response_model</SpanGrey> ) and set headers via the Response object injected
+            We can return a normal Python object (validated by <SpanYellow>response_model</SpanYellow> ) and set headers via the Response object injected
             by FastAPI.
           </Li>
           <Li>Li Headers and status are controlled via Response (or status_code parameter).</Li>

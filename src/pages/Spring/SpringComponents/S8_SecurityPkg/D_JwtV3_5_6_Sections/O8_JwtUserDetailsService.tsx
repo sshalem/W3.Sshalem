@@ -5,8 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O8_JwtUserDetailsService = ({ anchor }: { anchor: string }) => {
@@ -34,17 +33,17 @@ const O8_JwtUserDetailsService = ({ anchor }: { anchor: string }) => {
 
         <ULdisc>
           <Li>
-            This Class Implement <SpanGrey>UserDetailsService</SpanGrey>
+            This Class Implement <SpanYellow>UserDetailsService</SpanYellow>
           </Li>
           <Li>
-            I define it as <SpanGrey>@Service</SpanGrey> so It will be registered in context.
+            I define it as <SpanYellow>@Service</SpanYellow> so It will be registered in context.
           </Li>
         </ULdisc>
       </section>
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>JwtUserDetailsService</SpanGrey> code
+          🔑 <SpanYellow>JwtUserDetailsService</SpanYellow> code
         </p>
         {renderJwtUserDetailsService}
       </section>

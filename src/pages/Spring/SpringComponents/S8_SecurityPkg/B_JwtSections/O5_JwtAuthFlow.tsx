@@ -7,8 +7,7 @@ import security_2 from "../../../../../assets/security_2.jpg";
 import security_7 from "../../../../../assets/security_7.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,10 +31,10 @@ const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             For every request (<SpanGreen>GET /POST /PUT /DELETE</SpanGreen>) a client (frontend app, Postman, etc.) sends, <br />
-            It must send a<SpanGrey>Authorization header</SpanGrey> with <SpanGrey>{"Bearer <token>"}</SpanGrey>
+            It must send a<SpanYellow>Authorization header</SpanYellow> with <SpanYellow>{"Bearer <token>"}</SpanYellow>
           </Li>
           <Li>
-            This <SpanGrey>{"Bearer <token>"}</SpanGrey>, will be validated in the <SpanGrey>JwtAuthenticationFilter</SpanGrey>
+            This <SpanYellow>{"Bearer <token>"}</SpanYellow>, will be validated in the <SpanYellow>JwtAuthenticationFilter</SpanYellow>
           </Li>
           <Li>On JWT token is valid , Server will continue processing the request.</Li>
         </ULdisc>

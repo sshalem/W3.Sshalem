@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,20 +11,20 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
       <article className="my-8">
         <p className="my-6 text-xl font-semibold">✅ Step 3: implements AuditorAware</p>
         <p className="my-4 text-lg font-semibold">🔍 What is AuditorAware?</p>
-        <SpanGrey>{"AuditorAware<T>"}</SpanGrey> is an interface provided by Spring Data that allows you to define who is performing an action (the
-        <SpanGrey>"auditor"</SpanGrey> ) . <br /> This is typically used to populate fields like:
+        <SpanYellow>{"AuditorAware<T>"}</SpanYellow> is an interface provided by Spring Data that allows you to define who is performing an action (the
+        <SpanYellow>"auditor"</SpanYellow> ) . <br /> This is typically used to populate fields like:
         <ULdisc>
           <Li>
-            <SpanGrey>@CreatedBy</SpanGrey>
+            <SpanYellow>@CreatedBy</SpanYellow>
           </Li>
           <Li>
-            <SpanGrey>@LastModifiedBy</SpanGrey>
+            <SpanYellow>@LastModifiedBy</SpanYellow>
           </Li>
         </ULdisc>
         <p className="my-4 mt-8 text-lg font-semibold">🧩 What Does AuditorAwareImpl Do?</p>
         <ULdisc>
           <Li>
-            <SpanGrey>AuditorAwareImpl</SpanGrey> is a custom implementation of the <SpanGrey>AuditorAware</SpanGrey> interface.
+            <SpanYellow>AuditorAwareImpl</SpanYellow> is a custom implementation of the <SpanYellow>AuditorAware</SpanYellow> interface.
           </Li>
           <Li>It returns the current user (or system) responsible for creating or modifying an entity.</Li>
         </ULdisc>
@@ -40,11 +40,11 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
         <p className="my-4 mt-8 text-lg font-semibold">🏷️ 1. Audit w/o Spring Security</p>
         <ULdisc>
           <Li>
-            create class <SpanGrey>AuditorAwareImpl</SpanGrey> that implements <SpanGrey>{"AuditorAware<String>"}</SpanGrey>
+            create class <SpanYellow>AuditorAwareImpl</SpanYellow> that implements <SpanYellow>{"AuditorAware<String>"}</SpanYellow>
           </Li>
           <Li>
-            In DB , we will see that on the fields of <SpanGrey>createdBy</SpanGrey> and <SpanGrey>lastModifiedBy</SpanGrey> the message{" "}
-            <SpanGrey>"system-user"</SpanGrey>
+            In DB , we will see that on the fields of <SpanYellow>createdBy</SpanYellow> and <SpanYellow>lastModifiedBy</SpanYellow> the message{" "}
+            <SpanYellow>"system-user"</SpanYellow>
           </Li>
 
           <Li>
@@ -62,11 +62,11 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
         <p className="my-4 mt-8 text-lg font-semibold">🏷️ 2. Audit with Spring Security</p>
         <ULdisc>
           <Li>
-            create class <SpanGrey>AuditorAwareImpl</SpanGrey> that implements <SpanGrey>{"AuditorAware<String>"}</SpanGrey>
+            create class <SpanYellow>AuditorAwareImpl</SpanYellow> that implements <SpanYellow>{"AuditorAware<String>"}</SpanYellow>
           </Li>
           <Li>
-            In DB , we will see that on the fields of <SpanGrey>createdBy</SpanGrey> and <SpanGrey>lastModifiedBy</SpanGrey> the message{" "}
-            <SpanGrey>"system-user"</SpanGrey>
+            In DB , we will see that on the fields of <SpanYellow>createdBy</SpanYellow> and <SpanYellow>lastModifiedBy</SpanYellow> the message{" "}
+            <SpanYellow>"system-user"</SpanYellow>
           </Li>
 
           <Li>
@@ -84,11 +84,11 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
         <p className="my-4 mt-8 text-lg font-semibold">🏷️ 3. Audit with Spring Security for Multiple USer types (SUPER-ADMIN, ADMIN, USER)</p>
         <ULdisc>
           <Li>
-            create class <SpanGrey>AuditorAwareImpl</SpanGrey> that implements <SpanGrey>{"AuditorAware<String>"}</SpanGrey>
+            create class <SpanYellow>AuditorAwareImpl</SpanYellow> that implements <SpanYellow>{"AuditorAware<String>"}</SpanYellow>
           </Li>
           <Li>
-            In DB , we will see that on the fields of <SpanGrey>createdBy</SpanGrey> and <SpanGrey>lastModifiedBy</SpanGrey> the message{" "}
-            <SpanGrey>"system-user"</SpanGrey>
+            In DB , we will see that on the fields of <SpanYellow>createdBy</SpanYellow> and <SpanYellow>lastModifiedBy</SpanYellow> the message{" "}
+            <SpanYellow>"system-user"</SpanYellow>
           </Li>
 
           <Li>

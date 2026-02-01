@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { SpanGreen, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -11,13 +11,13 @@ const O1_IntroRefreshToken = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        Implementing a <SpanGrey>refresh token</SpanGrey> alongside <SpanGrey>JWT</SpanGrey> in a Spring Boot application is important for several
+        Implementing a <SpanYellow>refresh token</SpanYellow> alongside <SpanYellow>JWT</SpanYellow> in a Spring Boot application is important for several
         reasons
         <p className="my-4 text-lg font-semibold">✅ Why JWT alone is not enough?</p>
         <ULDecimal>
           <Li>
             <strong>
-              Because JWTs are <SpanGrey>stateless</SpanGrey> and <SpanGrey>self-contained</SpanGrey>
+              Because JWTs are <SpanYellow>stateless</SpanYellow> and <SpanYellow>self-contained</SpanYellow>
             </strong>
             : Once issued, they cannot be revoked or changed until they expire.
           </Li>
@@ -57,7 +57,7 @@ const O1_IntroRefreshToken = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             {" "}
-            Because JWTs are Short-lived access tokens : To reduce risk <SpanGrey>if a token is stolen</SpanGrey>.
+            Because JWTs are Short-lived access tokens : To reduce risk <SpanYellow>if a token is stolen</SpanYellow>.
           </Li>
         </ULdisc>
         <p></p>

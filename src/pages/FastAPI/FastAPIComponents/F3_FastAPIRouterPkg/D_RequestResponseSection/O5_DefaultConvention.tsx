@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_DefaultConvention = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,16 +16,16 @@ const O5_DefaultConvention = ({ anchor }: { anchor: string }) => {
             <strong>Return</strong>: dicts / Pydantic models
           </Li>
           <Li>
-            <strong>Declare</strong>: <SpanGrey>response_model=...</SpanGrey> on the route
+            <strong>Declare</strong>: <SpanYellow>response_model=...</SpanYellow> on the route
           </Li>
           <Li>
-            <strong>Set</strong>: status code with <SpanGrey>status_code=...</SpanGrey> on the decorator
+            <strong>Set</strong>: status code with <SpanYellow>status_code=...</SpanYellow> on the decorator
           </Li>
           <Li>
-            <strong>Raise</strong>: errors with <SpanGrey>HTTPException(...)</SpanGrey>
+            <strong>Raise</strong>: errors with <SpanYellow>HTTPException(...)</SpanYellow>
           </Li>
           <Li>
-            <strong>Add headers</strong>: via the injected <SpanGrey>Response</SpanGrey> object (only when needed)
+            <strong>Add headers</strong>: via the injected <SpanYellow>Response</SpanYellow> object (only when needed)
           </Li>
           <Li>
             Why this is the convention:{" "}

@@ -5,9 +5,8 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { useMemo } from "react";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O13_SecurityConstants = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
@@ -33,7 +32,7 @@ const O13_SecurityConstants = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>SecurityConstants</SpanGrey> code
+          🔑 <SpanYellow>SecurityConstants</SpanYellow> code
         </p>
         {renderSecurityConstants}
       </section>

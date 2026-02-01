@@ -3,8 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { SpanRed } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -16,14 +15,14 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
         In this implementations:
         <ULdisc>
           <Li>
-            I use Spring boot version <SpanGrey>2.6.11</SpanGrey>. <br />
+            I use Spring boot version <SpanYellow>2.6.11</SpanYellow>. <br />
           </Li>
 
           <Li>
-            I use <SpanGrey>jdk-11</SpanGrey> version
+            I use <SpanYellow>jdk-11</SpanYellow> version
           </Li>
           <Li>
-            I use <SpanGrey>Postman</SpanGrey> for testing
+            I use <SpanYellow>Postman</SpanYellow> for testing
           </Li>
           <Li>
             <SpanRed>Important Note</SpanRed> :
@@ -36,7 +35,7 @@ const O0_IntroJwtImpl = ({ anchor }: { anchor: string }) => {
                   href="https://www.bezkoder.com/websecurityconfigureradapter-deprecated-spring-boot/"
                 ></Anchor>{" "}
                 <br />
-                From Spring Boot 2.7, <SpanGrey>WebSecurityConfigurerAdapter</SpanGrey>
+                From Spring Boot 2.7, <SpanYellow>WebSecurityConfigurerAdapter</SpanYellow>
                 is deprecated. (See Link JWT Spring v3.5.6)
               </Li>
             </ULdisc>

@@ -3,10 +3,9 @@
 
 */
 import { MainChildArea, ULDecimal } from "../../../../../components";
-import { JavaHighlight, SpanCyan, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanCyan, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
@@ -21,10 +20,10 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
         <article>
           <ULdisc>
             <Li>
-              I only implement code for <SpanGrey>refreshToken</SpanGrey> on Controller layer
+              I only implement code for <SpanYellow>refreshToken</SpanYellow> on Controller layer
             </Li>
             <Li>
-              Thus, only the <SpanGrey>Controller</SpanGrey> code is inthis example
+              Thus, only the <SpanYellow>Controller</SpanYellow> code is inthis example
             </Li>
           </ULdisc>
         </article>
@@ -42,13 +41,13 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
             Flow:
             <ULDecimal>
               <Li>
-                User logs in → Server issues <SpanGrey>access token</SpanGrey> + <SpanGrey>refresh token</SpanGrey>.
+                User logs in → Server issues <SpanYellow>access token</SpanYellow> + <SpanYellow>refresh token</SpanYellow>.
               </Li>
               <Li>
-                Access token expires → Client sends refresh token to <SpanGrey>/refresh</SpanGrey> endpoint.
+                Access token expires → Client sends refresh token to <SpanYellow>/refresh</SpanYellow> endpoint.
               </Li>
               <Li>
-                Server validates refresh token → Issues new <SpanGrey>access token</SpanGrey>.
+                Server validates refresh token → Issues new <SpanYellow>access token</SpanYellow>.
               </Li>
             </ULDecimal>
           </Li>
@@ -61,17 +60,17 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
         <p className="text-xl font-semibold">🛑 Why Logout Not Implemented?</p>
         <ULdisc>
           <Li>
-            <strong>Question</strong> : Why I did not implement <SpanGrey>Logout</SpanGrey> method in this project?
+            <strong>Question</strong> : Why I did not implement <SpanYellow>Logout</SpanYellow> method in this project?
           </Li>
           <Li>
-            When I use <SpanGrey>pure stateless JWTs</SpanGrey> (JWT for access token + JWT for refresh tokens) , they are{" "}
+            When I use <SpanYellow>pure stateless JWTs</SpanYellow> (JWT for access token + JWT for refresh tokens) , they are{" "}
             <SpanRed>NOT stored in DB</SpanRed>.
           </Li>
           <Li>
-            Thus , FrontEnd is responsible to delete both Tokens <SpanGrey>access_token</SpanGrey> and <SpanGrey>refresh_token</SpanGrey>
+            Thus , FrontEnd is responsible to delete both Tokens <SpanYellow>access_token</SpanYellow> and <SpanYellow>refresh_token</SpanYellow>
           </Li>
           <Li>
-            On <SpanGrey>Logout</SpanGrey>
+            On <SpanYellow>Logout</SpanYellow>
             <ULdisc>
               <Li>FrontEnd deletes accessToken</Li>
               <Li>FrontEnd deletes refreshToken</Li>
@@ -85,7 +84,7 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
           <Li>
             The most secure way is (Refresh token rotation + DB )
             <br />
-            <SpanGrey>RefreshToken </SpanGrey> stored in DB +<SpanGrey>RefreshToken</SpanGrey> send as HttpOnly cookie (see &nbsp;
+            <SpanYellow>RefreshToken </SpanYellow> stored in DB +<SpanYellow>RefreshToken</SpanYellow> send as HttpOnly cookie (see &nbsp;
             <Link
               to={"/spring/security/jwt-refresh-token-httpOnly"}
               className="rounded-md bg-sky-200 p-[0.15rem] tracking-wide text-blue-700 hover:text-blue-700 hover:underline"

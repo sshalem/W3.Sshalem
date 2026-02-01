@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,22 +13,22 @@ const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
         You can automatically populate: (It does same as Hibernate Envars, but Hibernate is more felx when it comes to QUeries)
         <ULdisc>
           <Li>
-            <SpanGrey>Tracks timestamps</SpanGrey> (timestamp)
+            <SpanYellow>Tracks timestamps</SpanYellow> (timestamp)
           </Li>
           <Li>
-            <SpanGrey>Tracks who made change</SpanGrey> (user)
+            <SpanYellow>Tracks who made change</SpanYellow> (user)
           </Li>
           <Li>
-            <SpanGrey>Tracks changed fields</SpanGrey> (fields)
+            <SpanYellow>Tracks changed fields</SpanYellow> (fields)
           </Li>
           <Li>
-            <SpanGrey>Creates audit tables</SpanGrey>
+            <SpanYellow>Creates audit tables</SpanYellow>
           </Li>
           <Li>
-            <SpanGrey>Stores previous values</SpanGrey>
+            <SpanYellow>Stores previous values</SpanYellow>
           </Li>
           <Li>
-            <SpanGrey>Restores old versions</SpanGrey>
+            <SpanYellow>Restores old versions</SpanYellow>
           </Li>
         </ULdisc>
         <p className="my-2">

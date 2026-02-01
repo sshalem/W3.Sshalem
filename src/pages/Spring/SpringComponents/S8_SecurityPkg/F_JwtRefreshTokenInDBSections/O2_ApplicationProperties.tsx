@@ -6,8 +6,7 @@ import { Anchor, IMG, MainChildArea } from "../../../../../components";
 import security_10 from "../../../../../assets/security_10.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import { ApplicationPropertiesHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanBlue, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +27,7 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 Application Properties</p>
-        As I usually do, Since I want to run the code in different environments, where I can have different <SpanGrey>DataBases</SpanGrey> <br />
+        As I usually do, Since I want to run the code in different environments, where I can have different <SpanYellow>DataBases</SpanYellow> <br />
         Hence, I config 3 different properties files for each DB connection
         <article>
           <ULdisc>
@@ -66,7 +65,7 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
         <IMG img_name={security_10}></IMG>
-        Code of main <SpanGrey>application.properties</SpanGrey> where I define which environment (DB) ichoose to work with
+        Code of main <SpanYellow>application.properties</SpanYellow> where I define which environment (DB) ichoose to work with
         <ApplicationPropertiesHighlight propertiesCode={properties_mains}></ApplicationPropertiesHighlight>
       </section>
     </MainChildArea>

@@ -5,31 +5,29 @@ Jwt Dependencies --> (SPRING)(Security)(jwt)
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { XmlHighlight } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
-import SpanCyan from "../../../../../components/Highlight/SpanCyan";
+import { SpanCyan, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
 const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 JJWT (Java JWT Library)</p>
-        <SpanGrey>JJWT</SpanGrey> is built based on the full suite of JOSE (JavaScript Object Signing and Encryption) standards, including:
+        <SpanYellow>JJWT</SpanYellow> is built based on the full suite of JOSE (JavaScript Object Signing and Encryption) standards, including:
         <ULdisc>
           <Li>
-            <SpanGrey>RFC 7519</SpanGrey> – JSON Web Token ( <SpanCyan>JWT</SpanCyan> )
+            <SpanYellow>RFC 7519</SpanYellow> – JSON Web Token ( <SpanCyan>JWT</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7515</SpanGrey> – JSON Web Signature ( <SpanCyan>JWS</SpanCyan> )
+            <SpanYellow>RFC 7515</SpanYellow> – JSON Web Signature ( <SpanCyan>JWS</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7516</SpanGrey> – JSON Web Encryption ( <SpanCyan>JWE</SpanCyan> )
+            <SpanYellow>RFC 7516</SpanYellow> – JSON Web Encryption ( <SpanCyan>JWE</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7517</SpanGrey> – JSON Web Key ( <SpanCyan>JWK</SpanCyan> )
+            <SpanYellow>RFC 7517</SpanYellow> – JSON Web Key ( <SpanCyan>JWK</SpanCyan> )
           </Li>
           <Li>
-            <SpanGrey>RFC 7518</SpanGrey> – JSON Web Algorithms ( <SpanCyan>JWA</SpanCyan> )
+            <SpanYellow>RFC 7518</SpanYellow> – JSON Web Algorithms ( <SpanCyan>JWA</SpanCyan> )
           </Li>
         </ULdisc>
         <hr />
@@ -39,18 +37,18 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
             go to <Anchor description="https://mvnrepository.com/" href="https://mvnrepository.com/"></Anchor>{" "}
           </Li>
           <Li>
-            In the search type <SpanGrey>JJWT</SpanGrey>. <br />
-            we must have at least these 3 dependencies in our <SpanGrey>POM</SpanGrey> file
+            In the search type <SpanYellow>JJWT</SpanYellow>. <br />
+            we must have at least these 3 dependencies in our <SpanYellow>POM</SpanYellow> file
             <ULdisc>
               <Li>
-                <SpanGrey>jjwt-api</SpanGrey> - The main API for JWT creation and parsing.
+                <SpanYellow>jjwt-api</SpanYellow> - The main API for JWT creation and parsing.
               </Li>
               <Li>
-                <SpanGrey>jjwt-impl</SpanGrey> - Implementation of the API. Needed at runtime.
+                <SpanYellow>jjwt-impl</SpanYellow> - Implementation of the API. Needed at runtime.
               </Li>
               <Li>
-                <SpanGrey>jjwt-jackson</SpanGrey> - JSON serialization/deserialization using Jackson. Needed if you want{" "}
-                <SpanGrey>JWT claims as JSON</SpanGrey>.
+                <SpanYellow>jjwt-jackson</SpanYellow> - JSON serialization/deserialization using Jackson. Needed if you want{" "}
+                <SpanYellow>JWT claims as JSON</SpanYellow>.
               </Li>
             </ULdisc>
           </Li>
@@ -60,7 +58,7 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
           <p className="my-4 text-lg font-semibold">🧩 POM</p>
           <p>This is the version I use in all my Spring booot projects</p>
           <p>
-            If using versions above <SpanGrey>0.11.5</SpanGrey> , implementations of code might change due to package version upgrades.
+            If using versions above <SpanYellow>0.11.5</SpanYellow> , implementations of code might change due to package version upgrades.
           </p>
         </article>
         <XmlHighlight xmlCode={jwt_dependencies}></XmlHighlight>

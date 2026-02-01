@@ -4,7 +4,7 @@
 */
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -15,13 +15,13 @@ const O3_BestPractice = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">✅ Best Practices</p>
         <ULdisc>
           <Li>
-            Store <SpanGrey>refresh tokens</SpanGrey> in a secure database.
+            Store <SpanYellow>refresh tokens</SpanYellow> in a secure database.
           </Li>
           <Li>
-            Use <SpanGrey>HTTP-only cookies</SpanGrey> for <SpanGrey>refresh tokens</SpanGrey> (avoid localStorage).
+            Use <SpanYellow>HTTP-only cookies</SpanYellow> for <SpanYellow>refresh tokens</SpanYellow> (avoid localStorage).
           </Li>
           <Li>
-            Implement <SpanGrey>rotation</SpanGrey>: Issue a new <SpanGrey>refresh token</SpanGrey> each time and invalidate the old one.
+            Implement <SpanYellow>rotation</SpanYellow>: Issue a new <SpanYellow>refresh token</SpanYellow> each time and invalidate the old one.
           </Li>
           <Li>Set expiration for refresh tokens (e.g., 7–30 days).</Li>
           <Li>Use HTTPS to prevent token interception.</Li>

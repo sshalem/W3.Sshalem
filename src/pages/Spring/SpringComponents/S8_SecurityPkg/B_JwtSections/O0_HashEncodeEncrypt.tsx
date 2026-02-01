@@ -3,7 +3,7 @@
 Hashing, Encoding, Encrypting --> (SPRING)(Security)(jwt)
 */
 import { MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { SpanGreen, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 import TableComapreHashEncodeEncrypt from "../../../../../components/Tables/Table_4ColComapreHashEncodeEncrypt";
 import Li from "../../../../../components/ui/Li";
 
@@ -12,15 +12,15 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <p className="my-8">
-          <SpanGrey>Hashing</SpanGrey>, <SpanGrey>encoding</SpanGrey>, and <SpanGrey>encrypting</SpanGrey> are all techniques used in computing and
+          <SpanYellow>Hashing</SpanYellow>, <SpanYellow>encoding</SpanYellow>, and <SpanYellow>encrypting</SpanYellow> are all techniques used in computing and
           data security, but they serve different purposes. <br />
           They all are used to change the format of the data or data transformation for different purposes.
         </p>
         <p className="my-8">
           <SpanRed>Note</SpanRed>
           <ULdisc>
-            JWT (JSON Web Token) <SpanGrey>does not use encryption by default</SpanGrey>, especially in typical Spring Boot implementations. <br />{" "}
-            Instead, it uses <SpanGrey>signing</SpanGrey> to ensure the integrity and authenticity of the token.
+            JWT (JSON Web Token) <SpanYellow>does not use encryption by default</SpanYellow>, especially in typical Spring Boot implementations. <br />{" "}
+            Instead, it uses <SpanYellow>signing</SpanYellow> to ensure the integrity and authenticity of the token.
           </ULdisc>
         </p>
         <p className="my-4 text-lg font-semibold">🔍 Here's how JWT works in Spring Boot</p>
@@ -29,7 +29,7 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
           <p className="text-lg font-semibold">1. Signing (Not Encryption)</p>
           <ULdisc>
             <Li>
-              JWTs are usually signed using algorithms like <SpanGrey>HMAC SHA-256 or RSA</SpanGrey>.
+              JWTs are usually signed using algorithms like <SpanYellow>HMAC SHA-256 or RSA</SpanYellow>.
             </Li>
             <Li>This signature ensures that the token has not been tampered with.</Li>
             <Li>The payload (user data) is visible and not encrypted, but it's protected by the signature.</Li>
@@ -40,10 +40,10 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
           <p className="text-lg font-semibold">2. Encryption (Optional)</p>
           <ULdisc>
             <Li>
-              If you want to hide the contents of the JWT (not just verify integrity), you need to use <SpanGrey>JWE (JSON Web Encryption)</SpanGrey>.
+              If you want to hide the contents of the JWT (not just verify integrity), you need to use <SpanYellow>JWE (JSON Web Encryption)</SpanYellow>.
             </Li>
             <Li>
-              Spring Boot <SpanGrey>does not use JWE by default</SpanGrey> — you would need to implement it manually or use a library that supports
+              Spring Boot <SpanYellow>does not use JWE by default</SpanYellow> — you would need to implement it manually or use a library that supports
               it.
             </Li>
           </ULdisc>
@@ -54,8 +54,8 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
       {/*  */}
       <section className="my-8">
         <p className="my-8 text-lg font-semibold">🔐 1. Encryption</p>
-        Encryption is an encoding technique in which a <SpanGrey>message</SpanGrey> is <SpanGrey>encoded</SpanGrey> by using an{" "}
-        <SpanGrey>encryption algorithm</SpanGrey>
+        Encryption is an encoding technique in which a <SpanYellow>message</SpanYellow> is <SpanYellow>encoded</SpanYellow> by using an{" "}
+        <SpanYellow>encryption algorithm</SpanYellow>
         in such a way that , <br />
         <SpanGreen>only authorized personnel</SpanGreen> can access the message or information. <br />
         It is a special type of encoding that is used for transferring private data, for example :
@@ -66,7 +66,7 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>is transformed using an encryption algorithm like AES or RSA Encryption Algorithm</Li>
           <Li>
-            using a secret key called a <SpanGrey>cipher</SpanGrey> (The encrypted data is called ciphertext)
+            using a secret key called a <SpanYellow>cipher</SpanYellow> (The encrypted data is called ciphertext)
           </Li>
           <Li>and finally, the secret key can be used by the intended recipient to convert it back to plain text.</Li>
         </ULdisc>
@@ -77,7 +77,7 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
           <Li>Reversible? Yes — with the correct key, you can decrypt the data back to its original form.</Li>
           <Li>Use Case: Secure communication (e.g., HTTPS, emails, files).</Li>
         </ULDecimal>
-        <SpanGrey>Example</SpanGrey>: AES Algorithm, RSA Algorithm , TLS.
+        <SpanYellow>Example</SpanYellow>: AES Algorithm, RSA Algorithm , TLS.
       </section>
       {/*  */}
       <hr />
@@ -90,7 +90,7 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
           <Li>Reversible? Yes — anyone can decode it using the same scheme.</Li>
           <Li>Use Case: Data transmission, storage (e.g., Base64, URL encoding).</Li>
         </ULdisc>
-        <SpanGrey>Example</SpanGrey>: Base64 (encoding turns binary data into ASCII text), UNICODE, ASCII, URL Encoding
+        <SpanYellow>Example</SpanYellow>: Base64 (encoding turns binary data into ASCII text), UNICODE, ASCII, URL Encoding
       </section>
       {/*  */}
       <hr />
@@ -103,7 +103,7 @@ const O0_HashEncodeEncrypt = ({ anchor }: { anchor: string }) => {
           <Li>Reversible? No — it's a one-way function.</Li>
           <Li>Use Case: Password storage, file integrity checks, digital signatures.</Li>
         </ULdisc>
-        <SpanGrey>Example</SpanGrey>: SHA-256, MD5.
+        <SpanYellow>Example</SpanYellow>: SHA-256, MD5.
       </section>
 
       <TableComapreHashEncodeEncrypt></TableComapreHashEncodeEncrypt>

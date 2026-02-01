@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
 const O8_Schemas = ({ anchor }: { anchor: string }) => {
@@ -15,7 +15,7 @@ const O8_Schemas = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-lg font-semibold">3️⃣ schemas file</div>
         <ULdisc>
           <Li>
-            create <SpanGrey>schemas.py</SpanGrey> file - I holds all DTO class represantation (See the{" "}
+            create <SpanYellow>schemas.py</SpanYellow> file - I holds all DTO class represantation (See the{" "}
             <Link className="font-semibold text-blue-600" to={"/fastapi/router/pydantic"}>
               Pydantic section
             </Link>

@@ -4,7 +4,7 @@
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import security_refresh_db_1 from "../../../../../assets/security_refresh_db_1.jpg";
-import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 
 const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,13 +14,13 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
         <p className="text-lg font-semibold">✔ Best approach : Create a new row for each rotation (Rotation means to create new Refresh Token)</p>
         <ULdisc>
           <Li>
-            Store each token as <SpanGrey>a new row</SpanGrey>
+            Store each token as <SpanYellow>a new row</SpanYellow>
           </Li>
           <Li>
-            Keep <SpanGrey>revoked</SpanGrey> boolean
+            Keep <SpanYellow>revoked</SpanYellow> boolean
           </Li>
           <Li>
-            Add <SpanGrey>rotation</SpanGrey> integer for counting
+            Add <SpanYellow>rotation</SpanYellow> integer for counting
           </Li>
         </ULdisc>
         <IMG img_name={security_refresh_db_1}></IMG>
@@ -42,10 +42,10 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
       <hr />
       <section className="my-8">
         <p className="my-4 text-xl font-semibold"> ❓ 3. What happens when a refresh token expires?</p>
-        Do NOT delete <SpanGrey>all tokens</SpanGrey> for that user.
+        Do NOT delete <SpanYellow>all tokens</SpanYellow> for that user.
         <ULdisc>
           <Li>
-            ✔ Delete or archive <SpanGrey>Only</SpanGrey> the expired token{" "}
+            ✔ Delete or archive <SpanYellow>Only</SpanYellow> the expired token{" "}
             <ULdisc>
               Expired tokens have no value and cannot be used. <br />
               You may delete them with a scheduled job (cron) every X hours.
@@ -55,7 +55,7 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
             ✔ Why Keep other valid tokens?
             <ULdisc>
               Because, A user may have multiple sessions (phone, laptop, tablet). <br />
-              You must <SpanGrey>NOT delete</SpanGrey> their other refresh tokens because one expired.
+              You must <SpanYellow>NOT delete</SpanYellow> their other refresh tokens because one expired.
             </ULdisc>
           </Li>
         </ULdisc>
@@ -65,7 +65,7 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-xl font-semibold"> 🚫 4. When Do You Delete ALL Refresh Tokens?</p>
         NOTE : <SpanRed>never delete all tokens just because one expired</SpanRed> <br />
         <p className="my-3">
-          You only <SpanGrey>delete all refresh tokens </SpanGrey> when:
+          You only <SpanYellow>delete all refresh tokens </SpanYellow> when:
         </p>
         <ULdisc>
           <Li>
@@ -81,10 +81,10 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
         <p>When I rotate refresh tokens:</p>
         <ULdisc>
           <Li>
-            The previous token becomes <SpanGrey>revoked = true</SpanGrey> , meaning
+            The previous token becomes <SpanYellow>revoked = true</SpanYellow> , meaning
           </Li>
           <Li>
-            The new token becomes the <SpanGrey>active</SpanGrey> one
+            The new token becomes the <SpanYellow>active</SpanYellow> one
           </Li>
         </ULdisc>
         Example:

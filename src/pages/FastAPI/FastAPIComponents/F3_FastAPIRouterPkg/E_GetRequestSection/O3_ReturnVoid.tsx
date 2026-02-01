@@ -4,13 +4,13 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_ReturnVoid = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        Return no content (like <SpanGrey>ResponseEntity{"<Void>"}</SpanGrey> )
+        Return no content (like <SpanYellow>ResponseEntity{"<Void>"}</SpanYellow> )
         <PythonHighlight pythonCode={_1_} />
       </section>
     </MainChildArea>

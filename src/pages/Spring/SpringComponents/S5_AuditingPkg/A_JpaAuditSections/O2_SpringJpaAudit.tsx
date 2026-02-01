@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { SpanGreen, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 
 const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,16 +13,16 @@ const O2_SpringJpaAudit = ({ anchor }: { anchor: string }) => {
         You can automatically populate:
         <ULdisc>
           <Li>
-            <SpanGrey>createdAt</SpanGrey> (timestamp)
+            <SpanYellow>createdAt</SpanYellow> (timestamp)
           </Li>
           <Li>
-            <SpanGrey>updatedOn</SpanGrey> (timestamp)
+            <SpanYellow>updatedOn</SpanYellow> (timestamp)
           </Li>
           <Li>
-            <SpanGrey>createdBy</SpanGrey> (user)
+            <SpanYellow>createdBy</SpanYellow> (user)
           </Li>
           <Li>
-            <SpanGrey>updatedBy</SpanGrey> (user)
+            <SpanYellow>updatedBy</SpanYellow> (user)
           </Li>
           <Li>
             But it <SpanRed>cannot</SpanRed> track <SpanRed>What changed</SpanRed>

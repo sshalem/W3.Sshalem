@@ -4,7 +4,7 @@ P6Spy logging --> (SPRING)(JPA)(logging-jpa-hibernate)
 */
 import { MainChildArea } from "../../../../../components";
 import { ApplicationPropertiesHighlight, XmlHighlight } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import SpanYellow from "../../../../../components/Highlight/SpanYellow";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -33,7 +33,7 @@ const O3_P6SpyLogging = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔹 2. Configure application.properties</p>
         Replace your datasource driver with P6Spy’s proxy driver. <br />
-        👉 Notice <SpanGrey>jdbc:p6spy:mysql://...</SpanGrey> instead of <SpanGrey>jdbc:mysql://....</SpanGrey>
+        👉 Notice <SpanYellow>jdbc:p6spy:mysql://...</SpanYellow> instead of <SpanYellow>jdbc:mysql://....</SpanYellow>
         <ApplicationPropertiesHighlight propertiesCode={properties}></ApplicationPropertiesHighlight>
       </section>
       <hr />

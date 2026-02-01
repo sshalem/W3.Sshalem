@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 import python_31 from "../../../../../assets/python_31.jpg";
 import python_33 from "../../../../../assets/python_33.jpg";
 
@@ -12,10 +12,10 @@ const O4_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <div className="my-8 text-2xl font-semibold">
-          1️⃣ Run Using Terminal with <SpanGrey>uvicorn</SpanGrey> command
+          1️⃣ Run Using Terminal with <SpanYellow>uvicorn</SpanYellow> command
         </div>
         <div>
-          In the terminal, go to the folder where <SpanGrey>main.py</SpanGrey> is located and run:
+          In the terminal, go to the folder where <SpanYellow>main.py</SpanYellow> is located and run:
         </div>
         <ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_1_} />
@@ -23,19 +23,19 @@ const O4_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
         Explanation:
         <ULdisc>
           <Li>
-            <SpanGrey>main</SpanGrey> → the Python file name without <SpanGrey>.py</SpanGrey>
+            <SpanYellow>main</SpanYellow> → the Python file name without <SpanYellow>.py</SpanYellow>
           </Li>
           <Li>
-            <SpanGrey>app</SpanGrey> → the FastAPI instance variable
+            <SpanYellow>app</SpanYellow> → the FastAPI instance variable
           </Li>
           <Li>
-            <SpanGrey>--reload</SpanGrey> → automatic reload when you change code (<SpanGrey>for development only</SpanGrey>)
+            <SpanYellow>--reload</SpanYellow> → automatic reload when you change code (<SpanYellow>for development only</SpanYellow>)
           </Li>
           <Li>
-            Optional: <SpanGrey>--host 0.0.0.0</SpanGrey> to make it accessible externally
+            Optional: <SpanYellow>--host 0.0.0.0</SpanYellow> to make it accessible externally
           </Li>
           <Li>
-            Optional: <SpanGrey>--port 8000</SpanGrey> to change port
+            Optional: <SpanYellow>--port 8000</SpanYellow> to change port
           </Li>
           <Li>Full example:</Li>
           <ApplicationPropertiesHighlight propertiesCode={_2_} />
@@ -48,7 +48,7 @@ const O4_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>On the top of PyCharm, click on the dropdown arrow</Li>
           <Li>
-            then , Click on <SpanGrey>Edit Configurations</SpanGrey>
+            then , Click on <SpanYellow>Edit Configurations</SpanYellow>
             <IMG img_name={python_33} />
           </Li>
           <Li>

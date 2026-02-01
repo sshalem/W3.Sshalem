@@ -5,8 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanCyan } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanCyan, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
 const O15_Controller = ({ anchor }: { anchor: string }) => {
@@ -30,14 +29,14 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
         <p className="text-xl font-semibold">🛑 Why Logout Not Implemented?</p>
         <ULdisc>
           <Li>
-            <strong>Question</strong> : Why I did not implement <SpanGrey>Logout</SpanGrey> method in this project?
+            <strong>Question</strong> : Why I did not implement <SpanYellow>Logout</SpanYellow> method in this project?
           </Li>
           <Li>When I use pure stateless JWTs (JWT for access token + JWT for refresh tokens) , they are stored in DB.</Li>
           <Li>
-            Thus , FrontEnd is responsible to delete both Tokens <SpanGrey>access_token</SpanGrey> and <SpanGrey>refresh_token</SpanGrey>
+            Thus , FrontEnd is responsible to delete both Tokens <SpanYellow>access_token</SpanYellow> and <SpanYellow>refresh_token</SpanYellow>
           </Li>
           <Li>
-            On <SpanGrey>Logout</SpanGrey>
+            On <SpanYellow>Logout</SpanYellow>
             <ULdisc>
               <Li>FrontEnd deletes accessToken</Li>
               <Li>FrontEnd deletes refreshToken</Li>
@@ -56,7 +55,7 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
             >
               jwt-refresh-token-v3-5-7
             </Link>
-            ) . <SpanGrey>RefreshToken stored DB</SpanGrey>.
+            ) . <SpanYellow>RefreshToken stored DB</SpanYellow>.
           </Li>
         </ULdisc>
       </section>
@@ -66,12 +65,13 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🧩 Authentication Controller</p>
 
         <article>
-          🔑 Why I do <SpanGrey>(JwtUserDetails) authenticate.getPrincipal()</SpanGrey>?
+          🔑 Why I do <SpanYellow>(JwtUserDetails) authenticate.getPrincipal()</SpanYellow>?
           <ULdisc>
             <Li>No extra DB call — I already have the authenticated JwtUserDetails inside the Authentication object.</Li>
             <Li>Standard Spring Security way (this is why the Principal exists).</Li>
           </ULdisc>
-          🔑 Then Why, During request filtering (JWT validation), I call <SpanGrey>jwtUserDetailsService.loadUserByUsername(email)</SpanGrey> again?
+          🔑 Then Why, During request filtering (JWT validation), I call <SpanYellow>jwtUserDetailsService.loadUserByUsername(email)</SpanYellow>{" "}
+          again?
           <ULdisc>
             <Li>It's because I only have the JWT’s subject (username) and need to reconstruct UserDetails for the SecurityContext.</Li>
           </ULdisc>

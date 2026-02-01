@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_JSONResponse = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,18 +12,18 @@ const O3_JSONResponse = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <ULdisc>
           <Li>
-            In <SpanGrey>Spring Boot</SpanGrey>, <SpanGrey>ResponseEntity{"<T>"}</SpanGrey> lets you control the <SpanGrey>body</SpanGrey>,{" "}
-            <SpanGrey>status code</SpanGrey>, and <SpanGrey>headers</SpanGrey> in one object.
+            In <SpanYellow>Spring Boot</SpanYellow>, <SpanYellow>ResponseEntity{"<T>"}</SpanYellow> lets you control the <SpanYellow>body</SpanYellow>
+            , <SpanYellow>status code</SpanYellow>, and <SpanYellow>headers</SpanYellow> in one object.
           </Li>
           <Li>
-            In <SpanGrey>FastAPI</SpanGrey>, the closest equivalent is returning a Response (or a subclass of it) where you can set the{" "}
-            <SpanGrey>body</SpanGrey>, <SpanGrey>status</SpanGrey>, and <SpanGrey>headers</SpanGrey> explicitly.
+            In <SpanYellow>FastAPI</SpanYellow>, the closest equivalent is returning a Response (or a subclass of it) where you can set the{" "}
+            <SpanYellow>body</SpanYellow>, <SpanYellow>status</SpanYellow>, and <SpanYellow>headers</SpanYellow> explicitly.
           </Li>
         </ULdisc>
 
         <Li>
-          <SpanGrey>jsonable_encoder</SpanGrey> knows how to convert many non-serializable types (e.g., datetime, UUID, Decimal, and arbitrary objects
-          with <SpanGrey>__dict__</SpanGrey> ) into JSON-friendly structures.
+          <SpanYellow>jsonable_encoder</SpanYellow> knows how to convert many non-serializable types (e.g., datetime, UUID, Decimal, and arbitrary
+          objects with <SpanYellow>__dict__</SpanYellow> ) into JSON-friendly structures.
         </Li>
         <PythonHighlight pythonCode={_2_}></PythonHighlight>
       </section>

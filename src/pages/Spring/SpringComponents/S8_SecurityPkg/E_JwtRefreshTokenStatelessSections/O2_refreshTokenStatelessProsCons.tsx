@@ -4,7 +4,7 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -22,14 +22,14 @@ const O2_refreshTokenStatelessProsCons = ({ anchor }: { anchor: string }) => {
           <Li>Stateless (fits your use case — you don’t store refresh tokens)</Li>
           <Li>Only generate a new access token. </Li>
           <Li>
-            Reuse the <strong>same</strong> <SpanGrey>refresh token</SpanGrey> until it expires.
+            Reuse the <strong>same</strong> <SpanYellow>refresh token</SpanYellow> until it expires.
           </Li>
         </ULdisc>
         <p className="my-4 text-lg font-semibold">❌ Cons</p>
         <ULdisc>
           <Li>If a refresh token is stolen, attacker can keep refreshing until it naturally expires</Li>
           <Li>
-            Less secure than <SpanGrey>rotation</SpanGrey>
+            Less secure than <SpanYellow>rotation</SpanYellow>
           </Li>
           <Li>Logout is harder (you can’t invalidate the refresh token)</Li>
         </ULdisc>

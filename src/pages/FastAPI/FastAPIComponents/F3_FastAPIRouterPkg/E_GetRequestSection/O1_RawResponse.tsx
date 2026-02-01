@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_RawResponse = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,10 +13,10 @@ const O1_RawResponse = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Use this when you don’t want JSON (or want full control over the body bytes).</Li>
           <Li>
-            Here I return a <SpanGrey>text</SpanGrey> format
+            Here I return a <SpanYellow>text</SpanYellow> format
           </Li>
           <Li>
-            I use the <SpanGrey>Response</SpanGrey> class
+            I use the <SpanYellow>Response</SpanYellow> class
           </Li>
         </ULdisc>
         <PythonHighlight pythonCode={_1_} />

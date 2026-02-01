@@ -3,11 +3,10 @@
 
 */
 import { Anchor, IMG, MainChildArea } from "../../../../../components";
-import { XmlHighlight } from "../../../../../components/Highlight";
+import { SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 import security_9 from "../../../../../assets/security_9.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import { useMemo } from "react";
 
 const O1_POM = ({ anchor }: { anchor: string }) => {
@@ -31,23 +30,23 @@ const O1_POM = ({ anchor }: { anchor: string }) => {
         <article>
           <ULdisc>
             <Li>
-              <SpanGrey>H2</SpanGrey>, <SpanGrey>MySql</SpanGrey>, <SpanGrey>Popstgres</SpanGrey> - I add dependencies , so I can work on every DB
-              environment
+              <SpanYellow>H2</SpanYellow>, <SpanYellow>MySql</SpanYellow>, <SpanYellow>Popstgres</SpanYellow> - I add dependencies , so I can work on
+              every DB environment
             </Li>
             <Li>
-              <SpanGrey>Dev-tools</SpanGrey>
+              <SpanYellow>Dev-tools</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>JPA</SpanGrey>
+              <SpanYellow>JPA</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>WEB</SpanGrey>
+              <SpanYellow>WEB</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>Spring-Security</SpanGrey>
+              <SpanYellow>Spring-Security</SpanYellow>
             </Li>
             <Li>
-              <SpanGrey>jjwt-api</SpanGrey> , <SpanGrey>jjwt-impl</SpanGrey> , <SpanGrey>jjwt-jackson</SpanGrey>
+              <SpanYellow>jjwt-api</SpanYellow> , <SpanYellow>jjwt-impl</SpanYellow> , <SpanYellow>jjwt-jackson</SpanYellow>
             </Li>
           </ULdisc>
         </article>

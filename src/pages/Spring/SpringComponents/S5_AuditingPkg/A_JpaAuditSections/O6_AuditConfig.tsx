@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,19 +14,19 @@ const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
         instead of creating a component (ChatGPT shows example with Component class for Auditing) .
         <ULdisc>
           <Li>
-            create class <SpanGrey>AuditConfig </SpanGrey>
+            create class <SpanYellow>AuditConfig </SpanYellow>
           </Li>
           <Li>
             annotate it with:
             <ULdisc>
               <Li>
-                <SpanGrey>@Configuration</SpanGrey>
+                <SpanYellow>@Configuration</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>@EnableJpaAuditing(auditorAwareRef = "auditorProvider")</SpanGrey>
+                <SpanYellow>@EnableJpaAuditing(auditorAwareRef = "auditorProvider")</SpanYellow>
               </Li>
               <Li>
-                create a <SpanGrey>@Bean</SpanGrey> of <SpanGrey>AuditorAwareImpl</SpanGrey>
+                create a <SpanYellow>@Bean</SpanYellow> of <SpanYellow>AuditorAwareImpl</SpanYellow>
               </Li>
             </ULdisc>
           </Li>

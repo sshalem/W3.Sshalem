@@ -3,8 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { JavaHighlight, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -27,26 +26,26 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">
-          🔹 Why frameworks often call <SpanGrey>userDetailsService.loadUserByUsername()</SpanGrey> in JWT filter
+          🔹 Why frameworks often call <SpanYellow>userDetailsService.loadUserByUsername()</SpanYellow> in JWT filter
         </p>
         <p>
           one of the most <SpanRed>debated</SpanRed> topics in JWT + Spring Security design 👌
         </p>
         <ULdisc>
           <Li>
-            After extracting the username from the token, Spring Security needs a <SpanGrey>UserDetails</SpanGrey> object to put into the
-            <SpanGrey>SecurityContext</SpanGrey>.
+            After extracting the username from the token, Spring Security needs a <SpanYellow>UserDetails</SpanYellow> object to put into the
+            <SpanYellow>SecurityContext</SpanYellow>.
           </Li>
           <Li>
-            JWT itself only carries claims (like <SpanGrey>sub</SpanGrey>, <SpanGrey>roles</SpanGrey>, <SpanGrey>iat</SpanGrey>,{" "}
-            <SpanGrey>exp</SpanGrey> ), not the full UserDetails.
+            JWT itself only carries claims (like <SpanYellow>sub</SpanYellow>, <SpanYellow>roles</SpanYellow>, <SpanYellow>iat</SpanYellow>,{" "}
+            <SpanYellow>exp</SpanYellow> ), not the full UserDetails.
           </Li>
           <Li>
             So the usual pattern is:
             <ULDecimal>
               <Li>Parse JWT → get username.</Li>
               <Li>
-                Load <SpanGrey>JwtUserDetails</SpanGrey> from DB via <SpanGrey>JwtUserDetailsService</SpanGrey>.
+                Load <SpanYellow>JwtUserDetails</SpanYellow> from DB via <SpanYellow>JwtUserDetailsService</SpanYellow>.
               </Li>
               <Li>Validate token and set authentication.</Li>
             </ULDecimal>
@@ -61,7 +60,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
             ✅ <strong>User roles/authorities are up-to-date</strong> (roles might have changed).
           </Li>
           <Li>
-            ✅ Works with Spring’s built-in <SpanGrey>UserDetailsService</SpanGrey> contract.
+            ✅ Works with Spring’s built-in <SpanYellow>UserDetailsService</SpanYellow> contract.
           </Li>
         </ULdisc>
         <p className="font-semibold">🛑 Downsides</p>
@@ -70,7 +69,8 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
             ⚠️ <strong>Extra DB hit on every request</strong> → might hurt performance if traffic is high.
           </Li>
           <Li>
-            ⚠️ <SpanRed>Defeats</SpanRed> one of JWT’s goals: being <SpanGrey>stateless</SpanGrey> and not needing <SpanGrey>DB lookups</SpanGrey>.
+            ⚠️ <SpanRed>Defeats</SpanRed> one of JWT’s goals: being <SpanYellow>stateless</SpanYellow> and not needing{" "}
+            <SpanYellow>DB lookups</SpanYellow>.
           </Li>
         </ULdisc>
       </section>
@@ -102,7 +102,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             If your app needs strict real-time role updates or user deactivation checks → yes, call{" "}
-            <SpanGrey>userDetailsService.loadUserByUsername(username)</SpanGrey> in the JWT filter.
+            <SpanYellow>userDetailsService.loadUserByUsername(username)</SpanYellow> in the JWT filter.
           </Li>
           <Li>
             If your app <strong>can tolerate stale roles for a few minutes → no DB call per request</strong>, instead put roles in JWT and trust them
@@ -114,28 +114,28 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">
-          🔑 Authentication flow with <SpanGrey>JwtAuthenticationFilter</SpanGrey>{" "}
+          🔑 Authentication flow with <SpanYellow>JwtAuthenticationFilter</SpanYellow>{" "}
         </p>
 
         <ULdisc>
           <Li>User sends username + password to /auth/login.</Li>
           <Li>
-            Spring Security calls your <SpanGrey>UserDetailsService.loadUserByUsername</SpanGrey> .
+            Spring Security calls your <SpanYellow>UserDetailsService.loadUserByUsername</SpanYellow> .
           </Li>
           <Li>
-            The <SpanGrey>AuthenticationManager</SpanGrey> checks the password and the account flags:
+            The <SpanYellow>AuthenticationManager</SpanYellow> checks the password and the account flags:
             <ULdisc>
               <Li>
-                <SpanGrey>isEnabled()</SpanGrey>
+                <SpanYellow>isEnabled()</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>isAccountNonLocked()</SpanGrey>
+                <SpanYellow>isAccountNonLocked()</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>isAccountNonExpired()</SpanGrey>
+                <SpanYellow>isAccountNonExpired()</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>isCredentialsNonExpired()</SpanGrey>
+                <SpanYellow>isCredentialsNonExpired()</SpanYellow>
               </Li>
               <Li>If any of them is false, it throws a specific exception.</Li>
             </ULdisc>
@@ -148,7 +148,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">
-          🔹 Why set the Authentication in <SpanGrey>SecurityContextHolder</SpanGrey>?
+          🔹 Why set the Authentication in <SpanYellow>SecurityContextHolder</SpanYellow>?
         </p>
 
         <p className="my-4 mt-8 font-semibold">🔑 What SecurityContextHolder does:</p>
@@ -160,13 +160,13 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
             That Authentication contains:
             <ULdisc>
               <Li>
-                <SpanGrey>principal</SpanGrey> → your UserDetails (username, etc.)
+                <SpanYellow>principal</SpanYellow> → your UserDetails (username, etc.)
               </Li>
               <Li>
-                <SpanGrey>credentials</SpanGrey> → usually null after login
+                <SpanYellow>credentials</SpanYellow> → usually null after login
               </Li>
               <Li>
-                <SpanGrey>authorities</SpanGrey> → the roles/permissions granted
+                <SpanYellow>authorities</SpanYellow> → the roles/permissions granted
               </Li>
             </ULdisc>
           </Li>
@@ -182,8 +182,8 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
             <strong>thread</strong>.
           </Li>
           <Li>
-            Without <SpanGrey>SecurityContextHolder</SpanGrey> being set correctly (after JWT validation), Spring won’t know what roles the current
-            user has, so your <SpanGrey>.antMatchers()</SpanGrey> check will always fail → you’d get <SpanRed>401/403</SpanRed>.
+            Without <SpanYellow>SecurityContextHolder</SpanYellow> being set correctly (after JWT validation), Spring won’t know what roles the
+            current user has, so your <SpanYellow>.antMatchers()</SpanYellow> check will always fail → you’d get <SpanRed>401/403</SpanRed>.
           </Li>
         </ULdisc>
       </section>
@@ -191,7 +191,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 What <SpanGrey>.antMatchers("/api/users/**").hasAnyRole("SUPER-ADMIN", "ADMIN")</SpanGrey> does?
+          🔑 What <SpanYellow>.antMatchers("/api/users/**").hasAnyRole("SUPER-ADMIN", "ADMIN")</SpanYellow> does?
         </p>
         <ULdisc>
           <Li>This is authorization metadata you configure in your HttpSecurity chain.</Li>
@@ -199,13 +199,13 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
             When a request comes in:
             <ULDecimal>
               <Li>
-                Spring Security looks at <SpanGrey>SecurityContextHolder.getContext().getAuthentication()</SpanGrey> .
+                Spring Security looks at <SpanYellow>SecurityContextHolder.getContext().getAuthentication()</SpanYellow> .
               </Li>
               <Li>
-                It extracts the <SpanGrey>authorities</SpanGrey> (roles) from that authentication.
+                It extracts the <SpanYellow>authorities</SpanYellow> (roles) from that authentication.
               </Li>
               <Li>
-                It compares them against the rule you wrote (<SpanGrey>hasAnyRole("SUPER-ADMIN", "ADMIN")</SpanGrey>).
+                It compares them against the rule you wrote (<SpanYellow>hasAnyRole("SUPER-ADMIN", "ADMIN")</SpanYellow>).
               </Li>
               <Li>If there’s a match → access granted ✅. Otherwise → 403 Forbidden ❌.</Li>
             </ULDecimal>
@@ -216,7 +216,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>JwtAuthenticationFilter</SpanGrey> code
+          🔑 <SpanYellow>JwtAuthenticationFilter</SpanYellow> code
         </p>
         <JavaHighlight javaCode={code_java}></JavaHighlight>
       </section>

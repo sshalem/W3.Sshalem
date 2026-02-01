@@ -3,7 +3,7 @@
 Intro --> (SPRING)(Auditing)(combine jpa envars)
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_CombinedAudit = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,10 +13,10 @@ const O1_CombinedAudit = ({ anchor }: { anchor: string }) => {
         Perfect choice ✅ — combining gives you a complete audit trail — simple, powerful, and enterprise-grade.
         <ULdisc>
           <Li>
-            <SpanGrey>Spring Data JPA</SpanGrey> Auditing (for who + when)
+            <SpanYellow>Spring Data JPA</SpanYellow> Auditing (for who + when)
           </Li>
           <Li>
-            <SpanGrey>Spring Data Envers</SpanGrey> (for what changed)
+            <SpanYellow>Spring Data Envers</SpanYellow> (for what changed)
           </Li>
         </ULdisc>
         <p className="my-2">

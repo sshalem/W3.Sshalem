@@ -4,7 +4,7 @@
 */
 
 import { Anchor, IMG, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import security_refresh_stateless_1 from "../../../../../assets/security_refresh_stateless_1.jpg";
 import security_refresh_stateless_2 from "../../../../../assets/security_refresh_stateless_2.jpg";
@@ -26,40 +26,40 @@ const O5_Test = ({ anchor }: { anchor: string }) => {
             ></Anchor>
           </Li>
           <Li>
-            App already with data initialized (See <SpanGrey>data-H2.sql , data-MySql.sql , data-PostGreSql.sql</SpanGrey> ){" "}
+            App already with data initialized (See <SpanYellow>data-H2.sql , data-MySql.sql , data-PostGreSql.sql</SpanYellow> ){" "}
           </Li>
           <Li>
-            Set the <SpanGrey>JWT_EXPIRATION_TIME_ms = 5_000</SpanGrey> (in <SpanGrey>JwtTokenUtil</SpanGrey> ) to 5 secs. this ensures accessToken
+            Set the <SpanYellow>JWT_EXPIRATION_TIME_ms = 5_000</SpanYellow> (in <SpanYellow>JwtTokenUtil</SpanYellow> ) to 5 secs. this ensures accessToken
             will expire after 5 secs.
           </Li>
 
           <Li>
-            With <SpanGrey>Postman</SpanGrey> I will sent this request in certain order as below
+            With <SpanYellow>Postman</SpanYellow> I will sent this request in certain order as below
             <IMG img_name={security_refresh_stateless_1}></IMG>
             <ULDecimal>
               <Li>
-                send <SpanGrey>Login</SpanGrey> request
+                send <SpanYellow>Login</SpanYellow> request
                 <IMG img_name={security_refresh_stateless_2}></IMG>
               </Li>
               <Li>
-                send <SpanGrey>getUserByName</SpanGrey> <strong>few times</strong> till we get Expiration Error
+                send <SpanYellow>getUserByName</SpanYellow> <strong>few times</strong> till we get Expiration Error
                 <IMG img_name={security_refresh_stateless_3}></IMG>
               </Li>
               <Li>
-                send <SpanGrey>refreshToken</SpanGrey> request, see that new <SpanGrey>accessToken</SpanGrey> generated, but{" "}
-                <SpanGrey>refreshToken</SpanGrey> remain the same.
+                send <SpanYellow>refreshToken</SpanYellow> request, see that new <SpanYellow>accessToken</SpanYellow> generated, but{" "}
+                <SpanYellow>refreshToken</SpanYellow> remain the same.
                 <IMG img_name={security_refresh_stateless_4}></IMG>
               </Li>
               <Li>
-                send <SpanGrey>getUserByName</SpanGrey> <strong>right away</strong> (because we have a 5 sec gap before expiring) , to see if new
+                send <SpanYellow>getUserByName</SpanYellow> <strong>right away</strong> (because we have a 5 sec gap before expiring) , to see if new
                 token is valid.
               </Li>
               <Li>
-                If valid , send till I get again <SpanGrey>JWT expired </SpanGrey> , because I want to see what App do if{" "}
-                <SpanGrey>refreshToken</SpanGrey> is expired
+                If valid , send till I get again <SpanYellow>JWT expired </SpanYellow> , because I want to see what App do if{" "}
+                <SpanYellow>refreshToken</SpanYellow> is expired
               </Li>
               <Li>
-                Send again <SpanGrey>refreshToken</SpanGrey>, we got refreshToken expired. the Logic is working great
+                Send again <SpanYellow>refreshToken</SpanYellow>, we got refreshToken expired. the Logic is working great
                 <IMG img_name={security_refresh_stateless_5}></IMG>
               </Li>
             </ULDecimal>

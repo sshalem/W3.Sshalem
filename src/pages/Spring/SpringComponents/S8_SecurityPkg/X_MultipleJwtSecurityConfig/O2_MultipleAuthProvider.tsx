@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import SpanGrey from "../../../../../components/Highlight/SpanGrey";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -13,7 +13,7 @@ const O2_MultipleAuthProvider = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">✅ Multiple authentication provider </p>
         <p>
-          With <SpanGrey>multiple authentication provider</SpanGrey> , we can define 2 different login pages. see the video below
+          With <SpanYellow>multiple authentication provider</SpanYellow> , we can define 2 different login pages. see the video below
         </p>
         <ULdisc>
           <Li>

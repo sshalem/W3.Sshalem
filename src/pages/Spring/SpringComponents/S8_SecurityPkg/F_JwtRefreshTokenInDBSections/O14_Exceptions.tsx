@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O14_Exceptions = ({ anchor }: { anchor: string }) => {
@@ -31,7 +31,7 @@ const O14_Exceptions = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>Controller Advice</SpanGrey> code
+          🔑 <SpanYellow>Controller Advice</SpanYellow> code
         </p>
         {renderControllerAdvice}
       </section>

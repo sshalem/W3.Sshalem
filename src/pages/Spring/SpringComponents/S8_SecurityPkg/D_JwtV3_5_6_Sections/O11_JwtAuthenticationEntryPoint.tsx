@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O11_JwtAuthenticationEntryPoint = ({ anchor }: { anchor: string }) => {
   return (
@@ -26,7 +26,7 @@ const O11_JwtAuthenticationEntryPoint = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="font-semibold">
-          🔑 <SpanGrey>JwtAuthenticationEntryPoint</SpanGrey> code
+          🔑 <SpanYellow>JwtAuthenticationEntryPoint</SpanYellow> code
         </p>
         <JavaHighlight javaCode={entry_point}></JavaHighlight>
       </section>

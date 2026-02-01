@@ -4,7 +4,7 @@
 */
 
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { JsxHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 import python_34 from "../../../../../assets/python_34.jpg";
 import { Link } from "react-router-dom";
 
@@ -16,13 +16,13 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-lg font-semibold">1️⃣ Create following packages</div>
         <ULdisc>
           <Li>
-            <SpanGrey>core package</SpanGrey> - holds configuration files ENV, profiles Logging <SpanGrey>logging_config.py</SpanGrey> - see section{" "}
+            <SpanYellow>core package</SpanYellow> - holds configuration files ENV, profiles Logging <SpanYellow>logging_config.py</SpanYellow> - see section{" "}
             <Link className="font-semibold text-blue-600" to={"python/fastapi/logging-fastapi#4.logging_config.py"}>
               logging_config
             </Link>
           </Li>
           <Li>
-            <SpanGrey>students package</SpanGrey> - Holds the <SpanGrey>students</SpanGrey> corresponding logic (router, schemas, SQLAlchemy, DB
+            <SpanYellow>students package</SpanYellow> - Holds the <SpanYellow>students</SpanYellow> corresponding logic (router, schemas, SQLAlchemy, DB
             connection, Buisness Logic ETC... )
           </Li>
           <IMG img_name={python_34}></IMG>
@@ -33,10 +33,10 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-lg font-semibold">2️⃣ create file router.py (Same as RestController)</div>
         <ULdisc>
           <Li>
-            create a file <SpanGrey>router.py</SpanGrey>
+            create a file <SpanYellow>router.py</SpanYellow>
           </Li>
           <Li>
-            create an Instance of <SpanGrey>APIRouter()</SpanGrey>
+            create an Instance of <SpanYellow>APIRouter()</SpanYellow>
             <JsxHighlight jsxCode={_1_} />
           </Li>
         </ULdisc>
@@ -44,10 +44,10 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-lg font-semibold">3️⃣ mount the router in main.py</div>
         <ULdisc>
           <Li>
-            mount the router in <SpanGrey>main.py</SpanGrey>
+            mount the router in <SpanYellow>main.py</SpanYellow>
           </Li>
           <Li>
-            See how I import the router form <SpanGrey>students</SpanGrey> file and gave it alias name
+            See how I import the router form <SpanYellow>students</SpanYellow> file and gave it alias name
             <PythonHighlight pythonCode={_2_} />
           </Li>
         </ULdisc>
