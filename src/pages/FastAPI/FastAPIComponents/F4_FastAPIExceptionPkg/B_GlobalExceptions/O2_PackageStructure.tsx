@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_PackageStructure = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,13 +17,14 @@ const O2_PackageStructure = ({ anchor }: { anchor: string }) => {
             See below package structure
             <ULDecimal>
               <Li>
-                Create <SpanGrey>exceptions</SpanGrey> package
+                Create <SpanYellow>exceptions</SpanYellow> package
               </Li>
               <Li>
-                Create <SpanGrey>student_exceptions.py</SpanGrey> where all custom exceptions for student will be held , the service layer exceptions.
+                Create <SpanYellow>student_exceptions.py</SpanYellow> where all custom exceptions for student will be held , the service layer
+                exceptions.
               </Li>
               <Li>
-                Create <SpanGrey>global_exception_handlers.py</SpanGrey> that centralize all exceptions
+                Create <SpanYellow>global_exception_handlers.py</SpanYellow> that centralize all exceptions
               </Li>
             </ULDecimal>
           </Li>

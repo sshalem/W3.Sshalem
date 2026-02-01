@@ -3,8 +3,9 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_DefaultBehavior from "./O1_DefaultBehavior";
 import O2_PackageStructure from "./O2_PackageStructure";
 import O3_CreateCustomExceptions from "./O3_CreateCustomExceptions";
-import O4_RouterAndService from "./O4_RouterAndService";
-import O5_ReturnCustomMessageError from "./O5_ReturnCustomMessageError";
+import O4_RaiseExceptionInService from "./O4_RaiseExceptionInService";
+import O5_TryExceptExceptionInInRouter from "./O5_TryExceptExceptionInInRouter";
+import O6_ReturnCustomMessageError from "./O6_ReturnCustomMessageError";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,14 +14,22 @@ import O5_ReturnCustomMessageError from "./O5_ReturnCustomMessageError";
 const o1_DefaultBehavior = "1. Default Exception Behavior";
 const o2_PackageStructure = "2. Package Structure";
 const o3_CreateCustomExceptions = "3. Create Custom Exceptions";
-const o4_RouterAndService = "4. Raise Exception in Service/Router";
-const o5_ReturnCustomMessageError = "5. Return Custom Message Error";
+const o4_RaiseExceptionInService = "4. Raise Exception in Service";
+const o5_TryExceptExceptionInInRouter = "5. Try/Except In In Router";
+const o6_ReturnCustomMessageError = "6. Return Custom Message Error";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DefaultBehavior, o2_PackageStructure, o3_CreateCustomExceptions, o4_RouterAndService, o5_ReturnCustomMessageError];
+const anchorList: string[] = [
+  o1_DefaultBehavior,
+  o2_PackageStructure,
+  o3_CreateCustomExceptions,
+  o4_RaiseExceptionInService,
+  o5_TryExceptExceptionInInRouter,
+  o6_ReturnCustomMessageError,
+];
 
 // ============================================
 // ============================================
@@ -77,8 +86,9 @@ const ExceptionsMain = () => {
       <O1_DefaultBehavior anchor={o1_DefaultBehavior} />
       <O2_PackageStructure anchor={o2_PackageStructure} />
       <O3_CreateCustomExceptions anchor={o3_CreateCustomExceptions} />
-      <O4_RouterAndService anchor={o4_RouterAndService} />
-      <O5_ReturnCustomMessageError anchor={o5_ReturnCustomMessageError} />
+      <O4_RaiseExceptionInService anchor={o4_RaiseExceptionInService} />
+      <O5_TryExceptExceptionInInRouter anchor={o5_TryExceptExceptionInInRouter} />
+      <O6_ReturnCustomMessageError anchor={o6_ReturnCustomMessageError} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

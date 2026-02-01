@@ -4,6 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_GlobalExceptionIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,17 +17,7 @@ const O1_GlobalExceptionIntro = ({ anchor }: { anchor: string }) => {
             Just replace:
             <ULdisc>
               <Li>
-                <em>
-                  <strong>
-                    <mark>@ControllerAdvice</mark>
-                  </strong>
-                </em>
-                →{" "}
-                <em>
-                  <strong>
-                    <mark>@exception_handler</mark>
-                  </strong>
-                </em>
+                <SpanYellow>@ControllerAdvice</SpanYellow> → <SpanYellow>@exception_handler</SpanYellow>
               </Li>
             </ULdisc>
           </Li>

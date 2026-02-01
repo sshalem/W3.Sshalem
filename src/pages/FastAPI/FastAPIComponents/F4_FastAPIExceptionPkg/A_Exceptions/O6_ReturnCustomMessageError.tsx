@@ -4,9 +4,9 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
 
-const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
+const O6_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -21,7 +21,7 @@ const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
                     <mark>Option 1</mark>
                   </em>
                 </strong>
-                : Wrap detail with a <SpanGrey>dict</SpanGrey>
+                : Wrap detail with a <SpanYellow>dict</SpanYellow>
                 <PythonHighlight pythonCode={_1_} />
               </div>
               <div>
@@ -53,7 +53,7 @@ const O5_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_ReturnCustomMessageError;
+export default O6_ReturnCustomMessageError;
 
 const _1_ = `@router.get("/checkError")
 def check_error():
