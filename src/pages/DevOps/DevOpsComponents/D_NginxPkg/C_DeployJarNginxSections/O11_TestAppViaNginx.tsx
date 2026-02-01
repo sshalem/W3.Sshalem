@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 
 const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
           <Li>I should see:</Li>
           <ULdisc>
             <Li>
-              <SpanGrey>Active: active (running)</SpanGrey>
+              <SpanYellow>Active: active (running)</SpanYellow>
             </Li>
             <Li>Java process listed</Li>
           </ULdisc>
@@ -32,7 +32,7 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
             <SpanRed>Important</SpanRed>
             <ULdisc>
               <Li>
-                App should listen on <SpanGrey>127.0.0.1</SpanGrey> or <SpanGrey>localhost</SpanGrey>
+                App should listen on <SpanYellow>127.0.0.1</SpanYellow> or <SpanYellow>localhost</SpanYellow>
               </Li>
               <Li>NGINX will forward traffic to it</Li>
             </ULdisc>
@@ -43,13 +43,13 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
         <p className="my-8 text-lg">3️⃣ Test the app </p>
         <ULdisc>
           <Li>
-            Browse thru <SpanGrey>http://your_server_ip/endpointUrl</SpanGrey>
+            Browse thru <SpanYellow>http://your_server_ip/endpointUrl</SpanYellow>
           </Li>
           <Li>
-            I can use <SpanGrey>Postman</SpanGrey>
+            I can use <SpanYellow>Postman</SpanYellow>
           </Li>
           <Li>
-            or use the <SpanGrey>curl</SpanGrey>command (Built in Linux)
+            or use the <SpanYellow>curl</SpanYellow>command (Built in Linux)
             <ApplicationPropertiesHighlight propertiesCode={_4_} />
           </Li>
           <Li>

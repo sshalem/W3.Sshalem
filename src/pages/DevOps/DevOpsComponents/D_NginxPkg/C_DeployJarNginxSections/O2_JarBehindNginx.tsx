@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O2_JarBehindNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O2_JarBehindNginx = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <div className="my-4">
           <span className="text-xl">
-            <SpanGrey>Clarification</SpanGrey>
+            <SpanYellow>Clarification</SpanYellow>
           </span>{" "}
         </div>
         <article className="my-8">

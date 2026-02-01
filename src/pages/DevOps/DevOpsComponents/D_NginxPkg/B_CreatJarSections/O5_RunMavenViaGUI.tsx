@@ -5,7 +5,7 @@
 import maven_1 from "../../../../../assets/maven_1.jpg";
 import maven_2 from "../../../../../assets/maven_2.jpg";
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O5_RunMavenViaGUI = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const O5_RunMavenViaGUI = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Maven build</Li>
             <Li>
-              in the <SpanGrey>Goals</SpanGrey> field , type <SpanGrey>clean package</SpanGrey>
+              in the <SpanYellow>Goals</SpanYellow> field , type <SpanYellow>clean package</SpanYellow>
             </Li>
           </ULdisc>
           <IMG img_name={maven_1}></IMG>
@@ -31,7 +31,7 @@ const O5_RunMavenViaGUI = ({ anchor }: { anchor: string }) => {
               Under the project, open the drop down of <strong>Lifecycle</strong>
             </Li>
             <Li>
-              Double click on <SpanGrey>clean</SpanGrey> and then Double click on <SpanGrey>package</SpanGrey>
+              Double click on <SpanYellow>clean</SpanYellow> and then Double click on <SpanYellow>package</SpanYellow>
             </Li>
           </ULdisc>
           <IMG img_name={maven_2}></IMG>

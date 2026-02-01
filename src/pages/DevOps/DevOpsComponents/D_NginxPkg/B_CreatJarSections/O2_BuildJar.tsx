@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_BuildJar = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,24 +16,24 @@ const O2_BuildJar = ({ anchor }: { anchor: string }) => {
               <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
             </Li>
             <Li>
-              This will make the JAR file in <SpanGrey>target</SpanGrey> folder.
+              This will make the JAR file in <SpanYellow>target</SpanYellow> folder.
               <Li>
                 After running the command below , i will create file name in this format <strong>{"<artifactId>-<version>.jar"}</strong>{" "}
               </Li>
               <Li>
-                Example : <SpanGrey>O1-Audit-Spring-JPA-0.0.1-SNAPSHOT.jar</SpanGrey>
+                Example : <SpanYellow>O1-Audit-Spring-JPA-0.0.1-SNAPSHOT.jar</SpanYellow>
               </Li>
               where:
               <ULdisc>
                 <Li>
                   <p className="inline-block w-[13rem]">
-                    <SpanGrey>O1-Audit-Spring-JPA</SpanGrey>
+                    <SpanYellow>O1-Audit-Spring-JPA</SpanYellow>
                   </p>
                   is <strong>{"<artifactId>"}</strong>{" "}
                 </Li>
                 <Li>
                   <p className="inline-block w-[13rem]">
-                    <SpanGrey>0.0.1-SNAPSHOT</SpanGrey>
+                    <SpanYellow>0.0.1-SNAPSHOT</SpanYellow>
                   </p>
                   is <strong>{"<version>"}</strong>{" "}
                 </Li>

@@ -3,16 +3,16 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <div className="my-8 text-2xl font-semibold">
-          Create a <SpanGrey>systemd service</SpanGrey> for audit.jar
+          Create a <SpanYellow>systemd service</SpanYellow> for audit.jar
         </div>
-        Why to Create & start the systemd service for <SpanGrey>audit.jar</SpanGrey> before Configure <SpanGrey>NGINX</SpanGrey> as a reverse proxy?
+        Why to Create & start the systemd service for <SpanYellow>audit.jar</SpanYellow> before Configure <SpanYellow>NGINX</SpanYellow> as a reverse proxy?
         <ULdisc>
           <Li>Your Spring Boot app must be running and listening on a port before NGINX can proxy to it</Li>
           <Li>
@@ -31,41 +31,41 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
         <div className="my-4 text-xl font-semibold"> 2 ways to Config way systemd service :</div>
         <ULDecimal>
           <Li>
-            Best practice : For your <SpanGrey>audit.jar</SpanGrey> setup behind NGINX
+            Best practice : For your <SpanYellow>audit.jar</SpanYellow> setup behind NGINX
             <ApplicationPropertiesHighlight propertiesCode={_12_2_} />
           </Li>
           <Li>
-            With this config , I will see the log in the <SpanGrey>audit.log</SpanGrey> only (Less recommended)
+            With this config , I will see the log in the <SpanYellow>audit.log</SpanYellow> only (Less recommended)
             <ApplicationPropertiesHighlight propertiesCode={_12_3_} />
           </Li>
         </ULDecimal>
         <p className="my-8">
           <hr />
         </p>
-        Create service <SpanGrey>audit.service</SpanGrey> file:
+        Create service <SpanYellow>audit.service</SpanYellow> file:
         <ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_1_} />
         </ULdisc>
         Paste config below:
         <ULdisc>
           <Li>
-            In config below I define to log to a file <SpanGrey>audit.log</SpanGrey>
+            In config below I define to log to a file <SpanYellow>audit.log</SpanYellow>
           </Li>
           <Li>
-            meaning <SpanGrey>journalctl</SpanGrey> commands won't show the log (All logs of the app will be written to audit.log)
+            meaning <SpanYellow>journalctl</SpanYellow> commands won't show the log (All logs of the app will be written to audit.log)
           </Li>
           <Li>Thats ok for testing , and for checking code is running</Li>
           <Li>
-            <SpanGrey>
-              Best Practice With <SpanGrey>journal</SpanGrey>
-            </SpanGrey>
+            <SpanYellow>
+              Best Practice With <SpanYellow>journal</SpanYellow>
+            </SpanYellow>
             <ULdisc>
               <Li>All logs (system + app) are in one place</Li>
               <Li>
-                to config <SpanGrey>application.properties</SpanGrey> to write to log to a file.
+                to config <SpanYellow>application.properties</SpanYellow> to write to log to a file.
               </Li>
               <Li>
-                Works perfectly with: <SpanGrey>journalctl</SpanGrey> with all of it's options.
+                Works perfectly with: <SpanYellow>journalctl</SpanYellow> with all of it's options.
               </Li>
               <Li>You don’t need to manage log files manually</Li>
               <Li>
@@ -84,7 +84,7 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_3_} />
           <Li>
-            Check logs using <SpanGrey>journalctl</SpanGrey> and <SpanGrey>tail</SpanGrey>
+            Check logs using <SpanYellow>journalctl</SpanYellow> and <SpanYellow>tail</SpanYellow>
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_4_} />
         </ULdisc>

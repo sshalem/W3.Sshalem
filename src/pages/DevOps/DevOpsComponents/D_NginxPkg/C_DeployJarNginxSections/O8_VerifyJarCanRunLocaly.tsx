@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O8_VerifyJarCanRunLocaly = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O8_VerifyJarCanRunLocaly = ({ anchor }: { anchor: string }) => {
           <Li>Test that it works without NGINX</Li>
           <Li>In Linux terminal write the command below</Li>
           <Li>
-            To stop it <SpanGrey>CTRL + c</SpanGrey>
+            To stop it <SpanYellow>CTRL + c</SpanYellow>
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_7_} />
         </ULdisc>

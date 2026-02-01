@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -49,31 +49,31 @@ const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
         <ULDecimal>
           <Li>
             <p className="inline-block w-[18rem]">
-              <SpanGrey>/etc/nginx/nginx.conf</SpanGrey>
+              <SpanYellow>/etc/nginx/nginx.conf</SpanYellow>
             </p>
             - Main config
           </Li>
           <Li>
             <p className="inline-block w-[18rem]">
-              <SpanGrey>/etc/nginx/sites-available/</SpanGrey>
+              <SpanYellow>/etc/nginx/sites-available/</SpanYellow>
             </p>
             - Site configs
           </Li>
           <Li>
             <p className="inline-block w-[18rem]">
-              <SpanGrey>/etc/nginx/sites-enabled/</SpanGrey>
+              <SpanYellow>/etc/nginx/sites-enabled/</SpanYellow>
             </p>
             - Enabled sites
           </Li>
           <Li>
             <p className="inline-block w-[18rem]">
-              <SpanGrey>/var/www/html</SpanGrey>
+              <SpanYellow>/var/www/html</SpanYellow>
             </p>
             - Web root (default)
           </Li>
           <Li>
             <p className="inline-block w-[18rem]">
-              <SpanGrey>/var/log/nginx/</SpanGrey>
+              <SpanYellow>/var/log/nginx/</SpanYellow>
             </p>
             - Logs
           </Li>

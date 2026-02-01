@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey, XmlHighlight } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
 const O4_CustomJarViaTerminal = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,25 +12,25 @@ const O4_CustomJarViaTerminal = ({ anchor }: { anchor: string }) => {
         <div className="">Let's see How we can give a custom name via terminal (works only if you wire it) </div>
         <ULdisc>
           <Li>
-            Open <SpanGrey>POM.xml</SpanGrey>
+            Open <SpanYellow>POM.xml</SpanYellow>
           </Li>
           <Li>We need to wire a property , So I could use it in the build tag</Li>
           <ULDecimal>
             <Li>
               In the tag of <strong>{"<properties>"}</strong> , add the following tag{" "}
-              <SpanGrey>{"<jar.customAppName>my-custom-app</jar.customAppName>"}</SpanGrey>
+              <SpanYellow>{"<jar.customAppName>my-custom-app</jar.customAppName>"}</SpanYellow>
             </Li>
             <Li>
-              In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanGrey>{"<finalName>${jar.customAppName}</finalName>"}</SpanGrey>
+              In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanYellow>{"<finalName>${jar.customAppName}</finalName>"}</SpanYellow>
               <XmlHighlight xmlCode={wired_custom_name} />
             </Li>
           </ULDecimal>
           <Li>
-            For the example, I run it with following command , so jar file will be <SpanGrey>shalem.jar</SpanGrey>
+            For the example, I run it with following command , so jar file will be <SpanYellow>shalem.jar</SpanYellow>
             <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package_custom_name} />
           </Li>
           <Li>
-            Optionaly, If we run without modifing in CLI , It will give the default name of <SpanGrey>my-custom-app.jar</SpanGrey>
+            Optionaly, If we run without modifing in CLI , It will give the default name of <SpanYellow>my-custom-app.jar</SpanYellow>
             <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
           </Li>
         </ULdisc>
@@ -41,7 +41,7 @@ const O4_CustomJarViaTerminal = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Maven build</Li>
             <Li>
-              in the <SpanGrey>Goals</SpanGrey> field , type <SpanGrey>clean package</SpanGrey>
+              in the <SpanYellow>Goals</SpanYellow> field , type <SpanYellow>clean package</SpanYellow>
             </Li>
           </ULdisc>
           <IMG img_name={maven_1}></IMG>

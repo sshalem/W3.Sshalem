@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O10_ConfigNginxReverseProxy = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,18 +16,18 @@ const O10_ConfigNginxReverseProxy = ({ anchor }: { anchor: string }) => {
             <ApplicationPropertiesHighlight propertiesCode={_10_} />
           </Li>
           <Li>
-            Create Config file <SpanGrey>springboot</SpanGrey> inside directory of <SpanGrey>/etc/nginx/sites-available/</SpanGrey>:
+            Create Config file <SpanYellow>springboot</SpanYellow> inside directory of <SpanYellow>/etc/nginx/sites-available/</SpanYellow>:
           </Li>
           <ApplicationPropertiesHighlight propertiesCode={_11_} />
           <Li>
             Paste this :
             <ULdisc>
               <Li>
-                <SpanGrey>server_name</SpanGrey> = Linode server IP <SpanGrey>139.162.148.144</SpanGrey>
+                <SpanYellow>server_name</SpanYellow> = Linode server IP <SpanYellow>139.162.148.144</SpanYellow>
               </Li>
               <Li>
-                <SpanGrey>proxy_pass</SpanGrey> = <SpanGrey>http://localhost:8080;</SpanGrey> (Sometimes instead of localhost need to be{" "}
-                <SpanGrey>127.0.0.1</SpanGrey> )
+                <SpanYellow>proxy_pass</SpanYellow> = <SpanYellow>http://localhost:8080;</SpanYellow> (Sometimes instead of localhost need to be{" "}
+                <SpanYellow>127.0.0.1</SpanYellow> )
               </Li>
             </ULdisc>
           </Li>

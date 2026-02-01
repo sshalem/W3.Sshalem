@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Table_3ColCompareJarDeploy from "../../../../../components/Tables/Table_3ColCompareJarDeploy";
 
 const O1_DifferenceArchitecture = ({ anchor }: { anchor: string }) => {
@@ -12,7 +12,7 @@ const O1_DifferenceArchitecture = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <div className="my-4">
           <span className="text-xl">
-            <SpanGrey>Clarification</SpanGrey>
+            <SpanYellow>Clarification</SpanYellow>
           </span>{" "}
         </div>
         <article className="my-8">

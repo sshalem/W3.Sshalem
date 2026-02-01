@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O7_UploadJarToLinux = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,24 +12,24 @@ const O7_UploadJarToLinux = ({ anchor }: { anchor: string }) => {
         <p className="my-8 text-2xl font-semibold">Upload the JAR to Linode</p>
         <ULdisc>
           <Li>
-            with <SpanGrey>FileZilla</SpanGrey>
+            with <SpanYellow>FileZilla</SpanYellow>
           </Li>
           <Li>
-            with <SpanGrey>scp</SpanGrey> command using terminal
+            with <SpanYellow>scp</SpanYellow> command using terminal
           </Li>
         </ULdisc>
         <ULdisc>
           <Li>
-            Open Terminal, under the project go to the <SpanGrey>target</SpanGrey> directory , where the JAR file created in previous step
+            Open Terminal, under the project go to the <SpanYellow>target</SpanYellow> directory , where the JAR file created in previous step
           </Li>
           <Li>
             Command below is the format what need to be in the , which copies the JAR file to a dedicated folder (on Linode Linux server)
             <ULdisc>
               <Li>
-                {"my-app-name"} - <SpanGrey>audit</SpanGrey>
+                {"my-app-name"} - <SpanYellow>audit</SpanYellow>
               </Li>
               <Li>
-                LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
+                LINODE_SERVER_IP - <SpanYellow>139.162.148.144</SpanYellow>
               </Li>
             </ULdisc>
             <ApplicationPropertiesHighlight propertiesCode={scp_jar} />

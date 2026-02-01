@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import Table_5ColCompareJournalNohup from "../../../../../components/Tables/Table_5ColCompareJournalNohup";
 
 const OX_Systemd = ({ anchor }: { anchor: string }) => {
@@ -12,27 +12,27 @@ const OX_Systemd = ({ anchor }: { anchor: string }) => {
       Here’s a step-by-step guide to deploy your Spring Boot JAR on a Linux server with NGINX:
       <section className="my-8">
         <div className="text-lg font-semibold">
-          What a <SpanGrey>systemd service</SpanGrey> does:
+          What a <SpanYellow>systemd service</SpanYellow> does:
         </div>
         <ULdisc>
           <Li>
-            You define a service unit file (e.g., <SpanGrey>/etc/systemd/system/audit.service</SpanGrey> ) with the JAR path, working directory, user,
+            You define a service unit file (e.g., <SpanYellow>/etc/systemd/system/audit.service</SpanYellow> ) with the JAR path, working directory, user,
             and restart policy.
           </Li>
           <Li>
-            Start it with <SpanGrey>sudo systemctl start audit</SpanGrey>
+            Start it with <SpanYellow>sudo systemctl start audit</SpanYellow>
           </Li>
           <Li>
-            Enable it to auto-start at boot with <SpanGrey>sudo systemctl enable audit</SpanGrey> .
+            Enable it to auto-start at boot with <SpanYellow>sudo systemctl enable audit</SpanYellow> .
           </Li>
           <Li>
-            <SpanGrey>systemd</SpanGrey> handles:
+            <SpanYellow>systemd</SpanYellow> handles:
             <ULdisc>
               <Li>Running the JAR in the background automatically.</Li>
               <Li>Runs on reboot</Li>
               <Li>Auto restart - Restarting it if it crashes.</Li>
               <Li>
-                Logging (accessible via <SpanGrey>journalctl -u audit -f</SpanGrey> ).
+                Logging (accessible via <SpanYellow>journalctl -u audit -f</SpanYellow> ).
               </Li>
               <Li>Proper shutdown when the system stops.</Li>
             </ULdisc>
@@ -40,8 +40,8 @@ const OX_Systemd = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         <div className="text-lg font-semibold">✅ Conclusion</div>
         <ULdisc>
-          Once it’s running as a <SpanGrey>systemd service</SpanGrey>, you do not need <SpanGrey>nohup ... &</SpanGrey>, because{" "}
-          <SpanGrey>systemd</SpanGrey> manages
+          Once it’s running as a <SpanYellow>systemd service</SpanYellow>, you do not need <SpanYellow>nohup ... &</SpanYellow>, because{" "}
+          <SpanYellow>systemd</SpanYellow> manages
           <ULdisc>
             <Li>the background process for you</Li>
             <Li>logs</Li>

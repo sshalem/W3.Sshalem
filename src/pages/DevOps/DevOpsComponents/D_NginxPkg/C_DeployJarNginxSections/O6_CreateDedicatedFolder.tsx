@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_CreateDedicatedFolder = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,13 +11,13 @@ const O6_CreateDedicatedFolder = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <ULdisc>
           <Li>
-            create a dedicated folder under <SpanGrey>/opt</SpanGrey> directory
+            create a dedicated folder under <SpanYellow>/opt</SpanYellow> directory
             <ULdisc>
               <Li>
-                <SpanGrey>/opt</SpanGrey> is a standard Linux directory for <strong>optional / third-party software</strong>
+                <SpanYellow>/opt</SpanYellow> is a standard Linux directory for <strong>optional / third-party software</strong>
               </Li>
               <Li>
-                <SpanGrey>/opt</SpanGrey> is commonly used for deployed apps
+                <SpanYellow>/opt</SpanYellow> is commonly used for deployed apps
               </Li>
             </ULdisc>
             <ApplicationPropertiesHighlight propertiesCode={mkdir_folder} />

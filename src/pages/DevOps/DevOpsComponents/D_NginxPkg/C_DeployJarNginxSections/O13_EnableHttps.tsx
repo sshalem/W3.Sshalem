@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
   return (
@@ -26,7 +26,7 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
           <Li>
-            <SpanGrey>👉 Strong recommendation</SpanGrey>: create a domain or subdomain and point it to your server.
+            <SpanYellow>👉 Strong recommendation</SpanYellow>: create a domain or subdomain and point it to your server.
           </Li>
           <Li>
             So , Point your domain to the server
@@ -75,7 +75,7 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
             <ApplicationPropertiesHighlight propertiesCode={_5_} />
           </Li>
           <Li>
-            Expected <SpanGrey>🔒 Padlock visible</SpanGrey>
+            Expected <SpanYellow>🔒 Padlock visible</SpanYellow>
             <ApplicationPropertiesHighlight propertiesCode={_6_} />
           </Li>
         </ULdisc>
