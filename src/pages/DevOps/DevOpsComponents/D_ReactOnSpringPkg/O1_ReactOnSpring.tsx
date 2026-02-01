@@ -3,31 +3,31 @@
 React On Spring--> (DEVOPS)(Netlify)(React On Spring)
 */
 import { MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../components/Highlight";
 
 const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
-        There is a common issue when deploying a <SpanBlue>React app</SpanBlue> within a <SpanGreen>Spring Boot</SpanGreen> backend, especially when
-        using <SpanRed>React Router for client-side routing</SpanRed>.
+        There is a common issue when deploying a <SpanYellow>React app</SpanYellow> within a <SpanYellow>Spring Boot</SpanYellow> backend, especially
+        when using <SpanYellow>React Router for client-side routing</SpanYellow>.
       </div>
       <div>
         <DivDoubleBorder>💥 The Problem</DivDoubleBorder>
-        When I refresh a non-root URL like <SpanBlue>/about</SpanBlue> or <SpanBlue>/dashboard</SpanBlue>, <br />
-        the Spring Boot server tries to handle the route — but it doesn't recognize it and returns a <SpanRed>404</SpanRed>. <br />
-        <strong>React Router</strong> expects the <SpanGreen>client-side</SpanGreen> app to handle routing, <SpanRed>not the server</SpanRed>.
+        When I refresh a non-root URL like <SpanYellow>/about</SpanYellow> or <SpanYellow>/dashboard</SpanYellow>, <br />
+        the Spring Boot server tries to handle the route — but it doesn't recognize it and returns a <SpanYellow>404</SpanYellow>. <br />
+        <strong>React Router</strong> expects the <SpanYellow>client-side</SpanYellow> app to handle routing, <SpanYellow>not the server</SpanYellow>.
       </div>
       <div>
         <DivDoubleBorder>✅ The Solution</DivDoubleBorder>I need to configure Spring Boot to <strong> forward all unknown routes</strong> to the
-        <SpanBlue>index.html</SpanBlue> of your React app. <br />
+        <SpanYellow>index.html</SpanYellow> of your React app. <br />
         This allows React Router to take over routing after the initial page load.
       </div>
       <DivDoubleBorder>🔧 Fix Spring boot configuration</DivDoubleBorder>
       <div>
-        You can do this by adding a <SpanBlue>controller</SpanBlue> that forwards all unknown paths to <SpanBlue>index.html</SpanBlue>. <br />
-        This controller catches all paths without a period (ignores static files like <SpanBlue>.css</SpanBlue> <SpanBlue>.js</SpanBlue> and forwards
-        them to <strong>index.html</strong>).
+        You can do this by adding a <SpanYellow>controller</SpanYellow> that forwards all unknown paths to <SpanYellow>index.html</SpanYellow>. <br />
+        This controller catches all paths without a period (ignores static files like <SpanYellow>.css</SpanYellow> <SpanYellow>.js</SpanYellow> and
+        forwards them to <strong>index.html</strong>).
       </div>
       <JavaHighlight javaCode={javaCodeController}></JavaHighlight>
       <div>🌍 If using WebSecurity in Spring Security , make sure to permit all routes or exclude them from security</div>

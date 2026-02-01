@@ -3,7 +3,7 @@
 Install_tomcat_on_linux --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, SpanYellow } from "../../../../../components/Highlight";
 
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
@@ -27,7 +27,7 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
       <DivDoubleBorder>Tomcat Install</DivDoubleBorder>
       <div>
         {" "}
-        I must go to tomcat home page and download the <SpanGreen>right version</SpanGreen> I want with the <SpanGreen>right path</SpanGreen>
+        I must go to tomcat home page and download the <SpanYellow>right version</SpanYellow> I want with the <SpanYellow>right path</SpanYellow>
       </div>
 
       <ul className="my-4 ml-8 list-decimal">
@@ -40,28 +40,28 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
         <li className="my-1">At the left pane , Click on the Download</li>
         <IMG img_name={tomcat_1}></IMG>
         <li className="my-1">
-          At the time that I made this tutorial, I install the tomcat <SpanBlue>v10.1.44</SpanBlue> version .
+          At the time that I made this tutorial, I install the tomcat <SpanYellow>v10.1.44</SpanYellow> version .
         </li>
         <li className="my-1">
-          On the <SpanGreen>Quick navigation</SpanGreen> , click on <SpanGreen>browse</SpanGreen>
+          On the <SpanYellow>Quick navigation</SpanYellow> , click on <SpanYellow>browse</SpanYellow>
         </li>
         <IMG img_name={tomcat_2}></IMG>
         <li className="my-1">
-          Click on the <SpanBlue>v10.1.44</SpanBlue>
+          Click on the <SpanYellow>v10.1.44</SpanYellow>
         </li>
         <IMG img_name={tomcat_3}></IMG>
         <li className="my-1">
-          Click on <SpanBlue>bin</SpanBlue>
+          Click on <SpanYellow>bin</SpanYellow>
         </li>
         <IMG img_name={tomcat_4}></IMG>
         <li className="my-1">
           Now choose the version to download. This will be the the name of the tomact version file I will download on Linux Server
           <ul className="my-4 ml-8 list-disc">
             <li className="my-1">
-              version : <SpanRed>apache-tomcat-10.1.44.tar.gz</SpanRed> see image below
+              version : <SpanYellow>apache-tomcat-10.1.44.tar.gz</SpanYellow> see image below
             </li>
             <li className="my-1">
-              link to download from : <SpanRed>https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanRed>{" "}
+              link to download from : <SpanYellow>https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanYellow>{" "}
               combination of the url + the version
             </li>
           </ul>
@@ -74,29 +74,31 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
           use following commands to Install on Linux
           <ul className="my-4 ml-8 list-decimal">
             <li className="my-1">
-              <SpanGreen>sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat</SpanGreen> create a new system user with home directory
-              <SpanBlue>/opt/tomcat</SpanBlue>
+              <SpanYellow>sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat</SpanYellow> create a new system user with home directory
+              <SpanYellow>/opt/tomcat</SpanYellow>
             </li>
             <li className="my-1">
-              <SpanGreen>cd /tmp</SpanGreen> go tp <SpanBlue>tmp directory</SpanBlue>
+              <SpanYellow>cd /tmp</SpanYellow> go tp <SpanYellow>tmp directory</SpanYellow>
             </li>
             <li className="my-1">
-              <SpanGreen>wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanGreen>Download the
-              <SpanBlue>tar.gz</SpanBlue> file to the <SpanBlue>/tmp</SpanBlue> directory
+              <SpanYellow>wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz</SpanYellow>Download the
+              <SpanYellow>tar.gz</SpanYellow> file to the <SpanYellow>/tmp</SpanYellow> directory
             </li>
             <li className="my-1">
-              <SpanGreen>sudo mkdir /opt/tomcat</SpanGreen> create <SpanBlue>tomcat</SpanBlue>directory inside <SpanBlue>opt</SpanBlue> directory
+              <SpanYellow>sudo mkdir /opt/tomcat</SpanYellow> create <SpanYellow>tomcat</SpanYellow>directory inside <SpanYellow>opt</SpanYellow>{" "}
+              directory
             </li>
 
             <li className="my-1">
-              <SpanGreen>sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1</SpanGreen> extract it to the{" "}
-              <SpanBlue>/opt/tomcat </SpanBlue>directory
+              <SpanYellow>sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1</SpanYellow> extract it to the{" "}
+              <SpanYellow>/opt/tomcat </SpanYellow>directory
             </li>
             <li className="my-1">
-              <SpanGreen>sudo chown -R tomcat:tomcat /opt/tomcat/</SpanGreen> Set Permissions, First, we’ll change the directory ownership to tomcat.
+              <SpanYellow>sudo chown -R tomcat:tomcat /opt/tomcat/</SpanYellow> Set Permissions, First, we’ll change the directory ownership to
+              tomcat.
             </li>
             <li className="my-1">
-              <SpanGreen>sudo chmod -R u+x /opt/tomcat/bin</SpanGreen> Next, make all scripts within the bin directory executable.
+              <SpanYellow>sudo chmod -R u+x /opt/tomcat/bin</SpanYellow> Next, make all scripts within the bin directory executable.
             </li>
           </ul>
         </li>

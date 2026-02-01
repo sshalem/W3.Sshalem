@@ -3,7 +3,7 @@
 config_tomcat_service --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 import tomcat_7 from "../../../../../assets/tomcat_7.jpg";
 
@@ -20,17 +20,17 @@ const O3_ConfigTomcatService = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           run command below , which shows the path where JDK is inastall <br />
           <LinuxHighlight bashCode={java_alternatives}></LinuxHighlight>
-          This command result the path <SpanGreen>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanGreen> <br />I will take a note of the path where Java
+          This command result the path <SpanYellow>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanYellow> <br />I will take a note of the path where Java
           resides. <br />
-          I'll need the path momentarily to config the <SpanGreen>tomcat.service</SpanGreen> . .<IMG img_name={tomcat_7}></IMG>
+          I'll need the path momentarily to config the <SpanYellow>tomcat.service</SpanYellow> . .<IMG img_name={tomcat_7}></IMG>
         </li>
         <li className="my-1">
-          To open <SpanGreen>tomcat.service</SpanGreen> copy this command
+          To open <SpanYellow>tomcat.service</SpanYellow> copy this command
           <LinuxHighlight bashCode={open_tomcat_service}></LinuxHighlight>
         </li>
         <li className="my-1">
-          Add the following lines to <SpanGreen>tomcat.service</SpanGreen> file. <br />
-          modify the value of <SpanBlue>JAVA_HOME</SpanBlue> with the path of <SpanGreen>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanGreen> .
+          Add the following lines to <SpanYellow>tomcat.service</SpanYellow> file. <br />
+          modify the value of <SpanYellow>JAVA_HOME</SpanYellow> with the path of <SpanYellow>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanYellow> .
           <LinuxHighlight bashCode={config_tomcat_service}></LinuxHighlight>
         </li>
       </ul>

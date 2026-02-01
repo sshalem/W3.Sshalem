@@ -3,7 +3,7 @@
 start_tomcat --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
 
 const O4_StartTomcat = ({ anchor }: { anchor: string }) => {
@@ -16,16 +16,16 @@ const O4_StartTomcat = ({ anchor }: { anchor: string }) => {
           <LinuxHighlight bashCode={start_tomcat}></LinuxHighlight>
         </li>
         <li className="my-1">
-          Check tomcat status , run command . To exit press <SpanRed>q</SpanRed>
+          Check tomcat status , run command . To exit press <SpanYellow>q</SpanYellow>
           <LinuxHighlight bashCode={tomcat_status}></LinuxHighlight>
         </li>
         <li className="my-1">
-          Open firewall, verify port for 8080 shows <SpanGreen>ALLOW</SpanGreen> <br />
-          (Usually , it is allowed by default, but If needed , to <SpanGreen>ALLOW</SpanGreen> port 8080 run command)
+          Open firewall, verify port for 8080 shows <SpanYellow>ALLOW</SpanYellow> <br />
+          (Usually , it is allowed by default, but If needed , to <SpanYellow>ALLOW</SpanYellow> port 8080 run command)
           <LinuxHighlight bashCode={firewall}></LinuxHighlight>
         </li>
         <li className="my-1">
-          Additional commands to <SpanRed>stop</SpanRed>, <SpanBlue>start</SpanBlue> , <SpanGreen>restart</SpanGreen> tomcat:
+          Additional commands to <SpanYellow>stop</SpanYellow>, <SpanYellow>start</SpanYellow> , <SpanYellow>restart</SpanYellow> tomcat:
           <LinuxHighlight bashCode={stop_start_restart}></LinuxHighlight>
         </li>
       </ul>
