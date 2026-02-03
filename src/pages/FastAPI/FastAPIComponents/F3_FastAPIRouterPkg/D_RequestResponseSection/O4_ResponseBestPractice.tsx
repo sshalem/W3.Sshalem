@@ -16,11 +16,11 @@ const O4_ResponseBestPractice = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
           <Li>
-            Behind the scenes using its <SpanYellow>jsonable_encoder</SpanYellow> , It converts Python objects (including Pydantic models, datetime, UUID,
+            <SpanYellow>jsonable_encoder</SpanYellow> , Behind the scenes , It converts Python objects (including Pydantic models, datetime, UUID,
             etc.) into JSON-compatible data using
           </Li>
           <Li>
-            and then puts that data into a <SpanYellow>JSONResponse</SpanYellow> .
+            <SpanYellow>JSONResponse</SpanYellow> Serializes Python objects → JSON string
           </Li>
         </ULdisc>
         <PythonHighlight pythonCode={_1_}></PythonHighlight>

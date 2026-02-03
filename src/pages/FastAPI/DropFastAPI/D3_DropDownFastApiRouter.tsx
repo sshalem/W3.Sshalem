@@ -46,6 +46,7 @@ const D3_DropDownFastApiRouter = () => {
         <SideDropdownLink sideDropDownNavName="3. Setup FastApi" internalLink="/fastapi/router/setup-fastapi" />
         <SideDropdownLink sideDropDownNavName="4. Response MediaType" internalLink="/fastapi/router/request-response" />
         <SideDropdownLink sideDropDownNavName="5. GET" internalLink="/fastapi/router/get-request" />
+        <SideDropdownLink sideDropDownNavName="6. POST" internalLink="/fastapi/router/post-request" />
       </div>
     </section>
   );

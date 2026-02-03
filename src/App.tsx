@@ -311,6 +311,7 @@ import {
 import {
   GetRequestMain,
   MainPyMain,
+  PostRequestMain,
   PydanticMain,
   RequestResponseMain,
   SetupFastApiMain,
@@ -743,6 +744,7 @@ const router = createBrowserRouter(
                 { path: "pydantic", element: <PydanticMain /> },
                 { path: "request-response", element: <RequestResponseMain /> },
                 { path: "get-request", element: <GetRequestMain /> },
+                { path: "post-request", element: <PostRequestMain /> },
               ],
             },
             {

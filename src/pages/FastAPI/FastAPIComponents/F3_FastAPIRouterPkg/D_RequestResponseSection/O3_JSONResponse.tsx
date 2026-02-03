@@ -22,8 +22,11 @@ const O3_JSONResponse = ({ anchor }: { anchor: string }) => {
         </ULdisc>
 
         <Li>
-          <SpanYellow>jsonable_encoder</SpanYellow> knows how to convert many non-serializable types (e.g., datetime, UUID, Decimal, and arbitrary
-          objects with <SpanYellow>__dict__</SpanYellow> ) into JSON-friendly structures.
+          <SpanYellow>jsonable_encoder</SpanYellow> knows how to convert Any Python object (Pydantic model, datetime, set…) into JSON-safe Python
+          object structures, which are: <SpanYellow>dict, list, str, int…</SpanYellow>
+        </Li>
+        <Li>
+          <SpanYellow>JSONResponse</SpanYellow> Serializes JSON-safe Python object → JSON string (HTTP response body (JSON string/bytes))
         </Li>
         <PythonHighlight pythonCode={_2_}></PythonHighlight>
       </section>
