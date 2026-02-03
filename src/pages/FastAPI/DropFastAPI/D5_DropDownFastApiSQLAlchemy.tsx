@@ -41,7 +41,7 @@ const D5_DropDownFastApiSQLAlchemy = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="PyCharm" internalLink="/fastapi/sqlalchemy/pycharm" />
+        <SideDropdownLink sideDropDownNavName="Folder Structure" internalLink="/fastapi/sqlalchemy/folder-structure" />
         <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/sqlalchemy/vscode" />
       </div>
     </section>

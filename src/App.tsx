@@ -318,6 +318,7 @@ import {
 } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
+import { FolderStructureMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
 
 const router = createBrowserRouter(
   [
@@ -755,7 +756,14 @@ const router = createBrowserRouter(
                 { path: "global-exception", element: <GlobalExceptionsMain /> },
               ],
             },
-            { path: "sqlalchemy", element: <FastAPISQLAlchemy /> },
+            {
+              path: "sqlalchemy",
+              element: <FastAPISQLAlchemy />,
+              children: [
+                { path: "folder-structure", element: <FolderStructureMain /> },
+                // folder-structure
+              ],
+            },
             { path: "auditing", element: <FastAPIAuditing /> },
             { path: "security", element: <FastAPISecurity /> },
             { path: "caching", element: <FastAPICaching /> },
