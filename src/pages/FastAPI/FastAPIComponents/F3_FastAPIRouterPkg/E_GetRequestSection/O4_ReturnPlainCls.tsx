@@ -19,8 +19,8 @@ const O4_ReturnPlainCls = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>By default, FastAPI uses Pydantic for automatic serialization.</Li>
               <Li>
-                Behind the scenes using its <SpanYellow>jsonable_encoder</SpanYellow> , It converts Python objects (including Pydantic models, datetime,
-                UUID, etc.) into JSON-compatible data using
+                Behind the scenes using its <SpanYellow>jsonable_encoder</SpanYellow> , It converts Python objects (including Pydantic models,
+                datetime, UUID, etc.) into JSON-compatible data using
               </Li>
               <Li>
                 and then puts that data into a <SpanYellow>JSONResponse</SpanYellow> .
