@@ -1,2 +1,2 @@
-// export { default as CreateProjectMain } from "./A_CreateProjectSections/CreateProjectMain";
-export { default as FolderStructureMain } from "./A_FolderStructure/FolderStructureMain";
+export { default as FolderStructureMain } from "./A_FolderStructureSection/FolderStructureMain";
+export { default as SqlAlchemyConfigMain } from "./B_SQLAlchemyConfigSection/SqlAlchemyConfigMain";

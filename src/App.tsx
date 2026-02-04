@@ -318,7 +318,7 @@ import {
 } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
-import { FolderStructureMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
+import { FolderStructureMain, SqlAlchemyConfigMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
 
 const router = createBrowserRouter(
   [
@@ -761,6 +761,7 @@ const router = createBrowserRouter(
               element: <FastAPISQLAlchemy />,
               children: [
                 { path: "folder-structure", element: <FolderStructureMain /> },
+                { path: "sqlalchemy-config", element: <SqlAlchemyConfigMain /> },
                 // folder-structure
               ],
             },

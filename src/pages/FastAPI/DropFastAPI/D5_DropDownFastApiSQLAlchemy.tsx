@@ -42,7 +42,7 @@ const D5_DropDownFastApiSQLAlchemy = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Folder Structure" internalLink="/fastapi/sqlalchemy/folder-structure" />
-        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/sqlalchemy/vscode" />
+        <SideDropdownLink sideDropDownNavName="SQLAlchemy config" internalLink="/fastapi/sqlalchemy/sqlalchemy-config" />
       </div>
     </section>
   );
