@@ -286,7 +286,6 @@ import {
   MiddlewareSectionsMain,
   PerformanceAndConcurrencyMain,
   RequestDataAmdValidationSectionsMain,
-  ResponseHandlingSectionsMain,
   SecurityMain,
   TestingMain,
 } from "./pages/Python/PythonComponents/P4_FastApiPkg";
@@ -837,7 +836,6 @@ const router = createBrowserRouter(
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
                 { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
-                { path: "response-handling", element: <ResponseHandlingSectionsMain /> },
                 { path: "dependency-injection", element: <DependencyInjectionMain /> },
                 { path: "middleware", element: <MiddlewareSectionsMain /> },
                 { path: "security", element: <SecurityMain /> },
