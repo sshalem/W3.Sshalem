@@ -7,7 +7,7 @@ import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../..
 import python_29 from "../../../../../assets/python_29.jpg";
 import python_32 from "../../../../../assets/python_32.jpg";
 
-const O4_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
+const O1_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -128,7 +128,7 @@ const O4_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_LoggingConfigPy;
+export default O1_LoggingConfigPy;
 
 const _1_ = `pip install colorlog`;
 

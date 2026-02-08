@@ -280,13 +280,9 @@ import {
   AdvancedTopicsMain,
   ApplicationStructureAndArchitectureMain,
   BackgroundTasksAndAsyncMain,
-  CRUDMain,
   DataBaseIntegrationMain,
   DependencyInjectionMain,
   DeploymentAndDevOpsMain,
-  ErrorHandlingMain,
-  FastApiFolderStructureMain,
-  LoggingMain,
   MiddlewareSectionsMain,
   PerformanceAndConcurrencyMain,
   RequestDataAmdValidationSectionsMain,
@@ -319,6 +315,8 @@ import {
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
 import { FolderStructureMain, SqlAlchemyConfigMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
+import { ConfigurationMain, EnvMain, ProfilesMain } from "./pages/FastAPI/FastAPIComponents/F1_FastAPIConfigurationProfilesEnvPkg";
+import { DefaultLoggingMain, LoggingConfigMain, LoggingConfINIMain } from "./pages/FastAPI/FastAPIComponents/F2_FastAPILoggingPkg";
 
 const router = createBrowserRouter(
   [
@@ -734,8 +732,24 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <FastAPIHome /> },
             { path: "ide", element: <FastAPIIde /> },
-            { path: "config-env-profiles", element: <FastApiConfigurationProfilesEnv /> },
-            { path: "logging", element: <FastAPILogging /> },
+            {
+              path: "config-env-profiles",
+              element: <FastApiConfigurationProfilesEnv />,
+              children: [
+                { path: "config", element: <ConfigurationMain /> },
+                { path: "env", element: <EnvMain /> },
+                { path: "profiles", element: <ProfilesMain /> },
+              ],
+            },
+            {
+              path: "logging",
+              element: <FastAPILogging />,
+              children: [
+                { path: "default-logging", element: <DefaultLoggingMain /> },
+                { path: "logging-config", element: <LoggingConfigMain /> },
+                { path: "logging-conf", element: <LoggingConfINIMain /> },
+              ],
+            },
             {
               path: "router",
               element: <FastAPIRouter />,
@@ -822,13 +836,9 @@ const router = createBrowserRouter(
               element: <FastApi />,
               children: [
                 { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
-                { path: "folder-structure", element: <FastApiFolderStructureMain /> },
-                { path: "crud", element: <CRUDMain /> },
-                { path: "logging-fastapi", element: <LoggingMain /> },
                 { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
                 { path: "response-handling", element: <ResponseHandlingSectionsMain /> },
                 { path: "dependency-injection", element: <DependencyInjectionMain /> },
-                { path: "error-handling", element: <ErrorHandlingMain /> },
                 { path: "middleware", element: <MiddlewareSectionsMain /> },
                 { path: "security", element: <SecurityMain /> },
                 { path: "background-tasks-and-async", element: <BackgroundTasksAndAsyncMain /> },

@@ -1,37 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O0_Pydantic from "./O0_Pydantic";
-import O1_GetApi from "./O1_GetApi";
-import O2_PostApi from "./O2_PostApi";
-import O3_PutApi from "./O3_PutApi";
-import O4_DeleteApi from "./O4_DeleteApi";
-import O0_MainDotPy from "./O0_MainDotPy";
-import O0_FastAPISetup from "./O0_FastAPISetup";
-import O0_RouterPyController from "./O0_RouterPyController";
+import O1_LoggingConfigPy from "./O1_LoggingConfigPy";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_MainDotPy = "(main.py)";
-const o0_Pydantic = "Pydantic";
-const o0_FastAPISetup = "Setup Project of FastAPI";
-const o0_RouterPyController = "router.py (Controller file/pkg)";
-const o1_GetApi = "1. GET";
-const o2_PostApi = "2. POST";
-const o3_PutApi = "3. PUT";
-const o4_DeleteApi = "4. DELETE";
+const o1_LoggingConfigPy = "1. logging_config.py";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_MainDotPy, o0_Pydantic, o0_FastAPISetup, o0_RouterPyController, o1_GetApi, o2_PostApi, o3_PutApi, o4_DeleteApi];
+const anchorList: string[] = [o1_LoggingConfigPy];
 
 // ============================================
 // ============================================
 
-const CRUDMain = () => {
+const LoggingConfigMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -80,18 +66,11 @@ const CRUDMain = () => {
       />
       {/* End Contents */}
 
-      <O0_MainDotPy anchor={o0_MainDotPy} />
-      <O0_Pydantic anchor={o0_Pydantic} />
-      <O0_FastAPISetup anchor={o0_FastAPISetup} />
-      <O0_RouterPyController anchor={o0_RouterPyController} />
-      <O1_GetApi anchor={o1_GetApi} />
-      <O2_PostApi anchor={o2_PostApi} />
-      <O3_PutApi anchor={o3_PutApi} />
-      <O4_DeleteApi anchor={o4_DeleteApi} />
+      <O1_LoggingConfigPy anchor={o1_LoggingConfigPy} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default CRUDMain;
+export default LoggingConfigMain;

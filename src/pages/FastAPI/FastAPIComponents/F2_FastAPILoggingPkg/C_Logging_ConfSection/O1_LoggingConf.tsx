@@ -7,7 +7,7 @@ import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey, SpanRed } from 
 import python_27 from "../../../../../assets/python_27.jpg";
 import python_28 from "../../../../../assets/python_28.jpg";
 
-const O5_LoggingConf = ({ anchor }: { anchor: string }) => {
+const O1_LoggingConf = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -107,7 +107,7 @@ const O5_LoggingConf = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_LoggingConf;
+export default O1_LoggingConf;
 
 const _1_ = `[loggers]
 keys=root,uvicorn,uvicorn.error,uvicorn.access,fastapi

@@ -41,8 +41,9 @@ const D2_DropDownFastApiLogging = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="PyCharm" internalLink="/fastapi/logging/pycharm" />
-        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/logging/vscode" />
+        <SideDropdownLink sideDropDownNavName="Default Logging" internalLink="/fastapi/logging/default-logging" />
+        <SideDropdownLink sideDropDownNavName="logging_config.py" internalLink="/fastapi/logging/logging-config" />
+        <SideDropdownLink sideDropDownNavName="logging.conf (INI)" internalLink="/fastapi/logging/logging-conf" />
       </div>
     </section>
   );

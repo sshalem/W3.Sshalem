@@ -1,23 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O1_DefaultLogging from "./O1_DefaultLogging";
+import O2_LogginLevel from "./O2_LogginLevel";
+import O3_FastAPILogging from "./O3_FastAPILogging";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "New Project Setup";
+const o1_DefaultLogging = "1. Default Logging";
+const o2_LogginLevel = "2. Logging Level";
+const o3_FastAPILogging = "3. Fast API Logging";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup];
+const anchorList: string[] = [o1_DefaultLogging, o2_LogginLevel, o3_FastAPILogging];
 
 // ============================================
 // ============================================
 
-const EnvMain = () => {
+const DefaultLoggingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -66,11 +70,13 @@ const EnvMain = () => {
       />
       {/* End Contents */}
 
-      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O1_DefaultLogging anchor={o1_DefaultLogging} />
+      <O2_LogginLevel anchor={o2_LogginLevel} />
+      <O3_FastAPILogging anchor={o3_FastAPILogging} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default EnvMain;
+export default DefaultLoggingMain;

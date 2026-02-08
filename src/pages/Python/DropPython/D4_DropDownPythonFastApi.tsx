@@ -42,13 +42,9 @@ const DropDownPythonFastApi = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="1. Setup Fast API" internalLink="/python/fastapi/setup-fastapi" />
-        <SideDropdownLink sideDropDownNavName="2. Folder Structure" internalLink="/python/fastapi/folder-structure" />
-        <SideDropdownLink sideDropDownNavName="3. CRUD" internalLink="/python/fastapi/crud" />
-        <SideDropdownLink sideDropDownNavName="4. Logging" internalLink="/python/fastapi/logging-fastapi" />
         <SideDropdownLink sideDropDownNavName="5. Request And Validation" internalLink="/python/fastapi/request-and-validation" />
         <SideDropdownLink sideDropDownNavName="6. Response Handling" internalLink="/python/fastapi/response-handling" />
         <SideDropdownLink sideDropDownNavName="7. Dependency Injection" internalLink="/python/fastapi/dependency-injection" />
-        <SideDropdownLink sideDropDownNavName="8. Error Handling" internalLink="/python/fastapi/error-handling" />
         <SideDropdownLink sideDropDownNavName="9. Middleware" internalLink="/python/fastapi/middleware" />
         <SideDropdownLink sideDropDownNavName="10. Security" internalLink="/python/fastapi/security" />
         <SideDropdownLink sideDropDownNavName="11. Background Tasks Async" internalLink="/python/fastapi/background-tasks-and-async" />
