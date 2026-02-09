@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O1_SqliteIntro from "./O1_SqliteIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "New Project Setup";
+const o1_SqliteIntro = "1. Sqlite Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup];
+const anchorList: string[] = [o1_SqliteIntro];
 
 // ============================================
 // ============================================
@@ -66,7 +66,7 @@ const Sqlite3Main = () => {
       />
       {/* End Contents */}
 
-      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O1_SqliteIntro anchor={o1_SqliteIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

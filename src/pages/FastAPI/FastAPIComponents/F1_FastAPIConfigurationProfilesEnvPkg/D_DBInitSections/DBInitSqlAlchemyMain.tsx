@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O1_DBInitSQLAlchemyIntro from "./O1_DBInitSQLAlchemyIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "New Project Setup";
+const o1_DBInitSQLAlchemyIntro = "1. DB Init SQLAlchemy Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup];
+const anchorList: string[] = [o1_DBInitSQLAlchemyIntro];
 
 // ============================================
 // ============================================
@@ -66,7 +66,7 @@ const DBInitSqlAlchemyMain = () => {
       />
       {/* End Contents */}
 
-      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O1_DBInitSQLAlchemyIntro anchor={o1_DBInitSQLAlchemyIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

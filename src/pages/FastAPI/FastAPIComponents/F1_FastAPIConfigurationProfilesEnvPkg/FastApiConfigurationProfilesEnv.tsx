@@ -10,8 +10,8 @@ const FastApiConfigurationProfilesEnv = () => {
 
   return (
     <section>
-      {location.pathname === "/fastapi/config-env-profiles" ? (
-        <Subject title="Configuraion , Core Profiles Env ...">{<div></div>}</Subject>
+      {location.pathname === "/fastapi/database-env-profiles" ? (
+        <Subject title="DataBase , Core Profiles Env ...">{<div></div>}</Subject>
       ) : (
         <main className="css-page-content">
           <Outlet />

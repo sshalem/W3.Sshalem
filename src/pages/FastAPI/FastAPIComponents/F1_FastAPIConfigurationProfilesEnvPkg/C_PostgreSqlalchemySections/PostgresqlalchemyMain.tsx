@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O1_PostgreSqlalchemyIntro from "./O1_PostgreSqlalchemyIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "New Project Setup";
+const o1_PostgreSqlalchemyIntro = "1. Postgre Sqlalchemy Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup];
+const anchorList: string[] = [o1_PostgreSqlalchemyIntro];
 
 // ============================================
 // ============================================
@@ -66,7 +66,7 @@ const PostgresqlalchemyMain = () => {
       />
       {/* End Contents */}
 
-      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O1_PostgreSqlalchemyIntro anchor={o1_PostgreSqlalchemyIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

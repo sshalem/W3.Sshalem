@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_NewProjectSetup from "./O1_NewProjectSetup";
+import O1_EnvIntro from "./O1_EnvIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_NewProjectSetup = "New Project Setup";
+const o1_EnvIntro = "1. Env SQLAlchemy Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_NewProjectSetup];
+const anchorList: string[] = [o1_EnvIntro];
 
 // ============================================
 // ============================================
@@ -66,7 +66,7 @@ const EnvMain = () => {
       />
       {/* End Contents */}
 
-      <O1_NewProjectSetup anchor={o1_NewProjectSetup} />
+      <O1_EnvIntro anchor={o1_EnvIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
