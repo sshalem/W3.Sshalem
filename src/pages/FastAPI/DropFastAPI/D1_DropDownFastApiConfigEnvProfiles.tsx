@@ -18,7 +18,7 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("fastapi/config-env-profiles")) {
+    if (location.pathname.includes("fastapi/database-env-profiles")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -37,8 +37,8 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
       <SideDropDownTopic
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/fastapi/config-env-profiles"
-        topicName="Config Env Profiles"
+        internalLink="/fastapi/database-env-profiles"
+        topicName="DataBase Env Profiles"
       />
 
       <div
@@ -46,9 +46,11 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Configuration" internalLink="/fastapi/config-env-profiles/config" />
-        <SideDropdownLink sideDropDownNavName="Env" internalLink="/fastapi/config-env-profiles/env" />
-        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/fastapi/config-env-profiles/profiles" />
+        <SideDropdownLink sideDropDownNavName="Sqlite3" internalLink="/fastapi/database-env-profiles/sqlite3" />
+        <SideDropdownLink sideDropDownNavName="MySql" internalLink="/fastapi/database-env-profiles/mysql" />
+        <SideDropdownLink sideDropDownNavName="PostgreSql" internalLink="/fastapi/database-env-profiles/postgresql" />
+        <SideDropdownLink sideDropDownNavName="Env" internalLink="/fastapi/database-env-profiles/env" />
+        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/fastapi/database-env-profiles/profiles" />
       </div>
     </section>
   );

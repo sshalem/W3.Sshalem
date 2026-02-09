@@ -314,7 +314,7 @@ import {
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
 import { FolderStructureMain, SqlAlchemyConfigMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
-import { ConfigurationMain, EnvMain, ProfilesMain } from "./pages/FastAPI/FastAPIComponents/F1_FastAPIConfigurationProfilesEnvPkg";
+import { EnvMain, MySqlAlchemyMain, ProfilesMain, Sqlite3Main } from "./pages/FastAPI/FastAPIComponents/F1_FastAPIConfigurationProfilesEnvPkg";
 import { DefaultLoggingMain, LoggingConfigMain, LoggingConfINIMain } from "./pages/FastAPI/FastAPIComponents/F2_FastAPILoggingPkg";
 
 const router = createBrowserRouter(
@@ -732,10 +732,12 @@ const router = createBrowserRouter(
             { index: true, element: <FastAPIHome /> },
             { path: "ide", element: <FastAPIIde /> },
             {
-              path: "config-env-profiles",
+              path: "database-env-profiles",
               element: <FastApiConfigurationProfilesEnv />,
               children: [
-                { path: "config", element: <ConfigurationMain /> },
+                { path: "sqlite3", element: <Sqlite3Main /> },
+                { path: "mysql", element: <MySqlAlchemyMain /> },
+                { path: "postgresql", element: <MySqlAlchemyMain /> },
                 { path: "env", element: <EnvMain /> },
                 { path: "profiles", element: <ProfilesMain /> },
               ],

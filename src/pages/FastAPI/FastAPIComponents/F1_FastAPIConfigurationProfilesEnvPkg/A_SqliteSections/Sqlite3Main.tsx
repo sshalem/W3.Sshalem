@@ -17,7 +17,7 @@ const anchorList: string[] = [o1_NewProjectSetup];
 // ============================================
 // ============================================
 
-const DBInitMain = () => {
+const Sqlite3Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -73,4 +73,4 @@ const DBInitMain = () => {
   );
 };
 
-export default DBInitMain;
+export default Sqlite3Main;

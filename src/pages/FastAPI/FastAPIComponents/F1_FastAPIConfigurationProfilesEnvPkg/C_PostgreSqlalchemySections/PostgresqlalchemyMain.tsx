@@ -17,7 +17,7 @@ const anchorList: string[] = [o1_NewProjectSetup];
 // ============================================
 // ============================================
 
-const ConfigurationMain = () => {
+const PostgresqlalchemyMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -73,4 +73,4 @@ const ConfigurationMain = () => {
   );
 };
 
-export default ConfigurationMain;
+export default PostgresqlalchemyMain;
