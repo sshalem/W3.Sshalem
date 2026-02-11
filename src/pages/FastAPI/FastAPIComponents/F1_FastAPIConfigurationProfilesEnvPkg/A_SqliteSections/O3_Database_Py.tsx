@@ -48,6 +48,10 @@ const O3_Database_Py = ({ anchor }: { anchor: string }) => {
           <Li>FastAPI uses dependency injection, not magic annotations.</Li>
           <PythonHighlight pythonCode={_4_} />
         </ULdisc>
+        <article className="my-8 text-lg font-semibold">
+          <span className="rounded-md border-2 border-gray-400 p-1">⭐ All together in database.py</span>
+        </article>
+        <PythonHighlight pythonCode={_5_} />
       </section>
     </MainChildArea>
   );
@@ -56,9 +60,9 @@ const O3_Database_Py = ({ anchor }: { anchor: string }) => {
 export default O3_Database_Py;
 
 const _1_ = `engine = create_engine(
-    settings.DATABASE_URL,
-    echo=settings.ECHO_SHOW_SQL,  # → print every SQL statement to the console
-    connect_args={"check_same_thread": False}  # → SQLite feature only
+    "sqlite:///example.db",
+    echo=True,
+    connect_args={"check_same_thread": False}
 )`;
 
 const _2_ = `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)`;
@@ -75,3 +79,28 @@ def get_db() -> Generator[Session, None, None]:
         yield db
     finally:
         db.close()`;
+
+const _5_ = `from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, Session, DeclarativeBase
+from typing import Generator
+
+engine = create_engine(
+    "sqlite:///example.db",
+    echo=True,
+    connect_args={"check_same_thread": False}
+)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+`;
