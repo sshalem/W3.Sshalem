@@ -1,18 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_SqliteIntro from "./O1_SqliteIntro";
+import O2_CorePackage from "./O2_CorePackage";
+import O3_Database_Py from "./O3_Database_Py";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_SqliteIntro = "1. Sqlite Intro";
+const o2_CorePackage = "2. create Core package";
+const o3_Database_Py = "3. create database.py";
+// const o3_Database_Py = "3. create database.py";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_SqliteIntro];
+const anchorList: string[] = [o1_SqliteIntro, o2_CorePackage, o3_Database_Py];
 
 // ============================================
 // ============================================
@@ -67,6 +72,8 @@ const Sqlite3Main = () => {
       {/* End Contents */}
 
       <O1_SqliteIntro anchor={o1_SqliteIntro} />
+      <O2_CorePackage anchor={o2_CorePackage} />
+      <O3_Database_Py anchor={o3_Database_Py} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
