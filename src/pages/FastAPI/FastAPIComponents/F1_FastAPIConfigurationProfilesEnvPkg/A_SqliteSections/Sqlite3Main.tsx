@@ -14,7 +14,7 @@ import O5_EnvFastApi from "./O5_EnvFastApi";
 const o1_SqliteIntro = "1. Sqlite Intro";
 const o2_CorePackage = "2. create Core package";
 const o3_Database_Py = "3. create database.py";
-const o4_ConfigPy = "4. config.py & .env file";
+const o4_ConfigPy = "4. config.py";
 const o5_EnvFastApi = "5. (.env) file";
 const o6_Database_AllTogether = "6. database.py -> All Together";
 

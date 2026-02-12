@@ -10,10 +10,19 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
+        🔥 Important Production Insight
+        <ULdisc>
+          <Li>
+            we usually <SpanRed>DO NOT</SpanRed> use <SpanYellow>.env</SpanYellow>.
+          </Li>
+          <Li>
+            <SpanYellow>.env</SpanYellow> Used mostly in Local development, Simpler projects
+          </Li>
+        </ULdisc>
         Let's see how to use <SpanYellow>.env</SpanYellow> file with <SpanYellow>config.py</SpanYellow>
-        <article className="my-8 text-lg font-semibold">
+        {/* <article className="my-8 text-lg font-semibold">
           <span className="rounded-md border-2 border-gray-400 p-1">.env</span>
-        </article>
+        </article> */}
         <ULdisc>
           <Li>
             <SpanYellow>.env</SpanYellow> does nothing by itself.
@@ -36,10 +45,7 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
             That tells Pydantic, <SpanYellow>"Go read that file."</SpanYellow>
           </Li>
           <Li>
-            <SpanYellow>config.py</SpanYellow> → Python class that reads them
-          </Li>
-          <Li>
-            <SpanYellow>.env</SpanYellow> is not a Python file.
+            “If a value is not provided in the system environment, also look for it in a file called <SpanYellow>.env</SpanYellow> .”
           </Li>
         </ULdisc>
         <article className="my-8 text-lg font-semibold">
@@ -48,12 +54,18 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
           </span>
         </article>
         <ULdisc>
-          <Li>Now let's see how I use the .env file</Li>
-          <Li>If .env is inside core/ → it won’t load.</Li>
           <Li>
-            <SpanYellow>.env</SpanYellow> must be in the <SpanYellow>root directory</SpanYellow> of project , same directory where{" "}
+            <SpanYellow>config.py</SpanYellow> → Python class that reads them
+          </Li>
+          <Li>
+            <SpanYellow>.env</SpanYellow> is not a Python file.
+          </Li>
+          <Li>Now let's see how I use the .env file</Li>
+          <Li>
+            <SpanYellow>.env</SpanYellow> file must be in the <SpanYellow>root directory</SpanYellow> of project , same directory where{" "}
             <SpanYellow>main.py</SpanYellow>
           </Li>
+          <Li>Why?</Li>
           <Li>
             Because we run <SpanYellow>uvicorn main:app --reload</SpanYellow> from where main.py resides
           </Li>
