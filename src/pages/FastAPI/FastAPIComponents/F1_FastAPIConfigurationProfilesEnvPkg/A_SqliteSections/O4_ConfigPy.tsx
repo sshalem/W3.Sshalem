@@ -67,7 +67,8 @@ const O4_ConfigPy = ({ anchor }: { anchor: string }) => {
           <Li>Now let's see how I use the .env file</Li>
           <Li>If .env is inside core/ → it won’t load.</Li>
           <Li>
-            .env must be in the roor directory of project , same directory where <SpanYellow>main.py</SpanYellow>
+            <SpanYellow>.env</SpanYellow> must be in the <SpanYellow>root directory</SpanYellow> of project , same directory where{" "}
+            <SpanYellow>main.py</SpanYellow>
           </Li>
           <Li>
             Because we run <SpanYellow>uvicorn main:app --reload</SpanYellow> from where main.py resides
@@ -83,7 +84,7 @@ const O4_ConfigPy = ({ anchor }: { anchor: string }) => {
 
 export default O4_ConfigPy;
 
-const _1_ = `from pydantic.v1 import BaseSettings
+const _1_ = `from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
@@ -93,18 +94,8 @@ class Settings(BaseSettings):
 
 settings = Settings()`;
 
-const _2_ = `from pydantic.v1 import BaseSettings
-
-
-class Settings(BaseSettings):
-    DATABASE_URL: str
-    ECHO_SHOW_SQL: bool
-
-    class Config:
-        env_file = ".env"
-
-
-settings = Settings()`;
+const _2_ = `DATABASE_URL=sqlite:///example.db
+ECHO_SHOW_SQL=True`;
 
 const _3_ = `from pydantic_settings import BaseSettings, SettingsConfigDict
 

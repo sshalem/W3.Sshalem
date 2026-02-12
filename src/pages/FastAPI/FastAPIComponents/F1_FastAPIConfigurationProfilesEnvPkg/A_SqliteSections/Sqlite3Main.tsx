@@ -5,6 +5,7 @@ import O2_CorePackage from "./O2_CorePackage";
 import O3_Database_Py from "./O3_Database_Py";
 import O6_Database_AllTogether from "./O6_Database_AllTogether";
 import O4_ConfigPy from "./O4_ConfigPy";
+import O5_EnvFastApi from "./O5_EnvFastApi";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -14,13 +15,14 @@ const o1_SqliteIntro = "1. Sqlite Intro";
 const o2_CorePackage = "2. create Core package";
 const o3_Database_Py = "3. create database.py";
 const o4_ConfigPy = "4. config.py & .env file";
+const o5_EnvFastApi = "5. (.env) file";
 const o6_Database_AllTogether = "6. database.py -> All Together";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_SqliteIntro, o2_CorePackage, o3_Database_Py, o4_ConfigPy, o6_Database_AllTogether];
+const anchorList: string[] = [o1_SqliteIntro, o2_CorePackage, o3_Database_Py, o4_ConfigPy, o5_EnvFastApi, o6_Database_AllTogether];
 
 // ============================================
 // ============================================
@@ -78,6 +80,7 @@ const Sqlite3Main = () => {
       <O2_CorePackage anchor={o2_CorePackage} />
       <O3_Database_Py anchor={o3_Database_Py} />
       <O4_ConfigPy anchor={o4_ConfigPy} />
+      <O5_EnvFastApi anchor={o5_EnvFastApi} />
       <O6_Database_AllTogether anchor={o6_Database_AllTogether} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
