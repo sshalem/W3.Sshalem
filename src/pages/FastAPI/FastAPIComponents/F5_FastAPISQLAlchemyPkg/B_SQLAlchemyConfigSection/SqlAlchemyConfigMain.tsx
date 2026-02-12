@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_SpringVsSqlAlchemy from "./O1_SpringVsSqlAlchemy";
+import O2_InstallSqlAlchemy from "./O2_InstallSqlAlchemy";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_SpringVsSqlAlchemy = "1. Spring Like Structure";
+const o2_InstallSqlAlchemy = "2. Install SqlAlchemy";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_SpringVsSqlAlchemy];
+const anchorList: string[] = [o1_SpringVsSqlAlchemy, o2_InstallSqlAlchemy];
 
 // ============================================
 // ============================================
@@ -67,6 +69,7 @@ const SqlAlchemyConfigMain = () => {
       {/* End Contents */}
 
       <O1_SpringVsSqlAlchemy anchor={o1_SpringVsSqlAlchemy} />
+      <O2_InstallSqlAlchemy anchor={o2_InstallSqlAlchemy} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
