@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { PythonHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
   return (
@@ -48,31 +48,19 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
             “If a value is not provided in the system environment, also look for it in a file called <SpanYellow>.env</SpanYellow> .”
           </Li>
         </ULdisc>
-        <article className="my-8 text-lg font-semibold">
-          <span className="rounded-md border-2 border-gray-400 p-1">
-            config.py <SpanGreen>with</SpanGreen> .env{" "}
-          </span>
+        <article className="my-8 text-lg">
+          <SpanYellow>.env</SpanYellow>
+          <PythonHighlight pythonCode={_2_} />
         </article>
-        <ULdisc>
-          <Li>
-            <SpanYellow>config.py</SpanYellow> → Python class that reads them
-          </Li>
-          <Li>
-            <SpanYellow>.env</SpanYellow> is not a Python file.
-          </Li>
-          <Li>Now let's see how I use the .env file</Li>
-          <Li>
-            <SpanYellow>.env</SpanYellow> file must be in the <SpanYellow>root directory</SpanYellow> of project , same directory where{" "}
-            <SpanYellow>main.py</SpanYellow>
-          </Li>
-          <Li>Why?</Li>
-          <Li>
-            Because we run <SpanYellow>uvicorn main:app --reload</SpanYellow> from where main.py resides
-          </Li>
-        </ULdisc>
-        <PythonHighlight pythonCode={_2_} />
-        💡 Professional, modern Pydantic v2 style (Cleaner for v2) :
-        <PythonHighlight pythonCode={_3_} />
+        <article className="my-8 text-lg">
+          <SpanYellow>config.py</SpanYellow>
+          <PythonHighlight pythonCode={_3_} />
+        </article>
+        <article className="my-8 text-lg">
+          <SpanYellow>database.py</SpanYellow>
+          💡 Professional, modern Pydantic v2 style (Cleaner for v2) :
+          <PythonHighlight pythonCode={_4_} />
+        </article>
       </section>
     </MainChildArea>
   );
@@ -96,3 +84,29 @@ class Settings(BaseSettings):
 
 
 settings = Settings()`;
+
+const _4_ = `from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, Session, DeclarativeBase
+from typing import Generator
+
+from core.config import settings
+
+engine = create_engine(
+    settings.DATABASE_URL,
+    echo=settings.ECHO_SHOW_SQL,
+    connect_args={"check_same_thread": False}
+)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()`;

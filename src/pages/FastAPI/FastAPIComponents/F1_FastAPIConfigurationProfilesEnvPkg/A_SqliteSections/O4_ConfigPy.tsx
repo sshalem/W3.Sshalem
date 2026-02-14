@@ -31,9 +31,13 @@ const O4_ConfigPy = ({ anchor }: { anchor: string }) => {
           <Li>Centralize app settings</Li>
           <Li>Used to configure DB, debug mode, secrets, etc.</Li>
         </ULdisc>
-        <SpanYellow>config.py</SpanYellow>
+        <article className="my-8 text-lg font-semibold">
+          <SpanYellow>config.py</SpanYellow>
+        </article>
         <PythonHighlight pythonCode={_1_} />
-        <SpanYellow>database.py</SpanYellow>
+        <article className="my-8 text-lg font-semibold">
+          <SpanYellow>database.py</SpanYellow>
+        </article>
         <PythonHighlight pythonCode={_2_} />
       </section>
     </MainChildArea>
