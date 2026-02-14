@@ -3,7 +3,7 @@
 
 */
 
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_PostgreSqlalchemyIntro = ({ anchor }: { anchor: string }) => {
@@ -13,6 +13,13 @@ const O1_PostgreSqlalchemyIntro = ({ anchor }: { anchor: string }) => {
         <article className="text-lg font-semibold">
           <SpanYellow>PostgreSql with SQLAlchemy</SpanYellow>
         </article>
+        To connect SQLAlchemy with PostgreSQL, you need:
+        <ULdisc>
+          <Li>PostgreSQL installed and running</Li>
+          <Li>A database created</Li>
+          <Li>A PostgreSQL driver (psycopg)</Li>
+          <Li>A correct SQLAlchemy connection string</Li>
+        </ULdisc>
       </section>
     </MainChildArea>
   );

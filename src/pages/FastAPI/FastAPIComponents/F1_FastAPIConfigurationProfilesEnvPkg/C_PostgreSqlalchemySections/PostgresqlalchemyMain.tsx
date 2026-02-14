@@ -1,18 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_PostgreSqlalchemyIntro from "./O1_PostgreSqlalchemyIntro";
+import O2_InstallPackage from "./O2_InstallPackage";
+import O3_CorePackage from "./O3_CorePackage";
+import O4_Database_Py from "./O4_Database_Py";
+import O5_ConfigPy from "./O5_ConfigPy";
+import O6_EnvFastApi from "./O6_EnvFastApi";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_PostgreSqlalchemyIntro = "1. Postgre Sqlalchemy Intro";
+const o1_PostgreSqlalchemyIntro = "1. Postgresql Sqlalchemy Intro";
+const o2_InstallPackage = "2. Install Package";
+const o3_CorePackage = "3. Core Package Layout";
+const o4_Database_Py = "4. database.py";
+const o5_ConfigPy = "5. config.py";
+const o6_EnvFastApi = "6. (.env)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_PostgreSqlalchemyIntro];
+const anchorList: string[] = [o1_PostgreSqlalchemyIntro, o2_InstallPackage, o3_CorePackage, o4_Database_Py, o5_ConfigPy, o6_EnvFastApi];
 
 // ============================================
 // ============================================
@@ -67,6 +77,11 @@ const PostgresqlalchemyMain = () => {
       {/* End Contents */}
 
       <O1_PostgreSqlalchemyIntro anchor={o1_PostgreSqlalchemyIntro} />
+      <O2_InstallPackage anchor={o2_InstallPackage} />
+      <O3_CorePackage anchor={o3_CorePackage} />
+      <O4_Database_Py anchor={o4_Database_Py} />
+      <O5_ConfigPy anchor={o5_ConfigPy} />
+      <O6_EnvFastApi anchor={o6_EnvFastApi} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
