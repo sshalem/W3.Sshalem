@@ -51,6 +51,7 @@ const D1_DropDownFastApiConfigEnvProfiles = () => {
         <SideDropdownLink sideDropDownNavName="PostgreSql" internalLink="/fastapi/database-env-profiles/postgresql" />
         <SideDropdownLink sideDropDownNavName="Env" internalLink="/fastapi/database-env-profiles/env" />
         <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/fastapi/database-env-profiles/profiles" />
+        <SideDropdownLink sideDropDownNavName="DB Init" internalLink="/fastapi/database-env-profiles/db-init" />
       </div>
     </section>
   );
