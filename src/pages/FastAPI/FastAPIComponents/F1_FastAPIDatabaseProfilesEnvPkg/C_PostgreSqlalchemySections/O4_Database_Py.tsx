@@ -60,9 +60,11 @@ const O4_Database_Py = ({ anchor }: { anchor: string }) => {
 export default O4_Database_Py;
 
 const _1_ = `engine = create_engine(
-    "sqlite:///example.db",
+    "postgresql+psycopg://myuser:mypassword@localhost:5432/mydb",    
+    pool_pre_ping=True,     # checks connections before using
+    pool_size=5,            # tune for your workload   
+    max_overflow=10,        # This controls how many extra connections SQLAlchemy can create beyond the pool_size when your app is busy
     echo=True,
-    connect_args={"check_same_thread": False}
 )`;
 
 const _2_ = `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)`;
@@ -85,9 +87,11 @@ from sqlalchemy.orm import sessionmaker, Session, DeclarativeBase
 from typing import Generator
 
 engine = create_engine(
-    "sqlite:///example.db",
+    "postgresql+psycopg://{postgres-user}:{postgres-password}@localhost:5432/dbName",    
+    pool_pre_ping=True,     # checks connections before using
+    pool_size=5,            # tune for your workload   
+    max_overflow=10,        # This controls how many extra connections SQLAlchemy can create beyond the pool_size when your app is busy
     echo=True,
-    connect_args={"check_same_thread": False}
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)
