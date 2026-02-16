@@ -1,23 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_DBInitSQLAlchemyIntro from "./O1_DBInitSQLAlchemyIntro";
+import O2_DBInitDataSqlPostgres from "./O2_DBInitDataSqlPostgres";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DBInitSQLAlchemyIntro = "1. DB Init SQLAlchemy Intro";
+const o1_DBInitSQLAlchemyIntro = "1. DB Init (data.sql style)";
+const o2_DBInitDataSqlPostgres = "2. DB Init Postgres";
+// const o2_DBInitDataSqlPostgres = "2. DB Init Postgres";
+// const o2_DBInitDataSqlPostgres = "2. DB Init Postgres";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DBInitSQLAlchemyIntro];
+const anchorList: string[] = [o1_DBInitSQLAlchemyIntro, o2_DBInitDataSqlPostgres];
 
 // ============================================
 // ============================================
 
-const DBInitSqlAlchemyMain = () => {
+const DBInitLikeDataSqlMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -67,10 +71,11 @@ const DBInitSqlAlchemyMain = () => {
       {/* End Contents */}
 
       <O1_DBInitSQLAlchemyIntro anchor={o1_DBInitSQLAlchemyIntro} />
+      <O2_DBInitDataSqlPostgres anchor={o2_DBInitDataSqlPostgres} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DBInitSqlAlchemyMain;
+export default DBInitLikeDataSqlMain;

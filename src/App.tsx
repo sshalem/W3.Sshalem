@@ -315,7 +315,7 @@ import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
 import { FolderStructureMain, SqlAlchemyConfigMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
 import {
-  DBInitSqlAlchemyMain,
+  DBInitLikeDataSqlMain,
   EnvMain,
   MySqlAlchemyMain,
   PostgresqlalchemyMain,
@@ -747,7 +747,7 @@ const router = createBrowserRouter(
                 { path: "postgresql", element: <PostgresqlalchemyMain /> },
                 { path: "env", element: <EnvMain /> },
                 { path: "profiles", element: <ProfilesMain /> },
-                { path: "db-init", element: <DBInitSqlAlchemyMain /> },
+                { path: "db-init-data-sql", element: <DBInitLikeDataSqlMain /> },
               ],
             },
             {

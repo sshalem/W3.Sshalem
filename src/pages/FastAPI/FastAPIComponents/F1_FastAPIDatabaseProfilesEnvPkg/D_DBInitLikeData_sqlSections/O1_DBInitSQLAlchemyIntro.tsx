@@ -3,7 +3,7 @@
 
 */
 
-import { MainChildArea } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_DBInitSQLAlchemyIntro = ({ anchor }: { anchor: string }) => {
@@ -13,6 +13,11 @@ const O1_DBInitSQLAlchemyIntro = ({ anchor }: { anchor: string }) => {
         <article className="text-lg font-semibold">
           <SpanYellow>DataBase Init with SQLAlchemy</SpanYellow>
         </article>
+        <ULdisc>
+          <Li>
+            Init DB like Spring <SpanYellow>data.sql</SpanYellow> style{" "}
+          </Li>
+        </ULdisc>
       </section>
     </MainChildArea>
   );

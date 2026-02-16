@@ -27,6 +27,8 @@ const postgresConfig = `# ===============================
 spring.datasource.url=jdbc:postgresql://localhost/{the name of Schema in DB}
 spring.datasource.username=postgres
 spring.datasource.password=admin
+# spring.datasource.password=root
+# spring.datasource.password=postgres
 
 
 # ===============================

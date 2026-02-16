@@ -20,6 +20,16 @@ const O4_Database_Py = ({ anchor }: { anchor: string }) => {
             Database engine (same as Spring boot <SpanYellow> DataSource + Dialect + Connection Pool + Execution Layer</SpanYellow> )
           </Li>
           <Li>Execution (in Python you execute via Engine/Connection; in Java you’d use JdbcTemplate or Hibernate)</Li>
+          <Li>
+            <ULdisc>
+              <Li>
+                username : <SpanYellow>postgres</SpanYellow>
+              </Li>
+              <Li>
+                password : <SpanYellow>postgres</SpanYellow> or <SpanYellow>root</SpanYellow> or <SpanYellow>admin</SpanYellow>
+              </Li>
+            </ULdisc>
+          </Li>
         </ULdisc>
         <PythonHighlight pythonCode={_1_} />
         <article className="my-8 text-lg font-semibold">
@@ -60,7 +70,7 @@ const O4_Database_Py = ({ anchor }: { anchor: string }) => {
 export default O4_Database_Py;
 
 const _1_ = `engine = create_engine(
-    "postgresql+psycopg://myuser:mypassword@localhost:5432/mydb",    
+    "postgresql+psycopg://{username}:{password}@localhost:5432/pythonDB",    
     pool_pre_ping=True,     # checks connections before using
     pool_size=5,            # tune for your workload   
     max_overflow=10,        # This controls how many extra connections SQLAlchemy can create beyond the pool_size when your app is busy
@@ -87,7 +97,7 @@ from sqlalchemy.orm import sessionmaker, Session, DeclarativeBase
 from typing import Generator
 
 engine = create_engine(
-    "postgresql+psycopg://{postgres-user}:{postgres-password}@localhost:5432/dbName",    
+    "postgresql+psycopg://postgres:root@localhost:5432/pythonDB",    
     pool_pre_ping=True,     # checks connections before using
     pool_size=5,            # tune for your workload   
     max_overflow=10,        # This controls how many extra connections SQLAlchemy can create beyond the pool_size when your app is busy

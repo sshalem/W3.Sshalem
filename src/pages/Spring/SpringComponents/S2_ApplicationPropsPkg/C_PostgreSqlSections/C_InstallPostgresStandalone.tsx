@@ -1,4 +1,4 @@
-import { BatchHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { BatchHighlight, SpanBlue, SpanYellow } from "../../../../../components/Highlight";
 import batch_command from "../../../../../assets/batch_command.jpg";
 import start_postgresql_server from "../../../../../assets/start_postgresql_server.jpg";
 import stop_postgresql_server from "../../../../../assets/stop_postgresql_server.jpg";
@@ -61,10 +61,11 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">
           <div className="my-2">U will be asked to Enter new password for superuser , type the following :</div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> username : &nbsp;<SpanBlue>postgres</SpanBlue>
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> username : &nbsp;<SpanYellow>postgres</SpanYellow>
           </div>
           <div className="my-1 ml-8 flex">
-            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanBlue>root</SpanBlue>
+            <FaDiamond className="mr-2 self-center text-[0.6rem]" /> password : &nbsp;<SpanYellow>root</SpanYellow> . it can be{" "}
+            <SpanYellow>admin</SpanYellow> or <SpanYellow>postgres</SpanYellow> as well , dpending how I config the password when I install PostgreSql
           </div>
         </li>
       </ul>

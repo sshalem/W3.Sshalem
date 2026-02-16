@@ -50,7 +50,7 @@ const _1_ = `from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = 'sqlite:///example.db'
+    DATABASE_URL: str = "postgresql+psycopg://postgres:root@localhost:5432/pythonDB"
     ECHO_SHOW_SQL: bool = True
 
 
@@ -65,7 +65,9 @@ from core.config import settings
 engine = create_engine(
     settings.DATABASE_URL,
     echo=settings.ECHO_SHOW_SQL,  # → print every SQL statement to the console
-    connect_args={"check_same_thread": False}  # → SQLite feature only
+    pool_pre_ping=True,
+    pool_size=5,
+    max_overflow=10,
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)
