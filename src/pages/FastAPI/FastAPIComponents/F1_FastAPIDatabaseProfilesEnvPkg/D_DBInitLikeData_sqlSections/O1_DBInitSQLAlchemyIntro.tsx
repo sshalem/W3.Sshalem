@@ -15,7 +15,16 @@ const O1_DBInitSQLAlchemyIntro = ({ anchor }: { anchor: string }) => {
         </article>
         <ULdisc>
           <Li>
-            Init DB like Spring <SpanYellow>data.sql</SpanYellow> style{" "}
+            In this section I will show hot to initialize DB <SpanYellow>data.sql</SpanYellow> style
+          </Li>
+          <Li>
+            Init DB for <SpanYellow>Postgresql</SpanYellow>
+          </Li>
+          <Li>
+            Init DB for <SpanYellow>MySql</SpanYellow>
+          </Li>
+          <Li>
+            Init DB for <SpanYellow>Sqlite</SpanYellow>
           </Li>
         </ULdisc>
       </section>
