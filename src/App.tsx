@@ -334,18 +334,70 @@ const router = createBrowserRouter(
       children: [
         { index: true, element: <Home_page /> },
         {
-          path: "c++",
-          element: <Cpp_page />,
+          path: "java",
+          element: <Java_page />,
           children: [
-            { index: true, element: <CppHome /> },
+            { index: true, element: <JavaHome /> },
             {
-              path: "cpp-basics",
-              element: <CppBasics />,
+              path: "basics",
+              element: <JavaBasics />,
               children: [
-                { index: true, element: <FunctionsMain /> },
-                { path: "functions", element: <FunctionsMain /> },
-                { path: "test", element: <TestMain /> },
+                { path: "java-fundamental", element: <JavaFundamentalMain /> },
+                { path: "array", element: <ArrayMain /> },
+                { path: "string", element: <StringMain /> },
+                { path: "methods", element: <MethodsMain /> },
+                { path: "object-class", element: <JavaObjectClassMain /> },
+                { path: "oop", element: <OopMain /> },
+                { path: "collections", element: <JavaCollectionsMain /> },
+                { path: "io", element: <InputOutputMain /> },
+                { path: "multithreading", element: <MultiThreadingMain /> },
+                { path: "gc-heap-stack", element: <GcHeapStackMain /> },
+                { path: "java8", element: <Java8Main /> },
               ],
+            },
+            {
+              path: "data-structures",
+              element: <DataStructures />,
+              children: [
+                { path: "arrays", element: <ArraysMain /> },
+                { path: "list", element: <ListMain /> },
+                { path: "set", element: <SetMain /> },
+                { path: "map", element: <MapMain /> },
+                { path: "queue", element: <QueueMain /> },
+                { path: "concurent", element: <ConcurrentDataMain /> },
+              ],
+            },
+            {
+              path: "design-patterns-creational",
+              element: <DesignPatternCreational />,
+              children: [
+                { path: "singleton", element: <SingletonMain /> },
+                { path: "prototype", element: <PrototypeMain /> },
+                { path: "builder", element: <BuilderMain /> },
+                { path: "factory", element: <FactoryMain /> },
+                { path: "abstract-factory", element: <AbstractFactoryMain /> },
+              ],
+            },
+            {
+              path: "design-patterns-structural",
+              element: <DesignPatternStructural />,
+              children: [
+                { path: "array", element: <ArrayMain /> },
+                { path: "array", element: <ArrayMain /> },
+              ],
+            },
+            {
+              path: "design-patterns-behavioral",
+              element: <DesignPatternBehavioral />,
+              children: [
+                { path: "array", element: <ArrayMain /> },
+                { path: "array", element: <ArrayMain /> },
+              ],
+            },
+            {
+              path: "java-interview-questions",
+              element: <JavaInterviewQuestions />,
+              children: [{ path: "collections", element: <CollectionsQuestionsMain /> }],
             },
           ],
         },
@@ -524,6 +576,7 @@ const router = createBrowserRouter(
             },
           ],
         },
+
         {
           path: "microservices",
           element: <MicroServices_page />,
@@ -573,226 +626,6 @@ const router = createBrowserRouter(
                 { path: "project", element: <ProjectWithSecurityMain /> },
               ],
             },
-          ],
-        },
-        {
-          path: "reactJS",
-          element: <ReactJS_page />,
-          children: [
-            { index: true, element: <ReactJSHome /> },
-            { path: "setup", element: <SetupMain /> },
-            {
-              path: "basics",
-              element: <ReactBasics />,
-              children: [
-                { path: "jsx", element: <JsxMain /> },
-                { path: "jsx", element: <JsxMain /> },
-              ],
-            },
-            {
-              path: "typescript",
-              element: <TypeScript />,
-              children: [
-                { path: "introduction", element: <IntroMain /> },
-                { path: "introduction", element: <IntroMain /> },
-              ],
-            },
-            {
-              path: "router",
-              element: <ReactRouter />,
-              children: [
-                { path: "install", element: <RouterMain /> },
-                { path: "install", element: <RouterMain /> },
-              ],
-            },
-            { path: "pagination", element: <Pagination /> },
-            {
-              path: "global-search",
-              element: <GlobalSearch />,
-              children: [
-                { path: "memory-search", element: <MemorySearchMain /> },
-                { path: "memory-search", element: <MemorySearchMain /> },
-              ],
-            },
-            {
-              path: "reactjs-interview-questions",
-              element: <ReactJSInterviewQuestions />,
-              children: [{ path: "superup", element: <SuperupMain /> }],
-            },
-          ],
-        },
-        {
-          path: "javascript",
-          element: <JavaScript_page />,
-          children: [
-            { index: true, element: <JavaScriptHome /> },
-            { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
-          ],
-        },
-        {
-          path: "html_css",
-          element: <HTML_CSS_page />,
-          children: [
-            { index: true, element: <HtmlCssHome /> },
-            { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
-            { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
-          ],
-        },
-        { path: "fullstack", element: <FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
-        {
-          path: "java",
-          element: <Java_page />,
-          children: [
-            { index: true, element: <JavaHome /> },
-            {
-              path: "basics",
-              element: <JavaBasics />,
-              children: [
-                { path: "java-fundamental", element: <JavaFundamentalMain /> },
-                { path: "array", element: <ArrayMain /> },
-                { path: "string", element: <StringMain /> },
-                { path: "methods", element: <MethodsMain /> },
-                { path: "object-class", element: <JavaObjectClassMain /> },
-                { path: "oop", element: <OopMain /> },
-                { path: "collections", element: <JavaCollectionsMain /> },
-                { path: "io", element: <InputOutputMain /> },
-                { path: "multithreading", element: <MultiThreadingMain /> },
-                { path: "gc-heap-stack", element: <GcHeapStackMain /> },
-                { path: "java8", element: <Java8Main /> },
-              ],
-            },
-            {
-              path: "data-structures",
-              element: <DataStructures />,
-              children: [
-                { path: "arrays", element: <ArraysMain /> },
-                { path: "list", element: <ListMain /> },
-                { path: "set", element: <SetMain /> },
-                { path: "map", element: <MapMain /> },
-                { path: "queue", element: <QueueMain /> },
-                { path: "concurent", element: <ConcurrentDataMain /> },
-              ],
-            },
-            {
-              path: "design-patterns-creational",
-              element: <DesignPatternCreational />,
-              children: [
-                { path: "singleton", element: <SingletonMain /> },
-                { path: "prototype", element: <PrototypeMain /> },
-                { path: "builder", element: <BuilderMain /> },
-                { path: "factory", element: <FactoryMain /> },
-                { path: "abstract-factory", element: <AbstractFactoryMain /> },
-              ],
-            },
-            {
-              path: "design-patterns-structural",
-              element: <DesignPatternStructural />,
-              children: [
-                { path: "array", element: <ArrayMain /> },
-                { path: "array", element: <ArrayMain /> },
-              ],
-            },
-            {
-              path: "design-patterns-behavioral",
-              element: <DesignPatternBehavioral />,
-              children: [
-                { path: "array", element: <ArrayMain /> },
-                { path: "array", element: <ArrayMain /> },
-              ],
-            },
-            {
-              path: "java-interview-questions",
-              element: <JavaInterviewQuestions />,
-              children: [{ path: "collections", element: <CollectionsQuestionsMain /> }],
-            },
-          ],
-        },
-        {
-          path: "sql",
-          element: <Sql_page />,
-          children: [
-            { index: true, element: <SqlHome /> },
-            { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
-            {
-              path: "operator-statements",
-              element: <OperatorStatements />,
-              children: [
-                { path: "use", element: <UseMain /> },
-                { path: "select", element: <SelectMain /> },
-                { path: "alias", element: <AliasMain /> },
-                { path: "distinct", element: <DistinctMain /> },
-                { path: "where", element: <WhereClauseMain /> },
-                { path: "logical-operator", element: <LogicalOperatorsMain /> },
-                { path: "in", element: <InMain /> },
-                { path: "between", element: <BetweenMain /> },
-                { path: "like", element: <LikeMain /> },
-                { path: "regex", element: <RegexMain /> },
-                { path: "is-null", element: <IsNullMain /> },
-                { path: "order-by", element: <OrderByMain /> },
-                { path: "limit", element: <LimitMain /> },
-              ],
-            },
-          ],
-        },
-        {
-          path: "fastapi",
-          element: <FastAPI_page />,
-          children: [
-            { index: true, element: <FastAPIHome /> },
-            { path: "ide", element: <FastAPIIde /> },
-            {
-              path: "database-env-profiles",
-              element: <FastApiConfigurationProfilesEnv />,
-              children: [
-                { path: "sqlite3", element: <Sqlite3Main /> },
-                { path: "mysql", element: <MySqlAlchemyMain /> },
-                { path: "postgresql", element: <PostgresqlalchemyMain /> },
-                { path: "env", element: <EnvMain /> },
-                { path: "profiles", element: <ProfilesMain /> },
-                { path: "db-init-data-sql", element: <DBInitLikeDataSqlMain /> },
-              ],
-            },
-            {
-              path: "logging",
-              element: <FastAPILogging />,
-              children: [
-                { path: "default-logging", element: <DefaultLoggingMain /> },
-                { path: "logging-config", element: <LoggingConfigMain /> },
-                { path: "logging-conf", element: <LoggingConfINIMain /> },
-              ],
-            },
-            {
-              path: "router",
-              element: <FastAPIRouter />,
-              children: [
-                { path: "main-py", element: <MainPyMain /> },
-                { path: "setup-fastapi", element: <SetupFastApiMain /> },
-                { path: "pydantic", element: <PydanticMain /> },
-                { path: "request-response", element: <RequestResponseMain /> },
-                { path: "get-request", element: <GetRequestMain /> },
-                { path: "post-request", element: <PostRequestMain /> },
-              ],
-            },
-            {
-              path: "exceptions",
-              element: <FastAPIException />,
-              children: [
-                { path: "default", element: <ExceptionsMain /> },
-                { path: "global-exception", element: <GlobalExceptionsMain /> },
-              ],
-            },
-            {
-              path: "sqlalchemy",
-              element: <FastAPISQLAlchemy />,
-              children: [
-                { path: "folder-structure", element: <FolderStructureMain /> },
-                { path: "sqlalchemy-config", element: <SqlAlchemyConfigMain /> },
-                // folder-structure
-              ],
-            },
-            { path: "auditing", element: <FastAPIAuditing /> },
-            { path: "security", element: <FastAPISecurity /> },
-            { path: "caching", element: <FastAPICaching /> },
           ],
         },
         {
@@ -870,6 +703,160 @@ const router = createBrowserRouter(
             },
           ],
         },
+        {
+          path: "fastapi",
+          element: <FastAPI_page />,
+          children: [
+            { index: true, element: <FastAPIHome /> },
+            { path: "ide", element: <FastAPIIde /> },
+            {
+              path: "database-env-profiles",
+              element: <FastApiConfigurationProfilesEnv />,
+              children: [
+                { path: "sqlite3", element: <Sqlite3Main /> },
+                { path: "mysql", element: <MySqlAlchemyMain /> },
+                { path: "postgresql", element: <PostgresqlalchemyMain /> },
+                { path: "env", element: <EnvMain /> },
+                { path: "profiles", element: <ProfilesMain /> },
+                { path: "db-init-data-sql", element: <DBInitLikeDataSqlMain /> },
+              ],
+            },
+            {
+              path: "logging",
+              element: <FastAPILogging />,
+              children: [
+                { path: "default-logging", element: <DefaultLoggingMain /> },
+                { path: "logging-config", element: <LoggingConfigMain /> },
+                { path: "logging-conf", element: <LoggingConfINIMain /> },
+              ],
+            },
+            {
+              path: "router",
+              element: <FastAPIRouter />,
+              children: [
+                { path: "main-py", element: <MainPyMain /> },
+                { path: "setup-fastapi", element: <SetupFastApiMain /> },
+                { path: "pydantic", element: <PydanticMain /> },
+                { path: "request-response", element: <RequestResponseMain /> },
+                { path: "get-request", element: <GetRequestMain /> },
+                { path: "post-request", element: <PostRequestMain /> },
+              ],
+            },
+            {
+              path: "exceptions",
+              element: <FastAPIException />,
+              children: [
+                { path: "default", element: <ExceptionsMain /> },
+                { path: "global-exception", element: <GlobalExceptionsMain /> },
+              ],
+            },
+            {
+              path: "sqlalchemy",
+              element: <FastAPISQLAlchemy />,
+              children: [
+                { path: "folder-structure", element: <FolderStructureMain /> },
+                { path: "sqlalchemy-config", element: <SqlAlchemyConfigMain /> },
+                // folder-structure
+              ],
+            },
+            { path: "auditing", element: <FastAPIAuditing /> },
+            { path: "security", element: <FastAPISecurity /> },
+            { path: "caching", element: <FastAPICaching /> },
+          ],
+        },
+        {
+          path: "reactJS",
+          element: <ReactJS_page />,
+          children: [
+            { index: true, element: <ReactJSHome /> },
+            { path: "setup", element: <SetupMain /> },
+            {
+              path: "basics",
+              element: <ReactBasics />,
+              children: [
+                { path: "jsx", element: <JsxMain /> },
+                { path: "jsx", element: <JsxMain /> },
+              ],
+            },
+            {
+              path: "typescript",
+              element: <TypeScript />,
+              children: [
+                { path: "introduction", element: <IntroMain /> },
+                { path: "introduction", element: <IntroMain /> },
+              ],
+            },
+            {
+              path: "router",
+              element: <ReactRouter />,
+              children: [
+                { path: "install", element: <RouterMain /> },
+                { path: "install", element: <RouterMain /> },
+              ],
+            },
+            { path: "pagination", element: <Pagination /> },
+            {
+              path: "global-search",
+              element: <GlobalSearch />,
+              children: [
+                { path: "memory-search", element: <MemorySearchMain /> },
+                { path: "memory-search", element: <MemorySearchMain /> },
+              ],
+            },
+            {
+              path: "reactjs-interview-questions",
+              element: <ReactJSInterviewQuestions />,
+              children: [{ path: "superup", element: <SuperupMain /> }],
+            },
+          ],
+        },
+        {
+          path: "javascript",
+          element: <JavaScript_page />,
+          children: [
+            { index: true, element: <JavaScriptHome /> },
+            { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
+          ],
+        },
+        {
+          path: "html_css",
+          element: <HTML_CSS_page />,
+          children: [
+            { index: true, element: <HtmlCssHome /> },
+            { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
+            { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
+          ],
+        },
+        { path: "fullstack", element: <FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
+
+        {
+          path: "sql",
+          element: <Sql_page />,
+          children: [
+            { index: true, element: <SqlHome /> },
+            { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
+            {
+              path: "operator-statements",
+              element: <OperatorStatements />,
+              children: [
+                { path: "use", element: <UseMain /> },
+                { path: "select", element: <SelectMain /> },
+                { path: "alias", element: <AliasMain /> },
+                { path: "distinct", element: <DistinctMain /> },
+                { path: "where", element: <WhereClauseMain /> },
+                { path: "logical-operator", element: <LogicalOperatorsMain /> },
+                { path: "in", element: <InMain /> },
+                { path: "between", element: <BetweenMain /> },
+                { path: "like", element: <LikeMain /> },
+                { path: "regex", element: <RegexMain /> },
+                { path: "is-null", element: <IsNullMain /> },
+                { path: "order-by", element: <OrderByMain /> },
+                { path: "limit", element: <LimitMain /> },
+              ],
+            },
+          ],
+        },
+
         {
           path: "devops",
           element: <DevOps_page />,
@@ -973,6 +960,22 @@ const router = createBrowserRouter(
             { index: true, element: <WindowsHome /> },
             { path: "port-check", element: <PortCheckMain /> },
             { path: "batch", element: <Batch />, children: [{ path: "ascii", element: <AsciiMain /> }] },
+          ],
+        },
+        {
+          path: "c++",
+          element: <Cpp_page />,
+          children: [
+            { index: true, element: <CppHome /> },
+            {
+              path: "cpp-basics",
+              element: <CppBasics />,
+              children: [
+                { index: true, element: <FunctionsMain /> },
+                { path: "functions", element: <FunctionsMain /> },
+                { path: "test", element: <TestMain /> },
+              ],
+            },
           ],
         },
         {

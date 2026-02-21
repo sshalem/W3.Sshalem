@@ -4,8 +4,8 @@
 // Thus, I add forward slash to each link
 
 export const links: string[] = [
-  "/spring",
   "/java",
+  "/spring",
   "/microservices",
   "/python",
   "/fastapi",
@@ -19,8 +19,8 @@ export const links: string[] = [
   "/sql",
   "/guitar",
   "/windows",
-  "/page_creation",
   "/c++",
+  "/page_creation",
 ];
 
 // "/1",
