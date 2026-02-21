@@ -2,6 +2,7 @@ export { default as JavaBasicMain } from "./A_BasicsSections/JavaFundamentalMain
 export { default as ArrayMain } from "./B_ArraySections/ArrayMain";
 export { default as StringMain } from "./C_StringSections/StringMain";
 export { default as MethodsMain } from "./D_MethodsSections/MethodsMain";
+export { default as JavaObjectClassMain } from "./E_0_JavaObjectClassSections/JavaObjectClassMain";
 export { default as OopMain } from "./E_OopSections/OopMain";
 export { default as JavaCollectionsMain } from "./F_CollectionsSections/JavaCollectionsMain";
 export { default as InputOutputMain } from "./G_InputOutputSections/InputOutputMain";

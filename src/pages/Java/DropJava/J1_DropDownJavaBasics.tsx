@@ -45,6 +45,7 @@ const J1_DropDownJavaBasics = () => {
         <SideDropdownLink sideDropDownNavName="Array" internalLink="/java/basics/array" />
         <SideDropdownLink sideDropDownNavName="String" internalLink="/java/basics/string" />
         <SideDropdownLink sideDropDownNavName="Methods" internalLink="/java/basics/methods" />
+        <SideDropdownLink sideDropDownNavName="Java Object Class" internalLink="/java/basics/object-class" />
         <SideDropdownLink sideDropDownNavName="OOP" internalLink="/java/basics/oop" />
         <SideDropdownLink sideDropDownNavName="Collections" internalLink="/java/basics/collections" />
         <SideDropdownLink sideDropDownNavName="I/O" internalLink="/java/basics/io" />
