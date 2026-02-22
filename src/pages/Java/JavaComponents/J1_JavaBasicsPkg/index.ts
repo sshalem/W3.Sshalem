@@ -11,3 +11,4 @@ export { default as InputOutputMain } from "./K_InputOutputSections/InputOutputM
 export { default as MultiThreadingMain } from "./L_MultiThreadingSections/MultiThreadingMain";
 export { default as GcHeapStackMain } from "./M_GcHeapStackSections/GcHeapStackMain";
 export { default as Java8Main } from "./N_Java8Sections/Java8Main";
+export { default as JavaMemoryMonitoringMain } from "./O_JavaMemoryMonitoringSections/JavaMemoryMonitoringMain";

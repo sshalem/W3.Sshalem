@@ -248,8 +248,9 @@ import {
   EnumMain,
   JavaExceptionsMain,
   JavaGenericsMain,
+  JavaMemoryMonitoringMain,
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
-import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
+import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
@@ -380,6 +381,7 @@ const router = createBrowserRouter(
                 { path: "multithreading", element: <MultiThreadingMain /> },
                 { path: "gc-heap-stack", element: <GcHeapStackMain /> },
                 { path: "java8", element: <Java8Main /> },
+                { path: "memory-monitoring", element: <JavaMemoryMonitoringMain /> },
               ],
             },
             {
@@ -437,7 +439,11 @@ const router = createBrowserRouter(
             {
               path: "java-interview-questions",
               element: <JavaInterviewQuestions />,
-              children: [{ path: "collections", element: <CollectionsQuestionsMain /> }],
+              children: [
+                { path: "collections-questions", element: <CollectionsQuestionsMain /> },
+                { path: "io-questions", element: <IO_QuestionsMain /> },
+                { path: "memory-monitoring-questions", element: <MemoryMonitoringQuestionsMain /> },
+              ],
             },
           ],
         },

@@ -46,7 +46,9 @@ const J9_DropDownJavaInterviewQuestions = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Collections" internalLink="/java/java-interview-questions/collections" />
+        <SideDropdownLink sideDropDownNavName="Collections Questions" internalLink="/java/java-interview-questions/collections-questions" />
+        <SideDropdownLink sideDropDownNavName="IO Questions" internalLink="/java/java-interview-questions/io-questions" />
+        <SideDropdownLink sideDropDownNavName="Memory Questions" internalLink="/java/java-interview-questions/memory-monitoring-questions" />
       </div>
     </section>
   );

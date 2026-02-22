@@ -55,6 +55,7 @@ const J1_DropDownJavaBasics = () => {
         <SideDropdownLink sideDropDownNavName="11. Multithreading" internalLink="/java/basics/multithreading" />
         <SideDropdownLink sideDropDownNavName="12. Stack, Heap, GC" internalLink="/java/basics/gc-heap-stack" />
         <SideDropdownLink sideDropDownNavName="13. JAVA 8" internalLink="/java/basics/java8" />
+        <SideDropdownLink sideDropDownNavName="14. Memory Monitoring" internalLink="/java/basics/memory-monitoring" />
       </div>
     </section>
   );
