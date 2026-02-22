@@ -10,7 +10,7 @@ import O1_MemoryLeak from "./O1_MemoryLeak";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_MemoryLeak = "1. IO Questions";
+const o1_MemoryLeak = "1. JAVA/Spring Memory";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
