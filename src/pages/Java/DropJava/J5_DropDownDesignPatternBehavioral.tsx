@@ -46,8 +46,16 @@ const J5_DropDownDesignPatternBehavioral = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Singleton" internalLink="/java/design-patterns-behavioral/singleton" />
-        <SideDropdownLink sideDropDownNavName="Prototype" internalLink="/java/design-patterns-behavioral/prototype" />
+        <SideDropdownLink sideDropDownNavName="1. Observer" internalLink="/java/design-patterns-behavioral/observer" />
+        <SideDropdownLink sideDropDownNavName="2. Strategy" internalLink="/java/design-patterns-behavioral/strategy" />
+        <SideDropdownLink sideDropDownNavName="3. Template Method" internalLink="/java/design-patterns-behavioral/template-method" />
+        <SideDropdownLink sideDropDownNavName="4. Command" internalLink="/java/design-patterns-behavioral/command" />
+        <SideDropdownLink sideDropDownNavName="5. State" internalLink="/java/design-patterns-behavioral/state" />
+        <SideDropdownLink sideDropDownNavName="6. Chain Of Responsibility" internalLink="/java/design-patterns-behavioral/chain-of-responsibility" />
+        <SideDropdownLink sideDropDownNavName="7. Iterator" internalLink="/java/design-patterns-behavioral/iterator" />
+        <SideDropdownLink sideDropDownNavName="8. Mediator" internalLink="/java/design-patterns-behavioral/mediator" />
+        <SideDropdownLink sideDropDownNavName="9. Memento" internalLink="/java/design-patterns-behavioral/memento" />
+        <SideDropdownLink sideDropDownNavName="10. Visitor" internalLink="/java/design-patterns-behavioral/visitor" />
       </div>
     </section>
   );

@@ -242,10 +242,11 @@ import {
   Java8Main,
   JavaCollectionsMain,
   JavaObjectClassMain,
-  MethodsMain,
   MultiThreadingMain,
   OopMain,
-  StringMain,
+  RandomMain,
+  EnumMain,
+  JavaExceptionsMain,
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
@@ -333,6 +334,19 @@ import {
   FlyweightMain,
   ProxyMain,
 } from "./pages/Java/JavaComponents/J4_DesignPatternStructuralPkg";
+import {
+  ChainOfResponsibilityMain,
+  CommandMain,
+  IteratorMain,
+  MediatorMain,
+  MementoMain,
+  ObserverMain,
+  StateMain,
+  StrategyMain,
+  TemplateMethodMain,
+  VisitorMain,
+} from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg";
+import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
 
 const router = createBrowserRouter(
   [
@@ -353,9 +367,11 @@ const router = createBrowserRouter(
               children: [
                 { path: "java-fundamental", element: <JavaFundamentalMain /> },
                 { path: "array", element: <ArrayMain /> },
-                { path: "string", element: <StringMain /> },
-                { path: "methods", element: <MethodsMain /> },
+                { path: "enum", element: <EnumMain /> },
+                { path: "comparable-comparator", element: <ComparableComparatorMain /> },
+                { path: "exceptions", element: <JavaExceptionsMain /> },
                 { path: "object-class", element: <JavaObjectClassMain /> },
+                { path: "random", element: <RandomMain /> },
                 { path: "oop", element: <OopMain /> },
                 { path: "collections", element: <JavaCollectionsMain /> },
                 { path: "io", element: <InputOutputMain /> },
@@ -404,8 +420,16 @@ const router = createBrowserRouter(
               path: "design-patterns-behavioral",
               element: <DesignPatternBehavioral />,
               children: [
-                { path: "array", element: <ArrayMain /> },
-                { path: "array", element: <ArrayMain /> },
+                { path: "observer", element: <ObserverMain /> },
+                { path: "strategy", element: <StrategyMain /> },
+                { path: "template-method", element: <TemplateMethodMain /> },
+                { path: "command", element: <CommandMain /> },
+                { path: "state", element: <StateMain /> },
+                { path: "chain-of-responsibility", element: <ChainOfResponsibilityMain /> },
+                { path: "iterator", element: <IteratorMain /> },
+                { path: "mediator", element: <MediatorMain /> },
+                { path: "memento", element: <MementoMain /> },
+                { path: "visitor", element: <VisitorMain /> },
               ],
             },
             {

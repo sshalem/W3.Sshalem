@@ -1,1 +1,10 @@
-// export { default as AdapterMain } from "./A_AdapterSections/AdapterMain";
+export { default as ObserverMain } from "./A_ObserverSections/ObserverMain";
+export { default as StrategyMain } from "./B_StrategySections/StrategyMain";
+export { default as TemplateMethodMain } from "./C_TemplateMethodSections/TemplateMethodMain";
+export { default as CommandMain } from "./D_CommandSections/CommandMain";
+export { default as StateMain } from "./E_StateSections/StateMain";
+export { default as ChainOfResponsibilityMain } from "./F_ChainOfResponsibilitySections/ChainOfResponsibilityMain";
+export { default as IteratorMain } from "./G_IteratorSections/IteratorMain";
+export { default as MediatorMain } from "./H_MediatorSections/MediatorMain";
+export { default as MementoMain } from "./I_MementoSections/MementoMain";
+export { default as VisitorMain } from "./J_VisitorSections/VisitorMain";

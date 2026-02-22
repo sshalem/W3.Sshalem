@@ -4,7 +4,7 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./StringIntro";
+import ArrayIntro from "./ArrayIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -21,7 +21,7 @@ const anchorList: string[] = [array_intro];
 // ============================================
 // ============================================
 
-const StringMain = () => {
+const StrategyMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -76,4 +76,4 @@ const StringMain = () => {
     </section>
   );
 };
-export default StringMain;
+export default StrategyMain;

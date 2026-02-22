@@ -4,24 +4,24 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./MethodsIntro";
+import O1_ExceptionsIntro from "./O1_ExceptionsIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o1_ExceptionsIntro = "1. Exceptions Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o1_ExceptionsIntro];
 
 // ============================================
 // ============================================
 
-const MethodsMain = () => {
+const JavaExceptionsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,10 +70,10 @@ const MethodsMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O1_ExceptionsIntro anchor={o1_ExceptionsIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default MethodsMain;
+export default JavaExceptionsMain;

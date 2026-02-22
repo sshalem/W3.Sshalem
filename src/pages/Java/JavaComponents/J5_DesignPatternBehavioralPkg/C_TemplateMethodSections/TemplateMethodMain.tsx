@@ -21,7 +21,7 @@ const anchorList: string[] = [array_intro];
 // ============================================
 // ============================================
 
-const ArrayMain = () => {
+const TemplateMethodMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -76,4 +76,4 @@ const ArrayMain = () => {
     </section>
   );
 };
-export default ArrayMain;
+export default TemplateMethodMain;

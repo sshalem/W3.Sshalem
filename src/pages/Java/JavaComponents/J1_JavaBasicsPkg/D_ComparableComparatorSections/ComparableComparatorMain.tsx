@@ -4,30 +4,24 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_ArrayIntro from "./O1_ArrayIntro";
-import O2_SortArray from "./O2_SortArray";
-import O3_DuplicationsRemove from "./O3_DuplicationsRemove";
-import O4_ReverseArray from "./O4_ReverseArray";
+import O1_CompareIntro from "./O1_CompareIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_ArrayIntro = "1. Array intro";
-const o2_SortArray = "2. Sort Array";
-const o3_DuplicationsRemove = `3. Duplications Remove Return Dynamic Array`;
-const o4_ReverseArray = `4. Reverse Array`;
+const o1_CompareIntro = "1. Compare in Java";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ArrayIntro, o2_SortArray, o3_DuplicationsRemove, o4_ReverseArray];
+const anchorList: string[] = [o1_CompareIntro];
 
 // ============================================
 // ============================================
 
-const ArrayMain = () => {
+const ComparableComparatorMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -76,13 +70,10 @@ const ArrayMain = () => {
       />
       {/* End Contents */}
 
-      <O1_ArrayIntro anchor={o1_ArrayIntro} />
-      <O2_SortArray anchor={o2_SortArray} />
-      <O3_DuplicationsRemove anchor={o3_DuplicationsRemove} />
-      <O4_ReverseArray anchor={o4_ReverseArray} />
+      <O1_CompareIntro anchor={o1_CompareIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default ArrayMain;
+export default ComparableComparatorMain;

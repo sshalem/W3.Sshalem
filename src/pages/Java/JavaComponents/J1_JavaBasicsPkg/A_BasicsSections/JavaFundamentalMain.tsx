@@ -4,19 +4,27 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./JavaFundamentalntro";
+import O1_DataTypesOperators from "./O1_DataTypesOperators";
+import O2_IfElseForWhile from "./O2_IfElseForWhile";
+import O3_Methods from "./O3_Methods";
+import O4_String from "./O4_String";
+import O5_ConstructionOverload from "./O5_ConstructionOverload";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o1_DataTypesOperators = "1. Data Types & Operators";
+const o2_IfElseForWhile = "2. if/else/for/while/do/switch";
+const o3_Methods = "3. Methods";
+const o4_String = "4. String";
+const o5_ConstructionOverload = "5. Construction Overload";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o1_DataTypesOperators, o2_IfElseForWhile, o3_Methods, o4_String, o5_ConstructionOverload];
 
 // ============================================
 // ============================================
@@ -70,7 +78,11 @@ const JavaFundamentalMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O1_DataTypesOperators anchor={o1_DataTypesOperators} />
+      <O2_IfElseForWhile anchor={o2_IfElseForWhile} />
+      <O3_Methods anchor={o3_Methods} />
+      <O4_String anchor={o4_String} />
+      <O5_ConstructionOverload anchor={o5_ConstructionOverload} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

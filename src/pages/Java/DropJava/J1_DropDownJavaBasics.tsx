@@ -41,17 +41,19 @@ const J1_DropDownJavaBasics = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Java Fundamental" internalLink="/java/basics/java-fundamental" />
-        <SideDropdownLink sideDropDownNavName="Array" internalLink="/java/basics/array" />
-        <SideDropdownLink sideDropDownNavName="String" internalLink="/java/basics/string" />
-        <SideDropdownLink sideDropDownNavName="Methods" internalLink="/java/basics/methods" />
-        <SideDropdownLink sideDropDownNavName="Java Object Class" internalLink="/java/basics/object-class" />
-        <SideDropdownLink sideDropDownNavName="OOP" internalLink="/java/basics/oop" />
-        <SideDropdownLink sideDropDownNavName="Collections" internalLink="/java/basics/collections" />
-        <SideDropdownLink sideDropDownNavName="I/O" internalLink="/java/basics/io" />
-        <SideDropdownLink sideDropDownNavName="Multithreading" internalLink="/java/basics/multithreading" />
-        <SideDropdownLink sideDropDownNavName="Stack, Heap, Garbage Collect" internalLink="/java/basics/gc-heap-stack" />
-        <SideDropdownLink sideDropDownNavName="JAVA 8" internalLink="/java/basics/java8" />
+        <SideDropdownLink sideDropDownNavName="1. Java Fundamental" internalLink="/java/basics/java-fundamental" />
+        <SideDropdownLink sideDropDownNavName="2. Array" internalLink="/java/basics/array" />
+        <SideDropdownLink sideDropDownNavName="3. Enum" internalLink="/java/basics/enum" />
+        <SideDropdownLink sideDropDownNavName="4. Comparable & Comparator" internalLink="/java/basics/comparable-comparator" />
+        <SideDropdownLink sideDropDownNavName="5. Exceptions" internalLink="/java/basics/exceptions" />
+        <SideDropdownLink sideDropDownNavName="6. Java Object Class" internalLink="/java/basics/object-class" />
+        <SideDropdownLink sideDropDownNavName="7. Random" internalLink="/java/basics/random" />
+        <SideDropdownLink sideDropDownNavName="8. OOP" internalLink="/java/basics/oop" />
+        <SideDropdownLink sideDropDownNavName="9. Collections" internalLink="/java/basics/collections" />
+        <SideDropdownLink sideDropDownNavName="10. I/O" internalLink="/java/basics/io" />
+        <SideDropdownLink sideDropDownNavName="11. Multithreading" internalLink="/java/basics/multithreading" />
+        <SideDropdownLink sideDropDownNavName="12. Stack, Heap, GC" internalLink="/java/basics/gc-heap-stack" />
+        <SideDropdownLink sideDropDownNavName="13. JAVA 8" internalLink="/java/basics/java8" />
       </div>
     </section>
   );
