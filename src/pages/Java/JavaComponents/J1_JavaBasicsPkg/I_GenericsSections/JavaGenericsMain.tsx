@@ -4,24 +4,24 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_OopIntro from "./O1_OopIntro";
+import O1_GenericsIntro from "./O1_GenericsIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_OopIntro = "1. OOP intro";
+const o1_GenericsIntro = "1. Generics Intro";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_OopIntro];
+const anchorList: string[] = [o1_GenericsIntro];
 
 // ============================================
 // ============================================
 
-const OopMain = () => {
+const JavaGenericsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,10 +70,10 @@ const OopMain = () => {
       />
       {/* End Contents */}
 
-      <O1_OopIntro anchor={o1_OopIntro} />
+      <O1_GenericsIntro anchor={o1_GenericsIntro} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default OopMain;
+export default JavaGenericsMain;

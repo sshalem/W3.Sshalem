@@ -5,8 +5,9 @@ export { default as JavaExceptionsMain } from "./E_ExceptionsSections/JavaExcept
 export { default as JavaObjectClassMain } from "./F_JavaObjectClassSections/JavaObjectClassMain";
 export { default as RandomMain } from "./G_RandomSections/RandomMain";
 export { default as OopMain } from "./H_OopSections/OopMain";
-export { default as JavaCollectionsMain } from "./I_CollectionsSections/JavaCollectionsMain";
-export { default as InputOutputMain } from "./J_InputOutputSections/InputOutputMain";
-export { default as MultiThreadingMain } from "./K_MultiThreadingSections/MultiThreadingMain";
-export { default as GcHeapStackMain } from "./L_GcHeapStackSections/GcHeapStackMain";
-export { default as Java8Main } from "./M_Java8Sections/Java8Main";
+export { default as JavaGenericsMain } from "./I_GenericsSections/JavaGenericsMain";
+export { default as JavaCollectionsMain } from "./J_CollectionsSections/JavaCollectionsMain";
+export { default as InputOutputMain } from "./K_InputOutputSections/InputOutputMain";
+export { default as MultiThreadingMain } from "./L_MultiThreadingSections/MultiThreadingMain";
+export { default as GcHeapStackMain } from "./M_GcHeapStackSections/GcHeapStackMain";
+export { default as Java8Main } from "./N_Java8Sections/Java8Main";

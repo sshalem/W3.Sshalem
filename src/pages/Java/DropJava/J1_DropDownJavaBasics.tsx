@@ -49,6 +49,7 @@ const J1_DropDownJavaBasics = () => {
         <SideDropdownLink sideDropDownNavName="6. Java Object Class" internalLink="/java/basics/object-class" />
         <SideDropdownLink sideDropDownNavName="7. Random" internalLink="/java/basics/random" />
         <SideDropdownLink sideDropDownNavName="8. OOP" internalLink="/java/basics/oop" />
+        <SideDropdownLink sideDropDownNavName="9. Generics" internalLink="/java/basics/generics" />
         <SideDropdownLink sideDropDownNavName="9. Collections" internalLink="/java/basics/collections" />
         <SideDropdownLink sideDropDownNavName="10. I/O" internalLink="/java/basics/io" />
         <SideDropdownLink sideDropDownNavName="11. Multithreading" internalLink="/java/basics/multithreading" />

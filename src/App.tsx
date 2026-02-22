@@ -247,6 +247,7 @@ import {
   RandomMain,
   EnumMain,
   JavaExceptionsMain,
+  JavaGenericsMain,
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
@@ -373,6 +374,7 @@ const router = createBrowserRouter(
                 { path: "object-class", element: <JavaObjectClassMain /> },
                 { path: "random", element: <RandomMain /> },
                 { path: "oop", element: <OopMain /> },
+                { path: "generics", element: <JavaGenericsMain /> },
                 { path: "collections", element: <JavaCollectionsMain /> },
                 { path: "io", element: <InputOutputMain /> },
                 { path: "multithreading", element: <MultiThreadingMain /> },
