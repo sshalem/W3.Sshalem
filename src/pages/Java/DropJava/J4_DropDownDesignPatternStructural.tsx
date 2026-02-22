@@ -46,11 +46,13 @@ const J4_DropDownDesignPatternStructural = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Singleton" internalLink="/java/design-patterns-structural/singleton" />
-        <SideDropdownLink sideDropDownNavName="Prototype" internalLink="/java/design-patterns-structural/prototype" />
-        <SideDropdownLink sideDropDownNavName="Builder" internalLink="/java/design-patterns-structural/builder" />
-        <SideDropdownLink sideDropDownNavName="Factory" internalLink="/java/design-patterns-structural/factory" />
-        <SideDropdownLink sideDropDownNavName="Abstract Factory" internalLink="/java/design-patterns-structural/abstract-factory" />
+        <SideDropdownLink sideDropDownNavName="1. Adapter" internalLink="/java/design-patterns-structural/adapter" />
+        <SideDropdownLink sideDropDownNavName="2. Decorator" internalLink="/java/design-patterns-structural/decorator" />
+        <SideDropdownLink sideDropDownNavName="3. Facade" internalLink="/java/design-patterns-structural/facade" />
+        <SideDropdownLink sideDropDownNavName="4. Composite" internalLink="/java/design-patterns-structural/composite" />
+        <SideDropdownLink sideDropDownNavName="5. Proxy" internalLink="/java/design-patterns-structural/proxy" />
+        <SideDropdownLink sideDropDownNavName="6. Bridge" internalLink="/java/design-patterns-structural/bridge" />
+        <SideDropdownLink sideDropDownNavName="7. Flyweight" internalLink="/java/design-patterns-structural/flyweight" />
       </div>
     </section>
   );

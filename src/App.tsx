@@ -324,6 +324,15 @@ import {
   Sqlite3Main,
 } from "./pages/FastAPI/FastAPIComponents/F1_FastAPIDatabaseProfilesEnvPkg";
 import { DefaultLoggingMain, LoggingConfigMain, LoggingConfINIMain } from "./pages/FastAPI/FastAPIComponents/F2_FastAPILoggingPkg";
+import {
+  AdapterMain,
+  BridgeMain,
+  CompositeMain,
+  DecoratorMain,
+  FacadeMain,
+  FlyweightMain,
+  ProxyMain,
+} from "./pages/Java/JavaComponents/J4_DesignPatternStructuralPkg";
 
 const router = createBrowserRouter(
   [
@@ -382,8 +391,13 @@ const router = createBrowserRouter(
               path: "design-patterns-structural",
               element: <DesignPatternStructural />,
               children: [
-                { path: "array", element: <ArrayMain /> },
-                { path: "array", element: <ArrayMain /> },
+                { path: "adapter", element: <AdapterMain /> },
+                { path: "decorator", element: <DecoratorMain /> },
+                { path: "facade", element: <FacadeMain /> },
+                { path: "composite", element: <CompositeMain /> },
+                { path: "proxy", element: <ProxyMain /> },
+                { path: "bridge", element: <BridgeMain /> },
+                { path: "flyweight", element: <FlyweightMain /> },
               ],
             },
             {

@@ -46,11 +46,11 @@ const J3_DropDownDesignPatternCreational = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Singleton" internalLink="/java/design-patterns-creational/singleton" />
-        <SideDropdownLink sideDropDownNavName="Prototype" internalLink="/java/design-patterns-creational/prototype" />
-        <SideDropdownLink sideDropDownNavName="Builder" internalLink="/java/design-patterns-creational/builder" />
-        <SideDropdownLink sideDropDownNavName="Factory" internalLink="/java/design-patterns-creational/factory" />
-        <SideDropdownLink sideDropDownNavName="Abstract Factory" internalLink="/java/design-patterns-creational/abstract-factory" />
+        <SideDropdownLink sideDropDownNavName="1. Singleton" internalLink="/java/design-patterns-creational/singleton" />
+        <SideDropdownLink sideDropDownNavName="2. Prototype" internalLink="/java/design-patterns-creational/prototype" />
+        <SideDropdownLink sideDropDownNavName="3. Builder" internalLink="/java/design-patterns-creational/builder" />
+        <SideDropdownLink sideDropDownNavName="4. Factory" internalLink="/java/design-patterns-creational/factory" />
+        <SideDropdownLink sideDropDownNavName="5. Abstract Factory" internalLink="/java/design-patterns-creational/abstract-factory" />
       </div>
     </section>
   );
