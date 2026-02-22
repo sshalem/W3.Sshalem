@@ -42,6 +42,7 @@ const D7_DropDownRest = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Rest API" internalLink="/spring/rest/rest-api" />
+        <SideDropdownLink sideDropDownNavName="Json/Jackson" internalLink="/spring/rest/json-jackson" />
         <SideDropdownLink sideDropDownNavName="CORS" internalLink="/spring/rest/cors" />
         <SideDropdownLink sideDropDownNavName="OpenAPI (Swagger)" internalLink="/spring/rest/openapi-swagger" />
         <SideDropdownLink sideDropDownNavName="SSE - Server Send Events" internalLink="/spring/rest/sse" />

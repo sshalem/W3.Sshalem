@@ -119,6 +119,7 @@ import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
 import {
   CorsMain,
+  JsonJacksonMain,
   OpenApiSwaggerMain,
   RestMain,
   SseMain,
@@ -529,6 +530,7 @@ const router = createBrowserRouter(
               children: [
                 // RestMain
                 { path: "rest-api", element: <RestMain /> },
+                { path: "json-jackson", element: <JsonJacksonMain /> },
                 { path: "cors", element: <CorsMain /> },
                 { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
                 { path: "sse", element: <SseMain /> },
