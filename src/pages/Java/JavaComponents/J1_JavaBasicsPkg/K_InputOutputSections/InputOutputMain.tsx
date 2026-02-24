@@ -4,19 +4,23 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./InputOutputIntro";
+import O0_InputOutputIntro from "./O0_InputOutputIntro";
+import O1_CreateDirectory from "./O1_CreateDirectory";
+import O2_CreateFile from "./O2_CreateFile";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o0_InputOutputIntro = "Java I/O Intro";
+const o1_CreateDirectory = "1. Create Directory";
+const o2_CreateFile = "2. Create File";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o0_InputOutputIntro, o1_CreateDirectory, o2_CreateFile];
 
 // ============================================
 // ============================================
@@ -70,7 +74,9 @@ const InputOutputMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O0_InputOutputIntro anchor={o0_InputOutputIntro} />
+      <O1_CreateDirectory anchor={o1_CreateDirectory} />
+      <O2_CreateFile anchor={o2_CreateFile} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

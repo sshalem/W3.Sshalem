@@ -4,19 +4,21 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import ArrayIntro from "./MultiThreadingIntro";
+import O1_MultiThreadingIntro from "./O1_MultiThreadingIntro";
+import O2_LifeCycleOfThread from "./O2_LifeCycleOfThread";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const array_intro = "array intro";
+const o1_MultiThreadingIntro = "1. Multi Threading Intro";
+const o2_LifeCycleOfThread = "2. Life Cycle Of Thread";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [array_intro];
+const anchorList: string[] = [o1_MultiThreadingIntro, o2_LifeCycleOfThread];
 
 // ============================================
 // ============================================
@@ -70,7 +72,8 @@ const MultiThreadingMain = () => {
       />
       {/* End Contents */}
 
-      <ArrayIntro anchor={array_intro} />
+      <O1_MultiThreadingIntro anchor={o1_MultiThreadingIntro} />
+      <O2_LifeCycleOfThread anchor={o2_LifeCycleOfThread} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
