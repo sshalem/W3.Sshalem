@@ -199,7 +199,7 @@ import {
   PaginationSortingMain,
   StoredProceduresFunctionsMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
-import Architecture from "./pages/MicroServices/MicroServiceComponents/M_ArchitecturePkg/Architecture";
+import Architecture from "./pages/MicroServices/MicroServiceComponents/M1_ArchitecturePkg/Architecture";
 import {
   APIGatewayMain,
   ConfigManagementMain,
@@ -209,13 +209,13 @@ import {
   LoadBalancingMain,
   ResilienceFaultToleranceMain,
   ServiceDiscoveryMain,
-} from "./pages/MicroServices/MicroServiceComponents/M_ArchitecturePkg";
-import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg/SecurityMicroServ";
-import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg";
-import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
-import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M_KafkaPkg";
-import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M_RabbitMQPkg";
-import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M_EurekaPkg";
+} from "./pages/MicroServices/MicroServiceComponents/M1_ArchitecturePkg";
+import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
+import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg";
+import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
+import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M3_KafkaPkg";
+import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M4_RabbitMQPkg";
+import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M2_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 
 import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
