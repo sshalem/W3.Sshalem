@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import EurekaDiscoveryIntro from "./EurekaDiscoveryIntro";
+import O1_WhaIsLoadBalance from "./O1_WhaIsLoadBalance";
 
 // =============================================================================================================
 
-const eureka_discovery_intro = "Profile Intro";
+const o1_WhaIsLoadBalance = "1. What Is Load Balancing";
 
 // =============================================================================================================
 
-const anchorList: string[] = [eureka_discovery_intro];
+const anchorList: string[] = [o1_WhaIsLoadBalance];
 
 // =============================================================================================================
 
-const EurekaDiscoveryMain = () => {
+const LoadBalancingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +48,7 @@ const EurekaDiscoveryMain = () => {
   if (isLoading) {
     return <Loading />;
   }
+
   return (
     <section>
       {/* Start Contents */}
@@ -60,11 +61,11 @@ const EurekaDiscoveryMain = () => {
       />
       {/* End Contents */}
 
-      <EurekaDiscoveryIntro anchor={eureka_discovery_intro} />
+      <O1_WhaIsLoadBalance anchor={o1_WhaIsLoadBalance} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default EurekaDiscoveryMain;
+export default LoadBalancingMain;

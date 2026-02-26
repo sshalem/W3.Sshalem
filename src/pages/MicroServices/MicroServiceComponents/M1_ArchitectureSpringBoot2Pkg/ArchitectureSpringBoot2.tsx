@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { Answer, Li, Question, Subject, ULdisc } from "../../../../components";
 
-const Architecture = () => {
+const ArchitectureSpringBoot2 = () => {
   let location = useLocation();
 
   return (
@@ -70,4 +70,4 @@ const Architecture = () => {
   );
 };
 
-export default Architecture;
+export default ArchitectureSpringBoot2;

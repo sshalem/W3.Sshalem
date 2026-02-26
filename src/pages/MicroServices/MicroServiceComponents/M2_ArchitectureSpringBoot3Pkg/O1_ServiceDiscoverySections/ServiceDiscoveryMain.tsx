@@ -1,18 +1,22 @@
+/*
+
+
+*/
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import EurekaIntro from "./EurekaIntro";
+import O1_WhatIsServiceDiscovery from "./O1_WhatIsServiceDiscovery";
 
 // =============================================================================================================
 
-const eureka_intro = "Profile Intro";
+const o1_WhatIsServiceDiscovery = "1. What Is Service Discovery";
 
 // =============================================================================================================
 
-const anchorList: string[] = [eureka_intro];
+const anchorList: string[] = [o1_WhatIsServiceDiscovery];
 
 // =============================================================================================================
 
-const EurekaMain = () => {
+const ServiceDiscoveryMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +65,11 @@ const EurekaMain = () => {
       />
       {/* End Contents */}
 
-      <EurekaIntro anchor={eureka_intro} />
+      <O1_WhatIsServiceDiscovery anchor={o1_WhatIsServiceDiscovery} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default EurekaMain;
+export default ServiceDiscoveryMain;

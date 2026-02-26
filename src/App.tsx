@@ -55,7 +55,7 @@ import {
 } from "./pages/Spring/SpringComponents/S2_ApplicationPropsPkg";
 
 import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/S3_LoggingPkg";
-import { Docker, Eureka, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
+import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 
 import {
   SpecificationDocument,
@@ -199,9 +199,9 @@ import {
   PaginationSortingMain,
   StoredProceduresFunctionsMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
-import Architecture from "./pages/MicroServices/MicroServiceComponents/M1_ArchitecturePkg/Architecture";
 import {
   APIGatewayMain,
+  ArchitectureOptionsMain,
   ConfigManagementMain,
   DataManagementMain,
   DistributedTracingMonitoringMain,
@@ -209,13 +209,12 @@ import {
   LoadBalancingMain,
   ResilienceFaultToleranceMain,
   ServiceDiscoveryMain,
-} from "./pages/MicroServices/MicroServiceComponents/M1_ArchitecturePkg";
+} from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg";
 import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
 import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg";
 import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
 import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M3_KafkaPkg";
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M4_RabbitMQPkg";
-import { EurekaDiscoveryMain, EurekaMain } from "./pages/MicroServices/MicroServiceComponents/M2_EurekaPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 
 import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
@@ -350,6 +349,7 @@ import {
   VisitorMain,
 } from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg";
 import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
+import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
 
 const router = createBrowserRouter(
   [
@@ -631,9 +631,25 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <MicroServiceHome /> },
             {
-              path: "architecture",
-              element: <Architecture />,
+              path: "architecture-springboot-2",
+              element: <ArchitectureSpringBoot2 />,
               children: [
+                { path: "architecture-options", element: <ArchitectureOptionsMain /> },
+                { path: "service-discovery", element: <ServiceDiscoveryMain /> },
+                { path: "api-gateway", element: <APIGatewayMain /> },
+                { path: "config-management", element: <ConfigManagementMain /> },
+                { path: "inter-service-communication", element: <InterServiceCommMain /> },
+                { path: "load-balancing", element: <LoadBalancingMain /> },
+                { path: "resilience-fault-tolerance", element: <ResilienceFaultToleranceMain /> },
+                { path: "distributed-tracing", element: <DistributedTracingMonitoringMain /> },
+                { path: "data-management", element: <DataManagementMain /> },
+              ],
+            },
+            {
+              path: "architecture-springboot-3",
+              element: <ArchitectureSpringBoot3 />,
+              children: [
+                { path: "architecture-options", element: <ArchitectureOptionsMain /> },
                 { path: "service-discovery", element: <ServiceDiscoveryMain /> },
                 { path: "api-gateway", element: <APIGatewayMain /> },
                 { path: "config-management", element: <ConfigManagementMain /> },
@@ -645,14 +661,7 @@ const router = createBrowserRouter(
               ],
             },
             { path: "docker", element: <Docker /> },
-            {
-              path: "eureka",
-              element: <Eureka />,
-              children: [
-                { path: "eureka-server", element: <EurekaMain /> },
-                { path: "eureka-discovery", element: <EurekaDiscoveryMain /> },
-              ],
-            },
+
             {
               path: "kafka",
               element: <Kafka />,

@@ -11,7 +11,8 @@ import DropDownKafka from "./DropMicroService/DropDownKafka";
 import DropDownRabbitMQ from "./DropMicroService/DropDownRabbitMQ";
 import DropDownDocker from "./DropMicroService/DropDownDocker";
 import DropDownMicroServSecurity from "./DropMicroService/DropDownMicroServSecurity";
-import DropDownArchitecture from "./DropMicroService/DropDownArchitecture";
+import DropDownArchitectureBoot2 from "./DropMicroService/DropDownArchitectureBoot2";
+import DropDownArchitectureBoot3 from "./DropMicroService/DropDownArchitectureBoot3";
 
 const MicroServices_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -41,7 +42,8 @@ const MicroServices_page = () => {
       {showSidebar && (
         <AsideWrapperLayout>
           <SideBarLink pageName="MicroService Home" internalLink="/microservices" />
-          <DropDownArchitecture />
+          <DropDownArchitectureBoot2 />
+          <DropDownArchitectureBoot3 />
           <DropDownDocker />
           <DropDownKafka />
           <DropDownRabbitMQ />
