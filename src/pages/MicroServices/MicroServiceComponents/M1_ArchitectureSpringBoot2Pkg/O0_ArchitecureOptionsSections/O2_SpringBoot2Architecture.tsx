@@ -21,27 +21,12 @@ const O2_SpringBoot2Architecture = ({ anchor }: { anchor: string }) => {
             <Li>✅ Load-balanced (Use Spring Cloud LoadBalancer)</Li>
             <Li>✅ Separate DB per service</Li>
             <Li>✅ Resilience4j</Li>
-            <Li>
-              ✅ Observability Sleuth + Zipkin (distributed tracing stack) standard tracing solution for Spring Boot 2 microservices
-              <ULdisc>
-                <Li>
-                  More adavanced <strong>is 3 pillars of observability</strong>
-                </Li>
-                <Li>
-                  🔹 Metrics stack(to monitor JVM memory, CPU , Request latency , Error rates ,Circuit breaker states), add:
-                  <ULdisc>
-                    <Li>Micrometer</Li>
-                    <Li>Prometheus</Li>
-                    <Li>Grafana</Li>
-                  </ULdisc>
-                </Li>
-              </ULdisc>
-            </Li>
+            <Li>✅ Observability Sleuth + Zipkin (distributed tracing stack) standard tracing solution for Spring Boot 2 microservices</Li>
             <Li>✅ Communication - OpenFeign , Kafka (Event driven), RabbitMq , RestTemplate (Old)</Li>
             <Li>✅ ELK logging (Elasticsearch + Logstash + Kibana)</Li>
             <Li>✅ Security</Li>
           </ULDecimal>
-          For <strong>Spring Boot 2</strong> microservices (2020–2023 era), This is a very correct and{" "}
+          For <strong>Spring Boot 2</strong> microservices ( <strong>2020–2023 era</strong> ), This is a very correct and{" "}
           <SpanYellow>production-grade architecture</SpanYellow>.
           <article className="my-8">
             🧠 Important Insight :This stack is not about Spring Boot version anymore.
