@@ -5,20 +5,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroArchitecture from "./O1_IntroArchitecture";
-import O2_SpringBoot2Architecture from "./O2_SpringBoot2Architecture";
+import O2_SpringBoot3Architecture from "./O2_SpringBoot3Architecture";
 
 // =============================================================================================================
 
 const o1_IntroArchitecture = "1. Intro Architecture";
-const o2_SpringBoot2Architecture = "2. Learning Architecture (Old Netflix stack)";
+const o2_SpringBoot3Architecture = "2. Modern Architecture";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_IntroArchitecture, o2_SpringBoot2Architecture];
+const anchorList: string[] = [o1_IntroArchitecture, o2_SpringBoot3Architecture];
 
 // =============================================================================================================
 
-const ArchitectureOptionsMain = () => {
+const Architecture3OptionsMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -68,11 +68,11 @@ const ArchitectureOptionsMain = () => {
       {/* End Contents */}
 
       <O1_IntroArchitecture anchor={o1_IntroArchitecture} />
-      <O2_SpringBoot2Architecture anchor={o2_SpringBoot2Architecture} />
+      <O2_SpringBoot3Architecture anchor={o2_SpringBoot3Architecture} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ArchitectureOptionsMain;
+export default Architecture3OptionsMain;

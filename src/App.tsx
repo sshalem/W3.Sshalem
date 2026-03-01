@@ -350,6 +350,7 @@ import {
 } from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg";
 import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
 import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
+import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
 
 const router = createBrowserRouter(
   [
@@ -631,7 +632,7 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <MicroServiceHome /> },
             {
-              path: "architecture-springboot-2",
+              path: "architecture-springboot-2-7-18",
               element: <ArchitectureSpringBoot2 />,
               children: [
                 { path: "architecture-options", element: <ArchitectureOptionsMain /> },
@@ -646,10 +647,10 @@ const router = createBrowserRouter(
               ],
             },
             {
-              path: "architecture-springboot-3",
+              path: "architecture-springboot-3-x-x",
               element: <ArchitectureSpringBoot3 />,
               children: [
-                { path: "architecture-options", element: <ArchitectureOptionsMain /> },
+                { path: "architecture-options", element: <Architecture3OptionsMain /> },
                 { path: "service-discovery", element: <ServiceDiscoveryMain /> },
                 { path: "api-gateway", element: <APIGatewayMain /> },
                 { path: "config-management", element: <ConfigManagementMain /> },

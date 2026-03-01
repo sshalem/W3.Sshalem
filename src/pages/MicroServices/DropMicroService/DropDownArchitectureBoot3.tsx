@@ -38,8 +38,8 @@ const DropDownArchitectureBoot3 = () => {
         enableCaret={true}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/microservices/architecture-springboot-3"
-        topicName="Architecture Spring boot 3.xx"
+        internalLink="/microservices/architecture-springboot-3-x-x"
+        topicName="Spring-boot 3.x.x"
       />
 
       <div
@@ -47,21 +47,21 @@ const DropDownArchitectureBoot3 = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Architecture Options" internalLink="/microservices/architecture-springboot-3/architecture-options" />
-        <SideDropdownLink sideDropDownNavName="Service Discovery" internalLink="/microservices/architecture-springboot-3/service-discovery" />
-        <SideDropdownLink sideDropDownNavName="API Gateway" internalLink="/microservices/architecture-springboot-3/api-gateway" />
-        <SideDropdownLink sideDropDownNavName="Config Management" internalLink="/microservices/architecture-springboot-3/config-management" />
+        <SideDropdownLink sideDropDownNavName="Architecture 3.x.x" internalLink="/microservices/architecture-springboot-3-x-x/architecture-options" />
+        <SideDropdownLink sideDropDownNavName="Service Discovery" internalLink="/microservices/architecture-springboot-3-x-x/service-discovery" />
+        <SideDropdownLink sideDropDownNavName="API Gateway" internalLink="/microservices/architecture-springboot-3-x-x/api-gateway" />
+        <SideDropdownLink sideDropDownNavName="Config Management" internalLink="/microservices/architecture-springboot-3-x-x/config-management" />
         <SideDropdownLink
           sideDropDownNavName="Microservice Communication"
-          internalLink="/microservices/architecture-springboot-3/inter-service-communication"
+          internalLink="/microservices/architecture-springboot-3-x-x/inter-service-communication"
         />
-        <SideDropdownLink sideDropDownNavName="Load Balancing" internalLink="/microservices/architecture-springboot-3/load-balancing" />
+        <SideDropdownLink sideDropDownNavName="Load Balancing" internalLink="/microservices/architecture-springboot-3-x-x/load-balancing" />
         <SideDropdownLink
           sideDropDownNavName="Resilience & Fault Tolerance"
-          internalLink="/microservices/architecture-springboot-3/resilience-fault-tolerance"
+          internalLink="/microservices/architecture-springboot-3-x-x/resilience-fault-tolerance"
         />
-        <SideDropdownLink sideDropDownNavName="Distributed Tracing" internalLink="/microservices/architecture-springboot-3/distributed-tracing" />
-        <SideDropdownLink sideDropDownNavName="Data Management" internalLink="/microservices/architecture-springboot-3/data-management" />
+        <SideDropdownLink sideDropDownNavName="Distributed Tracing" internalLink="/microservices/architecture-springboot-3-x-x/distributed-tracing" />
+        <SideDropdownLink sideDropDownNavName="Data Management" internalLink="/microservices/architecture-springboot-3-x-x/data-management" />
       </div>
     </section>
   );

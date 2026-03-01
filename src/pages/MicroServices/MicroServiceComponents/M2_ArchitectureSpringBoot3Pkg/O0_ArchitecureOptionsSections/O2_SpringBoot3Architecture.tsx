@@ -6,7 +6,7 @@ import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../compon
 import { SpanYellow } from "../../../../../components/Highlight";
 import microservice_1 from "../../../../../assets/microservice_1.jpg";
 
-const O2_SpringBoot2Architecture = ({ anchor }: { anchor: string }) => {
+const O2_SpringBoot3Architecture = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -63,4 +63,4 @@ const O2_SpringBoot2Architecture = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_SpringBoot2Architecture;
+export default O2_SpringBoot3Architecture;

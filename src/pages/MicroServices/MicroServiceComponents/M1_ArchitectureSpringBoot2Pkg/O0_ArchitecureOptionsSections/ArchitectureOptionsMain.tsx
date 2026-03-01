@@ -10,7 +10,7 @@ import O2_SpringBoot2Architecture from "./O2_SpringBoot2Architecture";
 // =============================================================================================================
 
 const o1_IntroArchitecture = "1. Intro Architecture";
-const o2_SpringBoot2Architecture = "2. Learning Architecture (Old Netflix stack)";
+const o2_SpringBoot2Architecture = "2. Architecture 2.7.18 (Old Netflix stack)";
 
 // =============================================================================================================
 

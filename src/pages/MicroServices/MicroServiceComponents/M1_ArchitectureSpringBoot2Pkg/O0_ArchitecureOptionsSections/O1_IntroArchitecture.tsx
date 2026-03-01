@@ -14,7 +14,7 @@ const O1_IntroArchitecture = ({ anchor }: { anchor: string }) => {
           <p>🎯 Architecure is eveloving :</p>
           <ULDecimal>
             <Li>
-              <SpanYellow>Spring boot 2.xx version </SpanYellow> -
+              <SpanYellow>Spring boot 2.7.18 version </SpanYellow> -
               <ULdisc>
                 <Li>Many enterprise systems built 3–5 years ago still run exactly like this.</Li>
                 <Li>Large banks, telecoms, insurance companies still have this stack running in production.</Li>

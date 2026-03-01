@@ -6,7 +6,7 @@ const ArchitectureSpringBoot3 = () => {
 
   return (
     <section>
-      {location.pathname === "/microservices/architecture" ? (
+      {location.pathname === "/microservices/architecture-springboot-3-x-x" ? (
         <Subject title="Architecture ...">
           {
             <section className="my-8">
