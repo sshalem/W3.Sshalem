@@ -2,25 +2,23 @@
 /spring/jpa/equals-hashcode
 equals() and  hashcode() 
 */
-import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_IntroHashEquals = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-4">
-          🎯 To create <SpanYellow>equals()</SpanYellow> and <SpanYellow>hashCode()</SpanYellow> , we must distinguish between:
-          <ULDecimal>
+          🎯 To create <strong>equals()</strong> and <strong>hashCode()</strong> , we must distinguish between the 2 options:
+          <ULdisc>
             <Li>
-              plain JAVA POJO
-              <JavaHighlight javaCode={_1_} />
+              <SpanYellow>JAVA POJO</SpanYellow>
             </Li>
             <Li>
-              for JPA Entity
-              <JavaHighlight javaCode={_2_} />
+              <SpanYellow>JPA Entity</SpanYellow>
             </Li>
-          </ULDecimal>
+          </ULdisc>
         </article>
       </section>
     </MainChildArea>
@@ -28,23 +26,3 @@ const O1_IntroHashEquals = ({ anchor }: { anchor: string }) => {
 };
 
 export default O1_IntroHashEquals;
-
-const _1_ = `public class Customer {    
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-}`;
-
-const _2_ = `@Entity
-@Table(name = "customer_tb")
-public class CustomerEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customer_id")
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-}`;

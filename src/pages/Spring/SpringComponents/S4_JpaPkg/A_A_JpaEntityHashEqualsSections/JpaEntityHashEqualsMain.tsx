@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroHashEquals from "./O1_IntroHashEquals";
-import O2_PojoHashEquals from "./O2_PojoHashEquals";
-import O3_JpaEntityHashEquals from "./O3_JpaEntityHashEquals";
+import O3_PojoHashEquals from "./O3_PojoHashEquals";
+import O2_JpaEntityHashEquals from "./O2_JpaEntityHashEquals";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_IntroHashEquals = "1. Intro hashcode() equals()";
-const o2_PojoHashEquals = "2. POJO hashcode() equals() implementation";
-const o3_JpaEntityHashEquals = "3. JPA Entity hashcode() equals() implementation";
+const o2_JpaEntityHashEquals = "2. JPA Entity hashcode() equals() implementation";
+const o3_PojoHashEquals = "3. POJO hashcode() equals() implementation";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroHashEquals, o2_PojoHashEquals, o3_JpaEntityHashEquals];
+const anchorList: string[] = [o1_IntroHashEquals, o2_JpaEntityHashEquals, o3_PojoHashEquals];
 
 // ============================================
 // ============================================
@@ -70,9 +70,9 @@ const JpaEntityHashEqualsMain = () => {
       />
       {/* End Contents */}
 
-      <O1_IntroHashEquals anchor={o1_IntroHashEquals}></O1_IntroHashEquals>
-      <O2_PojoHashEquals anchor={o2_PojoHashEquals}></O2_PojoHashEquals>
-      <O3_JpaEntityHashEquals anchor={o3_JpaEntityHashEquals} />
+      <O1_IntroHashEquals anchor={o1_IntroHashEquals} />
+      <O2_JpaEntityHashEquals anchor={o2_JpaEntityHashEquals} />
+      <O3_PojoHashEquals anchor={o3_PojoHashEquals} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
