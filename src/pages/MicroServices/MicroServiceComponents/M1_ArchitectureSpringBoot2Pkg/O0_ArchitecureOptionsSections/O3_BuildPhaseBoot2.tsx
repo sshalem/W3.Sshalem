@@ -9,28 +9,6 @@ const O3_BuildPhaseBoot2 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-8">
-          <p>
-            🎯 This Architecture <SpanYellow>Spring boot 2.7.18 version </SpanYellow> (Old Netflix stack) — Here’s the Right Approach
-          </p>
-          <ULDecimal>
-            <Li>✅ Eureka</Li>
-            <Li>✅ API Gateway</Li>
-            <Li>✅ Config Server</Li>
-            <Li>✅ Load-balanced (Use Spring Cloud LoadBalancer)</Li>
-            <Li>✅ Separate DB per service</Li>
-            <Li>✅ Resilience4j</Li>
-            <Li>✅ Observability Sleuth + Zipkin (distributed tracing stack) standard tracing solution for Spring Boot 2 microservices</Li>
-            <Li>✅ Communication - OpenFeign , Kafka (Event driven), RabbitMq , RestTemplate (Old)</Li>
-            <Li>✅ ELK logging (Elasticsearch + Logstash + Kibana)</Li>
-            <Li>✅ Security</Li>
-          </ULDecimal>
-        </article>
-      </section>
-
-      <hr />
-
-      <section className="my-8">
         <p>Here is a clear, disciplined, step-by-step build order so we don’t create chaos while coding.</p>
         <p>
           The rule:

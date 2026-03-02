@@ -3,7 +3,7 @@
 Model Mapper --> (SPRING)(JPA)(Mapping Libs)
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { JavaHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
 const O2_ModelMapper = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,6 +32,15 @@ const O2_ModelMapper = ({ anchor }: { anchor: string }) => {
             If you are using Maven, add (from <SpanYellow>mvnrepository</SpanYellow> )
           </Li>
           <XmlHighlight xmlCode={_1_} />
+        </ULdisc>
+      </section>
+
+      <hr />
+
+      <section className="my-8">
+        <p className="my-8 text-xl">3️⃣ usage</p>
+        <ULdisc>
+          <JavaHighlight javaCode={_2_} />
         </ULdisc>
       </section>
     </MainChildArea>
