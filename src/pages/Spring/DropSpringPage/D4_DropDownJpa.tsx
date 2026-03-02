@@ -42,6 +42,7 @@ const D4_DropDownJpa = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        <SideDropdownLink sideDropDownNavName="equals() and  hashCode()" internalLink="/spring/jpa/equals-hashcode" />
         <SideDropdownLink sideDropDownNavName="OneToMany (Bi Lazy)" internalLink="/spring/jpa/one2many-bi-lazy" />
         <SideDropdownLink sideDropDownNavName="ManyToMany (Bi Lazy)" internalLink="/spring/jpa/many2many-bi-lazy" />
         <SideDropdownLink sideDropDownNavName="Pagination Sort" internalLink="/spring/jpa/pagination-sorting" />

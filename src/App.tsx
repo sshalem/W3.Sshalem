@@ -191,6 +191,7 @@ import {
 
 import {
   EntityValidationMain,
+  JpaEntityHashEqualsMain,
   JpaLoggingMain,
   JpqlMain,
   Many2ManyBiLazyMain,
@@ -492,6 +493,7 @@ const router = createBrowserRouter(
               path: "jpa",
               element: <Jpa />,
               children: [
+                { path: "equals-hashcode", element: <JpaEntityHashEqualsMain /> },
                 { path: "entity-validation", element: <EntityValidationMain /> },
                 { path: "mapping-libs", element: <MappingLibsMain /> },
                 { path: "jpql", element: <JpqlMain /> },

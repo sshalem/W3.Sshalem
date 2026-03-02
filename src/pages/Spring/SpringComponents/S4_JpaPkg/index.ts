@@ -1,4 +1,5 @@
 export { default as Jpa } from "./Jpa";
+export { default as JpaEntityHashEqualsMain } from "./A_A_JpaEntityHashEqualsSections/JpaEntityHashEqualsMain";
 export { default as Many2ManyBiLazyMain } from "./B_Many2ManyBiLazySections/Many2ManyBiLazyMain";
 export { default as One2ManyBiLazyMain } from "./A_One2ManyBiLazySections/One2ManyBiLazyMain";
 export { default as EntityValidationMain } from "./D_EntityVaidationSections/EntityValidationMain";

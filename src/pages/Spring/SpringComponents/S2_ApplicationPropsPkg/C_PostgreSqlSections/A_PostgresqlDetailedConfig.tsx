@@ -26,9 +26,13 @@ const postgresConfig = `# ===============================
 
 spring.datasource.url=jdbc:postgresql://localhost/{the name of Schema in DB}
 spring.datasource.username=postgres
-spring.datasource.password=admin
-# spring.datasource.password=root
-# spring.datasource.password=postgres
+spring.datasource.password=postgres
+
+# Different passwords i made :
+# postgres - On LENOVO laptop at home
+# admin - need to check in work laptop and ASUS laptop at home
+# root - need to check in work laptop and ASUS laptop at home
+
 
 
 # ===============================
