@@ -28,10 +28,10 @@ spring.datasource.url=jdbc:postgresql://localhost/{the name of Schema in DB}
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 
-# Different passwords i made :
+# Different passwords I made :
 # postgres - On LENOVO laptop at home
-# admin - need to check in work laptop and ASUS laptop at home
-# root - need to check in work laptop and ASUS laptop at home
+# postgres - On Work Laptop
+# admin/root - need to check ASUS laptop at home
 
 
 
