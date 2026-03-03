@@ -25,12 +25,18 @@ const O1_IntroCustomerOrder = ({ anchor }: { anchor: string }) => {
             <Li>✅ Step 1 — Create customer-service</Li>
             <Li>✅ Step 2 — Create order-service</Li>
             <Li>
-              ✅ Step 3 — Communicate using <SpanYellow>RestTemplate</SpanYellow>
+              ✅ Step 3 — use <SpanYellow>RestTemplate</SpanYellow> to Communicate Between <SpanYellow>customer-service</SpanYellow> to{" "}
+              <SpanYellow>order-service</SpanYellow> service ,
             </Li>
           </ULdisc>
           <Li>
-            when Client Sends a HTTP Post Request to add Order (For Example) , the request goes via : <strong>Customer Service</strong> ➡️{" "}
-            <strong>Order Service</strong>
+            Example, I want to create an order to a customer , thus,
+            <ULdisc>
+              <Li>
+                when Client Sends a HTTP Request , the request goes via : <strong>Customer Service</strong> ➡️ <strong>Order Service</strong>
+              </Li>
+              <Li>and retruns back to Client (If its a GET PUT POST)</Li>
+            </ULdisc>
           </Li>
         </ULdisc>
         <IMG img_name={microservice_2}></IMG>
