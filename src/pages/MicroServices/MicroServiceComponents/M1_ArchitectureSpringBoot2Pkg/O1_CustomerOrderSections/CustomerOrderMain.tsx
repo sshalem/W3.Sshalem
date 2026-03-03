@@ -4,15 +4,15 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsServiceDiscovery from "./O1_IntroCustomerOrder";
+import O1_IntroCustomerOrder from "./O1_IntroCustomerOrder";
 
 // =============================================================================================================
 
-const o1_WhatIsServiceDiscovery = "1. What Is Service Discovery";
+const o1_IntroCustomerOrder = "1. Intro Customer Order services";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsServiceDiscovery];
+const anchorList: string[] = [o1_IntroCustomerOrder];
 
 // =============================================================================================================
 
@@ -65,7 +65,7 @@ const CustomerOrderMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsServiceDiscovery anchor={o1_WhatIsServiceDiscovery} />
+      <O1_IntroCustomerOrder anchor={o1_IntroCustomerOrder} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

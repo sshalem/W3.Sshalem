@@ -15,7 +15,7 @@ const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
       </div>
       <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
       <div className="my-5">
-        <DivDoubleBorder>application-h2.properties</DivDoubleBorder>
+        <DivDoubleBorder>application-mysql.properties</DivDoubleBorder>
       </div>
       <ApplicationPropertiesHighlight propertiesCode={configMysqlProps} />
     </MainChildArea>
