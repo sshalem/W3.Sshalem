@@ -204,6 +204,7 @@ import {
   APIGatewayMain,
   ArchitectureOptionsMain,
   ConfigManagementMain,
+  CustomerOrderMain,
   DataManagementMain,
   DistributedTracingMonitoringMain,
   InterServiceCommMain,
@@ -638,7 +639,7 @@ const router = createBrowserRouter(
               element: <ArchitectureSpringBoot2 />,
               children: [
                 { path: "architecture-options", element: <ArchitectureOptionsMain /> },
-                { path: "service-discovery", element: <ServiceDiscoveryMain /> },
+                { path: "customer-order", element: <CustomerOrderMain /> },
                 { path: "api-gateway", element: <APIGatewayMain /> },
                 { path: "config-management", element: <ConfigManagementMain /> },
                 { path: "inter-service-communication", element: <InterServiceCommMain /> },

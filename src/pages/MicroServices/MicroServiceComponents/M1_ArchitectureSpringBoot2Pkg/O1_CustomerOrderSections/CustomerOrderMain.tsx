@@ -4,7 +4,7 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsServiceDiscovery from "./O1_WhatIsServiceDiscovery";
+import O1_WhatIsServiceDiscovery from "./O1_IntroCustomerOrder";
 
 // =============================================================================================================
 
@@ -16,7 +16,7 @@ const anchorList: string[] = [o1_WhatIsServiceDiscovery];
 
 // =============================================================================================================
 
-const ServiceDiscoveryMain = () => {
+const CustomerOrderMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -72,4 +72,4 @@ const ServiceDiscoveryMain = () => {
   );
 };
 
-export default ServiceDiscoveryMain;
+export default CustomerOrderMain;

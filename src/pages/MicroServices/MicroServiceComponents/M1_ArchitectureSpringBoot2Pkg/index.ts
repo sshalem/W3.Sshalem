@@ -1,5 +1,7 @@
 export { default as ArchitectureOptionsMain } from "./O0_ArchitecureOptionsSections/ArchitectureOptionsMain";
-export { default as ServiceDiscoveryMain } from "./O1_ServiceDiscoverySections/ServiceDiscoveryMain";
+export { default as CustomerOrderMain } from "./O1_CustomerOrderSections/CustomerOrderMain";
+
+export { default as ServiceDiscoveryMain } from "./O1_CustomerOrderSections/CustomerOrderMain";
 export { default as APIGatewayMain } from "./O2_APIGatewaySections/APIGatewayMain";
 export { default as ConfigManagementMain } from "./O3_ConfigManagementSections/ConfigManagementMain";
 export { default as InterServiceCommMain } from "./O4_InterServiceCommSections/InterServiceCommMain";

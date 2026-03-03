@@ -18,7 +18,7 @@ const DropDownArchitectureBoot2 = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("microservices/architecture-springboot-2")) {
+    if (location.pathname.includes("microservices/architecture-springboot-2-7-18")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -51,6 +51,8 @@ const DropDownArchitectureBoot2 = () => {
           sideDropDownNavName="Architecture 2.7.18"
           internalLink="/microservices/architecture-springboot-2-7-18/architecture-options"
         />
+
+        <SideDropdownLink sideDropDownNavName="Customer & Order" internalLink="/microservices/architecture-springboot-2-7-18/customer-order" />
         <SideDropdownLink sideDropDownNavName="Service Discovery" internalLink="/microservices/architecture-springboot-2-7-18/service-discovery" />
         <SideDropdownLink sideDropDownNavName="API Gateway" internalLink="/microservices/architecture-springboot-2-7-18/api-gateway" />
         <SideDropdownLink sideDropDownNavName="Config Management" internalLink="/microservices/architecture-springboot-2-7-18/config-management" />
