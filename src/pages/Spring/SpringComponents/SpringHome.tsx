@@ -5,7 +5,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading, Subject } from "../../../components";
 import StsVersions from "./SpringHomePkg/StsVersions";
-import SpringTopics from "./SpringHomePkg/SpringTopics";
+import SpringJDKCompatibility from "./SpringHomePkg/SpringJDKCompatibility";
 import SpringGuideRefrence from "./SpringHomePkg/SpringGuideRefrence";
 
 // ===========================================
@@ -13,14 +13,14 @@ import SpringGuideRefrence from "./SpringHomePkg/SpringGuideRefrence";
 // ===========================================
 
 const sts_versions = "sts versions";
-const spring_topics = "spring topics";
+const springJDKCompatibility = "spring Boot and JDK compatibility";
 const spring_guide_refrence = "spring guide refrence";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [spring_topics, sts_versions];
+const anchorList: string[] = [springJDKCompatibility, sts_versions];
 
 // ============================================
 // ============================================
@@ -74,7 +74,7 @@ const SpringHome = () => {
       />
       {/* End Contents */}
       <Subject title="Spring Home ...">
-        <SpringTopics anchor={spring_topics} />
+        <SpringJDKCompatibility anchor={springJDKCompatibility} />
         <StsVersions anchor={sts_versions} />
         <SpringGuideRefrence anchor={spring_guide_refrence}></SpringGuideRefrence>
       </Subject>
