@@ -87,10 +87,10 @@ const O2_CustomerService = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
           <p>
-            The Important thing is in the <SpanYellow>application.properties</SpanYellow> are :
+            The <SpanYellow>Important</SpanYellow> things is in the <SpanYellow>application.properties</SpanYellow> are :
             <ULdisc>
               <Li>
-                the <SpanYellow>spring.application.name</SpanYellow>
+                the <SpanYellow>spring.application.name=customer-service</SpanYellow>
               </Li>
               <Li>Port number</Li>
             </ULdisc>
@@ -101,7 +101,7 @@ const O2_CustomerService = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <DivDoubleBorder> Write code </DivDoubleBorder>
           <ULdisc>
-            <Li>write code as it a regular monolithic app (Regardless OrderService)</Li>
+            <Li>I wrote the code as it a regular monolithic app (Regardless OrderService)</Li>
             <Li>
               In section 3 I will show how communicate between services with <SpanYellow>RestTemplate</SpanYellow>
             </Li>

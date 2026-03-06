@@ -201,15 +201,9 @@ import {
   StoredProceduresFunctionsMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
 import {
-  APIGatewayMain,
   ArchitectureOptionsMain,
-  ConfigManagementMain,
   CustomerOrderMain,
-  DataManagementMain,
-  DistributedTracingMonitoringMain,
-  InterServiceCommMain,
-  LoadBalancingMain,
-  ResilienceFaultToleranceMain,
+  Eureka_2_7_18_Main,
   ServiceDiscoveryMain,
 } from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg";
 import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
@@ -640,13 +634,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "architecture-options", element: <ArchitectureOptionsMain /> },
                 { path: "customer-order", element: <CustomerOrderMain /> },
-                { path: "api-gateway", element: <APIGatewayMain /> },
-                { path: "config-management", element: <ConfigManagementMain /> },
-                { path: "inter-service-communication", element: <InterServiceCommMain /> },
-                { path: "load-balancing", element: <LoadBalancingMain /> },
-                { path: "resilience-fault-tolerance", element: <ResilienceFaultToleranceMain /> },
-                { path: "distributed-tracing", element: <DistributedTracingMonitoringMain /> },
-                { path: "data-management", element: <DataManagementMain /> },
+                { path: "eureka", element: <Eureka_2_7_18_Main /> },
               ],
             },
             {
@@ -655,13 +643,6 @@ const router = createBrowserRouter(
               children: [
                 { path: "architecture-options", element: <Architecture3OptionsMain /> },
                 { path: "service-discovery", element: <ServiceDiscoveryMain /> },
-                { path: "api-gateway", element: <APIGatewayMain /> },
-                { path: "config-management", element: <ConfigManagementMain /> },
-                { path: "inter-service-communication", element: <InterServiceCommMain /> },
-                { path: "load-balancing", element: <LoadBalancingMain /> },
-                { path: "resilience-fault-tolerance", element: <ResilienceFaultToleranceMain /> },
-                { path: "distributed-tracing", element: <DistributedTracingMonitoringMain /> },
-                { path: "data-management", element: <DataManagementMain /> },
               ],
             },
             { path: "docker", element: <Docker /> },

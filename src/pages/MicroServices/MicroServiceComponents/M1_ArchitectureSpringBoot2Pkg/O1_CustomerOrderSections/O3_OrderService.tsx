@@ -9,7 +9,15 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-8">Create OrderService as a plain monolithic Spring boot app, (same Priciple as CustomerService)</article>
+        <article className="my-8">I created OrderService as a plain monolithic Spring boot app, (same Priciple as CustomerService)</article>
+
+        <GitHub>
+          <GitHubLiAnchor
+            description="From  : _3_microservices_2_7_18_JDK17  ---> see  :   order-service"
+            gitLink="https://github.com/sshalem/MicroServices/tree/main/_3_microservices_2_7_18_JDK17/O1-customer-order/order-service"
+          ></GitHubLiAnchor>
+        </GitHub>
+
         <article className="my-8">
           <DivDoubleBorder> Add following dependencies </DivDoubleBorder>
           <ULdisc>
@@ -86,10 +94,10 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
           <p>
-            The Important thing is in the <SpanYellow>application.properties</SpanYellow> are :
+            The <SpanYellow>Important</SpanYellow> things is in the <SpanYellow>application.properties</SpanYellow> are :
             <ULdisc>
               <Li>
-                the <SpanYellow>spring.application.name</SpanYellow>
+                the <SpanYellow>spring.application.name=order-service</SpanYellow>
               </Li>
               <Li>Port number</Li>
             </ULdisc>
@@ -100,17 +108,9 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <DivDoubleBorder> Write code </DivDoubleBorder>
           <ULdisc>
-            <Li>write code as it a regular monolithic app (Regardless OrderService)</Li>
+            <Li>I wrote the code as it a regular monolithic app (Regardless CustomerService)</Li>
             <Li>
               In section 3 I will show how communicate between services with <SpanYellow>RestTemplate</SpanYellow>
-            </Li>
-            <Li>
-              <GitHub>
-                <GitHubLiAnchor
-                  description="From  : _3_microservices_2_7_18_JDK17  ---> see  :   order-service"
-                  gitLink="https://github.com/sshalem/MicroServices/tree/main/_3_microservices_2_7_18_JDK17/O1-customer-order/order-service"
-                ></GitHubLiAnchor>
-              </GitHub>
             </Li>
           </ULdisc>
         </article>

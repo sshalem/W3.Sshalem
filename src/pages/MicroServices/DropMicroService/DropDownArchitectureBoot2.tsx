@@ -53,23 +53,7 @@ const DropDownArchitectureBoot2 = () => {
         />
 
         <SideDropdownLink sideDropDownNavName="1. Customer & Order" internalLink="/microservices/architecture-springboot-2-7-18/customer-order" />
-        <SideDropdownLink sideDropDownNavName="Service Discovery" internalLink="/microservices/architecture-springboot-2-7-18/service-discovery" />
-        <SideDropdownLink sideDropDownNavName="API Gateway" internalLink="/microservices/architecture-springboot-2-7-18/api-gateway" />
-        <SideDropdownLink sideDropDownNavName="Config Management" internalLink="/microservices/architecture-springboot-2-7-18/config-management" />
-        <SideDropdownLink
-          sideDropDownNavName="Microservice Communication"
-          internalLink="/microservices/architecture-springboot-2-7-18/inter-service-communication"
-        />
-        <SideDropdownLink sideDropDownNavName="Load Balancing" internalLink="/microservices/architecture-springboot-2-7-18/load-balancing" />
-        <SideDropdownLink
-          sideDropDownNavName="Resilience & Fault Tolerance"
-          internalLink="/microservices/architecture-springboot-2-7-18/resilience-fault-tolerance"
-        />
-        <SideDropdownLink
-          sideDropDownNavName="Distributed Tracing"
-          internalLink="/microservices/architecture-springboot-2-7-18/distributed-tracing"
-        />
-        <SideDropdownLink sideDropDownNavName="Data Management" internalLink="/microservices/architecture-springboot-2-7-18/data-management" />
+        <SideDropdownLink sideDropDownNavName="2. Eureka" internalLink="/microservices/architecture-springboot-2-7-18/eureka" />
       </div>
     </section>
   );

@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhaIsLoadBalance from "./O1_WhaIsLoadBalance";
+import O1_WhatIsApiGateway from "./O1_Eureka2718Intro";
 
 // =============================================================================================================
 
-const o1_WhaIsLoadBalance = "1. What Is Load Balancing";
+const o1_WhatIsApiGateway = "1. What Is Api Gateway";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhaIsLoadBalance];
+const anchorList: string[] = [o1_WhatIsApiGateway];
 
 // =============================================================================================================
 
-const LoadBalancingMain = () => {
+const Eureka_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +61,11 @@ const LoadBalancingMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhaIsLoadBalance anchor={o1_WhaIsLoadBalance} />
+      <O1_WhatIsApiGateway anchor={o1_WhatIsApiGateway} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default LoadBalancingMain;
+export default Eureka_2_7_18_Main;
