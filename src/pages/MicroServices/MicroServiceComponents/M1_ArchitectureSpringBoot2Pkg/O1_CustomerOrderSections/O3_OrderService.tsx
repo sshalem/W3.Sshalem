@@ -19,66 +19,34 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
         </GitHub>
 
         <article className="my-8">
-          <DivDoubleBorder> Add following dependencies </DivDoubleBorder>
+          <div className="text-xl font-semibold"> Add following dependencies </div>
           <ULdisc>
-            <div className="flex w-1/3 justify-between">
-              {" "}
-              <Li>
-                <strong>JPA</strong>
-              </Li>
-              <Li>
-                <strong>Web</strong>
-              </Li>
-              <Li>
-                <strong>H2</strong>
-              </Li>
-              <Li>
-                <strong>Postgresql</strong>
-              </Li>
-              <Li>
-                <strong>DevTools</strong>
-              </Li>
-              <Li>
-                <strong>ModelMapper</strong>
-              </Li>
-            </div>
+            <Li>JPA</Li>
+            <Li>Web</Li>
+            <Li>H2</Li>
+            <Li>Postgresql</Li>
+            <Li>DevTools</Li>
+            <Li>Actuator</Li>
+            <Li>ModelMapper</Li>
           </ULdisc>
         </article>
         <hr />
         <article className="my-8">
-          <DivDoubleBorder> Create following packages </DivDoubleBorder>
+          <div className="text-xl font-semibold"> Create following packages </div>
           <ULdisc>
-            <div className="flex w-2/4 justify-between">
-              <Li>
-                <strong>entity</strong>
-              </Li>
-              <Li>
-                <strong>repository</strong>
-              </Li>
-              <Li>
-                <strong>service</strong>
-              </Li>
-              <Li>
-                <strong>exception</strong>
-              </Li>
-              <Li>
-                <strong>dto</strong>
-              </Li>
-              <Li>
-                <strong>config</strong>
-              </Li>
-              <Li>
-                <strong>shared</strong>
-              </Li>
-              <Li>
-                <strong>controller</strong>
-              </Li>
-            </div>
+            <Li>entity</Li>
+            <Li>repository</Li>
+            <Li>service</Li>
+            <Li>exception</Li>
+            <Li>dto</Li>
+            <Li>config</Li>
+            <Li>shared</Li>
+            <Li>controller</Li>
           </ULdisc>
         </article>
         <hr />
         <article className="my-8">
-          <DivDoubleBorder>application.properties</DivDoubleBorder>
+          <div className="my-8 text-xl font-semibold">application.properties</div>
           <p>
             since I have <strong>H2</strong>, and <strong>Postgres</strong> , thus I created 3 properties files :{" "}
           </p>

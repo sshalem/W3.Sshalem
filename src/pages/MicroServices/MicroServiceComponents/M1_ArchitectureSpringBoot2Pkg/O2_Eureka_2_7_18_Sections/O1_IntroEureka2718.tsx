@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
 
@@ -6,69 +7,43 @@ const O1_IntroEureka2718 = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8">
-          <p className="text-lg">✅ What Eureka Actually Does Eureka's responsibility is very simple:</p>
+          <p className="text-lg">1️⃣ What Is Eureka Server (Discovery Server) :</p>
           <ULdisc>
             <Li>Register services</Li>
             <Li>Store service locations</Li>
             <Li>Provide service instances</Li>
           </ULdisc>
-          <p className="text-lg">✅ Who Performs the Load Balancing?</p>
+          <p className="text-lg">✅ Then , Who Performs the Load Balancing?</p>
           <ULdisc>
             <Li>
-              The load balancing is done by <SpanYellow>Spring Cloud LoadBalancer</SpanYellow> , see Intro LoadBalancer
+              The load balancing is done by <SpanYellow>Spring Cloud LoadBalancer</SpanYellow> , for explanation see{" "}
+              <Link className="text-blue-500" to={"/microservices/architecture-springboot-2-7-18/eureka#2.IntroLoadBalancer"}>
+                Intro LoadBalancer
+              </Link>
             </Li>
           </ULdisc>
         </article>
 
         <hr />
-
         <article className="my-8">
-          <div>
-            <p className="text-xl">
-              What is Netflix <SpanYellow>Eureka</SpanYellow> in a Spring Boot Microservices System?
-            </p>
-            In a microservices architecture, services run independently and may have multiple instances that start, stop, or change IP
-            addresses.Because of that, services cannot rely on fixed URLs to call each other.
-            <ULdisc>
-              <Li>This is exactly the problem Eureka solves.</Li>
-              <Li>Eureka = Service Discovery System</Li>
-              <Li>Instead of calling a service by IP, services ask Eureka where that service currently lives.</Li>
-            </ULdisc>
-          </div>
-          Lets explain 3 things regarding Eureka:
+          <p className="text-lg">2️⃣ What Eureka Server (Discovery Server) Actually Does is very simple:</p>
           <ULdisc>
-            <Li>1️⃣ Eureka Server (Discovery server)</Li>
-            <Li>2️⃣ Eureka Clients</Li>
-            <Li>3️⃣ Service-to-Service Discovery</Li>
+            <Li>
+              it is standalone Spring Boot application, <SpanYellow>run as a server</SpanYellow>
+            </Li>
+            <Li>
+              it has <SpanYellow>NO business logic</SpanYellow> like other services
+            </Li>
+            <Li>It is an infrastructure application</Li>
+            <Li>maintain a Central registry of microservices</Li>
+            <Li>The registry where all services register themselves.</Li>
+            <Li>let clients discover service locations dynamically</Li>
           </ULdisc>
         </article>
-        <hr />
-        <article className="my-8 text-xl font-semibold">1️⃣ Eureka Discovery Server</article>
-        <ULdisc>
-          <Li>
-            it is standalone Spring Boot application, <SpanYellow>run as a server</SpanYellow>
-          </Li>
-          <Li>
-            it has <SpanYellow>NO business logic</SpanYellow> like other services
-          </Li>
-          <Li>It is an infrastructure application</Li>
-          <Li>maintain a Central registry of microservices</Li>
-          <Li>The registry where all services register themselves.</Li>
-          <Li>let clients discover service locations dynamically</Li>
-          <Li>
-            Example registry:
-            <ULdisc>
-              <Li>customer-service : Instance 10.0.0.1:8001</Li>
-              <Li>customer-service : Instance 10.0.0.1:8002</Li>
-              <Li>order-service : Instance 10.0.0.1:9001</Li>
-              <Li>order-service : Instance 10.0.0.1:9002</Li>
-            </ULdisc>
-          </Li>
-        </ULdisc>
 
         <hr />
-
-        <article className="my-8 text-xl font-semibold">2️⃣ Eureka Clients</article>
+        <article className="my-8"> </article>
+        <p className="my-8 text-xl font-semibold">3️⃣ Eureka Clients</p>
         <ULdisc>
           <Li>Every microservice is a client.</Li>
           <Li>
@@ -79,19 +54,6 @@ const O1_IntroEureka2718 = ({ anchor }: { anchor: string }) => {
               <Li>It asks Eureka for other services</Li>
             </ULdisc>
           </Li>
-        </ULdisc>
-
-        <hr />
-
-        <article className="my-8 text-xl font-semibold">3️⃣ Service-to-Service Discovery</article>
-        <ULdisc>
-          <Li>
-            Instead of calling <SpanYellow>http://10.0.0.7:8001/pay</SpanYellow>
-          </Li>
-          <Li>
-            You call: <SpanYellow>http://payment-service/pay</SpanYellow>
-          </Li>
-          <Li>And Eureka resolves it.</Li>
         </ULdisc>
       </section>
     </MainChildArea>

@@ -1,98 +1,108 @@
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanYellow } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
 const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8">
-          <p className="text-lg">✅ What Eureka Actually Does Eureka's responsibility is very simple:</p>
-          <ULdisc>
-            <Li>Register services</Li>
-            <Li>Store service locations</Li>
-            <Li>Provide service instances</Li>
-          </ULdisc>
-          <p className="text-lg">✅ Who Performs the Load Balancing?</p>
+          <p className="text-lg">1️⃣ Who Performs the Load Balancing?</p>
           <ULdisc>
             <Li>
-              The load balancing is done by <SpanYellow>Spring Cloud LoadBalancer</SpanYellow> , see Intro LoadBalancer
+              The load balancing is done by <SpanYellow>Spring Cloud LoadBalancer</SpanYellow>
+            </Li>
+            <Li>Older Version is Netflix Ribbon (now deprecated)</Li>
+            <Li>
+              Since we are using <SpanYellow>spring boot 2.7.18</SpanYellow> , and <SpanYellow>Spring Cloud 2021</SpanYellow> , hence its using{" "}
+              <SpanYellow>Spring Cloud LoadBalancer</SpanYellow>
+            </Li>
+            <Li>
+              Load Balancing occurs on the <SpanYellow>client</SpanYellow> services
+            </Li>
+            <Li>
+              When we add the dependency below , .
+              <XmlHighlight xmlCode={_2_} />
+              Spring Cloud automatically brings in <SpanYellow>: 👉 Spring Cloud LoadBalancer</SpanYellow>
+              <XmlHighlight xmlCode={_3_} />
+              So in most projects you do not need to add <SpanYellow>spring-cloud-starter-loadbalancer</SpanYellow> manually.
+            </Li>
+            <Li>
+              Maven pulls several dependencies automatically, including:
+              <ULdisc>
+                <Li>Eureka Client</Li>
+                <Li>Spring Cloud Commons</Li>
+                <Li>Spring Cloud LoadBalancer</Li>
+              </ULdisc>
             </Li>
           </ULdisc>
         </article>
+        <hr />
+
         <article className="my-8">
-          <div>
-            <p className="text-xl">
-              What is Netflix <SpanYellow>Eureka</SpanYellow> in a Spring Boot Microservices System?
-            </p>
-            In a microservices architecture, services run independently and may have multiple instances that start, stop, or change IP
-            addresses.Because of that, services cannot rely on fixed URLs to call each other.
-            <ULdisc>
-              <Li>This is exactly the problem Eureka solves.</Li>
-              <Li>Eureka = Service Discovery System</Li>
-              <Li>Instead of calling a service by IP, services ask Eureka where that service currently lives.</Li>
-            </ULdisc>
-          </div>
-          Lets explain 3 things regarding Eureka:
+          <p className="text-lg">2️⃣ When Explicitly Need the LoadBalancer Dependency ?</p>
           <ULdisc>
-            <Li>1️⃣ Eureka Server (Discovery server)</Li>
-            <Li>2️⃣ Eureka Clients</Li>
-            <Li>3️⃣ Service-to-Service Discovery</Li>
+            <Li>You do not use Eureka</Li>
+            <Li>You use service discovery alternatives</Li>
+            <Li>You use custom load balancing</Li>
           </ULdisc>
         </article>
-        <hr />
-        <article className="my-8 text-xl font-semibold">1️⃣ Eureka Discovery Server</article>
-        <ULdisc>
-          <Li>
-            it is standalone Spring Boot application, <SpanYellow>run as a server</SpanYellow>
-          </Li>
-          <Li>
-            it has <SpanYellow>NO business logic</SpanYellow> like other services
-          </Li>
-          <Li>It is an infrastructure application</Li>
-          <Li>maintain a Central registry of microservices</Li>
-          <Li>The registry where all services register themselves.</Li>
-          <Li>let clients discover service locations dynamically</Li>
-          <Li>
-            Example registry:
-            <ULdisc>
-              <Li>customer-service : Instance 10.0.0.1:8001</Li>
-              <Li>customer-service : Instance 10.0.0.1:8002</Li>
-              <Li>order-service : Instance 10.0.0.1:9001</Li>
-              <Li>order-service : Instance 10.0.0.1:9002</Li>
-            </ULdisc>
-          </Li>
-        </ULdisc>
 
         <hr />
 
-        <article className="my-8 text-xl font-semibold">2️⃣ Eureka Clients</article>
-        <ULdisc>
-          <Li>Every microservice is a client.</Li>
-          <Li>
-            When a service starts:
-            <ULdisc>
-              <Li>It registers itself in Eureka</Li>
-              <Li>It sends heartbeats</Li>
-              <Li>It asks Eureka for other services</Li>
-            </ULdisc>
-          </Li>
-        </ULdisc>
+        <article className="my-8">
+          <p className="text-lg">2️⃣ How They Work Together</p>
 
-        <hr />
-
-        <article className="my-8 text-xl font-semibold">3️⃣ Service-to-Service Discovery</article>
-        <ULdisc>
-          <Li>
-            Instead of calling <SpanYellow>http://10.0.0.7:8001/pay</SpanYellow>
-          </Li>
-          <Li>
-            You call: <SpanYellow>http://payment-service/pay</SpanYellow>
-          </Li>
-          <Li>And Eureka resolves it.</Li>
-        </ULdisc>
+          <ULDecimal>
+            <Li>Architecture:</Li>
+            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Li>
+              <SpanYellow>Order Service</SpanYellow> wants to call <SpanYellow>http://payment-service/pay</SpanYellow>
+            </Li>
+            <Li>
+              Spring Cloud LoadBalancer asks Eureka:
+              <ULdisc>
+                <Li>
+                  <SpanYellow>Give me all instances of PAYMENT-SERVICE</SpanYellow>
+                </Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              Eureka responds:
+              <ULdisc>
+                <Li>
+                  <strong>10.0.0.1:8001</strong> , <strong>10.0.0.1:8002</strong>
+                </Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              LoadBalancer chooses one instance: <strong>10.0.0.1:8002</strong>
+            </Li>
+          </ULDecimal>
+        </article>
       </section>
     </MainChildArea>
   );
 };
 
 export default O2_IntroLoadBalace2718;
+
+const _1_ = `Order Service
+      |
+      v
+Spring Cloud LoadBalancer
+      |
+      v
+Eureka Server
+      |
+      v
+List of Payment Service Instances`;
+
+const _2_ = `<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>`;
+
+const _3_ = `<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+</dependency>`;
