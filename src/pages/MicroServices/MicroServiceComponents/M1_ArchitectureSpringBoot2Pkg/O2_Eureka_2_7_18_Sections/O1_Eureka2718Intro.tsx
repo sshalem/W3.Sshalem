@@ -20,7 +20,9 @@ const O1_Eureka2718Intro = ({ anchor }: { anchor: string }) => {
           <Li>
             it is standalone Spring Boot application, <SpanYellow>run as a server</SpanYellow>
           </Li>
-          <Li>it has no "business logic" like other services</Li>
+          <Li>
+            it has <SpanYellow>NO business logic</SpanYellow> like other services
+          </Li>
           <Li>It is an infrastructure application</Li>
           <Li>maintain a Central registry of microservices</Li>
           <Li>let other services register themselves</Li>
