@@ -1,14 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_Eureka2718Intro from "./O1_Eureka2718Intro";
+import O3_EurekaServer2718 from "./O3_EurekaServer2718";
+import O4_EurekaClient2718 from "./O4_EurekaClient2718";
+import O2_IntroLoadBalace2718 from "./O2_IntroLoadBalace2718";
+import O1_IntroEureka2718 from "./O1_IntroEureka2718";
 
 // =============================================================================================================
 
-const o1_Eureka2718Intro = "1. Eureka Intro";
+const o1_IntroEureka2718 = "1. Intro Eureka";
+const o2_IntroLoadBalace2718 = "2. Intro LoadBalancer";
+const o3_EurekaServer2718 = "3. Create Eureka Server";
+const o4_EurekaClient2718 = "4. Create Eureka Client";
+// const o3_EurekaServer2718 = "3. Create Eureka Server";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_Eureka2718Intro];
+const anchorList: string[] = [o1_IntroEureka2718, o2_IntroLoadBalace2718, o3_EurekaServer2718, o4_EurekaClient2718];
 
 // =============================================================================================================
 
@@ -61,7 +68,10 @@ const Eureka_2_7_18_Main = () => {
       />
       {/* End Contents */}
 
-      <O1_Eureka2718Intro anchor={o1_Eureka2718Intro} />
+      <O1_IntroEureka2718 anchor={o1_IntroEureka2718} />
+      <O2_IntroLoadBalace2718 anchor={o2_IntroLoadBalace2718} />
+      <O3_EurekaServer2718 anchor={o3_EurekaServer2718} />
+      <O4_EurekaClient2718 anchor={o4_EurekaClient2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
