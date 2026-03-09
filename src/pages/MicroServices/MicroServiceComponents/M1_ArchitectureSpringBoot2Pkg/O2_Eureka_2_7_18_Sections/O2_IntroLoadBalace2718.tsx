@@ -6,7 +6,56 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8">
-          <p className="text-lg">1️⃣ Who Performs the Load Balancing?</p>
+          <p className="my-8 text-xl font-semibold">1️⃣ What is Load Balancing?</p>
+          <p>
+            Load balancing in Spring Boot microservices is the process of distributing incoming network traffic across multiple instances of a service
+            to ensure efficient resource use, high availability, and fault tolerance. It prevents any single service instance from becoming
+            overwhelmed and allows the system to scale horizontally to handle increased demand.
+          </p>
+          <p className="my-8">the 3 most important load-balancing mechanisms to understand are:</p>
+          <ULdisc>
+            <Li>
+              1️⃣ Spring Cloud LoadBalancer ,The client decides which service instance to call.
+              <ULdisc>
+                <Li>Common in microservices using Eureka service discovery.</Li>
+                <Li>
+                  technology, <SpanYellow>Spring Cloud LoadBalancer</SpanYellow>
+                </Li>
+                <Li>
+                  Typical stack:
+                  <ULdisc>
+                    <Li>Spring Boot</Li>
+                    <Li>Eureka</Li>
+                    <Li>
+                      <SpanYellow>RestTemplate</SpanYellow> or <SpanYellow>OpenFeign</SpanYellow>
+                    </Li>
+                  </ULdisc>
+                </Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              2️⃣ API Gateway routing, When using an API gateway, the gateway performs the load balancing.
+              <ULdisc>
+                <Li>acts as the single entry point for all external requests</Li>
+                <Li>integrates with the client-side load balancer</Li>
+                <Li>Inside the gateway, Spring Cloud LoadBalancer usually selects the instance.</Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              3️⃣ Kafka partition balancing
+              <ULdisc>
+                <Li>In event systems, messages are distributed instead of HTTP requests.</Li>
+                <Li>Kafka uses partition-based load distribution.</Li>
+                <Li>Each instance processes different partitions.</Li>
+              </ULdisc>
+            </Li>
+          </ULdisc>
+        </article>
+
+        <hr />
+
+        <article className="my-8">
+          <p className="text-lg">2️⃣ Who Performs the Load Balancing?</p>
           <ULdisc>
             <Li>
               The load balancing is done by <SpanYellow>Spring Cloud LoadBalancer</SpanYellow>
@@ -39,7 +88,7 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
         <hr />
 
         <article className="my-8">
-          <p className="text-lg">2️⃣ When Explicitly Need the LoadBalancer Dependency ?</p>
+          <p className="text-lg">3️⃣ When Explicitly Need the LoadBalancer Dependency ?</p>
           <ULdisc>
             <Li>You do not use Eureka</Li>
             <Li>You use service discovery alternatives</Li>
@@ -50,7 +99,7 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
         <hr />
 
         <article className="my-8">
-          <p className="text-lg">2️⃣ How They Work Together</p>
+          <p className="text-lg">4️⃣ How They Work Together</p>
 
           <ULDecimal>
             <Li>Architecture:</Li>
