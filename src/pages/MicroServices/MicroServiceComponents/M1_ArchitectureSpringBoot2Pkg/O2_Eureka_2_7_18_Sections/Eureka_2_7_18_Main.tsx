@@ -7,7 +7,8 @@ import O4_EurekaServer2718 from "./O4_EurekaServer2718";
 import O5_EurekaClient2718 from "./O5_EurekaClient2718";
 import O6_LoadBalancer2718 from "./O6_LoadBalancer2718";
 import O7_TestEureka2718 from "./O7_TestEureka2718";
-import O8_OpenFeignCommunication from "./O8_OpenFeignCommunication";
+import O8_OpenFeignCommunication from "./O9_OpenFeignImplement";
+import O9_OpenFeignImplement from "./O9_OpenFeignImplement";
 
 // =============================================================================================================
 
@@ -19,6 +20,7 @@ const o5_EurekaClient2718 = "5. Eureka Client 2.7.18";
 const o6_LoadBalancer2718 = "6. @LoadBalancer With RestTamplate";
 const o7_TestEureka2718 = "7. Test Eureka With LoadBalanced 2.7.18";
 const o8_OpenFeignCommunication = "8. OpenFeign Communication";
+const o9_OpenFeignImplement = "9. OpenFeign Implement";
 
 // =============================================================================================================
 
@@ -31,6 +33,7 @@ const anchorList: string[] = [
   o6_LoadBalancer2718,
   o7_TestEureka2718,
   o8_OpenFeignCommunication,
+  o9_OpenFeignImplement,
 ];
 
 // =============================================================================================================
@@ -92,6 +95,7 @@ const Eureka_2_7_18_Main = () => {
       <O6_LoadBalancer2718 anchor={o6_LoadBalancer2718} />
       <O7_TestEureka2718 anchor={o7_TestEureka2718} />
       <O8_OpenFeignCommunication anchor={o8_OpenFeignCommunication} />
+      <O9_OpenFeignImplement anchor={o9_OpenFeignImplement} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

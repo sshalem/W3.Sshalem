@@ -58,10 +58,3 @@ const O8_OpenFeignCommunication = ({ anchor }: { anchor: string }) => {
 };
 
 export default O8_OpenFeignCommunication;
-
-const _1_ = `spring.application.name=order-service
-
-server.port=9001
-
-#spring.profiles.active=h2
-spring.profiles.active=postgres`;

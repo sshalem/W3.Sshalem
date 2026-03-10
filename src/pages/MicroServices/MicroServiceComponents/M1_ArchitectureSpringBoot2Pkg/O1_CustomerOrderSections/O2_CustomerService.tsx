@@ -95,4 +95,8 @@ const _1_ = `spring.application.name=customer-service
 server.port=8001
 
 #spring.profiles.active=h2
-spring.profiles.active=postgres`;
+spring.profiles.active=postgres
+
+# actuator
+management.endpoints.web.exposure.include=health,info
+management.endpoint.health.show-details=always`;
