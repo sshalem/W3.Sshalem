@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsConfigManage from "./O1_WhatIsConfigManage";
+
+import O1_SpringCloudConfig2718 from "./O1_SpringCloudConfig2718";
 
 // =============================================================================================================
 
-const o1_WhatIsConfigManage = "1. What Is Config Management";
+const o1_SpringCloudConfig2718 = "1. Intro Spring Cloud Config";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsConfigManage];
+const anchorList: string[] = [o1_SpringCloudConfig2718];
 
 // =============================================================================================================
 
-const ConfigManagementMain = () => {
+const SpringCloudConfig_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +62,11 @@ const ConfigManagementMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsConfigManage anchor={o1_WhatIsConfigManage} />
+      <O1_SpringCloudConfig2718 anchor={o1_SpringCloudConfig2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ConfigManagementMain;
+export default SpringCloudConfig_2_7_18_Main;

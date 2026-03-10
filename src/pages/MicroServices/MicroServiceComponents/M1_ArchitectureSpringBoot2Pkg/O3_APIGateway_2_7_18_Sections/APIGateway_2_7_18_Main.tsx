@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsResAndFaultTolernce from "./O1_WhatIsResAndFaultTolernce";
+import O1_APIGateway2718 from "./O1_APIGateway2718";
 
 // =============================================================================================================
 
-const o1_WhatIsResAndFaultTolernce = "1. What Is Resiliance & Fault Tolernce";
+const o1_APIGateway2718 = "1. Intro API gateway";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsResAndFaultTolernce];
+const anchorList: string[] = [o1_APIGateway2718];
 
 // =============================================================================================================
 
-const ResilienceFaultToleranceMain = () => {
+const APIGateway_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +61,11 @@ const ResilienceFaultToleranceMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsResAndFaultTolernce anchor={o1_WhatIsResAndFaultTolernce} />
+      <O1_APIGateway2718 anchor={o1_APIGateway2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ResilienceFaultToleranceMain;
+export default APIGateway_2_7_18_Main;

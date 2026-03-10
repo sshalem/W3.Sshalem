@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsDataManage from "./O1_WhatIsDataManage";
+
+import O1_ELK2718 from "./O1_ELK2718";
 
 // =============================================================================================================
 
-const o1_WhatIsDataManage = "1. What Is Data Management";
+const o1_ELK2718 = "1. Intro ELK";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsDataManage];
+const anchorList: string[] = [o1_ELK2718];
 
 // =============================================================================================================
 
-const DataManagementMain = () => {
+const ELK_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +62,11 @@ const DataManagementMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsDataManage anchor={o1_WhatIsDataManage} />
+      <O1_ELK2718 anchor={o1_ELK2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DataManagementMain;
+export default ELK_2_7_18_Main;

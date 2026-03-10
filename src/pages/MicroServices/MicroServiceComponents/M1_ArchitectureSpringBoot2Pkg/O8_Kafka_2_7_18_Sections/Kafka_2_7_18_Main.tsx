@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsInternComm from "./O1_WhatIsInternComm";
+
+import O1_Kafka2718 from "./O1_Kafka2718";
 
 // =============================================================================================================
 
-const o1_WhatIsInternComm = "1. What Is Intern Communication";
+const o1_Kafka2718 = "1. Intro Kafka";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsInternComm];
+const anchorList: string[] = [o1_Kafka2718];
 
 // =============================================================================================================
 
-const InterServiceCommMain = () => {
+const Kafka_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +62,11 @@ const InterServiceCommMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsInternComm anchor={o1_WhatIsInternComm} />
+      <O1_Kafka2718 anchor={o1_Kafka2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default InterServiceCommMain;
+export default Kafka_2_7_18_Main;

@@ -201,10 +201,16 @@ import {
   StoredProceduresFunctionsMain,
 } from "./pages/Spring/SpringComponents/S4_JpaPkg";
 import {
+  APIGateway_2_7_18_Main,
   ArchitectureOptionsMain,
   CustomerOrderMain,
   Eureka_2_7_18_Main,
+  Kafka_2_7_18_Main,
+  Resilliance4J_2_7_18_Main,
+  Security_2_7_18_Main,
   ServiceDiscoveryMain,
+  SpringCloudConfig_2_7_18_Main,
+  TracingZipkinSleuth_2_7_18_Main,
 } from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg";
 import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
 import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg";
@@ -347,6 +353,7 @@ import {
 import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
 import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
 import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
+import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O7_ELK_2_7_18_Sections/ELK_2_7_18_Main";
 
 const router = createBrowserRouter(
   [
@@ -635,6 +642,13 @@ const router = createBrowserRouter(
                 { path: "architecture-options", element: <ArchitectureOptionsMain /> },
                 { path: "customer-order", element: <CustomerOrderMain /> },
                 { path: "eureka", element: <Eureka_2_7_18_Main /> },
+                { path: "apigateway", element: <APIGateway_2_7_18_Main /> },
+                { path: "spring-cloud-config", element: <SpringCloudConfig_2_7_18_Main /> },
+                { path: "zipkin-sleuth", element: <TracingZipkinSleuth_2_7_18_Main /> },
+                { path: "resilliance4j", element: <Resilliance4J_2_7_18_Main /> },
+                { path: "elk", element: <ELK_2_7_18_Main /> },
+                { path: "kafka", element: <Kafka_2_7_18_Main /> },
+                { path: "security", element: <Security_2_7_18_Main /> },
               ],
             },
             {

@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhaIsLoadBalance from "./O1_WhaIsLoadBalance";
+
+import O1_Resilliance4J2718 from "./O1_Resilliance4J2718";
 
 // =============================================================================================================
 
-const o1_WhaIsLoadBalance = "1. What Is Load Balancing";
+const o1_Resilliance4J2718 = "1. Intro Resilliance4J";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhaIsLoadBalance];
+const anchorList: string[] = [o1_Resilliance4J2718];
 
 // =============================================================================================================
 
-const LoadBalancingMain = () => {
+const Resilliance4J_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +62,11 @@ const LoadBalancingMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhaIsLoadBalance anchor={o1_WhaIsLoadBalance} />
+      <O1_Resilliance4J2718 anchor={o1_Resilliance4J2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default LoadBalancingMain;
+export default Resilliance4J_2_7_18_Main;

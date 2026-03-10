@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_WhatIsDistrbutedTrace from "./O1_WhatIsDistrbutedTrace";
+
+import O1_Security2718 from "./O1_Security2718";
 
 // =============================================================================================================
 
-const o1_WhatIsDistrbutedTrace = "1. What Is Distrbuted Trace";
+const o1_Security2718 = "1. Intro Microservices Security";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_WhatIsDistrbutedTrace];
+const anchorList: string[] = [o1_Security2718];
 
 // =============================================================================================================
 
-const DistributedTracingMonitoringMain = () => {
+const Security_2_7_18_Main = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -61,11 +62,11 @@ const DistributedTracingMonitoringMain = () => {
       />
       {/* End Contents */}
 
-      <O1_WhatIsDistrbutedTrace anchor={o1_WhatIsDistrbutedTrace} />
+      <O1_Security2718 anchor={o1_Security2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DistributedTracingMonitoringMain;
+export default Security_2_7_18_Main;
