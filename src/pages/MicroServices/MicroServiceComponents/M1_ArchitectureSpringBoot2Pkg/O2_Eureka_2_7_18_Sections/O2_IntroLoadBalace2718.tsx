@@ -12,10 +12,12 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
             to ensure efficient resource use, high availability, and fault tolerance. It prevents any single service instance from becoming
             overwhelmed and allows the system to scale horizontally to handle increased demand.
           </p>
-          <p className="my-8">the 3 most important load-balancing mechanisms to understand are:</p>
+          <p className="my-8 text-xl font-semibold">
+            ⭐ the 3 most important <SpanYellow>load-balancing mechanisms</SpanYellow> to understand are:
+          </p>
           <ULdisc>
             <Li>
-              1️⃣ Spring Cloud LoadBalancer ,The client decides which service instance to call.
+              1️⃣ <strong>The client makes Load Balancing</strong> . Spring Cloud LoadBalancer , decides which service instance to call.
               <ULdisc>
                 <Li>Common in microservices using Eureka service discovery.</Li>
                 <Li>
@@ -34,7 +36,7 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
             <Li>
-              2️⃣ API Gateway routing, When using an API gateway, the gateway performs the load balancing.
+              2️⃣ <strong>the gateway performs the load balancing</strong> API Gateway routing, When using an API gateway.
               <ULdisc>
                 <Li>acts as the single entry point for all external requests</Li>
                 <Li>integrates with the client-side load balancer</Li>
@@ -42,7 +44,7 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
             <Li>
-              3️⃣ Kafka partition balancing
+              3️⃣ <strong>Kafka partition balancing</strong>
               <ULdisc>
                 <Li>In event systems, messages are distributed instead of HTTP requests.</Li>
                 <Li>Kafka uses partition-based load distribution.</Li>

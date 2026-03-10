@@ -55,13 +55,10 @@ const O4_RestTemplateCommunication = ({ anchor }: { anchor: string }) => {
             <JavaHighlight javaCode={_2_}></JavaHighlight>
           </Li>
           <Li>
-            Create 2 methods , which I use <SpanYellow>RestTemplate</SpanYellow>
+            I have a method that uses <SpanYellow>RestTemplate</SpanYellow>
             <ULdisc>
               <Li>
                 <strong>addOrderToCustomer</strong>
-              </Li>
-              <Li>
-                <strong>getOrdersOfCustomerByFirstName</strong>
               </Li>
               <Li>
                 Let's explain <strong>addOrderToCustomer</strong> code below
