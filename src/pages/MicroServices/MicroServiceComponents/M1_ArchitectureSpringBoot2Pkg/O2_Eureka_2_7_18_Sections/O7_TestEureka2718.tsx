@@ -1,6 +1,7 @@
-import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import microservice_12 from "../../../../../assets/microservice_12.jpg";
 import microservice_13 from "../../../../../assets/microservice_13.jpg";
+import microservice_14 from "../../../../../assets/microservice_14.jpg";
 import microservice_8 from "../../../../../assets/microservice_8.jpg";
 import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
@@ -26,9 +27,19 @@ const O7_TestEureka2718 = ({ anchor }: { anchor: string }) => {
               Open <SpanYellow>IntelliJ</SpanYellow> and open Project <SpanYellow>O2-C-O-Eureka-RestTemplate</SpanYellow> , located in folder
               <SpanYellow>_3_microservices_2_7_18_JDK17</SpanYellow>
             </Li>
-            <Li>Postman send request only to Customer-service with Port 8001, thus</Li>
-            <Li>Thus (At this point) , only one Instance of customer-service required</Li>
-            <Li>I created 2 instances of order-service</Li>
+            <Li>
+              Run following projects , in following order:
+              <ULDecimal>
+                <Li>
+                  Eureka , <strong>must be first to run</strong>
+                </Li>
+                <Li>1 Instance of Customer</Li>
+                <Li>I duplicate Order , and RUn 2 Instances of Order</Li>
+              </ULDecimal>
+              <IMG img_name={microservice_14}></IMG>
+            </Li>
+            <Li>At this point , only one Instance of customer-service required</Li>
+            <Li>Because , I send Via Postman request only to Customer-service with Port 8001 </Li>
             <Li>
               In order to see which port of order-service runs , add following code :
               <JavaHighlight javaCode={_1_} />
@@ -62,8 +73,9 @@ const O7_TestEureka2718 = ({ anchor }: { anchor: string }) => {
         <hr />
 
         <article className="my-8">
+          <p className="text-xl font-semibold">Test with Postman</p>
           <ULdisc>
-            <Li>Let's Run the Projects and test with postman some of the HTTP request that are beteween Customer to Order</Li>
+            <Li>test with postman some of the HTTP request that are beteween Customer to Order</Li>
             <Li>
               I will test 3 end points which are:
               <ULdisc>
