@@ -1,5 +1,6 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import microservice_12 from "../../../../../assets/microservice_12.jpg";
+import microservice_13 from "../../../../../assets/microservice_13.jpg";
 import microservice_8 from "../../../../../assets/microservice_8.jpg";
 import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
@@ -35,6 +36,31 @@ const O7_TestEureka2718 = ({ anchor }: { anchor: string }) => {
           </ULdisc>
           <IMG img_name={microservice_12}></IMG>
         </article>
+
+        <hr />
+
+        <article className="my-8">
+          <p className="text-xl font-semibold">Check Eureka Server is up and running</p>
+          <ULdisc>
+            <Li>
+              Open browser at url{" "}
+              <a className="tracking-wider text-blue-500" href="http://localhost:8761/" target="_blank">
+                http://localhost:8761/
+              </a>
+            </Li>
+            <Li>
+              We can see
+              <ULdisc>
+                <Li>1 instance of Customer</Li>
+                <Li>2 instances of Order </Li>
+              </ULdisc>
+            </Li>
+            <IMG img_name={microservice_13}></IMG>
+          </ULdisc>
+        </article>
+
+        <hr />
+
         <article className="my-8">
           <ULdisc>
             <Li>Let's Run the Projects and test with postman some of the HTTP request that are beteween Customer to Order</Li>
