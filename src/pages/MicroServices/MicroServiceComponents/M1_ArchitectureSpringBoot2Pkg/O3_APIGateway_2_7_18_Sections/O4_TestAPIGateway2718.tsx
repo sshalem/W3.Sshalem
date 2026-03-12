@@ -1,8 +1,9 @@
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import microservice_12 from "../../../../../assets/microservice_12.jpg";
-import microservice_13 from "../../../../../assets/microservice_13.jpg";
+
 import microservice_8 from "../../../../../assets/microservice_8.jpg";
+import microservice_15 from "../../../../../assets/microservice_15.jpg";
 import microservice_16 from "../../../../../assets/microservice_16.jpg";
+import microservice_17 from "../../../../../assets/microservice_17.jpg";
 
 import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
@@ -39,13 +40,13 @@ const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
               </ULDecimal>
               <IMG img_name={microservice_16}></IMG>
             </Li>
-            <Li>Because , I send Via Postman request only to Customer-service with Port 8001 </Li>
+            <Li>Because , API-GAtwayI , all request must go via port 5001 (And not directly to port 8001 , Customer Service Port) </Li>
             <Li>
               In order to see which port of order-service runs , add following code :
               <JavaHighlight javaCode={_1_} />
             </Li>
           </ULdisc>
-          <IMG img_name={microservice_12}></IMG>
+          <IMG img_name={microservice_15}></IMG>
         </article>
 
         <hr />
@@ -66,7 +67,7 @@ const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
                 <Li>3 instances of Order </Li>
               </ULdisc>
             </Li>
-            <IMG img_name={microservice_13}></IMG>
+            <IMG img_name={microservice_17}></IMG>
           </ULdisc>
         </article>
 
@@ -77,16 +78,16 @@ const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>test with postman some of the HTTP request that are beteween Customer to Order</Li>
             <Li>
-              I will test 3 end points which are:
+              I will test 3 end points which are, all use APIGatway port <SpanYellow>5001</SpanYellow>
               <ULdisc>
                 <Li>
-                  <SpanYellow>http://localhost:8001/customer/create</SpanYellow> - Tests only Customer API endpint URL
+                  <SpanYellow>http://localhost:5001/customer/create</SpanYellow> - Tests only Customer API endpint URL
                 </Li>
                 <Li>
-                  <SpanYellow>http://localhost:8001/customer/karin/addOrder</SpanYellow> - Tests communication between Customer to Order MicServ
+                  <SpanYellow>http://localhost:5001/1customer/karin/addOrder</SpanYellow> - Tests communication between Customer to Order MicServ
                 </Li>
                 <Li>
-                  <SpanYellow>http://localhost:8001/customer/karin/orders</SpanYellow> - Tests communication between Customer to Order MicServ
+                  <SpanYellow>http://localhost:5001/customer/karin/orders</SpanYellow> - Tests communication between Customer to Order MicServ
                 </Li>
                 <Li>
                   Run both services , send Via Postman and see it works <IMG img_name={microservice_8}></IMG>
