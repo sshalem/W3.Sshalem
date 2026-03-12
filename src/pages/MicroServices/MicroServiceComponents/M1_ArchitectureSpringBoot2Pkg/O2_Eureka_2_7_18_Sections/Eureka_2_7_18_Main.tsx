@@ -7,7 +7,7 @@ import O4_EurekaServer2718 from "./O4_EurekaServer2718";
 import O5_EurekaClient2718 from "./O5_EurekaClient2718";
 import O6_LoadBalancer2718 from "./O6_LoadBalancer2718";
 import O7_TestEureka2718 from "./O7_TestEureka2718";
-import O8_OpenFeignCommunication from "./O9_OpenFeignImplement";
+import O8_OpenFeignCommunication from "./O8_OpenFeignCommunication";
 import O9_OpenFeignImplement from "./O9_OpenFeignImplement";
 
 // =============================================================================================================

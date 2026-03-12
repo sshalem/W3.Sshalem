@@ -63,7 +63,7 @@ public RestTemplate restTemplate() {
 const _2_ = `String postUrl = "http://localhost:9001/order/add";
 OrdersResponse ordersResponse = restTemplate.postForObject(postUrl, order, OrdersResponse.class)`;
 
-const _3_ = `spring.application.name=order-service`;
+const _3_ = `spring.application.name=ORDER-SERVICE`;
 
-const _4_ = `String postUrl = "http://order-service/order/add";
+const _4_ = `String postUrl = "http://ORDER-SERVICE/order/add";
 OrdersResponse ordersResponse = restTemplate.postForObject(postUrl, order, OrdersResponse.class)`;

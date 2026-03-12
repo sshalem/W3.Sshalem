@@ -108,7 +108,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "order-service" ,path = "/order")
+@FeignClient(name = "ORDER-SERVICE" ,path = "/order")
 public interface OrderClient {
 
     @PostMapping("/add")

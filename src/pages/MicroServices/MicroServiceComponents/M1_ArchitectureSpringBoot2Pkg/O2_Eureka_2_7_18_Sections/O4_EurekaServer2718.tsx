@@ -133,7 +133,7 @@ public class EurekaServerApplication {
 
 const _5_ = `server.port=8761
 
-spring.application.name=eureka-server
+spring.application.name=EUREKA-SERVER
 
 # Prevent self-registration
 eureka.client.register-with-eureka=false

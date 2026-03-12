@@ -93,7 +93,7 @@ const O5_EurekaClient2718 = ({ anchor }: { anchor: string }) => {
               Must, give <SpanYellow>spring.application.name</SpanYellow>
             </Li>
             <Li>
-              Notice, even if I write the sercive name in small letters , inside Netflix Eureka it will appear as:{" "}
+              Notice, even if I write the sercive name in Upper case letters , thats the common way
               <SpanYellow>CUSTOMER-SERVICE</SpanYellow>
             </Li>
             <Li>because Eureka automatically converts it to uppercase.</Li>
@@ -146,7 +146,7 @@ const _3_ = `     <dependencyManagement>
         </dependencies>
     </dependencyManagement>`;
 
-const _4_ = `spring.application.name=customer-service
+const _4_ = `spring.application.name=CUSTOMER-SERVICE
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka`;
 
 const _5_ = `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`;

@@ -58,7 +58,7 @@ const O2_CustomerService = ({ anchor }: { anchor: string }) => {
             The <SpanYellow>Important</SpanYellow> things is in the <SpanYellow>application.properties</SpanYellow> are :
             <ULdisc>
               <Li>
-                the <SpanYellow>spring.application.name=customer-service</SpanYellow>
+                the <SpanYellow>spring.application.name=CUSTOMER-SERVICE</SpanYellow>
               </Li>
               <Li>Port number</Li>
             </ULdisc>
@@ -90,7 +90,7 @@ const O2_CustomerService = ({ anchor }: { anchor: string }) => {
 
 export default O2_CustomerService;
 
-const _1_ = `spring.application.name=customer-service
+const _1_ = `spring.application.name=CUSTOMER-SERVICE
 
 server.port=8001
 

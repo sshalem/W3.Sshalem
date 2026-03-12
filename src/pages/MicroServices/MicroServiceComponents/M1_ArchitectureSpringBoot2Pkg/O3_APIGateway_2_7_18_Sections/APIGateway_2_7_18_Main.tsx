@@ -1,14 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_APIGateway2718 from "./O1_APIGateway2718";
+import O2_DependecyAPIGateway2718 from "./O2_DependecyAPIGateway2718";
+import O3_ApplicationPropertiesAPIGateway2718 from "./O3_ApplicationPropertiesAPIGateway2718";
 
 // =============================================================================================================
 
 const o1_APIGateway2718 = "1. Intro API gateway";
+const o2_DependecyAPIGateway2718 = "2. Create APIGateway app";
+const o3_ApplicationPropertiesAPIGateway2718 = "3. application.roperties";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_APIGateway2718];
+const anchorList: string[] = [o1_APIGateway2718, o2_DependecyAPIGateway2718, o3_ApplicationPropertiesAPIGateway2718];
 
 // =============================================================================================================
 
@@ -62,6 +66,8 @@ const APIGateway_2_7_18_Main = () => {
       {/* End Contents */}
 
       <O1_APIGateway2718 anchor={o1_APIGateway2718} />
+      <O2_DependecyAPIGateway2718 anchor={o2_DependecyAPIGateway2718} />
+      <O3_ApplicationPropertiesAPIGateway2718 anchor={o3_ApplicationPropertiesAPIGateway2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

@@ -65,7 +65,7 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
             The <SpanYellow>Important</SpanYellow> things is in the <SpanYellow>application.properties</SpanYellow> are :
             <ULdisc>
               <Li>
-                the <SpanYellow>spring.application.name=order-service</SpanYellow>
+                the <SpanYellow>spring.application.name=ORDER-SERVICE</SpanYellow>
               </Li>
               <Li>Port number</Li>
             </ULdisc>
@@ -89,7 +89,7 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
 
 export default O3_OrderService;
 
-const _1_ = `spring.application.name=order-service
+const _1_ = `spring.application.name=ORDER-SERVICE
 
 server.port=9001
 
