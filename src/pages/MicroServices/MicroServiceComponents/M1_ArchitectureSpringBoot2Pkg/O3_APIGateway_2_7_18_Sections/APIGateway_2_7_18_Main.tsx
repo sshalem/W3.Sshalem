@@ -3,16 +3,26 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_APIGateway2718 from "./O1_APIGateway2718";
 import O2_DependecyAPIGateway2718 from "./O2_DependecyAPIGateway2718";
 import O3_ApplicationPropertiesAPIGateway2718 from "./O3_ApplicationPropertiesAPIGateway2718";
+import O1_O_DiagramAPIGateway2718 from "./O1_O_DiagramAPIGateway2718";
+import O4_TestAPIGateway2718 from "./O4_TestAPIGateway2718";
 
 // =============================================================================================================
 
 const o1_APIGateway2718 = "1. Intro API gateway";
+const o1_O_DiagramAPIGateway2718 = "Diagram Architecture";
 const o2_DependecyAPIGateway2718 = "2. Create APIGateway app";
 const o3_ApplicationPropertiesAPIGateway2718 = "3. application.roperties";
+const o4_TestAPIGateway2718 = "4. Test APIGateway";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_APIGateway2718, o2_DependecyAPIGateway2718, o3_ApplicationPropertiesAPIGateway2718];
+const anchorList: string[] = [
+  o1_APIGateway2718,
+  o1_O_DiagramAPIGateway2718,
+  o2_DependecyAPIGateway2718,
+  o3_ApplicationPropertiesAPIGateway2718,
+  o4_TestAPIGateway2718,
+];
 
 // =============================================================================================================
 
@@ -66,8 +76,10 @@ const APIGateway_2_7_18_Main = () => {
       {/* End Contents */}
 
       <O1_APIGateway2718 anchor={o1_APIGateway2718} />
+      <O1_O_DiagramAPIGateway2718 anchor={o1_O_DiagramAPIGateway2718} />
       <O2_DependecyAPIGateway2718 anchor={o2_DependecyAPIGateway2718} />
       <O3_ApplicationPropertiesAPIGateway2718 anchor={o3_ApplicationPropertiesAPIGateway2718} />
+      <O4_TestAPIGateway2718 anchor={o4_TestAPIGateway2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
