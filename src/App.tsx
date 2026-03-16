@@ -74,6 +74,7 @@ import {
   JsxMain,
   MemorySearchMain,
   Pagination,
+  PropsMain,
   ReactBasics,
   ReactJSHome,
   ReactJSInterviewQuestions,
@@ -839,7 +840,7 @@ const router = createBrowserRouter(
               element: <TypeScript />,
               children: [
                 { path: "introduction", element: <IntroMain /> },
-                { path: "introduction", element: <IntroMain /> },
+                { path: "props", element: <PropsMain /> },
               ],
             },
             {

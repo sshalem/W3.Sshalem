@@ -42,6 +42,7 @@ const DropDownTypeScript = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="TS Introduction" internalLink="/reactJS/typescript/introduction" />
+        <SideDropdownLink sideDropDownNavName="Passing Props" internalLink="/reactJS/typescript/props" />
       </div>
     </section>
   );
