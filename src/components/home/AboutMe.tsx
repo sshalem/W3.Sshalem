@@ -1,11 +1,11 @@
-import Shabtay_1 from "../../assets/Shabtay_1_dramatic_cool.jpg";
+import shabtay_1 from "../../assets/shabtay_5.jpg";
 
 const AboutMe = () => {
   return (
     <section className="bg-white px-0 py-8" id="about">
       <div className="about__center">
         <article className="about-img">
-          <img src={Shabtay_1} alt="about-img" className="about-img__photo" />
+          <img src={shabtay_1} alt="about-img" className="about-img__photo" />
         </article>
         <article className="about-info">
           <div className="about-info__container">
