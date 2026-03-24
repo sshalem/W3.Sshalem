@@ -12,7 +12,7 @@ const Home = () => {
           <div className="text-6xl font-semibold italic tracking-wider">
             W<sup>3</sup> Sshalem Software Engineer
           </div>
-          <div className="developer-image h-40 w-40 self-center"></div>
+          <div className="developer-image h-52 w-52 self-center"></div>
           <div className="self-center text-3xl font-semibold tracking-wider">Shabtay Shalem</div>
           <div className="self-center text-3xl font-semibold tracking-wider">Full Stack Developer</div>
         </div>
