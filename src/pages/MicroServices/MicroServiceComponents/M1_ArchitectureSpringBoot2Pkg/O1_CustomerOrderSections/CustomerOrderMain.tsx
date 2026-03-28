@@ -9,6 +9,7 @@ import O2_CustomerService from "./O2_CustomerService";
 import O3_OrderService from "./O3_OrderService";
 import O4_RestTemplateCommunication from "./O4_RestTemplateCommunication";
 import O5_TestRestTemplate from "./O5_TestRestTemplate";
+import O6_OpenFeignCommunication from "./O6_OpenFeignCommunication";
 
 // =============================================================================================================
 
@@ -17,10 +18,18 @@ const o2_CustomerService = "1. CustomerService";
 const o3_OrderService = "2. OrderService";
 const o4_RestTemplateCommunication = "3. RestTemplate Communication";
 const o5_TestRestTemplate = "4. Test";
+const o6_OpenFeignCommunication = "5. OpenFeignCommunication";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_IntroCustomerOrder, o2_CustomerService, o3_OrderService, o4_RestTemplateCommunication, o5_TestRestTemplate];
+const anchorList: string[] = [
+  o1_IntroCustomerOrder,
+  o2_CustomerService,
+  o3_OrderService,
+  o4_RestTemplateCommunication,
+  o5_TestRestTemplate,
+  o6_OpenFeignCommunication,
+];
 
 // =============================================================================================================
 
@@ -78,6 +87,7 @@ const CustomerOrderMain = () => {
       <O3_OrderService anchor={o3_OrderService} />
       <O4_RestTemplateCommunication anchor={o4_RestTemplateCommunication} />
       <O5_TestRestTemplate anchor={o5_TestRestTemplate} />
+      <O6_OpenFeignCommunication anchor={o6_OpenFeignCommunication} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
