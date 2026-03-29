@@ -354,7 +354,7 @@ import {
 import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
 import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
 import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
-import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O7_ELK_2_7_18_Sections/ELK_2_7_18_Main";
+import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
 
 const router = createBrowserRouter(
   [
