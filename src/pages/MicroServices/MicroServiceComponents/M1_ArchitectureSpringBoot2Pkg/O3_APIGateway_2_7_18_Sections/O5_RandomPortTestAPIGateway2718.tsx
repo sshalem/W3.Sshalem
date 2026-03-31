@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanYellow } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,8 +32,14 @@ const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
         </article>
         <article className="my-8">
           <p className="my-8 text-xl">✅ Setup for Random port</p>
+          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          this gives
           <ULdisc>
-            <Li></Li>
+            <Li>
+              <SpanYellow>server.port=0</SpanYellow> → means "random"🎲
+            </Li>
+            <Li>unique instance id 🆔</Li>
+            <Li>IP-based registration 🌐</Li>
           </ULdisc>
         </article>
       </section>
@@ -42,3 +48,7 @@ const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
 };
 
 export default O5_RandomPortTestAPIGateway2718;
+
+const _1_ = `server.port=0
+eureka.instance.prefer-ip-address=true
+eureka.instance.instance-id=\${spring.application.name}:\${spring.cloud.client.ip-address}:\${random.int}`;
