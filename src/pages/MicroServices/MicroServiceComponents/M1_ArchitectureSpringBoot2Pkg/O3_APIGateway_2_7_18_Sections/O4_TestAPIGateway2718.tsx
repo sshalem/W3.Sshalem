@@ -45,6 +45,9 @@ const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
               In order to see which port of order-service runs , add following code :
               <JavaHighlight javaCode={_1_} />
             </Li>
+            <Li>For runtime code (controllers/services), the recommended approach is to get the port from the running web server context.</Li>
+            <Li>For Random port , above code won't work , need its different code</Li>
+            <Li>See next section for running with random port</Li>
           </ULdisc>
           <IMG img_name={microservice_15}></IMG>
         </article>

@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -40,6 +40,11 @@ const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>unique instance id 🆔</Li>
             <Li>IP-based registration 🌐</Li>
+            <Li>For runtime code (controllers/services), the recommended approach is to get the port from the running web server context.</Li>
+            <Li>
+              To see which port is running add following code to Controller (or any where else I want)
+              <JavaHighlight javaCode={_2_} />
+            </Li>
           </ULdisc>
         </article>
       </section>
@@ -52,3 +57,12 @@ export default O5_RandomPortTestAPIGateway2718;
 const _1_ = `server.port=0
 eureka.instance.prefer-ip-address=true
 eureka.instance.instance-id=\${spring.application.name}:\${spring.cloud.client.ip-address}:\${random.int}`;
+
+const _2_ = `@Autowired
+private ServletWebServerApplicationContext webServerAppCtxt;
+
+@GetMapping("/test")
+public void test() {
+    int port = webServerAppCtxt.getWebServer().getPort();
+    return "Port = " + port;
+}`;
