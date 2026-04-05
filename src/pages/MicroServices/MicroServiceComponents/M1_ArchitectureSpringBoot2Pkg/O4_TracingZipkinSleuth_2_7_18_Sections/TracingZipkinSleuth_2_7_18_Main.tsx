@@ -2,14 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
 import O1_TracingZipkinSleuth2718 from "./O1_TracingZipkinSleuth2718";
+import O2_SZ_dependency_2718 from "./O2_SZ_dependency_2718";
+import O3_SZ_download_ZipkinServer2718 from "./O3_SZ_download_ZipkinServer2718";
 
 // =============================================================================================================
 
 const o1_TracingZipkinSleuth2718 = "1. Intro Tracing Zipkin/Sleuth";
+const o2_SZ_dependency_2718 = "2. Dependency";
+const o3_SZ_download_ZipkinServer2718 = "3. Download Zipkin Server";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_TracingZipkinSleuth2718];
+const anchorList: string[] = [o1_TracingZipkinSleuth2718, o2_SZ_dependency_2718, o3_SZ_download_ZipkinServer2718];
 
 // =============================================================================================================
 
@@ -63,6 +67,8 @@ const TracingZipkinSleuth_2_7_18_Main = () => {
       {/* End Contents */}
 
       <O1_TracingZipkinSleuth2718 anchor={o1_TracingZipkinSleuth2718} />
+      <O2_SZ_dependency_2718 anchor={o2_SZ_dependency_2718} />
+      <O3_SZ_download_ZipkinServer2718 anchor={o3_SZ_download_ZipkinServer2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
