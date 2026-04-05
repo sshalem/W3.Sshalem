@@ -10,7 +10,7 @@ const O2_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
           <SpanYellow>Zipkin</SpanYellow>.
           <ULdisc>
             <Li>
-              1️⃣ Add dependencies (to EACH microservice)
+              1️⃣ Add dependencies (to EACH microservice , including API-Gateway)
               <XmlHighlight xmlCode={_1_} />
             </Li>
             <Li>2️⃣ Verify Spring Cloud BOM (already doen when Added Eureka , Spring cloud version matches in all services)</Li>
