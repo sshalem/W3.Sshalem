@@ -1,7 +1,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
-const O2_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
+const O3_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -38,7 +38,7 @@ const O2_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_SZ_dependency_2718;
+export default O3_SZ_dependency_2718;
 
 const _1_ = `<dependency>
     <groupId>org.springframework.cloud</groupId>

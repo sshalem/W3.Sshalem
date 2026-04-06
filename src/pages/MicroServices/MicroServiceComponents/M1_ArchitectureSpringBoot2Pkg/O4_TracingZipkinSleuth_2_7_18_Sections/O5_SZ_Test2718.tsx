@@ -1,7 +1,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
 
-const O4_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
+const O5_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -30,7 +30,7 @@ const O4_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_SZ_Test2718;
+export default O5_SZ_Test2718;
 
 const _1_ = `java -jar zipkin-server-3.6.0-exec.jar`;
 
