@@ -88,37 +88,7 @@ const O3_BuildPhaseBoot2 = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
           <Li>
-            🔹 PHASE 5 — Add Resilience4j
-            <ULdisc>
-              <Li>✅ Step 8 — Add Circuit Breaker</Li>
-              <Li>
-                Optional:
-                <ULdisc>
-                  <Li>Retry</Li>
-                  <Li>RateLimiter</Li>
-                  <Li>Timeout</Li>
-                </ULdisc>
-              </Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            🔹 PHASE 6 — Config Server
-            <ULdisc>
-              <Li>✅ Step 9 — Create config-server</Li>
-              <Li>Connect to Git repository.</Li>
-              <Li>
-                Move:
-                <ULdisc>
-                  <Li>application.properties files</Li>
-                  <Li>DB configs</Li>
-                  <Li>Resilience configs</Li>
-                  <Li>Now services fetch config from Git.</Li>
-                </ULdisc>
-              </Li>
-            </ULdisc>
-          </Li>
-          <Li>
-            🔹 PHASE 7 — Observability
+            🔹 PHASE 5 — Observability
             <ULdisc>
               <Li>Zipkin</Li>
               <Li>Sleuth</Li>
@@ -135,6 +105,38 @@ const O3_BuildPhaseBoot2 = ({ anchor }: { anchor: string }) => {
                   <Li>Micrometer tracing</Li>
                   <Li>Zipkin</Li>
                   <Li>Prometheus (optional)</Li>
+                </ULdisc>
+              </Li>
+            </ULdisc>
+          </Li>
+
+          <Li>
+            🔹 PHASE 6 — Config Server
+            <ULdisc>
+              <Li>✅ Step 9 — Create config-server</Li>
+              <Li>Connect to Git repository.</Li>
+              <Li>
+                Move:
+                <ULdisc>
+                  <Li>application.properties files</Li>
+                  <Li>DB configs</Li>
+                  <Li>Resilience configs</Li>
+                  <Li>Now services fetch config from Git.</Li>
+                </ULdisc>
+              </Li>
+            </ULdisc>
+          </Li>
+
+          <Li>
+            🔹 PHASE 7 — Add Resilience4j
+            <ULdisc>
+              <Li>✅ Step 8 — Add Circuit Breaker</Li>
+              <Li>
+                Optional:
+                <ULdisc>
+                  <Li>Retry</Li>
+                  <Li>RateLimiter</Li>
+                  <Li>Timeout</Li>
                 </ULdisc>
               </Li>
             </ULdisc>
