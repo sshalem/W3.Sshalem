@@ -18,6 +18,17 @@ const O1_ELK2718 = ({ anchor }: { anchor: string }) => {
         </article>
 
         <article className="my-8">
+          <p className="my-8 text-xl">🧩 Tutorial </p>
+          <ULdisc>
+            <Li>
+              <a href="https://www.youtube.com/watch?v=n2HHAvpn6Jo" target="_blank" className="tracking-wide text-blue-500">
+                https://www.youtube.com/watch?v=n2HHAvpn6Jo
+              </a>
+            </Li>
+          </ULdisc>
+        </article>
+
+        <article className="my-8">
           Classic ELK Stack with my microservices (Spring Boot 2.7.18)
           <ULdisc>
             <Li>
