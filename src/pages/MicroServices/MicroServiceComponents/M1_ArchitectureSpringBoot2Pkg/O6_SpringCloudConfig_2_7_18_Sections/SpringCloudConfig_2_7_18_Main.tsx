@@ -2,14 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
 import O1_SpringCloudConfig2718 from "./O1_SpringCloudConfig2718";
+import O2_CS_Architecture_2718 from "./O2_CS_Architecture_2718";
 
 // =============================================================================================================
 
 const o1_SpringCloudConfig2718 = "1. Intro Spring Cloud Config";
+const o2_CS_Architecture_2718 = "2. Architecture";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_SpringCloudConfig2718];
+const anchorList: string[] = [o1_SpringCloudConfig2718, o2_CS_Architecture_2718];
 
 // =============================================================================================================
 
@@ -63,6 +65,7 @@ const SpringCloudConfig_2_7_18_Main = () => {
       {/* End Contents */}
 
       <O1_SpringCloudConfig2718 anchor={o1_SpringCloudConfig2718} />
+      <O2_CS_Architecture_2718 anchor={o2_CS_Architecture_2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

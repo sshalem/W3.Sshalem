@@ -2,7 +2,7 @@ import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 import microservice_22 from "../../../../../assets/microservice_22.jpg";
 
-const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
+const O5_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -98,7 +98,7 @@ const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_DownloadLogstash2718;
+export default O5_DownloadLogstash2718;
 
 const _1_ = `# ONE shared logs folder , create this for each service
 logging.file.name=./logs/CUSTOMER-SERVICE.log

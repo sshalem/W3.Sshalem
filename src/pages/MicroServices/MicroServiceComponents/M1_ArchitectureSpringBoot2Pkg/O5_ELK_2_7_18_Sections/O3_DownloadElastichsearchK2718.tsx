@@ -1,12 +1,12 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
 
-const O3_DownloadKibana2718 = ({ anchor }: { anchor: string }) => {
+const O3_DownloadElastichsearchK2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8">
-          <p className="my-8 text-2xl">🧩 Download Kibana</p>
+          <p className="my-8 text-2xl">🧩 Download Elastichsearch</p>
           <ULdisc>
             <Li>
               tutorial link{" "}
@@ -19,25 +19,25 @@ const O3_DownloadKibana2718 = ({ anchor }: { anchor: string }) => {
               <a href="https://www.elastic.co" target="_blank" className="tracking-wide text-blue-500">
                 https://www.elastic.co
               </a>{" "}
-              &nbsp; choose <strong>Resources</strong> tab ➡️ then <strong>Downloads</strong> box ➡️ scroll to Kibana and download
+              &nbsp; choose <strong>Resources</strong> tab ➡️ then <strong>Downloads</strong> box ➡️ scroll to Elastichsearch and download
             </Li>
 
             <Li>
-              <strong>Option 2: </strong> direct link to download Kibana (420MB){" "}
-              <a href="https://www.elastic.co/downloads/kibana" target="_blank" className="tracking-wide text-blue-500">
-                https://www.elastic.co/downloads/kibana
+              <strong>Option 2: </strong> direct link to download Elastichsearch (490MB){" "}
+              <a href="https://www.elastic.co/downloads/elasticsearch" target="_blank" className="tracking-wide text-blue-500">
+                https://www.elastic.co/downloads/elasticsearch
               </a>
             </Li>
           </ULdisc>
         </article>
 
         <article className="my-8">
-          <p className="my-8 text-2xl">🧩 Config Kibana</p>
+          <p className="my-8 text-2xl">🧩 Config Elastichsearch</p>
 
           <ULdisc>
             <Li>Since Version 8 and up , security is added</Li>
             <Li>To override it, need to disable it in it config file</Li>
-            <Li>go to Kibana folder</Li>
+            <Li>go to Elastichsearch folder</Li>
             <Li>
               go to <SpanYellow>config</SpanYellow> folder
             </Li>
@@ -45,28 +45,28 @@ const O3_DownloadKibana2718 = ({ anchor }: { anchor: string }) => {
               open with editor the file <SpanYellow>elasticsearch.yml</SpanYellow>
             </Li>
             <Li>
-              Set to <SpanYellow>false</SpanYellow> the following security feature
+              Set to <SpanYellow>false</SpanYellow> the following security features (they were true by default)
               <ApplicationPropertiesHighlight propertiesCode={_1_} />
             </Li>
           </ULdisc>
         </article>
 
         <article className="my-8">
-          <p className="my-8 text-2xl">🧩 Run Kibana</p>
+          <p className="my-8 text-2xl">🧩 Run Elastichsearch</p>
           <ULdisc>
             <Li>
               go to <SpanYellow>bin</SpanYellow> folder
             </Li>
             <Li>Open CMD</Li>
             <Li>
-              Run command <SpanYellow>kibana.bat</SpanYellow>
+              Run command <SpanYellow>elasticsearch.bat</SpanYellow>
             </Li>
             <Li>
               browse to &nbsp;
-              <a href="http://localhost:5601" target="_blank" className="tracking-wide text-blue-500">
-                http://localhost:5601
+              <a href="http://localhost:9200" target="_blank" className="tracking-wide text-blue-500">
+                http://localhost:9200
               </a>{" "}
-              &nbsp; see if Kibana UI is opened.
+              &nbsp; see if we get a JSON response from Elasticsearch , this way we can tell if its running.
             </Li>
           </ULdisc>
         </article>
@@ -75,18 +75,18 @@ const O3_DownloadKibana2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_DownloadKibana2718;
+export default O3_DownloadElastichsearchK2718;
 
-const _1_ = `# Enable the following features.
-server.port: 5601
+const _1_ = `# Enable security features
+xpack.security.enabled: false
 
-server.host: "localhost"
+xpack.security.enrollment.enabled: false
 
-# verify its false to diasable it
-server.ssl.enabled: false
+# Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+xpack.security.http.ssl:
+  enabled: false
 
-# The URLs of the Elasticsearch instances to use for all your queries.
-elasticsearch.hosts: ["http://localhost:9200"]
 
-# To disregard the validity of SSL certificates, change this setting's value to 'none'.
-elasticsearch.ssl.verificationMode: none`;
+# Enable encryption and mutual authentication between cluster nodes
+xpack.security.transport.ssl:
+  enabled: false`;

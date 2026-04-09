@@ -3,7 +3,7 @@ import { SpanYellow } from "../../../../../components/Highlight";
 import microservice_20 from "../../../../../assets/microservice_20.jpg";
 import microservice_21 from "../../../../../assets/microservice_21.jpg";
 
-const O5_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
+const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -99,4 +99,4 @@ const O5_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_ELK_Test2718;
+export default O6_ELK_Test2718;
