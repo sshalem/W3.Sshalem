@@ -55,7 +55,8 @@ const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
                   <Li>where logs are</Li>
                   <Li>where to send them</Li>
                   <Li>
-                    Create <SpanYellow>logstash.conf</SpanYellow> for customer-service:
+                    Create <SpanYellow>logstash.conf</SpanYellow> that takes all log files ( <SpanYellow>*.log</SpanYellow> ) from the path where id
+                    resides
                     <ApplicationPropertiesHighlight propertiesCode={_2_} />
                   </Li>
                 </ULdisc>
