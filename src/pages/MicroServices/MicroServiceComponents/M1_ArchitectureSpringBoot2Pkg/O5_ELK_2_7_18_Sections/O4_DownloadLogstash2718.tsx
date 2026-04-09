@@ -1,5 +1,6 @@
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import microservice_22 from "../../../../../assets/microservice_22.jpg";
 
 const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -41,9 +42,13 @@ const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
                 <Li>Logstash reads files, thus, we must create to each service a log file.</Li>
                 <Li>
                   Create log file to each service I want to log, this will create log files with this format{" "}
-                  <SpanYellow>logs/customer-serives.log</SpanYellow> , in a shared <SpanYellow>logs</SpanYellow> folder , where oall logs will be
+                  <SpanYellow>logs/customer-serives.log</SpanYellow> , in a shared <SpanYellow>logs</SpanYellow> folder , where all logs will be
                   written (see I added 1 dot with slash)
                   <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                </Li>
+                <Li>
+                  Once app runs all logs will be in same folder
+                  <IMG img_name={microservice_22}></IMG>
                 </Li>
               </ULdisc>
             </Li>
@@ -57,6 +62,10 @@ const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
                   <Li>
                     Create <SpanYellow>logstash.conf</SpanYellow> that takes all log files ( <SpanYellow>*.log</SpanYellow> ) from the path where id
                     resides
+                  </Li>
+                  <Li>
+                    The pattern of the conf gile is <SpanYellow>input</SpanYellow> curly brackets , <SpanYellow>filter</SpanYellow> curly brackets,{" "}
+                    <SpanYellow>output</SpanYellow> curly brackets, but here I don't use the filter (Check ChatGPT how to use it)
                     <ApplicationPropertiesHighlight propertiesCode={_2_} />
                   </Li>
                 </ULdisc>
@@ -91,8 +100,14 @@ const O4_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
 
 export default O4_DownloadLogstash2718;
 
-const _1_ = `# ONE shared logs folder (recommended)
-logging.file.name=./logs/CUSTOMER-SERVICE.log`;
+const _1_ = `# ONE shared logs folder , create this for each service
+logging.file.name=./logs/CUSTOMER-SERVICE.log
+
+logging.file.name=./logs/ORDER-SERVICE.log
+
+logging.file.name=./logs/ITEM-SERVICE.log
+
+logging.file.name=./logs/API-GATEWAY.log`;
 
 const _2_ = `input {
   file {
@@ -104,7 +119,6 @@ const _2_ = `input {
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
-    index => "microservices-logs-%{+YYYY.MM.dd}"
   }
   stdout { codec => rubydebug }
 }`;

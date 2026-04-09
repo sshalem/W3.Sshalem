@@ -1,5 +1,7 @@
-import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { SpanYellow } from "../../../../../components/Highlight";
+import microservice_20 from "../../../../../assets/microservice_20.jpg";
+import microservice_21 from "../../../../../assets/microservice_21.jpg";
 
 const O5_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -49,11 +51,10 @@ const O5_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                 Eureka , <strong>must be first to run</strong>
               </Li>
               <Li>
-                Run Zipkin server , Browse to{" "}
+                Run Zipkin server <SpanYellow>java -jar zipkin-server-3.6.0-exec.jar</SpanYellow>, Browse to{" "}
                 <a href="http://localhost:9411" className="text-blue-500" target="_blank">
                   http://localhost:9411
                 </a>
-                <ApplicationPropertiesHighlight propertiesCode={_1_} />
               </Li>
               <Li>Run Api Gateway (Port 5001)</Li>
               <Li>Customer x2 instances</Li>
@@ -66,15 +67,36 @@ const O5_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                 </a>
               </Li>
               <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
-              <Li>Check KIBANA UI</Li>
+              <Li>
+                Check KIBANA UI &nbsp;
+                <a href="http://localhost:5601" target="_blank" className="tracking-wide text-blue-500">
+                  http://localhost:5601
+                </a>{" "}
+              </Li>
+              <Li>
+                Once its loaded
+                <ULdisc>
+                  <Li>
+                    Select <SpanYellow>Observibility</SpanYellow>
+                  </Li>
+                  <Li>
+                    Select <SpanYellow>Discover</SpanYellow>
+                  </Li>
+                  <Li>
+                    To changed the view to what I want , just select the <SpanYellow>message</SpanYellow> field
+                  </Li>
+                  <IMG img_name={microservice_20}></IMG>
+                  <Li>In order to get more data from all logs, need to refresh the data</Li>
+                  <Li>We can see all data is centralaized in one place</Li>
+                </ULdisc>
+              </Li>
             </ULDecimal>
           </Li>
         </ULdisc>
+        <IMG img_name={microservice_21}></IMG>
       </section>
     </MainChildArea>
   );
 };
 
 export default O5_ELK_Test2718;
-
-const _1_ = `java -jar zipkin-server-3.6.0-exec.jar`;
