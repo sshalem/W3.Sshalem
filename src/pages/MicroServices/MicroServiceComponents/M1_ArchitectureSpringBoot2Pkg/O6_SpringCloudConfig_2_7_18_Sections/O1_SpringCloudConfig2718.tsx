@@ -5,14 +5,27 @@ const O1_SpringCloudConfig2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="my-8 text-xl font-semibold">🧩 1. What is Spring cloud config server?</p>
+        <p className="my-8 text-xl font-semibold">🧩 1. What is Spring Cloud Config Server?</p>
         <ULdisc>
           <Li>
-            <SpanYellow>Spring Cloud Config</SpanYellow> is a central place to store and manage configuration for all your microservices.
+            <SpanYellow>Spring Cloud Config Server</SpanYellow> is a central place to store and manage configuration for all your microservices.
+          </Li>
+          <Li>
+            👉 <SpanYellow>Spring Cloud Config Server</SpanYellow> = just another <strong>Spring Boot microservice</strong> 🚀
           </Li>
           <Li>
             Instead of each service having its own <SpanYellow>application.properties</SpanYellow>, we want to{" "}
             <SpanYellow>fetch configuration from one server at startup</SpanYellow>.
+          </Li>
+          <Li>
+            Config can be stored :
+            <ULdisc>
+              <Li>1️⃣ Git-based Config Server (Most Common) ⭐</Li>
+              <Li>2️⃣ Native Config Server(File System - stored locally on disk) </Li>
+              <Li>3️⃣ Vault Config Server (Best for secure environments 🔐)</Li>
+              <Li>4️⃣ JDBC Config Server (stored in database)</Li>
+              <Li>5️⃣ Composite Config Server (Combination of multiple sources)</Li>
+            </ULdisc>
           </Li>
         </ULdisc>
       </section>
