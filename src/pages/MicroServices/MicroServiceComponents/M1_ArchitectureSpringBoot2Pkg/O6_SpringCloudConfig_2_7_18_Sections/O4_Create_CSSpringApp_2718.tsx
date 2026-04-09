@@ -55,6 +55,9 @@ const _3_ = `server.port=8888
 spring.application.name=config-server
 
 spring.cloud.config.server.git.uri=https://github.com/sshalem/config-server-2-7-18
+
+# This means it will search for the branch of main instead of branch master, because sometimes 
+# branch name is not master but main
 spring.cloud.config.server.git.default-label=main
 spring.cloud.config.server.git.clone-on-start=true
 
