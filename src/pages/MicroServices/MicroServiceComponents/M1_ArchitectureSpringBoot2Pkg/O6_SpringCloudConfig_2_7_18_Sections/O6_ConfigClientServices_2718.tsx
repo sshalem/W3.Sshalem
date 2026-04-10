@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, XmlHighlight } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
 
 const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,9 +27,31 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ application.properties</p>
           <ULdisc>
-            <Li>add this to application.properties of EACH service</Li>
+            <Li>In EACH microservice add to application.properties</Li>
           </ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_2_} />
+        </article>
+
+        <article className="my-8">
+          <p className="text-xl font-semibold">3️⃣ Moved Customer properties to Config Storage on Git</p>
+          <ULdisc>
+            <Li>
+              Lets see what properties files we have in <SpanYellow>CUSTOMER-SERVICE</SpanYellow>
+              <ULdisc>
+                <Li>
+                  <SpanYellow>application.properties</SpanYellow> - the main properties file that loads when app runs, holds common properties of the
+                  profiles
+                </Li>
+                <Li>
+                  <SpanYellow>application-h2.properties</SpanYellow> - holds only properties of H2 DB
+                </Li>
+                <Li>
+                  <SpanYellow>application-postgres.properties</SpanYellow> - holds only properties of Postgresql DB
+                </Li>
+              </ULdisc>
+            </Li>
+          </ULdisc>
+          <ApplicationPropertiesHighlight propertiesCode={_3_} />
         </article>
       </section>
     </MainChildArea>
@@ -43,4 +65,7 @@ const _1_ = `<dependency>
     <artifactId>spring-cloud-starter-config</artifactId>
 </dependency>`;
 
-const _2_ = ``;
+const _2_ = `# Cloud-Config-Server
+spring.config.import=optional:configserver:http://localhost:8888`;
+
+const _3_ = ``;
