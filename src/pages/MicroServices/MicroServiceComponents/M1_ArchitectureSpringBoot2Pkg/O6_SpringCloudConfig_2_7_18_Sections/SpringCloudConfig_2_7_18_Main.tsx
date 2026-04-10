@@ -5,6 +5,8 @@ import O1_SpringCloudConfig2718 from "./O1_SpringCloudConfig2718";
 import O2_CS_Architecture_2718 from "./O2_CS_Architecture_2718";
 import O3_Create_CS_GitRepo_2718 from "./O3_Create_CS_GitRepo_2718";
 import O4_Create_CSSpringApp_2718 from "./O4_Create_CSSpringApp_2718";
+import O5_Run_ConfigServerOnly_2718 from "./O5_Run_ConfigServerOnly_2718";
+import O6_ConfigClientServices_2718 from "./O6_ConfigClientServices_2718";
 
 // =============================================================================================================
 
@@ -12,10 +14,19 @@ const o1_SpringCloudConfig2718 = "1. Intro Spring Cloud Config";
 const o2_CS_Architecture_2718 = "2. Architecture";
 const o3_Create_CS_GitRepo_2718 = "3. Create GitRepository";
 const o4_Create_CSSpringApp_2718 = "4. Create Spring Cloud Config Server";
+const o5_Run_ConfigServerOnly_2718 = "5. Run Config Server Only";
+const o6_ConfigClientServices_2718 = "6. Config Client Services";
 
 // =============================================================================================================
 
-const anchorList: string[] = [o1_SpringCloudConfig2718, o2_CS_Architecture_2718, o3_Create_CS_GitRepo_2718, o4_Create_CSSpringApp_2718];
+const anchorList: string[] = [
+  o1_SpringCloudConfig2718,
+  o2_CS_Architecture_2718,
+  o3_Create_CS_GitRepo_2718,
+  o4_Create_CSSpringApp_2718,
+  o5_Run_ConfigServerOnly_2718,
+  o6_ConfigClientServices_2718,
+];
 
 // =============================================================================================================
 
@@ -72,6 +83,8 @@ const SpringCloudConfig_2_7_18_Main = () => {
       <O2_CS_Architecture_2718 anchor={o2_CS_Architecture_2718} />
       <O3_Create_CS_GitRepo_2718 anchor={o3_Create_CS_GitRepo_2718} />
       <O4_Create_CSSpringApp_2718 anchor={o4_Create_CSSpringApp_2718} />
+      <O5_Run_ConfigServerOnly_2718 anchor={o5_Run_ConfigServerOnly_2718} />
+      <O6_ConfigClientServices_2718 anchor={o6_ConfigClientServices_2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

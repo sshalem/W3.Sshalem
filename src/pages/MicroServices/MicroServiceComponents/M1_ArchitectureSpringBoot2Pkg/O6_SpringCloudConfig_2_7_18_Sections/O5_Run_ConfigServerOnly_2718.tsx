@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O5_Run_ConfigServerOnly_2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -7,24 +7,42 @@ const O5_Run_ConfigServerOnly_2718 = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="text-xl font-semibold">1️⃣ Run Config Server Only</p>
         <article className="my-8">
-          Lets run the <SpanYellow>Config Server</SpanYellow> <strong>Only</strong> , then:
+          to Verify Git repo is loaded (REAL test) , Lets run the <SpanYellow>Config Server</SpanYellow> <strong>Only</strong> , then:
           <ULdisc>
             <Li>
-              Send Post request to <SpanYellow>http://localhost:8888/config-server/default</SpanYellow>
-            </Li>
-            <Li>
-              Or , we browse to localhost <a href="http://localhost:8888/config-server/default">http://localhost:8888/config-server/default</a>
+              Config server exposes configs using this pattern: <SpanYellow>{"http://localhost:8888/{application}/{profile}"}</SpanYellow>
+              where{" "}
+              <ULdisc>
+                <Li>
+                  <strong>application</strong> refres to <SpanYellow>spring.application.name=config-server</SpanYellow>
+                </Li>
+                <Li>
+                  from logging we can see{" "}
+                  <strong>
+                    No active profile set, falling back to 1 default profile: <SpanYellow>"default"</SpanYellow>
+                  </strong>
+                </Li>
+                <Li>
+                  Thus, <strong>profile</strong> refers to the running profile of the application which is <SpanYellow>default</SpanYellow>
+                </Li>
+              </ULdisc>
             </Li>
           </ULdisc>
         </article>
 
         <article className="my-8">
-          <p className="text-xl font-semibold">2️⃣ Add dependency</p>
+          <p className="text-xl font-semibold">✅ Verify Git repo is loaded (REAL test)</p>
           <ULdisc>
-            <Li>Add the following dependencies.</Li>
-            <Li>Verify Spring Cloud BOM (Spring cloud version matches in all services)</Li>
+            <Li>
+              Send <strong>GET</strong> request to <SpanYellow>http://localhost:8888/config-server/default</SpanYellow>
+            </Li>
+            <Li>
+              Or , we can browse to localhost{" "}
+              <a className="tracking-wider text-blue-500" target="_blank" href="http://localhost:8888/config-server/default">
+                http://localhost:8888/config-server/default
+              </a>
+            </Li>
           </ULdisc>
-          <XmlHighlight xmlCode={_1_} />
         </article>
       </section>
     </MainChildArea>
@@ -32,5 +50,3 @@ const O5_Run_ConfigServerOnly_2718 = ({ anchor }: { anchor: string }) => {
 };
 
 export default O5_Run_ConfigServerOnly_2718;
-
-const _1_ = ``;
