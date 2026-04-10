@@ -17,7 +17,7 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ Add dependency</p>
           <ULdisc>
-            <Li>Add only the following dependency.</Li>
+            <Li>Add the following dependencies.</Li>
             <Li>Verify Spring Cloud BOM (Spring cloud version matches in all services)</Li>
           </ULdisc>
           <XmlHighlight xmlCode={_1_} />
@@ -53,7 +53,11 @@ export default O4_Create_CSSpringApp_2718;
 const _1_ = `    <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-config-server</artifactId>
-    </dependency>`;
+    </dependency>
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>`;
 
 const _2_ = `@SpringBootApplication
 @EnableConfigServer
@@ -66,7 +70,7 @@ public class ConfigServerApplication {
 const _3_ = `server.port=8888
 spring.application.name=config-server
 
-spring.cloud.config.server.git.uri=https://github.com/sshalem/config-server-2-7-18
+spring.cloud.config.server.git.uri=https://github.com/sshalem/config-server-2-7-18.git
 
 # This means it will search for the branch of main instead of branch master, because sometimes 
 # branch name is not master but main
@@ -75,4 +79,7 @@ spring.cloud.config.server.git.clone-on-start=true
 
 
 spring.cloud.config.server.git.username=sshalem
-spring.cloud.config.server.git.password=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`;
+spring.cloud.config.server.git.password=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
+
+management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always`;
