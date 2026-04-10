@@ -16,19 +16,31 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
 
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ Add dependency</p>
-          Add following dependency only
+          <ULdisc>
+            <Li>Add only the following dependency.</Li>
+            <Li>Verify Spring Cloud BOM (Spring cloud version matches in all services)</Li>
+          </ULdisc>
           <XmlHighlight xmlCode={_1_} />
         </article>
 
         <article className="my-8">
-          <p className="text-xl font-semibold">3️⃣ Add Annotate</p>
-          In the main class add annotation of
+          <p className="text-xl font-semibold">3️⃣ Add Annotation</p>
+          <ULdisc>
+            <Li>
+              In the main class add the following annotation <SpanYellow>@EnableConfigServer</SpanYellow>
+            </Li>
+          </ULdisc>
+
           <JavaHighlight javaCode={_2_} />
         </article>
 
         <article className="my-8">
           <p className="text-xl font-semibold">4️⃣ application.properties</p>
-          In the main class add annotation of
+          <ULdisc>
+            <Li>
+              config <SpanYellow>application.properties</SpanYellow> as below
+            </Li>
+          </ULdisc>
           <ApplicationPropertiesHighlight propertiesCode={_3_} />
         </article>
       </section>
