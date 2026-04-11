@@ -1,13 +1,11 @@
-import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
-import microservice_20 from "../../../../../assets/microservice_20.jpg";
-import microservice_21 from "../../../../../assets/microservice_21.jpg";
 
-const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
+const O7_CS_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-8 text-xl">✅ Test ELK</article>
+        <article className="my-8 text-xl">✅ Test Spring Cloud Config Server</article>
         <ULdisc>
           <Li>
             Clone git project
@@ -20,7 +18,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
             </a>
           </Li>
           <Li>
-            Open <SpanYellow>IntelliJ</SpanYellow> and open Project <SpanYellow>O6-C-O-I-E-G-SK-ELK</SpanYellow> , located in folder
+            Open <SpanYellow>IntelliJ</SpanYellow> and open Project <SpanYellow>O7-COI-EG-SK-ELK-CS</SpanYellow> , located in folder
             <SpanYellow>_3_microservices_2_7_18_JDK17</SpanYellow>
           </Li>
           <Li>
@@ -50,10 +48,13 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                 &nbsp;
               </Li>
               <Li>
-                <SpanYellow>Eureka</SpanYellow> , <strong>must be first to run</strong>
+                <SpanYellow>Config-Server</SpanYellow>
               </Li>
               <Li>
-                <SpanYellow>Zipkin</SpanYellow> go to Zipkin folder , run server <SpanYellow>java -jar zipkin-server-3.6.0-exec.jar</SpanYellow>,
+                <SpanYellow>Eureka</SpanYellow>
+              </Li>
+              <Li>
+                <SpanYellow>Zipkin</SpanYellow> , go to Zipkin folder run server <SpanYellow>java -jar zipkin-server-3.6.0-exec.jar</SpanYellow>,
                 Browse to{" "}
                 <a href="http://localhost:9411" className="text-blue-500" target="_blank">
                   http://localhost:9411
@@ -77,37 +78,19 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                   http://localhost:9411
                 </a>
               </Li>
-              <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
               <Li>
-                Check KIBANA UI &nbsp;
+                Open KIBANA UI &nbsp;
                 <a href="http://localhost:5601" target="_blank" className="tracking-wide text-blue-500">
                   http://localhost:5601
                 </a>{" "}
               </Li>
-              <Li>
-                Once its loaded
-                <ULdisc>
-                  <Li>
-                    Select <SpanYellow>Observibility</SpanYellow>
-                  </Li>
-                  <Li>
-                    Select <SpanYellow>Discover</SpanYellow>
-                  </Li>
-                  <Li>
-                    To changed the view to what I want , just select the <SpanYellow>message</SpanYellow> field
-                  </Li>
-                  <IMG img_name={microservice_20}></IMG>
-                  <Li>In order to get more data from all logs, need to refresh the data</Li>
-                  <Li>We can see all data is centralaized in one place</Li>
-                </ULdisc>
-              </Li>
+              <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
             </ULDecimal>
           </Li>
         </ULdisc>
-        <IMG img_name={microservice_21}></IMG>
       </section>
     </MainChildArea>
   );
 };
 
-export default O6_ELK_Test2718;
+export default O7_CS_Test2718;

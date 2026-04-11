@@ -76,8 +76,7 @@ spring.application.name=config-server
 
 spring.cloud.config.server.git.uri=https://github.com/sshalem/config-server-2-7-18.git
 
-# This means it will search for the branch of main instead of branch master, because sometimes 
-# branch name is not master but main
+# This means it will search for the branch of main instead of branch master, because sometimes branch name can be master or main
 spring.cloud.config.server.git.default-label=main
 spring.cloud.config.server.git.clone-on-start=true
 
