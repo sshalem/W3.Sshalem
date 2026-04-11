@@ -71,12 +71,6 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
               <Li>
                 <SpanYellow>Item-service</SpanYellow> x2 instances
               </Li>
-              <Li>
-                Browse to{" "}
-                <a href="http://localhost:9411" className="text-blue-500" target="_blank">
-                  http://localhost:9411
-                </a>
-              </Li>
               <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
               <Li>
                 Check KIBANA UI &nbsp;

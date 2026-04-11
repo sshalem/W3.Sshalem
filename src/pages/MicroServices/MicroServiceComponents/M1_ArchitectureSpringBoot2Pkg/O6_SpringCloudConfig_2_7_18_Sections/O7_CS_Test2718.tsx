@@ -73,12 +73,6 @@ const O7_CS_Test2718 = ({ anchor }: { anchor: string }) => {
                 <SpanYellow>Item-service</SpanYellow> x2 instances
               </Li>
               <Li>
-                Browse to{" "}
-                <a href="http://localhost:9411" className="text-blue-500" target="_blank">
-                  http://localhost:9411
-                </a>
-              </Li>
-              <Li>
                 Open KIBANA UI &nbsp;
                 <a href="http://localhost:5601" target="_blank" className="tracking-wide text-blue-500">
                   http://localhost:5601
