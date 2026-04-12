@@ -1,14 +1,11 @@
-import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
-import microservice_20 from "../../../../../assets/microservice_20.jpg";
-import microservice_21 from "../../../../../assets/microservice_21.jpg";
 
-const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
+const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-8 text-xl">✅ Test ELK</article>
-        Run following projects , in following order:
+        <article className="my-8 text-xl">✅ Test Spring Cloud Config Server</article>
         <ULdisc>
           <Li>
             Clone git project
@@ -21,7 +18,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
             </a>
           </Li>
           <Li>
-            Open <SpanYellow>IntelliJ</SpanYellow> and open Project <SpanYellow>O6-C-O-I-E-G-SK-ELK</SpanYellow> , located in folder
+            Open <SpanYellow>IntelliJ</SpanYellow> and open Project <SpanYellow>O7-COI-EG-SK-ELK-CS</SpanYellow> , located in folder
             <SpanYellow>_3_microservices_2_7_18_JDK17</SpanYellow>
           </Li>
           <Li>
@@ -69,6 +66,9 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                 <JsxHighlight jsxCode="kibana.bat" />
               </Li>
               <Li>
+                <SpanYellow>Config-Server</SpanYellow>
+              </Li>
+              <Li>
                 <SpanYellow>Eureka</SpanYellow>
               </Li>
               <Li>
@@ -96,37 +96,19 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
               <Li>
                 <SpanYellow>Item-service</SpanYellow> x2 instances
               </Li>
-              <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
               <Li>
-                Check KIBANA UI &nbsp;
+                Open KIBANA UI &nbsp;
                 <a href="http://localhost:5601" target="_blank" className="tracking-wide text-blue-500">
                   http://localhost:5601
                 </a>{" "}
               </Li>
-              <Li>
-                Once its loaded
-                <ULdisc>
-                  <Li>
-                    Select <SpanYellow>Observibility</SpanYellow>
-                  </Li>
-                  <Li>
-                    Select <SpanYellow>Discover</SpanYellow>
-                  </Li>
-                  <Li>
-                    To changed the view to what I want , just select the <SpanYellow>message</SpanYellow> field
-                  </Li>
-                  <IMG img_name={microservice_20}></IMG>
-                  <Li>In order to get more data from all logs, need to refresh the data</Li>
-                  <Li>We can see all data is centralaized in one place</Li>
-                </ULdisc>
-              </Li>
+              <Li>Via Postman, send the request createCustomer , and add Order to Customer </Li>
             </ULDecimal>
           </Li>
         </ULdisc>
-        <IMG img_name={microservice_21}></IMG>
       </section>
     </MainChildArea>
   );
 };
 
-export default O6_ELK_Test2718;
+export default O8_CS_Test2718;

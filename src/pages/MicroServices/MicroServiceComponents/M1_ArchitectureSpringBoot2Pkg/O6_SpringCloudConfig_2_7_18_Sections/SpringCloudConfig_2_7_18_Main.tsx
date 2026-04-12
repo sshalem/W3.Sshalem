@@ -7,7 +7,8 @@ import O3_Create_CS_GitRepo_2718 from "./O3_Create_CS_GitRepo_2718";
 import O4_Create_CSSpringApp_2718 from "./O4_Create_CSSpringApp_2718";
 import O5_Run_ConfigServerOnly_2718 from "./O5_Run_ConfigServerOnly_2718";
 import O6_ConfigClientServices_2718 from "./O6_ConfigClientServices_2718";
-import O7_CS_Test2718 from "./O7_CS_Test2718";
+import O8_CS_Test2718 from "./O8_CS_Test2718";
+import O7_ConfigOrderItemServices_2718 from "./O7_ConfigOrderItemServices_2718";
 
 // =============================================================================================================
 
@@ -16,8 +17,9 @@ const o2_CS_Architecture_2718 = "2. Architecture";
 const o3_Create_CS_GitRepo_2718 = "3. Create GitRepository";
 const o4_Create_CSSpringApp_2718 = "4. Create Spring Cloud Config Server";
 const o5_Run_ConfigServerOnly_2718 = "5. Run Config Server Only";
-const o6_ConfigClientServices_2718 = "6. Config Client Services";
-const o7_CS_Test2718 = "7. Test";
+const o6_ConfigClientServices_2718 = "6. Config Client Customer-Service";
+const o7_ConfigOrderItemServices_2718 = "7. Config Order/Item Services";
+const o8_CS_Test2718 = "8. Test";
 
 // =============================================================================================================
 
@@ -28,7 +30,8 @@ const anchorList: string[] = [
   o4_Create_CSSpringApp_2718,
   o5_Run_ConfigServerOnly_2718,
   o6_ConfigClientServices_2718,
-  o7_CS_Test2718,
+  o7_ConfigOrderItemServices_2718,
+  o8_CS_Test2718,
 ];
 
 // =============================================================================================================
@@ -88,7 +91,8 @@ const SpringCloudConfig_2_7_18_Main = () => {
       <O4_Create_CSSpringApp_2718 anchor={o4_Create_CSSpringApp_2718} />
       <O5_Run_ConfigServerOnly_2718 anchor={o5_Run_ConfigServerOnly_2718} />
       <O6_ConfigClientServices_2718 anchor={o6_ConfigClientServices_2718} />
-      <O7_CS_Test2718 anchor={o7_CS_Test2718} />
+      <O7_ConfigOrderItemServices_2718 anchor={o7_ConfigOrderItemServices_2718} />
+      <O8_CS_Test2718 anchor={o8_CS_Test2718} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

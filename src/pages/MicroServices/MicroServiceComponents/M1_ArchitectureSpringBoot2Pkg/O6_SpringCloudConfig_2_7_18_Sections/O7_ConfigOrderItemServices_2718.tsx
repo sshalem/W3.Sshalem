@@ -3,13 +3,13 @@ import { ApplicationPropertiesHighlight, JsxHighlight, SpanYellow, XmlHighlight 
 import microservice_25 from "../../../../../assets/microservice_25.jpg";
 import microservice_26 from "../../../../../assets/microservice_26.jpg";
 
-const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
+const O7_ConfigOrderItemServices_2718 = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <p className="text-xl font-semibold">Steps to Config Client Microservices with Cloud Config Server</p>
+        <p className="text-xl font-semibold">Config Order/Item services with Cloud Config Server</p>
         <article className="my-8">
-          Make sure MicServ have following dependencies before adding the <SpanYellow>Spring Cloud config Client</SpanYellow>:
+          Repeat same steps in previous section :
           <ULdisc>
             <Li>WEB dependency (Already added)</Li>
             <Li>Actuator dependency (Already added)</Li>
@@ -105,7 +105,7 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O6_ConfigClientServices_2718;
+export default O7_ConfigOrderItemServices_2718;
 
 const _1_ = `<dependency>
     <groupId>org.springframework.cloud</groupId>
