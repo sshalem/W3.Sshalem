@@ -4,19 +4,23 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_XxxxIntro from "./O1_XxxxIntro";
+import O1_ReadTxtFileContent from "./O1_ReadTxtFileContent";
+import O2_WriteToTxtFile from "./O2_WriteToTxtFile";
+import O3_ListOfFiles from "./O3_ListOfFiles";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_XxxxIntro = "1. XxxxIntro";
+const o1_ReadTxtFileContent = "1. Read txt File Content";
+const o2_WriteToTxtFile = "2. Write To Txt File";
+const o3_ListOfFiles = "3. List of Files in directory";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_XxxxIntro];
+const anchorList: string[] = [o1_ReadTxtFileContent, o2_WriteToTxtFile, o3_ListOfFiles];
 
 // ============================================
 // ============================================
@@ -70,7 +74,9 @@ const FileHandlingMain = () => {
       />
       {/* End Contents */}
 
-      <O1_XxxxIntro anchor={o1_XxxxIntro} />
+      <O1_ReadTxtFileContent anchor={o1_ReadTxtFileContent} />
+      <O2_WriteToTxtFile anchor={o2_WriteToTxtFile} />
+      <O3_ListOfFiles anchor={o3_ListOfFiles} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

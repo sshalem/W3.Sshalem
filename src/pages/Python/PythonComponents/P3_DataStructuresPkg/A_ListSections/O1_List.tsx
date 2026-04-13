@@ -23,6 +23,14 @@ const O1_List = ({ anchor }: { anchor: string }) => {
             Java Equivalent
             <JavaHighlight javaCode={_1_} />
           </Li>
+          <Li>
+            Since I'm coming from Java/Spring background, I can think:
+            <ULdisc>
+              <Li>dict → like HashMap </Li>
+              <Li>list → like ArrayList</Li>
+              <Li>set → like HashSet</Li>
+            </ULdisc>
+          </Li>
         </ULDecimal>
         <div className="my-4 text-lg font-semibold">Key features</div>
         <ULdisc>

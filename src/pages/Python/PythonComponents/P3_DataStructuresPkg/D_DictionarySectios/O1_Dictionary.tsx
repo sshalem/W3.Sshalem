@@ -2,26 +2,38 @@
 
 
 */
-import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { SpanGrey } from "../../../../../components/Highlight";
-import python_13 from "../../../../../assets/python_13.jpg";
-import python_14 from "../../../../../assets/python_14.jpg";
 
 const O1_Dictionary = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="text-lg font-semibold">Create Pure Python project</article>
-        <ULDecimal>
+        <div>
+          <SpanGrey>dictionary</SpanGrey> ? What it is ?
+        </div>
+        <ULdisc>
           <Li>
-            create a new <SpanGrey>Pure Python</SpanGrey> project folder where for Django project/apps will reside
-            <IMG img_name={python_13}></IMG>
+            <SpanGrey>dictionary</SpanGrey> — is a built-in data structure used to store data in key–value pairs
+            <SpanGrey>Python dict = Java Map (especially HashMap)</SpanGrey>
           </Li>
           <Li>
-            Open Terminal and verify we are inside the <SpanGrey>(.venv)</SpanGrey> enviroment.
-            <IMG img_name={python_14}></IMG>
+            Since I'm coming from Java/Spring background, I can think:
+            <ULdisc>
+              <Li>dict → like HashMap </Li>
+              <Li>list → like ArrayList</Li>
+              <Li>set → like HashSet</Li>
+            </ULdisc>
           </Li>
-        </ULDecimal>
+        </ULdisc>
+        <div className="my-4 text-lg font-semibold">📌 Key features</div>
+        <ULdisc>
+          <Li>Stores data as key: value pairs</Li>
+          <Li>Keys must be unique</Li>
+          <Li>Keys are usually strings, numbers, or tuples</Li>
+          <Li>Values can be any data type</Li>
+          <Li>Dictionaries are mutable (you can change them)</Li>
+        </ULdisc>
       </section>
     </MainChildArea>
   );
