@@ -40,7 +40,7 @@ const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
         <article className="my-8 text-xl font-semibold">✅ Append text (keep existing content)</article>
         <ULdisc>
           <Li>
-            This creates file.txt (or overwrites it) with:
+            This creates file.txt (or overwrites it) with: ""
             <PythonHighlight pythonCode={_2_} />
           </Li>
         </ULdisc>
