@@ -1,20 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../components";
-import O2_PortCheck from "./O2_PortCheck";
-import O1_Git from "./O1_Git";
+import O1_PidProcessPortName from "./O1_PidProcessPortName";
+import O2_ProcNameByPID from "./O2_ProcNameByPID";
+import O3_ProcNameByPIDTaskMang from "./O3_ProcNameByPIDTaskMang";
+import O4_KillProcess from "./O4_KillProcess";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_git = "O1_git";
-const o2_port_check = "O2_port_check";
+const o1_PidProcessPortName = "1. Find PID Process by Port Name";
+const o2_ProcNameByPID = "2. Find Process Name By PID number";
+const o3_ProcNameByPIDTaskMang = "3. Find PID in task Manager";
+const o4_KillProcess = "4. Kill Process";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_git, o2_port_check];
+const anchorList: string[] = [o1_PidProcessPortName, o2_ProcNameByPID, o3_ProcNameByPIDTaskMang, o4_KillProcess];
 
 // ============================================
 // ============================================
@@ -67,8 +71,10 @@ const PortCheckMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_Git anchor={o1_git}></O1_Git>
-      <O2_PortCheck anchor={o2_port_check}></O2_PortCheck>
+      <O1_PidProcessPortName anchor={o1_PidProcessPortName} />
+      <O2_ProcNameByPID anchor={o2_ProcNameByPID}></O2_ProcNameByPID>
+      <O3_ProcNameByPIDTaskMang anchor={o3_ProcNameByPIDTaskMang} />
+      <O4_KillProcess anchor={o4_KillProcess} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
