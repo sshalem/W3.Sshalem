@@ -2,7 +2,7 @@
 /devops/react-on-spring#1.reactonspring
 React On Spring--> (DEVOPS)(Netlify)(React On Spring)
 */
-import { MainChildArea } from "../../../../components";
+import { Li, MainChildArea, ULdisc } from "../../../../components";
 import { DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../components/Highlight";
 
 const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
@@ -25,9 +25,35 @@ const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
       </div>
       <DivDoubleBorder>🔧 Fix Spring boot configuration</DivDoubleBorder>
       <div>
-        You can do this by adding a <SpanYellow>controller</SpanYellow> that forwards all unknown paths to <SpanYellow>index.html</SpanYellow>. <br />
-        This controller catches all paths without a period (ignores static files like <SpanYellow>.css</SpanYellow> <SpanYellow>.js</SpanYellow> and
-        forwards them to <strong>index.html</strong>).
+        You can do this by adding
+        <ULdisc>
+          <Li>
+            a <SpanYellow>controller</SpanYellow> that forwards all unknown paths to <SpanYellow>index.html</SpanYellow>.
+          </Li>
+          <Li>
+            This controller catches all paths without a period (ignores static files like <SpanYellow>.css</SpanYellow> <SpanYellow>.js</SpanYellow>
+            and forwards them to <strong>index.html</strong>).
+          </Li>
+          <Li>because Spring MVC already gives them priority over the SPA controller.</Li>
+          <Li>
+            So, If you have <SpanYellow>@RestController</SpanYellow> endpoints like:
+            <JavaHighlight javaCode={_1_} />
+          </Li>
+          <Li>they will NOT be forwarded to index.html, even though your SPA controller is in the code above</Li>
+          <Li>
+            Why? 🧠
+            <ULdisc>
+              <Li>Because Spring MVC request mapping priority works like this</Li>
+              <Li>Exact controller mappings (your REST controllers) 🥇</Li>
+              <Li>Static resources (.js, .css, .png, etc.)</Li>
+              <Li>Catch-all mappings (your SPA forward controller)</Li>
+              <Li>
+                No need to explicitly exclude <SpanYellow>/vrss, /api, /test</SpanYellow> 👍
+              </Li>
+            </ULdisc>
+          </Li>
+        </ULdisc>
+        <br />
       </div>
       <JavaHighlight javaCode={javaCodeController}></JavaHighlight>
       <div>🌍 If using WebSecurity in Spring Security , make sure to permit all routes or exclude them from security</div>
@@ -38,11 +64,10 @@ const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
 export default O1_ReactOnSpring;
 
 const javaCodeController = `@Controller
-public class ForwardController {
+public class SpaForwardController {
 
-      @RequestMapping(value = "/{[path:[^\\\\.]*}")
+    @RequestMapping(value = "/{path:[^\\.]*}")
     public String forward() {
-        // Forward to index.html
         return "forward:/index.html";
     }
 }`;
@@ -55,3 +80,7 @@ protected void configure(HttpSecurity http) throws Exception {
         .and()
             .csrf().disable();
 }`;
+
+const _1_ = `@RequestMapping("/vrss")
+@RequestMapping("/api")
+@RequestMapping("/test")`;
