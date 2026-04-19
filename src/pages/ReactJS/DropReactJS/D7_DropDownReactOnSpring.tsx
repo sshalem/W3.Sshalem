@@ -4,8 +4,7 @@ import { SideDropDownTopic } from "../../../components";
 
 const DropDownReactOnSpring = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  // const [listHeight, setListHeight] = useState<number>();
-  const [, setListHeight] = useState<number>();
+  const [listHeight, setListHeight] = useState<number>();
 
   let location = useLocation();
 
@@ -19,7 +18,7 @@ const DropDownReactOnSpring = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("devops/react-on-spring")) {
+    if (location.pathname.includes("reactJS/react-on-spring")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -39,9 +38,17 @@ const DropDownReactOnSpring = () => {
         enableCaret={false}
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/devops/react-on-spring"
-        topicName="React On Spring"
+        internalLink="/reactJS/react-on-spring"
+        topicName="7. React SPA On Spring"
       />
+
+      <div
+        style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
+        className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
+        ref={divRef}
+      >
+        {/*  */}
+      </div>
     </section>
   );
 };

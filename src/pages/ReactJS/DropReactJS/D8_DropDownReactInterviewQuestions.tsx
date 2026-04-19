@@ -38,7 +38,7 @@ const DropDownReactInterviewQuestions = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/reactJS/reactjs-interview-questions"
-        topicName="7. Reactjs interview questions"
+        topicName="8. Reactjs interview questions"
       />
 
       <div

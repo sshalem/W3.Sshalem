@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import DropDownNetlify from "./DropDevOps/DropDownNetlify";
 import DropDownRender from "./DropDevOps/DropDownRender";
 import DropDownTomcat from "./DropDevOps/DropDownTomcat";
-import DropDownReactOnSpring from "./DropDevOps/DropDownReactOnSpring";
 import DropDownLinux from "./DropDevOps/DropDownLinux";
 import DropDownGit from "./DropDevOps/DropDownGit";
 import DropDownNginx from "./DropDevOps/DropDownNginx";
@@ -44,7 +43,6 @@ const DevOps_page = () => {
         <AsideWrapperLayout>
           <SideBarLink pageName="DevOps Home" internalLink="/devops" />
           <DropDownGit />
-          <DropDownReactOnSpring />
           <DropDownDocker />
           <DropDownNetlify />
           <DropDownRender />

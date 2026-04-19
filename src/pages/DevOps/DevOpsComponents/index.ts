@@ -2,7 +2,6 @@ export { default as DevOpsHome } from "./DevOpsHome";
 export { default as Linux_Server } from "./D_LinuxPkg/Linux_Server";
 export { default as CreateServerMain } from "./D_LinuxPkg/A_CreateServerSections/CreateServerMain";
 export { default as ConnectToServerSshMain } from "./D_LinuxPkg/B_ConnectServerSshSections/ConnectToServerSshMain";
-export { default as ReactOnSpringMain } from "./D_ReactOnSpringPkg/ReactOnSpringMain";
 export { default as SetupServerMain } from "./D_LinuxPkg/D_SetupServerSections/SetupServerMain";
 export { default as JdkInstallMain } from "./D_LinuxPkg/E_JdkInstallSections/JdkInstallMain";
 export { default as TomcatInstallMain } from "./D_TomcatPkg/A_TomcatInstallSections/TomcatInstallMain";

@@ -78,6 +78,7 @@ import {
   ReactBasics,
   ReactJSHome,
   ReactJSInterviewQuestions,
+  ReactOnSpringMain,
   ReactRouter,
   RouterMain,
   SetupMain,
@@ -98,7 +99,6 @@ import {
   JenkinsMain,
   Linux_Server,
   MySqlnstallMain,
-  ReactOnSpringMain,
   SetupServerMain,
   TomcatInstallMain,
   Tomcat,
@@ -255,7 +255,7 @@ import {
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
-import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R7_ReactJSInterviewQuestionsPkg";
+import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R8_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 import { AllegriaMain, LoveAndLiberteMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
 import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
@@ -860,6 +860,7 @@ const router = createBrowserRouter(
                 { path: "memory-search", element: <MemorySearchMain /> },
               ],
             },
+            { path: "react-on-spring", element: <ReactOnSpringMain /> },
             {
               path: "reactjs-interview-questions",
               element: <ReactJSInterviewQuestions />,
@@ -920,7 +921,6 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <DevOpsHome /> },
             { path: "git", element: <GitMain /> },
-            { path: "react-on-spring", element: <ReactOnSpringMain /> },
             { path: "docker", element: <DockerMain /> },
             { path: "netlify", element: <DeployNetlifyMain /> },
             { path: "render", element: <DeployRenderMain /> },
