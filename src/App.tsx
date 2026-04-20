@@ -305,6 +305,7 @@ import {
   FastAPIException,
   FastAPIHome,
   FastAPIIde,
+  FastApiInstall,
   FastAPILogging,
   FastAPIRouter,
   FastAPISecurity,
@@ -765,6 +766,7 @@ const router = createBrowserRouter(
           element: <FastAPI_page />,
           children: [
             { index: true, element: <FastAPIHome /> },
+            { path: "install", element: <FastApiInstall /> },
             { path: "ide", element: <FastAPIIde /> },
             {
               path: "database-env-profiles",

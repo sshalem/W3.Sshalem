@@ -15,6 +15,7 @@ import D5_DropDownFastApiSQLAlchemy from "./DropFastAPI/D5_DropDownFastApiSQLAlc
 import D6_DropDownFastApiAuditing from "./DropFastAPI/D6_DropDownFastApiAuditing";
 import D7_DropDownFastApiSecurity from "./DropFastAPI/D7_DropDownFastApiSecurity";
 import D8_DropDownFastApiCaching from "./DropFastAPI/D8_DropDownFastApiCaching";
+import D1_1_DropDownFastApiInstall from "./DropFastAPI/D1_1_DropDownFastApiInstall";
 
 const FastAPI_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -45,6 +46,7 @@ const FastAPI_page = () => {
         <AsideWrapperLayout>
           <SideBarLink pageName="FastAPI Home" internalLink="/fastapi" />
           <D0_DropDownFastAPIIde />
+          <D1_1_DropDownFastApiInstall />
           <D1_DropDownFastApiConfigEnvProfiles />
           <D2_DropDownFastApiLogging />
           <D3_DropDownFastApiRouter />
