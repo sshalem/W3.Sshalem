@@ -16,3 +16,4 @@ export { default as SpanGrey } from "./SpanGrey";
 export { default as SpanYellow } from "./SpanYellow";
 
 export { default as DivDoubleBorder } from "./DivDoubleBorder";
+export { default as Redtext } from "./Redtext";
