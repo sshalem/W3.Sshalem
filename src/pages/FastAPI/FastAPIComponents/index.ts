@@ -1,5 +1,5 @@
 export { default as FastAPIHome } from "./FastAPIHome";
-export { default as FastApiInstall } from "./F_FastAPIInstallPkg/FastApiInstall";
+export { default as FastApiInstallMain } from "./F_FastAPIInstallPkg/FastApiInstallMain";
 export { default as FastAPIIde } from "./F0_FastAPIIdePkg/FastAPIIde";
 export { default as FastApiConfigurationProfilesEnv } from "./F1_FastAPIDatabaseProfilesEnvPkg/FastApiConfigurationProfilesEnv";
 export { default as FastAPILogging } from "./F2_FastAPILoggingPkg/FastAPILogging";
