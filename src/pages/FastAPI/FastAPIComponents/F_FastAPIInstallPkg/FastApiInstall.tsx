@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import { ContentMenu, Loading } from "../../../../components";
 import O1_CreatePythonProject from "./O1_CreatePythonProject";
 import O2_InstallFastAPI from "./O2_InstallFastAPI";
 import O3_RequirementsFile from "./O3_RequirementsFile";
 import O4_BasicApiSetup from "./O4_BasicApiSetup";
 import O5_HowToRunFastApi from "./O5_HowToRunFastApi";
 import O6_GitConfig from "./O6_GitConfig";
-import { ContentMenu, Loading } from "../../../../components";
 
 // ===========================================
 // ==     content menu (title name)         ==
