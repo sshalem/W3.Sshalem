@@ -767,7 +767,14 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <FastAPIHome /> },
             { path: "install", element: <FastApiInstallMain /> },
-            { path: "ide", element: <FastAPIIde /> },
+            {
+              path: "ide",
+              element: <FastAPIIde />,
+              children: [
+                { path: "pycharm", element: <PyCharmMain /> },
+                { path: "vscode", element: <VsCodeMain /> },
+              ],
+            },
             {
               path: "database-env-profiles",
               element: <FastApiConfigurationProfilesEnv />,
