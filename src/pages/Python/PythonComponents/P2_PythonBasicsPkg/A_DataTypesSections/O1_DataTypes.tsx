@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
-import { Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Redtext } from "../../../../../components/Highlight";
 
 const O1_DataTypes = ({ anchor }: { anchor: string }) => {
   return (
@@ -7,61 +8,72 @@ const O1_DataTypes = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4">Data Types in Python</article>
         <div className="flex">
-          <p className="w-64">1. Numeric types :</p>
-          <p className="w-64">
+          <p className="w-48">1. Numeric types :</p>
+          <p className="w-auto">
             <Redtext>int</Redtext> , <Redtext>float</Redtext> , <Redtext>complex</Redtext>
           </p>
         </div>
 
         <div className="flex">
-          <p className="w-64">2. Text type :</p>
-          <p className="w-64">
+          <p className="w-48">2. Text type :</p>
+          <p className="w-auto">
             <Redtext>str</Redtext>
           </p>
         </div>
 
         <div className="flex">
-          <p className="w-64">3. Boolean type :</p>
-          <p className="w-64">
+          <p className="w-48">3. Boolean type :</p>
+          <p className="w-auto">
             <Redtext>bool</Redtext>
           </p>
         </div>
 
         <div className="flex">
-          <p className="w-64">4. Sequence types :</p>
-          <p className="w-64">
-            <Redtext>list</Redtext> , <Redtext>tuple</Redtext> ,
-          </p>
-        </div>
-        <p className="ml-8">
-          <SpanYellow>range</SpanYellow> is part of Sequence type I will explain it here
-        </p>
-
-        <div className="flex">
-          <p className="w-64">5. Mapping type :</p>
-          <p className="w-64">
-            <Redtext>dict</Redtext>
+          <p className="w-48">4. Sequence type</p>
+          <p className="w-auto">
+            <Redtext>range</Redtext>
           </p>
         </div>
 
         <div className="flex">
-          <p className="w-64">6. Set types :</p>
-          <p className="w-64">
-            <Redtext>set</Redtext> , <Redtext>frozenset</Redtext>
-          </p>
-        </div>
-
-        <div className="flex">
-          <p className="w-64">7. Binary types :</p>
-          <p className="w-72">
+          <p className="w-48">5. Binary types :</p>
+          <p className="w-auto">
             <Redtext>bytes</Redtext> , <Redtext>bytearray</Redtext> , <Redtext>memoryview</Redtext>
           </p>
         </div>
 
         <div className="flex">
-          <p className="w-64">8. None types :</p>
-          <p className="w-64">
+          <p className="w-48">6. None types :</p>
+          <p className="w-auto">
             <Redtext>NoneType</Redtext>
+          </p>
+        </div>
+
+        <article className="my-8">
+          The other Data Types in Python explained in Section
+          <Link to={"/python/data-structure"} className="mx-2 text-blue-500 underline">
+            Data Structure
+          </Link>
+        </article>
+
+        <div className="flex">
+          <p className="w-48">7. Sequence types :</p>
+          <p className="w-auto">
+            <Redtext>list</Redtext> , <Redtext>tuple</Redtext>
+          </p>
+        </div>
+
+        <div className="flex">
+          <p className="w-48">8. Mapping type :</p>
+          <p className="w-auto">
+            <Redtext>dict</Redtext>
+          </p>
+        </div>
+
+        <div className="flex">
+          <p className="w-48">9. Set types :</p>
+          <p className="w-auto">
+            <Redtext>set</Redtext> , <Redtext>frozenset</Redtext>
           </p>
         </div>
       </section>
