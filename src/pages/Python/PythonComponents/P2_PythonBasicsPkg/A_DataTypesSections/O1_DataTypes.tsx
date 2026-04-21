@@ -31,7 +31,10 @@ const O1_DataTypes = ({ anchor }: { anchor: string }) => {
         <div className="flex">
           <p className="w-48">4. Sequence type</p>
           <p className="w-auto">
-            <Redtext>range</Redtext>
+            <Redtext>range</Redtext> see In Section
+            <Link to={"/python/python-basics/loops#1.range()"} className="mx-2 text-blue-500 underline">
+              range()
+            </Link>
           </p>
         </div>
 

@@ -5,44 +5,44 @@ const O5_TextStr = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <SpanYellow>Numeric Types</SpanYellow> Used to store numbers.
-        <article className="my-8">
-          <p className="my-4 text-2xl">🔍 int</p>
-          <p>
-            Int (or integer), is a whole number, <SpanYellow>positive</SpanYellow> or <SpanYellow>negative</SpanYellow>, without decimals, of
-            unlimited length.
-          </p>
+        <SpanYellow>Strings</SpanYellow> in python are surrounded by either
+        <ULdisc>
+          <Li>
+            <Redtext>single</Redtext> quotation marks
+          </Li>
+          <Li>
+            or <Redtext>double</Redtext> quotation marks
+          </Li>
+          <Li>
+            <Redtext>'hello'</Redtext> is the same as <Redtext>"hello"</Redtext>
+          </Li>
           <PythonHighlight pythonCode={_1_} />
-        </article>
-        {/*  */}
+        </ULdisc>
         <article className="my-8">
-          <p className="my-4 text-2xl">🔍 Float</p>
-          <ULdisc>
-            <Li>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</Li>
-            <Li>Float can also be scientific numbers with an "e" to indicate the power of 10.</Li>
-          </ULdisc>
+          <p className="my-4 text-2xl">🔍 Quotes Inside Quotes</p>
+          <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
           <PythonHighlight pythonCode={_2_} />
         </article>
         {/*  */}
         <article className="my-8">
-          <p className="my-4 text-2xl">🔍 Complex</p>
+          <p className="my-4 text-2xl">🔍 F-String</p>
           <ULdisc>
-            <Li>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</Li>
-            <Li>Float can also be scientific numbers with an "e" to indicate the power of 10.</Li>
-          </ULdisc>
-          <PythonHighlight pythonCode={_3_} />
-        </article>
-        {/*  */}
-        <article className="my-8">
-          <p className="my-4 text-2xl">🔍 Type Conversion</p>
-          <ULdisc>
+            <Li>we cannot combine strings and numbers like this, we can only concatanate str with str</Li>
             <Li>
-              We can convert from one type to another with the <Redtext>int()</Redtext>, <Redtext>float()</Redtext>, and <Redtext>complex()</Redtext>
-              methods:
+              But we can combine strings and numbers by using <SpanYellow>f-strings</SpanYellow> or the <Redtext>format()</Redtext> method!
+              <PythonHighlight pythonCode={_3_} />
+            </Li>
+            <Li>
+              <SpanYellow>f-strings</SpanYellow> was introduced in <Redtext>Python 3.6</Redtext>, and is now the preferred way of formatting strings.
+            </Li>
+            <Li>
+              To specify a string as an <SpanYellow>f-string</SpanYellow>, simply put an <Redtext>f</Redtext> in front of the string literal, and add
+              curly brackets <Redtext>{}</Redtext> as placeholders for variables and other operations.
+              <PythonHighlight pythonCode={_4_} />
             </Li>
           </ULdisc>
-          <PythonHighlight pythonCode={_4_} />
         </article>
+        {/*  */}
       </section>
     </MainChildArea>
   );
@@ -50,53 +50,27 @@ const O5_TextStr = ({ anchor }: { anchor: string }) => {
 
 export default O5_TextStr;
 
-const _1_ = `x = 1
-y = 35656222554887711
-z = -3255522
+const _1_ = `print("Hello")
+print('Hello')`;
 
-print(type(x))
-print(type(y))
-print(type(z))`;
+const _2_ = `print("It's alright")
+print("He is called 'Johnny'")
+print('He is called "Johnny"')`;
 
-const _2_ = `u = 1.10
-v = 1.0
-w = -35.59
-x = 35e3
-y = 12E4
-z = -87.7e100
+const _3_ = `age = 36
+# This will produce an error:
+# because age is int , and cannot be concatenated with str
+txt = "My name is John, I am " + age
+print(txt)`;
 
-print(type(u))
-print(type(v))
-print(type(w))
-print(type(x))
-print(type(y))
-print(type(z))`;
+const _4_ = `age = 36
+txt1 = f"My name is John, I am {age}"
 
-const _3_ = `x = 3+5j
-y = 5j
-z = -5j
+price = 59
+txt2 = f"The price is {price} dollars"
 
-print(type(x))
-print(type(y))
-print(type(z))`;
+price = 59
+txt3 = f"The price is {price:.2f} dollars"
 
-const _4_ = `x = 1    # int
-y = 2.8  # float
-z = 1j   # complex
-
-#convert from int to float:
-a = float(x)
-
-#convert from float to int:
-b = int(y)
-
-#convert from int to complex:
-c = complex(x)
-
-print(a)
-print(b)
-print(c)
-
-print(type(a))
-print(type(b))
-print(type(c))`;
+txt4 = f"The price is {20 * 59} dollars"
+print()`;

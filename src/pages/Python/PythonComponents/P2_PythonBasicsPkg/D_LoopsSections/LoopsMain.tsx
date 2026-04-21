@@ -10,11 +10,13 @@ import O3_ElseInForLoop from "./O3_ElseInForLoop";
 import O4_ContinueBreakInFor from "./O4_ContinueBreakInFor";
 import O5_NestedForLoop from "./O5_NestedForLoop";
 import O6_IterateList from "./O6_IterateList";
+import O0_Range from "./O0_Range";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
+const o0_Range = "range()";
 const o1_Loop = "1. Loop";
 const o2_LoopPrintInSameLine = "2. Loop Print In Same Line";
 const o3_ElseInForLoop = "3. Else In For Loop";
@@ -25,7 +27,7 @@ const o6_IterateList = "6. Iterate List";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Loop, o2_LoopPrintInSameLine, o3_ElseInForLoop, o4_ContinueBreakInFor, o5_NestedForLoop, o6_IterateList];
+const anchorList: string[] = [o0_Range, o1_Loop, o2_LoopPrintInSameLine, o3_ElseInForLoop, o4_ContinueBreakInFor, o5_NestedForLoop, o6_IterateList];
 
 // ============================================
 // ============================================
@@ -79,6 +81,7 @@ const LoopsMain = () => {
       />
       {/* End Contents */}
 
+      <O0_Range anchor={o0_Range} />
       <O1_Loop anchor={o1_Loop} />
       <O2_LoopPrintInSameLine anchor={o2_LoopPrintInSameLine} />
       <O3_ElseInForLoop anchor={o3_ElseInForLoop} />
