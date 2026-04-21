@@ -3,19 +3,25 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanGrey } from "../../../../../components/Highlight";
 
 const O1_Loop = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <article className="my-4 text-lg font-semibold">range()</article>
+        <article className="my-4 text-lg font-semibold">for loop</article>
+
         <ULdisc>
           <Li>
-            <SpanGrey>range()</SpanGrey> - the <SpanGrey>range()</SpanGrey> function returns a sequence of numbers, starting from 0 by default, and
-            increments by 1 (by default), and ends at a specified number.
+            A for loop is used for iterating over a sequence ,that is either a :
+            <ULdisc>
+              <Li>list</Li>
+              <Li>tuple</Li>
+              <Li>dictionary</Li>
+              <Li>set</Li>
+              <Li>string</Li>
+            </ULdisc>
           </Li>
-          <Li>we use range() To loop through a set of code a specified number of times .</Li>
+          <Li>The for loop does not require an indexing variable to set beforehand.</Li>
         </ULdisc>
       </section>
     </MainChildArea>

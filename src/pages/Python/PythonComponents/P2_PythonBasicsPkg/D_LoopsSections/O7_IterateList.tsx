@@ -5,7 +5,7 @@
 import { MainChildArea } from "../../../../../components";
 import { PythonHighlight } from "../../../../../components/Highlight";
 
-const O6_IterateList = ({ anchor }: { anchor: string }) => {
+const O7_IterateList = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -20,7 +20,7 @@ const O6_IterateList = ({ anchor }: { anchor: string }) => {
     </MainChildArea>
   );
 };
-export default O6_IterateList;
+export default O7_IterateList;
 
 const _1_ = `my_list = [10, 50, "shabtay", "odel"]
 
