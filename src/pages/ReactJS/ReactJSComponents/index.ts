@@ -8,7 +8,8 @@ export { default as PropsMain } from "./R3_TypeScriptPkg/PassingPropsSections/Pr
 export { default as ReactRouter } from "./R4_RouterPkg/Router";
 export { default as RouterMain } from "./R4_RouterPkg/RouterInstallSections/RouterMain";
 export { default as Pagination } from "./R5_PaginationPkg/Pagination";
-export { default as MemorySearchMain } from "./R6_GlobalSearchPkg/A_MemorySearchSections/MemorySearchMain";
-export { default as GlobalSearch } from "./R6_GlobalSearchPkg/GlobalSearch";
-export { default as ReactJSInterviewQuestions } from "./R8_ReactJSInterviewQuestionsPkg/ReactJSInterviewQuestions";
+export { default as Axios } from "./R6_AxiosPkg/Axios";
+export { default as MemorySearchMain } from "./R8_GlobalSearchPkg/A_MemorySearchSections/MemorySearchMain";
+export { default as GlobalSearch } from "./R8_GlobalSearchPkg/GlobalSearch";
+export { default as ReactJSInterviewQuestions } from "./R9_ReactJSInterviewQuestionsPkg/ReactJSInterviewQuestions";
 export { default as ReactOnSpringMain } from "./R7_ReactOnSpringPkg/ReactOnSpringMain";

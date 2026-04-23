@@ -11,9 +11,10 @@ import DropDownRouter from "./DropReactJS/D4_DropDownRouter";
 import DropDownTypeScript from "./DropReactJS/D3_DropDownTypeScript";
 import DropDownSetup from "./DropReactJS/D1_DropDownSetup";
 import DropDownPagination from "./DropReactJS/D5_DropDownPagination";
-import DropDownSearch from "./DropReactJS/D6_DropDownSearch";
+import DropDownAxios from "./DropReactJS/D6_DropDownAxios";
 import DropDownReactOnSpring from "./DropReactJS/D7_DropDownReactOnSpring";
-import DropDownReactInterviewQuestions from "./DropReactJS/D8_DropDownReactInterviewQuestions";
+import DropDownSearch from "./DropReactJS/D8_DropDownSearch";
+import DropDownReactInterviewQuestions from "./DropReactJS/D9_DropDownReactInterviewQuestions";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -48,8 +49,9 @@ const ReactJS_page = () => {
           <DropDownTypeScript />
           <DropDownRouter />
           <DropDownPagination />
-          <DropDownSearch />
+          <DropDownAxios />
           <DropDownReactOnSpring />
+          <DropDownSearch />
           <DropDownReactInterviewQuestions />
         </AsideWrapperLayout>
       )}

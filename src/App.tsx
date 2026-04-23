@@ -69,6 +69,7 @@ import {
 import { CppHome, CppBasics, FunctionsMain, TestMain } from "./pages/Cpp/CppComponents";
 
 import {
+  Axios,
   GlobalSearch,
   IntroMain,
   JsxMain,
@@ -255,7 +256,7 @@ import {
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
-import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R8_ReactJSInterviewQuestionsPkg";
+import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R9_ReactJSInterviewQuestionsPkg";
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 import { AllegriaMain, LoveAndLiberteMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
 import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
@@ -356,6 +357,7 @@ import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsP
 import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
 import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
 import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
+import { AxiosInstallMain, AxiosInstanceMain } from "./pages/ReactJS/ReactJSComponents/R6_AxiosPkg";
 
 const router = createBrowserRouter(
   [
@@ -862,6 +864,15 @@ const router = createBrowserRouter(
             },
             { path: "pagination", element: <Pagination /> },
             {
+              path: "axios",
+              element: <Axios />,
+              children: [
+                { path: "axios-install", element: <AxiosInstallMain /> },
+                { path: "create-instance", element: <AxiosInstanceMain /> },
+              ],
+            },
+            { path: "react-on-spring", element: <ReactOnSpringMain /> },
+            {
               path: "global-search",
               element: <GlobalSearch />,
               children: [
@@ -869,7 +880,6 @@ const router = createBrowserRouter(
                 { path: "memory-search", element: <MemorySearchMain /> },
               ],
             },
-            { path: "react-on-spring", element: <ReactOnSpringMain /> },
             {
               path: "reactjs-interview-questions",
               element: <ReactJSInterviewQuestions />,
