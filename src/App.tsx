@@ -86,7 +86,14 @@ import {
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
-import { JavaScriptBasics, JavaScriptHome, JsArrayMain } from "./pages/JavaScript/JavaScriptComponents";
+import {
+  FetchApi,
+  FetchApiMain,
+  JavaScriptBasics,
+  JavaScriptHome,
+  JsArrayMain,
+  PromiseAsyncAwaitMain,
+} from "./pages/JavaScript/JavaScriptComponents";
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
@@ -893,6 +900,14 @@ const router = createBrowserRouter(
           children: [
             { index: true, element: <JavaScriptHome /> },
             { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
+            {
+              path: "fetch-api",
+              element: <FetchApi />,
+              children: [
+                { path: "intro", element: <FetchApiMain /> },
+                { path: "promise-async-await", element: <PromiseAsyncAwaitMain /> },
+              ],
+            },
           ],
         },
         {

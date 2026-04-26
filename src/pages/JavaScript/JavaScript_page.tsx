@@ -7,6 +7,7 @@ import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownJavaScriptBasics from "./DropJavaScript/DropDownJavaScriptBasics";
+import DropDownJavaScriptFetchApi from "./DropJavaScript/DropDownJavaScriptFetchApi";
 
 const JavaScript_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -37,6 +38,7 @@ const JavaScript_page = () => {
         <AsideWrapperLayout>
           <SideBarLink pageName="JavaScript Home" internalLink="/javascript" />
           <DropDownJavaScriptBasics />
+          <DropDownJavaScriptFetchApi />
         </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
