@@ -5,18 +5,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_IfElseIntro from "./O1_IfElseIntro";
+import O2_IfStatement from "./O2_IfStatement";
+import O3_elifStatement from "./O3_elifStatement";
+import O4_elseStatement from "./O4_elseStatement";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IfElseIntro = "1. If else intro";
+const o1_IfElseIntro = "1. intro";
+const o2_IfStatement = "2. if ";
+const o3_elifStatement = "3. elif";
+const o4_elseStatement = "4. else";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IfElseIntro];
+const anchorList: string[] = [o1_IfElseIntro, o2_IfStatement, o3_elifStatement, o4_elseStatement];
 
 // ============================================
 // ============================================
@@ -71,6 +77,9 @@ const IfElseMain = () => {
       {/* End Contents */}
 
       <O1_IfElseIntro anchor={o1_IfElseIntro} />
+      <O2_IfStatement anchor={o2_IfStatement} />
+      <O3_elifStatement anchor={o3_elifStatement} />
+      <O4_elseStatement anchor={o4_elseStatement} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
