@@ -4,19 +4,21 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_XxxxIntro from "./O1_XxxxIntro";
+import O1_ModulesPackageIntro from "./O1_ModulesPackageIntro";
+import O2_InitPyFile from "./O2_InitPyFile";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_XxxxIntro = "1. XxxxIntro";
+const o1_ModulesPackageIntro = "1. Module/Package";
+const o2_InitPyFile = "2. __init.py__";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_XxxxIntro];
+const anchorList: string[] = [o1_ModulesPackageIntro, o2_InitPyFile];
 
 // ============================================
 // ============================================
@@ -70,7 +72,8 @@ const ModulesPackagingMain = () => {
       />
       {/* End Contents */}
 
-      <O1_XxxxIntro anchor={o1_XxxxIntro} />
+      <O1_ModulesPackageIntro anchor={o1_ModulesPackageIntro} />
+      <O2_InitPyFile anchor={o2_InitPyFile} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
