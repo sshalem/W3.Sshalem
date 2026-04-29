@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { SpanYellow } from "../../../../../components/Highlight";
 
 const O1_TracingZipkinSleuth2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -31,21 +32,13 @@ const O1_TracingZipkinSleuth2718 = ({ anchor }: { anchor: string }) => {
                 <Li>Java App , makes vizualization by using a Dashboard.</Li>
                 <Li>collects and visualizes traces</Li>
                 <Li>
-                  need to dowload the executable JAR file from{" "}
-                  <a className="text-blue-500" href="https://zipkin.io/" target="_blank">
-                    https://zipkin.io/
-                  </a>
-                  &nbsp; but server return 500
-                </Li>
-                <Li>
-                  chatGPT gave this MAVEN repo to download the latest <SpanYellow>Zipkin server</SpanYellow>
-                  <a className="text-blue-500" href="https://repo1.maven.org/maven2/io/zipkin/zipkin-server/" target="_blank">
-                    https://repo1.maven.org/maven2/io/zipkin/zipkin-server/
-                  </a>
-                </Li>
-                <Li>
-                  run it as
-                  <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                  see section 4 how to{" "}
+                  <Link
+                    to={"/microservices/architecture-springboot-2-7-18/zipkin-sleuth#4.DownloadZipkinServer"}
+                    className="tracking-wider text-blue-500 underline"
+                  >
+                    download Zipkin server and run Zipkin server
+                  </Link>{" "}
                 </Li>
               </ULdisc>
             </Li>
@@ -58,5 +51,3 @@ const O1_TracingZipkinSleuth2718 = ({ anchor }: { anchor: string }) => {
 };
 
 export default O1_TracingZipkinSleuth2718;
-
-const _1_ = `java -jar zipkin-server-2.23.16-exec.jar`;
