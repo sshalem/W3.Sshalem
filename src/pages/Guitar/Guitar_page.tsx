@@ -10,6 +10,7 @@ import D1_DropDownGuitarGeneral from "./DropGuitar/D1_DropDownGuitarGeneral";
 import D2_DropDownGipsyKings from "./DropGuitar/D2_DropDownGipsyKings";
 import D3_DropDownFlamenco from "./DropGuitar/D3_DropDownFlamenco";
 import D4_DropDownAntonGlushkin from "./DropGuitar/D4_DropDownAntonGlushkin";
+import D0_DropDownChords from "./DropGuitar/D0_DropDownChords";
 
 const Guitar_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -39,6 +40,7 @@ const Guitar_page = () => {
       {showSidebar && (
         <AsideWrapperLayout>
           <SideBarLink pageName="Guitar Home" internalLink="/guitar" />
+          <D0_DropDownChords />
           <D1_DropDownGuitarGeneral />
           <D2_DropDownGipsyKings />
           <D3_DropDownFlamenco />

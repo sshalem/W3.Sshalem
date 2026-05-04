@@ -365,6 +365,7 @@ import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponent
 import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
 import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
 import { AxiosInstallMain, AxiosInstanceMain } from "./pages/ReactJS/ReactJSComponents/R6_AxiosPkg";
+import ChordsMain from "./pages/Guitar/GuitarComponents/G0_ChordsPkg/ChordsMain";
 
 const router = createBrowserRouter(
   [
@@ -997,6 +998,11 @@ const router = createBrowserRouter(
           element: <Guitar_page />,
           children: [
             { index: true, element: <GuitarHome /> },
+            {
+              path: "chords",
+              element: <ChordsMain />,
+            },
+
             {
               path: "general",
               element: <GeneralMain />,
