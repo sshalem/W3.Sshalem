@@ -6,7 +6,9 @@ export { default as IntroMain } from "./R3_TypeScriptPkg/IntroSections/IntroMain
 export { default as TypeScript } from "./R3_TypeScriptPkg/TypeScript";
 export { default as PropsMain } from "./R3_TypeScriptPkg/PassingPropsSections/PropsMain";
 export { default as ReactRouter } from "./R4_RouterPkg/Router";
-export { default as RouterMain } from "./R4_RouterPkg/RouterInstallSections/RouterMain";
+export { default as InstallRouterMain } from "./R4_RouterPkg/A_RouterInstallSections/InstallRouterMain";
+export { default as CreateRouterMain } from "./R4_RouterPkg/B_CreateRouterStepsSections/CreateRouterMain";
+
 export { default as Pagination } from "./R5_PaginationPkg/Pagination";
 export { default as Axios } from "./R6_AxiosPkg/Axios";
 export { default as MemorySearchMain } from "./R8_GlobalSearchPkg/A_MemorySearchSections/MemorySearchMain";

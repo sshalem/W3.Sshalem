@@ -81,9 +81,10 @@ import {
   ReactJSInterviewQuestions,
   ReactOnSpringMain,
   ReactRouter,
-  RouterMain,
+  InstallRouterMain,
   SetupMain,
   TypeScript,
+  CreateRouterMain,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import {
@@ -866,8 +867,8 @@ const router = createBrowserRouter(
               path: "router",
               element: <ReactRouter />,
               children: [
-                { path: "install", element: <RouterMain /> },
-                { path: "install", element: <RouterMain /> },
+                { path: "install", element: <InstallRouterMain /> },
+                { path: "create-router", element: <CreateRouterMain /> },
               ],
             },
             { path: "pagination", element: <Pagination /> },

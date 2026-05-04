@@ -42,6 +42,7 @@ const DropDownRouter = () => {
         ref={divRef}
       >
         <SideDropdownLink sideDropDownNavName="Install Router" internalLink="/reactJS/router/install" />
+        <SideDropdownLink sideDropDownNavName="Create Router" internalLink="/reactJS/router/create-router" />
       </div>
     </section>
   );
