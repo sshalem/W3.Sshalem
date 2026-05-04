@@ -103,6 +103,7 @@ const MainLayout = () => {
     <div>
       <h1>MainLayout</h1>
       <Navbar />
+       {/* Outlet will display a child Element according the Link on the nav */}
       <Outlet />
     </div>
   );

@@ -83,12 +83,14 @@ export default Router;
 
 const _1_ = `import { createBrowserRouter, RouterProvider, Outlet, Link } from "react-router-dom";
 
-function Layout() {
+function MainLayout() {
   return (
     <div>
       <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        <Link to="/">Home</Link> 
+        <Link to="/about">About</Link>
       </nav>
+      {/* Outlet will display a child Element according the Link on the nav */}
       <Outlet />
     </div>
   );
@@ -97,22 +99,21 @@ function Layout() {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <MainLayout />,
     children: [
-      {
-        index: true,
-        element: <h1>Home</h1>,
-      },
-      {
-        path: "about",
-        element: <h1>About</h1>,
-      },
+      { index: true, element: <h1>Home</h1> },
+      { path: "about", element: <h1>About</h1> },
     ],
   },
 ]);
 
+
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
+    </div>
+  );
 }
 
 export default App;`;
