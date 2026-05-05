@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SideDropDownTopic } from "../../../components";
+import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const DropDownSetup = () => {
+const D1_DropDownProjectSetup = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const DropDownSetup = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("reactJS/setup")) {
+    if (location.pathname.includes("reactJS/project-setup")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -34,21 +34,19 @@ const DropDownSetup = () => {
 
   return (
     <section>
-      <SideDropDownTopic
-        enableCaret={false}
-        showList={showList}
-        handleOpenList={handleOpenList}
-        internalLink="/reactJS/setup"
-        topicName="Setup Project"
-      />
-
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/reactJS/project-setup" topicName="1. Project Setup" />
+      {/*  */}
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
-      ></div>
+      >
+        <SideDropdownLink sideDropDownNavName="1. Create VITE project" internalLink="/reactJS/project-setup/vite-create" />
+        <SideDropdownLink sideDropDownNavName="2. Favicon" internalLink="/reactJS/project-setup/favicon" />
+        <SideDropdownLink sideDropDownNavName="2. React Icons" internalLink="/reactJS/project-setup/reacticons" />
+      </div>
     </section>
   );
 };
 
-export default DropDownSetup;
+export default D1_DropDownProjectSetup;

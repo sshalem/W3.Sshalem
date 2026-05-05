@@ -85,6 +85,10 @@ import {
   SetupMain,
   TypeScript,
   CreateRouterMain,
+  ProjectSetup,
+  CreateViteMain,
+  FaviconMain,
+  ReactIconsMain,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import {
@@ -846,6 +850,15 @@ const router = createBrowserRouter(
           element: <ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
+            {
+              path: "project-setup",
+              element: <ProjectSetup />,
+              children: [
+                { path: "vite-create", element: <CreateViteMain /> },
+                { path: "favicon", element: <FaviconMain /> },
+                { path: "reacticons", element: <ReactIconsMain /> },
+              ],
+            },
             { path: "setup", element: <SetupMain /> },
             {
               path: "basics",

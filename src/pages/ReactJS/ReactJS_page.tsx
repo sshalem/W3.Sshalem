@@ -15,6 +15,7 @@ import DropDownAxios from "./DropReactJS/D6_DropDownAxios";
 import DropDownReactOnSpring from "./DropReactJS/D7_DropDownReactOnSpring";
 import DropDownSearch from "./DropReactJS/D8_DropDownSearch";
 import DropDownReactInterviewQuestions from "./DropReactJS/D9_DropDownReactInterviewQuestions";
+import D1_DropDownProjectSetup from "./DropReactJS/D1_DropDownProjectSetup";
 
 const ReactJS_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -45,6 +46,7 @@ const ReactJS_page = () => {
         <AsideWrapperLayout>
           <SideBarLink pageName="ReactJS Home" internalLink="/reactJS" />
           <DropDownSetup />
+          <D1_DropDownProjectSetup />
           <DropDownBasics />
           <DropDownTypeScript />
           <DropDownRouter />

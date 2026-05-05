@@ -15,3 +15,9 @@ export { default as MemorySearchMain } from "./R8_GlobalSearchPkg/A_MemorySearch
 export { default as GlobalSearch } from "./R8_GlobalSearchPkg/GlobalSearch";
 export { default as ReactJSInterviewQuestions } from "./R9_ReactJSInterviewQuestionsPkg/ReactJSInterviewQuestions";
 export { default as ReactOnSpringMain } from "./R7_ReactOnSpringPkg/ReactOnSpringMain";
+
+export { default as ProjectSetup } from "./R1_ProjectSetupPkg/ProjectSetup";
+
+export { default as CreateViteMain } from "./R1_ProjectSetupPkg/A_CreateViteSections/CreateViteMain";
+export { default as FaviconMain } from "./R1_ProjectSetupPkg/B_FaviconSections/FaviconMain";
+export { default as ReactIconsMain } from "./R1_ProjectSetupPkg/C_ReactIconsSections/ReactIconsMain";
