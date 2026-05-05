@@ -89,6 +89,8 @@ import {
   CreateViteMain,
   FaviconMain,
   ReactIconsMain,
+  TailwindcssMain,
+  StorageMain,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import {
@@ -857,6 +859,7 @@ const router = createBrowserRouter(
                 { path: "vite-create", element: <CreateViteMain /> },
                 { path: "favicon", element: <FaviconMain /> },
                 { path: "reacticons", element: <ReactIconsMain /> },
+                { path: "tailwindcss", element: <TailwindcssMain /> },
               ],
             },
             { path: "setup", element: <SetupMain /> },
@@ -874,6 +877,7 @@ const router = createBrowserRouter(
               children: [
                 { path: "introduction", element: <IntroMain /> },
                 { path: "props", element: <PropsMain /> },
+                { path: "storage", element: <StorageMain /> },
               ],
             },
             {

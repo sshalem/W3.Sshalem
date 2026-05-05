@@ -2,9 +2,9 @@ export { default as ReactJSHome } from "./ReactJSHome";
 export { default as SetupMain } from "./R1_SetupPkg/SetupMain";
 export { default as ReactBasics } from "./R2_ReactBasicsPkg/ReactBasics";
 export { default as JsxMain } from "./R2_ReactBasicsPkg/JsxSections/JsxMain";
-export { default as IntroMain } from "./R3_TypeScriptPkg/IntroSections/IntroMain";
+export { default as IntroMain } from "./R3_TypeScriptPkg/A_IntroSections/IntroMain";
 export { default as TypeScript } from "./R3_TypeScriptPkg/TypeScript";
-export { default as PropsMain } from "./R3_TypeScriptPkg/PassingPropsSections/PropsMain";
+export { default as PropsMain } from "./R3_TypeScriptPkg/B_PassingPropsSections/PropsMain";
 export { default as ReactRouter } from "./R4_RouterPkg/Router";
 export { default as InstallRouterMain } from "./R4_RouterPkg/A_RouterInstallSections/InstallRouterMain";
 export { default as CreateRouterMain } from "./R4_RouterPkg/B_CreateRouterStepsSections/CreateRouterMain";
@@ -21,3 +21,6 @@ export { default as ProjectSetup } from "./R1_ProjectSetupPkg/ProjectSetup";
 export { default as CreateViteMain } from "./R1_ProjectSetupPkg/A_CreateViteSections/CreateViteMain";
 export { default as FaviconMain } from "./R1_ProjectSetupPkg/B_FaviconSections/FaviconMain";
 export { default as ReactIconsMain } from "./R1_ProjectSetupPkg/C_ReactIconsSections/ReactIconsMain";
+export { default as TailwindcssMain } from "./R1_ProjectSetupPkg/D_TailwindcssSections/TailwindcssMain";
+
+export { default as StorageMain } from "./R3_TypeScriptPkg/C_StorageSections/StorageMain";

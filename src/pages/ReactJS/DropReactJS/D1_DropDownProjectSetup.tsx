@@ -43,7 +43,8 @@ const D1_DropDownProjectSetup = () => {
       >
         <SideDropdownLink sideDropDownNavName="1. Create VITE project" internalLink="/reactJS/project-setup/vite-create" />
         <SideDropdownLink sideDropDownNavName="2. Favicon" internalLink="/reactJS/project-setup/favicon" />
-        <SideDropdownLink sideDropDownNavName="2. React Icons" internalLink="/reactJS/project-setup/reacticons" />
+        <SideDropdownLink sideDropDownNavName="3. React Icons" internalLink="/reactJS/project-setup/reacticons" />
+        <SideDropdownLink sideDropDownNavName="4. Tailwindcss" internalLink="/reactJS/project-setup/tailwindcss" />
       </div>
     </section>
   );
