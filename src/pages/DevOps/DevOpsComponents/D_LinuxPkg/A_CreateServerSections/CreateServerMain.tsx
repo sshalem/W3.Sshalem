@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_CreateLinodeServer from "./O1_CreateLinodeServer";
+import O0_AkamiLinodeIntro from "./O0_AkamiLinodeIntro";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
+const o0_AkamiLinodeIntro = "Intro Akami/Linode";
 const create_linode_server = "create_linode_server";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [create_linode_server];
+const anchorList: string[] = [o0_AkamiLinodeIntro, create_linode_server];
 
 // ============================================
 // ============================================
@@ -65,6 +67,7 @@ const CreateServerMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
+      <O0_AkamiLinodeIntro anchor={o0_AkamiLinodeIntro} />
       <O1_CreateLinodeServer anchor={create_linode_server} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
