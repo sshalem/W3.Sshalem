@@ -2,43 +2,90 @@
 
 
 */
-import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
+import { JsxHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_CreateBrowserRouter = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <ULDecimal>
-        <Li>create pages folder</Li>
-        <Li>create components folder</Li>
         <Li>
-          Create 4 pages (For the example) inside pages folder <SpanGreen>Home</SpanGreen> <SpanGreen>About</SpanGreen>{" "}
-          <SpanGreen>Products</SpanGreen> <SpanGreen>Error</SpanGreen>
+          create <SpanYellow>pages</SpanYellow> folder
         </Li>
         <Li>
-          Create <SpanGreen>MainLayout</SpanGreen> in components folder
+          create <SpanYellow>components</SpanYellow> folder
         </Li>
         <Li>
-          Create <SpanGreen>Navbar</SpanGreen> component, these are the tabs that will be shown on the navbar
+          Create 4 pages (For the example) inside pages folder{" "}
+          <ULdisc>
+            <Li>
+              <Redtext>Home</Redtext>
+            </Li>
+            <Li>
+              <Redtext>About</Redtext>
+            </Li>
+            <Li>
+              <Redtext>Products</Redtext>
+            </Li>
+            <Li>
+              <Redtext>Error</Redtext>
+            </Li>
+          </ULdisc>
+        </Li>
+        <Li>
+          Create <SpanYellow>Navbar</SpanYellow> component, these are the tabs that will be shown on the navbar
           <JsxHighlight jsxCode={navbar}></JsxHighlight>
         </Li>
         <Li>
-          <SpanYellow>MainLayout</SpanYellow> will be the main page , that will display the <br /> <br />
-          ➡️ The <SpanBlue>Navbar</SpanBlue> <br />
-          ➡️ The content of each page using the <SpanBlue>Outlet</SpanBlue> component from react router, that related to the nav tab (Home, Products,
-          About). <br />
-          ➡️ In the <SpanYellow>CreateBrowserRouter</SpanYellow> The <SpanYellow>MainLayout</SpanYellow> element has <SpanYellow>Children</SpanYellow>
-          <br />
-          ➡️ In order to display the children we add the <SpanYellow>Outlet</SpanYellow>
-          <br />
+          Create <SpanYellow>MainLayout</SpanYellow> component, will be the main page , that will display the
+          <ULdisc>
+            <Li>
+              ➡️ The <Redtext>Navbar</Redtext>
+            </Li>
+            <Li>
+              ➡️ The <Redtext>Outlet</Redtext> - (from react router) , will display the related component that related to{" "}
+              <Redtext>NavLink , Link</Redtext> on the nav tab (Home, Products, About).
+            </Li>
+          </ULdisc>
           <JsxHighlight jsxCode={main_layout}></JsxHighlight>
         </Li>
         <Li>
-          in <SpanRed>App.tsx</SpanRed> , now I config the router .
-          <br /> <br />
-          ➡️ I define Home page to be the page with url of root path (set as index: true) <br />
-          <JsxHighlight jsxCode={browser_router}></JsxHighlight>
+          in <SpanYellow>App.tsx</SpanYellow> , now I config the router
+          <ULdisc>
+            <Li>
+              create an instanbce <Redtext>createBrowserRouter</Redtext>
+            </Li>
+            <Li>in its parenthesis, create an array</Li>
+            <Li>
+              In the array create as described in the code , the <SpanYellow>MainLayout</SpanYellow> and <SpanYellow>children</SpanYellow> of
+              <SpanYellow>MainLayout</SpanYellow>
+            </Li>
+            <Li>➡️ I define Home page to be the page with url of root path (set as index: true)</Li>
+          </ULdisc>
         </Li>
+        <Li>
+          How it works
+          <ULdisc>
+            <Li>
+              Let's look in the <Redtext>CreateBrowserRouter</Redtext>
+            </Li>
+            <Li>
+              we can see the in <Redtext>CreateBrowserRouter</Redtext> that <SpanYellow>MainLayout</SpanYellow> element has
+              <Redtext>Children</Redtext>
+            </Li>
+            <Li>
+              So, Once I click on any link on the <SpanYellow>NavBar</SpanYellow> , the related url in <Redtext>CreateBrowserRouter</Redtext>{" "}
+              <ULdisc>
+                <Li>will redirect to that link</Li>
+                <Li>The related Element will be assign to the page</Li>
+                <Li>
+                  as said above, <Redtext>Outlet</Redtext> is responsible to display the content of the related Element
+                </Li>
+              </ULdisc>
+            </Li>
+          </ULdisc>
+        </Li>
+        <JsxHighlight jsxCode={browser_router}></JsxHighlight>
       </ULDecimal>
     </MainChildArea>
   );

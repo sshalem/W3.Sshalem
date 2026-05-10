@@ -5,20 +5,18 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_Router_Insatll from "./O1_Router_Insatll";
-import O2_CreateBrowserRouter from "./O2_CreateBrowserRouter";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_Router_Insatll = "1. Install Router 6";
-const o2_CreateBrowserRouter = "2. CreateBrowserRouter";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_Router_Insatll, o2_CreateBrowserRouter];
+const anchorList: string[] = [o1_Router_Insatll];
 
 // ============================================
 // ============================================
@@ -73,7 +71,6 @@ const InstallRouterMain = () => {
       {/* End Contents */}
 
       <O1_Router_Insatll anchor={o1_Router_Insatll} />
-      <O2_CreateBrowserRouter anchor={o2_CreateBrowserRouter} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
