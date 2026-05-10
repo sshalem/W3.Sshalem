@@ -1,9 +1,9 @@
 /*
-/devops/linux-server/create-server#create_linode_server
-create_linode_server --> (DEVOPS)(LINUX)(create server server)
+ 
+
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, Redtext, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O0_AkamiLinodeIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,9 +14,15 @@ const O0_AkamiLinodeIntro = ({ anchor }: { anchor: string }) => {
         </Li>
         <Li>
           Go to{" "}
-          <a className="tracking-wider text-blue-500" href="https://www.akamai.com/">
+          <a className="tracking-wider text-blue-500" href="https://www.akamai.com/" target="_blank">
             {" "}
             https://www.akamai.com/
+          </a>
+        </Li>
+        <Li>
+          to Login use this url{" "}
+          <a className="tracking-wider text-blue-500" href="https://login.linode.com/login?" target="_blank">
+            https://login.linode.com/login
           </a>
         </Li>
       </ULdisc>
