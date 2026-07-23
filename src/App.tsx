@@ -4,28 +4,12 @@ import * as Pages from "./pages";
 import * as SpringComponents from "./pages/Spring/SpringComponents";
 import * as FastAPIComponents from "./pages/FastAPI/FastAPIComponents";
 import * as ReactJSComponents from "./pages/ReactJS/ReactJSComponents";
+import * as JavaScriptComponents from "./pages/JavaScript/JavaScriptComponents";
+import * as PageCreateComponents from "./pages/PageCreate/PageCreateComponents";
 
 import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 
-import {
-  SpecificationDocument,
-  CreateStepMain,
-  PageCreationHome,
-  AppTreeComponent,
-  ComponentTreeComponent,
-  WebPageComponent,
-} from "./pages/PageCreate/PageCreateComponents";
-
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
-
-import {
-  FetchApi,
-  FetchApiMain,
-  JavaScriptBasics,
-  JavaScriptHome,
-  JsArrayMain,
-  PromiseAsyncAwaitMain,
-} from "./pages/JavaScript/JavaScriptComponents";
 
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
 
@@ -33,7 +17,7 @@ import { FullStackHome } from "./pages/FullStack/FullStackComponents";
 
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
 
-import { Django, FastApi, PythonBasics, PythonGeneral, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
+import * as PythonComponents from "./pages/Python/PythonComponents";
 
 import {
   ConnectToServerSshMain,
@@ -160,43 +144,6 @@ import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X
 import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
 
 import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
-
-import {
-  DataTypesMain,
-  FileHandlingMain,
-  IfElseMain,
-  LoopsMain,
-  ModulesPackagingMain,
-  OperatorsMain,
-  PythonExceptionsMain,
-  PythonFunctionsMain,
-  PythonOopMain,
-  VenvMain,
-} from "./pages/Python/PythonComponents/P2_PythonBasicsPkg";
-
-import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
-
-import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
-
-import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P5_DjangoPkg";
-
-import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A__SetupFastApiProjectSections/SetupFastApiProjectMain";
-
-import {
-  AdvancedTopicsMain,
-  ApplicationStructureAndArchitectureMain,
-  BackgroundTasksAndAsyncMain,
-  DataBaseIntegrationMain,
-  DependencyInjectionMain,
-  DeploymentAndDevOpsMain,
-  MiddlewareSectionsMain,
-  PerformanceAndConcurrencyMain,
-  RequestDataAmdValidationSectionsMain,
-  SecurityMain,
-  TestingMain,
-} from "./pages/Python/PythonComponents/P4_FastApiPkg";
-
-import { PythonDictionaryMain, PythonListMain, PythonSetMain, PythonTupleMain } from "./pages/Python/PythonComponents/P3_DataStructuresPkg";
 
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 
@@ -566,72 +513,72 @@ const router = createBrowserRouter(
           path: "python",
           element: <Pages.Python_page />,
           children: [
-            { index: true, element: <PythonHome /> },
+            { index: true, element: <PythonComponents.PythonHome /> },
             {
               path: "general",
-              element: <PythonGeneral />,
+              element: <PythonComponents.PythonGeneral />,
               children: [
-                { path: "create-project", element: <CreateProjectMain /> },
-                { path: "python-git", element: <PythonGitMain /> },
+                { path: "create-project", element: <PythonComponents.CreateProjectMain /> },
+                { path: "python-git", element: <PythonComponents.PythonGitMain /> },
               ],
             },
             {
               path: "ide",
-              element: <PythonIde />,
+              element: <PythonComponents.PythonIde />,
               children: [
-                { path: "pycharm", element: <PyCharmMain /> },
-                { path: "vscode", element: <VsCodeMain /> },
+                { path: "pycharm", element: <PythonComponents.PyCharmMain /> },
+                { path: "vscode", element: <PythonComponents.VsCodeMain /> },
               ],
             },
             {
               path: "python-basics",
-              element: <PythonBasics />,
+              element: <PythonComponents.PythonBasics />,
               children: [
-                { path: "data-types", element: <DataTypesMain /> },
-                { path: "operators", element: <OperatorsMain /> },
-                { path: "control-flow", element: <IfElseMain /> },
-                { path: "loops", element: <LoopsMain /> },
-                { path: "functions", element: <PythonFunctionsMain /> },
-                { path: "exceptions", element: <PythonExceptionsMain /> },
-                { path: "modules-packaging", element: <ModulesPackagingMain /> },
-                { path: "file-handling", element: <FileHandlingMain /> },
-                { path: "oop", element: <PythonOopMain /> },
-                { path: "venv", element: <VenvMain /> },
+                { path: "data-types", element: <PythonComponents.DataTypesMain /> },
+                { path: "operators", element: <PythonComponents.OperatorsMain /> },
+                { path: "control-flow", element: <PythonComponents.IfElseMain /> },
+                { path: "loops", element: <PythonComponents.LoopsMain /> },
+                { path: "functions", element: <PythonComponents.PythonFunctionsMain /> },
+                { path: "exceptions", element: <PythonComponents.PythonExceptionsMain /> },
+                { path: "modules-packaging", element: <PythonComponents.ModulesPackagingMain /> },
+                { path: "file-handling", element: <PythonComponents.FileHandlingMain /> },
+                { path: "oop", element: <PythonComponents.PythonOopMain /> },
+                { path: "venv", element: <PythonComponents.VenvMain /> },
               ],
             },
             {
               path: "data-structure",
-              element: <PythonIde />,
+              element: <PythonComponents.PythonIde />,
               children: [
-                { path: "list", element: <PythonListMain /> },
-                { path: "tuple", element: <PythonTupleMain /> },
-                { path: "set", element: <PythonSetMain /> },
-                { path: "dictionary", element: <PythonDictionaryMain /> },
+                { path: "list", element: <PythonComponents.PythonListMain /> },
+                { path: "tuple", element: <PythonComponents.PythonTupleMain /> },
+                { path: "set", element: <PythonComponents.PythonSetMain /> },
+                { path: "dictionary", element: <PythonComponents.PythonDictionaryMain /> },
               ],
             },
             {
               path: "fastapi",
-              element: <FastApi />,
+              element: <PythonComponents.FastApi />,
               children: [
-                { path: "setup-fastapi", element: <SetupFastApiProjectMain /> },
-                { path: "request-and-validation", element: <RequestDataAmdValidationSectionsMain /> },
-                { path: "dependency-injection", element: <DependencyInjectionMain /> },
-                { path: "middleware", element: <MiddlewareSectionsMain /> },
-                { path: "security", element: <SecurityMain /> },
-                { path: "background-tasks-and-async", element: <BackgroundTasksAndAsyncMain /> },
-                { path: "database-integration", element: <DataBaseIntegrationMain /> },
-                { path: "application-structure-architecture", element: <ApplicationStructureAndArchitectureMain /> },
-                { path: "testing", element: <TestingMain /> },
-                { path: "performance-concurrency", element: <PerformanceAndConcurrencyMain /> },
-                { path: "deployment-dev-ops", element: <DeploymentAndDevOpsMain /> },
-                { path: "advanced-topics", element: <AdvancedTopicsMain /> },
+                { path: "setup-fastapi", element: <PythonComponents.SetupFastApiProjectMain /> },
+                { path: "request-and-validation", element: <PythonComponents.RequestDataAmdValidationSectionsMain /> },
+                { path: "dependency-injection", element: <PythonComponents.DependencyInjectionMain /> },
+                { path: "middleware", element: <PythonComponents.MiddlewareSectionsMain /> },
+                { path: "security", element: <PythonComponents.SecurityMain /> },
+                { path: "background-tasks-and-async", element: <PythonComponents.BackgroundTasksAndAsyncMain /> },
+                { path: "database-integration", element: <PythonComponents.DataBaseIntegrationMain /> },
+                { path: "application-structure-architecture", element: <PythonComponents.ApplicationStructureAndArchitectureMain /> },
+                { path: "testing", element: <PythonComponents.TestingMain /> },
+                { path: "performance-concurrency", element: <PythonComponents.PerformanceAndConcurrencyMain /> },
+                { path: "deployment-dev-ops", element: <PythonComponents.DeploymentAndDevOpsMain /> },
+                { path: "advanced-topics", element: <PythonComponents.AdvancedTopicsMain /> },
               ],
             },
             {
               path: "django",
-              element: <Django />,
+              element: <PythonComponents.Django />,
               children: [
-                { path: "create-django", element: <CreateDjangoProjectMain /> },
+                { path: "create-django", element: <PythonComponents.CreateDjangoProjectMain /> },
                 // { path: "vscode", element: <VsCodeMain /> },
               ],
             },
@@ -647,8 +594,8 @@ const router = createBrowserRouter(
               path: "ide",
               element: <FastAPIComponents.FastAPIIde />,
               children: [
-                { path: "pycharm", element: <PyCharmMain /> },
-                { path: "vscode", element: <VsCodeMain /> },
+                { path: "pycharm", element: <PythonComponents.PyCharmMain /> },
+                { path: "vscode", element: <PythonComponents.VsCodeMain /> },
               ],
             },
             {
@@ -777,14 +724,18 @@ const router = createBrowserRouter(
           path: "javascript",
           element: <Pages.JavaScript_page />,
           children: [
-            { index: true, element: <JavaScriptHome /> },
-            { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
+            { index: true, element: <JavaScriptComponents.JavaScriptHome /> },
+            {
+              path: "basics",
+              element: <JavaScriptComponents.JavaScriptBasics />,
+              children: [{ path: "array", element: <JavaScriptComponents.JsArrayMain /> }],
+            },
             {
               path: "fetch-api",
-              element: <FetchApi />,
+              element: <JavaScriptComponents.FetchApi />,
               children: [
-                { path: "intro", element: <FetchApiMain /> },
-                { path: "promise-async-await", element: <PromiseAsyncAwaitMain /> },
+                { path: "intro", element: <JavaScriptComponents.FetchApiMain /> },
+                { path: "promise-async-await", element: <JavaScriptComponents.PromiseAsyncAwaitMain /> },
               ],
             },
           ],
@@ -957,15 +908,15 @@ const router = createBrowserRouter(
           path: "page_creation",
           element: <Pages.Page_Creation_page />,
           children: [
-            { index: true, element: <PageCreationHome /> },
+            { index: true, element: <PageCreateComponents.PageCreationHome /> },
             {
               path: "specification-document",
-              element: <SpecificationDocument />,
-              children: [{ path: "create-steps", element: <CreateStepMain /> }],
+              element: <PageCreateComponents.SpecificationDocument />,
+              children: [{ path: "create-steps", element: <PageCreateComponents.CreateStepMain /> }],
             },
-            { path: "app-tree", element: <AppTreeComponent /> },
-            { path: "component-tree", element: <ComponentTreeComponent /> },
-            { path: "web-page", element: <WebPageComponent /> },
+            { path: "app-tree", element: <PageCreateComponents.AppTreeComponent /> },
+            { path: "component-tree", element: <PageCreateComponents.ComponentTreeComponent /> },
+            { path: "web-page", element: <PageCreateComponents.WebPageComponent /> },
           ],
         },
       ],
