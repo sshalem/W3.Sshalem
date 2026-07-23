@@ -10,6 +10,8 @@ export { default as MySqlnstallMain } from "./D_LinuxPkg/I_MySqlSections/MySqlns
 export { default as JenkinsMain } from "./D_LinuxPkg/J_JenkinsSections/JenkinsMain";
 export { default as FileZillaMain } from "./D_LinuxPkg/C_ConnectFileZillaSections/FileZillaMain";
 
+export { default as DockerMain } from "./D_DockerPkg/DockerMain";
+
 export { default as GitMain } from "./D_GitPkg/GitMain";
 
 export { default as DeployNetlifyMain } from "./D_DeployNetlifyPkg/DeployNetlifyMain";

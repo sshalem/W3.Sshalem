@@ -2,183 +2,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import * as Pages from "./pages";
 import * as SpringComponents from "./pages/Spring/SpringComponents";
+import * as PythonComponents from "./pages/Python/PythonComponents";
 import * as FastAPIComponents from "./pages/FastAPI/FastAPIComponents";
 import * as ReactJSComponents from "./pages/ReactJS/ReactJSComponents";
 import * as JavaScriptComponents from "./pages/JavaScript/JavaScriptComponents";
 import * as PageCreateComponents from "./pages/PageCreate/PageCreateComponents";
-
-import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
-
-import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
-
-import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
-
-import { FullStackHome } from "./pages/FullStack/FullStackComponents";
-
-import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
-
-import * as PythonComponents from "./pages/Python/PythonComponents";
-
-import {
-  ConnectToServerSshMain,
-  CreateServerMain,
-  ReactOnTomcatMain,
-  DevOpsHome,
-  JdkInstallMain,
-  JenkinsMain,
-  Linux_Server,
-  MySqlnstallMain,
-  SetupServerMain,
-  TomcatInstallMain,
-  Tomcat,
-  FileZillaMain,
-  DeployNetlifyMain,
-  DeployRenderMain,
-  GitMain,
-  NginxInstallMain,
-  DeployLinuxMain,
-  Nginx,
-  DeployJarNginxMain,
-  DeployReactNginxMain,
-  MavenCreateJarMain,
-} from "./pages/DevOps/DevOpsComponents";
-
-import { LinuxHome } from "./pages/Linux/LinuxComponents";
-
-import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
-import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
-
-import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
-
-import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
-
-import {
-  AliasMain,
-  BetweenMain,
-  DistinctMain,
-  InMain,
-  IsNullMain,
-  LikeMain,
-  LimitMain,
-  LogicalOperatorsMain,
-  OrderByMain,
-  RegexMain,
-  SelectMain,
-  UseMain,
-  WhereClauseMain,
-} from "./pages/Sql/SqlComponents/OperatorStatementsPkg";
-
-import {
-  APIGateway_2_7_18_Main,
-  ArchitectureOptionsMain,
-  CustomerOrderMain,
-  Eureka_2_7_18_Main,
-  Kafka_2_7_18_Main,
-  Resilliance4J_2_7_18_Main,
-  Security_2_7_18_Main,
-  ServiceDiscoveryMain,
-  SpringCloudConfig_2_7_18_Main,
-  TracingZipkinSleuth_2_7_18_Main,
-} from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg";
-
-import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
-
-import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg";
-
-import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
-
-import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M3_KafkaPkg";
-
-import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M4_RabbitMQPkg";
-
-import {
-  AbstractFactoryMain,
-  BuilderMain,
-  FactoryMain,
-  PrototypeMain,
-  SingletonMain,
-} from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg";
-
-import DesignPatternCreational from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg/DesignPatternCreational";
-
-import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
-
-import {
-  ArrayMain,
-  GcHeapStackMain,
-  InputOutputMain,
-  Java8Main,
-  JavaCollectionsMain,
-  JavaObjectClassMain,
-  MultiThreadingMain,
-  OopMain,
-  RandomMain,
-  EnumMain,
-  JavaExceptionsMain,
-  JavaGenericsMain,
-  JavaMemoryMonitoringMain,
-} from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
-
-import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
-
-import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
-
-import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
-
-import { AllegriaMain, LoveAndLiberteMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
-
-import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
-
-import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
-
-import ChordsMain from "./pages/Guitar/GuitarComponents/G0_ChordsPkg/ChordsMain";
-
-import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_ArraysSections/ArraysMain";
-
-import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
-
-import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_BasicsSections/JavaFundamentalMain";
-
-import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
-
-import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
-
-import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
-
-import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
-
-import {
-  AdapterMain,
-  BridgeMain,
-  CompositeMain,
-  DecoratorMain,
-  FacadeMain,
-  FlyweightMain,
-  ProxyMain,
-} from "./pages/Java/JavaComponents/J4_DesignPatternStructuralPkg";
-
-import {
-  ChainOfResponsibilityMain,
-  CommandMain,
-  IteratorMain,
-  MediatorMain,
-  MementoMain,
-  ObserverMain,
-  StateMain,
-  StrategyMain,
-  TemplateMethodMain,
-  VisitorMain,
-} from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg";
-
-import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
-
-import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
-
-import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
-
-import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
-
-import { CppHome, CppBasics, FunctionsMain, TestMain } from "./pages/Cpp/CppComponents";
+import * as JavaComponents from "./pages/Java/JavaComponents";
+import * as MicroServiceComponents from "./pages/MicroServices/MicroServiceComponents";
+import * as SqlComponents from "./pages/Sql/SqlComponents";
+import * as DevOpsComponents from "./pages/DevOps/DevOpsComponents";
+import * as WindowsComponents from "./pages/Windows/WindowsComponents";
+import * as GuitarComponents from "./pages/Guitar/GuitarComponents";
+import * as PostmanComponents from "./pages/Postman/PostmanComponents";
+import * as HtmlCssComponents from "./pages/HTML_CSS/HtmlCssComponents";
+import * as FullStackComponents from "./pages/FullStack/FullStackComponents";
+import * as LinuxComponents from "./pages/Linux/LinuxComponents";
+import * as CppComponents from "./pages/Cpp/CppComponents";
 
 const router = createBrowserRouter(
   [
@@ -192,87 +31,87 @@ const router = createBrowserRouter(
           path: "java",
           element: <Pages.Java_page />,
           children: [
-            { index: true, element: <JavaHome /> },
+            { index: true, element: <JavaComponents.JavaHome /> },
             {
               path: "basics",
-              element: <JavaBasics />,
+              element: <JavaComponents.JavaBasics />,
               children: [
-                { path: "java-fundamental", element: <JavaFundamentalMain /> },
-                { path: "array", element: <ArrayMain /> },
-                { path: "enum", element: <EnumMain /> },
-                { path: "comparable-comparator", element: <ComparableComparatorMain /> },
-                { path: "exceptions", element: <JavaExceptionsMain /> },
-                { path: "object-class", element: <JavaObjectClassMain /> },
-                { path: "random", element: <RandomMain /> },
-                { path: "oop", element: <OopMain /> },
-                { path: "generics", element: <JavaGenericsMain /> },
-                { path: "collections", element: <JavaCollectionsMain /> },
-                { path: "io", element: <InputOutputMain /> },
-                { path: "multithreading", element: <MultiThreadingMain /> },
-                { path: "gc-heap-stack", element: <GcHeapStackMain /> },
-                { path: "java8", element: <Java8Main /> },
-                { path: "memory-monitoring", element: <JavaMemoryMonitoringMain /> },
+                { path: "java-fundamental", element: <JavaComponents.JavaFundamentalMain /> },
+                { path: "array", element: <JavaComponents.ArrayMain /> },
+                { path: "enum", element: <JavaComponents.EnumMain /> },
+                { path: "comparable-comparator", element: <JavaComponents.ComparableComparatorMain /> },
+                { path: "exceptions", element: <JavaComponents.JavaExceptionsMain /> },
+                { path: "object-class", element: <JavaComponents.JavaObjectClassMain /> },
+                { path: "random", element: <JavaComponents.RandomMain /> },
+                { path: "oop", element: <JavaComponents.OopMain /> },
+                { path: "generics", element: <JavaComponents.JavaGenericsMain /> },
+                { path: "collections", element: <JavaComponents.JavaCollectionsMain /> },
+                { path: "io", element: <JavaComponents.InputOutputMain /> },
+                { path: "multithreading", element: <JavaComponents.MultiThreadingMain /> },
+                { path: "gc-heap-stack", element: <JavaComponents.GcHeapStackMain /> },
+                { path: "java8", element: <JavaComponents.Java8Main /> },
+                { path: "memory-monitoring", element: <JavaComponents.JavaMemoryMonitoringMain /> },
               ],
             },
             {
               path: "data-structures",
-              element: <DataStructures />,
+              element: <JavaComponents.DataStructures />,
               children: [
-                { path: "arrays", element: <ArraysMain /> },
-                { path: "list", element: <ListMain /> },
-                { path: "set", element: <SetMain /> },
-                { path: "map", element: <MapMain /> },
-                { path: "queue", element: <QueueMain /> },
-                { path: "concurent", element: <ConcurrentDataMain /> },
+                { path: "arrays", element: <JavaComponents.ArraysMain /> },
+                { path: "list", element: <JavaComponents.ListMain /> },
+                { path: "set", element: <JavaComponents.SetMain /> },
+                { path: "map", element: <JavaComponents.MapMain /> },
+                { path: "queue", element: <JavaComponents.QueueMain /> },
+                { path: "concurent", element: <JavaComponents.ConcurrentDataMain /> },
               ],
             },
             {
               path: "design-patterns-creational",
-              element: <DesignPatternCreational />,
+              element: <JavaComponents.DesignPatternCreational />,
               children: [
-                { path: "singleton", element: <SingletonMain /> },
-                { path: "prototype", element: <PrototypeMain /> },
-                { path: "builder", element: <BuilderMain /> },
-                { path: "factory", element: <FactoryMain /> },
-                { path: "abstract-factory", element: <AbstractFactoryMain /> },
+                { path: "singleton", element: <JavaComponents.SingletonMain /> },
+                { path: "prototype", element: <JavaComponents.PrototypeMain /> },
+                { path: "builder", element: <JavaComponents.BuilderMain /> },
+                { path: "factory", element: <JavaComponents.FactoryMain /> },
+                { path: "abstract-factory", element: <JavaComponents.AbstractFactoryMain /> },
               ],
             },
             {
               path: "design-patterns-structural",
-              element: <DesignPatternStructural />,
+              element: <JavaComponents.DesignPatternStructural />,
               children: [
-                { path: "adapter", element: <AdapterMain /> },
-                { path: "decorator", element: <DecoratorMain /> },
-                { path: "facade", element: <FacadeMain /> },
-                { path: "composite", element: <CompositeMain /> },
-                { path: "proxy", element: <ProxyMain /> },
-                { path: "bridge", element: <BridgeMain /> },
-                { path: "flyweight", element: <FlyweightMain /> },
+                { path: "adapter", element: <JavaComponents.AdapterMain /> },
+                { path: "decorator", element: <JavaComponents.DecoratorMain /> },
+                { path: "facade", element: <JavaComponents.FacadeMain /> },
+                { path: "composite", element: <JavaComponents.CompositeMain /> },
+                { path: "proxy", element: <JavaComponents.ProxyMain /> },
+                { path: "bridge", element: <JavaComponents.BridgeMain /> },
+                { path: "flyweight", element: <JavaComponents.FlyweightMain /> },
               ],
             },
             {
               path: "design-patterns-behavioral",
-              element: <DesignPatternBehavioral />,
+              element: <JavaComponents.DesignPatternBehavioral />,
               children: [
-                { path: "observer", element: <ObserverMain /> },
-                { path: "strategy", element: <StrategyMain /> },
-                { path: "template-method", element: <TemplateMethodMain /> },
-                { path: "command", element: <CommandMain /> },
-                { path: "state", element: <StateMain /> },
-                { path: "chain-of-responsibility", element: <ChainOfResponsibilityMain /> },
-                { path: "iterator", element: <IteratorMain /> },
-                { path: "mediator", element: <MediatorMain /> },
-                { path: "memento", element: <MementoMain /> },
-                { path: "visitor", element: <VisitorMain /> },
+                { path: "observer", element: <JavaComponents.ObserverMain /> },
+                { path: "strategy", element: <JavaComponents.StrategyMain /> },
+                { path: "template-method", element: <JavaComponents.TemplateMethodMain /> },
+                { path: "command", element: <JavaComponents.CommandMain /> },
+                { path: "state", element: <JavaComponents.StateMain /> },
+                { path: "chain-of-responsibility", element: <JavaComponents.ChainOfResponsibilityMain /> },
+                { path: "iterator", element: <JavaComponents.IteratorMain /> },
+                { path: "mediator", element: <JavaComponents.MediatorMain /> },
+                { path: "memento", element: <JavaComponents.MementoMain /> },
+                { path: "visitor", element: <JavaComponents.VisitorMain /> },
               ],
             },
             {
               path: "java-interview-questions",
-              element: <JavaInterviewQuestions />,
+              element: <JavaComponents.JavaInterviewQuestions />,
               children: [
-                { path: "collections-questions", element: <CollectionsQuestionsMain /> },
-                { path: "io-questions", element: <IO_QuestionsMain /> },
-                { path: "memory-monitoring-questions", element: <MemoryMonitoringQuestionsMain /> },
+                { path: "collections-questions", element: <JavaComponents.CollectionsQuestionsMain /> },
+                { path: "io-questions", element: <JavaComponents.IO_QuestionsMain /> },
+                { path: "memory-monitoring-questions", element: <JavaComponents.MemoryMonitoringQuestionsMain /> },
               ],
             },
           ],
@@ -459,52 +298,52 @@ const router = createBrowserRouter(
           path: "microservices",
           element: <Pages.MicroServices_page />,
           children: [
-            { index: true, element: <MicroServiceHome /> },
+            { index: true, element: <MicroServiceComponents.MicroServiceHome /> },
             {
               path: "architecture-springboot-2-7-18",
-              element: <ArchitectureSpringBoot2 />,
+              element: <MicroServiceComponents.ArchitectureSpringBoot2 />,
               children: [
-                { path: "architecture-options", element: <ArchitectureOptionsMain /> },
-                { path: "customer-order", element: <CustomerOrderMain /> },
-                { path: "eureka", element: <Eureka_2_7_18_Main /> },
-                { path: "apigateway", element: <APIGateway_2_7_18_Main /> },
-                { path: "spring-cloud-config", element: <SpringCloudConfig_2_7_18_Main /> },
-                { path: "zipkin-sleuth", element: <TracingZipkinSleuth_2_7_18_Main /> },
-                { path: "resilliance4j", element: <Resilliance4J_2_7_18_Main /> },
-                { path: "elk", element: <ELK_2_7_18_Main /> },
-                { path: "kafka", element: <Kafka_2_7_18_Main /> },
-                { path: "security", element: <Security_2_7_18_Main /> },
+                { path: "architecture-options", element: <MicroServiceComponents.ArchitectureOptionsMain /> },
+                { path: "customer-order", element: <MicroServiceComponents.CustomerOrderMain /> },
+                { path: "eureka", element: <MicroServiceComponents.Eureka_2_7_18_Main /> },
+                { path: "apigateway", element: <MicroServiceComponents.APIGateway_2_7_18_Main /> },
+                { path: "spring-cloud-config", element: <MicroServiceComponents.SpringCloudConfig_2_7_18_Main /> },
+                { path: "zipkin-sleuth", element: <MicroServiceComponents.TracingZipkinSleuth_2_7_18_Main /> },
+                { path: "resilliance4j", element: <MicroServiceComponents.Resilliance4J_2_7_18_Main /> },
+                { path: "elk", element: <MicroServiceComponents.ELK_2_7_18_Main /> },
+                { path: "kafka", element: <MicroServiceComponents.Kafka_2_7_18_Main /> },
+                { path: "security", element: <MicroServiceComponents.Security_2_7_18_Main /> },
               ],
             },
             {
               path: "architecture-springboot-3-x-x",
-              element: <ArchitectureSpringBoot3 />,
+              element: <MicroServiceComponents.ArchitectureSpringBoot3 />,
               children: [
-                { path: "architecture-options", element: <Architecture3OptionsMain /> },
-                { path: "service-discovery", element: <ServiceDiscoveryMain /> },
+                { path: "architecture-options", element: <MicroServiceComponents.Architecture3OptionsMain /> },
+                { path: "service-discovery", element: <MicroServiceComponents.ServiceDiscoveryMain /> },
               ],
             },
-            { path: "docker", element: <Docker /> },
+            { path: "docker", element: <MicroServiceComponents.Docker /> },
 
             {
               path: "kafka",
-              element: <Kafka />,
+              element: <MicroServiceComponents.Kafka />,
               children: [
-                { path: "intro", element: <KafkaIntroMain /> },
-                { path: "message-ordering", element: <KafkaMsgOrderingMain /> },
+                { path: "intro", element: <MicroServiceComponents.KafkaIntroMain /> },
+                { path: "message-ordering", element: <MicroServiceComponents.KafkaMsgOrderingMain /> },
               ],
             },
             {
               path: "rabbitmq",
-              element: <RabbitMQ />,
-              children: [{ path: "intro", element: <RabbitMQIntroMain /> }],
+              element: <MicroServiceComponents.RabbitMQ />,
+              children: [{ path: "intro", element: <MicroServiceComponents.RabbitMQIntroMain /> }],
             },
             {
               path: "security-microservice",
-              element: <SecurityMicroServ />,
+              element: <MicroServiceComponents.SecurityMicroServ />,
               children: [
-                { path: "intro", element: <IntroMicroServSecurityMain /> },
-                { path: "project", element: <ProjectWithSecurityMain /> },
+                { path: "intro", element: <MicroServiceComponents.IntroMicroServSecurityMain /> },
+                { path: "project", element: <MicroServiceComponents.ProjectWithSecurityMain /> },
               ],
             },
           ],
@@ -744,36 +583,48 @@ const router = createBrowserRouter(
           path: "html_css",
           element: <Pages.HTML_CSS_page />,
           children: [
-            { index: true, element: <HtmlCssHome /> },
-            { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
-            { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
+            { index: true, element: <HtmlCssComponents.HtmlCssHome /> },
+            {
+              path: "css-basics",
+              element: <HtmlCssComponents.HtmlBasics />,
+              children: [{ path: "add-css", element: <HtmlCssComponents.AddCssMain /> }],
+            },
+            {
+              path: "html-basics",
+              element: <HtmlCssComponents.CssBasics />,
+              children: [{ path: "html-types", element: <HtmlCssComponents.HtmlTypesMain /> }],
+            },
           ],
         },
-        { path: "fullstack", element: <Pages.FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
+        { path: "fullstack", element: <Pages.FullStack_page />, children: [{ index: true, element: <FullStackComponents.FullStackHome /> }] },
 
         {
           path: "sql",
           element: <Pages.Sql_page />,
           children: [
-            { index: true, element: <SqlHome /> },
-            { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
+            { index: true, element: <SqlComponents.SqlHome /> },
+            {
+              path: "basic-concepts",
+              element: <SqlComponents.BasicConcepts />,
+              children: [{ path: "key-types", element: <SqlComponents.KeyTypesMain /> }],
+            },
             {
               path: "operator-statements",
-              element: <OperatorStatements />,
+              element: <SqlComponents.OperatorStatements />,
               children: [
-                { path: "use", element: <UseMain /> },
-                { path: "select", element: <SelectMain /> },
-                { path: "alias", element: <AliasMain /> },
-                { path: "distinct", element: <DistinctMain /> },
-                { path: "where", element: <WhereClauseMain /> },
-                { path: "logical-operator", element: <LogicalOperatorsMain /> },
-                { path: "in", element: <InMain /> },
-                { path: "between", element: <BetweenMain /> },
-                { path: "like", element: <LikeMain /> },
-                { path: "regex", element: <RegexMain /> },
-                { path: "is-null", element: <IsNullMain /> },
-                { path: "order-by", element: <OrderByMain /> },
-                { path: "limit", element: <LimitMain /> },
+                { path: "use", element: <SqlComponents.UseMain /> },
+                { path: "select", element: <SqlComponents.SelectMain /> },
+                { path: "alias", element: <SqlComponents.AliasMain /> },
+                { path: "distinct", element: <SqlComponents.DistinctMain /> },
+                { path: "where", element: <SqlComponents.WhereClauseMain /> },
+                { path: "logical-operator", element: <SqlComponents.LogicalOperatorsMain /> },
+                { path: "in", element: <SqlComponents.InMain /> },
+                { path: "between", element: <SqlComponents.BetweenMain /> },
+                { path: "like", element: <SqlComponents.LikeMain /> },
+                { path: "regex", element: <SqlComponents.RegexMain /> },
+                { path: "is-null", element: <SqlComponents.IsNullMain /> },
+                { path: "order-by", element: <SqlComponents.OrderByMain /> },
+                { path: "limit", element: <SqlComponents.LimitMain /> },
               ],
             },
           ],
@@ -783,41 +634,41 @@ const router = createBrowserRouter(
           path: "devops",
           element: <Pages.DevOps_page />,
           children: [
-            { index: true, element: <DevOpsHome /> },
-            { path: "git", element: <GitMain /> },
-            { path: "docker", element: <DockerMain /> },
-            { path: "netlify", element: <DeployNetlifyMain /> },
-            { path: "render", element: <DeployRenderMain /> },
+            { index: true, element: <DevOpsComponents.DevOpsHome /> },
+            { path: "git", element: <DevOpsComponents.GitMain /> },
+            { path: "docker", element: <DevOpsComponents.DockerMain /> },
+            { path: "netlify", element: <DevOpsComponents.DeployNetlifyMain /> },
+            { path: "render", element: <DevOpsComponents.DeployRenderMain /> },
             {
               path: "nginx",
-              element: <Nginx />,
+              element: <DevOpsComponents.Nginx />,
               children: [
-                { path: "nginx-install", element: <NginxInstallMain /> },
-                { path: "maven-create-jar", element: <MavenCreateJarMain /> },
-                { path: "deploy-jar", element: <DeployJarNginxMain /> },
-                { path: "deploy-react", element: <DeployReactNginxMain /> },
+                { path: "nginx-install", element: <DevOpsComponents.NginxInstallMain /> },
+                { path: "maven-create-jar", element: <DevOpsComponents.MavenCreateJarMain /> },
+                { path: "deploy-jar", element: <DevOpsComponents.DeployJarNginxMain /> },
+                { path: "deploy-react", element: <DevOpsComponents.DeployReactNginxMain /> },
               ],
             },
             {
               path: "tomcat",
-              element: <Tomcat />,
+              element: <DevOpsComponents.Tomcat />,
               children: [
-                { path: "tomcat-install", element: <TomcatInstallMain /> },
-                { path: "react-on-tomcat", element: <ReactOnTomcatMain /> },
+                { path: "tomcat-install", element: <DevOpsComponents.TomcatInstallMain /> },
+                { path: "react-on-tomcat", element: <DevOpsComponents.ReactOnTomcatMain /> },
               ],
             },
             {
               path: "linux-server",
-              element: <Linux_Server />,
+              element: <DevOpsComponents.Linux_Server />,
               children: [
-                { path: "create-server", element: <CreateServerMain /> },
-                { path: "connect-with-ssh", element: <ConnectToServerSshMain /> },
-                { path: "connect-with-filezilla", element: <FileZillaMain /> },
-                { path: "setup-server", element: <SetupServerMain /> },
-                { path: "jdk-install", element: <JdkInstallMain /> },
-                { path: "deploy", element: <DeployLinuxMain /> },
-                { path: "mysql-install", element: <MySqlnstallMain /> },
-                { path: "jenkins-install", element: <JenkinsMain /> },
+                { path: "create-server", element: <DevOpsComponents.CreateServerMain /> },
+                { path: "connect-with-ssh", element: <DevOpsComponents.ConnectToServerSshMain /> },
+                { path: "connect-with-filezilla", element: <DevOpsComponents.FileZillaMain /> },
+                { path: "setup-server", element: <DevOpsComponents.SetupServerMain /> },
+                { path: "jdk-install", element: <DevOpsComponents.JdkInstallMain /> },
+                { path: "deploy", element: <DevOpsComponents.DeployLinuxMain /> },
+                { path: "mysql-install", element: <DevOpsComponents.MySqlnstallMain /> },
+                { path: "jenkins-install", element: <DevOpsComponents.JenkinsMain /> },
               ],
             },
           ],
@@ -826,80 +677,80 @@ const router = createBrowserRouter(
           path: "guitar",
           element: <Pages.Guitar_page />,
           children: [
-            { index: true, element: <GuitarHome /> },
+            { index: true, element: <GuitarComponents.GuitarHome /> },
             {
               path: "chords",
-              element: <ChordsMain />,
+              element: <GuitarComponents.ChordsMain />,
             },
 
             {
               path: "general",
-              element: <GeneralMain />,
+              element: <GuitarComponents.GeneralMain />,
             },
             {
               path: "gipsy-kings",
-              element: <GipsyKings />,
+              element: <GuitarComponents.GipsyKings />,
               children: [
-                { path: "allegria", element: <AllegriaMain /> },
-                { path: "love-and-liberte", element: <LoveAndLiberteMain /> },
-                { path: "generic", element: <GenericSongsMain /> },
+                { path: "allegria", element: <GuitarComponents.AllegriaMain /> },
+                { path: "love-and-liberte", element: <GuitarComponents.LoveAndLiberteMain /> },
+                { path: "generic", element: <GuitarComponents.GenericSongsMain /> },
               ],
             },
             {
               path: "flamenco",
-              element: <Flamenco />,
+              element: <GuitarComponents.Flamenco />,
               children: [
                 // flamenco-basics
-                { path: "flamenco-basics", element: <FlamencoBasicsMain /> },
-                { path: "solea", element: <SoleaMain /> },
-                { path: "rumba", element: <RumbaMain /> },
+                { path: "flamenco-basics", element: <GuitarComponents.FlamencoBasicsMain /> },
+                { path: "solea", element: <GuitarComponents.SoleaMain /> },
+                { path: "rumba", element: <GuitarComponents.RumbaMain /> },
               ],
             },
             {
               path: "anton-glushkin",
-              element: <AntonGlushkinMain />,
+              element: <GuitarComponents.AntonGlushkinMain />,
             },
           ],
         },
-        { path: "linux", element: <Pages.Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
+        { path: "linux", element: <Pages.Linux_page />, children: [{ index: true, element: <LinuxComponents.LinuxHome /> }] },
         {
           path: "postman",
           element: <Pages.Postman_page />,
           children: [
-            { index: true, element: <PostmanHome /> },
-            { path: "collection", element: <CollectionMain /> },
+            { index: true, element: <PostmanComponents.PostmanHome /> },
+            { path: "collection", element: <PostmanComponents.CollectionMain /> },
             {
               path: "environment",
-              element: <Environment />,
+              element: <PostmanComponents.Environment />,
               children: [
-                { path: "setup", element: <EnvironmentSetupMain /> },
+                { path: "setup", element: <PostmanComponents.EnvironmentSetupMain /> },
                 // { path: "environment-setup", element: <EnvironmentSetupMain /> },
               ],
             },
-            { path: "multiple-http-requests", element: <MultipleHttpRequestMain /> },
+            { path: "multiple-http-requests", element: <PostmanComponents.MultipleHttpRequestMain /> },
           ],
         },
         {
           path: "windows",
           element: <Pages.Windows_page />,
           children: [
-            { index: true, element: <WindowsHome /> },
-            { path: "port-check", element: <PortCheckMain /> },
-            { path: "batch", element: <Batch />, children: [{ path: "ascii", element: <AsciiMain /> }] },
+            { index: true, element: <WindowsComponents.WindowsHome /> },
+            { path: "port-check", element: <WindowsComponents.PortCheckMain /> },
+            { path: "batch", element: <WindowsComponents.Batch />, children: [{ path: "ascii", element: <WindowsComponents.AsciiMain /> }] },
           ],
         },
         {
           path: "c++",
           element: <Pages.Cpp_page />,
           children: [
-            { index: true, element: <CppHome /> },
+            { index: true, element: <CppComponents.CppHome /> },
             {
               path: "cpp-basics",
-              element: <CppBasics />,
+              element: <CppComponents.CppBasics />,
               children: [
-                { index: true, element: <FunctionsMain /> },
-                { path: "functions", element: <FunctionsMain /> },
-                { path: "test", element: <TestMain /> },
+                { index: true, element: <CppComponents.FunctionsMain /> },
+                { path: "functions", element: <CppComponents.FunctionsMain /> },
+                { path: "test", element: <CppComponents.TestMain /> },
               ],
             },
           ],
