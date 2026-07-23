@@ -10,7 +10,10 @@ import O3_PassPropsInterfaceType from "./O3_PassPropsInterfaceType";
 import O4_OptionalProps from "./O4_OptionalProps";
 import O5_DefaultProps from "./O5_DefaultProps";
 import O6_PassObjectProps from "./O6_PassObjectProps";
-import O7_PassFunctionProps from "./O7_PassFunctionProps";
+import O7_PassStateAndUseStateProps from "./O7_PassStateAndUseStateProps";
+import O8_PassChildrenProps from "./O8_PassChildrenProps";
+import LiftingStateUp from "./LiftingStateUp";
+import O9_PassFunctionsProps from "./O9_PassFunctionsProps";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -22,7 +25,10 @@ const o3_PassPropsInterfaceType = "3. Props Interface/Type";
 const o4_OptionalProps = "4. Optional Prop (?)";
 const o5_DefaultProps = "5. Default Prop";
 const o6_PassObjectProps = "6. Pass Object Props";
-const o7_PassFunctionProps = "7. Pass Function Props";
+const liftingStateUp = "Lifting State Up";
+const o7_PassStateAndUseStateProps = "7. Pass state & useState Props";
+const o8_PassChildrenProps = "8. Pass Children Props";
+const o9_PassFunctionsProps = "9. Pass Functions Props";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
@@ -35,7 +41,10 @@ const anchorList: string[] = [
   o4_OptionalProps,
   o5_DefaultProps,
   o6_PassObjectProps,
-  o7_PassFunctionProps,
+  liftingStateUp,
+  o7_PassStateAndUseStateProps,
+  o8_PassChildrenProps,
+  o9_PassFunctionsProps,
 ];
 
 // ============================================
@@ -96,7 +105,10 @@ const PropsMain = () => {
       <O4_OptionalProps anchor={o4_OptionalProps} />
       <O5_DefaultProps anchor={o5_DefaultProps} />
       <O6_PassObjectProps anchor={o6_PassObjectProps} />
-      <O7_PassFunctionProps anchor={o7_PassFunctionProps} />
+      <LiftingStateUp anchor={liftingStateUp} />
+      <O7_PassStateAndUseStateProps anchor={o7_PassStateAndUseStateProps} />
+      <O8_PassChildrenProps anchor={o8_PassChildrenProps} />
+      <O9_PassFunctionsProps anchor={o9_PassFunctionsProps} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
