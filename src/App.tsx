@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
 import * as Pages from "./pages";
-
 import * as SpringComponents from "./pages/Spring/SpringComponents";
+import * as FastAPIComponents from "./pages/FastAPI/FastAPIComponents";
 
 import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 
@@ -42,7 +42,9 @@ import {
   StorageMain,
   ContextMain,
 } from "./pages/ReactJS/ReactJSComponents";
+
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
+
 import {
   FetchApi,
   FetchApiMain,
@@ -51,10 +53,15 @@ import {
   JsArrayMain,
   PromiseAsyncAwaitMain,
 } from "./pages/JavaScript/JavaScriptComponents";
+
 import { AddCssMain, CssBasics, HtmlBasics, HtmlCssHome, HtmlTypesMain } from "./pages/HTML_CSS/HtmlCssComponents";
+
 import { FullStackHome } from "./pages/FullStack/FullStackComponents";
+
 import { BasicConcepts, KeyTypesMain, SqlHome } from "./pages/Sql/SqlComponents";
+
 import { Django, FastApi, PythonBasics, PythonGeneral, PythonHome, PythonIde } from "./pages/Python/PythonComponents";
+
 import {
   ConnectToServerSshMain,
   CreateServerMain,
@@ -80,10 +87,14 @@ import {
 } from "./pages/DevOps/DevOpsComponents";
 
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
+
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
+import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
+
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
 
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
+
 import {
   AliasMain,
   BetweenMain,
@@ -112,12 +123,16 @@ import {
   SpringCloudConfig_2_7_18_Main,
   TracingZipkinSleuth_2_7_18_Main,
 } from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg";
+
 import SecurityMicroServ from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/SecurityMicroServ";
+
 import { IntroMicroServSecurityMain } from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg";
+
 import ProjectWithSecurityMain from "./pages/MicroServices/MicroServiceComponents/M5_SecurityMicroServPkg/O2_ProjectWithSecuritySections/ProjectWithSecurityMain";
+
 import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/MicroServiceComponents/M3_KafkaPkg";
+
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M4_RabbitMQPkg";
-import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 
 import {
   AbstractFactoryMain,
@@ -126,8 +141,11 @@ import {
   PrototypeMain,
   SingletonMain,
 } from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg";
+
 import DesignPatternCreational from "./pages/Java/JavaComponents/J3_DesignPatternCreationalPkg/DesignPatternCreational";
+
 import JavaInterviewQuestions from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg/JavaInterviewQuestions";
+
 import {
   ArrayMain,
   GcHeapStackMain,
@@ -143,18 +161,32 @@ import {
   JavaGenericsMain,
   JavaMemoryMonitoringMain,
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
+
 import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
 import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
+
 import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R9_ReactJSInterviewQuestionsPkg";
+
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
+
 import { AllegriaMain, LoveAndLiberteMain } from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg";
+
 import { FlamencoBasicsMain, RumbaMain, SoleaMain } from "./pages/Guitar/GuitarComponents/G3_FlamencoPkg";
+
 import GeneralMain from "./pages/Guitar/GuitarComponents/G1_GeneralPkg/GeneralMain";
+
+import ChordsMain from "./pages/Guitar/GuitarComponents/G0_ChordsPkg/ChordsMain";
+
 import ArraysMain from "./pages/Java/JavaComponents/J2_DataStructuresPkg/A_ArraysSections/ArraysMain";
+
 import { ConcurrentDataMain, ListMain, MapMain, QueueMain, SetMain } from "./pages/Java/JavaComponents/J2_DataStructuresPkg";
+
 import JavaFundamentalMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/A_BasicsSections/JavaFundamentalMain";
+
 import GenericSongsMain from "./pages/Guitar/GuitarComponents/G2_GipsyKingsPkg/X_GenericSonsSections/GenericSongsMain";
+
 import Batch from "./pages/Windows/WindowsComponents/BatchPkg/Batch";
+
 import AsciiMain from "./pages/Windows/WindowsComponents/BatchPkg/A_AsciiSections/AsciiMain";
 
 import {
@@ -169,10 +201,15 @@ import {
   PythonOopMain,
   VenvMain,
 } from "./pages/Python/PythonComponents/P2_PythonBasicsPkg";
+
 import { PyCharmMain, VsCodeMain } from "./pages/Python/PythonComponents/P0_PythonIdePkg";
+
 import { CreateProjectMain, PythonGitMain } from "./pages/Python/PythonComponents/P1_PythonGeneralPkg";
+
 import { CreateDjangoProjectMain } from "./pages/Python/PythonComponents/P5_DjangoPkg";
+
 import SetupFastApiProjectMain from "./pages/Python/PythonComponents/P4_FastApiPkg/A__SetupFastApiProjectSections/SetupFastApiProjectMain";
+
 import {
   AdvancedTopicsMain,
   ApplicationStructureAndArchitectureMain,
@@ -186,41 +223,11 @@ import {
   SecurityMain,
   TestingMain,
 } from "./pages/Python/PythonComponents/P4_FastApiPkg";
+
 import { PythonDictionaryMain, PythonListMain, PythonSetMain, PythonTupleMain } from "./pages/Python/PythonComponents/P3_DataStructuresPkg";
-import FastAPI_page from "./pages/FastAPI/FastAPI_page";
-import {
-  FastAPIAuditing,
-  FastAPICaching,
-  FastApiConfigurationProfilesEnv,
-  FastAPIException,
-  FastAPIHome,
-  FastAPIIde,
-  FastApiInstallMain,
-  FastAPILogging,
-  FastAPIRouter,
-  FastAPISecurity,
-  FastAPISQLAlchemy,
-} from "./pages/FastAPI/FastAPIComponents";
-import {
-  GetRequestMain,
-  MainPyMain,
-  PostRequestMain,
-  PydanticMain,
-  RequestResponseMain,
-  SetupFastApiMain,
-} from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
+
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
-import { ExceptionsMain, GlobalExceptionsMain } from "./pages/FastAPI/FastAPIComponents/F4_FastAPIExceptionPkg";
-import { FolderStructureMain, SqlAlchemyConfigMain } from "./pages/FastAPI/FastAPIComponents/F5_FastAPISQLAlchemyPkg";
-import {
-  DBInitLikeDataSqlMain,
-  EnvMain,
-  MySqlAlchemyMain,
-  PostgresqlalchemyMain,
-  ProfilesMain,
-  Sqlite3Main,
-} from "./pages/FastAPI/FastAPIComponents/F1_FastAPIDatabaseProfilesEnvPkg";
-import { DefaultLoggingMain, LoggingConfigMain, LoggingConfINIMain } from "./pages/FastAPI/FastAPIComponents/F2_FastAPILoggingPkg";
+
 import {
   AdapterMain,
   BridgeMain,
@@ -230,6 +237,7 @@ import {
   FlyweightMain,
   ProxyMain,
 } from "./pages/Java/JavaComponents/J4_DesignPatternStructuralPkg";
+
 import {
   ChainOfResponsibilityMain,
   CommandMain,
@@ -242,12 +250,16 @@ import {
   TemplateMethodMain,
   VisitorMain,
 } from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg";
+
 import ComparableComparatorMain from "./pages/Java/JavaComponents/J1_JavaBasicsPkg/D_ComparableComparatorSections/ComparableComparatorMain";
+
 import ArchitectureSpringBoot2 from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/ArchitectureSpringBoot2";
+
 import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComponents/M2_ArchitectureSpringBoot3Pkg";
+
 import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
+
 import { AxiosInstallMain, AxiosInstanceMain } from "./pages/ReactJS/ReactJSComponents/R6_AxiosPkg";
-import ChordsMain from "./pages/Guitar/GuitarComponents/G0_ChordsPkg/ChordsMain";
 
 const router = createBrowserRouter(
   [
@@ -655,13 +667,13 @@ const router = createBrowserRouter(
         },
         {
           path: "fastapi",
-          element: <FastAPI_page />,
+          element: <Pages.FastAPI_page />,
           children: [
-            { index: true, element: <FastAPIHome /> },
-            { path: "install", element: <FastApiInstallMain /> },
+            { index: true, element: <FastAPIComponents.FastAPIHome /> },
+            { path: "install", element: <FastAPIComponents.FastApiInstallMain /> },
             {
               path: "ide",
-              element: <FastAPIIde />,
+              element: <FastAPIComponents.FastAPIIde />,
               children: [
                 { path: "pycharm", element: <PyCharmMain /> },
                 { path: "vscode", element: <VsCodeMain /> },
@@ -669,57 +681,57 @@ const router = createBrowserRouter(
             },
             {
               path: "database-env-profiles",
-              element: <FastApiConfigurationProfilesEnv />,
+              element: <FastAPIComponents.FastApiConfigurationProfilesEnv />,
               children: [
-                { path: "sqlite3", element: <Sqlite3Main /> },
-                { path: "mysql", element: <MySqlAlchemyMain /> },
-                { path: "postgresql", element: <PostgresqlalchemyMain /> },
-                { path: "env", element: <EnvMain /> },
-                { path: "profiles", element: <ProfilesMain /> },
-                { path: "db-init-data-sql", element: <DBInitLikeDataSqlMain /> },
+                { path: "sqlite3", element: <FastAPIComponents.Sqlite3Main /> },
+                { path: "mysql", element: <FastAPIComponents.MySqlAlchemyMain /> },
+                { path: "postgresql", element: <FastAPIComponents.PostgresqlalchemyMain /> },
+                { path: "env", element: <FastAPIComponents.EnvMain /> },
+                { path: "profiles", element: <FastAPIComponents.ProfilesMain /> },
+                { path: "db-init-data-sql", element: <FastAPIComponents.DBInitLikeDataSqlMain /> },
               ],
             },
             {
               path: "logging",
-              element: <FastAPILogging />,
+              element: <FastAPIComponents.FastAPILogging />,
               children: [
-                { path: "default-logging", element: <DefaultLoggingMain /> },
-                { path: "logging-config", element: <LoggingConfigMain /> },
-                { path: "logging-conf", element: <LoggingConfINIMain /> },
+                { path: "default-logging", element: <FastAPIComponents.DefaultLoggingMain /> },
+                { path: "logging-config", element: <FastAPIComponents.LoggingConfigMain /> },
+                { path: "logging-conf", element: <FastAPIComponents.LoggingConfINIMain /> },
               ],
             },
             {
               path: "router",
-              element: <FastAPIRouter />,
+              element: <FastAPIComponents.FastAPIRouter />,
               children: [
-                { path: "main-py", element: <MainPyMain /> },
-                { path: "setup-fastapi", element: <SetupFastApiMain /> },
-                { path: "pydantic", element: <PydanticMain /> },
-                { path: "request-response", element: <RequestResponseMain /> },
-                { path: "get-request", element: <GetRequestMain /> },
-                { path: "post-request", element: <PostRequestMain /> },
+                { path: "main-py", element: <FastAPIComponents.MainPyMain /> },
+                { path: "setup-fastapi", element: <FastAPIComponents.SetupFastApiMain /> },
+                { path: "pydantic", element: <FastAPIComponents.PydanticMain /> },
+                { path: "request-response", element: <FastAPIComponents.RequestResponseMain /> },
+                { path: "get-request", element: <FastAPIComponents.GetRequestMain /> },
+                { path: "post-request", element: <FastAPIComponents.PostRequestMain /> },
               ],
             },
             {
               path: "exceptions",
-              element: <FastAPIException />,
+              element: <FastAPIComponents.FastAPIException />,
               children: [
-                { path: "default", element: <ExceptionsMain /> },
-                { path: "global-exception", element: <GlobalExceptionsMain /> },
+                { path: "default", element: <FastAPIComponents.ExceptionsMain /> },
+                { path: "global-exception", element: <FastAPIComponents.GlobalExceptionsMain /> },
               ],
             },
             {
               path: "sqlalchemy",
-              element: <FastAPISQLAlchemy />,
+              element: <FastAPIComponents.FastAPISQLAlchemy />,
               children: [
-                { path: "folder-structure", element: <FolderStructureMain /> },
-                { path: "sqlalchemy-config", element: <SqlAlchemyConfigMain /> },
+                { path: "folder-structure", element: <FastAPIComponents.FolderStructureMain /> },
+                { path: "sqlalchemy-config", element: <FastAPIComponents.SqlAlchemyConfigMain /> },
                 // folder-structure
               ],
             },
-            { path: "auditing", element: <FastAPIAuditing /> },
-            { path: "security", element: <FastAPISecurity /> },
-            { path: "caching", element: <FastAPICaching /> },
+            { path: "auditing", element: <FastAPIComponents.FastAPIAuditing /> },
+            { path: "security", element: <FastAPIComponents.FastAPISecurity /> },
+            { path: "caching", element: <FastAPIComponents.FastAPICaching /> },
           ],
         },
         {
