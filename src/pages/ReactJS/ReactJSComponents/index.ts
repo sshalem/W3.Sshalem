@@ -24,3 +24,4 @@ export { default as ReactIconsMain } from "./R1_ProjectSetupPkg/C_ReactIconsSect
 export { default as TailwindcssMain } from "./R1_ProjectSetupPkg/D_TailwindcssSections/TailwindcssMain";
 
 export { default as StorageMain } from "./R3_TypeScriptPkg/C_StorageSections/StorageMain";
+export { default as ContextMain } from "./R3_TypeScriptPkg/D_context/ContextMain";

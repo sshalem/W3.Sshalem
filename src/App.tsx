@@ -1,60 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components";
-import {
-  Cpp_page,
-  DevOps_page,
-  Error_page,
-  FullStack_page,
-  Guitar_page,
-  Home_page,
-  HTML_CSS_page,
-  Java_page,
-  JavaScript_page,
-  Linux_page,
-  MicroServices_page,
-  Page_Creation_page,
-  Postman_page,
-  Python_page,
-  ReactJS_page,
-  Spring_page,
-  Sql_page,
-  Windows_page,
-} from "./pages";
+import * as Pages from "./pages";
 
-import {
-  Aop,
-  ApplicationProperties,
-  Auditing,
-  Caching,
-  ExceptionHandling,
-  Ide,
-  InterviewQuestions,
-  Jenkins,
-  Jpa,
-  JUnit,
-  Logging,
-  Rest,
-  SpringBatch,
-  SpringHome,
-  SpringIO,
-  SpringSecurity,
-  TransactionManagement,
-} from "./pages/Spring/SpringComponents";
+import * as SpringComponents from "./pages/Spring/SpringComponents";
 
-import {
-  DBeaverMain,
-  DBInitCommandLineRunnerMain,
-  DBInitDataSqlMain,
-  DBInitPostConstructMain,
-  H2Main,
-  MongoDBMain,
-  MySqlMain,
-  PostgresqlMain,
-  ProfileMain,
-  ReadFromPropertiesMain,
-} from "./pages/Spring/SpringComponents/S2_ApplicationPropsPkg";
-
-import { LogFileMain, LogUtilMain, Slf4jLogbackMain, LoggingPropsMain } from "./pages/Spring/SpringComponents/S3_LoggingPkg";
 import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 
 import {
@@ -91,6 +40,7 @@ import {
   ReactIconsMain,
   TailwindcssMain,
   StorageMain,
+  ContextMain,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 import {
@@ -132,61 +82,6 @@ import {
 import { LinuxHome } from "./pages/Linux/LinuxComponents";
 import { CollectionMain, Environment, MultipleHttpRequestMain, PostmanHome } from "./pages/Postman/PostmanComponents";
 import { PortCheckMain, WindowsHome } from "./pages/Windows/WindowsComponents";
-import { IntelliJMain, StsMain } from "./pages/Spring/SpringComponents/S1_IdePkg";
-import {
-  CorsMain,
-  JsonJacksonMain,
-  OpenApiSwaggerMain,
-  RestMain,
-  SseMain,
-  StreamDataMain,
-  StreamLargeResponseMain,
-  WebSocketMain,
-} from "./pages/Spring/SpringComponents/S7_RestApiPkg";
-
-import {
-  GenZCareerMain,
-  JavaInUseMain,
-  JavaTechieMain,
-  LoopStreamParallelStreamMain,
-  MultiThreadBlockQueueMain,
-  StreamRecordsInstantlyMain,
-} from "./pages/Spring/SpringComponents/S16_InterviewQuestionsPkg";
-
-import {
-  CaffeineMain,
-  EhCacheMain,
-  HazelcastMain,
-  InfinispanMain,
-  RedisMain,
-  SimpleDefaultMain,
-} from "./pages/Spring/SpringComponents/S12_CachingPkg";
-
-import {
-  JwtMain,
-  JwtRefreshTokenInDBHttpOnlyMain,
-  JwtRefreshTokenInDBMain,
-  JwtRefreshTokenStatelessMain,
-  JwtV3_5_6Main,
-  JwtV_2_6_11Main,
-  MultipleJwtSecurityConfigMain,
-  OAuth2Main,
-  SpringSecurityMain,
-} from "./pages/Spring/SpringComponents/S8_SecurityPkg";
-import { BeforeAdviceMain } from "./pages/Spring/SpringComponents/S9_AopPkg";
-import {
-  ConfigMsgControllerMain,
-  ConfigMsgPropertiesMain,
-  CustomAtControllerAdviceMain,
-  CustomCtrlAdviceProdMain,
-  CustomErrMsgMain,
-  RuntimeMain,
-  TimestampConfigMain,
-} from "./pages/Spring/SpringComponents/S6_ExceptionsPkg";
-
-import { ExcelMain, FileUploadMain } from "./pages/Spring/SpringComponents/S13_SpringIOPkg";
-import { JunitArchitectureMain } from "./pages/Spring/SpringComponents/S14_JUnitPkg";
-import { CICDMain, JenkinsServerMain } from "./pages/Spring/SpringComponents/S15_JenkinsPkg";
 
 import OperatorStatements from "./pages/Sql/SqlComponents/OperatorStatementsPkg/OperatorStatements";
 import {
@@ -206,17 +101,6 @@ import {
 } from "./pages/Sql/SqlComponents/OperatorStatementsPkg";
 
 import {
-  EntityValidationMain,
-  JpaEntityHashEqualsMain,
-  JpaLoggingMain,
-  JpqlMain,
-  Many2ManyBiLazyMain,
-  MappingLibsMain,
-  One2ManyBiLazyMain,
-  PaginationSortingMain,
-  StoredProceduresFunctionsMain,
-} from "./pages/Spring/SpringComponents/S4_JpaPkg";
-import {
   APIGateway_2_7_18_Main,
   ArchitectureOptionsMain,
   CustomerOrderMain,
@@ -235,15 +119,6 @@ import { KafkaIntroMain, KafkaMsgOrderingMain } from "./pages/MicroServices/Micr
 import { RabbitMQIntroMain } from "./pages/MicroServices/MicroServiceComponents/M4_RabbitMQPkg";
 import { EnvironmentSetupMain } from "./pages/Postman/PostmanComponents/EnvironmentPkg";
 
-import { CombinedAuditMain, HibernateEnvarsMain, JpaAuditMain, SpringDataEnvarsMain } from "./pages/Spring/SpringComponents/S5_AuditingPkg";
-import {
-  IsolationMain,
-  PropagationMain,
-  RollbackMain,
-  TransactionalMain,
-  TransactionManagementMain,
-} from "./pages/Spring/SpringComponents/S10_TransactionManagementPkg";
-import { BatchPartitioningMain, BatchProcessMain } from "./pages/Spring/SpringComponents/S11_SpringBatchPkg";
 import {
   AbstractFactoryMain,
   BuilderMain,
@@ -379,12 +254,12 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <MainLayout />,
-      errorElement: <Error_page />,
+      errorElement: <Pages.Error_page />,
       children: [
-        { index: true, element: <Home_page /> },
+        { index: true, element: <Pages.Home_page /> },
         {
           path: "java",
-          element: <Java_page />,
+          element: <Pages.Java_page />,
           children: [
             { index: true, element: <JavaHome /> },
             {
@@ -473,177 +348,177 @@ const router = createBrowserRouter(
         },
         {
           path: "spring",
-          element: <Spring_page />,
+          element: <Pages.Spring_page />,
           children: [
-            { index: true, element: <SpringHome /> },
+            { index: true, element: <SpringComponents.SpringHome /> },
             {
               path: "ide",
-              element: <Ide />,
+              element: <SpringComponents.Ide />,
               children: [
-                { path: "sts", element: <StsMain /> },
-                { path: "intellij", element: <IntelliJMain /> },
+                { path: "sts", element: <SpringComponents.StsMain /> },
+                { path: "intellij", element: <SpringComponents.IntelliJMain /> },
               ],
             },
             {
               path: "application-properties",
-              element: <ApplicationProperties />,
+              element: <SpringComponents.ApplicationProperties />,
               children: [
-                { path: "h2", element: <H2Main /> },
-                { path: "postgresql", element: <PostgresqlMain /> },
-                { path: "mysql", element: <MySqlMain /> },
-                { path: "mongodb", element: <MongoDBMain /> },
-                { path: "dbeaver", element: <DBeaverMain /> },
-                { path: "profiles", element: <ProfileMain /> },
-                { path: "db-initialization", element: <DBInitDataSqlMain /> },
-                { path: "post-construct-initialization", element: <DBInitPostConstructMain /> },
-                { path: "command-line-initialization", element: <DBInitCommandLineRunnerMain /> },
-                { path: "read-from-properties", element: <ReadFromPropertiesMain /> },
+                { path: "h2", element: <SpringComponents.H2Main /> },
+                { path: "postgresql", element: <SpringComponents.PostgresqlMain /> },
+                { path: "mysql", element: <SpringComponents.MySqlMain /> },
+                { path: "mongodb", element: <SpringComponents.MongoDBMain /> },
+                { path: "dbeaver", element: <SpringComponents.DBeaverMain /> },
+                { path: "profiles", element: <SpringComponents.ProfileMain /> },
+                { path: "db-initialization", element: <SpringComponents.DBInitDataSqlMain /> },
+                { path: "post-construct-initialization", element: <SpringComponents.DBInitPostConstructMain /> },
+                { path: "command-line-initialization", element: <SpringComponents.DBInitCommandLineRunnerMain /> },
+                { path: "read-from-properties", element: <SpringComponents.ReadFromPropertiesMain /> },
               ],
             },
             {
               path: "logging",
-              element: <Logging />,
+              element: <SpringComponents.Logging />,
               children: [
-                { path: "LogUtil", element: <LogUtilMain /> },
-                { path: "slf4j-logback", element: <Slf4jLogbackMain /> },
-                { path: "log-file", element: <LogFileMain /> },
-                { path: "logging-props", element: <LoggingPropsMain /> },
+                { path: "LogUtil", element: <SpringComponents.LogUtilMain /> },
+                { path: "slf4j-logback", element: <SpringComponents.Slf4jLogbackMain /> },
+                { path: "log-file", element: <SpringComponents.LogFileMain /> },
+                { path: "logging-props", element: <SpringComponents.LoggingPropsMain /> },
               ],
             },
             {
               path: "jpa",
-              element: <Jpa />,
+              element: <SpringComponents.Jpa />,
               children: [
-                { path: "equals-hashcode", element: <JpaEntityHashEqualsMain /> },
-                { path: "entity-validation", element: <EntityValidationMain /> },
-                { path: "mapping-libs", element: <MappingLibsMain /> },
-                { path: "jpql", element: <JpqlMain /> },
-                { path: "pagination-sorting", element: <PaginationSortingMain /> },
-                { path: "many2many-bi-lazy", element: <Many2ManyBiLazyMain /> },
-                { path: "one2many-bi-lazy", element: <One2ManyBiLazyMain /> },
-                { path: "stored-procedures-functions", element: <StoredProceduresFunctionsMain /> },
-                { path: "logging-jpa-hibernate", element: <JpaLoggingMain /> },
+                { path: "equals-hashcode", element: <SpringComponents.JpaEntityHashEqualsMain /> },
+                { path: "entity-validation", element: <SpringComponents.EntityValidationMain /> },
+                { path: "mapping-libs", element: <SpringComponents.MappingLibsMain /> },
+                { path: "jpql", element: <SpringComponents.JpqlMain /> },
+                { path: "pagination-sorting", element: <SpringComponents.PaginationSortingMain /> },
+                { path: "many2many-bi-lazy", element: <SpringComponents.Many2ManyBiLazyMain /> },
+                { path: "one2many-bi-lazy", element: <SpringComponents.One2ManyBiLazyMain /> },
+                { path: "stored-procedures-functions", element: <SpringComponents.StoredProceduresFunctionsMain /> },
+                { path: "logging-jpa-hibernate", element: <SpringComponents.JpaLoggingMain /> },
               ],
             },
             {
               path: "audit",
-              element: <Auditing />,
+              element: <SpringComponents.Auditing />,
               children: [
-                { path: "jpa-audit", element: <JpaAuditMain /> },
-                { path: "hibernate-envars-audit", element: <HibernateEnvarsMain /> },
-                { path: "spring-envars-audit", element: <SpringDataEnvarsMain /> },
-                { path: "combine-jpa-envars-audit", element: <CombinedAuditMain /> },
+                { path: "jpa-audit", element: <SpringComponents.JpaAuditMain /> },
+                { path: "hibernate-envars-audit", element: <SpringComponents.HibernateEnvarsMain /> },
+                { path: "spring-envars-audit", element: <SpringComponents.SpringDataEnvarsMain /> },
+                { path: "combine-jpa-envars-audit", element: <SpringComponents.CombinedAuditMain /> },
               ],
             },
             {
               path: "exception-handling",
-              element: <ExceptionHandling />,
+              element: <SpringComponents.ExceptionHandling />,
               children: [
-                { path: "runtime", element: <RuntimeMain /> },
-                { path: "config-msg-app-props", element: <ConfigMsgPropertiesMain /> },
-                { path: "config-msg-at-controller", element: <ConfigMsgControllerMain /> },
-                { path: "custom-error-msg", element: <CustomErrMsgMain /> },
-                { path: "custom-error-msg-controller-advice", element: <CustomAtControllerAdviceMain /> },
-                { path: "custom-rest-controller-advice", element: <CustomCtrlAdviceProdMain /> },
-                { path: "timestamp-error-config", element: <TimestampConfigMain /> },
+                { path: "runtime", element: <SpringComponents.RuntimeMain /> },
+                { path: "config-msg-app-props", element: <SpringComponents.ConfigMsgPropertiesMain /> },
+                { path: "config-msg-at-controller", element: <SpringComponents.ConfigMsgControllerMain /> },
+                { path: "custom-error-msg", element: <SpringComponents.CustomErrMsgMain /> },
+                { path: "custom-error-msg-controller-advice", element: <SpringComponents.CustomAtControllerAdviceMain /> },
+                { path: "custom-rest-controller-advice", element: <SpringComponents.CustomCtrlAdviceProdMain /> },
+                { path: "timestamp-error-config", element: <SpringComponents.TimestampConfigMain /> },
               ],
             },
             {
               path: "rest",
-              element: <Rest />,
+              element: <SpringComponents.Rest />,
               children: [
                 // RestMain
-                { path: "rest-api", element: <RestMain /> },
-                { path: "json-jackson", element: <JsonJacksonMain /> },
-                { path: "cors", element: <CorsMain /> },
-                { path: "openapi-swagger", element: <OpenApiSwaggerMain /> },
-                { path: "sse", element: <SseMain /> },
-                { path: "websocket", element: <WebSocketMain /> },
-                { path: "stream-data", element: <StreamDataMain /> },
-                { path: "stream-large-response", element: <StreamLargeResponseMain /> },
+                { path: "rest-api", element: <SpringComponents.RestMain /> },
+                { path: "json-jackson", element: <SpringComponents.JsonJacksonMain /> },
+                { path: "cors", element: <SpringComponents.CorsMain /> },
+                { path: "openapi-swagger", element: <SpringComponents.OpenApiSwaggerMain /> },
+                { path: "sse", element: <SpringComponents.SseMain /> },
+                { path: "websocket", element: <SpringComponents.WebSocketMain /> },
+                { path: "stream-data", element: <SpringComponents.StreamDataMain /> },
+                { path: "stream-large-response", element: <SpringComponents.StreamLargeResponseMain /> },
               ],
             },
             {
               path: "security",
-              element: <SpringSecurity />,
+              element: <SpringComponents.SpringSecurity />,
               children: [
-                { path: "spring-security", element: <SpringSecurityMain /> },
-                { path: "jwt", element: <JwtMain /> },
-                { path: "jwt-v2-6-11", element: <JwtV_2_6_11Main /> },
-                { path: "jwt-v3-5-6", element: <JwtV3_5_6Main /> },
-                { path: "jwt-refresh-token-stateless", element: <JwtRefreshTokenStatelessMain /> },
-                { path: "jwt-refresh-token-in-DB", element: <JwtRefreshTokenInDBMain /> },
-                { path: "jwt-refresh-token-httpOnly", element: <JwtRefreshTokenInDBHttpOnlyMain /> },
-                { path: "jwt-multiple-config", element: <MultipleJwtSecurityConfigMain /> },
-                { path: "oauth2", element: <OAuth2Main /> },
+                { path: "spring-security", element: <SpringComponents.SpringSecurityMain /> },
+                { path: "jwt", element: <SpringComponents.JwtMain /> },
+                { path: "jwt-v2-6-11", element: <SpringComponents.JwtV_2_6_11Main /> },
+                { path: "jwt-v3-5-6", element: <SpringComponents.JwtV3_5_6Main /> },
+                { path: "jwt-refresh-token-stateless", element: <SpringComponents.JwtRefreshTokenStatelessMain /> },
+                { path: "jwt-refresh-token-in-DB", element: <SpringComponents.JwtRefreshTokenInDBMain /> },
+                { path: "jwt-refresh-token-httpOnly", element: <SpringComponents.JwtRefreshTokenInDBHttpOnlyMain /> },
+                { path: "jwt-multiple-config", element: <SpringComponents.MultipleJwtSecurityConfigMain /> },
+                { path: "oauth2", element: <SpringComponents.OAuth2Main /> },
               ],
             },
-            { path: "aop", element: <Aop />, children: [{ path: "before-advice", element: <BeforeAdviceMain /> }] },
+            { path: "aop", element: <SpringComponents.Aop />, children: [{ path: "before-advice", element: <SpringComponents.BeforeAdviceMain /> }] },
             {
               path: "transaction-management",
-              element: <TransactionManagement />,
+              element: <SpringComponents.TransactionManagement />,
               children: [
-                { path: "concepts", element: <TransactionManagementMain /> },
-                { path: "transactional", element: <TransactionalMain /> },
-                { path: "propagation", element: <PropagationMain /> },
-                { path: "rollback", element: <RollbackMain /> },
-                { path: "isolation", element: <IsolationMain /> },
+                { path: "concepts", element: <SpringComponents.TransactionManagementMain /> },
+                { path: "transactional", element: <SpringComponents.TransactionalMain /> },
+                { path: "propagation", element: <SpringComponents.PropagationMain /> },
+                { path: "rollback", element: <SpringComponents.RollbackMain /> },
+                { path: "isolation", element: <SpringComponents.IsolationMain /> },
               ],
             },
             {
               path: "batch",
-              element: <SpringBatch />,
+              element: <SpringComponents.SpringBatch />,
               children: [
-                { path: "process", element: <BatchProcessMain /> },
-                { path: "partitioning", element: <BatchPartitioningMain /> },
+                { path: "process", element: <SpringComponents.BatchProcessMain /> },
+                { path: "partitioning", element: <SpringComponents.BatchPartitioningMain /> },
               ],
             },
             {
               path: "caching",
-              element: <Caching />,
+              element: <SpringComponents.Caching />,
               children: [
-                { path: "simple-default", element: <SimpleDefaultMain /> },
-                { path: "caffeine", element: <CaffeineMain /> },
-                { path: "ehCache", element: <EhCacheMain /> },
-                { path: "redis", element: <RedisMain /> },
-                { path: "hazelcast", element: <HazelcastMain /> },
-                { path: "infinispan", element: <InfinispanMain /> },
+                { path: "simple-default", element: <SpringComponents.SimpleDefaultMain /> },
+                { path: "caffeine", element: <SpringComponents.CaffeineMain /> },
+                { path: "ehCache", element: <SpringComponents.EhCacheMain /> },
+                { path: "redis", element: <SpringComponents.RedisMain /> },
+                { path: "hazelcast", element: <SpringComponents.HazelcastMain /> },
+                { path: "infinispan", element: <SpringComponents.InfinispanMain /> },
               ],
             },
             {
               path: "io",
-              element: <SpringIO />,
+              element: <SpringComponents.SpringIO />,
               children: [
-                { path: "file-upload", element: <FileUploadMain /> },
-                { path: "Excel", element: <ExcelMain /> },
+                { path: "file-upload", element: <SpringComponents.FileUploadMain /> },
+                { path: "Excel", element: <SpringComponents.ExcelMain /> },
               ],
             },
             {
               path: "junit",
-              element: <JUnit />,
+              element: <SpringComponents.JUnit />,
               children: [
-                { path: "architecture", element: <JunitArchitectureMain /> },
+                { path: "architecture", element: <SpringComponents.JunitArchitectureMain /> },
                 // { path: "", element: < /> },
               ],
             },
             {
               path: "jenkins",
-              element: <Jenkins />,
+              element: <SpringComponents.Jenkins />,
               children: [
-                { path: "ci-cd", element: <CICDMain /> },
-                { path: "server-install", element: <JenkinsServerMain /> },
+                { path: "ci-cd", element: <SpringComponents.CICDMain /> },
+                { path: "server-install", element: <SpringComponents.JenkinsServerMain /> },
               ],
             },
             {
               path: "interview-questions",
-              element: <InterviewQuestions />,
+              element: <SpringComponents.InterviewQuestions />,
               children: [
-                { path: "stream-records-instantly", element: <StreamRecordsInstantlyMain /> },
-                { path: "loop-stream-parallel-stream", element: <LoopStreamParallelStreamMain /> },
-                { path: "multithread-block-queue", element: <MultiThreadBlockQueueMain /> },
-                { path: "java-in-use", element: <JavaInUseMain /> },
-                { path: "java-techie", element: <JavaTechieMain /> },
-                { path: "gen-z-career", element: <GenZCareerMain /> },
+                { path: "stream-records-instantly", element: <SpringComponents.StreamRecordsInstantlyMain /> },
+                { path: "loop-stream-parallel-stream", element: <SpringComponents.LoopStreamParallelStreamMain /> },
+                { path: "multithread-block-queue", element: <SpringComponents.MultiThreadBlockQueueMain /> },
+                { path: "java-in-use", element: <SpringComponents.JavaInUseMain /> },
+                { path: "java-techie", element: <SpringComponents.JavaTechieMain /> },
+                { path: "gen-z-career", element: <SpringComponents.GenZCareerMain /> },
               ],
             },
           ],
@@ -651,7 +526,7 @@ const router = createBrowserRouter(
 
         {
           path: "microservices",
-          element: <MicroServices_page />,
+          element: <Pages.MicroServices_page />,
           children: [
             { index: true, element: <MicroServiceHome /> },
             {
@@ -705,7 +580,7 @@ const router = createBrowserRouter(
         },
         {
           path: "python",
-          element: <Python_page />,
+          element: <Pages.Python_page />,
           children: [
             { index: true, element: <PythonHome /> },
             {
@@ -849,7 +724,7 @@ const router = createBrowserRouter(
         },
         {
           path: "reactJS",
-          element: <ReactJS_page />,
+          element: <Pages.ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
             {
@@ -878,6 +753,7 @@ const router = createBrowserRouter(
                 { path: "introduction", element: <IntroMain /> },
                 { path: "props", element: <PropsMain /> },
                 { path: "storage", element: <StorageMain /> },
+                { path: "context", element: <ContextMain /> },
               ],
             },
             {
@@ -915,7 +791,7 @@ const router = createBrowserRouter(
         },
         {
           path: "javascript",
-          element: <JavaScript_page />,
+          element: <Pages.JavaScript_page />,
           children: [
             { index: true, element: <JavaScriptHome /> },
             { path: "basics", element: <JavaScriptBasics />, children: [{ path: "array", element: <JsArrayMain /> }] },
@@ -931,18 +807,18 @@ const router = createBrowserRouter(
         },
         {
           path: "html_css",
-          element: <HTML_CSS_page />,
+          element: <Pages.HTML_CSS_page />,
           children: [
             { index: true, element: <HtmlCssHome /> },
             { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
             { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
           ],
         },
-        { path: "fullstack", element: <FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
+        { path: "fullstack", element: <Pages.FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },
 
         {
           path: "sql",
-          element: <Sql_page />,
+          element: <Pages.Sql_page />,
           children: [
             { index: true, element: <SqlHome /> },
             { path: "basic-concepts", element: <BasicConcepts />, children: [{ path: "key-types", element: <KeyTypesMain /> }] },
@@ -970,7 +846,7 @@ const router = createBrowserRouter(
 
         {
           path: "devops",
-          element: <DevOps_page />,
+          element: <Pages.DevOps_page />,
           children: [
             { index: true, element: <DevOpsHome /> },
             { path: "git", element: <GitMain /> },
@@ -1013,7 +889,7 @@ const router = createBrowserRouter(
         },
         {
           path: "guitar",
-          element: <Guitar_page />,
+          element: <Pages.Guitar_page />,
           children: [
             { index: true, element: <GuitarHome /> },
             {
@@ -1050,10 +926,10 @@ const router = createBrowserRouter(
             },
           ],
         },
-        { path: "linux", element: <Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
+        { path: "linux", element: <Pages.Linux_page />, children: [{ index: true, element: <LinuxHome /> }] },
         {
           path: "postman",
-          element: <Postman_page />,
+          element: <Pages.Postman_page />,
           children: [
             { index: true, element: <PostmanHome /> },
             { path: "collection", element: <CollectionMain /> },
@@ -1070,7 +946,7 @@ const router = createBrowserRouter(
         },
         {
           path: "windows",
-          element: <Windows_page />,
+          element: <Pages.Windows_page />,
           children: [
             { index: true, element: <WindowsHome /> },
             { path: "port-check", element: <PortCheckMain /> },
@@ -1079,7 +955,7 @@ const router = createBrowserRouter(
         },
         {
           path: "c++",
-          element: <Cpp_page />,
+          element: <Pages.Cpp_page />,
           children: [
             { index: true, element: <CppHome /> },
             {
@@ -1095,7 +971,7 @@ const router = createBrowserRouter(
         },
         {
           path: "page_creation",
-          element: <Page_Creation_page />,
+          element: <Pages.Page_Creation_page />,
           children: [
             { index: true, element: <PageCreationHome /> },
             {

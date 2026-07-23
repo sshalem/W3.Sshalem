@@ -44,6 +44,7 @@ const DropDownTypeScript = () => {
         <SideDropdownLink sideDropDownNavName="TS Introduction" internalLink="/reactJS/typescript/introduction" />
         <SideDropdownLink sideDropDownNavName="Passing Props" internalLink="/reactJS/typescript/props" />
         <SideDropdownLink sideDropDownNavName="Session/Local storage" internalLink="/reactJS/typescript/storage" />
+        <SideDropdownLink sideDropDownNavName="Context" internalLink="/reactJS/typescript/context" />
       </div>
     </section>
   );
