@@ -3,6 +3,7 @@ import { MainLayout } from "./components";
 import * as Pages from "./pages";
 import * as SpringComponents from "./pages/Spring/SpringComponents";
 import * as FastAPIComponents from "./pages/FastAPI/FastAPIComponents";
+import * as ReactJSComponents from "./pages/ReactJS/ReactJSComponents";
 
 import { ArchitectureSpringBoot3, Docker, Kafka, MicroServiceHome, RabbitMQ } from "./pages/MicroServices/MicroServiceComponents";
 
@@ -14,34 +15,6 @@ import {
   ComponentTreeComponent,
   WebPageComponent,
 } from "./pages/PageCreate/PageCreateComponents";
-
-import { CppHome, CppBasics, FunctionsMain, TestMain } from "./pages/Cpp/CppComponents";
-
-import {
-  Axios,
-  GlobalSearch,
-  IntroMain,
-  JsxMain,
-  MemorySearchMain,
-  Pagination,
-  PropsMain,
-  ReactBasics,
-  ReactJSHome,
-  ReactJSInterviewQuestions,
-  ReactOnSpringMain,
-  ReactRouter,
-  InstallRouterMain,
-  SetupMain,
-  TypeScript,
-  CreateRouterMain,
-  ProjectSetup,
-  CreateViteMain,
-  FaviconMain,
-  ReactIconsMain,
-  TailwindcssMain,
-  StorageMain,
-  ContextMain,
-} from "./pages/ReactJS/ReactJSComponents";
 
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
 
@@ -163,9 +136,8 @@ import {
 } from "./pages/Java/JavaComponents/J1_JavaBasicsPkg";
 
 import { CollectionsQuestionsMain, IO_QuestionsMain, MemoryMonitoringQuestionsMain } from "./pages/Java/JavaComponents/J9_JavaInterviewQuestionsPkg";
-import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 
-import { SuperupMain } from "./pages/ReactJS/ReactJSComponents/R9_ReactJSInterviewQuestionsPkg";
+import DesignPatternBehavioral from "./pages/Java/JavaComponents/J5_DesignPatternBehavioralPkg/DesignPatternBehavioral";
 
 import { AntonGlushkinMain, Flamenco, GipsyKings, GuitarHome } from "./pages/Guitar/GuitarComponents";
 
@@ -259,7 +231,7 @@ import { Architecture3OptionsMain } from "./pages/MicroServices/MicroServiceComp
 
 import ELK_2_7_18_Main from "./pages/MicroServices/MicroServiceComponents/M1_ArchitectureSpringBoot2Pkg/O5_ELK_2_7_18_Sections/ELK_2_7_18_Main";
 
-import { AxiosInstallMain, AxiosInstanceMain } from "./pages/ReactJS/ReactJSComponents/R6_AxiosPkg";
+import { CppHome, CppBasics, FunctionsMain, TestMain } from "./pages/Cpp/CppComponents";
 
 const router = createBrowserRouter(
   [
@@ -738,66 +710,66 @@ const router = createBrowserRouter(
           path: "reactJS",
           element: <Pages.ReactJS_page />,
           children: [
-            { index: true, element: <ReactJSHome /> },
+            { index: true, element: <ReactJSComponents.ReactJSHome /> },
             {
               path: "project-setup",
-              element: <ProjectSetup />,
+              element: <ReactJSComponents.ProjectSetup />,
               children: [
-                { path: "vite-create", element: <CreateViteMain /> },
-                { path: "favicon", element: <FaviconMain /> },
-                { path: "reacticons", element: <ReactIconsMain /> },
-                { path: "tailwindcss", element: <TailwindcssMain /> },
+                { path: "vite-create", element: <ReactJSComponents.CreateViteMain /> },
+                { path: "favicon", element: <ReactJSComponents.FaviconMain /> },
+                { path: "reacticons", element: <ReactJSComponents.ReactIconsMain /> },
+                { path: "tailwindcss", element: <ReactJSComponents.TailwindcssMain /> },
               ],
             },
-            { path: "setup", element: <SetupMain /> },
+            { path: "setup", element: <ReactJSComponents.SetupMain /> },
             {
               path: "basics",
-              element: <ReactBasics />,
+              element: <ReactJSComponents.ReactBasics />,
               children: [
-                { path: "jsx", element: <JsxMain /> },
-                { path: "jsx", element: <JsxMain /> },
+                { path: "jsx", element: <ReactJSComponents.JsxMain /> },
+                { path: "jsx", element: <ReactJSComponents.JsxMain /> },
               ],
             },
             {
               path: "typescript",
-              element: <TypeScript />,
+              element: <ReactJSComponents.TypeScript />,
               children: [
-                { path: "introduction", element: <IntroMain /> },
-                { path: "props", element: <PropsMain /> },
-                { path: "storage", element: <StorageMain /> },
-                { path: "context", element: <ContextMain /> },
+                { path: "introduction", element: <ReactJSComponents.IntroMain /> },
+                { path: "props", element: <ReactJSComponents.PropsMain /> },
+                { path: "storage", element: <ReactJSComponents.StorageMain /> },
+                { path: "context", element: <ReactJSComponents.ContextMain /> },
               ],
             },
             {
               path: "router",
-              element: <ReactRouter />,
+              element: <ReactJSComponents.ReactRouter />,
               children: [
-                { path: "install", element: <InstallRouterMain /> },
-                { path: "create-router", element: <CreateRouterMain /> },
+                { path: "install", element: <ReactJSComponents.InstallRouterMain /> },
+                { path: "create-router", element: <ReactJSComponents.CreateRouterMain /> },
               ],
             },
-            { path: "pagination", element: <Pagination /> },
+            { path: "pagination", element: <ReactJSComponents.Pagination /> },
             {
               path: "axios",
-              element: <Axios />,
+              element: <ReactJSComponents.Axios />,
               children: [
-                { path: "axios-install", element: <AxiosInstallMain /> },
-                { path: "create-instance", element: <AxiosInstanceMain /> },
+                { path: "axios-install", element: <ReactJSComponents.AxiosInstallMain /> },
+                { path: "create-instance", element: <ReactJSComponents.AxiosInstanceMain /> },
               ],
             },
-            { path: "react-on-spring", element: <ReactOnSpringMain /> },
+            { path: "react-on-spring", element: <ReactJSComponents.ReactOnSpringMain /> },
             {
               path: "global-search",
-              element: <GlobalSearch />,
+              element: <ReactJSComponents.GlobalSearch />,
               children: [
-                { path: "memory-search", element: <MemorySearchMain /> },
-                { path: "memory-search", element: <MemorySearchMain /> },
+                { path: "memory-search", element: <ReactJSComponents.MemorySearchMain /> },
+                { path: "memory-search", element: <ReactJSComponents.MemorySearchMain /> },
               ],
             },
             {
               path: "reactjs-interview-questions",
-              element: <ReactJSInterviewQuestions />,
-              children: [{ path: "superup", element: <SuperupMain /> }],
+              element: <ReactJSComponents.ReactJSInterviewQuestions />,
+              children: [{ path: "superup", element: <ReactJSComponents.SuperupMain /> }],
             },
           ],
         },

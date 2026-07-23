@@ -25,3 +25,8 @@ export { default as TailwindcssMain } from "./R1_ProjectSetupPkg/D_TailwindcssSe
 
 export { default as StorageMain } from "./R3_TypeScriptPkg/C_StorageSections/StorageMain";
 export { default as ContextMain } from "./R3_TypeScriptPkg/D_context/ContextMain";
+
+export { default as AxiosInstallMain } from "./R6_AxiosPkg/A_AxiosInstallSections/AxiosInstallMain";
+export { default as AxiosInstanceMain } from "./R6_AxiosPkg/B_AxiosInstanceSections/AxiosInstanceMain";
+
+export { default as SuperupMain } from "./R9_ReactJSInterviewQuestionsPkg/A_SuperupSections/SuperupMain";
