@@ -11,6 +11,9 @@ echo.
 echo.[33mgit status        [0m
 git status
 echo.
+
+for /f "delims=" %%H in ('hostname') do set "HOSTNAME=%%H"
+
 if %ComputerName%==LAPTOP-AAAA (        
     echo.[33mgit commit -m "%DATE:~0,2%-%DATE:~3,2%-%DATE:~6,4% %TIME:~0,2%:%TIME:~3,2%"  [0m
     echo.   [36mcomputer name is = %ComputerName% [0m
@@ -21,7 +24,7 @@ if %ComputerName%==LAPTOP-AAAA (
     echo.   [36mcomputer name is = %ComputerName% [0m
     echo.   [36m%DATE% , %TIME%	 [0m
     git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%"   
-) else if %ComputerName%==LAPTOP-LENOVO-S (
+) else if /i "%HOSTNAME%"=="LAPTOP-LENOVO-SHALEM" (
     echo.[33mgit commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%" [0m
     echo.   [36mcomputer name is = %ComputerName% [0m
     echo.   [36m%DATE% , %TIME%	 [0m
