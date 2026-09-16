@@ -36,14 +36,14 @@ const DropDownLinux = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/devops/linux-server" topicName="Linux (Linode Akami)" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/devops/linux-server" topicName="Linux server" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="1. create linode server" internalLink="/devops/linux-server/create-server" />
+        <SideDropdownLink sideDropDownNavName="1. create server" internalLink="/devops/linux-server/create-server" />
         <SideDropdownLink sideDropDownNavName="2. connect with SSH" internalLink="/devops/linux-server/connect-with-ssh" />
         <SideDropdownLink sideDropDownNavName="3. connect with FileZilla" internalLink="/devops/linux-server/connect-with-filezilla" />
         <SideDropdownLink sideDropDownNavName="4. Linux server setup" internalLink="/devops/linux-server/setup-server" />

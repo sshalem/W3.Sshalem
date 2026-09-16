@@ -1,20 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_CreateLinodeServer from "./O1_CreateLinodeServer";
-import O0_AkamiLinodeIntro from "./O0_AkamiLinodeIntro";
+import O2_CreateKamateraServer from "./O2_CreateKamateraServer";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o0_AkamiLinodeIntro = "Intro Akami/Linode";
-const create_linode_server = "create_linode_server";
+const o1_create_linode_server = "1. create Linode server";
+const o2_CreateKamateraServer = "2. create Kamatera server";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o0_AkamiLinodeIntro, create_linode_server];
+const anchorList: string[] = [o1_create_linode_server, o2_CreateKamateraServer];
 
 // ============================================
 // ============================================
@@ -67,8 +67,8 @@ const CreateServerMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O0_AkamiLinodeIntro anchor={o0_AkamiLinodeIntro} />
-      <O1_CreateLinodeServer anchor={create_linode_server} />
+      <O1_CreateLinodeServer anchor={o1_create_linode_server} />
+      <O2_CreateKamateraServer anchor={o2_CreateKamateraServer} />
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );

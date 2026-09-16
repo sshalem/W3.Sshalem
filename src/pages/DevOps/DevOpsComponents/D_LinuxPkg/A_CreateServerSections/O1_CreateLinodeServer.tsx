@@ -2,16 +2,47 @@
 /devops/linux-server/create-server#create_linode_server
 create_linode_server --> (DEVOPS)(LINUX)(create server server)
 */
-import { IMG, MainChildArea } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import linode_1 from "../../../../../assets/linode_1.jpg";
 import linode_2 from "../../../../../assets/linode_2.jpg";
 import linode_3 from "../../../../../assets/linode_3.jpg";
 import linode_4 from "../../../../../assets/linode_4.jpg";
-import { DivDoubleBorder, Span, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Redtext, Span, SpanBlue, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_CreateLinodeServer = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
+      <ULdisc>
+        <Li>
+          <SpanYellow>Linode</SpanYellow> is now know as <SpanYellow>Akami</SpanYellow>
+        </Li>
+        <Li>
+          Go to{" "}
+          <a className="tracking-wider text-blue-500" href="https://www.akamai.com/" target="_blank">
+            {" "}
+            https://www.akamai.com/
+          </a>
+        </Li>
+        <Li>
+          to Login use this url{" "}
+          <a className="tracking-wider text-blue-500" href="https://login.linode.com/login?" target="_blank">
+            https://login.linode.com/login
+          </a>
+        </Li>
+      </ULdisc>
+
+      <DivDoubleBorder>Linode Login Username/Password</DivDoubleBorder>
+      <ULdisc>
+        <Li>
+          <SpanYellow>username</SpanYellow> - <Redtext>sshalem</Redtext>
+        </Li>
+        <Li>
+          <SpanYellow>password</SpanYellow> - <Redtext>aa77aa80</Redtext>
+        </Li>
+      </ULdisc>
+
+      <DivDoubleBorder>Create Server</DivDoubleBorder>
+
       <div>Follow the steps:</div>
       <IMG img_name={linode_1} />
       <DivDoubleBorder>

@@ -7,8 +7,8 @@ import O2_IssueWithSshConnectionTimeout from "./O2_IssueWithSshConnectionTimeout
 // ==     content menu (title name)         ==
 // ===========================================
 
-const connect_to_server_ssh = "connect_to_server_ssh";
-const ssh_connection_timeout_issue = "ssh_connection_timeout_issue";
+const connect_to_server_ssh = "1. ssh to server";
+const ssh_connection_timeout_issue = "2. ssh_connection_timeout_issue";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
