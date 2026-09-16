@@ -26,7 +26,7 @@ if %ComputerName%==LAPTOP-AAAA (
     git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%"   
 ) else if /i "%HOSTNAME%"=="LAPTOP-LENOVO-SHALEM" (
     echo.[33mgit commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%" [0m
-    echo.   [36mcomputer name is = %ComputerName% [0m
+    echo.   [36mcomputer name is = %HOSTNAME% [0m
     echo.   [36m%DATE% , %TIME%	 [0m
     git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%"   
 ) else if %ComputerName%==LAPTOP-ASUS-SHA (
