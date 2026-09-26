@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const J4_DropDownDesignPatternStructural = () => {
+const J4_DropDownDesignPatternCreational = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -18,7 +18,7 @@ const J4_DropDownDesignPatternStructural = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("java/design-patterns-structural")) {
+    if (location.pathname.includes("java/design-patterns-creational")) {
       if (location.pathname.split("/")[3] === undefined) {
         // do nothing , this way I prevent the re-render of  setShowList(true);
       } else {
@@ -37,8 +37,8 @@ const J4_DropDownDesignPatternStructural = () => {
       <SideDropDownTopic
         showList={showList}
         handleOpenList={handleOpenList}
-        internalLink="/java/design-patterns-structural"
-        topicName="4. Design Patterns Structural"
+        internalLink="/java/design-patterns-creational"
+        topicName="4. Design Patterns Creational"
       />
 
       <div
@@ -46,16 +46,14 @@ const J4_DropDownDesignPatternStructural = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="1. Adapter" internalLink="/java/design-patterns-structural/adapter" />
-        <SideDropdownLink sideDropDownNavName="2. Decorator" internalLink="/java/design-patterns-structural/decorator" />
-        <SideDropdownLink sideDropDownNavName="3. Facade" internalLink="/java/design-patterns-structural/facade" />
-        <SideDropdownLink sideDropDownNavName="4. Composite" internalLink="/java/design-patterns-structural/composite" />
-        <SideDropdownLink sideDropDownNavName="5. Proxy" internalLink="/java/design-patterns-structural/proxy" />
-        <SideDropdownLink sideDropDownNavName="6. Bridge" internalLink="/java/design-patterns-structural/bridge" />
-        <SideDropdownLink sideDropDownNavName="7. Flyweight" internalLink="/java/design-patterns-structural/flyweight" />
+        <SideDropdownLink sideDropDownNavName="1. Singleton" internalLink="/java/design-patterns-creational/singleton" />
+        <SideDropdownLink sideDropDownNavName="2. Prototype" internalLink="/java/design-patterns-creational/prototype" />
+        <SideDropdownLink sideDropDownNavName="3. Builder" internalLink="/java/design-patterns-creational/builder" />
+        <SideDropdownLink sideDropDownNavName="4. Factory" internalLink="/java/design-patterns-creational/factory" />
+        <SideDropdownLink sideDropDownNavName="5. Abstract Factory" internalLink="/java/design-patterns-creational/abstract-factory" />
       </div>
     </section>
   );
 };
 
-export default J4_DropDownDesignPatternStructural;
+export default J4_DropDownDesignPatternCreational;

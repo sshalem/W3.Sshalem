@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SideDropdownLink, SideDropDownTopic } from "../../../components";
 
-const J5_DropDownDesignPatternBehavioral = () => {
+const J6_DropDownDesignPatternBehavioral = () => {
   const [showList, setShowList] = useState<boolean>(false);
   const [listHeight, setListHeight] = useState<number>();
 
@@ -38,7 +38,7 @@ const J5_DropDownDesignPatternBehavioral = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/java/design-patterns-behavioral"
-        topicName="5. Design Patterns Behavioral"
+        topicName="6. Design Patterns Behavioral"
       />
 
       <div
@@ -61,4 +61,4 @@ const J5_DropDownDesignPatternBehavioral = () => {
   );
 };
 
-export default J5_DropDownDesignPatternBehavioral;
+export default J6_DropDownDesignPatternBehavioral;

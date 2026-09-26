@@ -2,8 +2,9 @@
 
 
 */
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
+import { DivDoubleBorder, JavaHighlight, Redtext, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import Thread_2 from "../../../../../assets/Thread_2.jpg";
 
 const O3_CreateThread = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,13 +20,39 @@ const O3_CreateThread = ({ anchor }: { anchor: string }) => {
               Extend <Redtext>Thread Class</Redtext> , I won't show it (which also Implements Runnable interface)
             </Li>
           </ULdisc>
+          <IMG img_name={Thread_2}></IMG>
         </article>
         <article className="my-8">
           <DivDoubleBorder>Runnable interface</DivDoubleBorder>
         </article>
+        <ULdisc>
+          <Li>Create A Class That Implements the Runnable interface</Li>
+          <Li>
+            write the code inside the <SpanYellow>run()</SpanYellow> method
+          </Li>
+        </ULdisc>
         <JavaHighlight javaCode={_1_} />
-        Shorter way
+        <ULdisc>
+          <Li>
+            Create instance of <SpanYellow>MyRunnable</SpanYellow> class
+          </Li>
+          <Li>
+            Create instacne of <SpanYellow>Thread</SpanYellow> class, and pass as argument , the instance object of{" "}
+            <SpanYellow>MyRunnable</SpanYellow>
+          </Li>
+          <Li>
+            call the <SpanYellow>start()</SpanYellow> method in Thread Class Object
+          </Li>
+          <Li>
+            Don't call the <SpanRed>run()</SpanRed> method , it won't work as a Thread
+          </Li>
+          <Li>
+            <Redtext>Important</Redtext> : A Thread object can be started only once.
+          </Li>
+        </ULdisc>
         <JavaHighlight javaCode={_2_} />
+        Shorter way
+        <JavaHighlight javaCode={_3_} />
       </section>
     </MainChildArea>
   );
@@ -43,29 +70,19 @@ const _1_ = `public class MyRunnable implements Runnable {
     public void run() {
         System.out.println(name);
     }
-}
-    
+}`;
 
-public class Main extends Thread {
+const _2_ = `public class Main {
     public static void main(String[] args) {
-        // [1] Create Instance of the Class
         MyRunnable myRunnable = new MyRunnable("shabtay");
-
-        // [2] Create Instance of Thread Class
-        // [3] pass as Argument the MyRunnable to the Thread instance
         Thread t1 = new Thread(myRunnable);
-
-        // [4] To start  , must call start() method
-        // Important :A Thread object can be started only once.
         t1.start();
     }
 }`;
 
-const _2_ = `public class Main extends Thread {
-
+const _3_ = `public class Main {
     public static void main(String[] args) {
         Thread t1 = new Thread(new MyRunnable("shabtay"));
-        // To start , must call start() method
         t1.start();
     }
 }`;

@@ -54,6 +54,16 @@ const router = createBrowserRouter(
               ],
             },
             {
+              path: "concurrency",
+              element: <JavaComponents.Concurrency />,
+              children: [
+                { path: "level-1", element: <JavaComponents.Level1CoreMain /> },
+                { path: "level-2", element: <JavaComponents.Level2ProfessionalMain /> },
+                { path: "level-3", element: <JavaComponents.Level3AdvancedMain /> },
+                { path: "level-4", element: <JavaComponents.Level4ModernaJavaSpringMain /> },
+              ],
+            },
+            {
               path: "data-structures",
               element: <JavaComponents.DataStructures />,
               children: [

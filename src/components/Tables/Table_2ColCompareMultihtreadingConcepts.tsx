@@ -30,7 +30,7 @@ const Table_2ColCompareMultihtreadingConcepts = () => {
     },
     {
       Concpet: "Multiple cores",
-      Meaning: "Threads can be concurrent, but not physically parallel",
+      Meaning: "Threads run in parallel, depends on number of Cores",
     },
   ];
 

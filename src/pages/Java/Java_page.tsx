@@ -7,11 +7,12 @@ import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
-import J3_DropDownDesignPatternCreational from "./DropJava/J3_DropDownDesignPatternCreational";
-import J4_DropDownDesignPatternStructural from "./DropJava/J4_DropDownDesignPatternStructural";
-import J5_DropDownDesignPatternBehavioral from "./DropJava/J5_DropDownDesignPatternBehavioral";
+import J3_DropDownDataStructure from "./DropJava/J3_DropDownDataStructure";
+import J4_DropDownDesignPatternCreational from "./DropJava/J4_DropDownDesignPatternCreational";
+import J5_DropDownDesignPatternStructural from "./DropJava/J5_DropDownDesignPatternStructural";
+import J6_DropDownDesignPatternBehavioral from "./DropJava/J6_DropDownDesignPatternBehavioral";
 import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
-import J2_DropDownDataStructure from "./DropJava/J2_DropDownDataStructure";
+import J2_DropDownConcurrency from "./DropJava/J2_DropDownConcurrency";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -42,10 +43,11 @@ const Java_page = () => {
         <AsideWrapperLayout>
           <SideBarLink pageName="Java Home" internalLink="/java" />
           <J1_DropDownJavaBasics />
-          <J2_DropDownDataStructure />
-          <J3_DropDownDesignPatternCreational />
-          <J4_DropDownDesignPatternStructural />
-          <J5_DropDownDesignPatternBehavioral />
+          <J2_DropDownConcurrency />
+          <J3_DropDownDataStructure />
+          <J4_DropDownDesignPatternCreational />
+          <J5_DropDownDesignPatternStructural />
+          <J6_DropDownDesignPatternBehavioral />
           <J9_DropDownJavaInterviewQuestions />
         </AsideWrapperLayout>
       )}
