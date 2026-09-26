@@ -41,9 +41,10 @@ const J2_DropDownConcurrency = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="1. Java Fundamental" internalLink="/java/concurrency/java-fundamental" />
-        <SideDropdownLink sideDropDownNavName="2. Array" internalLink="/java/concurrency/array" />
-        {/* <SideDropdownLink sideDropDownNavName="3. Enum" internalLink="/java/concurrency/enum" /> */}
+        <SideDropdownLink sideDropDownNavName="1. Core" internalLink="/java/concurrency/core" />
+        <SideDropdownLink sideDropDownNavName="2. Professional" internalLink="/java/concurrency/professional" />
+        <SideDropdownLink sideDropDownNavName="3. Advanced" internalLink="/java/concurrency/advanced" />
+        <SideDropdownLink sideDropDownNavName="4. Modern JAVA & Spring" internalLink="/java/concurrency/java-spring" />
       </div>
     </section>
   );

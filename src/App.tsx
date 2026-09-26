@@ -57,10 +57,10 @@ const router = createBrowserRouter(
               path: "concurrency",
               element: <JavaComponents.Concurrency />,
               children: [
-                { path: "level-1", element: <JavaComponents.Level1CoreMain /> },
-                { path: "level-2", element: <JavaComponents.Level2ProfessionalMain /> },
-                { path: "level-3", element: <JavaComponents.Level3AdvancedMain /> },
-                { path: "level-4", element: <JavaComponents.Level4ModernaJavaSpringMain /> },
+                { path: "core", element: <JavaComponents.Level1CoreMain /> },
+                { path: "professional", element: <JavaComponents.Level2ProfessionalMain /> },
+                { path: "advanced", element: <JavaComponents.Level3AdvancedMain /> },
+                { path: "java-spring", element: <JavaComponents.Level4ModernaJavaSpringMain /> },
               ],
             },
             {
