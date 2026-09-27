@@ -18,11 +18,15 @@ const Table_2ColCompareMultihtreadingConcepts = () => {
     },
     {
       Concpet: "Concurrency",
-      Meaning: "Multithreading with Single CPU core, executed By switching CPU between Runnable Threads ",
+      Meaning: "Multithreading with Single CPU core, executed By switching CPU between Runnable Threads. ",
     },
     {
       Concpet: "Parallelism",
       Meaning: "Multithreading with Multiple CPU cores, execute Runnable Threads simultaneously,  on different cores",
+    },
+    {
+      Concpet: "Context Switching",
+      Meaning: "Thread Context Switch is a process of switching the working from one thread to another",
     },
     {
       Concpet: "Single core",
@@ -38,7 +42,7 @@ const Table_2ColCompareMultihtreadingConcepts = () => {
     <section className="my-8">
       <h1 className="mb-4 text-2xl font-bold">Multithreading Concepts in JAVA</h1>
       {/*  */}
-      <div className="w-1/2 overflow-x-auto rounded-lg shadow-md">
+      <div className="w-2/3 overflow-x-auto rounded-lg shadow-md">
         <table className="min-w-full border-collapse">
           <thead className="bg-blue-500 text-lg text-white">
             <tr>
@@ -49,7 +53,7 @@ const Table_2ColCompareMultihtreadingConcepts = () => {
           <tbody>
             {data.map((row, index) => (
               <tr key={index} className="border border-gray-300">
-                <td className="border border-gray-300 px-6 py-3">{row.Concpet}</td>
+                <td className="w-1/5 border border-gray-300 px-6 py-3">{row.Concpet}</td>
                 <td className="border border-gray-300 px-6 py-3">{row.Meaning}</td>
               </tr>
             ))}
