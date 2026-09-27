@@ -7,12 +7,12 @@ import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
+import J2_DropDownConcurrency from "./DropJava/J2_DropDownConcurrency";
 import J3_DropDownDataStructure from "./DropJava/J3_DropDownDataStructure";
 import J4_DropDownDesignPatternCreational from "./DropJava/J4_DropDownDesignPatternCreational";
 import J5_DropDownDesignPatternStructural from "./DropJava/J5_DropDownDesignPatternStructural";
 import J6_DropDownDesignPatternBehavioral from "./DropJava/J6_DropDownDesignPatternBehavioral";
 import J9_DropDownJavaInterviewQuestions from "./DropJava/J9_DropDownJavaInterviewQuestions";
-import J2_DropDownConcurrency from "./DropJava/J2_DropDownConcurrency";
 
 const Java_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);

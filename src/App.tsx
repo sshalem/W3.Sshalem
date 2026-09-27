@@ -61,6 +61,7 @@ const router = createBrowserRouter(
                 { path: "professional", element: <JavaComponents.Level2ProfessionalMain /> },
                 { path: "advanced", element: <JavaComponents.Level3AdvancedMain /> },
                 { path: "java-spring", element: <JavaComponents.Level4ModernaJavaSpringMain /> },
+                { path: "testing-debugging", element: <JavaComponents.Level5TestingDebuggingMain /> },
               ],
             },
             {

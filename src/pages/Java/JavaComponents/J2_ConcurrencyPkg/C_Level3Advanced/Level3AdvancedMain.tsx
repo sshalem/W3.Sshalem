@@ -22,7 +22,7 @@ import O34_DatabaseConcurrency from "./O34_DatabaseConcurrency";
 // ===========================================
 
 const o23_Deadlocks = "o23_Deadlocks";
-const o24_Livelocks = "o23_Deadlocks";
+const o24_Livelocks = "o24_Livelocks";
 const o25_Starvation = "o25_Starvation";
 const o26_ThreadSafety = "o26_ThreadSafety";
 const o27_Immutability = "O27_Immutability";
@@ -39,6 +39,7 @@ const o34_DatabaseConcurrency = "o34_DatabaseConcurrency";
 // ===========================================
 
 const anchorList: string[] = [
+  o23_Deadlocks,
   o24_Livelocks,
   o25_Starvation,
   o26_ThreadSafety,
@@ -47,8 +48,6 @@ const anchorList: string[] = [
   o29_ForkJoin,
   p30_ParallelStreams,
   o31_AdvancedAtomicOperations,
-  o32_ConcurrencyPatterns,
-  o32_ConcurrencyPatterns,
   o32_ConcurrencyPatterns,
   o33_CPUvsIO_Bound,
   o34_DatabaseConcurrency,

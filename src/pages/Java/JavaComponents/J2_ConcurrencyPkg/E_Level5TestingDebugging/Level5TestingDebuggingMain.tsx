@@ -4,44 +4,28 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O35_SpringAsync from "./O35_SpringAsync";
-import O36_SpringThreadPools from "./O36_SpringThreadPools";
-import O37_RestApiConcurrency from "./O37_RestApiConcurrency";
-import O38_MicroservicesConcurrency from "./O38_MicroservicesConcurrency";
-import O39_VirtualThreads from "./O39_VirtualThreads";
-import O40_StructuredConcurrency from "./O40_StructuredConcurrency";
-import O41_ScopedValues from "./O41_ScopedValues";
+import O42_TestingConcurrentCode from "./O42_TestingConcurrentCode";
+import O43_DebuggingConcurrentApp from "./O43_DebuggingConcurrentApp";
+import O44_PerformanceTuning from "./O44_PerformanceTuning;";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o35_SpringAsync = "o35_SpringAsync";
-const o36_SpringThreadPools = "o36_SpringThreadPools";
-const o37_RestApiConcurrency = "O37_RestApiConcurrency";
-const o38_MicroservicesConcurrency = "o38_MicroservicesConcurrency";
-const o39_VirtualThreads = "O39_VirtualThreads";
-const o40_StructuredConcurrency = "o40_StructuredConcurrency";
-const o41_ScopedValues = "o41_ScopedValues";
+const o42_TestingConcurrentCode = "o42_TestingConcurrentCode";
+const o43_DebuggingConcurrentApp = "o43_DebuggingConcurrentApp";
+const o44_PerformanceTuning = "o44_PerformanceTuning";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [
-  o35_SpringAsync,
-  o36_SpringThreadPools,
-  o37_RestApiConcurrency,
-  o38_MicroservicesConcurrency,
-  o39_VirtualThreads,
-  o40_StructuredConcurrency,
-  o41_ScopedValues,
-];
+const anchorList: string[] = [o42_TestingConcurrentCode, o43_DebuggingConcurrentApp, o44_PerformanceTuning];
 
 // ============================================
 // ============================================
 
-const Level4ModernaJavaSpringMain = () => {
+const Level5TestingDebuggingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -90,19 +74,13 @@ const Level4ModernaJavaSpringMain = () => {
       />
       {/* End Contents */}
 
-      <O35_SpringAsync anchor={o35_SpringAsync} />
-      <O36_SpringThreadPools anchor={o36_SpringThreadPools} />
-      <O37_RestApiConcurrency anchor={o37_RestApiConcurrency} />
-      <O38_MicroservicesConcurrency anchor={o38_MicroservicesConcurrency} />
-      <O39_VirtualThreads anchor={o39_VirtualThreads} />
-      <O40_StructuredConcurrency anchor={o40_StructuredConcurrency} />
-      <O41_ScopedValues anchor={o41_ScopedValues} />
-      {/* <O35_SpringAsync anchor={o35_SpringAsync} /> */}
-      {/* <O35_SpringAsync anchor={o35_SpringAsync} /> */}
+      <O42_TestingConcurrentCode anchor={o42_TestingConcurrentCode} />
+      <O43_DebuggingConcurrentApp anchor={o43_DebuggingConcurrentApp} />
+      <O44_PerformanceTuning anchor={o44_PerformanceTuning} />
       {/* <O35_SpringAsync anchor={o35_SpringAsync} /> */}
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
-export default Level4ModernaJavaSpringMain;
+export default Level5TestingDebuggingMain;

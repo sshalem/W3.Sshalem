@@ -45,6 +45,7 @@ const J2_DropDownConcurrency = () => {
         <SideDropdownLink sideDropDownNavName="2. Professional" internalLink="/java/concurrency/professional" />
         <SideDropdownLink sideDropDownNavName="3. Advanced" internalLink="/java/concurrency/advanced" />
         <SideDropdownLink sideDropDownNavName="4. Modern JAVA & Spring" internalLink="/java/concurrency/java-spring" />
+        <SideDropdownLink sideDropDownNavName="5. Test & Debug" internalLink="/java/concurrency/testing-debugging" />
       </div>
     </section>
   );

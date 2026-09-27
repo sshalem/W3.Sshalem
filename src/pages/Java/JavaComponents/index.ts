@@ -27,6 +27,7 @@ export { default as Level1CoreMain } from "./J2_ConcurrencyPkg/A_Level1Core/Leve
 export { default as Level2ProfessionalMain } from "./J2_ConcurrencyPkg/B_Level2Professional/Level2ProfessionalMain";
 export { default as Level3AdvancedMain } from "./J2_ConcurrencyPkg/C_Level3Advanced/Level3AdvancedMain";
 export { default as Level4ModernaJavaSpringMain } from "./J2_ConcurrencyPkg/D_Level4ModernaJavaSpring/Level4ModernaJavaSpringMain";
+export { default as Level5TestingDebuggingMain } from "./J2_ConcurrencyPkg/E_Level5TestingDebugging/Level5TestingDebuggingMain";
 
 export { default as ArraysMain } from "./J3_DataStructuresPkg/A_ArraysSections/ArraysMain";
 export { default as ListMain } from "./J3_DataStructuresPkg/B_ListSections/ListMain";
