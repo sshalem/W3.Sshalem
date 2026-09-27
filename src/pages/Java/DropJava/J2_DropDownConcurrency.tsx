@@ -34,7 +34,7 @@ const J2_DropDownConcurrency = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/concurrency" topicName="2. Concurrency" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/java/concurrency" topicName="2. Threads & Concurrency" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
