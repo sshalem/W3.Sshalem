@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,44 +21,52 @@ const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
           </ULdisc>
           Example for a classic example of a race condition :
           <ULDecimal>
-            <Li>Read the value of counter variable.</Li>
-            <Li>Increment the value by 1.</Li>
-            <Li>Store the value of counter variable.</Li>
-            <Li>SO, multiple threads access and modify the same shared variable counter without synchronization</Li>
+            <Li>Here, I create 10 threads that all share that same object:</Li>
+            <Li>
+              So all 10 threads are modifying the <em className="font-semibold">same counter variable</em> .
+            </Li>
+            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Li>
+              The important part <Redtext>counter++</Redtext> , is conceptually closer to:
+              <ULdisc>
+                <Li>int temp = counter; // READ</Li>
+                <Li>temp = temp + 1; // ADD</Li>
+                <Li>counter = temp; // WRITE</Li>
+              </ULdisc>
+            </Li>
+            <Li>
+              These , are not <SpanYellow>Atomic</SpanYellow> operations. (See Atomic Variable in Synchorized Section)
+            </Li>
+            <Li>all 10 threads sleep for roughly the same amount of time. </Li>
+            <Li>
+              After approximately 1 second, they wake up and start doing: <Redtext>counter++;</Redtext> and They can overlap.
+            </Li>
           </ULDecimal>
-          If there are two threads sharing this variable then the following scenario may happen
-          <ApplicationPropertiesHighlight propertiesCode={_0_} />
-          Next , I will show:
-          <ULdisc>
-            <Li>
-              <SpanYellow>synchronized</SpanYellow>
-            </Li>
-            <Li>
-              <SpanYellow>Lock</SpanYellow>
-            </Li>
-            <Li>
-              <SpanYellow>AtomicInteger</SpanYellow>
-            </Li>
-            <Li>
-              <SpanYellow>volatile</SpanYellow>
-            </Li>
-          </ULdisc>
-          and and see why they behave differently.
         </article>
-
         <JavaHighlight javaCode={_1_} />
+        <ULdisc>
+          <Li>I got result below</Li>
+          <Li>I incremented the counter, and now I'm reading the shared counter.</Li>
+          <Li>
+            <em>Whatever value happens to be there at that moment</em>, <em className="font-semibold">print it</em>.
+          </Li>
+          <Li>
+            And then the threads are <Redtext>competing to read/write/print the same variable</Redtext>, so they can read the same value
+          </Li>
+          <Li>
+            There is <Redtext>no guarantee about the order</Redtext> in which the threads execute.
+          </Li>
+          <Li>The thread names don't tell the execution order.</Li>
+          <Li>
+            SInce I dont know how many Core I have , (lets say 4) , Instead, the operating system/JVM scheduler decides which threads get CPU time.
+          </Li>
+        </ULdisc>
+        <ApplicationPropertiesHighlight propertiesCode={_3_} />
       </section>
     </MainChildArea>
   );
 };
 export default O6_RaceConditions;
-
-const _0_ = `	int counter = 0;
-	counter = counter + 1; // Thread 1
-	counter = counter + 1; // Thread 2 started before thread 1 could save the new 
-        	              //value of counter, so Thread 2 also got the initial value of counter as 0.
-	store counter value // Thread 1
-	store counter value // Thread 2`;
 
 const _1_ = `public class RaceConditionCounter implements Runnable {
 
@@ -66,6 +74,8 @@ const _1_ = `public class RaceConditionCounter implements Runnable {
 
     public void incrementCounter() {
         try {
+            // Why did you originally add sleep()?
+            // It makes the race condition easier to reproduce.
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -93,3 +103,22 @@ public class Main
         }
     }
 }`;
+
+const _2_ = `             RaceConditionCounter
+                    |
+          counter = 0
+        /  /  /  /  |   \\  \\  \\  \\  \\
+       T0 T1 T2 T3  T4  T5 T6 T7 T8 T9
+`;
+
+const _3_ = `state-6 - 9
+state-1 - 7
+state-7 - 7
+state-2 - 8
+state-9 - 7
+state-0 - 8
+state-3 - 7
+state-5 - 7
+state-4 - 7
+state-8 - 7
+`;
