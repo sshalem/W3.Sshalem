@@ -3,8 +3,9 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, Redtext, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { ApplicationPropertiesHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
+import Table_2ColSynchronizedConcepts from "../../../../../components/Tables/Table_2ColSynchronizedConcepts";
 
 const O8_Synchronized = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,70 +21,37 @@ const O8_Synchronized = ({ anchor }: { anchor: string }) => {
               can be same value
             </Li>
             <Li>
-              synchronized basically says:{" "}
-              <Greentext>
-                Only one thread at a time can execute this critical section for this <em className="text-lg font-semibold">lock</em>.
-              </Greentext>
+              <Redtext>synchronized</Redtext> basically says:
+              <ULdisc>
+                <Li>
+                  <Greentext>
+                    Only one thread at a time can execute this critical section for this <em className="text-lg font-semibold">lock</em>.
+                  </Greentext>
+                </Li>
+              </ULdisc>
             </Li>
-          </ULdisc>
-        </article>
-
-        <article className="my-8">
-          <DivDoubleBorder>synchronized</DivDoubleBorder>
-          Lets look at the code below and I'll explain in detail how <Redtext>synchronized</Redtext> works
-          <JavaHighlight javaCode={_1_} />
-          <ULdisc>
             <Li>
               under the hood the JVM effectively does something like: <Redtext>acquire_monitor(rcc);</Redtext>{" "}
             </Li>
-            <Li>The monitor is associated with the object and managed by the JVM.</Li>
-            <Li>run the synchronized method</Li>
-            <Li>The monitor is the synchronization mechanism associated with the object;</Li>
             <Li>
-              when a thread owns that monitor, we commonly say that the thread <Redtext>"holds the lock."</Redtext>
+              when a thread owns that <Redtext>monitor</Redtext>, we commonly say that the thread <Redtext>"holds the lock."</Redtext>
             </Li>
-            <Li>any other Threads that try to run that method , are blocked since Monitor is blocking them (that is the Lock I meant)</Li>
-            <Li>More accurate :"Someone else currently owns this. Wait."</Li>
             <Li>
-              While Thread A is executing the synchronized instance method, Thread A owns the monitor associated with <Redtext>this</Redtext>{" "}
-              (RaceConditionCounter rcc Object). (that is Lock)
+              It means : <Redtext>"Someone else currently owns this. Wait."</Redtext>
             </Li>
-            <Li>release_monitor(rcc);</Li>
+            <Li>
+              While Thread A is executing the synchronized instance method, Thread A owns the monitor associated with <Redtext>this</Redtext>
+              (RaceConditionCounter rcc Object). (<Redtext>that is Lock</Redtext>)
+            </Li>
           </ULdisc>
+          <Table_2ColSynchronizedConcepts />
           <ApplicationPropertiesHighlight propertiesCode={_10_} />
         </article>
-
-        <div></div>
-        <div></div>
       </section>
-      <div>
-        <p className="mb-4 text-xl">
-          <SpanRed>Note</SpanRed>
-          <p>see code below</p>
-        </p>
-        <Redtext>
-          Don't put slow operations like <em className="font-semibold">sleep()</em>, <em className="font-semibold">network calls</em> ,
-          <em className="font-semibold">database</em> ,<em className="font-semibold">calls</em> , etc. inside a
-          <em className="font-semibold">synchronized block</em>
-        </Redtext>
-        <p>
-          <Greentext>unless you specifically need the lock held during that operation.</Greentext>
-        </p>
-        <JavaHighlight javaCode={_7_} />
-      </div>
     </MainChildArea>
   );
 };
 export default O8_Synchronized;
-
-// const _0_ = `synchronized method
-// synchronized block
-// intrinsic lock
-// monitor
-// mutual exclusion
-// object lock
-// static synchronization
-// class lock`;
 
 const _10_ = `Thread A                         Thread B
    |                                |
@@ -106,48 +74,4 @@ RELEASE rcc's monitor               |
                                     | counter++
                                     ↓
                                 RELEASE monitor
-`;
-
-const _1_ = `public class RaceConditionCounter implements Runnable {
-    private int counter = 0;
-
-    public void incrementCounter() {
-        synchronized (this) {
-            counter++;
-        }
-    }
-
-    public int getCounter() {
-        return counter;
-    }
-
-    @Override
-    public void run() {
-        incrementCounter();
-        System.out.println(Thread.currentThread().getName() + " - " + getCounter());
-    }
-}
-    
-
-public class Main {
-    public static void main(String[] args) {
-        RaceConditionCounter rcc = new RaceConditionCounter();
-        for (int i = 0; i < 10; i++) {
-            Thread thread = new Thread(rcc, "state-" + i);
-            thread.start();
-        }
-    }
-}`;
-
-const _7_ = `public void incrementCounter() {
-    try {
-        Thread.sleep(1000);
-    } catch (InterruptedException e) {
-        throw new RuntimeException(e);
-    }
-
-    synchronized (this) {
-        counter++;
-    }
-}
 `;
