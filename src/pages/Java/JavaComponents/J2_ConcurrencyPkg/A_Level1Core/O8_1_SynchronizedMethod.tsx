@@ -38,7 +38,7 @@ const _1_ = `public class RaceConditionCounter implements Runnable {
     // entire method body
     // }
 
-    public int getCounter() {
+    public synchronized int getCounter() {
         return counter;
     }
 

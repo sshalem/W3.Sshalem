@@ -38,7 +38,9 @@ const _1_ = `public class RaceConditionCounter implements Runnable {
     }
 
     public int getCounter() {
-        return counter;
+        synchronized (this) {
+            return counter;
+        }        
     }
 
     @Override
