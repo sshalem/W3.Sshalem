@@ -13,9 +13,9 @@ const O8_3_StaticSynchronization = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <ULdisc>
             <Li>
-              <Redtext>Static synchronization</Redtext> is used when static data or methods need to be protected in a multithreaded environment. It
-              ensures that only one thread can access the class-level resource at a time.
+              <Redtext>Static synchronization</Redtext> is used when static data or methods need to be protected in a multithreaded environment.
             </Li>
+            <Li>It ensures that only one thread can access the class-level resource at a time.</Li>
             <Li>
               Locks at the <Greentext>class level</Greentext> instead of the <Redtext>object level</Redtext>.
             </Li>
@@ -24,14 +24,17 @@ const O8_3_StaticSynchronization = ({ anchor }: { anchor: string }) => {
               Important distiction:
               <ULdisc>
                 <Li>
-                  For an instance synchronized method: <Redtext>public synchronized void incrementCounter()</Redtext>
+                  For an instance synchronized method: <Redtext>public synchronized void incrementCounter()</Redtext> synchronized instance method →
+                  locks on <Greentext>this</Greentext>
                 </Li>
                 <Li>
-                  For a static synchronized method: : <Redtext>public static synchronized void incrementCounter()</Redtext>
+                  For a static synchronized method: : <Redtext>public static synchronized void incrementCounter()</Redtext> ,static synchronized
+                  method → locks on <Greentext>ClassName.class</Greentext>
                 </Li>
               </ULdisc>
             </Li>
           </ULdisc>
+          Full code example:
           <JavaHighlight javaCode={_1_} />
         </article>
       </section>
@@ -46,6 +49,13 @@ const _1_ = `public class RaceConditionCounter implements Runnable {
     public static synchronized void incrementCounter() {
         counter++;
     }
+
+    // or 
+    // public static void incrementCounter() {
+    //     synchronized (RaceConditionCounter.class) {
+    //         counter++;
+    //     }
+    // }
 
     public static synchronized int getCounter() {
         return counter;

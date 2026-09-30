@@ -2,7 +2,7 @@
 
 
 */
-import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
 import { ApplicationPropertiesHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
 import Table_2ColSynchronizedConcepts from "../../../../../components/Tables/Table_2ColSynchronizedConcepts";
@@ -29,6 +29,22 @@ const O8_Synchronized = ({ anchor }: { anchor: string }) => {
                   </Greentext>
                 </Li>
               </ULdisc>
+            </Li>
+            <Li>
+              <Question>When we say: Thread A holds counter's lock, where the LOCK is held?</Question>
+              <Answer>
+                The ownership state belongs to the <SpanYellow>JVM's synchronization machinery</SpanYellow>, and the{" "}
+                <SpanYellow>JVM knows which thread currently owns the monitor</SpanYellow>.
+              </Answer>
+              <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            </Li>
+            <Li>Every object can have an intrinsic monitor.</Li>
+            <Li>
+              <Redtext>Intrinsic lock</Redtext> = a lock that is built into/associated with every Java object by the JVM.
+            </Li>
+            <Li>The JVM manages that monitor. </Li>
+            <Li>
+              A thread <Redtext>"holds the lock"</Redtext> when it currently owns that monitor.
             </Li>
             <Li>
               under the hood the JVM effectively does something like: <Redtext>acquire_monitor(rcc);</Redtext>{" "}
@@ -74,4 +90,27 @@ RELEASE rcc's monitor               |
                                     | counter++
                                     ↓
                                 RELEASE monitor
+`;
+
+const _2_ = `             Thread A
+                 │
+                 │ synchronized(counter)
+                 ▼
+        acquire counter's monitor
+                 │
+                 ▼
+       ┌─────────────────────┐
+       │      counter        │
+       │                     │
+       │  JVM lock/monitor   │
+       │         🔒          │
+       └─────────────────────┘
+                 │
+                 │
+          Thread A owns it
+                 │
+                 ▼
+       Other threads trying
+       to acquire the same
+       monitor must wait
 `;

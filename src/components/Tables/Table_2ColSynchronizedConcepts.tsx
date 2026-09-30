@@ -1,12 +1,12 @@
 const Table_2ColSynchronizedConcepts = () => {
   const data = [
     {
-      Concpet: "Instance lock",
-      Meaning: "The lock associated with a particular object",
+      Concpet: "Instance lock (Intrinsic lock)",
+      Meaning: "The lock associated with a particular object (rcc)",
     },
     {
       Concpet: "Monitor",
-      Meaning: "JVM synchronization mechanism associated with that object",
+      Meaning: "JVM synchronization mechanism associated with that object (rcc)",
     },
     {
       Concpet: "Acquire monitor",
@@ -18,7 +18,7 @@ const Table_2ColSynchronizedConcepts = () => {
     },
     {
       Concpet: "synchronized instance method",
-      Meaning: "Acquire the monitor of this before executing",
+      Meaning: 'Acquire the monitor of \"this" before executing',
     },
   ];
 
