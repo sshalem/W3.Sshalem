@@ -4,7 +4,7 @@ import { Fragment } from "react/jsx-runtime";
 const TableIdeCompare = () => {
   const [filter, setFilter] = useState("");
 
-  const data = [
+  const running_Debugging = [
     {
       section: "Running & Debugging",
       rows: [
@@ -15,6 +15,9 @@ const TableIdeCompare = () => {
         { action: "Step Out", eclipse: "F7", intellij: "Shift + F8" },
       ],
     },
+  ];
+
+  const navigation = [
     {
       section: "Navigation",
       rows: [
@@ -29,10 +32,13 @@ const TableIdeCompare = () => {
         { action: "Navigate Forward", eclipse: "Alt + →", intellij: "Ctrl + Alt + →" },
       ],
     },
+  ];
+
+  const editing_Refactoring = [
     {
       section: "Editing & Refactoring",
       rows: [
-        { action: "Quick Fix / Intention (Assign Local Variable)", eclipse: "Ctrl + 1", intellij: "Alt + Enter" },
+        { action: "Assign Local Variable", eclipse: "Ctrl + 1", intellij: "Alt + Enter" },
         { action: "Rename", eclipse: "Alt + Shift + R", intellij: "Shift + F6" },
         { action: "Format Code", eclipse: "Ctrl + Shift + F", intellij: "Ctrl + Alt + L" },
         { action: "Organize Imports", eclipse: "Ctrl + Shift + O", intellij: "Ctrl + Alt + O" },
@@ -44,6 +50,9 @@ const TableIdeCompare = () => {
         { action: "Remove Block Comment", eclipse: "Ctrl + Shift + \\", intellij: "Ctrl + Shift + \\" },
       ],
     },
+  ];
+
+  const search_Docs = [
     {
       section: "Search & Docs",
       rows: [
@@ -69,23 +78,129 @@ const TableIdeCompare = () => {
         className="mb-4 w-full rounded-md border border-gray-300 p-2 text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 
+      {/* running_Debugging */}
       <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-md">
         <table className="min-w-full border-collapse">
           <thead>
             <tr className="bg-blue-500 text-white">
-              <th className="px-3 py-2 text-left font-medium">Action</th>
+              <th className="px-3 py-2 text-left font-medium">Running & Debugging</th>
               <th className="px-3 py-2 text-left font-medium">Eclipse</th>
               <th className="px-3 py-2 text-left font-medium">IntelliJ IDEA</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((group) => (
+            {running_Debugging.map((group) => (
               <Fragment key={group.section}>
-                <tr className="bg-blue-300 text-white">
+                {/* <tr className="bg-blue-300 text-white">
                   <td colSpan={3} className="px-3 py-2 font-semibold">
                     {group.section}
                   </td>
-                </tr>
+                </tr> */}
+                {group.rows
+                  .filter((row) => row.action.toLowerCase().includes(filter.toLowerCase()))
+                  .map((row) => (
+                    <tr key={row.action} className="hover:bg-blue-50">
+                      <td className="border-t border-gray-300 px-3 py-2">{row.action}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.eclipse}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.intellij}</td>
+                    </tr>
+                  ))}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <br />
+
+      {/* Navigation */}
+      <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-md">
+        <table className="min-w-full border-collapse">
+          <thead>
+            <tr className="bg-blue-500 text-white">
+              <th className="px-3 py-2 text-left font-medium">Navigation</th>
+              <th className="px-3 py-2 text-left font-medium">Eclipse</th>
+              <th className="px-3 py-2 text-left font-medium">IntelliJ IDEA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {navigation.map((group) => (
+              <Fragment key={group.section}>
+                {/* <tr className="bg-blue-300 text-white">
+                  <td colSpan={3} className="px-3 py-2 font-semibold">
+                    {group.section}
+                  </td>
+                </tr> */}
+                {group.rows
+                  .filter((row) => row.action.toLowerCase().includes(filter.toLowerCase()))
+                  .map((row) => (
+                    <tr key={row.action} className="hover:bg-blue-50">
+                      <td className="border-t border-gray-300 px-3 py-2">{row.action}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.eclipse}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.intellij}</td>
+                    </tr>
+                  ))}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <br />
+
+      {/* editing_Refactoring */}
+      <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-md">
+        <table className="min-w-full border-collapse">
+          <thead>
+            <tr className="bg-blue-500 text-white">
+              <th className="px-3 py-2 text-left font-medium">Editing & Refactoring</th>
+              <th className="px-3 py-2 text-left font-medium">Eclipse</th>
+              <th className="px-3 py-2 text-left font-medium">IntelliJ IDEA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {editing_Refactoring.map((group) => (
+              <Fragment key={group.section}>
+                {/* <tr className="bg-blue-300 text-white">
+                  <td colSpan={3} className="px-3 py-2 font-semibold">
+                    {group.section}
+                  </td>
+                </tr> */}
+                {group.rows
+                  .filter((row) => row.action.toLowerCase().includes(filter.toLowerCase()))
+                  .map((row) => (
+                    <tr key={row.action} className="hover:bg-blue-50">
+                      <td className="border-t border-gray-300 px-3 py-2">{row.action}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.eclipse}</td>
+                      <td className="border-t border-gray-300 px-3 py-2">{row.intellij}</td>
+                    </tr>
+                  ))}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <br />
+
+      {/* search_Docs */}
+      <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-md">
+        <table className="min-w-full border-collapse">
+          <thead>
+            <tr className="bg-blue-500 text-white">
+              <th className="px-3 py-2 text-left font-medium">Search & Docs</th>
+              <th className="px-3 py-2 text-left font-medium">Eclipse</th>
+              <th className="px-3 py-2 text-left font-medium">IntelliJ IDEA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {search_Docs.map((group) => (
+              <Fragment key={group.section}>
+                {/* <tr className="bg-blue-300 text-white">
+                  <td colSpan={3} className="px-3 py-2 font-semibold">
+                    {group.section}
+                  </td>
+                </tr> */}
                 {group.rows
                   .filter((row) => row.action.toLowerCase().includes(filter.toLowerCase()))
                   .map((row) => (
