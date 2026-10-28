@@ -2,7 +2,7 @@
 
 
 */
-import { Answer, IMG, Li, MainChildArea, Question, ULDecimal, ULdisc } from "../../../../../components";
+import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
 import { DivDoubleBorder, JavaHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import transQuestion_3 from "../../../../../assets/transQuestion_3.jpg";
 
