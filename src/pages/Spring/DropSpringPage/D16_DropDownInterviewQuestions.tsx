@@ -46,6 +46,7 @@ const D16_DropDownInterviewQuestions = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
+        <SideDropdownLink sideDropDownNavName="1. Transaction Task Career" internalLink="/spring/interview-questions/transaction-task" />
         <SideDropdownLink sideDropDownNavName="Stream Records Instantly" internalLink="/spring/interview-questions/stream-records-instantly" />
         <SideDropdownLink sideDropDownNavName="Loop Stream Par Stream" internalLink="/spring/interview-questions/loop-stream-parallel-stream" />
         <SideDropdownLink sideDropDownNavName="MultiThread Block Queue" internalLink="/spring/interview-questions/multithread-block-queue" />

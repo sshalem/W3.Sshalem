@@ -294,6 +294,7 @@ const router = createBrowserRouter(
               path: "interview-questions",
               element: <SpringComponents.InterviewQuestions />,
               children: [
+                { path: "transaction-task", element: <SpringComponents.TransQuestionMain /> },
                 { path: "stream-records-instantly", element: <SpringComponents.StreamRecordsInstantlyMain /> },
                 { path: "loop-stream-parallel-stream", element: <SpringComponents.LoopStreamParallelStreamMain /> },
                 { path: "multithread-block-queue", element: <SpringComponents.MultiThreadBlockQueueMain /> },
