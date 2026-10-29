@@ -31,7 +31,7 @@ const O2_ModelMapper = ({ anchor }: { anchor: string }) => {
           <Li>
             If you are using Maven, add (from <SpanYellow>mvnrepository</SpanYellow> )
           </Li>
-          <Highlight_XML xmlCode={_1_} />
+          <Highlight_XML code={_1_} />
         </ULdisc>
       </section>
 

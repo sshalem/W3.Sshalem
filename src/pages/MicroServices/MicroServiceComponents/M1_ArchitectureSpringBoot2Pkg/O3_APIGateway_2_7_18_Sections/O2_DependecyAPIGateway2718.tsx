@@ -50,15 +50,15 @@ const O2_DependecyAPIGateway2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Copy and paste this to the <SpanYellow>{"<properties>"}</SpanYellow> tag
-              <Highlight_XML xmlCode={_1_} />
+              <Highlight_XML code={_1_} />
             </Li>
             <Li>
               Copy and paste the Dependeny , Inside the <SpanYellow>{"<dependencies>"}</SpanYellow> tag
-              <Highlight_XML xmlCode={_2_} />
+              <Highlight_XML code={_2_} />
             </Li>
             <Li>
               Copy and paste the <SpanYellow>{"<dependencyManagement>"}</SpanYellow> , after <SpanYellow>{"<dependencies>"}</SpanYellow> tag is closed
-              <Highlight_XML xmlCode={_3_} />
+              <Highlight_XML code={_3_} />
             </Li>
           </ULdisc>
         </article>

@@ -72,9 +72,9 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               When we add the dependency below , .
-              <Highlight_XML xmlCode={_2_} />
+              <Highlight_XML code={_2_} />
               Spring Cloud automatically brings in <SpanYellow>: 👉 Spring Cloud LoadBalancer</SpanYellow>
-              <Highlight_XML xmlCode={_3_} />
+              <Highlight_XML code={_3_} />
               So in most projects you do not need to add <SpanYellow>spring-cloud-starter-loadbalancer</SpanYellow> manually.
             </Li>
             <Li>

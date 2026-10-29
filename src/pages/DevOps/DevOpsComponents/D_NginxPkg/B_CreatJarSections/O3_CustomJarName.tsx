@@ -18,7 +18,7 @@ const O3_CustomJarName = ({ anchor }: { anchor: string }) => {
             In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanYellow>{"<finalName>custom-app-name</finalName> "}</SpanYellow>
           </Li>
 
-          <Highlight_XML xmlCode={custom_app_name} />
+          <Highlight_XML code={custom_app_name} />
           <Li>
             Open Terminal , Run command :
             <Highlight_ApplicationProperties code={mvn_clean_package} />
@@ -39,7 +39,7 @@ const O3_CustomJarName = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanYellow>{"<finalName>${jar.customAppName}</finalName>"}</SpanYellow>
-              <Highlight_XML xmlCode={wired_custom_name} />
+              <Highlight_XML code={wired_custom_name} />
             </Li>
             <Li>
               We run it with following command jar file will be <SpanYellow>shalem.jar</SpanYellow>

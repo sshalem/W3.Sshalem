@@ -26,7 +26,7 @@ const O3_P6SpyLogging = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔹 1. Add P6Spy dependency</p>
-        <Highlight_XML xmlCode={xml_pom}></Highlight_XML>
+        <Highlight_XML code={xml_pom}></Highlight_XML>
       </section>
       <hr />
 

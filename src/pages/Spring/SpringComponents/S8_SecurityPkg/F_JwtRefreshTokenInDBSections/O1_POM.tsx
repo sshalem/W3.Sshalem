@@ -12,7 +12,7 @@ import { useMemo } from "react";
 const O1_POM = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderPOM = useMemo(() => <Highlight_XML xmlCode={pom} />, [pom]);
+  const renderPOM = useMemo(() => <Highlight_XML code={pom} />, [pom]);
 
   return (
     <MainChildArea anchor={anchor}>

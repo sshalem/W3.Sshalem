@@ -23,7 +23,7 @@ const O4_CustomJarViaTerminal = ({ anchor }: { anchor: string }) => {
             <Li>
               In the tag of <strong>{"<build>"}</strong> , add the following tag{" "}
               <SpanYellow>{"<finalName>${jar.customAppName}</finalName>"}</SpanYellow>
-              <Highlight_XML xmlCode={wired_custom_name} />
+              <Highlight_XML code={wired_custom_name} />
             </Li>
           </ULDecimal>
           <Li>

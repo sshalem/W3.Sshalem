@@ -17,7 +17,7 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
             for example : <SpanBlue> web starter depenency</SpanBlue>
           </div>
           <div className="my-5">Add to POM file</div>
-          <Highlight_XML xmlCode={dependency} />
+          <Highlight_XML code={dependency} />
         </div>
       </section>
       {/*  */}

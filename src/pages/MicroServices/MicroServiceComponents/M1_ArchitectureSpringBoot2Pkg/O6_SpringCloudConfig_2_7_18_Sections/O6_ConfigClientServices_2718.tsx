@@ -23,7 +23,7 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Add the following dependency to EACH microservice</Li>
           </ULdisc>
-          <Highlight_XML xmlCode={_1_} />
+          <Highlight_XML code={_1_} />
         </article>
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ Create CUSTOMER-SERVICE properties on Config Storage on Git</p>

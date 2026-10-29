@@ -39,7 +39,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if we get a JSON response from Elasticsearch , this way we can tell if its running.
                   </Li>
                 </ULdisc>
-                <Highlight_JSX jsxCode="elasticsearch.bat" />
+                <Highlight_JSX code="elasticsearch.bat" />
               </Li>
               <Li>
                 <SpanYellow>Logstash</SpanYellow>
@@ -53,7 +53,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if Logstash is running
                   </Li>
                 </ULdisc>
-                <Highlight_JSX jsxCode="logstash -f config/logstash.conf" />
+                <Highlight_JSX code="logstash -f config/logstash.conf" />
               </Li>
               <Li>
                 <SpanYellow>Kibana</SpanYellow>{" "}
@@ -66,7 +66,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <Highlight_JSX jsxCode="kibana.bat" />
+                <Highlight_JSX code="kibana.bat" />
               </Li>
               <Li>
                 <SpanYellow>Eureka</SpanYellow>
@@ -82,7 +82,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <Highlight_JSX jsxCode="java -jar zipkin-server-3.6.0-exec.jar" />
+                <Highlight_JSX code="java -jar zipkin-server-3.6.0-exec.jar" />
               </Li>
               <Li>
                 Run <SpanYellow>Api Gateway</SpanYellow> (Port 5001)

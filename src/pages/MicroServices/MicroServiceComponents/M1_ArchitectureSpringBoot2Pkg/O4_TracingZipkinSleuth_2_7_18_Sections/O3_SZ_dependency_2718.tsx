@@ -11,7 +11,7 @@ const O3_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               1️⃣ Add dependencies (to EACH microservice , including API-Gateway)
-              <Highlight_XML xmlCode={_1_} />
+              <Highlight_XML code={_1_} />
             </Li>
             <Li>2️⃣ Verify Spring Cloud BOM (already doen when Added Eureka , Spring cloud version matches in all services)</Li>
             <Li>

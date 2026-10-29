@@ -61,7 +61,7 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
             If using versions above <SpanYellow>0.11.5</SpanYellow> , implementations of code might change due to package version upgrades.
           </p>
         </article>
-        <Highlight_XML xmlCode={jwt_dependencies}></Highlight_XML>
+        <Highlight_XML code={jwt_dependencies}></Highlight_XML>
       </section>
     </MainChildArea>
   );

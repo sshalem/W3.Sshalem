@@ -16,7 +16,7 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           for example : <span className="text-red-500"> web-starter-depenency</span>
         </div>
         <div className="my-5">
-          <Highlight_XML xmlCode={dependency} />
+          <Highlight_XML code={dependency} />
         </div>
       </div>
 

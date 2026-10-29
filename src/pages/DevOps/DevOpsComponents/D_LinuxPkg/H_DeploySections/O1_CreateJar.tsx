@@ -57,7 +57,7 @@ const O1_CreateJar = ({ anchor }: { anchor: string }) => {
             <Li>
               this results file name in this format <SpanGrey>custom-app-name.jar</SpanGrey>
             </Li>
-            <Highlight_XML xmlCode={custom_app_name} />
+            <Highlight_XML code={custom_app_name} />
           </ULdisc>
         </article>
 
@@ -75,7 +75,7 @@ const O1_CreateJar = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanGrey>{"<finalName>${jar.customAppName}</finalName>"}</SpanGrey>
-              <Highlight_XML xmlCode={wired_custom_name} />
+              <Highlight_XML code={wired_custom_name} />
             </Li>
             <Li>
               We run it with following command jar file will be <SpanGrey>shalem.jar</SpanGrey>

@@ -17,7 +17,7 @@ const O3_DevTools = ({ anchor }: { anchor: string }) => {
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
           Add <SpanBlue>DevTools</SpanBlue> Dependency
-          <Highlight_XML xmlCode={pom_dev_tools}></Highlight_XML>
+          <Highlight_XML code={pom_dev_tools}></Highlight_XML>
         </li>
         <li className="my-1">
           Configure <SpanBlue>IntelliJ</SpanBlue> for Auto-Reload. By default <SpanBlue>IntelliJ</SpanBlue> does not compile automatically, so you

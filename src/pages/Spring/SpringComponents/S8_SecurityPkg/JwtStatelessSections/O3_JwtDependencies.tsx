@@ -38,7 +38,7 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">✅ Correct POM setup</p>
         <p>You always need at least these three:</p>
-        <Highlight_XML xmlCode={pom}></Highlight_XML>
+        <Highlight_XML code={pom}></Highlight_XML>
       </section>
     </MainChildArea>
   );

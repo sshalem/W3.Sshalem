@@ -20,7 +20,7 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
             <Li>Add the following dependencies.</Li>
             <Li>Also Verify Spring Cloud BOM (Spring cloud version matches in all services)</Li>
           </ULdisc>
-          <Highlight_XML xmlCode={_1_} />
+          <Highlight_XML code={_1_} />
         </article>
 
         <article className="my-8">

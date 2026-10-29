@@ -16,7 +16,7 @@ const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             In Customer Service (the <strong>caller service</strong> ) add Dependency:
-            <Highlight_XML xmlCode={_1_} />
+            <Highlight_XML code={_1_} />
           </Li>
           <Li>
             This starter already includes integration with:
