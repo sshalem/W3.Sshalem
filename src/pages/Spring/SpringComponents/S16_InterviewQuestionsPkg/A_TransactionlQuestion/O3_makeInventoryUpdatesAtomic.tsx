@@ -15,7 +15,7 @@ const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
       </section>
 
       <section>
-        <div className="my-8 text-lg font-semibold">Option A — Conditional SQL update</div>
+        <div className="my-8 text-2xl font-semibold">Option A — Conditional SQL update</div>
         Instead of reading the quantity into Java and checking it, let PostgreSQL check and decrement it in a single statement.
         <Highlight_SQL code={_1_} />
         The repository method can return the number of rows updated:
@@ -32,13 +32,13 @@ const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
         </div>
         <div className="my-4">
           <Redtext>Important</Redtext>: this assumes the quantity cannot already be negative. Add a database constraint as an additional safeguard:
-          <Highlight_JAVA code={_3_} />
+          <Highlight_SQL code={_3_} />
         </div>
         <div>A constraint protects the database against invalid values even if another application path contains a bug.</div>
       </section>
 
       <section>
-        <div className="my-8 text-lg font-semibold">Option B — Pessimistic locking</div>
+        <div className="my-8 text-2xl font-semibold">Option B — Pessimistic locking</div>
         Another valid solution is to lock the coupon row while checking and updating it.
         <Highlight_JAVA code={_4_} />
         For Spring Boot 2.7, use <SpanYellow>javax.persistence.LockModeType</SpanYellow> instead of
