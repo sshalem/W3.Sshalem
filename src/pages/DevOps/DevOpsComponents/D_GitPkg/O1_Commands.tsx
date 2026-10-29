@@ -11,7 +11,7 @@ const O1_Commands = ({ anchor }: { anchor: string }) => {
       <section>
         <article className="my-8">
           <SpanGrey>Git_all.bat</SpanGrey> script , that runs several commands
-          <Highlight_BATCH batchCode={git_commands}></Highlight_BATCH>
+          <Highlight_BATCH code={git_commands}></Highlight_BATCH>
         </article>
         <GitHub>
           <GitHubLiAnchor

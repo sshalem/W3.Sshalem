@@ -52,13 +52,13 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">
           Open CMD , go to directory <SpanYellow> C:\Localdata\DB\postgresql\pgsql\bin</SpanYellow>
           <div className="my-10">
-            <Highlight_BATCH batchCode={_2_} />
+            <Highlight_BATCH code={_2_} />
           </div>
         </li>
         <li className="my-1 list-decimal">
           Type the following command below, It will install inside the folder of <SpanYellow>pgsql_data</SpanYellow> all the relevant data:
           <div className="my-10">
-            <Highlight_BATCH batchCode={batchCode} />
+            <Highlight_BATCH code={batchCode} />
           </div>
         </li>
         <li className="my-1 list-decimal">
@@ -88,7 +88,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </div>
       <div className="my-10">
-        <Highlight_BATCH batchCode={startPostgresqlServer} />
+        <Highlight_BATCH code={startPostgresqlServer} />
         <IMG img_name={start_postgresql_server} />
       </div>
       <div>
@@ -99,7 +99,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Copy/Paste the commands below</Li>
           <Li>Run the batch file</Li>
-          <Highlight_BATCH batchCode={_start_} />
+          <Highlight_BATCH code={_start_} />
         </ULdisc>
       </div>
 
@@ -117,7 +117,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </div>
       <div className="my-10">
-        <Highlight_BATCH batchCode={stopPostgresqlServer} />
+        <Highlight_BATCH code={stopPostgresqlServer} />
       </div>
 
       <IMG img_name={stop_postgresql_server} />
@@ -130,7 +130,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Copy/Paste the commands below</Li>
           <Li>Run the batch file</Li>
-          <Highlight_BATCH batchCode={_stop_} />
+          <Highlight_BATCH code={_stop_} />
         </ULdisc>
       </div>
 

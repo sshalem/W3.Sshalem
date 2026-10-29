@@ -78,7 +78,7 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
         </div>
         <div className="my-8">console show active profile is "dev"</div>
         <div>
-          <Highlight_BATCH batchCode={batchCOde} />
+          <Highlight_BATCH code={batchCOde} />
         </div>
       </article>
     </MainChildArea>

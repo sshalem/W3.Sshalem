@@ -11,7 +11,7 @@ const O4_InstallAxios = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          Install Axios <Highlight_BATCH batchCode={axios}></Highlight_BATCH>
+          Install Axios <Highlight_BATCH code={axios}></Highlight_BATCH>
         </li>
         <li className="my-1">
           create <SpanGreen>utils</SpanGreen> folder , and iside it , create a file named<SpanGreen>axiosInstance.tsx</SpanGreen> , where I create an

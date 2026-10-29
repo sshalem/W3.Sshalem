@@ -16,7 +16,7 @@ const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
         <li className="my-1">open CMD type the following command</li>
         <li className="my-1">Follow the instructions , to create a VITE ReactJS + TypeScript project</li>
       </ul>
-      <Highlight_BATCH batchCode={vite}></Highlight_BATCH>
+      <Highlight_BATCH code={vite}></Highlight_BATCH>
     </MainChildArea>
   );
 };

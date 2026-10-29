@@ -47,7 +47,7 @@ const O5_Tailwindcss = ({ anchor }: { anchor: string }) => {
           <br />✅ <SpanGreen>npm install -D tailwindcss@3 postcss autoprefixer</SpanGreen> - Install tailwindcss and its peer dependencies
           <br />✅ <SpanGreen>npx tailwindcss init -p</SpanGreen> - generate your <SpanBlue>tailwind.config.js</SpanBlue> and
           <SpanBlue>postcss.config.js</SpanBlue> files.
-          <Highlight_BATCH batchCode={install}></Highlight_BATCH>
+          <Highlight_BATCH code={install}></Highlight_BATCH>
         </li>
 
         <li className="my-1">
@@ -65,7 +65,7 @@ const O5_Tailwindcss = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           config prettier for tailwincss. In order to make the classed , to be sorted in a convention defined by tailwind , thus , install the
           following dependency
-          <Highlight_BATCH batchCode={prettier_npm}></Highlight_BATCH>
+          <Highlight_BATCH code={prettier_npm}></Highlight_BATCH>
         </li>
         <li className="my-1">
           <SpanGreen>.prettierrc</SpanGreen> - create a file named <SpanGreen>.prettierrc</SpanGreen> under the main project folder .

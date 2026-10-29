@@ -20,9 +20,9 @@ const O7_InstallReactRouter = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           to Install react router v6 type the following command. If I don't add the digit 6 at the end of the command , <br />
           It will install the latest version (See documnetation)
-          <Highlight_BATCH batchCode={router_install}></Highlight_BATCH>
+          <Highlight_BATCH code={router_install}></Highlight_BATCH>
           To uninstall use command
-          <Highlight_BATCH batchCode={router_uninstall}></Highlight_BATCH>
+          <Highlight_BATCH code={router_uninstall}></Highlight_BATCH>
         </li>
         <li className="my-1">create pages folder</li>
         <li className="my-1">create components folder</li>

@@ -14,11 +14,11 @@ const O3_ReactIcons = ({ anchor }: { anchor: string }) => {
         </li>
         <li className="my-1">
           type following command in termianl to install react icons
-          <Highlight_BATCH batchCode={icons}></Highlight_BATCH>
+          <Highlight_BATCH code={icons}></Highlight_BATCH>
         </li>
         <li className="my-1">
           or we can without the <SpanRed>--save</SpanRed> , since from NPM 5.0 it has no meaning
-          <Highlight_BATCH batchCode={icons_without_save}></Highlight_BATCH>
+          <Highlight_BATCH code={icons_without_save}></Highlight_BATCH>
         </li>
       </ul>
     </MainChildArea>

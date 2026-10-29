@@ -26,7 +26,7 @@ const O2_ConfigTemplatePath = ({ anchor }: { anchor: string }) => {
         <Li>
           config prettier for tailwincss. In order to make the classed , to be sorted in a convention defined by tailwind , thus , install the
           following dependency
-          <Highlight_BATCH batchCode={prettier_npm}></Highlight_BATCH>
+          <Highlight_BATCH code={prettier_npm}></Highlight_BATCH>
         </Li>
         <Li>
           <SpanGreen>.prettierrc</SpanGreen> - create a file named <SpanGreen>.prettierrc</SpanGreen> under the main project folder .
