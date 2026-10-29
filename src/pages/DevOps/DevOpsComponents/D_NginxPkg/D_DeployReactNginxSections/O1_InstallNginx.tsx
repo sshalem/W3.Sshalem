@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,37 +12,37 @@ const O1_InstallNginx = ({ anchor }: { anchor: string }) => {
         <article className="my-4">Here’s a step-by-step guide to install NGINX on Ubuntu 22.04:</article>
         <div className="my-4 text-xl">1️⃣ Update your system</div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl">2️⃣ Install NGINX</div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl">3️⃣ Start and enable NGINX</div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl">4️⃣ Allow NGINX through the firewall</div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Highlight_ApplicationProperties code={_4_} />
         </ULdisc>
         Check:
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_5_} />
+          <Highlight_ApplicationProperties code={_5_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 5️⃣ Test NGINX</div>
         Open your browser and visit: I should see the <strong>“Welcome to Nginx!”</strong> page.
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_6_} />
+          <Highlight_ApplicationProperties code={_6_} />
         </ULdisc>
         <hr />
         <div className="my-4 text-xl"> 6️⃣ Useful NGINX commands</div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_7_} />
+          <Highlight_ApplicationProperties code={_7_} />
         </ULdisc>
         <hr />
       </section>

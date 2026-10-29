@@ -3,7 +3,7 @@
 @PostConstruct example --> (SPRING)(ApplicationProperties)(2.@PostConstruct example)
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 import SpanGrey from "../../../../../components/Highlight/SpanGrey";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
@@ -57,7 +57,7 @@ const O2_PostConstructImpl = ({ anchor }: { anchor: string }) => {
               <Li>App is ready to accept requests</Li>
             </ULDecimal>
           </div>
-          <JavaHighlight javaCode={person_post_construct}></JavaHighlight>
+          <Highlight_JAVA code={person_post_construct}></Highlight_JAVA>
         </div>
       </section>
     </MainChildArea>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O8_AtomicOperations = ({ anchor }: { anchor: string }) => {
   return (
@@ -55,7 +55,7 @@ const O8_AtomicOperations = ({ anchor }: { anchor: string }) => {
             ✔ Atomic = database stays correct <br /> ❌ Without atomicity = money disappears
           </ULdisc>
         </div>
-        <JavaHighlight javaCode={java_code}></JavaHighlight>
+        <Highlight_JAVA code={java_code}></Highlight_JAVA>
       </section>
 
       <hr />
@@ -68,7 +68,7 @@ const O8_AtomicOperations = ({ anchor }: { anchor: string }) => {
               <Li>→ If operation is standalone and you don’t care about rollback</Li>
               <Li>→ No need for @Transactional — already handled by repository layer.</Li>
             </ULdisc>
-            <JavaHighlight javaCode={no_atomic}></JavaHighlight>
+            <Highlight_JAVA code={no_atomic}></Highlight_JAVA>
           </div>
         </article>
       </section>

@@ -3,7 +3,7 @@
 Basic Logging --> (SPRING)(Logging)(LogUtil)
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 
 const BasicLogging = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,7 +11,7 @@ const BasicLogging = ({ anchor }: { anchor: string }) => {
       <div className="mb-5">
         to display description in console <SpanRed>without TimeStamp</SpanRed> we use the Simple <SpanBlue>System.out.println</SpanBlue>
       </div>
-      <JavaHighlight javaCode={sysoutCode} />
+      <Highlight_JAVA code={sysoutCode} />
     </MainChildArea>
   );
 };

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O7_QueryReturnPojoFields = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const O7_QueryReturnPojoFields = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Recommended Approach: JPQL with DTO Constructor Projection</Li>
           <Li>It's possible to use native SQL (See ChatGPT for instructions), but only for complex queries</Li>
-          <JavaHighlight javaCode={job_entity}></JavaHighlight>
+          <Highlight_JAVA code={job_entity}></Highlight_JAVA>
         </ULDecimal>
         {/*  */}
         {/*  */}
@@ -38,7 +38,7 @@ const O7_QueryReturnPojoFields = ({ anchor }: { anchor: string }) => {
           <p className="text-lg font-semibold">✅ Step 1: Create a DTO</p>
           <ULdisc>
             <Li>Use appropriate types that match your entity fields exactly.</Li>
-            <JavaHighlight javaCode={dto}></JavaHighlight>
+            <Highlight_JAVA code={dto}></Highlight_JAVA>
           </ULdisc>
         </article>
         {/*  */}
@@ -47,7 +47,7 @@ const O7_QueryReturnPojoFields = ({ anchor }: { anchor: string }) => {
           <p className="text-lg font-semibold">✅ Step 2: Add a JPQL Query to Your Repository</p>
           <ULdisc>
             <Li>🗂️ Repository Query (JPQL Constructor Expression)</Li>
-            <JavaHighlight javaCode={jpql}></JavaHighlight>
+            <Highlight_JAVA code={jpql}></Highlight_JAVA>
           </ULdisc>
         </article>
         {/*  */}

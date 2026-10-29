@@ -3,21 +3,21 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O2_ForStringPrintInSameLine = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-4 text-2xl font-semibold">Print all elements in the same line (and not in new line) :</article>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
         this is same as in java:
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
       </section>
 
       <section className="my-8">
         <article className="my-4 text-2xl font-semibold">for loop a String</article>
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
       </section>
     </MainChildArea>
   );

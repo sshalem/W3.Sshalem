@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_InitPyFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,9 +23,7 @@ const O2_InitPyFile = ({ anchor }: { anchor: string }) => {
           <Li>Marks a package</Li>
           <Li>Runs when the package is imported</Li>
           <Li>Controls what gets imported</Li>
-          <Li>
-            
-          </Li>
+          <Li></Li>
         </ULdisc>
       </section>
 
@@ -41,7 +39,7 @@ const O2_InitPyFile = ({ anchor }: { anchor: string }) => {
           <Li>👉 So, a package = a directory of modules</Li>
           <Li>
             Example
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>

@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_PostgresUserModelClass = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const O4_PostgresUserModelClass = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Copy/Paste the code
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
         </ULdisc>
       </section>

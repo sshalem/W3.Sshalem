@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_InstallSqlAlchemy = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O2_InstallSqlAlchemy = ({ anchor }: { anchor: string }) => {
             <SpanYellow>pydantic-settings</SpanYellow> - for used for config + .env
           </Li>
         </ULdisc>
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -218,7 +218,7 @@ const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
         <p className="font-semibold">
           🔑 <SpanYellow>JwtAuthenticationFilter</SpanYellow> code
         </p>
-        <JavaHighlight javaCode={code_java}></JavaHighlight>
+        <Highlight_JAVA code={code_java}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

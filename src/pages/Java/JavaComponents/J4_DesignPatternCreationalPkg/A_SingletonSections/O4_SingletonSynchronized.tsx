@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O4_SingletonSynchronized = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O4_SingletonSynchronized = ({ anchor }: { anchor: string }) => {
           <Li>✔ Thread-safe</Li>
           <Li>✖ Slower due to synchronization</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

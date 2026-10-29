@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_DefaultProps = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,7 +27,7 @@ const O5_DefaultProps = ({ anchor }: { anchor: string }) => {
             I don't pass <SpanYellow>isActive</SpanYellow> since it's optional
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
         <ULdisc>
           <Li>Default value directly in the destructuring (recommended) This is the cleanest and most common way in React + TypeScript.</Li>
@@ -35,7 +35,7 @@ const O5_DefaultProps = ({ anchor }: { anchor: string }) => {
             I set <SpanYellow>isActive = true</SpanYellow>
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

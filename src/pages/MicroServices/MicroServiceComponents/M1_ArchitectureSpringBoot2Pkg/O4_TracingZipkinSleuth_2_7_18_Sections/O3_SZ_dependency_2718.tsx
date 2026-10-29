@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O3_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,7 +11,7 @@ const O3_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               1️⃣ Add dependencies (to EACH microservice , including API-Gateway)
-              <XmlHighlight xmlCode={_1_} />
+              <Highlight_XML xmlCode={_1_} />
             </Li>
             <Li>2️⃣ Verify Spring Cloud BOM (already doen when Added Eureka , Spring cloud version matches in all services)</Li>
             <Li>
@@ -21,15 +21,15 @@ const O3_SZ_dependency_2718 = ({ anchor }: { anchor: string }) => {
                   Important: <SpanYellow>probability=1.0</SpanYellow> → trace ALL requests (for testing)
                 </Li>
               </ULdisc>
-              <ApplicationPropertiesHighlight propertiesCode={_2_} />
+              <Highlight_ApplicationProperties code={_2_} />
             </Li>
             <Li>
               4️⃣ Optional but recommended
-              <ApplicationPropertiesHighlight propertiesCode={_3_} />
+              <Highlight_ApplicationProperties code={_3_} />
             </Li>
             <Li>
               5️⃣ Run Zipkin server
-              <ApplicationPropertiesHighlight propertiesCode={_4_} />
+              <Highlight_ApplicationProperties code={_4_} />
             </Li>
           </ULdisc>
         </article>

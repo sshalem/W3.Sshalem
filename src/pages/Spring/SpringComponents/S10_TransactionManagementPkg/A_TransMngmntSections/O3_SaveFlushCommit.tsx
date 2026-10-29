@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanBlue, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -47,7 +47,7 @@ const O3_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
                 </Li>
                 <Li>
                   <strong>Usage</strong>
-                  <JavaHighlight javaCode={save_parent}></JavaHighlight>
+                  <Highlight_JAVA code={save_parent}></Highlight_JAVA>
                 </Li>
               </ULdisc>
             </Li>
@@ -67,7 +67,7 @@ const O3_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
                 </Li>
                 <Li>
                   <strong>Usage</strong>
-                  <JavaHighlight javaCode={flush_parent}></JavaHighlight>
+                  <Highlight_JAVA code={flush_parent}></Highlight_JAVA>
                 </Li>
               </ULdisc>
             </Li>
@@ -88,7 +88,7 @@ const O3_SaveFlushCommit = ({ anchor }: { anchor: string }) => {
                 </Li>
                 <Li>
                   <strong>Usage</strong>
-                  <JavaHighlight javaCode={commit_parent}></JavaHighlight>
+                  <Highlight_JAVA code={commit_parent}></Highlight_JAVA>
                 </Li>
               </ULdisc>
             </Li>

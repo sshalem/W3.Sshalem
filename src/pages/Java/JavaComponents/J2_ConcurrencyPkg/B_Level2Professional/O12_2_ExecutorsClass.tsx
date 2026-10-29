@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 
 const O12_2_ExecutorsClass = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O12_2_ExecutorsClass = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
           <p className="text-xl font-semibold">Example :</p>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

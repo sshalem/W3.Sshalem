@@ -4,7 +4,7 @@ JDK_Install --> (DEVOPS)(LINUX)(Linux Server setup)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 import SpanRed from "../../../../../components/Highlight/SpanRed";
 
 const O1_JdkInstall = ({ anchor }: { anchor: string }) => {
@@ -37,7 +37,7 @@ const O1_JdkInstall = ({ anchor }: { anchor: string }) => {
           <SpanRed>JDK 21</SpanRed>)
         </li>
       </ul>
-      <LinuxHighlight bashCode={jdk_install}></LinuxHighlight>
+      <LinuxHighlight code={jdk_install}></LinuxHighlight>
     </MainChildArea>
   );
 };

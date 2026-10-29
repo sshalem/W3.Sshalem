@@ -3,7 +3,7 @@
 logger Slf4j Logback --> (SPRING)(Logging)(LogUtil)
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, SpanGreen, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, SpanGreen, Highlight_XML } from "../../../../../components/Highlight";
 
 const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           for example : <span className="text-red-500"> web-starter-depenency</span>
         </div>
         <div className="my-5">
-          <XmlHighlight xmlCode={dependency} />
+          <Highlight_XML xmlCode={dependency} />
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const LoggerSlf4jLogback = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
         <div className="my-10">
-          <JavaHighlight javaCode={slf4jCode} />
+          <Highlight_JAVA code={slf4jCode} />
         </div>
       </div>
     </MainChildArea>

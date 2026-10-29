@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanTeal } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -147,7 +147,7 @@ const O4_HibernateSession = ({ anchor }: { anchor: string }) => {
             <div>
               <SpanTeal>4. Example</SpanTeal>
             </div>
-            <JavaHighlight javaCode={transaction_example}></JavaHighlight>
+            <Highlight_JAVA code={transaction_example}></Highlight_JAVA>
           </article>
 
           <hr />
@@ -171,7 +171,7 @@ const O4_HibernateSession = ({ anchor }: { anchor: string }) => {
               <Li>
                 But if needed, you can access it by define the <strong>EntityManager</strong> and annotate it with
                 <strong>@PersistenceContext</strong>
-                <JavaHighlight javaCode={entitymanager}></JavaHighlight>
+                <Highlight_JAVA code={entitymanager}></Highlight_JAVA>
               </Li>
             </ULdisc>
           </article>

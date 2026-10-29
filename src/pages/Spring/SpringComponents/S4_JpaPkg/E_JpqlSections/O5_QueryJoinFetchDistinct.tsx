@@ -3,7 +3,7 @@
 JOIN FETCH (Distinct) --> (SPRING)(JPA)(JPQL)
 */
 import { Anchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
   return (
@@ -45,7 +45,7 @@ const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
         </div>
         <div></div>
         This is the code of the Class
-        <JavaHighlight javaCode={user_entity}></JavaHighlight>
+        <Highlight_JAVA code={user_entity}></Highlight_JAVA>
         <article>
           <div className="my-8">
             ✅ Here is a good example why I use <SpanGrey>JOIN FETCH</SpanGrey> with <SpanGrey>DISTINCT</SpanGrey>.
@@ -62,7 +62,7 @@ const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
                 fouund , see Transactionl or JWT sections)
               </Li>
             </ULdisc>
-            <JavaHighlight javaCode={jwt_user_details_service}></JavaHighlight>
+            <Highlight_JAVA code={jwt_user_details_service}></Highlight_JAVA>
           </div>
           <DivDoubleBorder>JOIN FETCH Query with DISTINCT</DivDoubleBorder>
           let's see how to query on
@@ -70,7 +70,7 @@ const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
             <Li>Important: fetch join to initialize lazy roles in the same query</Li>
             <Li>Always use DISTINCT in the QUERY when doing JOIN FETCH to avoid duplications</Li>
           </ULDecimal>
-          <JavaHighlight javaCode={user_repository}></JavaHighlight>
+          <Highlight_JAVA code={user_repository}></Highlight_JAVA>
           <ULdisc>
             <Li>Console shows only 1 SQL query performed</Li>
             <Li>used DISTINCT keyword</Li>
@@ -78,7 +78,7 @@ const O5_QueryJoinFetchDistinct = ({ anchor }: { anchor: string }) => {
               We see twice <SpanGrey>left join</SpanGrey> , since User/Role are mapped as ManyToMany
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={sql_query}></JavaHighlight>
+          <Highlight_JAVA code={sql_query}></Highlight_JAVA>
         </article>
         {/*  */}
       </section>

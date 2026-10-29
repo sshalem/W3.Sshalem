@@ -3,7 +3,7 @@
 P6Spy logging --> (SPRING)(JPA)(logging-jpa-hibernate)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_XML } from "../../../../../components/Highlight";
 import SpanYellow from "../../../../../components/Highlight/SpanYellow";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -26,7 +26,7 @@ const O3_P6SpyLogging = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔹 1. Add P6Spy dependency</p>
-        <XmlHighlight xmlCode={xml_pom}></XmlHighlight>
+        <Highlight_XML xmlCode={xml_pom}></Highlight_XML>
       </section>
       <hr />
 
@@ -34,14 +34,14 @@ const O3_P6SpyLogging = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🔹 2. Configure application.properties</p>
         Replace your datasource driver with P6Spy’s proxy driver. <br />
         👉 Notice <SpanYellow>jdbc:p6spy:mysql://...</SpanYellow> instead of <SpanYellow>jdbc:mysql://....</SpanYellow>
-        <ApplicationPropertiesHighlight propertiesCode={properties}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={properties}></Highlight_ApplicationProperties>
       </section>
       <hr />
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🔹 3. Create spy.properties (in src/main/resources)</p>
         This file controls how queries are logged. <br />
-        <ApplicationPropertiesHighlight propertiesCode={spy_properties}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={spy_properties}></Highlight_ApplicationProperties>
       </section>
       <hr />
     </MainChildArea>

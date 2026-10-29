@@ -5,15 +5,15 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O6_Service = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderUserServiceImpl = useMemo(() => <JavaHighlight javaCode={user_service_impl} />, [user_service_impl]);
-  const renderRoleServiceImpl = useMemo(() => <JavaHighlight javaCode={role_service_impl} />, [role_service_impl]);
-  const renderRefreshTokenServiceImpl = useMemo(() => <JavaHighlight javaCode={refresh_token_service_impl} />, [refresh_token_service_impl]);
+  const renderUserServiceImpl = useMemo(() => <Highlight_JAVA code={user_service_impl} />, [user_service_impl]);
+  const renderRoleServiceImpl = useMemo(() => <Highlight_JAVA code={role_service_impl} />, [role_service_impl]);
+  const renderRefreshTokenServiceImpl = useMemo(() => <Highlight_JAVA code={refresh_token_service_impl} />, [refresh_token_service_impl]);
 
   return (
     <MainChildArea anchor={anchor}>

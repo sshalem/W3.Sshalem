@@ -3,7 +3,7 @@
 Schema sql --> (SPRING)(ApplicationProperties)(Schema sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_1 from "../../../../../assets/db_init_1.jpg";
 import db_init_2 from "../../../../../assets/db_init_2.jpg";
 
@@ -45,7 +45,7 @@ const O2_DBInitSchemaSql = ({ anchor }: { anchor: string }) => {
             When you place <SpanBlue>schema.sql</SpanBlue> in <SpanBlue>src/main/resources</SpanBlue>, Spring Boot automatically detects it. (if
             database initialization <SpanBlue>spring.sql.init.mode=always</SpanBlue> is enabled) <br />
             When using <SpanBlue>schema.sql</SpanBlue> configure your <SpanBlue>application.properties</SpanBlue> like this :
-            <ApplicationPropertiesHighlight propertiesCode={schemaSqlCode} />
+            <Highlight_ApplicationProperties code={schemaSqlCode} />
             <IMG img_name={db_init_1} />
             <ul className="my-8 ml-16 list-decimal">
               <li className="my-1">
@@ -82,7 +82,7 @@ const O2_DBInitSchemaSql = ({ anchor }: { anchor: string }) => {
             Then, configure your <SpanBlue>application.properties</SpanBlue> like this. <br /> This tells Spring Boot to load{" "}
             <SpanBlue>schema.sql</SpanBlue> from
             <SpanBlue>/sqlSchemas/</SpanBlue> instead of the default root of resources.
-            <ApplicationPropertiesHighlight propertiesCode={schemaSqlDifferentPathCode} />
+            <Highlight_ApplicationProperties code={schemaSqlDifferentPathCode} />
             <IMG img_name={db_init_2} />
           </div>
           <div className="mt-16">
@@ -99,7 +99,7 @@ const O2_DBInitSchemaSql = ({ anchor }: { anchor: string }) => {
               <strong>automatic schema generation</strong>.
             </em>
             <br /> Spring Boot can create tables from your <SpanBlue>JPA</SpanBlue> <SpanBlue>@Entity</SpanBlue> classes using:
-            <ApplicationPropertiesHighlight propertiesCode={propertiesDefaultCode} />
+            <Highlight_ApplicationProperties code={propertiesDefaultCode} />
           </div>
         </article>
       </section>

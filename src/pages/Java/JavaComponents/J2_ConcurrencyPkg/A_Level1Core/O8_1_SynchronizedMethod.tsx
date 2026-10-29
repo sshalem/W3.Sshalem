@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 
 const O8_1_SynchronizedMethod = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O8_1_SynchronizedMethod = ({ anchor }: { anchor: string }) => {
             <Li>Locks the whole method, not just a part of it.</Li>
             <Li>Uses the object-level lock (instance lock).</Li>
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

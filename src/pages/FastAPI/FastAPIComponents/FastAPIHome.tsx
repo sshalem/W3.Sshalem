@@ -1,5 +1,5 @@
 import { Li, Subject, ULdisc } from "../../../components";
-import { PythonHighlight, SpanYellow } from "../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../components/Highlight";
 
 /*
 
@@ -59,12 +59,12 @@ const FastAPIHome = () => {
               </Li>
               <Li>
                 <strong>main.py</strong>
-                <PythonHighlight pythonCode={_1_} />
+                <Highlight_PYTHON code={_1_} />
               </Li>
               <Li>
-                <strong>user_router.py</strong> like <SpanYellow>UserController</SpanYellow> with annotation <SpanYellow>@RestController</SpanYellow> in
-                spring boot
-                <PythonHighlight pythonCode={_2_} />
+                <strong>user_router.py</strong> like <SpanYellow>UserController</SpanYellow> with annotation <SpanYellow>@RestController</SpanYellow>{" "}
+                in spring boot
+                <Highlight_PYTHON code={_2_} />
               </Li>
             </ULdisc>
           </section>

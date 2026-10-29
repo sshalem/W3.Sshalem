@@ -3,7 +3,7 @@
 Query Dates --> (SPRING)(JPA)(JPQL)
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 
 const O6_QueryDates = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,7 +29,7 @@ const O6_QueryDates = ({ anchor }: { anchor: string }) => {
                 href="https://github.com/sshalem/FullStack/blob/main/08-Original_coupon-manage-system/src/main/java/com/system/repository/CompanyRepository.java"
               ></Anchor>
             </Li>
-            <JavaHighlight javaCode={coupon_manage_system}></JavaHighlight>
+            <Highlight_JAVA code={coupon_manage_system}></Highlight_JAVA>
           </ULdisc>
         </article>
         {/*  */}
@@ -50,7 +50,7 @@ const O6_QueryDates = ({ anchor }: { anchor: string }) => {
                 href="https://github.com/sshalem/FullStack/blob/main/08-CMS-coupon-manage-system/src/main/java/com/cms/repository/CompanyRepository.java"
               ></Anchor>
             </Li>
-            <JavaHighlight javaCode={cms}></JavaHighlight>
+            <Highlight_JAVA code={cms}></Highlight_JAVA>
           </ULdisc>
         </article>
         {/*  */}

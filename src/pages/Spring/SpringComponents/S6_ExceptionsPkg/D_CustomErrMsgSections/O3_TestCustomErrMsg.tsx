@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -35,7 +35,7 @@ const O3_TestCustomErrMsg = ({ anchor }: { anchor: string }) => {
           No message will be displayed in spring console , since error is inside try/catch block , and the catch block does NOT throw another
           exception.
         </div>
-        <JavaHighlight javaCode={postman}></JavaHighlight>
+        <Highlight_JAVA code={postman}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

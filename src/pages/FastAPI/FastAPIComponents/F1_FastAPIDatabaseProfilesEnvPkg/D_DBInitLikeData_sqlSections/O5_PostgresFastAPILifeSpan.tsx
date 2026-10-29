@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGreen, SpanGrey, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGreen, SpanGrey, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_PostgresFastAPILifeSpan = ({ anchor }: { anchor: string }) => {
   return (
@@ -64,9 +64,9 @@ const O5_PostgresFastAPILifeSpan = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
         <div className="text-xl">🧠 Cleaner Pattern (Professional Way)</div>
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,12 +15,12 @@ const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
             Open Terminal and verify <SpanYellow>(.venv)</SpanYellow> enviroment.
           </Li>
           <Li>
-            Install <SpanYellow>fastapi</SpanYellow> + <SpanYellow>unvicorn</SpanYellow> in one command (<SpanYellow>uvicorn</SpanYellow> is the server where
-            FastAPI runs on)
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            Install <SpanYellow>fastapi</SpanYellow> + <SpanYellow>unvicorn</SpanYellow> in one command (<SpanYellow>uvicorn</SpanYellow> is the
+            server where FastAPI runs on)
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>Check packaged list</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULDecimal>
       </section>
     </MainChildArea>

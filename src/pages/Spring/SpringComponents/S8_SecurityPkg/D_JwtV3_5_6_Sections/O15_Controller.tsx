@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanCyan, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanCyan, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
 const O15_Controller = ({ anchor }: { anchor: string }) => {
@@ -78,7 +78,7 @@ const O15_Controller = ({ anchor }: { anchor: string }) => {
         </article>
       </section>
       <hr />
-      <JavaHighlight javaCode={auth_controller}></JavaHighlight>
+      <Highlight_JAVA code={auth_controller}></Highlight_JAVA>
     </MainChildArea>
   );
 };

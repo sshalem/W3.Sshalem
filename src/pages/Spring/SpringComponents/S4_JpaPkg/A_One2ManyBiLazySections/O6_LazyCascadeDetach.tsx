@@ -3,7 +3,7 @@
 CascadeType Detach --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanRed } from "../../../../../components/Highlight";
 
 const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
   return (
@@ -60,7 +60,7 @@ const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Any change you make to it is tracked by Hibernate (dirty checking).</Li>
             <Li>At flush/commit, Hibernate automatically generates the SQL to update the DB.</Li>
-            <JavaHighlight javaCode={attached_entity}></JavaHighlight>
+            <Highlight_JAVA code={attached_entity}></Highlight_JAVA>
           </ULdisc>
         </article>
 
@@ -74,7 +74,7 @@ const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
             <Li>The entity is no longer tracked.</Li>
             <Li>Changes you make are not recorded.</Li>
             <Li>At commit, Hibernate won’t generate any SQL for it.</Li>
-            <JavaHighlight javaCode={de_attached_entity}></JavaHighlight>
+            <Highlight_JAVA code={de_attached_entity}></Highlight_JAVA>
           </ULdisc>
         </article>
 
@@ -84,7 +84,7 @@ const O6_LazyCascadeDetach = ({ anchor }: { anchor: string }) => {
 
           <ULdisc>
             <Li>⚠️ Note: merge() returns a new managed instance. The passed object (parent) stays detached.</Li>
-            <JavaHighlight javaCode={re_attach}></JavaHighlight>
+            <Highlight_JAVA code={re_attach}></Highlight_JAVA>
           </ULdisc>
         </article>
         <hr />

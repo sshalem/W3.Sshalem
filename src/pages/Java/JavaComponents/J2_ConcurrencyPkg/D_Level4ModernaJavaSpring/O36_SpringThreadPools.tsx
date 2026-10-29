@@ -3,13 +3,13 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O36_SpringThreadPools = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
       </section>
     </MainChildArea>
   );

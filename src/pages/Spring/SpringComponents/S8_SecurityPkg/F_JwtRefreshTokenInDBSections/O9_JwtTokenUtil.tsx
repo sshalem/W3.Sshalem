@@ -4,14 +4,14 @@
 */
 import { useMemo } from "react";
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
 const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderJwtTokenUtil = useMemo(() => <JavaHighlight javaCode={code_java} />, [code_java]);
+  const renderJwtTokenUtil = useMemo(() => <Highlight_JAVA code={code_java} />, [code_java]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">

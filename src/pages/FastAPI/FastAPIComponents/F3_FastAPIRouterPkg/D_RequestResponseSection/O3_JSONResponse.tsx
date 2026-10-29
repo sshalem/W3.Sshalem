@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_JSONResponse = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +28,7 @@ const O3_JSONResponse = ({ anchor }: { anchor: string }) => {
         <Li>
           <SpanYellow>JSONResponse</SpanYellow> Serializes JSON-safe Python object → JSON string (HTTP response body (JSON string/bytes))
         </Li>
-        <PythonHighlight pythonCode={_2_}></PythonHighlight>
+        <Highlight_PYTHON code={_2_}></Highlight_PYTHON>
       </section>
     </MainChildArea>
   );

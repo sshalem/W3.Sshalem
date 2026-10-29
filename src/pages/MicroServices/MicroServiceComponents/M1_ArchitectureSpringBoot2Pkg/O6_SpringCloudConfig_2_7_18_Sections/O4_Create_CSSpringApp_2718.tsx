@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
             <Li>Add the following dependencies.</Li>
             <Li>Also Verify Spring Cloud BOM (Spring cloud version matches in all services)</Li>
           </ULdisc>
-          <XmlHighlight xmlCode={_1_} />
+          <Highlight_XML xmlCode={_1_} />
         </article>
 
         <article className="my-8">
@@ -31,7 +31,7 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
 
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
         </article>
 
         <article className="my-8">
@@ -41,7 +41,7 @@ const O4_Create_CSSpringApp_2718 = ({ anchor }: { anchor: string }) => {
               config <SpanYellow>application.properties</SpanYellow> as below
             </Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
         </article>
       </section>
     </MainChildArea>

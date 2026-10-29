@@ -3,7 +3,7 @@
 Profile MySql --> (SPRING)(ApplicationProperties)(ProfileMySql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder } from "../../../../../components/Highlight";
 import profile_mysql from "../../../../../assets/profile_mysql.jpg";
 
 const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
@@ -13,11 +13,11 @@ const ProfileMySqlConfig = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <DivDoubleBorder>application.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
+      <Highlight_ApplicationProperties code={defaultProps} />
       <div className="my-5">
         <DivDoubleBorder>application-mysql.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={configMysqlProps} />
+      <Highlight_ApplicationProperties code={configMysqlProps} />
     </MainChildArea>
   );
 };

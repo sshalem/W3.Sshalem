@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O1_ReadTxtFileContent = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,11 +13,11 @@ const O1_ReadTxtFileContent = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             ✅ Read txt file line-by-line (better for large files)
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             or explicit txt file
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>

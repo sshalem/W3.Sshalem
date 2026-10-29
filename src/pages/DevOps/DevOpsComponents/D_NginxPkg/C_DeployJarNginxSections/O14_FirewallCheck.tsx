@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O14_FirewallCheck = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O14_FirewallCheck = ({ anchor }: { anchor: string }) => {
           <Li>22 (SSH)</Li>
           <Li>80 (HTTP)</Li>
           <Li>443 (HTTPS)</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

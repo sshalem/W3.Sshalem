@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O8_RaiseException = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O8_RaiseException = ({ anchor }: { anchor: string }) => {
         raise exception (Same as throw in JAVA) .
         <br />
         to throw exception in python we use the <SpanGrey>raise</SpanGrey> keyword
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

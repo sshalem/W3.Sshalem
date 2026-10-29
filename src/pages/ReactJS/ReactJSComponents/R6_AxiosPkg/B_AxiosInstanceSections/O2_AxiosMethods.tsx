@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_AxiosMethods = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,25 +25,25 @@ const O2_AxiosMethods = ({ anchor }: { anchor: string }) => {
               <div className="text-xl">
                 <SpanBlue>get method</SpanBlue>
               </div>
-              <JsxHighlight jsxCode={axios_get}></JsxHighlight>
+              <Highlight_JSX code={axios_get}></Highlight_JSX>
             </Li>
             <Li>
               <div className="text-xl">
                 <SpanGreen>post method</SpanGreen>
               </div>
-              <JsxHighlight jsxCode={axios_post}></JsxHighlight>
+              <Highlight_JSX code={axios_post}></Highlight_JSX>
             </Li>
             <Li>
               <div className="text-xl">
                 <SpanGreen>put method</SpanGreen>
               </div>
-              <JsxHighlight jsxCode={axios_put}></JsxHighlight>
+              <Highlight_JSX code={axios_put}></Highlight_JSX>
             </Li>
             <Li>
               <div className="text-xl">
                 <SpanRed>delete method</SpanRed>
               </div>
-              <JsxHighlight jsxCode={axios_delete}></JsxHighlight>
+              <Highlight_JSX code={axios_delete}></Highlight_JSX>
             </Li>
           </ULdisc>
         </div>

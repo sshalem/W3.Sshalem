@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 import TableFiveColCompareDeleteJPQL from "../../../../../components/Tables/Table_5ColCompareDeleteJPQL";
 
 const O11_DeleteQueryJPQLMethod = ({ anchor }: { anchor: string }) => {
@@ -24,7 +24,7 @@ const O11_DeleteQueryJPQLMethod = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanGrey>@Modifying</SpanGrey> - Since it's a delete operations , I need to add <SpanGrey>@Modifying</SpanGrey>
           </Li>
-          <JavaHighlight javaCode={repo_delete_jpql}></JavaHighlight>
+          <Highlight_JAVA code={repo_delete_jpql}></Highlight_JAVA>
           <Li>
             In Service layer , I call <SpanGrey>deleteUserByEmailJPQL(...)</SpanGrey> then <SpanGrey>throw RuntimeException</SpanGrey>
           </Li>
@@ -63,7 +63,7 @@ const O11_DeleteQueryJPQLMethod = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
 
-          <JavaHighlight javaCode={bulk_delete}></JavaHighlight>
+          <Highlight_JAVA code={bulk_delete}></Highlight_JAVA>
           <ULdisc>
             <Li>✔ No SELECT</Li>
             <Li>✔ No per-entity delete</Li>
@@ -72,7 +72,7 @@ const O11_DeleteQueryJPQLMethod = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </section>
         <TableFiveColCompareDeleteJPQL />
-        <JavaHighlight javaCode={derived_delete_by_email}></JavaHighlight>
+        <Highlight_JAVA code={derived_delete_by_email}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

@@ -4,7 +4,7 @@
 */
 import { Outlet, useLocation } from "react-router-dom";
 import { Subject } from "../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../components/Highlight";
 
 const DataStructures = () => {
   let location = useLocation();
@@ -16,25 +16,25 @@ const DataStructures = () => {
             <section className="my-8">
               <article className="my-8">
                 LEVEL 1 — CORE JAVA CONCURRENCY
-                <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                <Highlight_ApplicationProperties code={_1_} />
               </article>
               <article className="my-8">
                 LEVEL 2 — PROFESSIONAL JAVA CONCURRENCY
-                <ApplicationPropertiesHighlight propertiesCode={_2_} />
+                <Highlight_ApplicationProperties code={_2_} />
               </article>
               <article className="my-8">
                 LEVEL 3 — ADVANCED CONCURRENCY
-                <ApplicationPropertiesHighlight propertiesCode={_3_} />
+                <Highlight_ApplicationProperties code={_3_} />
               </article>
               <article className="my-8">
                 LEVEL 4 — MODERN JAVA + SPRING
                 <p>This is where I would connect everything to the type of backend development you're learning.</p>
-                <ApplicationPropertiesHighlight propertiesCode={_4_} />
+                <Highlight_ApplicationProperties code={_4_} />
               </article>
               <article className="my-8">
                 LEVEL 5 — CONCURRENCY ENGINEERING
                 <p>This is where I would connect everything to the type of backend development you're learning.</p>
-                <ApplicationPropertiesHighlight propertiesCode={_5_} />
+                <Highlight_ApplicationProperties code={_5_} />
               </article>
             </section>
           }

@@ -3,7 +3,7 @@
 CascadeType Persist (save) --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Anchor, Answer, IMG, Li, MainChildArea, Question, ULDecimal, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, JsxHighlight, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, Highlight_JSX, SpanGreen, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import jpa_01 from "../../../../../assets/jpa_01.jpg";
 import { Link } from "react-router-dom";
 
@@ -36,7 +36,7 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
           <ULDecimal>
             <Li>
               Setup UserEntity w/o Cascade
-              <JavaHighlight javaCode={no_cascade}></JavaHighlight>
+              <Highlight_JAVA code={no_cascade}></Highlight_JAVA>
             </Li>
             <Li>
               <Anchor
@@ -52,11 +52,11 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               The Request I sent , Includes new User with 2 Roles. <br />
-              <JsxHighlight jsxCode={user_role_json}></JsxHighlight>
+              <Highlight_JSX code={user_role_json}></Highlight_JSX>
               <SpanRed>Note</SpanRed> - I return <SpanGreen>ENTITY</SpanGreen> NOT <SpanRed>DTO</SpanRed> ,let's see what happens.
-              <JavaHighlight javaCode={create_user_with_roles}></JavaHighlight>
+              <Highlight_JAVA code={create_user_with_roles}></Highlight_JAVA>
               controller code
-              <JavaHighlight javaCode={controller_no_dto}></JavaHighlight>
+              <Highlight_JAVA code={controller_no_dto}></Highlight_JAVA>
             </Li>
             <Li>Lets examine Hibernate SQL query and DataBase</Li>
           </ULDecimal>
@@ -68,7 +68,7 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , only <strong>insert</strong> to user executed, there is <SpanRed>no insert</SpanRed>{" "}
             to role_tb, . <br />
             Since there is no <strong>CASCADE PERSIST</strong>
-            <JavaHighlight javaCode={hibernate_no_cascade}></JavaHighlight>
+            <Highlight_JAVA code={hibernate_no_cascade}></Highlight_JAVA>
           </Li>
           <Li>
             DataBase - <SpanGreen>as Expected</SpanGreen> , only User updated , no Role added to user{" "}
@@ -100,7 +100,7 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
           <ULDecimal>
             <Li>
               Setup UserEntity with <SpanSky>CascadeType.PERSIST</SpanSky>
-              <JavaHighlight javaCode={with_cascade}></JavaHighlight>
+              <Highlight_JAVA code={with_cascade}></Highlight_JAVA>
             </Li>
             <Li>
               <Anchor
@@ -116,11 +116,11 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               The Request I sent , Includes new User with 2 Roles. <br />
-              <JsxHighlight jsxCode={user_role_json}></JsxHighlight>
+              <Highlight_JSX code={user_role_json}></Highlight_JSX>
               <SpanRed>Note</SpanRed> - Now I will return <SpanGreen>DTO</SpanGreen> ,w'll see that Only User DTO retrurns.
-              <JavaHighlight javaCode={create_user_with_roles}></JavaHighlight>
+              <Highlight_JAVA code={create_user_with_roles}></Highlight_JAVA>
               controller code with DTO response
-              <JavaHighlight javaCode={controller_with__dto}></JavaHighlight>
+              <Highlight_JAVA code={controller_with__dto}></Highlight_JAVA>
             </Li>
             <Li>Lets examine Hibernate SQL query and DataBase</Li>
           </ULDecimal>
@@ -131,7 +131,7 @@ const O3_LazyCascadePersist = ({ anchor }: { anchor: string }) => {
           <Li>
             Hibernate SQL - <SpanGreen>as Expected</SpanGreen> , 3 SQL <strong>insert</strong> queries . <br />
             Since <strong>CASCADE PERSIST</strong> enabled, thus PERSIST action (SAVE) was perfomed on parent and on Child.
-            <JavaHighlight javaCode={hibernate_cascade_persist}></JavaHighlight>
+            <Highlight_JAVA code={hibernate_cascade_persist}></Highlight_JAVA>
           </Li>
           <Li>
             DataBase - <SpanGreen>as Expected</SpanGreen> we see new row for user , and 2 new rows for roles

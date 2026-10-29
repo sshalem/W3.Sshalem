@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, Highlight_SQL, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import transQuestion_3 from "../../../../../assets/transQuestion_3.jpg";
 
 const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
@@ -17,9 +17,9 @@ const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
       <section>
         <div className="my-8 text-lg font-semibold">Option A — Conditional SQL update</div>
         Instead of reading the quantity into Java and checking it, let PostgreSQL check and decrement it in a single statement.
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_SQL code={_1_} />
         The repository method can return the number of rows updated:
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
         The result has a precise meaning:
         <ULDecimal>
           <Li>one coupon was successfully reserved.</Li>
@@ -32,7 +32,7 @@ const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
         </div>
         <div className="my-4">
           <Redtext>Important</Redtext>: this assumes the quantity cannot already be negative. Add a database constraint as an additional safeguard:
-          <JavaHighlight javaCode={_3_} />
+          <Highlight_JAVA code={_3_} />
         </div>
         <div>A constraint protects the database against invalid values even if another application path contains a bug.</div>
       </section>
@@ -40,7 +40,7 @@ const O3_makeInventoryUpdatesAtomic = ({ anchor }: { anchor: string }) => {
       <section>
         <div className="my-8 text-lg font-semibold">Option B — Pessimistic locking</div>
         Another valid solution is to lock the coupon row while checking and updating it.
-        <JavaHighlight javaCode={_4_} />
+        <Highlight_JAVA code={_4_} />
         For Spring Boot 2.7, use <SpanYellow>javax.persistence.LockModeType</SpanYellow> instead of
         <SpanYellow>jakarta.persistence.LockModeType</SpanYellow>.
         <div className="my-4">You then perform the read, check, and decrement within the same database transaction.</div>

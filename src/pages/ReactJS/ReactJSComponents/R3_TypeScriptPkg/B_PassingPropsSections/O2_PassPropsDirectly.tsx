@@ -3,16 +3,16 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX } from "../../../../../components/Highlight";
 
 const O2_PassPropsDirectly = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <DivDoubleBorder>Parent Component:</DivDoubleBorder>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

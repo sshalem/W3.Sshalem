@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 import python_16 from "../../../../../assets/python_16.jpg";
 
 const O3_SetupDjangoProject = ({ anchor }: { anchor: string }) => {
@@ -19,7 +19,7 @@ const O3_SetupDjangoProject = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Create new <SpanGrey>project</SpanGrey> with command below (the dot is part of the command)
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             This <SpanGrey>startproject</SpanGrey> command assumes (by use of <SpanGrey>.</SpanGrey> at the end) that the current folder is your

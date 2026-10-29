@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX } from "../../../../../components/Highlight";
 
 const LiftingStateUp = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,12 +29,12 @@ const LiftingStateUp = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Passing children</Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
         <ULdisc>
           <Li>Create interface</Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_hashCode = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,7 +27,7 @@ const O4_hashCode = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

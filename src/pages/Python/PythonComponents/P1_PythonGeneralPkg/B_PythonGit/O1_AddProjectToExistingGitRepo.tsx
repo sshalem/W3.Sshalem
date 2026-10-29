@@ -4,7 +4,7 @@
 */
 
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_5 from "../../../../../assets/python_5.jpg";
 import python_6 from "../../../../../assets/python_6.jpg";
 import python_8 from "../../../../../assets/python_8.jpg";
@@ -74,11 +74,11 @@ const O1_AddProjectToExistingGitRepo = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             6️⃣ Open the file <SpanGrey>.gitignore</SpanGrey> verify that the name of the vritual environment is igonred
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             7️⃣ run command
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
           </Li>
         </ULdisc>
       </section>

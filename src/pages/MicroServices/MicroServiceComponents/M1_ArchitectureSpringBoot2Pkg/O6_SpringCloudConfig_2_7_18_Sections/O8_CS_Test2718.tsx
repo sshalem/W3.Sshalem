@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -36,7 +36,7 @@ const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if we get a JSON response from Elasticsearch , this way we can tell if its running.
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="elasticsearch.bat" />
+                <Highlight_JSX jsxCode="elasticsearch.bat" />
               </Li>
               <Li>
                 <SpanYellow>Logstash</SpanYellow>
@@ -50,7 +50,7 @@ const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if Logstash is running
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="logstash -f config/logstash.conf" />
+                <Highlight_JSX jsxCode="logstash -f config/logstash.conf" />
               </Li>
               <Li>
                 <SpanYellow>Kibana</SpanYellow>{" "}
@@ -63,7 +63,7 @@ const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="kibana.bat" />
+                <Highlight_JSX jsxCode="kibana.bat" />
               </Li>
               <Li>
                 <SpanYellow>Config-Server</SpanYellow>
@@ -82,7 +82,7 @@ const O8_CS_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="java -jar zipkin-server-3.6.0-exec.jar" />
+                <Highlight_JSX jsxCode="java -jar zipkin-server-3.6.0-exec.jar" />
               </Li>
               <Li>
                 Run <SpanYellow>Api Gateway</SpanYellow> (Port 5001)

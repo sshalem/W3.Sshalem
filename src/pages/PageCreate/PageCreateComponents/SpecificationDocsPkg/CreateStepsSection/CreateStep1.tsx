@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 import page_create_1 from "../../../../../assets/page_create_1.jpg";
 
 const CreateStep1 = ({ anchor }: { anchor: string }) => {
@@ -23,7 +23,7 @@ const CreateStep1 = ({ anchor }: { anchor: string }) => {
             </li>
             <IMG img_name={page_create_1}></IMG>
             <li>add the below code in the created file</li>
-            <JsxHighlight jsxCode={jsxCode_1}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_1}></Highlight_JSX>
           </ul>
         </div>
       </article>

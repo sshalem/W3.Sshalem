@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,7 +22,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Run command (For custom name see option 3 in prev section):
-            <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+            <Highlight_ApplicationProperties code={mvn_clean_package} />
           </Li>
         </ULdisc>
         <hr />
@@ -30,7 +30,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             connect to Linode server with SSH connection (to get the IP info , login to Linode server)
-            <ApplicationPropertiesHighlight propertiesCode={connect_to_linode} />
+            <Highlight_ApplicationProperties code={connect_to_linode} />
           </Li>
         </ULdisc>
         <hr />
@@ -46,9 +46,9 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
                 <SpanGrey>/opt</SpanGrey> is commonly used for deployed apps
               </Li>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={mkdir_folder} />
+            <Highlight_ApplicationProperties code={mkdir_folder} />
             <Li>Example of keeping Spring Boot JARs organized:</Li>
-            <ApplicationPropertiesHighlight propertiesCode={jar_organized} />
+            <Highlight_ApplicationProperties code={jar_organized} />
           </Li>
         </ULdisc>
         <hr />
@@ -77,7 +77,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
                 LINODE_SERVER_IP - <SpanGrey>139.162.148.144</SpanGrey>
               </Li>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+            <Highlight_ApplicationProperties code={scp_jar} />
           </Li>
         </ULdisc>
         <hr />
@@ -85,7 +85,7 @@ const O2_DeploySpringJarOnLinux = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>In Linux terminal write the command below</Li>
 
-          <ApplicationPropertiesHighlight propertiesCode={_7_} />
+          <Highlight_ApplicationProperties code={_7_} />
         </ULdisc>
       </section>
     </MainChildArea>

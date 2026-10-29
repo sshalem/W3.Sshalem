@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_Entity = ({ anchor }: { anchor: string }) => {
   return (
@@ -35,12 +35,12 @@ const O4_Entity = ({ anchor }: { anchor: string }) => {
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 UserEntity</p>
-        <JavaHighlight javaCode={user_entity}></JavaHighlight>
+        <Highlight_JAVA code={user_entity}></Highlight_JAVA>
       </section>
 
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">🧩 RoleEntity</p>
-        <JavaHighlight javaCode={role_entity}></JavaHighlight>
+        <Highlight_JAVA code={role_entity}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

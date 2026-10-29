@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanRed, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanRed, SpanSky } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -31,7 +31,7 @@ const O2_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
             <Li>
               Example : <br />
               At this point, user is just a regular Java object (POJO), not tracked by JPA.
-              <JavaHighlight javaCode={pojo}></JavaHighlight>
+              <Highlight_JAVA code={pojo}></Highlight_JAVA>
             </Li>
           </ULDecimal>
         </article>
@@ -65,7 +65,7 @@ const O2_InMemoryVsDB = ({ anchor }: { anchor: string }) => {
               Example : <br />
               Now user is in the persistence context (saved ,but SQL NOT done yet). <br /> If you change user.setName("Bob"), JPA will detect this and
               update the DB on flush.
-              <JavaHighlight javaCode={persist}></JavaHighlight>
+              <Highlight_JAVA code={persist}></Highlight_JAVA>
             </Li>
           </ULdisc>
         </article>

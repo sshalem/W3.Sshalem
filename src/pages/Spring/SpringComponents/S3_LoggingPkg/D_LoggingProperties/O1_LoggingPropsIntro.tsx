@@ -3,7 +3,7 @@
 Logging Props Intro --> (SPRING)(Logging)(Logging Properties)
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const LoggingPropsIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -33,7 +33,7 @@ const LoggingPropsIntro = ({ anchor }: { anchor: string }) => {
           while keeping the rest at <SpanGrey>INFO</SpanGrey>
         </Li>
       </ULdisc>
-      <JavaHighlight javaCode={logging}></JavaHighlight>
+      <Highlight_JAVA code={logging}></Highlight_JAVA>
     </MainChildArea>
   );
 };

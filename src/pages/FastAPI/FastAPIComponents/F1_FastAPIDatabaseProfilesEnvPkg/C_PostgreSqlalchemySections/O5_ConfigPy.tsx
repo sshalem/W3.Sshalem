@@ -4,7 +4,7 @@
 */
 
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_ConfigPy = ({ anchor }: { anchor: string }) => {
   return (
@@ -34,11 +34,11 @@ const O5_ConfigPy = ({ anchor }: { anchor: string }) => {
         <article className="my-8 text-lg font-semibold">
           <SpanYellow>config.py</SpanYellow>
         </article>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
         <article className="my-8 text-lg font-semibold">
           <SpanYellow>database.py</SpanYellow>
         </article>
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
     </MainChildArea>
   );

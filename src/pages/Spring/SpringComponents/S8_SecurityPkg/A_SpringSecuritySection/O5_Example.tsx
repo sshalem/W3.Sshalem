@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -25,11 +25,11 @@ const O5_Example = ({ anchor }: { anchor: string }) => {
         </article>
         <article>
           add the following code to a controller class
-          <JavaHighlight javaCode={rest}></JavaHighlight>
+          <Highlight_JAVA code={rest}></Highlight_JAVA>
         </article>
         <article>
           Config application properties with following line, to eanble TRACE Logging level for security web package
-          <ApplicationPropertiesHighlight propertiesCode={properties}></ApplicationPropertiesHighlight>
+          <Highlight_ApplicationProperties code={properties}></Highlight_ApplicationProperties>
         </article>
       </section>
       <hr />

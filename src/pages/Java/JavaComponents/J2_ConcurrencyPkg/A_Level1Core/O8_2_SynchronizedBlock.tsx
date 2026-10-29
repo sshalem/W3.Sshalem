@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 
 const O8_2_SynchronizedBlock = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O8_2_SynchronizedBlock = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>Provides better performance due to fine-grained control.</Li>
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

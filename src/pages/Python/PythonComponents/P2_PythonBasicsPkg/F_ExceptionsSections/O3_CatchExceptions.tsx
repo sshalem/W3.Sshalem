@@ -3,13 +3,13 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O3_CatchExceptions = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX } from "../../../../../components/Highlight";
 
 const O6_PassObjectProps = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,14 +13,14 @@ const O6_PassObjectProps = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Passing Object to Child</Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
         <ULdisc>
           <Li>Create interface with all Object fields</Li>
           <Li>Create another interface only for the Interface Object</Li>
           <Li>Clean, and makes code more readable</Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

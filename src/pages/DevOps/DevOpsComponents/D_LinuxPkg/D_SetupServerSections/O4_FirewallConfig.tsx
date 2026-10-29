@@ -4,14 +4,14 @@ Firewall_Config --> (DEVOPS)(LINUX)(Linux Server setup)
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanGreen } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 import linode_7 from "../../../../../assets/linode_7.jpg";
 
 const O4_FirewallConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
-        <LinuxHighlight bashCode={firewall_config}></LinuxHighlight>
+        <LinuxHighlight code={firewall_config}></LinuxHighlight>
       </div>
       <div className="my-4">
         It is strongly recommend setting up SSH keys instead of using password authentication ,This is to enhance your server’s security, . <br />I

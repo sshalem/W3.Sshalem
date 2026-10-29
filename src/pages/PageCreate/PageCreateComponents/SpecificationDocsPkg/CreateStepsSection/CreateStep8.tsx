@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 import page_create_17 from "../../../../../assets/page_create_17.jpg";
 import page_create_18 from "../../../../../assets/page_create_18.jpg";
 import page_create_19 from "../../../../../assets/page_create_19.jpg";
@@ -17,7 +17,7 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
           copy the content of the code below , and paste it in <SpanBlue>FunctionsMain.tsx</SpanBlue> component.
-          <JsxHighlight jsxCode={jsxCode_Section_Main} />
+          <Highlight_JSX code={jsxCode_Section_Main} />
           The code above show Content Menu
           <IMG img_name={page_create_17} />
         </li>
@@ -34,19 +34,19 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
               copy/paste the code below inside <SpanBlue>FunctionsIntro.tsx</SpanBlue> and <SpanBlue>FunctionsTwo.tsx</SpanBlue>
             </li>
           </ul>
-          <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
+          <Highlight_JSX code={jsxCode_section_internal_code}></Highlight_JSX>
           Folder layout ,with The 2 created components inside <SpanBlue>FunctionsSection</SpanBlue> folder
           <IMG img_name={page_create_18} />
         </li>
         {/* <li className="my-1">
           copy/paste the code below inside <SpanBlue>PointersIntro.tsx</SpanBlue> and <SpanBlue>PointersTwo.tsx</SpanBlue>
-          <JsxHighlight jsxCode={jsxCode_section_internal_code}></JsxHighlight>
+          <Highlight_JSX code={jsxCode_section_internal_code}></Highlight_JSX>
         </li> */}
         <li className="my-1">
           Import to <SpanBlue>FunctionsMain.tsx</SpanBlue> component , the 2 new components I created (<SpanGreen>FunctionsIntro.tsx</SpanGreen>and
           <SpanGreen>FunctionsTwo.tsx</SpanGreen>)
         </li>
-        <JsxHighlight jsxCode={jsxCode_import}></JsxHighlight>
+        <Highlight_JSX code={jsxCode_import}></Highlight_JSX>
         The code above show , the <strong>content</strong> of each section {`->`} cool. <br />
         continue with paragraph 4.
         <IMG img_name={page_create_19} />
@@ -56,21 +56,21 @@ const CreateStep8 = ({ anchor }: { anchor: string }) => {
             <li>
               In <SpanGreen>FunctionsMain.tsx</SpanGreen> create variables for the content menu
             </li>
-            <JsxHighlight jsxCode={jsxCode_content_menu_variables}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_content_menu_variables}></Highlight_JSX>
             <li>
               In <SpanGreen>FunctionsMain.tsx</SpanGreen> Update anchorList with content menu variables
             </li>
-            <JsxHighlight jsxCode={jsxCode_Update_anchorList}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_Update_anchorList}></Highlight_JSX>
             <li>
               In <SpanGreen>FunctionsMain.tsx</SpanGreen> Update Components with the refered content menu variable
             </li>
-            <JsxHighlight jsxCode={jsxCode_update_components}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_update_components}></Highlight_JSX>
           </ul>
         </li>
         <div className="my-1">
           <SpanBlue>FunctionsMain.tsx</SpanBlue> final code
         </div>
-        <JsxHighlight jsxCode={jsxCode_Pointers_Main} />
+        <Highlight_JSX code={jsxCode_Pointers_Main} />
         Now, we get the layout as presented in the beginning of the Section.
         <IMG img_name={page_create_20}></IMG>
       </ul>

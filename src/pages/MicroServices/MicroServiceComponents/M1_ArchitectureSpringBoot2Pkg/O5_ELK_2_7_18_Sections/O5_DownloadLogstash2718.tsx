@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 import microservice_22 from "../../../../../assets/microservice_22.jpg";
 
 const O5_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
@@ -44,7 +44,7 @@ const O5_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
                   Create log file to each service I want to log, this will create log files with this format{" "}
                   <SpanYellow>logs/customer-serives.log</SpanYellow> , in a shared <SpanYellow>logs</SpanYellow> folder , where all logs will be
                   written (see I added 1 dot with slash)
-                  <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                  <Highlight_ApplicationProperties code={_1_} />
                 </Li>
                 <Li>
                   Once app runs all logs will be in same folder
@@ -66,7 +66,7 @@ const O5_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
                   <Li>
                     The pattern of the conf gile is <SpanYellow>input</SpanYellow> curly brackets , <SpanYellow>filter</SpanYellow> curly brackets,{" "}
                     <SpanYellow>output</SpanYellow> curly brackets, but here I don't use the filter (Check ChatGPT how to use it)
-                    <ApplicationPropertiesHighlight propertiesCode={_2_} />
+                    <Highlight_ApplicationProperties code={_2_} />
                   </Li>
                 </ULdisc>
               </ULdisc>
@@ -82,7 +82,7 @@ const O5_DownloadLogstash2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>Open CMD</Li>
             <Li>
-              Run command <ApplicationPropertiesHighlight propertiesCode={_3_} />
+              Run command <Highlight_ApplicationProperties code={_3_} />
             </Li>
             <Li>
               browse to &nbsp;

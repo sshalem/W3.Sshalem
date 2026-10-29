@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_PackageStructure = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +28,7 @@ const O2_PackageStructure = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULDecimal>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

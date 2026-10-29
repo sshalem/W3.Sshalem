@@ -3,16 +3,16 @@
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
-import { tomorrow as LINUX_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
+import { oneDark as PYTHON_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("bash", bash);
+PrismLightSyntaxHighlighter.registerLanguage("python", python);
 
-const LinuxHighlight = ({ bashCode }: { bashCode: string }) => {
+const Highlight_PYTHON = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(bashCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -28,8 +28,8 @@ const LinuxHighlight = ({ bashCode }: { bashCode: string }) => {
       </button>
       <div>
         <PrismLightSyntaxHighlighter
-          language="bash"
-          style={LINUX_STYLE}
+          language="python"
+          style={PYTHON_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
@@ -37,15 +37,15 @@ const LinuxHighlight = ({ bashCode }: { bashCode: string }) => {
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
-            // width: "46rem",
+            // width: "60rem",
             display: "flex",
           }}
         >
-          {bashCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default LinuxHighlight;
+export default Highlight_PYTHON;

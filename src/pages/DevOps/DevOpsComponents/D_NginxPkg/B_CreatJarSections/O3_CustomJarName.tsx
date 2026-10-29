@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O3_CustomJarName = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,10 +18,10 @@ const O3_CustomJarName = ({ anchor }: { anchor: string }) => {
             In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanYellow>{"<finalName>custom-app-name</finalName> "}</SpanYellow>
           </Li>
 
-          <XmlHighlight xmlCode={custom_app_name} />
+          <Highlight_XML xmlCode={custom_app_name} />
           <Li>
             Open Terminal , Run command :
-            <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+            <Highlight_ApplicationProperties code={mvn_clean_package} />
           </Li>
           <Li>
             this results file name in this format <SpanYellow>custom-app-name.jar</SpanYellow>
@@ -39,15 +39,15 @@ const O3_CustomJarName = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanYellow>{"<finalName>${jar.customAppName}</finalName>"}</SpanYellow>
-              <XmlHighlight xmlCode={wired_custom_name} />
+              <Highlight_XML xmlCode={wired_custom_name} />
             </Li>
             <Li>
               We run it with following command jar file will be <SpanYellow>shalem.jar</SpanYellow>
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package_custom_name} />
+              <Highlight_ApplicationProperties code={mvn_clean_package_custom_name} />
             </Li>
             <Li>
               But, If we run without modifing in CLI , It will give the default name of <SpanYellow>my-custom-app.jar</SpanYellow>
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+              <Highlight_ApplicationProperties code={mvn_clean_package} />
             </Li>
           </ULdisc>
         </article>

@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 import python_31 from "../../../../../assets/python_31.jpg";
 import python_33 from "../../../../../assets/python_33.jpg";
 
@@ -18,7 +18,7 @@ const O4_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
           In the terminal, go to the folder where <SpanYellow>main.py</SpanYellow> is located and run:
         </div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
         Explanation:
         <ULdisc>
@@ -38,7 +38,7 @@ const O4_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
             Optional: <SpanYellow>--port 8000</SpanYellow> to change port
           </Li>
           <Li>Full example:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULdisc>
       </section>
       <hr />

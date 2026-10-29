@@ -2,7 +2,7 @@
 
 
 */
-import { DivDoubleBorder, JavaHighlight, SpanGrey, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanGrey, SpanSky } from "../../../../../components/Highlight";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 
 const O2_JpqlNameVsPositionParam = ({ anchor }: { anchor: string }) => {
@@ -45,17 +45,17 @@ const O2_JpqlNameVsPositionParam = ({ anchor }: { anchor: string }) => {
           using <SpanGrey>Named Parameter</SpanGrey>, <SpanGrey>Position Parameter</SpanGrey>, <SpanGrey>Native SQL query</SpanGrey> .
         </div>
         <SpanSky>Named Parameter</SpanSky>
-        <JavaHighlight javaCode={id_name_named_param}></JavaHighlight>
+        <Highlight_JAVA code={id_name_named_param}></Highlight_JAVA>
         <SpanSky>Position Parameter</SpanSky> <br />
         is related to the position of the value in the query. <br />I prefer to use Named Parameters. From now on , I will show Only 2 options
         <ULdisc>
           <Li>Named Parameters</Li>
           <Li>Native SQL query</Li>
         </ULdisc>
-        <JavaHighlight javaCode={id_name_position_param}></JavaHighlight>
+        <Highlight_JAVA code={id_name_position_param}></Highlight_JAVA>
         <SpanSky>Native SQL</SpanSky>
         <br />
-        <JavaHighlight javaCode={id_name_native_query}></JavaHighlight>
+        <Highlight_JAVA code={id_name_native_query}></Highlight_JAVA>
       </article>
       {/* <TableJPQLParameterComparison></TableJPQLParameterComparison> */}
     </MainChildArea>

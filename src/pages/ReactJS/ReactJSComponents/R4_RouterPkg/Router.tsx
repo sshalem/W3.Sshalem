@@ -4,7 +4,7 @@
 */
 import { Outlet, useLocation } from "react-router-dom";
 import { Li, Subject, ULdisc } from "../../../../components";
-import { JsxHighlight, Redtext, SpanYellow } from "../../../../components/Highlight";
+import { Highlight_JSX, Redtext, SpanYellow } from "../../../../components/Highlight";
 
 const Router = () => {
   let location = useLocation();
@@ -62,7 +62,7 @@ const Router = () => {
                     </ULdisc>
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode={_1_} />
+                <Highlight_JSX code={_1_} />
               </article>
 
               <hr />

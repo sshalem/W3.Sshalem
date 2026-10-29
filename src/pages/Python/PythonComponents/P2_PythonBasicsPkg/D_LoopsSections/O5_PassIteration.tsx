@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext } from "../../../../../components/Highlight";
 
 const O5_PassIteration = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O5_PassIteration = ({ anchor }: { anchor: string }) => {
             statement to avoid getting an error.
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

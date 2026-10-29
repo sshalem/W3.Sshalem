@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             In Customer Service (the <strong>caller service</strong> ) add Dependency:
-            <XmlHighlight xmlCode={_1_} />
+            <Highlight_XML xmlCode={_1_} />
           </Li>
           <Li>
             This starter already includes integration with:
@@ -35,7 +35,7 @@ const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
             In <SpanYellow>CustomerServiceApplication</SpanYellow> main class add <SpanYellow>@EnableFeignClients</SpanYellow> annotaion
           </Li>
           <Li>This tells Spring to scan for Feign interfaces.</Li>
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
         </ULdisc>
       </section>
       <hr />
@@ -63,7 +63,7 @@ const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
-          <JavaHighlight javaCode={_3_} />
+          <Highlight_JAVA code={_3_} />
         </ULdisc>
       </section>
       <hr />
@@ -75,9 +75,9 @@ const O9_OpenFeignImplement = ({ anchor }: { anchor: string }) => {
             yourself.
           </Li>
           <Li>There is no implementation class.</Li>
-          <JavaHighlight javaCode={_4_} />
+          <Highlight_JAVA code={_4_} />
           use it as follows :
-          <JavaHighlight javaCode={_5_} />
+          <Highlight_JAVA code={_5_} />
         </ULdisc>
       </section>
     </MainChildArea>

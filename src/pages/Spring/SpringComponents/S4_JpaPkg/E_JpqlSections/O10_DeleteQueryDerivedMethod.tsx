@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 import TableFiveColCompareDeleteByEmail from "../../../../../components/Tables/Table_5ColCompareDeleteByEmail";
 
 const O10_DeleteQueryDerivedMethod = ({ anchor }: { anchor: string }) => {
@@ -56,7 +56,7 @@ const O10_DeleteQueryDerivedMethod = ({ anchor }: { anchor: string }) => {
             <Li>1️⃣ First, SELECT rows to delete → so it can load entities </Li>
             <Li>2️⃣ Then Hibernate performs one DELETE per entity</Li>
             <Li>SQL log example:</Li>
-            <JavaHighlight javaCode={derived_delete}></JavaHighlight>
+            <Highlight_JAVA code={derived_delete}></Highlight_JAVA>
             <Li>
               This allows:
               <ULdisc>
@@ -71,7 +71,7 @@ const O10_DeleteQueryDerivedMethod = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </section>
         <TableFiveColCompareDeleteByEmail />
-        <JavaHighlight javaCode={derived_delete_by_email}></JavaHighlight>
+        <Highlight_JAVA code={derived_delete_by_email}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

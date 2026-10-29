@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_BuilderCreataeImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,9 +16,9 @@ const O3_BuilderCreataeImpl = ({ anchor }: { anchor: string }) => {
               <Li>First, create a regular class with fields, with 2 constructors(default and with parameters) , G/S/toStr</Li>
             </ULdisc>
           </div>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
           Here is how to use ,Easy to create Intance of this class, :
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
         </article>
         <hr />
         <article className="my-8">
@@ -50,16 +50,16 @@ const O3_BuilderCreataeImpl = ({ anchor }: { anchor: string }) => {
                 create in the Inner class a <SpanYellow>build method</SpanYellow> , which returns the constructed Onject of the class
               </Li>
             </ULDecimal>
-            <JavaHighlight javaCode={_3_} />
+            <Highlight_JAVA code={_3_} />
             We can intansitate the Window class in 2 ways:
             <ULDecimal>
               <Li>
                 Regular way , default construction , or construction with parameters
-                <JavaHighlight javaCode={_4_} />
+                <Highlight_JAVA code={_4_} />
               </Li>
               <Li>
                 Using Builder , and I can pass No argument, partial arguments, all argumets (Thats the beuty of Builder)
-                <JavaHighlight javaCode={_5_} />
+                <Highlight_JAVA code={_5_} />
               </Li>
             </ULDecimal>
           </div>

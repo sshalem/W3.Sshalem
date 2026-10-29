@@ -3,7 +3,7 @@
 Mysql Detailed --> (SPRING)(ApplicationProperties)(MySql)
 */
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const O4_MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,11 +22,11 @@ const O4_MySqlDetailedConfig = ({ anchor }: { anchor: string }) => {
       </Answer>
 
       <div>Better to use the following :</div>
-      <ApplicationPropertiesHighlight propertiesCode={propertiesCode} />
+      <Highlight_ApplicationProperties code={propertiesCode} />
       <div className="my-8">
         here below , I give example of <SpanBlue>application.properties</SpanBlue> with explaination:
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={mysql_detailed_config} />
+      <Highlight_ApplicationProperties code={mysql_detailed_config} />
     </MainChildArea>
   );
 };

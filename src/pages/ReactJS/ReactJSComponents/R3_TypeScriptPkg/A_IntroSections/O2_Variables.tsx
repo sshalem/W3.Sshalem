@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 
 const O2_Variables = ({ anchor }: { anchor: string }) => {
   return (
@@ -34,9 +34,9 @@ const O2_Variables = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
         <div>Here is how I declare them</div>
-        <JsxHighlight jsxCode={vars}></JsxHighlight>
+        <Highlight_JSX code={vars}></Highlight_JSX>
         <div> I can also assign a value to the variable:</div>
-        <JsxHighlight jsxCode={vars_assign_values}></JsxHighlight>
+        <Highlight_JSX code={vars_assign_values}></Highlight_JSX>
       </div>
     </MainChildArea>
   );

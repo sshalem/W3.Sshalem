@@ -3,7 +3,7 @@
 Multiple profiles and data sql --> (SPRING)(ApplicationProperties)(Multiple profiles and data sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_9 from "../../../../../assets/db_init_9.jpg";
 
 const O8_DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
@@ -42,7 +42,7 @@ const O8_DBInitMultipleProfiles = ({ anchor }: { anchor: string }) => {
         This is how the main <SpanBlue>application.properties</SpanBlue> in configured. <br />
         For example, If I want to work with MySql profile, I disable the other profiles, and Enable MySql profile.
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+      <Highlight_ApplicationProperties code={applicationPropsMainCode}></Highlight_ApplicationProperties>
 
       <DivDoubleBorder>{`application-<profile>.properties`}</DivDoubleBorder>
       <div>See Implementation above in each section (H2, MySql, PostgResql)</div>

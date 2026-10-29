@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_RouterWithouExceptions = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,9 +18,9 @@ const O6_RouterWithouExceptions = ({ anchor }: { anchor: string }) => {
           <Li>
             It's like in <SpanYellow>spring Controller Advice</SpanYellow>
           </Li>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
           <Li>Response in Postman</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
         </ULdisc>
       </section>
     </MainChildArea>

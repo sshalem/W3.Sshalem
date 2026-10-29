@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Redtext } from "../../../../../components/Highlight";
 
 const O5_JavaConcurrencyMechanisms = ({ anchor }: { anchor: string }) => {
   return (
@@ -30,7 +30,7 @@ const O5_JavaConcurrencyMechanisms = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
         <article className="my-8"></article>
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
       </section>
     </MainChildArea>
   );

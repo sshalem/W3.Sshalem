@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import Table_2ColCompareMultihtreadingConcepts from "../../../../../components/Tables/Table_2ColCompareMultihtreadingConcepts";
 
 const O1_MultiThreadingIntro = ({ anchor }: { anchor: string }) => {
@@ -42,7 +42,7 @@ const O1_MultiThreadingIntro = ({ anchor }: { anchor: string }) => {
               on different cores
             </Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
           <Table_2ColCompareMultihtreadingConcepts />
         </article>
         <article className="my-8"></article>

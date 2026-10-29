@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanRed, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanRed, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import microservice_10 from "../../../../../assets/microservice_10.jpg";
 
 const O4_EurekaServer2718 = ({ anchor }: { anchor: string }) => {
@@ -51,15 +51,15 @@ const O4_EurekaServer2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Copy and paste this to the <SpanYellow>{"<properties>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_1_} />
+              <Highlight_XML xmlCode={_1_} />
             </Li>
             <Li>
               Copy and paste the Dependeny , Inside the <SpanYellow>{"<dependencies>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_2_} />
+              <Highlight_XML xmlCode={_2_} />
             </Li>
             <Li>
               Copy and paste the <SpanYellow>{"<dependencyManagement>"}</SpanYellow> , after <SpanYellow>{"<dependencies>"}</SpanYellow> tag is closed
-              <XmlHighlight xmlCode={_3_} />
+              <Highlight_XML xmlCode={_3_} />
             </Li>
           </ULdisc>
         </article>
@@ -73,7 +73,7 @@ const O4_EurekaServer2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>copy /paste this code below</Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_5_} />
+          <Highlight_ApplicationProperties code={_5_} />
         </article>
 
         <hr />
@@ -86,7 +86,7 @@ const O4_EurekaServer2718 = ({ anchor }: { anchor: string }) => {
             <Li>
               Add annotation of <SpanYellow>@EnableEurekaServer</SpanYellow>
             </Li>
-            <JavaHighlight javaCode={_4_} />
+            <Highlight_JAVA code={_4_} />
           </ULdisc>
         </article>
       </section>

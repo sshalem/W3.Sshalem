@@ -5,7 +5,7 @@ import microservice_15 from "../../../../../assets/microservice_15.jpg";
 import microservice_16 from "../../../../../assets/microservice_16.jpg";
 import microservice_17 from "../../../../../assets/microservice_17.jpg";
 
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -43,7 +43,7 @@ const O4_TestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
             <Li>Because , API-GAtwayI , all request must go via port 5001 (And not directly to port 8001 , Customer Service Port) </Li>
             <Li>
               In order to see which port of order-service runs , add following code :
-              <JavaHighlight javaCode={_1_} />
+              <Highlight_JAVA code={_1_} />
             </Li>
             <Li>For runtime code (controllers/services), the recommended approach is to get the port from the running web server context.</Li>
             <Li>For Random port , above code won't work , need its different code</Li>

@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O4_ElseException = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O4_ElseException = ({ anchor }: { anchor: string }) => {
         see later the difference).
         <br />
         The code continues to execute.
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

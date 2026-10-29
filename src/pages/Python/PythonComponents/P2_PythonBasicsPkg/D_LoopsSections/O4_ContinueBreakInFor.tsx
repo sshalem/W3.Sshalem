@@ -3,14 +3,14 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O4_ContinueBreakInFor = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-4 text-lg font-semibold">Continue or Break in For loop</article>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

@@ -3,14 +3,14 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 import Table_4ColCompareTimeComplexity from "../../../../../components/Tables/Table_5ColCompareTimeComplexity";
 
 const O1_ArraysStracture = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <JavaHighlight javaCode={code}></JavaHighlight>
+        <Highlight_JAVA code={code}></Highlight_JAVA>
         <article className="my-4 text-xl font-semibold">Characteristics</article>
         <ULdisc>
           <Li>Fixed size</Li>

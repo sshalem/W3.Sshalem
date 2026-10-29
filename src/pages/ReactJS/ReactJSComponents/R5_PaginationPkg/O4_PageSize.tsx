@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanGreen, SpanRed } from "../../../../components/Highlight";
 
 const O4_PageSize = ({ anchor }: { anchor: string }) => {
   return (
@@ -39,7 +39,7 @@ const O4_PageSize = ({ anchor }: { anchor: string }) => {
           </li>
           <li className="my-1">
             Config Pagination Component , and add the <SpanGreen>pageSizeOptions</SpanGreen>
-            <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
+            <Highlight_JSX code={config_pagination}></Highlight_JSX>
           </li>
         </ul>
       </section>

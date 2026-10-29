@@ -4,7 +4,7 @@ Slf4j Rolling File --> (SPRING)(Logging)(Slf4j (Logback))
 */
 import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
   return (
@@ -33,7 +33,7 @@ const Slf4jRollingFileSetup = ({ anchor }: { anchor: string }) => {
           </a>
         </div>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={rollingFileCode} />
+      <Highlight_ApplicationProperties code={rollingFileCode} />
     </MainChildArea>
   );
 };

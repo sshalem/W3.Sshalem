@@ -3,7 +3,7 @@
 Jwt Intro --> (SPRING)(Security)(jwt)
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -63,7 +63,7 @@ const O1_IntroJwt = ({ anchor }: { anchor: string }) => {
         <p className="my-4 text-lg font-semibold">🛑 But then… why do people still call the DB in filters?</p>
         <div>
           You might see code like this in a JWT filter:
-          <JavaHighlight javaCode={code_java}></JavaHighlight>
+          <Highlight_JAVA code={code_java}></Highlight_JAVA>
         </div>
         <div>
           This <strong>feels stateful</strong> , but the DB lookup is not required for JWT authentication itself —{" "}

@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_ResponseBestPractice = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O4_ResponseBestPractice = ({ anchor }: { anchor: string }) => {
             <SpanYellow>JSONResponse</SpanYellow> Serializes Python objects → JSON string
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_}></PythonHighlight>
+        <Highlight_PYTHON code={_1_}></Highlight_PYTHON>
       </section>
     </MainChildArea>
   );

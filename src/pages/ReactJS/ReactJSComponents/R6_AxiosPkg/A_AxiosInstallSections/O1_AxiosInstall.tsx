@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight } from "../../../../../components/Highlight";
+import { Highlight_JSX } from "../../../../../components/Highlight";
 
 const O1_AxiosInstall = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O1_AxiosInstall = ({ anchor }: { anchor: string }) => {
         <div>
           <ULdisc>
             <Li>
-              Install Axios <JsxHighlight jsxCode={_1_}></JsxHighlight>
+              Install Axios <Highlight_JSX code={_1_}></Highlight_JSX>
             </Li>
           </ULdisc>
         </div>

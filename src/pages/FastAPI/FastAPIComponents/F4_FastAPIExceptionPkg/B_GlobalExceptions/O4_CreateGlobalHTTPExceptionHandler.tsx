@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_CreateGlobalHTTPExceptionHandler = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O4_CreateGlobalHTTPExceptionHandler = ({ anchor }: { anchor: string }) => 
           <Li>
             🔥 I call this function from <SpanYellow>main.py</SpanYellow>
           </Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

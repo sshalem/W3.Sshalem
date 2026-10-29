@@ -5,13 +5,13 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O14_Exceptions = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderControllerAdvice = useMemo(() => <JavaHighlight javaCode={controller_advice} />, [controller_advice]);
+  const renderControllerAdvice = useMemo(() => <Highlight_JAVA code={controller_advice} />, [controller_advice]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">

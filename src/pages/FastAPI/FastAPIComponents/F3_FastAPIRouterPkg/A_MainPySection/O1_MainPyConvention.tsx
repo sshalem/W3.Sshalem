@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_MainPyConvention = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +28,7 @@ const O1_MainPyConvention = ({ anchor }: { anchor: string }) => {
           <Li>registers routes, middleware, events</Li>
           <br />
           Create an Instance of <SpanYellow>FastAPI</SpanYellow> in <SpanYellow>main.py</SpanYellow>
-          <JsxHighlight jsxCode={_1_} />
+          <Highlight_JSX code={_1_} />
         </ULdisc>
         <hr />
         <article className="my-8 text-lg font-semibold">

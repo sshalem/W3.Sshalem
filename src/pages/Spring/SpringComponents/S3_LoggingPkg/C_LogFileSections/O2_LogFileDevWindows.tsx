@@ -4,7 +4,7 @@ Log File Dev Windows --> (SPRING)(Logging)(Log File)
 */
 import { FaDiamond } from "react-icons/fa6";
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import log_file_1 from "../../../../../assets/log_file_1.jpg";
 import log_file_2 from "../../../../../assets/log_file_2.jpg";
 
@@ -37,11 +37,11 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           &nbsp; with &nbsp; <SpanBlue>logging.file.name</SpanBlue>
         </div>
         <div className="my-4"></div>
-        <ApplicationPropertiesHighlight propertiesCode={logginFileNameOnlyProperties} />
+        <Highlight_ApplicationProperties code={logginFileNameOnlyProperties} />
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <SpanBlue>RestController</SpanBlue>&nbsp;
         </div>
-        <JavaHighlight javaCode={logginFileCode} />
+        <Highlight_JAVA code={logginFileCode} />
         <div className="my-5 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; Send a &nbsp;<SpanBlue>GET request</SpanBlue> &nbsp; ,refresh the project
           (F5) , check log file is created , see if &nbsp;
@@ -62,7 +62,7 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
         </div>
 
         <div className="my-4"></div>
-        <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
+        <Highlight_ApplicationProperties code={logginFilePathOnlyProperties} />
 
         <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <SpanBlue>RestController</SpanBlue>&nbsp; as
@@ -93,7 +93,7 @@ const LogFileDevWindows = ({ anchor }: { anchor: string }) => {
           <SpanBlue>logging.file.name=./myLogDir/sshb.log</SpanBlue>
         </div>
         <div className="my-4"></div>
-        <ApplicationPropertiesHighlight propertiesCode={logginFilePathOnlyProperties} />
+        <Highlight_ApplicationProperties code={logginFilePathOnlyProperties} />
         <div className="my-1 ml-8 flex flex-wrap">
           <FaDiamond className="mr-2 self-center text-[0.6rem]" /> &nbsp; JAVA code using a simple &nbsp; <SpanBlue>RestController</SpanBlue>&nbsp; as
           in previous example

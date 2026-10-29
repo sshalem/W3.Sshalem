@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_GetMethod = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O1_GetMethod = ({ anchor }: { anchor: string }) => {
             <Li>
               1. <Redtext>fetch Promise chaining</Redtext>
               <ULdisc>
-                <JsxHighlight jsxCode={_1_} />
+                <Highlight_JSX code={_1_} />
               </ULdisc>
             </Li>
           </ULdisc>
@@ -24,7 +24,7 @@ const O1_GetMethod = ({ anchor }: { anchor: string }) => {
             <Li>
               2. <Redtext>fetch async/await</Redtext>
               <ULdisc>
-                <JsxHighlight jsxCode={_2_} />
+                <Highlight_JSX code={_2_} />
               </ULdisc>
             </Li>
           </ULdisc>
@@ -60,7 +60,7 @@ const O1_GetMethod = ({ anchor }: { anchor: string }) => {
                     </Li>
                   </ULdisc>
                 </Li>
-                <JsxHighlight jsxCode={_3_} />
+                <Highlight_JSX code={_3_} />
               </ULdisc>
             </Li>
           </ULdisc>

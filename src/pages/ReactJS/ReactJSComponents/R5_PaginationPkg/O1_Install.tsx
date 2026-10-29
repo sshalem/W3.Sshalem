@@ -3,7 +3,7 @@
 
 */
 import { Anchor, GitHub, GitHubLiAnchor, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanGreen, SpanGrey, SpanRed } from "../../../../components/Highlight";
 
 const O1_Install = ({ anchor }: { anchor: string }) => {
   return (
@@ -44,7 +44,7 @@ const O1_Install = ({ anchor }: { anchor: string }) => {
             To re-style the way data looks, Go inside <SpanGrey>Pagination.tsx</SpanGrey> ,in last <strong>div</strong> tag , where{" "}
             <strong>dataChuck</strong> is itterated
           </Li>
-          <JsxHighlight jsxCode={data_re_style}></JsxHighlight>
+          <Highlight_JSX code={data_re_style}></Highlight_JSX>
         </ULDecimal>
       </section>
 

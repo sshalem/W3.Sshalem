@@ -3,7 +3,7 @@
 Osiv --> (SPRING)(ApplicationProperties)(postgresql)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const PostgresqlOsiv = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const PostgresqlOsiv = ({ anchor }: { anchor: string }) => {
         set to
         <SpanBlue>true</SpanBlue> . <br /> To disable the warning, I set to <SpanBlue>false</SpanBlue>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={osiv} />
+      <Highlight_ApplicationProperties code={osiv} />
     </MainChildArea>
   );
 };

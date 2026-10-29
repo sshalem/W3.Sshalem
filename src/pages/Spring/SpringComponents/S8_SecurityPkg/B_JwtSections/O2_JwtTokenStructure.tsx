@@ -5,7 +5,7 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JsxHighlight, SpanSky } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanSky } from "../../../../../components/Highlight";
 
 const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,8 +24,8 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
           <Li>Signature - zzzzz</Li>
         </ULdisc>
         Therefore, a JWT typically looks like the following: <br />
-        <JsxHighlight jsxCode={jwt_token_structure}></JsxHighlight>
-        {/* <ApplicationPropertiesHighlight propertiesCode={}></ApplicationPropertiesHighlight> */}
+        <Highlight_JSX code={jwt_token_structure}></Highlight_JSX>
+        {/* <Highlight_ApplicationProperties code={}></Highlight_ApplicationProperties> */}
       </section>
       <hr />
 
@@ -40,7 +40,7 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
           Then, this JSON is <SpanSky>Base64Url</SpanSky> encoded to form the first part of the JWT.
         </p>
         For example
-        <JsxHighlight jsxCode={jwt_header}></JsxHighlight>
+        <Highlight_JSX code={jwt_header}></Highlight_JSX>
       </section>
       <hr />
 
@@ -87,7 +87,7 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
             <strong>exp</strong> (Expiration Time): JWT expiration time
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={jwt_payload}></JsxHighlight>
+        <Highlight_JSX code={jwt_payload}></Highlight_JSX>
       </section>
       <hr />
 
@@ -98,7 +98,7 @@ const O2_JwtTokenStructure = ({ anchor }: { anchor: string }) => {
           secret, the algorithm specified in the header, and sign that.
         </p>
         For example, if you want to use the HMAC SHA256 algorithm, the signature will be created in the following way:
-        <JsxHighlight jsxCode={jwt_signature}></JsxHighlight>
+        <Highlight_JSX code={jwt_signature}></Highlight_JSX>
         <p>The signature is used</p>
         <ULdisc>
           <Li>to verify the message wasn't changed along the way,</Li>

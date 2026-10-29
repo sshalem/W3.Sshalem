@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
 const O8_Schemas = ({ anchor }: { anchor: string }) => {
@@ -20,7 +20,7 @@ const O8_Schemas = ({ anchor }: { anchor: string }) => {
               Pydantic section
             </Link>
             )
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>

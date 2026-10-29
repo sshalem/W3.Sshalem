@@ -3,7 +3,7 @@
 Jpa logging --> (SPRING)(JPA)(logging-jpa-hibernate)
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O1_JpaLogging = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O1_JpaLogging = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
 
-        <ApplicationPropertiesHighlight propertiesCode={jpa_logging}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={jpa_logging}></Highlight_ApplicationProperties>
       </section>
       <hr />
     </MainChildArea>

@@ -4,7 +4,7 @@ DevTools --> (SPRING)(IDE's)(IntelliJ)
 */
 
 import { IMG, MainChildArea } from "../../../../../components";
-import { SpanBlue, SpanGreen, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanBlue, SpanGreen, Highlight_XML } from "../../../../../components/Highlight";
 import Intellij_12 from "../../../../../assets/Intellij_12.jpg";
 import Intellij_13 from "../../../../../assets/Intellij_13.jpg";
 
@@ -17,7 +17,7 @@ const O3_DevTools = ({ anchor }: { anchor: string }) => {
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
           Add <SpanBlue>DevTools</SpanBlue> Dependency
-          <XmlHighlight xmlCode={pom_dev_tools}></XmlHighlight>
+          <Highlight_XML xmlCode={pom_dev_tools}></Highlight_XML>
         </li>
         <li className="my-1">
           Configure <SpanBlue>IntelliJ</SpanBlue> for Auto-Reload. By default <SpanBlue>IntelliJ</SpanBlue> does not compile automatically, so you

@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import pagination_3 from "../../../../assets/pagination_3.jpg";
 
 const O5_Language = ({ anchor }: { anchor: string }) => {
@@ -39,7 +39,7 @@ const O5_Language = ({ anchor }: { anchor: string }) => {
             In example below , I config <SpanGreen>language</SpanGreen> set it to <SpanRed>he</SpanRed>
           </li>
           <li className="my-1">
-            <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
+            <Highlight_JSX code={config_pagination}></Highlight_JSX>
           </li>
           <IMG img_name={pagination_3}></IMG>
         </ul>

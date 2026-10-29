@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_TryExceptExceptionInInRouter = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,9 +16,9 @@ const O5_TryExceptExceptionInInRouter = ({ anchor }: { anchor: string }) => {
           <Li>
             Raise <SpanYellow>HTTPException</SpanYellow> in router{" "}
           </Li>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
           <Li>Response in Postman</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
         </ULdisc>
       </section>
     </MainChildArea>

@@ -3,7 +3,7 @@
 React On Spring--> (DEVOPS)(Netlify)(React On Spring)
 */
 import { Li, MainChildArea, ULdisc } from "../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanYellow } from "../../../../components/Highlight";
 
 const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
   return (
@@ -37,7 +37,7 @@ const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
           <Li>because Spring MVC already gives them priority over the SPA controller.</Li>
           <Li>
             So, If you have <SpanYellow>@RestController</SpanYellow> endpoints like:
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
           </Li>
           <Li>they will NOT be forwarded to index.html, even though your SPA controller is in the code above</Li>
           <Li>
@@ -55,9 +55,9 @@ const O1_ReactOnSpring = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         <br />
       </div>
-      <JavaHighlight javaCode={javaCodeController}></JavaHighlight>
+      <Highlight_JAVA code={javaCodeController}></Highlight_JAVA>
       <div>🌍 If using WebSecurity in Spring Security , make sure to permit all routes or exclude them from security</div>
-      <JavaHighlight javaCode={javaCodeSecurity}></JavaHighlight>
+      <Highlight_JAVA code={javaCodeSecurity}></Highlight_JAVA>
     </MainChildArea>
   );
 };

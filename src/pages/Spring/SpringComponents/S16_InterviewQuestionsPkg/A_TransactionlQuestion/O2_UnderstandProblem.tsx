@@ -3,7 +3,7 @@
 
 */
 import { Answer, IMG, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import transQuestion_1 from "../../../../../assets/transQuestion_1.jpg";
 import transQuestion_2 from "../../../../../assets/transQuestion_2.jpg";
 
@@ -30,7 +30,7 @@ const O2_UnderstandProblem = ({ anchor }: { anchor: string }) => {
           </Question>
           <Answer>
             <div>Consider this method:</div>
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
             <ULdisc>
               <Li>It only coordinates threads using the same Java monitor in the same JVM.</Li>
               <Li>If your application runs on two servers, each server has its own monitor.</Li>
@@ -42,7 +42,7 @@ const O2_UnderstandProblem = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <Question>
             Why <SpanYellow>@Transactional</SpanYellow> isn't enough ?
-            <JavaHighlight javaCode={_2_} />
+            <Highlight_JAVA code={_2_} />
           </Question>
           <Answer>
             <ULdisc>

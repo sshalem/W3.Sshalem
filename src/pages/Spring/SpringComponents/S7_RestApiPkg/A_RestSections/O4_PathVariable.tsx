@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O4_PathVariable = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O4_PathVariable = ({ anchor }: { anchor: string }) => {
             <SpanGrey>produces = MediaType.APPLICATION_JSON_VALUE</SpanGrey> - I retrun ( <strong>produce</strong> ) to FrontEnd JSON data
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={request_body}></JavaHighlight>
+        <Highlight_JAVA code={request_body}></Highlight_JAVA>
       </section>
 
       <hr />
@@ -45,7 +45,7 @@ const O4_PathVariable = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
 
-        <JavaHighlight javaCode={path_variable}></JavaHighlight>
+        <Highlight_JAVA code={path_variable}></Highlight_JAVA>
       </section>
 
       <hr />

@@ -4,7 +4,7 @@
 */
 import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O4_BuildJarLocaly = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O4_BuildJarLocaly = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Run command (For custom name see option 3 in prev section):
-            <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+            <Highlight_ApplicationProperties code={mvn_clean_package} />
           </Li>
         </ULdisc>
       </section>

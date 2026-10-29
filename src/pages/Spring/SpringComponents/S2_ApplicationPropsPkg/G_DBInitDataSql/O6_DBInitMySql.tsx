@@ -3,7 +3,7 @@
 Mysql data sql --> (SPRING)(ApplicationProperties)(Mysql data sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_7 from "../../../../../assets/db_init_7.jpg";
 
 const O6_DBInitMySql = ({ anchor }: { anchor: string }) => {
@@ -22,7 +22,7 @@ const O6_DBInitMySql = ({ anchor }: { anchor: string }) => {
                 create <SpanBlue>application-MySql.properties</SpanBlue>file
               </div>
               <DivDoubleBorder>application-MySql.properties</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMySqlProfileCode}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={applicationPropsMySqlProfileCode}></Highlight_ApplicationProperties>
             </li>
 
             <li className="my-1">
@@ -30,14 +30,14 @@ const O6_DBInitMySql = ({ anchor }: { anchor: string }) => {
                 config main <SpanBlue>application.properties</SpanBlue>
               </div>
               <DivDoubleBorder>main application.properties</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={applicationPropsMainCode}></Highlight_ApplicationProperties>
             </li>
             <li className="my-1">
               <div>
                 <SpanBlue>data-MySql.sql</SpanBlue> code , inside folder <SpanBlue>DB_initialization_scripts</SpanBlue>
               </div>
               <DivDoubleBorder>data-MySql.sql</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={dataMySql}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={dataMySql}></Highlight_ApplicationProperties>
             </li>
           </ul>
         </div>

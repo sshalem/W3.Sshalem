@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 
 import page_create_6 from "../../../../../assets/page_create_6.jpg";
 import page_create_10 from "../../../../../assets/page_create_10.jpg";
@@ -39,8 +39,8 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
               </ul>
               Here is <SpanBlue>CppComponents</SpanBlue> folder with 2 files inside. <br />
               <IMG img_name={page_create_6}></IMG>
-              <SpanBlue>CppHome.tsx</SpanBlue> code :<JsxHighlight jsxCode={jsx_C_plus_plus_home} />
-              <SpanBlue>index.ts</SpanBlue> code : <JsxHighlight jsxCode={jsxCode_Index} />
+              <SpanBlue>CppHome.tsx</SpanBlue> code :<Highlight_JSX code={jsx_C_plus_plus_home} />
+              <SpanBlue>index.ts</SpanBlue> code : <Highlight_JSX code={jsxCode_Index} />
             </ul>
           </li>
           {/*  */}
@@ -64,7 +64,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
             <div className="my-1">
               3.3. See the assign <SpanBlue>url path</SpanBlue> I gave to each component
             </div>
-            <JsxHighlight jsxCode={jsxCode_AppAddedChildren}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_AppAddedChildren}></Highlight_JSX>
             <div className="my-1">
               Add to <SpanBlue>Cpp_page</SpanBlue> component , the <SpanBlue>SideBarLink</SpanBlue> component with <SpanBlue>pageName</SpanBlue> and
               <SpanBlue>internalLink</SpanBlue> as below:
@@ -73,7 +73,7 @@ const CreateStep5 = ({ anchor }: { anchor: string }) => {
                   <SpanBlue>{`<SideBarLink pageName="C++ Home" internalLink="/c++" />`}</SpanBlue> <br />
                 </li>
               </ul>
-              <JsxHighlight jsxCode={jsxCode_C_plus_with_links}></JsxHighlight>
+              <Highlight_JSX code={jsxCode_C_plus_with_links}></Highlight_JSX>
             </div>
           </li>
         </ul>

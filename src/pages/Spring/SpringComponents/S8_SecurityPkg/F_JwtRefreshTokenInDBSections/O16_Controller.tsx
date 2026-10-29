@@ -5,14 +5,14 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 
 const O16_Controller = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderAuthController = useMemo(() => <JavaHighlight javaCode={auth_controller} />, [auth_controller]);
+  const renderAuthController = useMemo(() => <Highlight_JAVA code={auth_controller} />, [auth_controller]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">

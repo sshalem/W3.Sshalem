@@ -4,7 +4,7 @@ Profile config --> (SPRING)(ApplicationProperties)(Profileconfig)
 */
 import { FaDiamond } from "react-icons/fa6";
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, BatchHighlight, DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_BATCH, DivDoubleBorder, Highlight_JAVA, SpanBlue } from "../../../../../components/Highlight";
 import profile_1 from "../../../../../assets/profile_1.jpg";
 
 const ProfileConfig = ({ anchor }: { anchor: string }) => {
@@ -41,7 +41,7 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
             </ul>
           </div>
 
-          <ApplicationPropertiesHighlight propertiesCode={appPropCode} />
+          <Highlight_ApplicationProperties code={appPropCode} />
           <div className="my-5">
             This tells Spring Boot to load &nbsp;
             <SpanBlue>application-dev.properties</SpanBlue>&nbsp; in addition to the default config.
@@ -68,17 +68,17 @@ const ProfileConfig = ({ anchor }: { anchor: string }) => {
           <div className="my-4">
             type the following code inside <SpanBlue>application-dev.properties</SpanBlue>
           </div>
-          <ApplicationPropertiesHighlight propertiesCode={devCode} />
+          <Highlight_ApplicationProperties code={devCode} />
         </div>
         {/*  */}
         {/*  */}
         <DivDoubleBorder>Step 3 : Run App check console</DivDoubleBorder>
         <div className="my-8">
-          <JavaHighlight javaCode={javaCode} />
+          <Highlight_JAVA code={javaCode} />
         </div>
         <div className="my-8">console show active profile is "dev"</div>
         <div>
-          <BatchHighlight batchCode={batchCOde} />
+          <Highlight_BATCH batchCode={batchCOde} />
         </div>
       </article>
     </MainChildArea>

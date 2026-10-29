@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_CreateDedicatedFolder = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,9 +20,9 @@ const O6_CreateDedicatedFolder = ({ anchor }: { anchor: string }) => {
                 <SpanYellow>/opt</SpanYellow> is commonly used for deployed apps
               </Li>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={mkdir_folder} />
+            <Highlight_ApplicationProperties code={mkdir_folder} />
             <Li>Example of keeping Spring Boot JARs organized:</Li>
-            <ApplicationPropertiesHighlight propertiesCode={jar_organized} />
+            <Highlight_ApplicationProperties code={jar_organized} />
           </Li>
         </ULdisc>
       </section>

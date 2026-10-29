@@ -3,7 +3,7 @@
 H2 data sql --> (SPRING)(ApplicationProperties)(H2 data sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_6 from "../../../../../assets/db_init_6.jpg";
 
 const O5_DBInitH2 = ({ anchor }: { anchor: string }) => {
@@ -21,7 +21,7 @@ const O5_DBInitH2 = ({ anchor }: { anchor: string }) => {
               create <SpanBlue>application-H2.properties</SpanBlue>file
             </div>
             <DivDoubleBorder>application-H2.properties</DivDoubleBorder>
-            <ApplicationPropertiesHighlight propertiesCode={applicationPropsH2ProfileCode}></ApplicationPropertiesHighlight>
+            <Highlight_ApplicationProperties code={applicationPropsH2ProfileCode}></Highlight_ApplicationProperties>
           </li>
 
           <li className="my-1">
@@ -29,7 +29,7 @@ const O5_DBInitH2 = ({ anchor }: { anchor: string }) => {
               config main <SpanBlue>application.properties</SpanBlue>
             </div>
             <DivDoubleBorder>main application.properties</DivDoubleBorder>
-            <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+            <Highlight_ApplicationProperties code={applicationPropsMainCode}></Highlight_ApplicationProperties>
           </li>
 
           <li className="my-1">
@@ -37,7 +37,7 @@ const O5_DBInitH2 = ({ anchor }: { anchor: string }) => {
               <SpanBlue>data-H2.sql</SpanBlue> code , inside folder <SpanBlue>DB_initialization_scripts</SpanBlue>
             </div>
             <DivDoubleBorder>data-H2.sql</DivDoubleBorder>
-            <ApplicationPropertiesHighlight propertiesCode={dataH2}></ApplicationPropertiesHighlight>
+            <Highlight_ApplicationProperties code={dataH2}></Highlight_ApplicationProperties>
           </li>
         </ul>
       </div>

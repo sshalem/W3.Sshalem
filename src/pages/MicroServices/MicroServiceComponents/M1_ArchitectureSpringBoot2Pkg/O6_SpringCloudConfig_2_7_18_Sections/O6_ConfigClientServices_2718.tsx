@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JSX, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import microservice_25 from "../../../../../assets/microservice_25.jpg";
 import microservice_26 from "../../../../../assets/microservice_26.jpg";
 
@@ -23,7 +23,7 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Add the following dependency to EACH microservice</Li>
           </ULdisc>
-          <XmlHighlight xmlCode={_1_} />
+          <Highlight_XML xmlCode={_1_} />
         </article>
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ Create CUSTOMER-SERVICE properties on Config Storage on Git</p>
@@ -47,11 +47,11 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
               <p className="text-xl font-semibold">Create properties files in Git Repo</p>
               <ULdisc>
                 <Li>
-                  the format of the file in git repo should be as below <JsxHighlight jsxCode={_3_} />
+                  the format of the file in git repo should be as below <Highlight_JSX code={_3_} />
                 </Li>
                 <Li>
                   thus , the file names for each properties file will be
-                  <ApplicationPropertiesHighlight propertiesCode={_4_} />
+                  <Highlight_ApplicationProperties code={_4_} />
                 </Li>
                 <Li>
                   I created the files in Git repo (Only for Customer , will do it for Order and Item as well later on)
@@ -77,7 +77,7 @@ const O6_ConfigClientServices_2718 = ({ anchor }: { anchor: string }) => {
                 <Li>Why? So Spring boot will know the application name , the Config server , active profile</Li>
                 <Li>
                   This is how <SpanYellow>application.properties</SpanYellow> of Customer should be:
-                  <ApplicationPropertiesHighlight propertiesCode={_2_} />
+                  <Highlight_ApplicationProperties code={_2_} />
                 </Li>
                 <Li>
                   Othe properties , just Cut/paste to config server to <SpanYellow>CUSTOMER-SERVCE.properties</SpanYellow>

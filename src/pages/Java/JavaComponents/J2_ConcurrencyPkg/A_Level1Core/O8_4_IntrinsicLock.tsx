@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 import Table_2ColSynchronizedIntrinsicLock from "../../../../../components/Tables/Table_2ColSynchronizedIntrinsicLock";
 
 const O8_4_IntrinsicLock = ({ anchor }: { anchor: string }) => {
@@ -18,10 +18,10 @@ const O8_4_IntrinsicLock = ({ anchor }: { anchor: string }) => {
             <Li>
               Java uses it when you write <Redtext>synchronized</Redtext>.
             </Li>
-            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            <Highlight_ApplicationProperties code={_4_} />
             <Table_2ColSynchronizedIntrinsicLock />
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

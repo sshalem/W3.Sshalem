@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_CreateFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,22 +15,22 @@ const O2_CreateFile = ({ anchor }: { anchor: string }) => {
           <p className="my-4 text-lg font-semibold">
             ✅ 1. Create File , Using <SpanYellow>java.io.File</SpanYellow> (Basic Approach)
           </p>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
         <hr />
         <article className="my-8">
           <p className="my-4 text-lg font-semibold">
             ✅ 2. Create File , Using <SpanYellow>java.nio.file.Files</SpanYellow> (Recommended – Modern Java)
           </p>
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
           🔹 Create and Write to File (Most Common)
           <ULdisc>
             <Li>✔ Creates the file if it doesn’t exist</Li>
             <Li>✔ Overwrites it if it does</Li>
           </ULdisc>
-          <JavaHighlight javaCode={_3_} />
+          <Highlight_JAVA code={_3_} />
           🔹 Append to File
-          <JavaHighlight javaCode={_4_} />
+          <Highlight_JAVA code={_4_} />
         </article>
       </section>
     </MainChildArea>

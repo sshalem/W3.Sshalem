@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O0_Range = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O0_Range = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The <SpanYellow>range()</SpanYellow> function can be called with 1, 2, or 3 arguments, using this syntax:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -48,7 +48,7 @@ const O0_Range = ({ anchor }: { anchor: string }) => {
             <Redtext>range(10)</Redtext> returns a sequence of each number from 0 to 9. (The start argument, 0 is inclusive, and the stop argument, 10
             is exclusive).
           </Li>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </ULdisc>
       </section>
 
@@ -69,7 +69,7 @@ const O0_Range = ({ anchor }: { anchor: string }) => {
                 and the second argument represents the <Redtext>stop</Redtext> value.
               </Li>
             </ULdisc>
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>
@@ -88,7 +88,7 @@ const O0_Range = ({ anchor }: { anchor: string }) => {
           <Li>It is optional, and if not provided, it defaults to 1.</Li>
           <Li>
             <Redtext>range(3, 10, 2)</Redtext> returns a sequence of each number from 3 to 9, with a step of 2:
-            <PythonHighlight pythonCode={_4_} />
+            <Highlight_PYTHON code={_4_} />
           </Li>
         </ULdisc>
       </section>
@@ -105,7 +105,7 @@ const O0_Range = ({ anchor }: { anchor: string }) => {
           <Li>It is optional, and if not provided, it defaults to 1.</Li>
           <Li>
             <Redtext>range(3, 10, 2)</Redtext> returns a sequence of each number from 3 to 9, with a step of 2:
-            <PythonHighlight pythonCode={_5_} />
+            <Highlight_PYTHON code={_5_} />
           </Li>
         </ULdisc>
       </section>

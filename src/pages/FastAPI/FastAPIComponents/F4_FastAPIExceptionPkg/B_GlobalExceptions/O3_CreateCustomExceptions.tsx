@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_CreateCustomExceptions = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const O3_CreateCustomExceptions = ({ anchor }: { anchor: string }) => {
           <Li>
             In Service layer <SpanYellow>student_service.py</SpanYellow> In write some logic and raise exception (raises domain exception)
           </Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

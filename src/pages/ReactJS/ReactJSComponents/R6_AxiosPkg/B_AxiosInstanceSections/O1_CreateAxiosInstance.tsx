@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 import setup_axios_1 from "../../../../../assets/setup_axios_1.jpg";
 
 const O1_CreateAxiosInstance = ({ anchor }: { anchor: string }) => {
@@ -23,7 +23,7 @@ const O1_CreateAxiosInstance = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               Copy/paste the code below of creating an axios instance in <SpanYellow>axiosInstance.tsx</SpanYellow>
-              <JsxHighlight jsxCode={_1_}></JsxHighlight>
+              <Highlight_JSX code={_1_}></Highlight_JSX>
             </Li>
           </ULdisc>
         </div>

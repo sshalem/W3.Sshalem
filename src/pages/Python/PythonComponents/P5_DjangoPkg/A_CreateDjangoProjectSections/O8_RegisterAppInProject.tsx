@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JSX, SpanGrey } from "../../../../../components/Highlight";
 
 const O8_RegisterAppInProject = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,10 +17,10 @@ const O8_RegisterAppInProject = ({ anchor }: { anchor: string }) => {
           <Li>
             add <SpanGrey>students</SpanGrey> to <SpanGrey>INSTALLED_APPS</SpanGrey> array
           </Li>
-          <JsxHighlight jsxCode={_1_} />
+          <Highlight_JSX code={_1_} />
           <Li>Verify the app works with command below</Li>
           <Li>If the server starts with no errors → ✅ app created correctly.</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULDecimal>
       </section>
     </MainChildArea>

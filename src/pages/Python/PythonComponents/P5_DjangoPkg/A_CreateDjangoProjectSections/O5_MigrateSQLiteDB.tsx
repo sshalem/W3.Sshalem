@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 
 const O5_MigrateSQLiteDB = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const O5_MigrateSQLiteDB = ({ anchor }: { anchor: string }) => {
           <Li>
             we also can see that we need to apply migrations, so run command <SpanGrey>python manage.py migrate</SpanGrey> (See prev section)
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULDecimal>
       </section>
     </MainChildArea>

@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { SpanRed, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanRed, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import microservice_11 from "../../../../../assets/microservice_11.jpg";
 
 const O2_DependecyAPIGateway2718 = ({ anchor }: { anchor: string }) => {
@@ -50,15 +50,15 @@ const O2_DependecyAPIGateway2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Copy and paste this to the <SpanYellow>{"<properties>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_1_} />
+              <Highlight_XML xmlCode={_1_} />
             </Li>
             <Li>
               Copy and paste the Dependeny , Inside the <SpanYellow>{"<dependencies>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_2_} />
+              <Highlight_XML xmlCode={_2_} />
             </Li>
             <Li>
               Copy and paste the <SpanYellow>{"<dependencyManagement>"}</SpanYellow> , after <SpanYellow>{"<dependencies>"}</SpanYellow> tag is closed
-              <XmlHighlight xmlCode={_3_} />
+              <Highlight_XML xmlCode={_3_} />
             </Li>
           </ULdisc>
         </article>

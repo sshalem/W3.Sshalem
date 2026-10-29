@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O2_LambdaUsage = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,25 +16,25 @@ const O2_LambdaUsage = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4 text-xl">1️⃣ map()</article>
         Apply a function to every element
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl">2️⃣ filter()</article>
         Filter elements based on a condition
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl">3️⃣ sorted()</article>
         Custom sorting logic
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
       </section>
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl">4️⃣ Lambda with Conditional Expression</article>
         Custom sorting logic
-        <PythonHighlight pythonCode={_4_} />
+        <Highlight_PYTHON code={_4_} />
       </section>
     </MainChildArea>
   );

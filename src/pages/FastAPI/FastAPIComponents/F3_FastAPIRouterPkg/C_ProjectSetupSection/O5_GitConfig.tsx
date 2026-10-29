@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_GitConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -26,7 +26,7 @@ const O5_GitConfig = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

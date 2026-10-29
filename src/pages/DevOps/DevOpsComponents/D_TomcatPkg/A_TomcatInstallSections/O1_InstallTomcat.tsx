@@ -5,7 +5,7 @@ Install_tomcat_on_linux --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 import { IMG, MainChildArea } from "../../../../../components";
 import { DivDoubleBorder, SpanYellow } from "../../../../../components/Highlight";
 
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 import tomcat_1 from "../../../../../assets/tomcat_1.jpg";
 import tomcat_2 from "../../../../../assets/tomcat_2.jpg";
@@ -69,7 +69,7 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
         <IMG img_name={tomcat_5}></IMG>
         <li className="my-1">open CMD </li>
         <li className="my-1">copy/paste command to connet to Linode Server</li>
-        <LinuxHighlight bashCode={connect_to_server}></LinuxHighlight>
+        <LinuxHighlight code={connect_to_server}></LinuxHighlight>
         <li className="my-1">
           use following commands to Install on Linux
           <ul className="my-4 ml-8 list-decimal">
@@ -102,7 +102,7 @@ const O1_InstallTomcat = ({ anchor }: { anchor: string }) => {
             </li>
           </ul>
         </li>
-        <LinuxHighlight bashCode={tomcat_install}></LinuxHighlight>
+        <LinuxHighlight code={tomcat_install}></LinuxHighlight>
       </ul>
     </MainChildArea>
   );

@@ -8,11 +8,11 @@ import { prism as BATCH_STYLE } from "react-syntax-highlighter/dist/esm/styles/p
 
 PrismLightSyntaxHighlighter.registerLanguage("batch", batch);
 
-const Highlight_BATCH = ({ batchCode }: { batchCode: string }) => {
+const Highlight_BATCH = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(batchCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -41,7 +41,7 @@ const Highlight_BATCH = ({ batchCode }: { batchCode: string }) => {
             display: "flex",
           }}
         >
-          {batchCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>

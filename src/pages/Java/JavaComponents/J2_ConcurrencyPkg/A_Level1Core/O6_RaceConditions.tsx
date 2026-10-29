@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, Highlight_JAVA, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
             <Li>
               So all 10 threads are modifying the <em className="font-semibold">same counter variable</em> .
             </Li>
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
             <Li>
               The important part <Redtext>counter++</Redtext> , is conceptually closer to:
               <ULdisc>
@@ -43,7 +43,7 @@ const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULDecimal>
         </article>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         <ULdisc>
           <Li>I got result below</Li>
           <Li>I incremented the counter, and now I'm reading the shared counter.</Li>
@@ -61,7 +61,7 @@ const O6_RaceConditions = ({ anchor }: { anchor: string }) => {
             SInce I dont know how many Core I have , (lets say 4) , Instead, the operating system/JVM scheduler decides which threads get CPU time.
           </Li>
         </ULdisc>
-        <ApplicationPropertiesHighlight propertiesCode={_3_} />
+        <Highlight_ApplicationProperties code={_3_} />
       </section>
     </MainChildArea>
   );

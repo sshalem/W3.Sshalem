@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -26,7 +26,7 @@ const O3_TestConfigMsgProps = ({ anchor }: { anchor: string }) => {
 
       <section>
         We can see that the message is more clear w/o the <SpanGreen>stacktrace</SpanGreen> (I <SpanRed>disable</SpanRed> it in the{" "}
-        <strong>propereties</strong> file ,set it to <SpanRed>never</SpanRed> )<JavaHighlight javaCode={postman}></JavaHighlight>
+        <strong>propereties</strong> file ,set it to <SpanRed>never</SpanRed> )<Highlight_JAVA code={postman}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../components";
-import { JavaHighlight } from "../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../components/Highlight";
 import windows_2 from "../../../../assets/windows_2.jpg";
 
 const O2_ProcNameByPID = ({ anchor }: { anchor: string }) => {
@@ -11,7 +11,7 @@ const O2_ProcNameByPID = ({ anchor }: { anchor: string }) => {
           <Li>After getting the PID in prev section, let's see how to get the process name of that PID number:</Li>
           <Li>
             Run command :
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
           </Li>
           <Li>
             In the output below we cans see that :

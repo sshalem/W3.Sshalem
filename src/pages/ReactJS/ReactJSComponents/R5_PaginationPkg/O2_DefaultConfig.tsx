@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import pagination_1 from "../../../../assets/pagination_1.jpg";
 
 const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
@@ -48,20 +48,20 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
         <ul className="my-4 ml-8 list-decimal">
           <li className="my-1">
             define the <SpanGreen>fields</SpanGreen> of a single object , as they appear on backend (or any other data sorce)
-            <JsxHighlight jsxCode={fields}></JsxHighlight>
+            <Highlight_JSX code={fields}></Highlight_JSX>
           </li>
           <li className="my-1">
             Since I use <SpanGreen>TypeScript</SpanGreen> , thus, I define a <SpanGreen>type</SpanGreen> (or I can define interface instead) of the
             Single Object , since I iterate it in my code
-            <JsxHighlight jsxCode={itemProps}></JsxHighlight>
+            <Highlight_JSX code={itemProps}></Highlight_JSX>
           </li>
           <li className="my-1">
             define 3 <SpanGreen>useState</SpanGreen> (These are a Must for code to work)
-            <JsxHighlight jsxCode={use_state}></JsxHighlight>
+            <Highlight_JSX code={use_state}></Highlight_JSX>
           </li>
           <li className="my-1">
             Config Pagination Component
-            <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
+            <Highlight_JSX code={config_pagination}></Highlight_JSX>
           </li>
           <li className="my-1">
             fetch data (I use the useEffect on initial , but I can do whatever I want when fetching), <SpanGreen>setItems</SpanGreen> with raw JSON
@@ -71,7 +71,7 @@ const O2_DefaultConfig = ({ anchor }: { anchor: string }) => {
         </ul>
         <div className="my-12">
           See <SpanGreen>Full code</SpanGreen>
-          <JsxHighlight jsxCode={use_pagination}></JsxHighlight>
+          <Highlight_JSX code={use_pagination}></Highlight_JSX>
         </div>
       </section>
     </MainChildArea>

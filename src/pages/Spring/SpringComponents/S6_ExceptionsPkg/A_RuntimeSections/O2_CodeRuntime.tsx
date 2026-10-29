@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_CodeRuntime = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,11 +17,11 @@ const O2_CodeRuntime = ({ anchor }: { anchor: string }) => {
       </GitHub>
       <section>
         <DivDoubleBorder>Exception</DivDoubleBorder>
-        <JavaHighlight javaCode={exception}></JavaHighlight>
+        <Highlight_JAVA code={exception}></Highlight_JAVA>
         <DivDoubleBorder>Service</DivDoubleBorder>
-        <JavaHighlight javaCode={service}></JavaHighlight>
+        <Highlight_JAVA code={service}></Highlight_JAVA>
         <DivDoubleBorder>Controller</DivDoubleBorder>
-        <JavaHighlight javaCode={controller}></JavaHighlight>
+        <Highlight_JAVA code={controller}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

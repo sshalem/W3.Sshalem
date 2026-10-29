@@ -4,7 +4,7 @@ Config_account --> (DEVOPS)(LINUX)(Linux Server setup)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O3_ConfigAccount = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O3_ConfigAccount = ({ anchor }: { anchor: string }) => {
         </li>
       </ul>
 
-      <LinuxHighlight bashCode={linux_code}></LinuxHighlight>
+      <LinuxHighlight code={linux_code}></LinuxHighlight>
     </MainChildArea>
   );
 };

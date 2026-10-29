@@ -4,7 +4,7 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O5_CorsSpringSecurity = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,10 +18,10 @@ const O5_CorsSpringSecurity = ({ anchor }: { anchor: string }) => {
         <div className="my-4 text-lg font-semibold">Spring Security 6+ (Spring Boot 3+): Security Configuration (JWT + CORS)</div>
 
         <p className="text-lg font-semibold">1. Create a dedicated CORS bean:</p>
-        <JavaHighlight javaCode={cors_with_security}></JavaHighlight>
+        <Highlight_JAVA code={cors_with_security}></Highlight_JAVA>
 
         <p className="text-lg font-semibold">2. Security Configuration (JWT + CORS)</p>
-        <JavaHighlight javaCode={security_config}></JavaHighlight>
+        <Highlight_JAVA code={security_config}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

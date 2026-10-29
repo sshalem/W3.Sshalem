@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import pagination_4 from "../../../../assets/pagination_4.jpg";
 
 const O6_PageButtons = ({ anchor }: { anchor: string }) => {
@@ -39,7 +39,7 @@ const O6_PageButtons = ({ anchor }: { anchor: string }) => {
             In example below , I config page size <SpanGreen>buttonLayout</SpanGreen> set it to <SpanRed>MAX_7_PAGES_BUTTONS</SpanRed>
           </li>
           <li className="my-1">
-            <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
+            <Highlight_JSX code={config_pagination}></Highlight_JSX>
           </li>
           <IMG img_name={pagination_4}></IMG>
         </ul>

@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
   return (
@@ -31,7 +31,8 @@ const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
             <Li>
-              See the fields validation I added ( <SpanYellow>insertable</SpanYellow>, <SpanYellow>nullable</SpanYellow> , <SpanYellow>updatable</SpanYellow>)
+              See the fields validation I added ( <SpanYellow>insertable</SpanYellow>, <SpanYellow>nullable</SpanYellow> ,{" "}
+              <SpanYellow>updatable</SpanYellow>)
             </Li>
           </Li>
           <Li>
@@ -43,7 +44,7 @@ const O3_AuditableClass = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={autidatble}></JavaHighlight>
+          <Highlight_JAVA code={autidatble}></Highlight_JAVA>
         </ULdisc>
         {/*  */}
         {/*  */}

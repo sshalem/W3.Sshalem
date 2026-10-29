@@ -3,16 +3,16 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O4_BuilderBestImpl = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         A class with Builder pattern
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         Here is how to use :
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
       </section>
     </MainChildArea>
   );

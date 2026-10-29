@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_CodeMsgProperties = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,13 +17,13 @@ const O2_CodeMsgProperties = ({ anchor }: { anchor: string }) => {
       </GitHub>
       <section>
         <DivDoubleBorder>application.properties</DivDoubleBorder>
-        <ApplicationPropertiesHighlight propertiesCode={application_properties}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={application_properties}></Highlight_ApplicationProperties>
         <DivDoubleBorder>Exception</DivDoubleBorder>
-        <JavaHighlight javaCode={exception}></JavaHighlight>
+        <Highlight_JAVA code={exception}></Highlight_JAVA>
         <DivDoubleBorder>Service</DivDoubleBorder>
-        <JavaHighlight javaCode={service}></JavaHighlight>
+        <Highlight_JAVA code={service}></Highlight_JAVA>
         <DivDoubleBorder>Controller</DivDoubleBorder>
-        <JavaHighlight javaCode={controller}></JavaHighlight>
+        <Highlight_JAVA code={controller}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

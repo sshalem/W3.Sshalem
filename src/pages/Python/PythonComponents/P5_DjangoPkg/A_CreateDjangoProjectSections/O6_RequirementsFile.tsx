@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 
 const O6_RequirementsFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O6_RequirementsFile = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Open terminal , type command
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             this created the file <SpanGrey>requirements.txt</SpanGrey> and dependencies in it

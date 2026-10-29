@@ -4,7 +4,7 @@
 */
 
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_7 from "../../../../../assets/python_7.jpg";
 import python_8 from "../../../../../assets/python_8.jpg";
 import python_9 from "../../../../../assets/python_9.jpg";
@@ -77,7 +77,7 @@ const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
           <Li>
             1️⃣ Create <SpanGrey>(.venv)</SpanGrey> folder , Open PyCharm Terminal , type command below (This creates a <SpanGrey>(.venv)</SpanGrey>
             folder inside your project.)
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             2️⃣ 2 ways to Assign the <SpanGrey>(.venv)</SpanGrey> to the project :
@@ -105,17 +105,17 @@ const O2_CloneGitPythonProject = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             3️⃣ <SpanGrey>sanity check</SpanGrey> : Open PyCharm Terminal , type command below , → should point to <SpanGrey>(.venv)</SpanGrey>
-            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            <Highlight_ApplicationProperties code={_4_} />
             or iI am in the root project directory then :
-            <ApplicationPropertiesHighlight propertiesCode={_4_1_} />
+            <Highlight_ApplicationProperties code={_4_1_} />
           </Li>
           <Li>
             4️⃣ Install Dependencies (Two Correct Options), Open PyCharm Terminal, run command below:
-            <ApplicationPropertiesHighlight propertiesCode={_5_} />
+            <Highlight_ApplicationProperties code={_5_} />
           </Li>
           <Li>
             5️⃣ How to Verify It’s Working , In PyCharm Terminal, run:
-            <ApplicationPropertiesHighlight propertiesCode={_6_} />
+            <Highlight_ApplicationProperties code={_6_} />
           </Li>
         </ULdisc>
       </section>

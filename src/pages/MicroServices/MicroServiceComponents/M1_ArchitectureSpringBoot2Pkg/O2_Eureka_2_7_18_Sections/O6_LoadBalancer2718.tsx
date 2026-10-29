@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_LoadBalancer2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O6_LoadBalancer2718 = ({ anchor }: { anchor: string }) => {
               Add The <SpanYellow>@LoadBalanced</SpanYellow> annotation on the <SpanYellow>RestTemplate</SpanYellow> Bean
             </Li>
             <Li>It will activates Spring Cloud LoadBalancer.</Li>
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
           </ULdisc>
         </article>
       </section>
@@ -36,14 +36,14 @@ const O6_LoadBalancer2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               Instead of:
-              <JavaHighlight javaCode={_2_} />
+              <Highlight_JAVA code={_2_} />
             </Li>
             <Li>
-              Use the service name from application properties <ApplicationPropertiesHighlight propertiesCode={_3_} />
+              Use the service name from application properties <Highlight_ApplicationProperties code={_3_} />
             </Li>
             <Li>
               So the request becomes:
-              <JavaHighlight javaCode={_4_} />
+              <Highlight_JAVA code={_4_} />
             </Li>
           </ULdisc>
         </article>

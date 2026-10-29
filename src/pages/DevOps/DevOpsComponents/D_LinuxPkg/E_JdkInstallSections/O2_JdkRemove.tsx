@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O2_JdkRemove = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,11 +12,11 @@ const O2_JdkRemove = ({ anchor }: { anchor: string }) => {
       <ULDecimal>
         <Li>
           list installed JDK packages:
-          <LinuxHighlight bashCode={jdk_list}></LinuxHighlight>
+          <LinuxHighlight code={jdk_list}></LinuxHighlight>
         </Li>
         <Li>
           Remove a specific old JDK version:
-          <LinuxHighlight bashCode={jdk_remove}></LinuxHighlight>
+          <LinuxHighlight code={jdk_remove}></LinuxHighlight>
         </Li>
       </ULDecimal>
     </MainChildArea>

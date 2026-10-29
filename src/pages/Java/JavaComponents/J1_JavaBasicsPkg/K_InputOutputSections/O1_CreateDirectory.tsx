@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_CreateDirectory = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,19 +13,19 @@ const O1_CreateDirectory = ({ anchor }: { anchor: string }) => {
           <p className="my-4 text-lg font-semibold">
             ✅ 1. Create Directory , Using <SpanYellow>java.io.File</SpanYellow> (Basic Approach)
           </p>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
           <p className="my-4 text-lg font-semibold">Create Nested Directories</p>
           Use <SpanYellow>mkdirs()</SpanYellow> instead of <SpanYellow>mkdir()</SpanYellow>
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
         </article>
         <hr />
         <article className="my-8">
           <p className="my-4 text-lg font-semibold">
             ✅ 2. Create Directory , Using <SpanYellow>java.nio.file.Files</SpanYellow> (Recommended – Modern Java)
           </p>
-          <JavaHighlight javaCode={_3_} />
+          <Highlight_JAVA code={_3_} />
           <p className="my-4 text-lg font-semibold">Create Nested Directories</p>
-          <JavaHighlight javaCode={_4_} />
+          <Highlight_JAVA code={_4_} />
         </article>
       </section>
     </MainChildArea>

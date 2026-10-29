@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_34 from "../../../../../assets/python_34.jpg";
 import { Link } from "react-router-dom";
 
@@ -61,7 +61,7 @@ const O0_FastAPISetup = ({ anchor }: { anchor: string }) => {
               Pydantic section
             </Link>
             )
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             <SpanGrey>router.py</SpanGrey> - see next section

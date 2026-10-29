@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_OrderService = ({ anchor }: { anchor: string }) => {
   return (
@@ -70,7 +70,7 @@ const O3_OrderService = ({ anchor }: { anchor: string }) => {
               <Li>Port number</Li>
             </ULdisc>
           </p>
-          <ApplicationPropertiesHighlight propertiesCode={_1_}></ApplicationPropertiesHighlight>
+          <Highlight_ApplicationProperties code={_1_}></Highlight_ApplicationProperties>
         </article>
         <hr />
         <article className="my-8">

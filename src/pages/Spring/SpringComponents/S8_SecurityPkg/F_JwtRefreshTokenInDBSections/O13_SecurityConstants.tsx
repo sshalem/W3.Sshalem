@@ -6,12 +6,12 @@ import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { useMemo } from "react";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O13_SecurityConstants = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderSecurityConstants = useMemo(() => <JavaHighlight javaCode={security_constants} />, [security_constants]);
+  const renderSecurityConstants = useMemo(() => <Highlight_JAVA code={security_constants} />, [security_constants]);
 
   return (
     <MainChildArea anchor={anchor}>

@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../components";
-import { BatchHighlight, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { Highlight_BATCH, Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_axios_1 from "../../../../assets/setup_axios_1.jpg";
 
 const O4_InstallAxios = ({ anchor }: { anchor: string }) => {
@@ -11,7 +11,7 @@ const O4_InstallAxios = ({ anchor }: { anchor: string }) => {
     <MainChildArea anchor={anchor}>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
-          Install Axios <BatchHighlight batchCode={axios}></BatchHighlight>
+          Install Axios <Highlight_BATCH batchCode={axios}></Highlight_BATCH>
         </li>
         <li className="my-1">
           create <SpanGreen>utils</SpanGreen> folder , and iside it , create a file named<SpanGreen>axiosInstance.tsx</SpanGreen> , where I create an
@@ -20,22 +20,22 @@ const O4_InstallAxios = ({ anchor }: { anchor: string }) => {
         </li>
         <li className="my-1">
           Copy/paste the code below of creating an axios instance in <SpanGreen>axiosInstance.tsx</SpanGreen>
-          <JsxHighlight jsxCode={axios_instance}></JsxHighlight>
+          <Highlight_JSX code={axios_instance}></Highlight_JSX>
         </li>
         <li className="my-1">In order to use it in other components , need to do the following</li>
         <li className="my-1">import axios instance to the component I want to use it</li>
         <li className="my-1">write the code below to fetch data from server</li>
         <li className="my-1">
-          Axios Code for <SpanBlue>get</SpanBlue> method <JsxHighlight jsxCode={axios_get}></JsxHighlight>
+          Axios Code for <SpanBlue>get</SpanBlue> method <Highlight_JSX code={axios_get}></Highlight_JSX>
         </li>
         <li className="my-1">
-          Axios Code for <SpanGreen>post</SpanGreen> method <JsxHighlight jsxCode={axios_post}></JsxHighlight>
+          Axios Code for <SpanGreen>post</SpanGreen> method <Highlight_JSX code={axios_post}></Highlight_JSX>
         </li>
         <li className="my-1">
-          Axios Code for <SpanGreen>put</SpanGreen> method <JsxHighlight jsxCode={axios_put}></JsxHighlight>
+          Axios Code for <SpanGreen>put</SpanGreen> method <Highlight_JSX code={axios_put}></Highlight_JSX>
         </li>
         <li className="my-1">
-          Axios Code for <SpanRed>delete</SpanRed> method <JsxHighlight jsxCode={axios_delete}></JsxHighlight>
+          Axios Code for <SpanRed>delete</SpanRed> method <Highlight_JSX code={axios_delete}></Highlight_JSX>
         </li>
       </ul>
     </MainChildArea>

@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -26,11 +26,11 @@ const O3_TestRuntime = ({ anchor }: { anchor: string }) => {
       <section>
         This is the response we get from server, a <SpanRed>500 Internal Server Error</SpanRed>
         The message format that Spring boot server sends is as follows:
-        <JavaHighlight javaCode={exception_message_format}></JavaHighlight>
+        <Highlight_JAVA code={exception_message_format}></Highlight_JAVA>
         The <SpanBlue>Trace</SpanBlue> is the same as shown the console of Spring boot. <br />
         As we can see , the trace can be very big. <br />
         In next Sections, I will several options , how to manage this.
-        <JavaHighlight javaCode={postman}></JavaHighlight>
+        <Highlight_JAVA code={postman}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

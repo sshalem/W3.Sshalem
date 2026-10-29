@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_SqliteIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,7 +22,7 @@ const O1_SqliteIntro = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>You can test it by simply running command below , If this prints a version number (e.g., 3.45.0), you're good to go.</Li>
             </ULdisc>
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>

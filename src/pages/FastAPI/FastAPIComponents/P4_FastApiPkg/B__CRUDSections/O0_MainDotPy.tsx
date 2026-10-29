@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JSX, Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O0_MainDotPy = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O0_MainDotPy = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>one place that bootstraps the app</Li>
           <Li>registers routes, middleware, events</Li>
-          <JsxHighlight jsxCode={_1_} />
+          <Highlight_JSX code={_1_} />
         </ULdisc>
         <hr />
         <article className="my-8 text-lg font-semibold">
@@ -50,7 +50,7 @@ const O0_MainDotPy = ({ anchor }: { anchor: string }) => {
         {/*  */}
         Code below is only used in <SpanGrey>main.py</SpanGrey> with <SpanGrey>@app.get("/")</SpanGrey> , where I make instance of FastAPI <br />
         But, The real structure , we use APIrouter (see next section)
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
     </MainChildArea>
   );

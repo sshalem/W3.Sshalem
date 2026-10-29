@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 
 const O5_RequestParam = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,7 +27,7 @@ const O5_RequestParam = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Backend read the QueryParams from url</Li>
         </ULdisc>
-        <JavaHighlight javaCode={request_param_1}></JavaHighlight>
+        <Highlight_JAVA code={request_param_1}></Highlight_JAVA>
         <article className="my-8 text-2xl font-semibold">⭐ @RequestParam optional parameters</article>
         <SpanGrey>@RequestParam</SpanGrey> also has optional parameters :
         <ULDecimal>
@@ -48,7 +48,7 @@ const O5_RequestParam = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
         </ULDecimal>
-        <JavaHighlight javaCode={request_param_required_default}></JavaHighlight>
+        <Highlight_JAVA code={request_param_required_default}></Highlight_JAVA>
         <article className="my-8 text-2xl font-semibold">⭐ @RequestParam multiple values for the same key</article>
         <div>I can also multiple values for the same key:</div>
         <ULdisc>
@@ -66,7 +66,7 @@ const O5_RequestParam = ({ anchor }: { anchor: string }) => {
             <SpanGrey>tag</SpanGrey> is the key,and I have multiple tags
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={request_param_list_parameters_same_key}></JavaHighlight>
+        <Highlight_JAVA code={request_param_list_parameters_same_key}></Highlight_JAVA>
         {/*  */}
         <article className="my-8 text-2xl font-semibold">⭐ @RequestParam Map All Parameters</article>
         <div>I can also map all params regardless of the key :</div>
@@ -81,7 +81,7 @@ const O5_RequestParam = ({ anchor }: { anchor: string }) => {
           <Li>Backend read the QueryParams , and stored them in a Map</Li>
           <Li>I have 4 different keys in the url params</Li>
         </ULdisc>
-        <JavaHighlight javaCode={request_param_map_params_multuple_keys}></JavaHighlight>
+        <Highlight_JAVA code={request_param_map_params_multuple_keys}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

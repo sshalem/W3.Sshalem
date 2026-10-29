@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,11 +13,11 @@ const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             by referring to its key name, inside square brackets , Get the value of the <SpanYellow>model</SpanYellow> key:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             There is also a method called <SpanYellow>get()</SpanYellow> that will give you the same result:
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>
@@ -29,7 +29,7 @@ const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The <SpanYellow>keys()</SpanYellow> method will return a list of all the keys in the dictionary.
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>
@@ -41,7 +41,7 @@ const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The <SpanYellow>values()</SpanYellow> method will return a list of all the values in the dictionary.
-            <PythonHighlight pythonCode={_4_} />
+            <Highlight_PYTHON code={_4_} />
           </Li>
         </ULdisc>
       </section>
@@ -53,7 +53,7 @@ const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The <SpanYellow>items()</SpanYellow> method will return each item in a dictionary, as tuples in a list.
-            <PythonHighlight pythonCode={_5_} />
+            <Highlight_PYTHON code={_5_} />
           </Li>
         </ULdisc>
       </section>
@@ -65,7 +65,7 @@ const O4_AccessItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             To determine if a specified key is present in a dictionary use the <SpanYellow>in</SpanYellow> keyword:
-            <PythonHighlight pythonCode={_6_} />
+            <Highlight_PYTHON code={_6_} />
           </Li>
         </ULdisc>
       </section>

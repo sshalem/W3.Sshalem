@@ -4,7 +4,7 @@
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import typescript_1 from "../../../../../assets/typescript_1.jpg";
-import { JsxHighlight, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanGreen } from "../../../../../components/Highlight";
 
 const O1_Introduction = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O1_Introduction = ({ anchor }: { anchor: string }) => {
           <SpanGreen>npm run dev</SpanGreen> - Like in React app , runs on port 5173
         </li>
       </ul>
-      <JsxHighlight jsxCode={typescript_install}></JsxHighlight>
+      <Highlight_JSX code={typescript_install}></Highlight_JSX>
       <IMG img_name={typescript_1}></IMG>
     </MainChildArea>
   );

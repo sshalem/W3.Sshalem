@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 import microservice_20 from "../../../../../assets/microservice_20.jpg";
 import microservice_21 from "../../../../../assets/microservice_21.jpg";
 
@@ -39,7 +39,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if we get a JSON response from Elasticsearch , this way we can tell if its running.
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="elasticsearch.bat" />
+                <Highlight_JSX jsxCode="elasticsearch.bat" />
               </Li>
               <Li>
                 <SpanYellow>Logstash</SpanYellow>
@@ -53,7 +53,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     &nbsp; see if Logstash is running
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="logstash -f config/logstash.conf" />
+                <Highlight_JSX jsxCode="logstash -f config/logstash.conf" />
               </Li>
               <Li>
                 <SpanYellow>Kibana</SpanYellow>{" "}
@@ -66,7 +66,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="kibana.bat" />
+                <Highlight_JSX jsxCode="kibana.bat" />
               </Li>
               <Li>
                 <SpanYellow>Eureka</SpanYellow>
@@ -82,7 +82,7 @@ const O6_ELK_Test2718 = ({ anchor }: { anchor: string }) => {
                     </a>
                   </Li>
                 </ULdisc>
-                <JsxHighlight jsxCode="java -jar zipkin-server-3.6.0-exec.jar" />
+                <Highlight_JSX jsxCode="java -jar zipkin-server-3.6.0-exec.jar" />
               </Li>
               <Li>
                 Run <SpanYellow>Api Gateway</SpanYellow> (Port 5001)

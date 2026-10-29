@@ -2,13 +2,13 @@
 /spring/application-properties/mysql#3.MysqlBasic
 Mysql Basic --> (SPRING)(ApplicationProperties)(MySql)
 */
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 import { MainChildArea } from "../../../../../components";
 
 const O3_MysqlBasicConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <ApplicationPropertiesHighlight propertiesCode={mysql_basic} />
+      <Highlight_ApplicationProperties code={mysql_basic} />
     </MainChildArea>
   );
 };

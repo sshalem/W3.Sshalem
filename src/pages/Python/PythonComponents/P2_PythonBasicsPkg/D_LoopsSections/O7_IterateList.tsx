@@ -3,19 +3,19 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O7_IterateList = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-4 text-lg font-semibold">Iterate List</article>
-        <PythonHighlight pythonCode={_1_} />
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_1_} />
+        <Highlight_PYTHON code={_2_} />
         Iterate a List tuples , but I don't know how many elements the tuples has
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
         Iterating a list of objects
-        <PythonHighlight pythonCode={_4_} />
+        <Highlight_PYTHON code={_4_} />
       </section>
     </MainChildArea>
   );

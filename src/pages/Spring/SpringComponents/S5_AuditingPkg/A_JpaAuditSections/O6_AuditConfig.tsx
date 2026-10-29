@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -44,7 +44,7 @@ const O6_AuditConfig = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={config}></JavaHighlight>
+          <Highlight_JAVA code={config}></Highlight_JAVA>
         </ULdisc>
       </article>
       <hr />

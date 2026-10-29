@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O8_RunPythonProject = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O8_RunPythonProject = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Via terminal
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
         </ULdisc>
       </section>

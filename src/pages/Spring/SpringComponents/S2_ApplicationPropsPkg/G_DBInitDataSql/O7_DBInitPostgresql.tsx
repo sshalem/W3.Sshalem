@@ -3,7 +3,7 @@
 Postgres data sql --> (SPRING)(ApplicationProperties)(Postgres data sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_8 from "../../../../../assets/db_init_8.jpg";
 
 const O7_DBInitPostgresql = ({ anchor }: { anchor: string }) => {
@@ -22,21 +22,21 @@ const O7_DBInitPostgresql = ({ anchor }: { anchor: string }) => {
                 create <SpanBlue>application-Postgres.properties</SpanBlue>file
               </div>
               <DivDoubleBorder>application-Postgres.properties</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={applicationPropsPostGresqlProfileCode}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={applicationPropsPostGresqlProfileCode}></Highlight_ApplicationProperties>
             </li>
             <li className="my-1">
               <div>
                 config main <SpanBlue>application.properties</SpanBlue>
               </div>
               <DivDoubleBorder>main application.properties</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={applicationPropsMainCode}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={applicationPropsMainCode}></Highlight_ApplicationProperties>
             </li>
             <li className="my-1">
               <div>
                 <SpanBlue>data-PostGreSql.sql</SpanBlue>
               </div>
               <DivDoubleBorder>data-PostGreSql.sql</DivDoubleBorder>
-              <ApplicationPropertiesHighlight propertiesCode={dataPostGreSql}></ApplicationPropertiesHighlight>
+              <Highlight_ApplicationProperties code={dataPostGreSql}></Highlight_ApplicationProperties>
             </li>
           </ul>
         </div>

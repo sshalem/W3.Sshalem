@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -36,7 +36,7 @@ const O3_TestCustomCtrlAdvice = ({ anchor }: { anchor: string }) => {
             <strong>ExceptionErrorMEssage</strong> )
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={postman}></JavaHighlight>
+        <Highlight_JAVA code={postman}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

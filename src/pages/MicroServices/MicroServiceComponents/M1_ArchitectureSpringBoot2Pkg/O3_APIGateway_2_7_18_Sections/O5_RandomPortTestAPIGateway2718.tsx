@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,7 +32,7 @@ const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
         </article>
         <article className="my-8">
           <p className="my-8 text-xl">✅ Setup for Random port</p>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
           this gives
           <ULdisc>
             <Li>
@@ -43,7 +43,7 @@ const O5_RandomPortTestAPIGateway2718 = ({ anchor }: { anchor: string }) => {
             <Li>For runtime code (controllers/services), the recommended approach is to get the port from the running web server context.</Li>
             <Li>
               To see which port is running add following code to Controller (or any where else I want)
-              <JavaHighlight javaCode={_2_} />
+              <Highlight_JAVA code={_2_} />
             </Li>
           </ULdisc>
         </article>

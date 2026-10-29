@@ -4,7 +4,7 @@
 */
 import { useMemo } from "react";
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -12,7 +12,7 @@ import ULdisc from "../../../../../components/ui/ULdisc";
 const O10_JwtAuthFilter = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderJwtAuthenticationFilter = useMemo(() => <JavaHighlight javaCode={code_java} />, [code_java]);
+  const renderJwtAuthenticationFilter = useMemo(() => <Highlight_JAVA code={code_java} />, [code_java]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">

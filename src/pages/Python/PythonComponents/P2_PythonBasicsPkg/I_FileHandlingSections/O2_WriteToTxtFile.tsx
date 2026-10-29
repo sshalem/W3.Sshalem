@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,7 +29,7 @@ const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             This creates file.txt (or overwrites it) with:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -41,7 +41,7 @@ const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             This creates file.txt (or overwrites it) with: ""
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>
@@ -53,7 +53,7 @@ const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             This creates file.txt (or overwrites it) with:
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>
@@ -67,7 +67,7 @@ const O2_WriteToTxtFile = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             This creates file.txt (or overwrites it) with:
-            <PythonHighlight pythonCode={_4_} />
+            <Highlight_PYTHON code={_4_} />
           </Li>
         </ULdisc>
       </section>

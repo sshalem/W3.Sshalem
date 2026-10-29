@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -72,9 +72,9 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               When we add the dependency below , .
-              <XmlHighlight xmlCode={_2_} />
+              <Highlight_XML xmlCode={_2_} />
               Spring Cloud automatically brings in <SpanYellow>: 👉 Spring Cloud LoadBalancer</SpanYellow>
-              <XmlHighlight xmlCode={_3_} />
+              <Highlight_XML xmlCode={_3_} />
               So in most projects you do not need to add <SpanYellow>spring-cloud-starter-loadbalancer</SpanYellow> manually.
             </Li>
             <Li>
@@ -105,7 +105,7 @@ const O2_IntroLoadBalace2718 = ({ anchor }: { anchor: string }) => {
 
           <ULDecimal>
             <Li>Architecture:</Li>
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
             <Li>
               <SpanYellow>Order Service</SpanYellow> wants to call <SpanYellow>http://payment-service/pay</SpanYellow>
             </Li>

@@ -4,7 +4,7 @@ CascadeType Refresh --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { useLocation } from "react-router-dom";
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 import { useEffect } from "react";
 
 const O7_LazyCascadeRefresh = ({ anchor }: { anchor: string }) => {
@@ -40,7 +40,7 @@ const O7_LazyCascadeRefresh = ({ anchor }: { anchor: string }) => {
         <br />
         As we see in the code below , Spring Data JPA repositories don’t expose a <strong>refresh()</strong> method directly. <br /> Repositories are
         mainly for CRUD (save, find, delete, etc.), not lower-level EntityManager operations like refresh().
-        <JavaHighlight javaCode={code}></JavaHighlight>
+        <Highlight_JAVA code={code}></Highlight_JAVA>
       </Answer>
     </MainChildArea>
   );

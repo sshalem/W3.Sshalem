@@ -3,7 +3,7 @@
 OSIV --> (SPRING)(ApplicationProperties)(H2)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const H2Osiv = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const H2Osiv = ({ anchor }: { anchor: string }) => {
         <SpanBlue>true</SpanBlue> . <br /> To disable the warning, I set to <SpanBlue>false</SpanBlue>
       </div>
 
-      <ApplicationPropertiesHighlight propertiesCode={osiv} />
+      <Highlight_ApplicationProperties code={osiv} />
     </MainChildArea>
   );
 };

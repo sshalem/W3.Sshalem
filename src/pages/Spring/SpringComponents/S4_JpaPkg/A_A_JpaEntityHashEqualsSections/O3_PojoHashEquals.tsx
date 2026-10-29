@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_PojoHashEquals = ({ anchor }: { anchor: string }) => {
   return (
@@ -45,7 +45,7 @@ const O3_PojoHashEquals = ({ anchor }: { anchor: string }) => {
         <p className="my-8 text-xl font-semibold">
           <SpanYellow>POJO Class :</SpanYellow>
         </p>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         <p className="my-8 text-xl font-semibold">
           <SpanYellow>equals() , hashCode()</SpanYellow> version :
         </p>
@@ -57,7 +57,7 @@ const O3_PojoHashEquals = ({ anchor }: { anchor: string }) => {
             I add the line <SpanYellow> if (this == obj) return true</SpanYellow> , which IntelliJ did not add it , But Spring boot Did add it
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
       </section>
     </MainChildArea>
   );

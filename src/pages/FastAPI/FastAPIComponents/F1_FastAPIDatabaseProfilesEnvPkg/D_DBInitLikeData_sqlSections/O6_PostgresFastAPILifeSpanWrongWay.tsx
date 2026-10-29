@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_PostgresFastAPILifeSpanWrongWay = ({ anchor }: { anchor: string }) => {
   return (
@@ -76,7 +76,7 @@ const O6_PostgresFastAPILifeSpanWrongWay = ({ anchor }: { anchor: string }) => {
             </Li>
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

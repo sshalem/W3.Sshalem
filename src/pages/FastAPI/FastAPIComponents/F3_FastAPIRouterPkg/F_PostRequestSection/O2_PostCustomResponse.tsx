@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_PostCustomResponse = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,12 +24,12 @@ const O2_PostCustomResponse = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Using response_model with a <SpanYellow>Pydantic Object</SpanYellow>
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             Using JSONResponse with <SpanYellow>Pydantic Object</SpanYellow> (Even though I use a Pydantic model, I still loose validation , since I
             don't use the <SpanYellow>response_model</SpanYellow> )
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>

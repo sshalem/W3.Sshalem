@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 import Table_2ColCompareDjangoTerminology from "../../../../../components/Tables/Table_2ColCompareDjangoTerminology";
 import { DetailsSummary, TreeComponent } from "../../../../../components/Tree";
 
@@ -14,11 +14,11 @@ const OX_SpringVsDjango = ({ anchor }: { anchor: string }) => {
         <article className="flex gap-48">
           <div>
             <div className="my-4 text-xl font-semibold">Spring (layer-oriented)</div>
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </div>
           <div>
             <div className="my-4 text-xl font-semibold">Django (feature-oriented)</div>
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
           </div>
         </article>
         <Table_2ColCompareDjangoTerminology></Table_2ColCompareDjangoTerminology>

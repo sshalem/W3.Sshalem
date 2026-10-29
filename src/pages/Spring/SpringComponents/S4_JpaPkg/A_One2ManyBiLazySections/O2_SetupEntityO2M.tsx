@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanGreen, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 
 const O2_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,10 +24,10 @@ const O2_SetupEntityO2M = ({ anchor }: { anchor: string }) => {
       ➡️ If <SpanRed>orphanRemoval = true</SpanRed>, this will issue a DELETE for that user in the DB. <br />
       ➡️ If <SpanGreen>orphanRemoval = false</SpanGreen>, it will only break the relationship (Best practice , set user_id to NULL if{" "}
       <SpanTeal>nullable</SpanTeal> ).
-      <JavaHighlight javaCode={user_entity}></JavaHighlight>
+      <Highlight_JAVA code={user_entity}></Highlight_JAVA>
       {/*  */}
       <DivDoubleBorder>RoleEntity - Child Entity</DivDoubleBorder>
-      <JavaHighlight javaCode={role_entity}></JavaHighlight>
+      <Highlight_JAVA code={role_entity}></Highlight_JAVA>
     </MainChildArea>
   );
 };

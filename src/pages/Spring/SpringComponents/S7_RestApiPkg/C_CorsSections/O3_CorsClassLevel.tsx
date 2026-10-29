@@ -4,7 +4,7 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O3_CorsClassLevel = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O3_CorsClassLevel = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4 text-2xl font-semibold">✅ Enable CORS at Controller Class Level</article>
 
-        <JavaHighlight javaCode={class_level}></JavaHighlight>
+        <Highlight_JAVA code={class_level}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

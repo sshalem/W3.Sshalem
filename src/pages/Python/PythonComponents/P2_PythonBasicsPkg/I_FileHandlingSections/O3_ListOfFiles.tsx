@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_ListOfFiles = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O3_ListOfFiles = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             To read the list of files in a directory in Python
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -25,11 +25,11 @@ const O3_ListOfFiles = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Using <SpanYellow>os</SpanYellow> like this
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             Using <SpanYellow>pathlib</SpanYellow> (clean & modern)
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>

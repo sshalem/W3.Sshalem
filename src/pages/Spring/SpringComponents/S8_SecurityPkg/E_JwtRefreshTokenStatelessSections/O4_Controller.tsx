@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea, ULDecimal } from "../../../../../components";
-import { JavaHighlight, SpanCyan, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanCyan, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import { useMemo } from "react";
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const O4_Controller = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderSecurityConfigDsl = useMemo(() => <JavaHighlight javaCode={security_config} />, [security_config]);
+  const renderSecurityConfigDsl = useMemo(() => <Highlight_JAVA code={security_config} />, [security_config]);
 
   return (
     <MainChildArea anchor={anchor}>

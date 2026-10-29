@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 import Thread_1 from "../../../../../assets/Thread_1.jpg";
 
 const O2_LifeCycleOfThread = ({ anchor }: { anchor: string }) => {
@@ -17,7 +17,7 @@ const O2_LifeCycleOfThread = ({ anchor }: { anchor: string }) => {
         </article>
         <article className="my-8">
           <p className="text-lg font-semibold"> 🔄 Thread Life Cycle Flow</p>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
           <IMG img_name={Thread_1}></IMG>
         </article>
 

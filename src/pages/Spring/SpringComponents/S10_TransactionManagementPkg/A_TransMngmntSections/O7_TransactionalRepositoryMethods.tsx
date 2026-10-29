@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 
 const O7_TransactionalRepositoryMethods = ({ anchor }: { anchor: string }) => {
   return (
@@ -90,7 +90,7 @@ const O7_TransactionalRepositoryMethods = ({ anchor }: { anchor: string }) => {
               <Li>You want these to act as one single transaction.</Li>
               <Li>If one fails — you revert everything.</Li>
             </ULdisc>
-            <JavaHighlight javaCode={java_code}></JavaHighlight>
+            <Highlight_JAVA code={java_code}></Highlight_JAVA>
           </div>
         </article>
       </section>

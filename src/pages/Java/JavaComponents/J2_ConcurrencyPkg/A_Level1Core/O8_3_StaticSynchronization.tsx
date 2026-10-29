@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
 
 const O8_3_StaticSynchronization = ({ anchor }: { anchor: string }) => {
@@ -35,7 +35,7 @@ const O8_3_StaticSynchronization = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
           Full code example:
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

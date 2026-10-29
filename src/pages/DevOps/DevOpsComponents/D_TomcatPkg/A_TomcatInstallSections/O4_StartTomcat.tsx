@@ -4,7 +4,7 @@ start_tomcat --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O4_StartTomcat = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,20 +13,20 @@ const O4_StartTomcat = ({ anchor }: { anchor: string }) => {
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">
           Start amd enable tomcat
-          <LinuxHighlight bashCode={start_tomcat}></LinuxHighlight>
+          <LinuxHighlight code={start_tomcat}></LinuxHighlight>
         </li>
         <li className="my-1">
           Check tomcat status , run command . To exit press <SpanYellow>q</SpanYellow>
-          <LinuxHighlight bashCode={tomcat_status}></LinuxHighlight>
+          <LinuxHighlight code={tomcat_status}></LinuxHighlight>
         </li>
         <li className="my-1">
           Open firewall, verify port for 8080 shows <SpanYellow>ALLOW</SpanYellow> <br />
           (Usually , it is allowed by default, but If needed , to <SpanYellow>ALLOW</SpanYellow> port 8080 run command)
-          <LinuxHighlight bashCode={firewall}></LinuxHighlight>
+          <LinuxHighlight code={firewall}></LinuxHighlight>
         </li>
         <li className="my-1">
           Additional commands to <SpanYellow>stop</SpanYellow>, <SpanYellow>start</SpanYellow> , <SpanYellow>restart</SpanYellow> tomcat:
-          <LinuxHighlight bashCode={stop_start_restart}></LinuxHighlight>
+          <LinuxHighlight code={stop_start_restart}></LinuxHighlight>
         </li>
       </ul>
     </MainChildArea>

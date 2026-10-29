@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_OptionalProps = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,14 +20,14 @@ const O4_OptionalProps = ({ anchor }: { anchor: string }) => {
             I don't pass <SpanYellow>isActive</SpanYellow> since it's optional
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
         <ULdisc>
           <Li>
             we can define an <strong>optional prop</strong> is marked with <SpanYellow>?</SpanYellow> quesion mark
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

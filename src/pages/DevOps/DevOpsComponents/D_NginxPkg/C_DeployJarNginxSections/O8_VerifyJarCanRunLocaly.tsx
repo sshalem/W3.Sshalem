@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O8_VerifyJarCanRunLocaly = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O8_VerifyJarCanRunLocaly = ({ anchor }: { anchor: string }) => {
           <Li>
             To stop it <SpanYellow>CTRL + c</SpanYellow>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_7_} />
+          <Highlight_ApplicationProperties code={_7_} />
         </ULdisc>
       </section>
     </MainChildArea>

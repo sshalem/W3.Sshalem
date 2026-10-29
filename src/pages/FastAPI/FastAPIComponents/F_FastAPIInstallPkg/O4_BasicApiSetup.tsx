@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey } from "../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JSX, SpanGrey } from "../../../../components/Highlight";
 
 const O4_BasicApiSetup = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,9 +15,9 @@ const O4_BasicApiSetup = ({ anchor }: { anchor: string }) => {
           <Li>
             Copy code below and paste it inside <SpanGrey>main.py</SpanGrey>
           </Li>
-          <JsxHighlight jsxCode={_2_} />
+          <Highlight_JSX code={_2_} />
           <Li>Run in PyCharm terminal command below</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
           <Li>
             Two ways to check API:
             <ULdisc>

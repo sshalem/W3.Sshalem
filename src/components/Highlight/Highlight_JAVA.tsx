@@ -8,11 +8,11 @@ import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/
 
 PrismLightSyntaxHighlighter.registerLanguage("java", java);
 
-const Highlight_JAVA = ({ javaCode }: { javaCode: string }) => {
+const Highlight_JAVA = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(javaCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -41,7 +41,7 @@ const Highlight_JAVA = ({ javaCode }: { javaCode: string }) => {
             display: "flex",
           }}
         >
-          {javaCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>

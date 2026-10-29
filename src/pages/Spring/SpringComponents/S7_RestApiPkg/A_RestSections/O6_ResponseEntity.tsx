@@ -4,7 +4,7 @@ ResponseEntity --> (SPRING)(rest)(rest-api)
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O6_ResponseEntity = ({ anchor }: { anchor: string }) => {
   return (
@@ -70,7 +70,7 @@ const O6_ResponseEntity = ({ anchor }: { anchor: string }) => {
         {/*  */}
         {/*  */}
         {/*  */}
-        <JavaHighlight javaCode={response_examples}></JavaHighlight>
+        <Highlight_JAVA code={response_examples}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

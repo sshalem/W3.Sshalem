@@ -8,11 +8,11 @@ import { vscDarkPlus as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/e
 
 PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
-const Highlight_ApplicationProperties = ({ propertiesCode }: { propertiesCode: string }) => {
+const Highlight_ApplicationProperties = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(propertiesCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -45,7 +45,7 @@ const Highlight_ApplicationProperties = ({ propertiesCode }: { propertiesCode: s
             // height: "20rem",
           }}
         >
-          {propertiesCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>

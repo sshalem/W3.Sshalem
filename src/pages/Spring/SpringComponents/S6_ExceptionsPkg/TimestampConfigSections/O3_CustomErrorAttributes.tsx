@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O3_CustomErrorAttributes = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,7 +11,7 @@ const O3_CustomErrorAttributes = ({ anchor }: { anchor: string }) => {
       <section>
         I can override the default timestamp formatting in a <strong>@Component</strong>. <br />
         Now every exception response will return "timestamp" in the chosen timezone.
-        <JavaHighlight javaCode={code}></JavaHighlight>
+        <Highlight_JAVA code={code}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

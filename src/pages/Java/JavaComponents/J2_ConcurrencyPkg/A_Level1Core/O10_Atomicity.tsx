@@ -3,13 +3,13 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O10_Atomicity = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
         <ULdisc>
           <Li>
             <SpanYellow>AtomicInteger</SpanYellow>
@@ -46,13 +46,13 @@ const O10_Atomicity = ({ anchor }: { anchor: string }) => {
               </Li>
               <Li>
                 <SpanYellow>synchronized</SpanYellow> → can protect a sequence of operations , for example:
-                <JavaHighlight javaCode={_1_} />
+                <Highlight_JAVA code={_1_} />
               </Li>
             </ULdisc>
           </Li>
         </ULdisc>
         Example of using AtomicInteger , see that I use it <Redtext>Thread.currentThread().getName() + " - " + incrementCounter()</Redtext>:
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
       </section>
     </MainChildArea>
   );

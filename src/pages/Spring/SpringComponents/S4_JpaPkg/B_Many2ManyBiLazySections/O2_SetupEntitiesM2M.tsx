@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanSky } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanSky } from "../../../../../components/Highlight";
 
 const O2_SetupEntitiesM2M = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,10 +29,10 @@ const O2_SetupEntitiesM2M = ({ anchor }: { anchor: string }) => {
         </div>
         <DivDoubleBorder>StudentEntity - Owning side</DivDoubleBorder>
 
-        <JavaHighlight javaCode={owning_side}></JavaHighlight>
+        <Highlight_JAVA code={owning_side}></Highlight_JAVA>
         {/*  */}
         <DivDoubleBorder>CourseEntity - Inverse side</DivDoubleBorder>
-        <JavaHighlight javaCode={invers_side}></JavaHighlight>
+        <Highlight_JAVA code={invers_side}></Highlight_JAVA>
       </section>
       {/*  */}
     </MainChildArea>

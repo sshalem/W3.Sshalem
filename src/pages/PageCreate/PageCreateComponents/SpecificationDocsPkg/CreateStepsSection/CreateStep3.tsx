@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 import page_create_3 from "../../../../../assets/page_create_3.jpg";
 import page_create_4 from "../../../../../assets/page_create_4.jpg";
 
@@ -20,7 +20,7 @@ const CreateStep3 = ({ anchor }: { anchor: string }) => {
             <li>
               add code below, under <SpanBlue>MainLayout</SpanBlue> path , (I create new child) ,
             </li>
-            <JsxHighlight jsxCode={jsxCode_3}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_3}></Highlight_JSX>
             <IMG img_name={page_create_3}></IMG>
             <li>
               at this point I should see <SpanBlue>C++</SpanBlue> page link on <SpanBlue>Navbar</SpanBlue>

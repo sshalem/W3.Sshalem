@@ -5,12 +5,12 @@
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O5_Repository = ({ anchor }: { anchor: string }) => {
-  const renderUserRepository = useMemo(() => <JavaHighlight javaCode={user_repo} />, [user_repo]);
-  const renderRoleRepository = useMemo(() => <JavaHighlight javaCode={role_repo} />, [role_repo]);
+  const renderUserRepository = useMemo(() => <Highlight_JAVA code={user_repo} />, [user_repo]);
+  const renderRoleRepository = useMemo(() => <Highlight_JAVA code={role_repo} />, [role_repo]);
 
   return (
     <MainChildArea anchor={anchor}>

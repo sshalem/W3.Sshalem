@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_PostgresSetupDbConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O3_PostgresSetupDbConfig = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Copy/Paste code
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
         </ULdisc>
       </section>

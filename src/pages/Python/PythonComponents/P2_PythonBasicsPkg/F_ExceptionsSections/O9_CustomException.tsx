@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O9_CustomException = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,7 +22,7 @@ const O9_CustomException = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>
                 extend from <SpanGrey>Exception class</SpanGrey>
-                <PythonHighlight pythonCode={_1_} />
+                <Highlight_PYTHON code={_1_} />
               </Li>
               <Li>
                 The message I pass , Python’s base <SpanGrey>Exception</SpanGrey> is stored internally and returned
@@ -32,7 +32,7 @@ const O9_CustomException = ({ anchor }: { anchor: string }) => {
 
               <Li>
                 then raise the exception
-                <PythonHighlight pythonCode={_3_} />
+                <Highlight_PYTHON code={_3_} />
               </Li>
             </ULdisc>
           </Li>
@@ -51,7 +51,7 @@ const O9_CustomException = ({ anchor }: { anchor: string }) => {
                 <Li>create a default constructor with attribute of msg</Li>
               </Li>
               Here is how to use it
-              <PythonHighlight pythonCode={_2_} />
+              <Highlight_PYTHON code={_2_} />
             </ULdisc>
           </Li>
         </ULdisc>

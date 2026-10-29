@@ -4,7 +4,7 @@ Log Util Class --> (SPRING)(Logging)(LogUtil)
 */
 import { useMemo } from "react";
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue } from "../../../../../components/Highlight";
 
 const LogUtilClass = ({ anchor }: { anchor: string }) => {
   // Per OpenAI
@@ -20,8 +20,8 @@ const LogUtilClass = ({ anchor }: { anchor: string }) => {
   // Thus, I use useMemo to prevent to onCLick of dropdown , from being blocked :
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderLogUtilCode = useMemo(() => <JavaHighlight javaCode={logUtilCode} />, [logUtilCode]);
-  //   const renderLongCode = useMemo(() => <JavaHighlight javaCode={longCode} />, [longCode]);
+  const renderLogUtilCode = useMemo(() => <Highlight_JAVA code={logUtilCode} />, [logUtilCode]);
+  //   const renderLongCode = useMemo(() => <Highlight_JAVA code={longCode} />, [longCode]);
 
   return (
     <MainChildArea anchor={anchor}>

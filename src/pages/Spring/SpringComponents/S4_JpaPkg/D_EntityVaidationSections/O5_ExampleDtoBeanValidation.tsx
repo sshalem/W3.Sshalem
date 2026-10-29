@@ -3,12 +3,12 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O5_ExampleDtoBeanValidation = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <JavaHighlight javaCode={code}></JavaHighlight>
+      <Highlight_JAVA code={code}></Highlight_JAVA>
     </MainChildArea>
   );
 };

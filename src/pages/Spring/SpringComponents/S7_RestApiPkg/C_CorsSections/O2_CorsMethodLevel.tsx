@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_CorsMethodLevel = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O2_CorsMethodLevel = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>Need to repeat on many controllers</Li>
         </ULdisc>
-        <JavaHighlight javaCode={method_level}></JavaHighlight>
+        <Highlight_JAVA code={method_level}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

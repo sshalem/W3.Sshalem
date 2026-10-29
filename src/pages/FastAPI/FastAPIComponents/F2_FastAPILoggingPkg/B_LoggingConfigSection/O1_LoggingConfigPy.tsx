@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 import python_29 from "../../../../../assets/python_29.jpg";
 import python_32 from "../../../../../assets/python_32.jpg";
 
@@ -75,7 +75,7 @@ const O1_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
           <hr />
           <article className="my-8">
             <div className="my-4">1️⃣ Install Dependencies</div>
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </article>
           <hr />
           <article className="my-8">
@@ -84,14 +84,14 @@ const O1_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
             </div>
             <IMG img_name={python_29}></IMG>
             copy/paste config code below
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </article>
           <hr />
           <article className="my-8">
             <div className="my-4">
               3️⃣ <SpanGrey>main.py</SpanGrey> FastAPI + Uvicorn Using Unified Logging
             </div>
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </article>
           <hr />
           <article className="my-8">
@@ -99,18 +99,18 @@ const O1_LoggingConfigPy = ({ anchor }: { anchor: string }) => {
             <ULdisc>
               <Li>
                 File logging for production:
-                <PythonHighlight pythonCode={_4_} />
+                <Highlight_PYTHON code={_4_} />
               </Li>
               <Li>
                 Different levels per logger:
-                <PythonHighlight pythonCode={_5_} />
+                <Highlight_PYTHON code={_5_} />
               </Li>
             </ULdisc>
           </article>
           <hr />
           <article className="my-8">
             <div className="my-4">5️⃣ Run app</div>
-            <PythonHighlight pythonCode={_6_} />
+            <Highlight_PYTHON code={_6_} />
             for the code below , We can see all logging is working well , if we run via:
             <ULdisc>
               <Li>

@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_ApplicationPropertiesAPIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,10 +13,10 @@ const O3_ApplicationPropertiesAPIGateway2718 = ({ anchor }: { anchor: string }) 
           <ULdisc>
             <Li>example from customer-service</Li>
             <Li>
-              Must, give <SpanYellow>spring.application.name</SpanYellow> ,common to use uppercase letters 
+              Must, give <SpanYellow>spring.application.name</SpanYellow> ,common to use uppercase letters
             </Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Highlight_ApplicationProperties code={_4_} />
           <ULdisc>
             <Li>
               1️⃣ Route ID
@@ -32,7 +32,7 @@ const O3_ApplicationPropertiesAPIGateway2718 = ({ anchor }: { anchor: string }) 
                 </Li>
                 <Li>Used internally by the gateway for: logging ,monitoring ,debugging</Li>
               </ULdisc>
-              <ApplicationPropertiesHighlight propertiesCode={_5_} />
+              <Highlight_ApplicationProperties code={_5_} />
             </Li>
             <Li>
               2️⃣ Target service (where the request goes)
@@ -49,7 +49,7 @@ const O3_ApplicationPropertiesAPIGateway2718 = ({ anchor }: { anchor: string }) 
                   the Customer microservice.
                 </Li>
               </ULdisc>
-              <ApplicationPropertiesHighlight propertiesCode={_6_} />
+              <Highlight_ApplicationProperties code={_6_} />
             </Li>
             <Li>
               3️⃣ Route condition (predicate)
@@ -62,7 +62,7 @@ const O3_ApplicationPropertiesAPIGateway2718 = ({ anchor }: { anchor: string }) 
                   <SpanYellow>/customer/</SpanYellow> will be routed to <SpanYellow>CUSTOMER-SERVICE</SpanYellow>.
                 </Li>
               </ULdisc>
-              <ApplicationPropertiesHighlight propertiesCode={_7_} />
+              <Highlight_ApplicationProperties code={_7_} />
             </Li>
           </ULdisc>
         </article>

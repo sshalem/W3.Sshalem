@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_JSX, Redtext } from "../../../../../components/Highlight";
 
 const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             to Store data use the <Redtext>setItem(key, value)</Redtext>
-            <JsxHighlight jsxCode={_store_}></JsxHighlight>
+            <Highlight_JSX code={_store_}></Highlight_JSX>
           </Li>
         </ULdisc>
       </section>
@@ -30,7 +30,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>❌ No type safety</Li>
             <Li>❌ No error handling</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_1_}></JsxHighlight>
+          <Highlight_JSX code={_1_}></Highlight_JSX>
 
           <p className="text-lg font-semibold">2. Typed version (recommended)</p>
           <ULdisc>
@@ -38,7 +38,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>✔ Common in React apps</Li>
             <Li>⚠ Still not safe against corrupted JSON</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_2_}></JsxHighlight>
+          <Highlight_JSX code={_2_}></Highlight_JSX>
 
           <p className="text-lg font-semibold">3. Safe production version (best practice)</p>
           <ULdisc>
@@ -46,7 +46,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>✔ Clean separation</Li>
             <Li>✔ Reusable</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_3_}></JsxHighlight>
+          <Highlight_JSX code={_3_}></Highlight_JSX>
 
           <p className="text-lg font-semibold">4. One-liner (clean but less safe)</p>
           <ULdisc>
@@ -54,7 +54,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>❌ No type guarantee</Li>
             <Li>❌ No error handling</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_4_}></JsxHighlight>
+          <Highlight_JSX code={_4_}></Highlight_JSX>
 
           <p className="text-lg font-semibold">5. React usage pattern (best real-world)</p>
           <ULdisc>
@@ -62,7 +62,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>✔ React-friendly</Li>
             <Li>✔ Prevents re-parsing on every render</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_5_}></JsxHighlight>
+          <Highlight_JSX code={_5_}></Highlight_JSX>
 
           <p className="text-lg font-semibold">6. BEST practice (recommended pattern)</p>
           <ULdisc>
@@ -71,7 +71,7 @@ const O1_SessionStorage = ({ anchor }: { anchor: string }) => {
             <Li>✔ Centralized logic</Li>
             <Li>✔ Easy to maintain</Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_6_}></JsxHighlight>
+          <Highlight_JSX code={_6_}></Highlight_JSX>
         </ULdisc>
       </section>
     </MainChildArea>

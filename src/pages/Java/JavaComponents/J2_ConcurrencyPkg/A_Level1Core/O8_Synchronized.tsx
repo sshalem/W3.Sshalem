@@ -3,7 +3,7 @@
 
 */
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
 import Table_2ColSynchronizedConcepts from "../../../../../components/Tables/Table_2ColSynchronizedConcepts";
 
@@ -36,7 +36,7 @@ const O8_Synchronized = ({ anchor }: { anchor: string }) => {
                 The ownership state belongs to the <SpanYellow>JVM's synchronization machinery</SpanYellow>, and the{" "}
                 <SpanYellow>JVM knows which thread currently owns the monitor</SpanYellow>.
               </Answer>
-              <ApplicationPropertiesHighlight propertiesCode={_2_} />
+              <Highlight_ApplicationProperties code={_2_} />
             </Li>
             <Li>Every object can have an intrinsic monitor.</Li>
             <Li>
@@ -61,7 +61,7 @@ const O8_Synchronized = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
           <Table_2ColSynchronizedConcepts />
-          <ApplicationPropertiesHighlight propertiesCode={_10_} />
+          <Highlight_ApplicationProperties code={_10_} />
         </article>
       </section>
     </MainChildArea>

@@ -4,14 +4,14 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_RandomStringGenerator = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <section className="my-8">
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </section>
       </section>
     </MainChildArea>

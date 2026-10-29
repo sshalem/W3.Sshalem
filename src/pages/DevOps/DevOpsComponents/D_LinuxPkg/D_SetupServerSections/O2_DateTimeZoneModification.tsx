@@ -4,7 +4,7 @@ Date_Time_Zone --> (DEVOPS)(LINUX)(Linux Server setup)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanRed } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O2_DateTimeZoneModification = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O2_DateTimeZoneModification = ({ anchor }: { anchor: string }) => {
           <SpanGreen>sudo timedatectl set-timezone Asia/Jerusalem</SpanGreen> - set the time zone
         </li>
       </ul>
-      <LinuxHighlight bashCode={linux_date}></LinuxHighlight>
+      <LinuxHighlight code={linux_date}></LinuxHighlight>
     </MainChildArea>
   );
 };

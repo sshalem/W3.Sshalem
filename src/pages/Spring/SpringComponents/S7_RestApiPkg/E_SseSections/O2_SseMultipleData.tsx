@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_SseMultipleData = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,11 +29,11 @@ const O2_SseMultipleData = ({ anchor }: { anchor: string }) => {
         </ULDecimal>
         ✅ This setup is clean, reusable, and lets you scale by moving SSE logic into the SSEStore component.
         <article className="my-4 text-2xl font-semibold">✅SSEStore Component</article>
-        <JavaHighlight javaCode={sse_store_component}></JavaHighlight>
+        <Highlight_JAVA code={sse_store_component}></Highlight_JAVA>
         <article className="my-4 text-2xl font-semibold">Controller</article>
-        <JavaHighlight javaCode={controller}></JavaHighlight>
+        <Highlight_JAVA code={controller}></Highlight_JAVA>
         <article className="my-4 text-2xl font-semibold">✅Client Side (JavaScript)</article>
-        <JavaHighlight javaCode={client}></JavaHighlight>
+        <Highlight_JAVA code={client}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

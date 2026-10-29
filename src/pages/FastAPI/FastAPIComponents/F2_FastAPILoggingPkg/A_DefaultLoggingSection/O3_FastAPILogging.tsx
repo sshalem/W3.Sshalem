@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanGrey } from "../../../../../components/Highlight";
 import python_26 from "../../../../../assets/python_26.jpg";
 
 const O3_FastAPILogging = ({ anchor }: { anchor: string }) => {
@@ -12,7 +12,7 @@ const O3_FastAPILogging = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4 text-lg font-semibold">FastAPI Equivalent of SLF4J</article>
         1️⃣ Python’s equivalent of SLF4J is:
-        <JsxHighlight jsxCode={_1_} />
+        <Highlight_JSX code={_1_} />
         <article>
           <ULdisc>
             <Li>FastAPI fully supports : Log levels, Formatters , Handlers, Files / Console output</Li>
@@ -31,7 +31,7 @@ const O3_FastAPILogging = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
             <Li>
-              <JsxHighlight jsxCode={_2_} />
+              <Highlight_JSX code={_2_} />
             </Li>
           </ULdisc>
         </article>

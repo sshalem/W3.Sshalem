@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -28,7 +28,7 @@ const O3_TestConfigMsgController = ({ anchor }: { anchor: string }) => {
         We can see that I got only the messsage of the exception , handled by the catch block. But, what if I want to have same pattern message as
         before , sent in the ResponseEntity ? For that, see section 4 , how I make a Class will all relevant fields , and return it as A
         ResponseEntity.
-        <JavaHighlight javaCode={postman}></JavaHighlight>
+        <Highlight_JAVA code={postman}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

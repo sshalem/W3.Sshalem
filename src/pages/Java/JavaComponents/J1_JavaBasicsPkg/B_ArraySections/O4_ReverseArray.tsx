@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_ReverseArray = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,7 +18,7 @@ const O4_ReverseArray = ({ anchor }: { anchor: string }) => {
           <Li>Create an array[10] of numbers with Random values between 0-10 to be used as input </Li>
           <Li>print the array before and after reversing</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

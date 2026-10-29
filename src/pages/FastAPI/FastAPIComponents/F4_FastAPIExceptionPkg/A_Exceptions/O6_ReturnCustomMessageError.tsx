@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,11 +22,11 @@ const O6_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
                   </em>
                 </strong>
                 : Wrap detail with a <SpanYellow>dict</SpanYellow>
-                <PythonHighlight pythonCode={_1_} />
+                <Highlight_PYTHON code={_1_} />
               </div>
               <div>
                 Postman shows :
-                <ApplicationPropertiesHighlight propertiesCode={_1_1_} />
+                <Highlight_ApplicationProperties code={_1_1_} />
               </div>
             </article>
           </Li>
@@ -39,11 +39,11 @@ const O6_ReturnCustomMessageError = ({ anchor }: { anchor: string }) => {
                   </em>
                 </strong>
                 : Return JSONResponse , this way I dont wrap it with dewtail field
-                <PythonHighlight pythonCode={_2_} />
+                <Highlight_PYTHON code={_2_} />
               </div>
               <div>
                 Postman shows :
-                <ApplicationPropertiesHighlight propertiesCode={_2_2_} />
+                <Highlight_ApplicationProperties code={_2_2_} />
               </div>
             </article>
           </Li>

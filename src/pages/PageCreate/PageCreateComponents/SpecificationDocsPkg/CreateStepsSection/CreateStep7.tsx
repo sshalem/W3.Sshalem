@@ -3,7 +3,7 @@
 
 */
 import { Answer, IMG, MainChildArea, Question } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 import page_create_13 from "../../../../../assets/page_create_13.jpg";
 import page_create_15 from "../../../../../assets/page_create_15.jpg";
@@ -49,7 +49,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
           <div className="my-2">
             <SpanBlue>FunctionsMain.tsx</SpanBlue> code :
           </div>
-          <JsxHighlight jsxCode={jsxCode_functions_main} />
+          <Highlight_JSX code={jsxCode_functions_main} />
           <li className="my-1">
             go to <SpanBlue>App.tsx</SpanBlue> file
           </li>
@@ -61,7 +61,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
             <SpanBlue>{`{ path: "functions", element: <FunctionsMain /> }`}</SpanBlue>
           </li>
 
-          <JsxHighlight jsxCode={jsxCode_App_with_functions} />
+          <Highlight_JSX code={jsxCode_App_with_functions} />
           <li className="my-1">
             go to <SpanBlue>DropDownCppBasics.tsx</SpanBlue> in folder <SpanBlue>DropCpp</SpanBlue>
           </li>
@@ -93,7 +93,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
               <div className="my-8">
                 <SpanRed>Z_DropDownIncludeInternalLink.tsx</SpanRed> code :
               </div>
-              <JsxHighlight jsxCode={jsxCode_Z_DropDownIncludeInternalLink} />
+              <Highlight_JSX code={jsxCode_Z_DropDownIncludeInternalLink} />
             </ul>
           </li>
 
@@ -121,7 +121,7 @@ const CreateStep7 = ({ anchor }: { anchor: string }) => {
                 <SpanBlue>BBBB</SpanBlue>- replace with url path
                 <SpanGreen>cpp-basics</SpanGreen> (see section 5, paragrapgh 4.3)
               </li>
-              <JsxHighlight jsxCode={jsxCode_Subject_with_outlet} />
+              <Highlight_JSX code={jsxCode_Subject_with_outlet} />
             </ul>
           </li>
         </ul>

@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGreen, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_APIGateway2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,18 +22,18 @@ const O1_APIGateway2718 = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The client must know every service URL and port.
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
             Example :
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
           </Li>
         </ULdisc>
         <SpanGreen>With an API Gateway</SpanGreen>
         <ULdisc>
           <Li>
             Now client calls only one address (API Gateway), and Gateway forwards the request to the correct service.
-            <ApplicationPropertiesHighlight propertiesCode={_3_} />
+            <Highlight_ApplicationProperties code={_3_} />
             Example :
-            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            <Highlight_ApplicationProperties code={_4_} />
           </Li>
         </ULdisc>
       </section>

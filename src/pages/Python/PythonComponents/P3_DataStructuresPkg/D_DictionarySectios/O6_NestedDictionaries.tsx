@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O6_NestedDictionaries = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O6_NestedDictionaries = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Create a dictionary that contain three dictionaries:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -24,7 +24,7 @@ const O6_NestedDictionaries = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Loop Through Nested Dictionaries
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>

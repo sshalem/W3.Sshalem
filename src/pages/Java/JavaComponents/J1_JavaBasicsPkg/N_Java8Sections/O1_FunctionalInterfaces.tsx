@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O1_FunctionalInterfaces = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,11 +18,9 @@ const O1_FunctionalInterfaces = ({ anchor }: { anchor: string }) => {
             They have kept in <strong>java.util.function</strong> package
           </Li>
           <Li>Streams work hand-in-hand with Functional interfaces and lambdas.</Li>
-          <Li>Without it:
-            
-          </Li>
+          <Li>Without it:</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

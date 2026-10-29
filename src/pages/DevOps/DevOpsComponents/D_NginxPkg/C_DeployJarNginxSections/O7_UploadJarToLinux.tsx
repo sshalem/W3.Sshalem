@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O7_UploadJarToLinux = ({ anchor }: { anchor: string }) => {
   return (
@@ -32,7 +32,7 @@ const O7_UploadJarToLinux = ({ anchor }: { anchor: string }) => {
                 LINODE_SERVER_IP - <SpanYellow>139.162.148.144</SpanYellow>
               </Li>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={scp_jar} />
+            <Highlight_ApplicationProperties code={scp_jar} />
           </Li>
         </ULdisc>
       </section>

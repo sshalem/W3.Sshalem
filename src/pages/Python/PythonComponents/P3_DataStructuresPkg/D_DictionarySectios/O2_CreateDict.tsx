@@ -3,39 +3,39 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O2_CreateDict = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">1️⃣ Using curly braces {} (most common)</article>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
 
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">2️⃣ Empty dictionary (then add values)</article>
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
 
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">3️⃣ Using dict() constructor</article>
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
       </section>
 
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">4️⃣ From list of tuples</article>
-        <PythonHighlight pythonCode={_4_} />
+        <Highlight_PYTHON code={_4_} />
       </section>
 
       <section className="my-8">
         <article className="my-8 text-lg font-semibold">5️⃣ With default values</article>
-        <PythonHighlight pythonCode={_5_} />
+        <Highlight_PYTHON code={_5_} />
       </section>
 
       <section className="my-8">
         <article className="my-8 text-lg font-semibold"></article>
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
       </section>
     </MainChildArea>
   );

@@ -5,7 +5,7 @@ Jwt Dependencies --> (SPRING)(Security)(jwt)
 import { Anchor, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { SpanCyan, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanCyan, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 
 const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
   return (
@@ -61,7 +61,7 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
             If using versions above <SpanYellow>0.11.5</SpanYellow> , implementations of code might change due to package version upgrades.
           </p>
         </article>
-        <XmlHighlight xmlCode={jwt_dependencies}></XmlHighlight>
+        <Highlight_XML xmlCode={jwt_dependencies}></Highlight_XML>
       </section>
     </MainChildArea>
   );

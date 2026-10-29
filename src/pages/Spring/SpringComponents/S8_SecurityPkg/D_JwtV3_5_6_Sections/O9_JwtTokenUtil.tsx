@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -39,7 +39,7 @@ const O9_JwtTokenUtil = ({ anchor }: { anchor: string }) => {
         <p className="font-semibold">
           🔑 <SpanYellow>JwtTokenUtil</SpanYellow> code
         </p>
-        <JavaHighlight javaCode={code_java}></JavaHighlight>
+        <Highlight_JAVA code={code_java}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

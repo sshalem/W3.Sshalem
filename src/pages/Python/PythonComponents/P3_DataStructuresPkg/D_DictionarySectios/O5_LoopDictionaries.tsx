@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_LoopDictionaries = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,15 +13,15 @@ const O5_LoopDictionaries = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Print all <SpanYellow>key</SpanYellow> names in the dictionary, one by one
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             Print all <SpanYellow>values</SpanYellow> in the dictionary, one by one:
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             Loop through both <SpanYellow>keys</SpanYellow> and <SpanYellow>values</SpanYellow>, by using the <SpanYellow>items()</SpanYellow> method:
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>

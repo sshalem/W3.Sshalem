@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_ResponseModelWithHeaders = ({ anchor }: { anchor: string }) => {
   return (
@@ -44,7 +44,7 @@ const O2_ResponseModelWithHeaders = ({ anchor }: { anchor: string }) => {
           <Li>
             Headers and status are controlled via Response (or <SpanYellow>status_code</SpanYellow> parameter).
           </Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

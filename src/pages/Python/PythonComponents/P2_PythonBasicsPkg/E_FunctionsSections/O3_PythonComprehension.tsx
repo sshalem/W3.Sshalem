@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O3_PythonComprehension = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,11 +13,11 @@ const O3_PythonComprehension = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Java Stream
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
           </Li>
           <Li>
             Python
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 import TableFiveColCompareDeleteById from "../../../../../components/Tables/Table_5ColCompareDeleteById";
 
 const O9_DeleteQueryDataRepositoryMethod = ({ anchor }: { anchor: string }) => {
@@ -35,7 +35,7 @@ const O9_DeleteQueryDataRepositoryMethod = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <TableFiveColCompareDeleteById />
-        <JavaHighlight javaCode={code_1}></JavaHighlight>
+        <Highlight_JAVA code={code_1}></Highlight_JAVA>
       </section>
 
       <hr />
@@ -52,7 +52,7 @@ const O9_DeleteQueryDataRepositoryMethod = ({ anchor }: { anchor: string }) => {
           <Li>✔ Removes all matching rows in a single DB operation</Li>
           <Li>✔ Fast and efficient</Li>
         </ULdisc>
-        <JavaHighlight javaCode={bulk_delete}></JavaHighlight>
+        <Highlight_JAVA code={bulk_delete}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

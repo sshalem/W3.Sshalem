@@ -3,7 +3,7 @@
 Profile PostgreSql --> (SPRING)(ApplicationProperties)(ProfilePostgreSql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder } from "../../../../../components/Highlight";
 import profile_postgres from "../../../../../assets/profile_postgres.jpg";
 
 const ProfilePostgresqlConfig = ({ anchor }: { anchor: string }) => {
@@ -13,11 +13,11 @@ const ProfilePostgresqlConfig = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <DivDoubleBorder>application.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
+      <Highlight_ApplicationProperties code={defaultProps} />
       <div className="my-5">
         <DivDoubleBorder>application-postgres.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={configPostgresqlProps} />
+      <Highlight_ApplicationProperties code={configPostgresqlProps} />
     </MainChildArea>
   );
 };

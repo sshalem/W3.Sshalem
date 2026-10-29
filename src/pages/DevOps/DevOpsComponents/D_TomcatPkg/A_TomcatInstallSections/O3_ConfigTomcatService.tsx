@@ -4,7 +4,7 @@ config_tomcat_service --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { IMG, MainChildArea } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 import tomcat_7 from "../../../../../assets/tomcat_7.jpg";
 
 const O3_ConfigTomcatService = ({ anchor }: { anchor: string }) => {
@@ -16,22 +16,22 @@ const O3_ConfigTomcatService = ({ anchor }: { anchor: string }) => {
       </div>
       <ul className="my-4 ml-8 list-decimal">
         <li className="my-1">connect to server</li>
-        <LinuxHighlight bashCode={connect_to_server}></LinuxHighlight>
+        <LinuxHighlight code={connect_to_server}></LinuxHighlight>
         <li className="my-1">
           run command below , which shows the path where JDK is inastall <br />
-          <LinuxHighlight bashCode={java_alternatives}></LinuxHighlight>
+          <LinuxHighlight code={java_alternatives}></LinuxHighlight>
           This command result the path <SpanYellow>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanYellow> <br />I will take a note of the path where Java
           resides. <br />
           I'll need the path momentarily to config the <SpanYellow>tomcat.service</SpanYellow> . .<IMG img_name={tomcat_7}></IMG>
         </li>
         <li className="my-1">
           To open <SpanYellow>tomcat.service</SpanYellow> copy this command
-          <LinuxHighlight bashCode={open_tomcat_service}></LinuxHighlight>
+          <LinuxHighlight code={open_tomcat_service}></LinuxHighlight>
         </li>
         <li className="my-1">
           Add the following lines to <SpanYellow>tomcat.service</SpanYellow> file. <br />
           modify the value of <SpanYellow>JAVA_HOME</SpanYellow> with the path of <SpanYellow>/usr/lib/jvm/java-1.17.0-openjdk-amd64</SpanYellow> .
-          <LinuxHighlight bashCode={config_tomcat_service}></LinuxHighlight>
+          <LinuxHighlight code={config_tomcat_service}></LinuxHighlight>
         </li>
       </ul>
     </MainChildArea>

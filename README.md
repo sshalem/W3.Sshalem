@@ -12,18 +12,18 @@ npm install react-syntax-highlighter (better use this command `npm i --save-dev 
 
 I have created 2 different components :
 
-1. JavaHighlight
-2. JsxHighlight
+1. Highlight_JAVA
+2. Highlight_JSX
 
 <!-- ************************************************************************************** -->
 
-### JavaHighlight
+### Highlight_JAVA
 
 ```js
 import { Prism as PrismSyntaxHighlighter } from "react-syntax-highlighter";
 import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
+const Highlight_JAVA = ({ javaCode }: { javaCode: string }) => {
   return (
     <div>
       <PrismSyntaxHighlighter
@@ -38,7 +38,7 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
   );
 };
 
-export default JavaHighlight;
+export default Highlight_JAVA;
 ```
 
 <!-- **********************  -->
@@ -54,7 +54,7 @@ import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/pr
 
 PrismLightSyntaxHighlighter.registerLanguage("java", java);
 
-const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
+const Highlight_JAVA = ({ javaCode }: { javaCode: string }) => {
   return (
     <div>
       <PrismLightSyntaxHighlighter
@@ -69,18 +69,18 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
   );
 };
 
-export default JavaHighlight;
+export default Highlight_JAVA;
 ```
 
 <!-- ************************************************************************************** -->
 
-### JsxHighlight
+### Highlight_JSX
 
 ```js
 import { Prism as PrismSyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus as JSX_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
+const Highlight_JSX = ({ jsxCode }: { jsxCode: string }) => {
   return (
     <div>
       <PrismSyntaxHighlighter language="jsx" style={JSX_STYLE} showLineNumbers={true} customStyle={{ fontSizeAdjust: "0.57" }}>
@@ -90,7 +90,7 @@ const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
   );
 };
 
-export default JsxHighlight;
+export default Highlight_JSX;
 ```
 
 <!-- **********************  -->
@@ -106,7 +106,7 @@ import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark
 
 PrismLightSyntaxHighlighter.registerLanguage("jsx", jsx);
 
-const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
+const Highlight_JSX = ({ jsxCode }: { jsxCode: string }) => {
   return (
     <div>
       <PrismLightSyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers={true} customStyle={{ fontSizeAdjust: "0.57" }}>
@@ -116,7 +116,7 @@ const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
   );
 };
 
-export default JsxHighlight;
+export default Highlight_JSX;
 ```
 
 <!-- ************************************************************************************** -->
@@ -145,8 +145,8 @@ public class RestServiceApplication {
 Here is a full implementation of the code , by importing the components and using them
 
 ```js
-import JsxHighlight from "../components/JsxHighlight";
-import JavaHighlight from "../components/JavaHighlight";
+import Highlight_JSX from "../components/Highlight_JSX";
+import Highlight_JAVA from "../components/Highlight_JAVA";
 
 const Spring = () => {
   return (
@@ -154,8 +154,8 @@ const Spring = () => {
       <div>Spring Boot page ...</div>
 
       <div className="flex">
-        <JsxHighlight jsxCode={jsxCode}></JsxHighlight>
-        <JavaHighlight javaCode={javaCode}></JavaHighlight>
+        <Highlight_JSX code={jsxCode}></Highlight_JSX>
+        <Highlight_JAVA code={javaCode}></Highlight_JAVA>
       </div>
     </div>
   );

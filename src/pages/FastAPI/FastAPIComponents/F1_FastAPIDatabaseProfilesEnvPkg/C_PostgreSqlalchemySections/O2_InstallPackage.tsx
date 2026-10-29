@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_InstallPackage = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,11 +18,11 @@ const O2_InstallPackage = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             For <SpanYellow>sync</SpanYellow> apps (recommended default)
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             For <SpanYellow>async apps</SpanYellow> (e.g., FastAPI/asyncio)
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
           </Li>
         </ULdisc>
         It is:

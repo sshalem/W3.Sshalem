@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JsxHighlight } from "../../../../../components/Highlight";
+import { Highlight_JSX } from "../../../../../components/Highlight";
 
 const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O1_CreateViteProject = ({ anchor }: { anchor: string }) => {
         <li className="my-1">open CMD type the following command</li>
         <li className="my-1">Follow the instructions , to create a VITE ReactJS + TypeScript project</li>
       </ul>
-      <JsxHighlight jsxCode={vite}></JsxHighlight>
+      <Highlight_JSX code={vite}></Highlight_JSX>
     </MainChildArea>
   );
 };

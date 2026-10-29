@@ -3,7 +3,7 @@
 Delete Query --> (SPRING)(JPA)(Delete Query)
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey, SpanTeal } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey, SpanTeal } from "../../../../../components/Highlight";
 import TableFiveColCompareTransactionRules from "../../../../../components/Tables/Table_5ColCompareTransactionRules";
 
 const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
@@ -83,9 +83,9 @@ const O8_DeleteQuery = ({ anchor }: { anchor: string }) => {
           <p className="text-xl font-semibold">🧩 How to Override?</p>
         </article>
         1️⃣ To Force Rollback also on checked exceptions
-        <JavaHighlight javaCode={checked_rollback}></JavaHighlight>
+        <Highlight_JAVA code={checked_rollback}></Highlight_JAVA>
         2️⃣ To Force NO rollback on unchecked exceptions
-        <JavaHighlight javaCode={unchecked_NoRollback}></JavaHighlight>
+        <Highlight_JAVA code={unchecked_NoRollback}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

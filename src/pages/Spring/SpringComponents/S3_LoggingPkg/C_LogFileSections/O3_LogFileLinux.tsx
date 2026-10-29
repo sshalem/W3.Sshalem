@@ -3,7 +3,7 @@
 Log File Linux --> (SPRING)(Logging)(Log File)
 */
 import { Answer, IMG, MainChildArea, Question } from "../../../../../components";
-import { BatchHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_BATCH, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import logging_linux from "../../../../../assets/logging_linux.jpg";
 
 const LogFileLinux = ({ anchor }: { anchor: string }) => {
@@ -47,7 +47,7 @@ const LogFileLinux = ({ anchor }: { anchor: string }) => {
       </div>
       <div className="my-2">
         When I searched for the file, had some problems to find the file this way , thus , I used the command in linux server:
-        <BatchHighlight batchCode="find / -iname '__Shabtay*'" />
+        <Highlight_BATCH batchCode="find / -iname '__Shabtay*'" />
       </div>
       <div className="my-2">Eventually I got the path of the file ,</div>
       <IMG img_name={logging_linux}></IMG>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_CreateList = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,11 +14,11 @@ const O2_CreateList = ({ anchor }: { anchor: string }) => {
         <ULDecimal>
           <Li>
             using square brackets
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             With constructor
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULDecimal>
       </section>
@@ -31,11 +31,11 @@ const O2_CreateList = ({ anchor }: { anchor: string }) => {
         <ULDecimal>
           <Li>
             using square brackets
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             With constructor
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULDecimal>
       </section>

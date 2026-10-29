@@ -4,7 +4,7 @@
 */
 
 import { Anchor, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanRed } from "../../../../../components/Highlight";
 
 const O1_ReactIcons = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,11 +15,11 @@ const O1_ReactIcons = ({ anchor }: { anchor: string }) => {
         </li>
         <li className="my-1">
           type following command in termianl to install react icons
-          <JsxHighlight jsxCode={icons}></JsxHighlight>
+          <Highlight_JSX code={icons}></Highlight_JSX>
         </li>
         <li className="my-1">
           or we can without the <SpanRed>--save</SpanRed> , since from NPM 5.0 it has no meaning
-          <JsxHighlight jsxCode={icons_without_save}></JsxHighlight>
+          <Highlight_JSX code={icons_without_save}></Highlight_JSX>
         </li>
       </ul>
     </MainChildArea>

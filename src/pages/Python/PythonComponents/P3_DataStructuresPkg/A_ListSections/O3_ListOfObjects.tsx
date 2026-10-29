@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O3_ListOfObjects = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,15 +22,15 @@ const O3_ListOfObjects = ({ anchor }: { anchor: string }) => {
           <Li>A Python list of objects is simply a normal list that contains instances of a class.</Li>
           <Li>
             Option 1 : Class creation
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             Option 2: Class creation (@dataclass (recommended))
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             Create objects and store them in a list:
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
         </ULdisc>
       </section>

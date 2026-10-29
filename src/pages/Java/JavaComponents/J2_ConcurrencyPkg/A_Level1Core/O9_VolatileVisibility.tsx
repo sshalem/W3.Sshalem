@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { Redtext, JavaHighlight } from "../../../../../components/Highlight";
+import { Redtext, Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O9_VolatileVisibility = ({ anchor }: { anchor: string }) => {
   return (
@@ -31,7 +31,7 @@ const O9_VolatileVisibility = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </article>
 
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

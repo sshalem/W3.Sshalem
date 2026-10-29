@@ -1,22 +1,18 @@
+// import { Prism as PrismSyntaxHighlighter } from "react-syntax-highlighter";
+// import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import xml from "react-syntax-highlighter/dist/esm/languages/prism/xml-doc";
-import {
-  prism as XML_STYLE,
-  // vs,
-  // ghcolors,
-  // coy,
-  // prism
-} from "react-syntax-highlighter/dist/esm/styles/prism";
-// import { prism as XML_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
+import { tomorrow as LINUX_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("xml", xml);
+PrismLightSyntaxHighlighter.registerLanguage("bash", bash);
 
-const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
+const Highlight_LINUX = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(xmlCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -31,23 +27,9 @@ const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
         {isCopied ? "copied" : "copy"}
       </button>
       <div>
-        {/* <PrismLightSyntaxHighlighter
-          language="xml"
-          style={XML_STYLE}
-          // showLineNumbers={true}
-          customStyle={{
-            fontSize: "0.85rem",
-            backgroundColor: "#fbfbfb",
-            outlineStyle: "solid",
-            outlineWidth: "1px",
-            outlineColor: "#dddddd",
-            // width: "60rem",
-            display: "flex",
-          }}
-        > */}
         <PrismLightSyntaxHighlighter
-          language="xml"
-          style={XML_STYLE}
+          language="bash"
+          style={LINUX_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
@@ -55,15 +37,15 @@ const XmlHighlight = ({ xmlCode }: { xmlCode: string }) => {
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
-            // width: "60rem",
+            // width: "46rem",
             display: "flex",
           }}
         >
-          {xmlCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default XmlHighlight;
+export default Highlight_LINUX;

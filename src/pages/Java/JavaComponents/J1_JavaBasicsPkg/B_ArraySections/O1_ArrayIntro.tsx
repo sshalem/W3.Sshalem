@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_ArrayIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -35,7 +35,7 @@ const O1_ArrayIntro = ({ anchor }: { anchor: string }) => {
         <hr />
         <article className="my-8">
           <p className="text-lg">1️⃣ Declaring an Array</p>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
         <hr />
         <article className="my-8">
@@ -44,7 +44,7 @@ const O1_ArrayIntro = ({ anchor }: { anchor: string }) => {
             <Li>You must allocate memory using new.</Li>
             <Li>This creates an array that can store 5 integers.</Li>
           </ULdisc>
-          <JavaHighlight javaCode={_2_} />
+          <Highlight_JAVA code={_2_} />
         </article>
         <hr />
         <article className="my-8">
@@ -52,11 +52,11 @@ const O1_ArrayIntro = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Method 1: Using new keyword
-              <JavaHighlight javaCode={_3_} />
+              <Highlight_JAVA code={_3_} />
             </Li>
             <Li>
               Method 2: Direct Initialization
-              <JavaHighlight javaCode={_4_} />
+              <Highlight_JAVA code={_4_} />
             </Li>
           </ULdisc>
         </article>

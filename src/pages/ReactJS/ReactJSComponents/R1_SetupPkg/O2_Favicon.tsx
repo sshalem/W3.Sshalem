@@ -3,7 +3,7 @@
 
 */
 import { Anchor, IMG, MainChildArea } from "../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_1 from "../../../../assets/setup_1.jpg";
 import setup_2 from "../../../../assets/setup_2.jpg";
 import setup_3 from "../../../../assets/setup_3.jpg";
@@ -45,7 +45,7 @@ const O2_Favicon = ({ anchor }: { anchor: string }) => {
         <li className="my-1">
           In the <SpanGreen>index.html</SpanGreen> file modify from <SpanRed>/vite.svg</SpanRed> to <SpanGreen>favicon.svg</SpanGreen>
           <br /> No need to add the relative path of public
-          <JsxHighlight jsxCode={favicon}></JsxHighlight>
+          <Highlight_JSX code={favicon}></Highlight_JSX>
         </li>
       </ul>
     </MainChildArea>

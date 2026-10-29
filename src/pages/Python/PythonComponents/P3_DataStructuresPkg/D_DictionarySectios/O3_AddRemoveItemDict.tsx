@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_AddRemoveItemDict = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,11 +14,11 @@ const O3_AddRemoveItemDict = ({ anchor }: { anchor: string }) => {
           <Li>
             Adding an item to the dictionary is done by using a <SpanYellow>new index key</SpanYellow> and assigning a <SpanYellow>value</SpanYellow>{" "}
             to it:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             Add a color item to the dictionary by using the <SpanYellow>update()</SpanYellow> method:
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>
@@ -30,21 +30,21 @@ const O3_AddRemoveItemDict = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             The <SpanYellow>pop()</SpanYellow> method removes the item with the specified key name:
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
           <Li>
             The <SpanYellow>popitem()</SpanYellow> method removes the last inserted item (in versions before 3.7, a random item is removed instead):
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
           <Li>
             The <SpanYellow>del</SpanYellow> keyword removes the item with the specified key name:
-            <PythonHighlight pythonCode={_4_} />
+            <Highlight_PYTHON code={_4_} />
             The <SpanYellow>del</SpanYellow> keyword can also delete the dictionary completely:
-            <PythonHighlight pythonCode={_5_} />
+            <Highlight_PYTHON code={_5_} />
           </Li>
           <Li>
             The <SpanYellow>clear()</SpanYellow> method empties the dictionary: :
-            <PythonHighlight pythonCode={_6_} />
+            <Highlight_PYTHON code={_6_} />
           </Li>
         </ULdisc>
       </section>

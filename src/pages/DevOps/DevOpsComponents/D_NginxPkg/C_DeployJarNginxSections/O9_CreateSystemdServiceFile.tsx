@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,8 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-2xl font-semibold">
           Create a <SpanYellow>systemd service</SpanYellow> for audit.jar
         </div>
-        Why to Create & start the systemd service for <SpanYellow>audit.jar</SpanYellow> before Configure <SpanYellow>NGINX</SpanYellow> as a reverse proxy?
+        Why to Create & start the systemd service for <SpanYellow>audit.jar</SpanYellow> before Configure <SpanYellow>NGINX</SpanYellow> as a reverse
+        proxy?
         <ULdisc>
           <Li>Your Spring Boot app must be running and listening on a port before NGINX can proxy to it</Li>
           <Li>
@@ -32,11 +33,11 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
         <ULDecimal>
           <Li>
             Best practice : For your <SpanYellow>audit.jar</SpanYellow> setup behind NGINX
-            <ApplicationPropertiesHighlight propertiesCode={_12_2_} />
+            <Highlight_ApplicationProperties code={_12_2_} />
           </Li>
           <Li>
             With this config , I will see the log in the <SpanYellow>audit.log</SpanYellow> only (Less recommended)
-            <ApplicationPropertiesHighlight propertiesCode={_12_3_} />
+            <Highlight_ApplicationProperties code={_12_3_} />
           </Li>
         </ULDecimal>
         <p className="my-8">
@@ -44,7 +45,7 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
         </p>
         Create service <SpanYellow>audit.service</SpanYellow> file:
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
         Paste config below:
         <ULdisc>
@@ -78,15 +79,15 @@ const O9_CreateSystemdServiceFile = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_5_} />
+          <Highlight_ApplicationProperties code={_5_} />
           <Li>
             Then run following commands to : <strong>Reload systemd, Start service , Enable auto-start on boot , check status</strong>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
           <Li>
             Check logs using <SpanYellow>journalctl</SpanYellow> and <SpanYellow>tail</SpanYellow>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Highlight_ApplicationProperties code={_4_} />
         </ULdisc>
       </section>
     </MainChildArea>

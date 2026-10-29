@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,7 +11,8 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
       <article className="my-8">
         <p className="my-6 text-xl font-semibold">✅ Step 3: implements AuditorAware</p>
         <p className="my-4 text-lg font-semibold">🔍 What is AuditorAware?</p>
-        <SpanYellow>{"AuditorAware<T>"}</SpanYellow> is an interface provided by Spring Data that allows you to define who is performing an action (the
+        <SpanYellow>{"AuditorAware<T>"}</SpanYellow> is an interface provided by Spring Data that allows you to define who is performing an action
+        (the
         <SpanYellow>"auditor"</SpanYellow> ) . <br /> This is typically used to populate fields like:
         <ULdisc>
           <Li>
@@ -56,7 +57,7 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={audit_aware}></JavaHighlight>
+          <Highlight_JAVA code={audit_aware}></Highlight_JAVA>
         </ULdisc>
         {/*  */}
         <p className="my-4 mt-8 text-lg font-semibold">🏷️ 2. Audit with Spring Security</p>
@@ -78,7 +79,7 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={audit_aware_security}></JavaHighlight>
+          <Highlight_JAVA code={audit_aware_security}></Highlight_JAVA>
         </ULdisc>
         {/*  */}
         <p className="my-4 mt-8 text-lg font-semibold">🏷️ 3. Audit with Spring Security for Multiple USer types (SUPER-ADMIN, ADMIN, USER)</p>
@@ -100,7 +101,7 @@ const O5_AuditorAwareImpl = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={audit_aware_multiple_users}></JavaHighlight>
+          <Highlight_JAVA code={audit_aware_multiple_users}></Highlight_JAVA>
         </ULdisc>
       </article>
     </MainChildArea>

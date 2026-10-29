@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_GetApi = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O1_GetApi = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>router code </Li>
           <Li>Pay attention for the imports </Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
       </section>
       <section className="my-8">
@@ -29,7 +29,7 @@ const O1_GetApi = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanGrey>tags=["Students"]</SpanGrey> - for Swagger/ OpenAPI only
           </Li>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </ULdisc>
       </section>
     </MainChildArea>

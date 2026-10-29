@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_DuplicationsRemove = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,7 +18,7 @@ const O3_DuplicationsRemove = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>So , I need to create a dynamic array</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

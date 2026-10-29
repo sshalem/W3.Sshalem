@@ -3,7 +3,7 @@
 
 */
 import { Anchor, IMG, MainChildArea } from "../../../../components";
-import { BatchHighlight, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
+import { Highlight_BATCH, Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../components/Highlight";
 import setup_tailwind_1 from "../../../../assets/setup_tailwind_1.jpg";
 import setup_tailwind_2 from "../../../../assets/setup_tailwind_2.jpg";
 import setup_tailwind_3 from "../../../../assets/setup_tailwind_3.jpg";
@@ -47,32 +47,32 @@ const O5_Tailwindcss = ({ anchor }: { anchor: string }) => {
           <br />✅ <SpanGreen>npm install -D tailwindcss@3 postcss autoprefixer</SpanGreen> - Install tailwindcss and its peer dependencies
           <br />✅ <SpanGreen>npx tailwindcss init -p</SpanGreen> - generate your <SpanBlue>tailwind.config.js</SpanBlue> and
           <SpanBlue>postcss.config.js</SpanBlue> files.
-          <BatchHighlight batchCode={install}></BatchHighlight>
+          <Highlight_BATCH batchCode={install}></Highlight_BATCH>
         </li>
 
         <li className="my-1">
           Configure your template paths. Add the paths to all of your template files in your <SpanBlue>tailwind.config.js</SpanBlue> file.
-          <JsxHighlight jsxCode={config}></JsxHighlight>
+          <Highlight_JSX code={config}></Highlight_JSX>
         </li>
         <li className="my-1">
           Add the Tailwind directives to your CSS. Add the <SpanRed>@tailwind</SpanRed> directives for each of Tailwind's layers to your
           <SpanBlue>./src/index.css</SpanBlue> file.
-          <JsxHighlight jsxCode={css}></JsxHighlight>
+          <Highlight_JSX code={css}></Highlight_JSX>
           <IMG img_name={setup_tailwind_4}></IMG>
           BUT, I get warning under the @tailwind keyword it's because of an issue. Thus , option 2 , to add tailwind is by using import keyword
-          <JsxHighlight jsxCode={css_import}></JsxHighlight>
+          <Highlight_JSX code={css_import}></Highlight_JSX>
         </li>
         <li className="my-1">
           config prettier for tailwincss. In order to make the classed , to be sorted in a convention defined by tailwind , thus , install the
           following dependency
-          <BatchHighlight batchCode={prettier_npm}></BatchHighlight>
+          <Highlight_BATCH batchCode={prettier_npm}></Highlight_BATCH>
         </li>
         <li className="my-1">
           <SpanGreen>.prettierrc</SpanGreen> - create a file named <SpanGreen>.prettierrc</SpanGreen> under the main project folder .
           <IMG img_name={setup_tailwind_5}></IMG>
         </li>
         <li className="my-1">
-          Add the following line in the file <JsxHighlight jsxCode={prettier_content}></JsxHighlight>
+          Add the following line in the file <Highlight_JSX code={prettier_content}></Highlight_JSX>
         </li>
       </ul>
     </MainChildArea>

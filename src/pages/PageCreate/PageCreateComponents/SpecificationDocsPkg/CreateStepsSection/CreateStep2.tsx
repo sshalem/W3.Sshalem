@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 import page_create_2 from "../../../../../assets/page_create_2.jpg";
 
 const CreateStep2 = ({ anchor }: { anchor: string }) => {
@@ -36,7 +36,7 @@ const CreateStep2 = ({ anchor }: { anchor: string }) => {
                 </li>
               </ul>
             </li>
-            <JsxHighlight jsxCode={jsxCode_2}></JsxHighlight>
+            <Highlight_JSX code={jsxCode_2}></Highlight_JSX>
           </ul>
         </div>
       </article>

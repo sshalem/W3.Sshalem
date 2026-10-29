@@ -3,7 +3,7 @@
 Postgresql Detailed Config --> (SPRING)(ApplicationProperties)(Postgresql)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const PostgresqlDetailedConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const PostgresqlDetailedConfig = ({ anchor }: { anchor: string }) => {
         set to
         <SpanBlue>true</SpanBlue> . <br /> To disable the warning, I set to <SpanBlue>false</SpanBlue>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={postgresConfig} />
+      <Highlight_ApplicationProperties code={postgresConfig} />
     </MainChildArea>
   );
 };

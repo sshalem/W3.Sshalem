@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
 
 const O12_1_RunnableCallable = ({ anchor }: { anchor: string }) => {
@@ -30,11 +30,11 @@ const O12_1_RunnableCallable = ({ anchor }: { anchor: string }) => {
           </p>
           <p>
             When you want to execute a task on another thread and get a result back, the common pattern is:
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
             For example:
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
             What is happening?
-            <ApplicationPropertiesHighlight propertiesCode={_3_} />
+            <Highlight_ApplicationProperties code={_3_} />
           </p>
         </article>
       </section>

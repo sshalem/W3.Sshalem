@@ -3,7 +3,7 @@
 Mysql Dialect --> (SPRING)(ApplicationProperties)(MySql)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const O1_MysqlDialect = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,13 +11,13 @@ const O1_MysqlDialect = ({ anchor }: { anchor: string }) => {
       <div className="my-4">
         When using java version <SpanBlue>JDK8</SpanBlue> use with <SpanBlue>mysql</SpanBlue> dialect :
         <div className="my-4">
-          <ApplicationPropertiesHighlight propertiesCode={mysql_jdk8} />
+          <Highlight_ApplicationProperties code={mysql_jdk8} />
         </div>
       </div>
       <div className="my-8">
         When using java version <SpanBlue>JDK11</SpanBlue> use with <SpanBlue>mysql</SpanBlue> dialect :
         <div className="my-4">
-          <ApplicationPropertiesHighlight propertiesCode={mysql_jdk11} />
+          <Highlight_ApplicationProperties code={mysql_jdk11} />
         </div>
       </div>
     </MainChildArea>

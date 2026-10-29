@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanRed } from "../../../../../components/Highlight";
 
 const O4_WriteIndexScriptCode = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O4_WriteIndexScriptCode = ({ anchor }: { anchor: string }) => {
           Instead of FlexSearch, just build a preprocessed JSON file with all your pages, then do vanilla JS substring / regex search. <br />
           It’s fast enough for 200 pages and 50–100KB per page, and you avoid <SpanRed>FlexSearch’s TypeScript headaches</SpanRed> entirely.
         </div>
-        <JsxHighlight jsxCode={index_build_script}></JsxHighlight>
+        <Highlight_JSX code={index_build_script}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

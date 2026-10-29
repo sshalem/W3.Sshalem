@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGreen, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_23 from "../../../../../assets/python_23.jpg";
 
 const O3_RequirementsFile = ({ anchor }: { anchor: string }) => {
@@ -20,7 +20,7 @@ const O3_RequirementsFile = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Open terminal , type command
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             this created the file <SpanGrey>requirements.txt</SpanGrey> and dependencies in it

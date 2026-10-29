@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../components/Highlight";
 import windows_1 from "../../../../assets/windows_1.jpg";
 
 const O1_PidProcessPortName = ({ anchor }: { anchor: string }) => {
@@ -31,13 +31,13 @@ const O1_PidProcessPortName = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </ULdisc>
         Let's run a command in CMD to see which PID runs on poret 5173
         <ULdisc>
           <Li>
             run command
-            <JavaHighlight javaCode={_2_} />
+            <Highlight_JAVA code={_2_} />
           </Li>
           <Li>
             the output shows

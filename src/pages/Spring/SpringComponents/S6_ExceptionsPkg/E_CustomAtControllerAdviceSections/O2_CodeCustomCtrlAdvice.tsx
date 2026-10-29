@@ -4,9 +4,9 @@
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
 import {
-  ApplicationPropertiesHighlight,
+  Highlight_ApplicationProperties,
   DivDoubleBorder,
-  JavaHighlight,
+  Highlight_JAVA,
   SpanBlue,
   SpanGreen,
   SpanRed,
@@ -36,13 +36,13 @@ const O2_CodeCustomCtrlAdvice = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <DivDoubleBorder>application.properties</DivDoubleBorder>
-        <ApplicationPropertiesHighlight propertiesCode={application_properties}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={application_properties}></Highlight_ApplicationProperties>
         <DivDoubleBorder>ENUM</DivDoubleBorder>
-        <JavaHighlight javaCode={enum_code}></JavaHighlight>
+        <Highlight_JAVA code={enum_code}></Highlight_JAVA>
         <DivDoubleBorder>Message class</DivDoubleBorder>
-        <JavaHighlight javaCode={message_class}></JavaHighlight>
+        <Highlight_JAVA code={message_class}></Highlight_JAVA>
         <DivDoubleBorder>Exception</DivDoubleBorder>
-        <JavaHighlight javaCode={exception}></JavaHighlight>
+        <Highlight_JAVA code={exception}></Highlight_JAVA>
         <DivDoubleBorder>Global Exception</DivDoubleBorder>
         <div className="my-4">
           <SpanRed>Note</SpanRed>
@@ -52,12 +52,12 @@ const O2_CodeCustomCtrlAdvice = ({ anchor }: { anchor: string }) => {
           <SpanGreen>@RestControllerAdvice</SpanGreen> , and w/o <SpanRed>ExceptionErrorMessage</SpanRed> , which will be more{" "}
           <SpanBlue>Fine-grained</SpanBlue> code
         </p>
-        <JavaHighlight javaCode={app_exception_handler}></JavaHighlight>
+        <Highlight_JAVA code={app_exception_handler}></Highlight_JAVA>
         <DivDoubleBorder>Service</DivDoubleBorder>
-        <JavaHighlight javaCode={service}></JavaHighlight>
+        <Highlight_JAVA code={service}></Highlight_JAVA>
         <DivDoubleBorder>Controller</DivDoubleBorder>
         In controller , I changed the code to return my custom message , instead of returing only the error meassge of the thrown exception.
-        <JavaHighlight javaCode={controller}></JavaHighlight>
+        <Highlight_JAVA code={controller}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

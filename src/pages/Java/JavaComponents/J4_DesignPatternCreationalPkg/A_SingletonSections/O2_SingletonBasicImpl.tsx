@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_SingletonBasicImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O2_SingletonBasicImpl = ({ anchor }: { anchor: string }) => {
           <Li>✔ Thread-safe</Li>
           <Li>✖ Instance created even if not used</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_BuildJar = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O2_BuildJar = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Open Terminal , Run command :
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+              <Highlight_ApplicationProperties code={mvn_clean_package} />
             </Li>
             <Li>
               This will make the JAR file in <SpanYellow>target</SpanYellow> folder.

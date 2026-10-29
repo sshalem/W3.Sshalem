@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 
 const O6_Interface = ({ anchor }: { anchor: string }) => {
   return (
@@ -36,12 +36,12 @@ const O6_Interface = ({ anchor }: { anchor: string }) => {
       <br />
       <br />
       This defines a type User that describes an object with name and age.
-      <JsxHighlight jsxCode={type_object}></JsxHighlight>
+      <Highlight_JSX code={type_object}></Highlight_JSX>
       🔗 Union Type Example
       <br />
       <br />
       This means Status can only be one of those three string values.
-      <JsxHighlight jsxCode={type_union}></JsxHighlight>
+      <Highlight_JSX code={type_union}></Highlight_JSX>
     </MainChildArea>
   );
 };

@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const O3_UnknownNever = ({ anchor }: { anchor: string }) => {
   return (
@@ -34,14 +34,14 @@ const O3_UnknownNever = ({ anchor }: { anchor: string }) => {
           <SpanBlue>typeof value === 'string'</SpanBlue> - checks if the type of the value is a string
         </li>
       </ul>
-      <JsxHighlight jsxCode={unknown_check}></JsxHighlight>
+      <Highlight_JSX code={unknown_check}></Highlight_JSX>
       <div>
         we usually will see <SpanRed>unknown</SpanRed> in a <SpanGreen>try/catch</SpanGreen> block. <br />
         By default , typescript will set the error to be <SpanRed>unknown</SpanRed>. <br />
         If we hover over the error in the parenthesis it shows <SpanRed>unknown</SpanRed>. <br />
         Let's look in the example below , how it's used a in a <SpanGreen>try/catch</SpanGreen> block
       </div>
-      <JsxHighlight jsxCode={unknown_try_catch}></JsxHighlight>
+      <Highlight_JSX code={unknown_try_catch}></Highlight_JSX>
       {/*  */}
       <DivDoubleBorder>never</DivDoubleBorder>
       <div>
@@ -81,7 +81,7 @@ const O3_UnknownNever = ({ anchor }: { anchor: string }) => {
         We can see form this example , that if I get <SpanRed>never</SpanRed> , it means we handle all the possible cases in the logic. So it meas
         there is no possible value at that point.
       </div>
-      <JsxHighlight jsxCode={never}></JsxHighlight>
+      <Highlight_JSX code={never}></Highlight_JSX>
     </MainChildArea>
   );
 };

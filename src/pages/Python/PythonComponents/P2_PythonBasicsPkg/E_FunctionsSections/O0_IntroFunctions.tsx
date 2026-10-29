@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O0_IntroFunctions = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O0_IntroFunctions = ({ anchor }: { anchor: string }) => {
           <Li>All functions in python return None by default, unless , we define return ourselves.</Li>
           <Li>
             This function below doesn't return anything thus, if we print it it will show None.
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -34,31 +34,31 @@ const O0_IntroFunctions = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <article className="my-4 text-xl font-semibold">Passing Arguments</article>
         Argument is what we pass when we call the function
-        <PythonHighlight pythonCode={_2_} />
+        <Highlight_PYTHON code={_2_} />
       </section>
 
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl font-semibold">Default Parameter Value</article>
-        <PythonHighlight pythonCode={_3_} />
+        <Highlight_PYTHON code={_3_} />
       </section>
 
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl font-semibold">Passing a List as an Argument</article>
-        <PythonHighlight pythonCode={_4_} />
+        <Highlight_PYTHON code={_4_} />
       </section>
 
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl font-semibold">Return Values</article>
-        <PythonHighlight pythonCode={_5_} />
+        <Highlight_PYTHON code={_5_} />
       </section>
 
       <hr />
       <section className="my-8">
         <article className="my-4 text-xl font-semibold">Recursion with python</article>
-        <PythonHighlight pythonCode={_6_} />
+        <Highlight_PYTHON code={_6_} />
       </section>
     </MainChildArea>
   );

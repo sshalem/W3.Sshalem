@@ -6,7 +6,7 @@ import { Anchor, IMG, MainChildArea } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
 import security_4 from "../../../../../assets/security_4.jpg";
-import { JavaHighlight, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen } from "../../../../../components/Highlight";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 
 const O4_SecurityFilterChain = ({ anchor }: { anchor: string }) => {
@@ -81,7 +81,7 @@ const O4_SecurityFilterChain = ({ anchor }: { anchor: string }) => {
               <strong>FilterChainProxy</strong> decides which chain to use for each request.
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={example}></JavaHighlight>
+          <Highlight_JAVA code={example}></Highlight_JAVA>
         </article>
       </section>
 
@@ -108,7 +108,7 @@ const O4_SecurityFilterChain = ({ anchor }: { anchor: string }) => {
               Finally, the request continues to the <strong>DispatcherServlet</strong>, and your controller executes.
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={code}></JavaHighlight>
+          <Highlight_JAVA code={code}></Highlight_JAVA>
         </article>
       </section>
     </MainChildArea>

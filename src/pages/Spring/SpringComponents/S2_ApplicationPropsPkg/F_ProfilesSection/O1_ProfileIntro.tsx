@@ -4,7 +4,7 @@ Profile Intro  --> (SPRING)(ApplicationProperties)(ProfileIntro)
 */
 import { FaDiamond } from "react-icons/fa6";
 import { Answer, MainChildArea, Question } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const ProfileIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -35,7 +35,7 @@ const ProfileIntro = ({ anchor }: { anchor: string }) => {
         what console shows if there is no other profile files
         <br />
         <div className="my-4"></div>
-        <ApplicationPropertiesHighlight propertiesCode={appProfileConsole} />
+        <Highlight_ApplicationProperties code={appProfileConsole} />
       </Answer>
     </MainChildArea>
   );

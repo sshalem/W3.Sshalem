@@ -3,7 +3,7 @@
 
 */
 import { Anchor, IMG, MainChildArea } from "../../../../../components";
-import { SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import security_9 from "../../../../../assets/security_9.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
@@ -12,7 +12,7 @@ import { useMemo } from "react";
 const O1_POM = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderPOM = useMemo(() => <XmlHighlight xmlCode={pom} />, [pom]);
+  const renderPOM = useMemo(() => <Highlight_XML xmlCode={pom} />, [pom]);
 
   return (
     <MainChildArea anchor={anchor}>

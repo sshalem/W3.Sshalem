@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_Question = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O1_Question = ({ anchor }: { anchor: string }) => {
           <Li>A customer purchases a coupon. </Li>
           <Li>Each coupon has a limited quantity, and customers must not be charged for a purchase that fails.</Li>
           <Li>Here is a simplified service:</Li>
-          <JavaHighlight javaCode={_1_}></JavaHighlight>
+          <Highlight_JAVA code={_1_}></Highlight_JAVA>
           <Li>Assume two customers try to buy the last available coupon at almost exactly the same time.</Li>
           <Li>
             Also assume the payment provider may successfully charge a customer even if your application subsequently encounters a database error.

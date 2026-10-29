@@ -1,6 +1,6 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../components";
 import windows_3 from "../../../../assets/windows_3.jpg";
-import { JavaHighlight } from "../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../components/Highlight";
 
 const O4_KillProcess = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O4_KillProcess = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               using command
-              <JavaHighlight javaCode={_1_} />
+              <Highlight_JAVA code={_1_} />
             </Li>
             <Li>
               Right click on the process Click on End Task <IMG img_name={windows_3}></IMG>

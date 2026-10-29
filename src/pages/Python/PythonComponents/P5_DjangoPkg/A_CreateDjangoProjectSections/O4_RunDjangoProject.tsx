@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 import python_17 from "../../../../../assets/python_17.jpg";
 import python_18 from "../../../../../assets/python_18.jpg";
 
@@ -26,7 +26,7 @@ const O4_RunDjangoProject = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             run the following command :
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             Three things to notice :

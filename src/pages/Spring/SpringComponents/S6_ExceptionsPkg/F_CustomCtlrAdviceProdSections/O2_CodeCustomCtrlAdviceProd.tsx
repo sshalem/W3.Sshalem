@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,20 +17,20 @@ const O2_CodeCustomCtrlAdviceProd = ({ anchor }: { anchor: string }) => {
       </GitHub>
       <section>
         <DivDoubleBorder>application.properties</DivDoubleBorder>
-        <ApplicationPropertiesHighlight propertiesCode={application_properties}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={application_properties}></Highlight_ApplicationProperties>
         <DivDoubleBorder>ENUM</DivDoubleBorder>
-        <JavaHighlight javaCode={enum_code}></JavaHighlight>
+        <Highlight_JAVA code={enum_code}></Highlight_JAVA>
         {/* <DivDoubleBorder>Message class</DivDoubleBorder>
-        <JavaHighlight javaCode={message_class}></JavaHighlight> */}
+        <Highlight_JAVA code={message_class}></Highlight_JAVA> */}
         <DivDoubleBorder>Exception</DivDoubleBorder>
-        <JavaHighlight javaCode={exception}></JavaHighlight>
+        <Highlight_JAVA code={exception}></Highlight_JAVA>
         <DivDoubleBorder>@RestControllerAdvice</DivDoubleBorder>
-        <JavaHighlight javaCode={rest_controller_advice}></JavaHighlight>
+        <Highlight_JAVA code={rest_controller_advice}></Highlight_JAVA>
         <DivDoubleBorder>Service</DivDoubleBorder>
-        <JavaHighlight javaCode={service}></JavaHighlight>
+        <Highlight_JAVA code={service}></Highlight_JAVA>
         <DivDoubleBorder>Controller</DivDoubleBorder>
         In controller , I changed the code to return my custom message , instead of returing only the error meassge of the thrown exception.
-        <JavaHighlight javaCode={controller}></JavaHighlight>
+        <Highlight_JAVA code={controller}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

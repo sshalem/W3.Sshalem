@@ -3,7 +3,7 @@
 Data sql --> (SPRING)(ApplicationProperties)(Data sql)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_3 from "../../../../../assets/db_init_3.jpg";
 import db_init_4 from "../../../../../assets/db_init_4.jpg";
 
@@ -51,7 +51,7 @@ const O3_DBInitDataSql = ({ anchor }: { anchor: string }) => {
             database initialization
             <SpanBlue>spring.sql.init.mode=always</SpanBlue> is enabled) <br />
             When using <SpanBlue>data.sql</SpanBlue> configure your <SpanBlue>application.properties</SpanBlue> like this :
-            <ApplicationPropertiesHighlight propertiesCode={dataSqlCode} />
+            <Highlight_ApplicationProperties code={dataSqlCode} />
             <IMG img_name={db_init_3} />
             <ul className="my-8 ml-16 list-decimal">
               <li className="my-2">
@@ -106,7 +106,7 @@ const O3_DBInitDataSql = ({ anchor }: { anchor: string }) => {
             Then, configure your <SpanBlue>application.properties</SpanBlue> like this. <br /> This tells Spring Boot to load{" "}
             <SpanBlue>data.sql</SpanBlue> from
             <SpanBlue>/sqlData/</SpanBlue> instead of the default root of resources.
-            <ApplicationPropertiesHighlight propertiesCode={dataSqlDifferentPathCode} />
+            <Highlight_ApplicationProperties code={dataSqlDifferentPathCode} />
             <IMG img_name={db_init_4} />
           </div>
         </article>

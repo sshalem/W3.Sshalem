@@ -1,18 +1,22 @@
-// import { Prism as PrismSyntaxHighlighter } from "react-syntax-highlighter";
-// import { prism as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
-import { oneDark as PYTHON_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import xml from "react-syntax-highlighter/dist/esm/languages/prism/xml-doc";
+import {
+  prism as XML_STYLE,
+  // vs,
+  // ghcolors,
+  // coy,
+  // prism
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+// import { prism as XML_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("python", python);
+PrismLightSyntaxHighlighter.registerLanguage("xml", xml);
 
-const PythonHighlight = ({ pythonCode }: { pythonCode: string }) => {
+const Highlight_XML = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(pythonCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -27,9 +31,23 @@ const PythonHighlight = ({ pythonCode }: { pythonCode: string }) => {
         {isCopied ? "copied" : "copy"}
       </button>
       <div>
+        {/* <PrismLightSyntaxHighlighter
+          language="xml"
+          style={XML_STYLE}
+          // showLineNumbers={true}
+          customStyle={{
+            fontSize: "0.85rem",
+            backgroundColor: "#fbfbfb",
+            outlineStyle: "solid",
+            outlineWidth: "1px",
+            outlineColor: "#dddddd",
+            // width: "60rem",
+            display: "flex",
+          }}
+        > */}
         <PrismLightSyntaxHighlighter
-          language="python"
-          style={PYTHON_STYLE}
+          language="xml"
+          style={XML_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
@@ -41,11 +59,11 @@ const PythonHighlight = ({ pythonCode }: { pythonCode: string }) => {
             display: "flex",
           }}
         >
-          {pythonCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default PythonHighlight;
+export default Highlight_XML;

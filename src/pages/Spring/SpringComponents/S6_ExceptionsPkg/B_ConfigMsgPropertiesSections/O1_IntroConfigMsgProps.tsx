@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, SpanRed } from "../../../../../components/Highlight";
 
 const O1_IntroConfigMsgProps = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O1_IntroConfigMsgProps = ({ anchor }: { anchor: string }) => {
         In section of <SpanBlue>Runtime Handle</SpanBlue> we got the message in postman , including the <SpanRed>StackTrace</SpanRed> , which is
         verbose, and too long. <br />
         In this Project, I config the <SpanBlue>application.properties</SpanBlue> file , we see how I can control which field I can return or NOT.
-        <JavaHighlight javaCode={postman_before_config}></JavaHighlight>
+        <Highlight_JAVA code={postman_before_config}></Highlight_JAVA>
       </section>
       <section></section>
     </MainChildArea>

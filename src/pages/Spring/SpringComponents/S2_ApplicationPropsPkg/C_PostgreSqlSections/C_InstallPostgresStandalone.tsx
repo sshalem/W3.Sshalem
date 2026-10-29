@@ -1,4 +1,4 @@
-import { BatchHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_BATCH, SpanYellow } from "../../../../../components/Highlight";
 import batch_command from "../../../../../assets/batch_command.jpg";
 import start_postgresql_server from "../../../../../assets/start_postgresql_server.jpg";
 import stop_postgresql_server from "../../../../../assets/stop_postgresql_server.jpg";
@@ -52,13 +52,13 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         <li className="my-1 list-decimal">
           Open CMD , go to directory <SpanYellow> C:\Localdata\DB\postgresql\pgsql\bin</SpanYellow>
           <div className="my-10">
-            <BatchHighlight batchCode={_2_} />
+            <Highlight_BATCH batchCode={_2_} />
           </div>
         </li>
         <li className="my-1 list-decimal">
           Type the following command below, It will install inside the folder of <SpanYellow>pgsql_data</SpanYellow> all the relevant data:
           <div className="my-10">
-            <BatchHighlight batchCode={batchCode} />
+            <Highlight_BATCH batchCode={batchCode} />
           </div>
         </li>
         <li className="my-1 list-decimal">
@@ -88,7 +88,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </div>
       <div className="my-10">
-        <BatchHighlight batchCode={startPostgresqlServer} />
+        <Highlight_BATCH batchCode={startPostgresqlServer} />
         <IMG img_name={start_postgresql_server} />
       </div>
       <div>
@@ -99,7 +99,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Copy/Paste the commands below</Li>
           <Li>Run the batch file</Li>
-          <BatchHighlight batchCode={_start_} />
+          <Highlight_BATCH batchCode={_start_} />
         </ULdisc>
       </div>
 
@@ -117,7 +117,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
         </ULdisc>
       </div>
       <div className="my-10">
-        <BatchHighlight batchCode={stopPostgresqlServer} />
+        <Highlight_BATCH batchCode={stopPostgresqlServer} />
       </div>
 
       <IMG img_name={stop_postgresql_server} />
@@ -130,7 +130,7 @@ const InstallPostgresStandalone = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>Copy/Paste the commands below</Li>
           <Li>Run the batch file</Li>
-          <BatchHighlight batchCode={_stop_} />
+          <Highlight_BATCH batchCode={_stop_} />
         </ULdisc>
       </div>
 

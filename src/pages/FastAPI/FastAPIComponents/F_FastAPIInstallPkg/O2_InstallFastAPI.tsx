@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal } from "../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../components/Highlight";
 
 const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,10 +17,10 @@ const O2_InstallFastAPI = ({ anchor }: { anchor: string }) => {
           <Li>
             Install <SpanGrey>fastapi</SpanGrey> + <SpanGrey>unvicorn</SpanGrey> in one command (<SpanGrey>uvicorn</SpanGrey> is the server where
             FastAPI runs on)
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>Check packaged list</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULDecimal>
       </section>
     </MainChildArea>

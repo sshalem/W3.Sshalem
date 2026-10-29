@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, IMG, MainChildArea } from "../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanGreen } from "../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanGreen } from "../../../../components/Highlight";
 import pagination_2 from "../../../../assets/pagination_2.jpg";
 
 const O3_SearchFields = ({ anchor }: { anchor: string }) => {
@@ -32,7 +32,7 @@ const O3_SearchFields = ({ anchor }: { anchor: string }) => {
           <li className="my-1">I design code, that I don't have to add all search fields , I can add only the one I want</li>
           <li className="my-1">
             Config Pagination Component , add the <SpanGreen>searchFieldNames</SpanGreen>
-            <JsxHighlight jsxCode={config_pagination}></JsxHighlight>
+            <Highlight_JSX code={config_pagination}></Highlight_JSX>
           </li>
           <li className="my-1">In example below , I added all the the fields</li>
         </ul>

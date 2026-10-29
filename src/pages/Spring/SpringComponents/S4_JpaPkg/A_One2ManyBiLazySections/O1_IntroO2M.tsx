@@ -4,7 +4,7 @@ OneToMany --> (SPRING)(JPA)(OneToMany (Bi Lazy))
 */
 import { Link } from "react-router-dom";
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanRed, SpanSky, SpanTeal } from "../../../../../components/Highlight";
 import TableCompareOrphanVsCascadeRemove from "../../../../../components/Tables/Table_4ColCompareOrphanVsCascadeRemove";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
@@ -42,7 +42,7 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
             <Li>
               Example : <br />
               At this point, user is just a regular Java object (POJO), not tracked by JPA.
-              <JavaHighlight javaCode={pojo}></JavaHighlight>
+              <Highlight_JAVA code={pojo}></Highlight_JAVA>
             </Li>
           </ULDecimal>
         </article>
@@ -76,7 +76,7 @@ const O1_IntroO2M = ({ anchor }: { anchor: string }) => {
               Example : <br />
               Now user is in the persistence context (saved ,but SQL NOT done yet). <br /> If you change user.setName("Bob"), JPA will detect this and
               update the DB on flush.
-              <JavaHighlight javaCode={persist}></JavaHighlight>
+              <Highlight_JAVA code={persist}></Highlight_JAVA>
             </Li>
           </ULdisc>
         </article>

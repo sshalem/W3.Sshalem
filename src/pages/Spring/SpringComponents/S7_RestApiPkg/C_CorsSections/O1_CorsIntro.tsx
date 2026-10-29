@@ -4,7 +4,7 @@ Cors --> (SPRING)(rest)(rest-api)
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_CorsIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -20,7 +20,7 @@ const O1_CorsIntro = ({ anchor }: { anchor: string }) => {
             you need to configure <SpanGrey>CORS</SpanGrey> in your Spring Boot app.
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={batch}></JavaHighlight>
+        <Highlight_JAVA code={batch}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

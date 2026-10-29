@@ -3,7 +3,7 @@
 
 */
 import { Anchor, MainChildArea } from "../../../../../components";
-import { SpanRed, SpanSky, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanRed, SpanSky, Highlight_XML } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -38,7 +38,7 @@ const O3_JwtDependencies = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         <p className="my-4 text-lg font-semibold">✅ Correct POM setup</p>
         <p>You always need at least these three:</p>
-        <XmlHighlight xmlCode={pom}></XmlHighlight>
+        <Highlight_XML xmlCode={pom}></Highlight_XML>
       </section>
     </MainChildArea>
   );

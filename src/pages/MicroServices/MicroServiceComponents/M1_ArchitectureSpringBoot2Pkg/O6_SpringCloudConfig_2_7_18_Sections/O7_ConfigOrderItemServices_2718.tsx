@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import microservice_27 from "../../../../../assets/microservice_27.jpg";
 
 const O7_ConfigOrderItemServices_2718 = ({ anchor }: { anchor: string }) => {
@@ -22,7 +22,7 @@ const O7_ConfigOrderItemServices_2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>Add the following dependency to EACH microservice</Li>
           </ULdisc>
-          <XmlHighlight xmlCode={_1_} />
+          <Highlight_XML xmlCode={_1_} />
         </article>
         <article className="my-8">
           <p className="text-xl font-semibold">2️⃣ Create ITEM-SERVICE / ORDER-SERVICE properties on Config Storage on Git</p>

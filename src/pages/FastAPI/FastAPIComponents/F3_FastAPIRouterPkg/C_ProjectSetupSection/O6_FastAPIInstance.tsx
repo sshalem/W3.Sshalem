@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O6_FastAPIInstance = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O6_FastAPIInstance = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             In <SpanYellow>main.py</SpanYellow> , create new instance of <SpanYellow>FastAPI</SpanYellow>
-            <JsxHighlight jsxCode={_1_} />
+            <Highlight_JSX code={_1_} />
           </Li>
         </ULdisc>
       </section>

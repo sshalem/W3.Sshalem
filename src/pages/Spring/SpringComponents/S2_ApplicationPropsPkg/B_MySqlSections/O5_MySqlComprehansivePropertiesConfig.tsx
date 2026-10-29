@@ -3,12 +3,12 @@
 Mysql Comprehansive Properties --> (SPRING)(ApplicationProperties)(MySql)
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O5_MySqlComprehansivePropertiesConfig = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
-      <ApplicationPropertiesHighlight propertiesCode={mysql_comprehansive_config} />
+      <Highlight_ApplicationProperties code={mysql_comprehansive_config} />
     </MainChildArea>
   );
 };

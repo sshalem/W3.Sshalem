@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanGrey } from "../../../../../components/Highlight";
 import search_index from "../../../../../assets/search_index.jpg";
 
 const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
@@ -20,7 +20,7 @@ const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
           <p>
             the flag <SpanGrey>--save-dev</SpanGrey> is used when installing a package that you only need during development, not in production.
           </p>
-          <JsxHighlight jsxCode={install_tsx}></JsxHighlight>
+          <Highlight_JSX code={install_tsx}></Highlight_JSX>
         </div>
         <article className="my-4 text-xl font-semibold">
           ✅ Step 2 : Run the file <SpanGrey>.ts</SpanGrey> file
@@ -29,7 +29,7 @@ const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
           <p>
             this command runs the <SpanGrey>.ts</SpanGrey> file
           </p>
-          <JsxHighlight jsxCode={run_ts_file}></JsxHighlight>
+          <Highlight_JSX code={run_ts_file}></Highlight_JSX>
         </div>
         <article className="my-4 text-xl font-semibold">✅ Step 3 : Add a convenient npm script</article>
         <div>
@@ -47,7 +47,7 @@ const O5_RunScriptDev = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </p>
-          <JsxHighlight jsxCode={scripts_build_search}></JsxHighlight>
+          <Highlight_JSX code={scripts_build_search}></Highlight_JSX>
         </div>
         <article className="my-4">
           this command runs and creates a <SpanGrey>searchIndex.json</SpanGrey> file inside <SpanGrey>public</SpanGrey> folder

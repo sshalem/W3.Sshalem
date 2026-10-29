@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 
 const O6_RequirementsFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,7 +16,7 @@ const O6_RequirementsFile = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             🧠 Pro Tip (Best Practice) , After everything works, always create <SpanGrey>requirements.txt</SpanGrey>
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             ❌ If NO dependency file{" "}
@@ -26,9 +26,9 @@ const O6_RequirementsFile = ({ anchor }: { anchor: string }) => {
               <Li>1️⃣ Run the app and see errors</Li>
               <Li>
                 2️⃣ When you see:
-                <ApplicationPropertiesHighlight propertiesCode={_2_} />
+                <Highlight_ApplicationProperties code={_2_} />
                 Install it:
-                <ApplicationPropertiesHighlight propertiesCode={_3_} />
+                <Highlight_ApplicationProperties code={_3_} />
               </Li>
               <Li>This way I have to go every module and install it manually (Bad practice)</Li>
             </ULdisc>

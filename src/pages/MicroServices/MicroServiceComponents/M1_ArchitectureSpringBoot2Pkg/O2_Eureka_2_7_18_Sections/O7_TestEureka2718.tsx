@@ -3,7 +3,7 @@ import microservice_12 from "../../../../../assets/microservice_12.jpg";
 import microservice_13 from "../../../../../assets/microservice_13.jpg";
 import microservice_14 from "../../../../../assets/microservice_14.jpg";
 import microservice_8 from "../../../../../assets/microservice_8.jpg";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O7_TestEureka2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -42,7 +42,7 @@ const O7_TestEureka2718 = ({ anchor }: { anchor: string }) => {
             <Li>Because , I send Via Postman request only to Customer-service with Port 8001 </Li>
             <Li>
               In order to see which port of order-service runs , add following code :
-              <JavaHighlight javaCode={_1_} />
+              <Highlight_JAVA code={_1_} />
             </Li>
           </ULdisc>
           <IMG img_name={microservice_12}></IMG>

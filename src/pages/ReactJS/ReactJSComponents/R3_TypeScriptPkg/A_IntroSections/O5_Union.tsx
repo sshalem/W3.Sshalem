@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 
 const O5_Union = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,14 +23,14 @@ const O5_Union = ({ anchor }: { anchor: string }) => {
       🔤 <strong>String Union Example</strong>
       <br />
       This means Status can only be one of the three string values: "success", "error", or "loading".
-      <JsxHighlight jsxCode={type_union}></JsxHighlight>
+      <Highlight_JSX code={type_union}></Highlight_JSX>
       🔢 <strong>Union of Different Types</strong>
       <br />
       This means Status can only be one of the three string values: "success", "error", or "loading".
-      <JsxHighlight jsxCode={type_union_differetn_types}></JsxHighlight>✅ <strong>Example of union Without type</strong>
+      <Highlight_JSX code={type_union_differetn_types}></Highlight_JSX>✅ <strong>Example of union Without type</strong>
       <br />
       In this case, you're using the union type string | number directly without creating a named type alias.
-      <JsxHighlight jsxCode={union_without_type}></JsxHighlight>
+      <Highlight_JSX code={union_without_type}></Highlight_JSX>
     </MainChildArea>
   );
 };

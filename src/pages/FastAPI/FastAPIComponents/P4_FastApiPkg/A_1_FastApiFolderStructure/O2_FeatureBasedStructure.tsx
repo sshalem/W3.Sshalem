@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const O2_FeatureBasedStructure = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,7 +18,7 @@ const O2_FeatureBasedStructure = ({ anchor }: { anchor: string }) => {
           <Li>Scales cleanly</Li>
         </ULdisc>
         This is <SpanRed>NOT Spring-style</SpanRed>, but <SpanGreen>domain-centric</SpanGreen>.
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
       </section>
     </MainChildArea>
   );

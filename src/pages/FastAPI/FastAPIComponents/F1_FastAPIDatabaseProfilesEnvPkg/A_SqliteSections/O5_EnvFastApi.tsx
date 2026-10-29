@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
   return (
@@ -39,7 +39,7 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             So you must explicitly say , in <SpanYellow>config.py</SpanYellow>
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             That tells Pydantic, <SpanYellow>"Go read that file."</SpanYellow>
@@ -50,16 +50,16 @@ const O5_EnvFastApi = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         <article className="my-8 text-lg">
           <SpanYellow>.env</SpanYellow>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </article>
         <article className="my-8 text-lg">
           <SpanYellow>config.py</SpanYellow>
-          <PythonHighlight pythonCode={_3_} />
+          <Highlight_PYTHON code={_3_} />
         </article>
         <article className="my-8 text-lg">
           <SpanYellow>database.py</SpanYellow>
           💡 Professional, modern Pydantic v2 style (Cleaner for v2) :
-          <PythonHighlight pythonCode={_4_} />
+          <Highlight_PYTHON code={_4_} />
         </article>
       </section>
     </MainChildArea>

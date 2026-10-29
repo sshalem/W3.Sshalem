@@ -3,7 +3,7 @@
 platform --> (SPRING)(ApplicationProperties)(platform)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, SpanBlue } from "../../../../../components/Highlight";
 import db_init_5 from "../../../../../assets/db_init_5.jpg";
 
 const O4_DBInitPlatform = ({ anchor }: { anchor: string }) => {
@@ -28,7 +28,7 @@ const O4_DBInitPlatform = ({ anchor }: { anchor: string }) => {
       <DivDoubleBorder>Example</DivDoubleBorder>
       <div className="ml-5">
         config <SpanBlue>application.properties</SpanBlue> like this (Note : the name is case sensitive)
-        <ApplicationPropertiesHighlight propertiesCode="spring.sql.init.platform=MySql" />
+        <Highlight_ApplicationProperties propertiesCode="spring.sql.init.platform=MySql" />
       </div>
       <div>
         With this setting, Spring Boot will look for:

@@ -4,7 +4,7 @@
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
 import security_refresh_db_1 from "../../../../../assets/security_refresh_db_1.jpg";
-import { JavaHighlight, SpanYellow, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 
 const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
   return (
@@ -127,7 +127,7 @@ const O0_IntroRefreshTokenInDBRotation = ({ anchor }: { anchor: string }) => {
           <Li>Scheduled cleanup job:</Li>
           <Li>This keeps the DB small.</Li>
         </ULdisc>
-        <JavaHighlight javaCode={cron}></JavaHighlight>
+        <Highlight_JAVA code={cron}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

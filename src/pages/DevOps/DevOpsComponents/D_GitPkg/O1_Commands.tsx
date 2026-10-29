@@ -3,7 +3,7 @@
 
 */
 import { GitHub, GitHubLiAnchor, MainChildArea } from "../../../../components";
-import { BatchHighlight, SpanGrey } from "../../../../components/Highlight";
+import { Highlight_BATCH, SpanGrey } from "../../../../components/Highlight";
 
 const O1_Commands = ({ anchor }: { anchor: string }) => {
   return (
@@ -11,7 +11,7 @@ const O1_Commands = ({ anchor }: { anchor: string }) => {
       <section>
         <article className="my-8">
           <SpanGrey>Git_all.bat</SpanGrey> script , that runs several commands
-          <BatchHighlight batchCode={git_commands}></BatchHighlight>
+          <Highlight_BATCH batchCode={git_commands}></Highlight_BATCH>
         </article>
         <GitHub>
           <GitHubLiAnchor

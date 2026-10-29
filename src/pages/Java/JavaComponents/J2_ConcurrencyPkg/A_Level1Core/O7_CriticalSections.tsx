@@ -3,7 +3,7 @@
 
 */
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O7_CriticalSections = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,15 +17,15 @@ const O7_CriticalSections = ({ anchor }: { anchor: string }) => {
           </div>
           <div>
             In example in Race Condition, this is the critical section:
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
             because counter is shared by all 10 threads:
-            <JavaHighlight javaCode={_2_} />
+            <Highlight_JAVA code={_2_} />
             All threads operate on the same rcc object, so they operate on the same counter.
           </div>
           <Question>Why is counter++ a critical section?</Question>
           <Answer>
             Although it looks like one statement:
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
             it involves multiple operations:
             <ULdisc>
               <Li> Read counter</Li>

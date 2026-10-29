@@ -3,7 +3,7 @@
 Pojo As Json --> (SPRING)(Logging)(LogUtil)
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanBlue, SpanGreen, SpanRed } from "../../../../../components/Highlight";
 
 const PojoAsJson = ({ anchor }: { anchor: string }) => {
   return (
@@ -59,10 +59,10 @@ const PojoAsJson = ({ anchor }: { anchor: string }) => {
         <ul className="mx-8 list-disc"></ul>
       </div>
       <div className="my-5">Code , converting a POJO to JSON using Jackson</div>
-      <JavaHighlight javaCode={pojoAsJsonCode} />
+      <Highlight_JAVA code={pojoAsJsonCode} />
 
       <div className="my-5">here is how I present the POJO ,as JSON in console</div>
-      <JavaHighlight javaCode={jsonPresentationCode} />
+      <Highlight_JAVA code={jsonPresentationCode} />
     </MainChildArea>
   );
 };

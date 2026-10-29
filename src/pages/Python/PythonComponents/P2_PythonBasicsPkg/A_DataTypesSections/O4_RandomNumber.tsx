@@ -1,5 +1,5 @@
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext } from "../../../../../components/Highlight";
 
 const O4_RandomNumber = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O4_RandomNumber = ({ anchor }: { anchor: string }) => {
             <Redtext>random</Redtext> that can be used to make random numbers:
           </p>
           Import the random module, and display a random number from 1 to 9:
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </article>
       </section>
     </MainChildArea>

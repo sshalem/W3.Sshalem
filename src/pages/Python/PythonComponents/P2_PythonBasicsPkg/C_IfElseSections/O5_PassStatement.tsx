@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext } from "../../../../../components/Highlight";
 
 const O5_PassStatement = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,9 +25,9 @@ const O5_PassStatement = ({ anchor }: { anchor: string }) => {
               expects a statement, not just a comment.
             </Li>
           </ULdisc>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
           We can use <Redtext>Pass</Redtext> in a function :
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </article>
       </section>
     </MainChildArea>

@@ -6,7 +6,7 @@ import { Anchor, IMG, MainChildArea } from "../../../../../components";
 import security_10 from "../../../../../assets/security_10.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { ApplicationPropertiesHighlight, SpanBlue, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
   return (
@@ -66,7 +66,7 @@ const O2_ApplicationProperties = ({ anchor }: { anchor: string }) => {
         </article>
         <IMG img_name={security_10}></IMG>
         Code of main <SpanYellow>application.properties</SpanYellow> where I define which environment (DB) ichoose to work with
-        <ApplicationPropertiesHighlight propertiesCode={properties_mains}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={properties_mains}></Highlight_ApplicationProperties>
       </section>
     </MainChildArea>
   );

@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_PostgresCreateDataSqlFile = ({ anchor }: { anchor: string }) => {
   return (
@@ -23,7 +23,7 @@ const O2_PostgresCreateDataSqlFile = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Copy/Paste the SQL code
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
         </ULdisc>
       </section>

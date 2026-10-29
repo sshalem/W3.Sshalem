@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_RawResponse = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const O1_RawResponse = ({ anchor }: { anchor: string }) => {
             I use the <SpanYellow>Response</SpanYellow> class
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

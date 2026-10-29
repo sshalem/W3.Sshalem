@@ -3,7 +3,7 @@
 Pagniation --> (SPRING)(JPA)(pagination sort)
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey, SpanRed, SpanTeal } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey, SpanRed, SpanTeal } from "../../../../../components/Highlight";
 
 const O1_IntroPaginSort = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,15 +29,15 @@ const O1_IntroPaginSort = ({ anchor }: { anchor: string }) => {
               <ULdisc>
                 <Li>
                   <SpanGrey>Page{"<T>"}</SpanGrey> - A full paginated result including total count, total pages, current page, etc.{" "}
-                  <JavaHighlight javaCode={PAGE}></JavaHighlight>
+                  <Highlight_JAVA code={PAGE}></Highlight_JAVA>
                 </Li>
                 <Li>
                   <SpanGrey>Slice{"<T>"}</SpanGrey> - includes info about next/previous page but not total count (better performance). ({" "}
-                  <strong>A lightweight version of Page</strong> )<JavaHighlight javaCode={SLICE}></JavaHighlight>
+                  <strong>A lightweight version of Page</strong> )<Highlight_JAVA code={SLICE}></Highlight_JAVA>
                 </Li>
                 <Li>
                   <SpanGrey>List{"<T>"}</SpanGrey> - Just a list of items for the given page, without any pagination metadata.
-                  <JavaHighlight javaCode={LIST}></JavaHighlight>
+                  <Highlight_JAVA code={LIST}></Highlight_JAVA>
                 </Li>
               </ULdisc>
             </Li>

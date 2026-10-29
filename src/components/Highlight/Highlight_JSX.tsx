@@ -8,11 +8,11 @@ import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark
 
 PrismLightSyntaxHighlighter.registerLanguage("jsx", jsx);
 
-const Highlight_JSX = ({ jsxCode }: { jsxCode: string }) => {
+const Highlight_JSX = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(jsxCode);
+    navigator.clipboard.writeText(code);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -39,7 +39,7 @@ const Highlight_JSX = ({ jsxCode }: { jsxCode: string }) => {
             borderRadius: "5px",
           }}
         >
-          {jsxCode}
+          {code}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>

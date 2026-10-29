@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_PassPropsInterfaceType = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O3_PassPropsInterfaceType = ({ anchor }: { anchor: string }) => {
           <Li>You want the parent to have flexibility.</Li>
         </ULdisc>
         <DivDoubleBorder>Parent Component:</DivDoubleBorder>
-        <JsxHighlight jsxCode={_1_}></JsxHighlight>
+        <Highlight_JSX code={_1_}></Highlight_JSX>
         <DivDoubleBorder>Child Component:</DivDoubleBorder>
         <ULdisc>
           <Li>
@@ -35,7 +35,7 @@ const O3_PassPropsInterfaceType = ({ anchor }: { anchor: string }) => {
             or a <strong>type</strong>
           </Li>
         </ULdisc>
-        <JsxHighlight jsxCode={_2_}></JsxHighlight>
+        <Highlight_JSX code={_2_}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

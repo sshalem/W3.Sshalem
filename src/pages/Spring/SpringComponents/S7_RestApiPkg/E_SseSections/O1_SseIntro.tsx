@@ -4,7 +4,7 @@ SSE ServerSendEventIntro --> (SPRING)(rest)(SSE)
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O1_SseIntro = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const O1_SseIntro = ({ anchor }: { anchor: string }) => {
           <Li></Li>
           <Li></Li>
         </ULdisc>
-        <JavaHighlight javaCode={batch}></JavaHighlight>
+        <Highlight_JAVA code={batch}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JSX, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 
 const O4_Type = ({ anchor }: { anchor: string }) => {
   return (
@@ -37,19 +37,19 @@ const O4_Type = ({ anchor }: { anchor: string }) => {
       🔤 <strong>Basic Example</strong>
       <br />
       This defines a type User that describes an object with name and age.
-      <JsxHighlight jsxCode={type_object}></JsxHighlight>
+      <Highlight_JSX code={type_object}></Highlight_JSX>
       🔗 <strong>Union Type Example</strong>
       <br />
       This means Status can only be one of those three string values.
-      <JsxHighlight jsxCode={type_union}></JsxHighlight>
+      <Highlight_JSX code={type_union}></Highlight_JSX>
       🧠 <strong>Function Type Example</strong>
       <br />
       This defines a type for a function that takes a string and returns a string.
-      <JsxHighlight jsxCode={type_function}></JsxHighlight>
+      <Highlight_JSX code={type_function}></Highlight_JSX>
       🧩 <strong>Combining Types with union</strong>
       <br />
       You can use type to combine multiple types:
-      <JsxHighlight jsxCode={type_combine}></JsxHighlight>
+      <Highlight_JSX code={type_combine}></Highlight_JSX>
       <DivDoubleBorder>union , or type union</DivDoubleBorder>
     </MainChildArea>
   );

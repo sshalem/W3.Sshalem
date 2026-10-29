@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_BuildPhaseBoot2 = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +28,7 @@ const O3_BuildPhaseBoot2 = ({ anchor }: { anchor: string }) => {
         <hr />
 
         <p className="my-8 text-lg">🔹 Recommended Folder Structure</p>
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
         <ULDecimal>
           <Li>
             🔹 PHASE 1 — Build Business Services (No Cloud Yet)

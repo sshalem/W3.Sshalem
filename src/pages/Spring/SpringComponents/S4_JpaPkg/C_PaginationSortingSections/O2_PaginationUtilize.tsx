@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_PaginationUtilize = ({ anchor }: { anchor: string }) => {
   return (
@@ -38,9 +38,9 @@ const O2_PaginationUtilize = ({ anchor }: { anchor: string }) => {
                 <SpanGrey>Page{"<T>"} result</SpanGrey> - SQL Uses both <SpanGrey>SELECT + COUNT</SpanGrey> queries , Holds data + metadata
               </Li>
             </ULdisc>
-            <JavaHighlight javaCode={sql_query}></JavaHighlight>
+            <Highlight_JAVA code={sql_query}></Highlight_JAVA>
             Repository & Controller code
-            <JavaHighlight javaCode={example_with_controller}></JavaHighlight>
+            <Highlight_JAVA code={example_with_controller}></Highlight_JAVA>
           </div>
         </article>
       </section>
@@ -55,7 +55,7 @@ const O2_PaginationUtilize = ({ anchor }: { anchor: string }) => {
           </p>
           <div className="my-4">
             This returns a JSON like:
-            <JavaHighlight javaCode={json_repsonse}></JavaHighlight>
+            <Highlight_JAVA code={json_repsonse}></Highlight_JAVA>
             <ULDecimal>
               <Li>
                 <SpanGrey>content</SpanGrey> ➡️ The actual data list returned for the current page. For example, if you’re requesting page 0 with size

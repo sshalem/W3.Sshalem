@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O4_elseStatement = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O4_elseStatement = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <p className="my-4 text-2xl">⭐ else statement</p>
 
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </article>
       </section>
     </MainChildArea>

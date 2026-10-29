@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O3_elifStatement = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O3_elifStatement = ({ anchor }: { anchor: string }) => {
         <article className="my-8">
           <p className="my-4 text-2xl">⭐ elif statement</p>
           elif is actually like JAVA's else if , but in one word
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </article>
       </section>
     </MainChildArea>

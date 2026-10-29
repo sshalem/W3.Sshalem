@@ -3,7 +3,7 @@
 json object --> (SPRING)(Logging)(LogUtil)
 */
 import { MainChildArea } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, SpanBlue } from "../../../../../components/Highlight";
 
 const JsonObject = ({ anchor }: { anchor: string }) => {
   return (
@@ -30,13 +30,13 @@ const JsonObject = ({ anchor }: { anchor: string }) => {
       </div>
       <DivDoubleBorder>example of JSON presentation</DivDoubleBorder>
       <div className="my-5">simple json presentation</div>
-      <JavaHighlight javaCode={simpleJsonCode} />
+      <Highlight_JAVA code={simpleJsonCode} />
 
       <div className="my-5">nested Json Object presentation</div>
-      <JavaHighlight javaCode={nestedJsonObjectCode} />
+      <Highlight_JAVA code={nestedJsonObjectCode} />
 
       <div className="my-5">nested Json Object with Array</div>
-      <JavaHighlight javaCode={nestedJsonObjectArrayCode} />
+      <Highlight_JAVA code={nestedJsonObjectArrayCode} />
     </MainChildArea>
   );
 };

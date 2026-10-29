@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_MapMerger = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O1_MapMerger = ({ anchor }: { anchor: string }) => {
         <article>
           <p>merging two maps is not a trivial task.</p>
           <p>consider the following example :</p>
-          <JavaHighlight javaCode={code}></JavaHighlight>
+          <Highlight_JAVA code={code}></Highlight_JAVA>
         </article>
         <p className="my-4">
           the result of : <SpanGrey>map1.putAll(map2)</SpanGrey> will result with one value for <strong>"key1"</strong> overriding the other value.

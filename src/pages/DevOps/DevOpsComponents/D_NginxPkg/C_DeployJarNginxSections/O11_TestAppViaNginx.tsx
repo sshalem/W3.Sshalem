@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow, SpanRed } from "../../../../../components/Highlight";
 
 const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
         <div className="my-4 text-xl"> Check my app running via (behind) NGINX</div>
         <p className="text-lg">1️⃣ Verify the JAR (Spring Boot) is running, If you use systemd (recommended)</p>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
           <Li>I should see:</Li>
           <ULdisc>
             <Li>
@@ -20,13 +20,13 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>Java process listed</Li>
           </ULdisc>
-          {/* <ApplicationPropertiesHighlight propertiesCode={_17_} /> */}
+          {/* <Highlight_ApplicationProperties code={_17_} /> */}
         </ULdisc>
         <hr />
         <p className="my-8 text-lg">2️⃣ Verify the application is listening on a port</p>
         <ULdisc>
           <Li>Check which port your app uses (example: 8080):</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
           <Li>Expected:</Li>
           <Li>
             <SpanRed>Important</SpanRed>
@@ -37,7 +37,7 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
               <Li>NGINX will forward traffic to it</Li>
             </ULdisc>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
         </ULdisc>
         <hr />
         <p className="my-8 text-lg">3️⃣ Test the app </p>
@@ -50,11 +50,11 @@ const O11_TestAppViaNginx = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             or use the <SpanYellow>curl</SpanYellow>command (Built in Linux)
-            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            <Highlight_ApplicationProperties code={_4_} />
           </Li>
           <Li>
             Full verification List commands
-            <ApplicationPropertiesHighlight propertiesCode={_5_} />
+            <Highlight_ApplicationProperties code={_5_} />
           </Li>
         </ULdisc>
       </section>

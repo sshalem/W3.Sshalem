@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_DefaultConvention = ({ anchor }: { anchor: string }) => {
   return (
@@ -36,7 +36,7 @@ const O5_DefaultConvention = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Li>
         </ULdisc>
-        <PythonHighlight pythonCode={_1_}></PythonHighlight>
+        <Highlight_PYTHON code={_1_}></Highlight_PYTHON>
       </section>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 
 */
 import { Answer, Li, MainChildArea, Question, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 
 const O8_5_monitor = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O8_5_monitor = ({ anchor }: { anchor: string }) => {
               </ULdisc>
               <Li>
                 For example:
-                <JavaHighlight javaCode={_1_} />
+                <Highlight_JAVA code={_1_} />
                 conceptually means:
                 <ULDecimal>
                   <Li>
@@ -41,13 +41,13 @@ const O8_5_monitor = ({ anchor }: { anchor: string }) => {
             </ULdisc>
           </Answer>
           think of the monitor as the synchronization mechanism/state associated with the object.
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
           SO when we do
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
           the JVM essentially does:
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
           Once Thread A owns it:
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Highlight_ApplicationProperties code={_4_} />
           Then Thread A executes the synchronized code.
         </article>
       </section>

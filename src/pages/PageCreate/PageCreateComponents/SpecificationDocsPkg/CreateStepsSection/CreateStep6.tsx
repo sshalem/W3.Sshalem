@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue, SpanGreen } from "../../../../../components/Highlight";
 
 import page_create_8 from "../../../../../assets/page_create_8.jpg";
 import page_create_11 from "../../../../../assets/page_create_11.jpg";
@@ -32,7 +32,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
             </div>
             <IMG img_name={page_create_12}></IMG>
             <SpanBlue>CppBasics.tsx</SpanBlue> code :
-            <JsxHighlight jsxCode={jsxCode_fundamental_concepts} />
+            <Highlight_JSX code={jsxCode_fundamental_concepts} />
           </li>
 
           <li className="my-1">
@@ -65,7 +65,7 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
               </li>
               <div className="my-8"></div>
               <SpanBlue>Z_DropDownTemplate</SpanBlue> code :
-              <JsxHighlight jsxCode={jsxCode_Z_DropDown} />
+              <Highlight_JSX code={jsxCode_Z_DropDown} />
             </ul>
           </li>
           <li className="my-1">
@@ -80,11 +80,11 @@ const CreateStep6 = ({ anchor }: { anchor: string }) => {
               </li>
             </ul>
             <div className="my-3"></div>
-            <JsxHighlight jsxCode={jsxCode_APP_with_fundamentalConcepts} />
+            <Highlight_JSX code={jsxCode_APP_with_fundamentalConcepts} />
           </li>
           <li className="my-1">
             import <SpanBlue>DropDownCppBasics</SpanBlue> component , to <SpanBlue>Cpp_page</SpanBlue>.
-            <JsxHighlight jsxCode={jsxCode_C_plus_plus_with_DropDown} />
+            <Highlight_JSX code={jsxCode_C_plus_plus_with_DropDown} />
           </li>
         </ul>
         Now we got the layout we want :<IMG img_name={page_create_11}></IMG>

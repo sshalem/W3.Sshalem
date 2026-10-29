@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_clone = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O5_clone = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

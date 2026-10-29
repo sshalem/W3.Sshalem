@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_TextStr = ({ anchor }: { anchor: string }) => {
   return (
@@ -16,12 +16,12 @@ const O5_TextStr = ({ anchor }: { anchor: string }) => {
           <Li>
             <Redtext>'hello'</Redtext> is the same as <Redtext>"hello"</Redtext>
           </Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
         <article className="my-8">
           <p className="my-4 text-2xl">🔍 Quotes Inside Quotes</p>
           <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </article>
         {/*  */}
         <article className="my-8">
@@ -30,7 +30,7 @@ const O5_TextStr = ({ anchor }: { anchor: string }) => {
             <Li>we cannot combine strings and numbers like this, we can only concatanate str with str</Li>
             <Li>
               But we can combine strings and numbers by using <SpanYellow>f-strings</SpanYellow> or the <Redtext>format()</Redtext> method!
-              <PythonHighlight pythonCode={_3_} />
+              <Highlight_PYTHON code={_3_} />
             </Li>
             <Li>
               <SpanYellow>f-strings</SpanYellow> was introduced in <Redtext>Python 3.6</Redtext>, and is now the preferred way of formatting strings.
@@ -38,7 +38,7 @@ const O5_TextStr = ({ anchor }: { anchor: string }) => {
             <Li>
               To specify a string as an <SpanYellow>f-string</SpanYellow>, simply put an <Redtext>f</Redtext> in front of the string literal, and add
               curly brackets <Redtext>{}</Redtext> as placeholders for variables and other operations.
-              <PythonHighlight pythonCode={_4_} />
+              <Highlight_PYTHON code={_4_} />
             </Li>
           </ULdisc>
         </article>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, Redtext } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Redtext } from "../../../../../components/Highlight";
 
 const O8_7_ObjectLock = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,10 +19,10 @@ const O8_7_ObjectLock = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               using a private lock is often preferable, "Before entering this block, acquire the monitor associated with lock." :
-              <JavaHighlight javaCode={_2_} />
+              <Highlight_JAVA code={_2_} />
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={_1_} />
+          <Highlight_JAVA code={_1_} />
         </article>
       </section>
     </MainChildArea>

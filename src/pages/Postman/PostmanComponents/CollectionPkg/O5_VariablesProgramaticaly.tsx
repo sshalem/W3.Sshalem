@@ -6,7 +6,7 @@ import { IMG, MainChildArea } from "../../../../components";
 import Li from "../../../../components/ui/Li";
 import ULdisc from "../../../../components/ui/ULdisc";
 import postman_4 from "../../../../assets/postman_4.jpg";
-import { JavaHighlight } from "../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../components/Highlight";
 
 const O5_VariablesProgramaticaly = ({ anchor }: { anchor: string }) => {
   return (
@@ -25,7 +25,7 @@ const O5_VariablesProgramaticaly = ({ anchor }: { anchor: string }) => {
               Example , after sending Post request to <strong>Login</strong>, I want to update the variable <strong>accessToken</strong>{" "}
               programaticaly. <br />
               Thus, I will write a script in the <strong>Post-response</strong> of the request to handle the data I get of the response
-              <JavaHighlight javaCode={code}></JavaHighlight>
+              <Highlight_JAVA code={code}></Highlight_JAVA>
             </Li>
             <IMG img_name={postman_4}></IMG>
           </ULdisc>

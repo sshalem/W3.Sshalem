@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 import python_31 from "../../../../../assets/python_31.jpg";
 import python_33 from "../../../../../assets/python_33.jpg";
 
@@ -18,7 +18,7 @@ const O5_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
           In the terminal, go to the folder where <SpanGrey>main.py</SpanGrey> is located and run:
         </div>
         <ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
         Explanation:
         <ULdisc>
@@ -38,7 +38,7 @@ const O5_HowToRunFastApi = ({ anchor }: { anchor: string }) => {
             Optional: <SpanGrey>--port 8000</SpanGrey> to change port
           </Li>
           <Li>Full example:</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_2_} />
+          <Highlight_ApplicationProperties code={_2_} />
         </ULdisc>
       </section>
       <hr />

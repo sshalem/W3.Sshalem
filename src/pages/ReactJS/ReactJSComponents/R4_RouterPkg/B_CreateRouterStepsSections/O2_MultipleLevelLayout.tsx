@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JsxHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_MultipleLevelLayout = ({ anchor }: { anchor: string }) => {
   return (
@@ -35,11 +35,11 @@ const O2_MultipleLevelLayout = ({ anchor }: { anchor: string }) => {
               <Redtext>/temp/about</Redtext> - <Redtext>TempAbout</Redtext>
             </Li>
           </ULdisc>
-          <JsxHighlight jsxCode={_1_}></JsxHighlight>
+          <Highlight_JSX code={_1_}></Highlight_JSX>
         </Li>
         <Li>
           Inside both <Redtext>MainLayout</Redtext> and <Redtext>MainTemp</Redtext> we must use:
-          <JsxHighlight jsxCode={_2_}></JsxHighlight>
+          <Highlight_JSX code={_2_}></Highlight_JSX>
         </Li>
       </ULDecimal>
     </MainChildArea>

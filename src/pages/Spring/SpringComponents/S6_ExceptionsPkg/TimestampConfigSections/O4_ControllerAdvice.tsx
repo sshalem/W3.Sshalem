@@ -3,14 +3,14 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O4_ControllerAdvice = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section>
         If you build custom exception responses, you can directly control the timestamp. <br />
-        <JavaHighlight javaCode={code}></JavaHighlight>
+        <Highlight_JAVA code={code}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

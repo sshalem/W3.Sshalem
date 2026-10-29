@@ -5,7 +5,7 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
 import maven_1 from "../../../../../assets/maven_1.jpg";
 import Table_3ColCompareMaven from "../../../../../components/Tables/Table_3ColCompareMaven";
-import { ApplicationPropertiesHighlight, SpanGrey, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey, Highlight_XML } from "../../../../../components/Highlight";
 
 const O1_CreateJar = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,7 +27,7 @@ const O1_CreateJar = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               Run command :
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+              <Highlight_ApplicationProperties code={mvn_clean_package} />
             </Li>
             <Li>
               Example : <SpanGrey>O1-Audit-Spring-JPA-0.0.1-SNAPSHOT.jar</SpanGrey> where:
@@ -57,7 +57,7 @@ const O1_CreateJar = ({ anchor }: { anchor: string }) => {
             <Li>
               this results file name in this format <SpanGrey>custom-app-name.jar</SpanGrey>
             </Li>
-            <XmlHighlight xmlCode={custom_app_name} />
+            <Highlight_XML xmlCode={custom_app_name} />
           </ULdisc>
         </article>
 
@@ -75,15 +75,15 @@ const O1_CreateJar = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               In the tag of <strong>{"<build>"}</strong> , add the following tag <SpanGrey>{"<finalName>${jar.customAppName}</finalName>"}</SpanGrey>
-              <XmlHighlight xmlCode={wired_custom_name} />
+              <Highlight_XML xmlCode={wired_custom_name} />
             </Li>
             <Li>
               We run it with following command jar file will be <SpanGrey>shalem.jar</SpanGrey>
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package_custom_name} />
+              <Highlight_ApplicationProperties code={mvn_clean_package_custom_name} />
             </Li>
             <Li>
               But, If we run without modifing in CLI , It will give the default name of <SpanGrey>my-custom-app.jar</SpanGrey>
-              <ApplicationPropertiesHighlight propertiesCode={mvn_clean_package} />
+              <Highlight_ApplicationProperties code={mvn_clean_package} />
             </Li>
           </ULdisc>
         </article>

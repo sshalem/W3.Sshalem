@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 
@@ -22,9 +22,9 @@ const O2_GlobalJacksonConfig = ({ anchor }: { anchor: string }) => {
           </ULdisc>
         </div>
         <DivDoubleBorder>✅ Option 1 : application.properties </DivDoubleBorder>
-        <ApplicationPropertiesHighlight propertiesCode={code}></ApplicationPropertiesHighlight>
+        <Highlight_ApplicationProperties code={code}></Highlight_ApplicationProperties>
         <DivDoubleBorder>✅ Option 2 : Java Config (fine-grained control) </DivDoubleBorder>
-        <JavaHighlight javaCode={java}></JavaHighlight>
+        <Highlight_JAVA code={java}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

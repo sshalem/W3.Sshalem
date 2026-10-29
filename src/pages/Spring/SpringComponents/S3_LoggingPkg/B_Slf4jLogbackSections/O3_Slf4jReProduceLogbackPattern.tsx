@@ -3,7 +3,7 @@
 Slf4j ReProduce Logback Pattern --> (SPRING)(Logging)(Slf4j (Logback))
 */
 import { MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanBlue } from "../../../../../components/Highlight";
 
 const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,11 +24,11 @@ const Slf4jReProduceLogbackPattern = ({ anchor }: { anchor: string }) => {
           This line of logger creates same format of logging in <SpanBlue>spring console</SpanBlue> :
         </div>
         <div>
-          <ApplicationPropertiesHighlight propertiesCode={loggingReProduce} />
+          <Highlight_ApplicationProperties code={loggingReProduce} />
         </div>
 
         <div className="my-8">Here is another way to config the pattern </div>
-        <ApplicationPropertiesHighlight propertiesCode={anotherWayCode} />
+        <Highlight_ApplicationProperties code={anotherWayCode} />
         <div className="my-8">logging.pattern.console exlpained:</div>
         <ul className="mx-8 list-decimal">
           <li className="my-1">

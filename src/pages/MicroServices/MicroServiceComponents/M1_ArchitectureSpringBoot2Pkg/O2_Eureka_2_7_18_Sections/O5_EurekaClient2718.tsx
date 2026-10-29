@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanRed, SpanYellow, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanRed, SpanYellow, Highlight_XML } from "../../../../../components/Highlight";
 import microservice_11 from "../../../../../assets/microservice_11.jpg";
 
 const O5_EurekaClient2718 = ({ anchor }: { anchor: string }) => {
@@ -50,15 +50,15 @@ const O5_EurekaClient2718 = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>
               Copy and paste this to the <SpanYellow>{"<properties>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_1_} />
+              <Highlight_XML xmlCode={_1_} />
             </Li>
             <Li>
               Copy and paste the Dependeny , Inside the <SpanYellow>{"<dependencies>"}</SpanYellow> tag
-              <XmlHighlight xmlCode={_2_} />
+              <Highlight_XML xmlCode={_2_} />
             </Li>
             <Li>
               Copy and paste the <SpanYellow>{"<dependencyManagement>"}</SpanYellow> , after <SpanYellow>{"<dependencies>"}</SpanYellow> tag is closed
-              <XmlHighlight xmlCode={_3_} />
+              <Highlight_XML xmlCode={_3_} />
             </Li>
           </ULdisc>
         </article>
@@ -98,21 +98,21 @@ const O5_EurekaClient2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>because Eureka automatically converts it to uppercase.</Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_4_} />
+          <Highlight_ApplicationProperties code={_4_} />
           <ULdisc>
             What actually happens when the service starts{" "}
             <ULDecimal>
               <Li>
                 It reads
-                <ApplicationPropertiesHighlight propertiesCode={_5_} />
+                <Highlight_ApplicationProperties code={_5_} />
               </Li>
               <Li>
                 It sends a registration request to Eureka ,example:
-                <ApplicationPropertiesHighlight propertiesCode={_6_} />
+                <Highlight_ApplicationProperties code={_6_} />
               </Li>
               <Li>
                 Eureka stores it in the service registry.
-                <ApplicationPropertiesHighlight propertiesCode={_7_} />
+                <Highlight_ApplicationProperties code={_7_} />
               </Li>
             </ULDecimal>
           </ULdisc>

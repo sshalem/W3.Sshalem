@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanGrey } from "../../../../../components/Highlight";
 
 const O3_CreateScriptsFolder = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O3_CreateScriptsFolder = ({ anchor }: { anchor: string }) => {
         </ULdisc>
 
         <div className="my-4">📁 Folder structure example</div>
-        <JsxHighlight jsxCode={scripts_folder}></JsxHighlight>
+        <Highlight_JSX code={scripts_folder}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, PythonHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Spring Boot gives you this automatically:
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>
             FastAPI says:{" "}
@@ -51,19 +51,19 @@ const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         In Spring Boot, if I throw an exception and don’t catch it, the default error handler returns a JSON body with details (unless you override
         it).
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
         In FastAPI, the behavior is a bit different:
         <ULdisc>
           <Li>
             If I raise an exception(e.g., <mark>RuntimeError</mark> )
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
           <Li>
             FastAPI returns <SpanGrey>HTTP 500</SpanGrey> with a generic body like below
           </Li>
           <Li>It does not expose the exception message by default (for safety).</Li>
           <Li>The front End (Postman for example) will see the message below, and pythin console will show trace of the error</Li>
-          <PythonHighlight pythonCode={_3_} />
+          <Highlight_PYTHON code={_3_} />
         </ULdisc>
       </section>
       <hr />
@@ -72,8 +72,8 @@ const O1_DefaultBehavior = ({ anchor }: { anchor: string }) => {
         <h2 className="my-8 text-xl font-semibold">✅ HTTPException</h2>
         <ULdisc>
           <Li>
-            If you raise <SpanGrey>HTTPException</SpanGrey>, <PythonHighlight pythonCode={_4_} />
-            FastAPI send the message , Example Postman shows message of <ApplicationPropertiesHighlight propertiesCode={_5_} />
+            If you raise <SpanGrey>HTTPException</SpanGrey>, <Highlight_PYTHON code={_4_} />
+            FastAPI send the message , Example Postman shows message of <Highlight_ApplicationProperties code={_5_} />
           </Li>
         </ULdisc>
       </section>

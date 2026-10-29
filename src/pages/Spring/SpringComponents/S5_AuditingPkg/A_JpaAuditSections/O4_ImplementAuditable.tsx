@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O4_ImplementAuditable = ({ anchor }: { anchor: string }) => {
   return (
@@ -22,7 +22,7 @@ const O4_ImplementAuditable = ({ anchor }: { anchor: string }) => {
               ></Anchor>
             </p>
           </Li>
-          <JavaHighlight javaCode={entity}></JavaHighlight>
+          <Highlight_JAVA code={entity}></Highlight_JAVA>
         </ULdisc>
       </article>
     </MainChildArea>

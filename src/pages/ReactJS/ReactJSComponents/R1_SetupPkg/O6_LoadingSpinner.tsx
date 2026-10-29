@@ -3,14 +3,14 @@
 
 */
 import { MainChildArea } from "../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../components/Highlight";
 
 const O6_LoadingSpinner = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <div>
         Let's created a <SpanBlue>Loading</SpanBlue> component, where I use it while fecthing data from server
-        <JsxHighlight jsxCode={loading}></JsxHighlight>
+        <Highlight_JSX code={loading}></Highlight_JSX>
       </div>
     </MainChildArea>
   );

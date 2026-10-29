@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import TableTwoColCompareTransactionException from "../../../../../components/Tables/Table_2ColCompareTransactionException";
 
 const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
@@ -52,7 +52,7 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
               Outcome : ❌ The saved Entity is <SpanGrey>rolled back</SpanGrey> (not persisted)
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={rollback_default}></JavaHighlight>
+          <Highlight_JAVA code={rollback_default}></Highlight_JAVA>
         </article>
         <article>
           <div className="my-8 text-2xl font-semibold"> ✔ Example — Commit even if failure happens</div>
@@ -62,7 +62,7 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
               Because <SpanGrey>checked exceptions</SpanGrey> don’t trigger rollback <strong>unless</strong> configured.
             </Li>
           </ULdisc>
-          <JavaHighlight javaCode={commit}></JavaHighlight>
+          <Highlight_JAVA code={commit}></Highlight_JAVA>
         </article>
         <article>
           <div className="my-8 text-2xl font-semibold"> 🎯 How to control rollback behavior manually</div>
@@ -72,14 +72,14 @@ const O9_TransactionalWithException = ({ anchor }: { anchor: string }) => {
           <ULdisc>
             <Li>→ Rollback happens</Li>
           </ULdisc>
-          <JavaHighlight javaCode={checked_exception}></JavaHighlight>
+          <Highlight_JAVA code={checked_exception}></Highlight_JAVA>
           <p>
             <SpanRed>Prevent</SpanRed> <strong>rollback</strong> for <SpanGrey>Runtime Exceptions</SpanGrey>:
           </p>
           <ULdisc>
             <Li>→ Commit still happens</Li>
           </ULdisc>
-          <JavaHighlight javaCode={prevent_rollback}></JavaHighlight>
+          <Highlight_JAVA code={prevent_rollback}></Highlight_JAVA>
         </article>
       </section>
     </MainChildArea>

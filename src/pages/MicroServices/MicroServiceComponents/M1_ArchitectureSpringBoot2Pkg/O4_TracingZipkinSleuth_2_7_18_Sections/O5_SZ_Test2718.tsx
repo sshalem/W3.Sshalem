@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O5_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -29,7 +29,7 @@ const O5_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
               </Li>
               <Li>
                 Run Zipkin server
-                <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                <Highlight_ApplicationProperties code={_1_} />
               </Li>
               <Li>Run Api Gateway (Port 5001)</Li>
               <Li>Customer x2 instances</Li>
@@ -47,7 +47,7 @@ const O5_SZ_Test2718 = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             In order to see which port of order-service runs , add following code :
-            <JavaHighlight javaCode={_2_} />
+            <Highlight_JAVA code={_2_} />
           </Li>
           <Li>For runtime code (controllers/services), the recommended approach is to get the port from the running web server context.</Li>
           <Li>For Random port , above code won't work , need its different code</Li>

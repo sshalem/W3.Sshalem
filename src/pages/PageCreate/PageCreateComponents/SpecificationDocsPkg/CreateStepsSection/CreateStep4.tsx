@@ -3,7 +3,7 @@
 
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { JsxHighlight, SpanBlue } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanBlue } from "../../../../../components/Highlight";
 import page_create_5 from "../../../../../assets/page_create_5.jpg";
 
 const CreateStep4 = ({ anchor }: { anchor: string }) => {
@@ -31,7 +31,7 @@ const CreateStep4 = ({ anchor }: { anchor: string }) => {
         <div>This is how page looks at this point, (continue with step 5)</div>
         <IMG img_name={page_create_5}></IMG>
         Here is <SpanBlue>Cpp_page.tsx</SpanBlue> code
-        <JsxHighlight jsxCode={jsxPage_Template}></JsxHighlight>
+        <Highlight_JSX code={jsxPage_Template}></Highlight_JSX>
       </article>
     </MainChildArea>
   );

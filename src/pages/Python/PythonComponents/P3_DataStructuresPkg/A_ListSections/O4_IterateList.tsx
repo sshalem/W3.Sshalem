@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O4_IterateList = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O4_IterateList = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Simple List
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
         </ULdisc>
       </section>
@@ -23,7 +23,7 @@ const O4_IterateList = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             List of objects
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>
@@ -33,11 +33,11 @@ const O4_IterateList = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             List of Tuple
-            <PythonHighlight pythonCode={_3_} />
+            <Highlight_PYTHON code={_3_} />
           </Li>
           <Li>
             List of Unknown size of tuple
-            <PythonHighlight pythonCode={_4_} />
+            <Highlight_PYTHON code={_4_} />
           </Li>
         </ULdisc>
       </section>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O5_SingletonBestPerfromance = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O5_SingletonBestPerfromance = ({ anchor }: { anchor: string }) => {
           <Li>✔ Better performance</Li>
           <Li>✔ Lazy initialization</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

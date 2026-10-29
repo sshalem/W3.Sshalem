@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight, Redtext, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA, Redtext, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 import Thread_2 from "../../../../../assets/Thread_2.jpg";
 
 const O3_CreateThread = ({ anchor }: { anchor: string }) => {
@@ -31,7 +31,7 @@ const O3_CreateThread = ({ anchor }: { anchor: string }) => {
             write the code inside the <SpanYellow>run()</SpanYellow> method
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         <ULdisc>
           <Li>
             Create instance of <SpanYellow>MyRunnable</SpanYellow> class
@@ -50,9 +50,9 @@ const O3_CreateThread = ({ anchor }: { anchor: string }) => {
             <Redtext>Important</Redtext> : A Thread object can be started only once.
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
         Shorter way
-        <JavaHighlight javaCode={_3_} />
+        <Highlight_JAVA code={_3_} />
       </section>
     </MainChildArea>
   );

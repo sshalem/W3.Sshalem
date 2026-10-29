@@ -3,7 +3,7 @@
 Slf4j Util --> (SPRING)(Logging)(Slf4j (Logback))
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight, SpanBlue, XmlHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanBlue, Highlight_XML } from "../../../../../components/Highlight";
 
 const Slf4jUtil = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
             for example : <SpanBlue> web starter depenency</SpanBlue>
           </div>
           <div className="my-5">Add to POM file</div>
-          <XmlHighlight xmlCode={dependency} />
+          <Highlight_XML xmlCode={dependency} />
         </div>
       </section>
       {/*  */}
@@ -35,7 +35,7 @@ const Slf4jUtil = ({ anchor }: { anchor: string }) => {
           </li>
         </ul>
         <div className="my-5">
-          <JavaHighlight javaCode={javaCodeLogExample} />
+          <Highlight_JAVA code={javaCodeLogExample} />
         </div>
       </section>
       {/*  */}

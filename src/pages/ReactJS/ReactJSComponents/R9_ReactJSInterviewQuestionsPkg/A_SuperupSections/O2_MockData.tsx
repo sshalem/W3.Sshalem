@@ -4,13 +4,13 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight } from "../../../../../components/Highlight";
+import { Highlight_JSX } from "../../../../../components/Highlight";
 
 const O2_MockData = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <JsxHighlight jsxCode={mockdata}></JsxHighlight>
+        <Highlight_JSX code={mockdata}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

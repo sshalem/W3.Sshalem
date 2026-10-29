@@ -4,7 +4,7 @@
 */
 
 import { MainChildArea } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O7_QueryEnumParameters = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O7_QueryEnumParameters = ({ anchor }: { anchor: string }) => {
       <section className="my-8">
         GET with <SpanYellow>query ENUM parameters</SpanYellow> <br />
         Via Postman send the url request as follows : <SpanYellow>localhost:8000//api/studentOrder?order=asc</SpanYellow>
-        <PythonHighlight pythonCode={_1_} />
+        <Highlight_PYTHON code={_1_} />
       </section>
     </MainChildArea>
   );

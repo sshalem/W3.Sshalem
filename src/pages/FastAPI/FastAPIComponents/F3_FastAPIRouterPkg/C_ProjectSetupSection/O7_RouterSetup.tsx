@@ -4,7 +4,7 @@
 */
 
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 import python_34 from "../../../../../assets/python_34.jpg";
 import { Link } from "react-router-dom";
 
@@ -16,14 +16,15 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
         <div className="my-8 text-lg font-semibold">1️⃣ Create following packages</div>
         <ULdisc>
           <Li>
-            <SpanYellow>core package</SpanYellow> - holds configuration files ENV, profiles Logging <SpanYellow>logging_config.py</SpanYellow> - see section{" "}
+            <SpanYellow>core package</SpanYellow> - holds configuration files ENV, profiles Logging <SpanYellow>logging_config.py</SpanYellow> - see
+            section{" "}
             <Link className="font-semibold text-blue-600" to={"python/fastapi/logging-fastapi#4.logging_config.py"}>
               logging_config
             </Link>
           </Li>
           <Li>
-            <SpanYellow>students package</SpanYellow> - Holds the <SpanYellow>students</SpanYellow> corresponding logic (router, schemas, SQLAlchemy, DB
-            connection, Buisness Logic ETC... )
+            <SpanYellow>students package</SpanYellow> - Holds the <SpanYellow>students</SpanYellow> corresponding logic (router, schemas, SQLAlchemy,
+            DB connection, Buisness Logic ETC... )
           </Li>
           <IMG img_name={python_34}></IMG>
         </ULdisc>
@@ -37,7 +38,7 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             create an Instance of <SpanYellow>APIRouter()</SpanYellow>
-            <JsxHighlight jsxCode={_1_} />
+            <Highlight_JSX code={_1_} />
           </Li>
         </ULdisc>
         <hr />
@@ -48,7 +49,7 @@ const O7_RouterSetup = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             See how I import the router form <SpanYellow>students</SpanYellow> file and gave it alias name
-            <PythonHighlight pythonCode={_2_} />
+            <Highlight_PYTHON code={_2_} />
           </Li>
         </ULdisc>
       </section>

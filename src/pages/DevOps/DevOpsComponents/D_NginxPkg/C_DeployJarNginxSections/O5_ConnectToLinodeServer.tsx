@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O5_ConnectToLinodeServer = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O5_ConnectToLinodeServer = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             connect to Linode server with SSH connection (to get the IP info , login to Linode server)
-            <ApplicationPropertiesHighlight propertiesCode={connect_to_linode} />
+            <Highlight_ApplicationProperties code={connect_to_linode} />
           </Li>
         </ULdisc>
       </section>

@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 import python_20 from "../../../../../assets/python_20.jpg";
 
 const O7_CreateDjangoApp = ({ anchor }: { anchor: string }) => {
@@ -19,7 +19,7 @@ const O7_CreateDjangoApp = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Create new <SpanGrey>app</SpanGrey> with command below
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             A subfolder named <SpanGrey>students</SpanGrey> created , which contains the following files/folder:

@@ -5,15 +5,15 @@
 import { Anchor, MainChildArea, ULDecimal } from "../../../../../components";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 import { useMemo } from "react";
 
 const O4_Entity = ({ anchor }: { anchor: string }) => {
   // 1. I Memoize Syntax Highlighter , for better perfromance
   // 2. This fixes , the DropDown issue I have , when I click the Show/Hide content
-  const renderUserEntity = useMemo(() => <JavaHighlight javaCode={user_entity} />, [user_entity]);
-  const renderRoleEntity = useMemo(() => <JavaHighlight javaCode={role_entity} />, [role_entity]);
-  const renderRefreshEntity = useMemo(() => <JavaHighlight javaCode={refresh_entity} />, [user_entity]);
+  const renderUserEntity = useMemo(() => <Highlight_JAVA code={user_entity} />, [user_entity]);
+  const renderRoleEntity = useMemo(() => <Highlight_JAVA code={role_entity} />, [role_entity]);
+  const renderRefreshEntity = useMemo(() => <Highlight_JAVA code={refresh_entity} />, [user_entity]);
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">

@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O4_CorsGlobalConfig = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O4_CorsGlobalConfig = ({ anchor }: { anchor: string }) => {
           <Li>Slightly more setup</Li>
         </ULdisc>
         Put inside a <SpanGrey>@Configuration</SpanGrey> class:
-        <JavaHighlight javaCode={global_level}></JavaHighlight>
+        <Highlight_JAVA code={global_level}></Highlight_JAVA>
       </section>
     </MainChildArea>
   );

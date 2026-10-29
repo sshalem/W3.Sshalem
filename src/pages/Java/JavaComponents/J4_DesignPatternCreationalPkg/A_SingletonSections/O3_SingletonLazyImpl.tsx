@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 
 const O3_SingletonLazyImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O3_SingletonLazyImpl = ({ anchor }: { anchor: string }) => {
           <Li>✔ Created only when needed</Li>
           <Li>✖ Not thread-safe</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
       </section>
     </MainChildArea>
   );

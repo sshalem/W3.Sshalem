@@ -4,7 +4,7 @@ browse_tomcat --> (DEVOPS)(LINUX)(Linux Tomcat Install)
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanYellow } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O5_BrowseTomcat = ({ anchor }: { anchor: string }) => {
   return (
@@ -28,7 +28,7 @@ const O5_BrowseTomcat = ({ anchor }: { anchor: string }) => {
               </a>
             </li>
           </ul>
-          <LinuxHighlight bashCode={tomcat_url}></LinuxHighlight>
+          <LinuxHighlight code={tomcat_url}></LinuxHighlight>
         </li>
       </ul>
     </MainChildArea>

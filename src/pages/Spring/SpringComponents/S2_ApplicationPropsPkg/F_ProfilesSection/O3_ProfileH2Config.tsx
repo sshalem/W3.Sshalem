@@ -3,7 +3,7 @@
 Profile H2 --> (SPRING)(ApplicationProperties)(ProfileH2)
 */
 import { IMG, MainChildArea } from "../../../../../components";
-import { ApplicationPropertiesHighlight, DivDoubleBorder } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, DivDoubleBorder } from "../../../../../components/Highlight";
 import profile_h2 from "../../../../../assets/profile_h2.jpg";
 
 const ProfileH2Config = ({ anchor }: { anchor: string }) => {
@@ -13,11 +13,11 @@ const ProfileH2Config = ({ anchor }: { anchor: string }) => {
       <div className="my-5">
         <DivDoubleBorder>application.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={defaultProps} />
+      <Highlight_ApplicationProperties code={defaultProps} />
       <div className="my-5">
         <DivDoubleBorder>application-h2.properties</DivDoubleBorder>
       </div>
-      <ApplicationPropertiesHighlight propertiesCode={configH2Props} />
+      <Highlight_ApplicationProperties code={configH2Props} />
     </MainChildArea>
   );
 };

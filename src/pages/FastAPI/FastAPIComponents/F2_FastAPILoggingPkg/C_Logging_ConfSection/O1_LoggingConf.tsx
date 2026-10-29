@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, JsxHighlight, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Highlight_JSX, SpanGrey, SpanRed } from "../../../../../components/Highlight";
 import python_27 from "../../../../../assets/python_27.jpg";
 import python_28 from "../../../../../assets/python_28.jpg";
 
@@ -69,7 +69,7 @@ const O1_LoggingConf = ({ anchor }: { anchor: string }) => {
             <SpanGrey>propagate=0</SpanGrey> prevents double logging
           </Li>
 
-          <ApplicationPropertiesHighlight propertiesCode={_1_} />
+          <Highlight_ApplicationProperties code={_1_} />
         </ULdisc>
         <article>
           <div className="my-8 font-semibold">2️⃣ main.py file </div>
@@ -84,14 +84,14 @@ const O1_LoggingConf = ({ anchor }: { anchor: string }) => {
               </ULdisc>
             </Li>
             <Li>
-              <JsxHighlight jsxCode={_2_} />
+              <Highlight_JSX code={_2_} />
             </Li>
           </ULdisc>
         </article>
         <article>
           <div className="my-8 font-semibold">3️⃣ Logging results in console </div>
           run command below to include <SpanGrey>logging.conf</SpanGrey>
-          <ApplicationPropertiesHighlight propertiesCode={_3_} />
+          <Highlight_ApplicationProperties code={_3_} />
           Now check console , we see :
           <ULDecimal>
             <Li>✅ Both Uvicorn logs and your own logs now use the same timestamped format.</Li>

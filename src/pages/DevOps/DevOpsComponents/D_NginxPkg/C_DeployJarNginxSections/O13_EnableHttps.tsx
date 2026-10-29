@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
           <Li>Certbot requires a domain name (recommended & future-proof).</Li>
           <Li>
             ✅ Works best:
-            <ApplicationPropertiesHighlight propertiesCode={_0_} />
+            <Highlight_ApplicationProperties code={_0_} />
           </Li>
           <Li>
             ⚠️ If you only have an IP (like 139.162.148.144):
@@ -30,10 +30,10 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             So , Point your domain to the server
-            <ApplicationPropertiesHighlight propertiesCode={_01_} />
+            <Highlight_ApplicationProperties code={_01_} />
           </Li>
           <Li>
-            Verify: <ApplicationPropertiesHighlight propertiesCode={_02_} />
+            Verify: <Highlight_ApplicationProperties code={_02_} />
           </Li>
         </ULdisc>
         <hr />
@@ -41,7 +41,7 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Install Certbot:
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>Enable SSL</Li>
           <Li>
@@ -51,9 +51,9 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
               <Li>Ask which domain to secure</Li>
               <Li>Ask about HTTP → HTTPS redirect</Li>
             </ULdisc>
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
             <Li>✅ Choose:</Li>
-            <ApplicationPropertiesHighlight propertiesCode={_3_} />
+            <Highlight_ApplicationProperties code={_3_} />
           </Li>
         </ULdisc>
         <hr />
@@ -65,18 +65,18 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
           <Li>✔ Enables auto-renew</Li>
           <Li>
             I’ll end up with two server blocks:
-            <ApplicationPropertiesHighlight propertiesCode={_4_} />
+            <Highlight_ApplicationProperties code={_4_} />
           </Li>
         </ULdisc>
         <hr />
         <div className="my-4 text-xl">Verify HTTPS</div>
         <ULdisc>
           <Li>
-            <ApplicationPropertiesHighlight propertiesCode={_5_} />
+            <Highlight_ApplicationProperties code={_5_} />
           </Li>
           <Li>
             Expected <SpanYellow>🔒 Padlock visible</SpanYellow>
-            <ApplicationPropertiesHighlight propertiesCode={_6_} />
+            <Highlight_ApplicationProperties code={_6_} />
           </Li>
         </ULdisc>
         <hr />
@@ -85,11 +85,11 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Check:
-            <ApplicationPropertiesHighlight propertiesCode={_7_} />
+            <Highlight_ApplicationProperties code={_7_} />
           </Li>
           <Li>
             Test renewal:
-            <ApplicationPropertiesHighlight propertiesCode={_8_} />
+            <Highlight_ApplicationProperties code={_8_} />
           </Li>
         </ULdisc>
         <hr />
@@ -99,7 +99,7 @@ const O13_EnableHttps = ({ anchor }: { anchor: string }) => {
           <Li>22 (SSH)</Li>
           <Li>80 (HTTP → redirect)</Li>
           <Li>443 (HTTPS)</Li>
-          <ApplicationPropertiesHighlight propertiesCode={_9_} />
+          <Highlight_ApplicationProperties code={_9_} />
         </ULdisc>
       </section>
     </MainChildArea>

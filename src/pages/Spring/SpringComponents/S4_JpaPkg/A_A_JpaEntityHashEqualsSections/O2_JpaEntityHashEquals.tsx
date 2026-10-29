@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_JpaEntityHashEquals = ({ anchor }: { anchor: string }) => {
   return (
@@ -54,11 +54,11 @@ const O2_JpaEntityHashEquals = ({ anchor }: { anchor: string }) => {
           <Li>ID never changes</Li>
           <Li>You never rely on entity inside hash-based collections before ID is set</Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         <p className="my-8 text-xl font-semibold">
           <SpanYellow>equals() , hashCode()</SpanYellow> version :
         </p>
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
         <hr />
         <p className="my-8 text-2xl font-semibold">
           <u>If id is Object Long (and not primitive long)</u>
@@ -84,7 +84,7 @@ const O2_JpaEntityHashEquals = ({ anchor }: { anchor: string }) => {
         <p className="my-8 text-xl font-semibold">
           <SpanYellow>equals() , hashCode()</SpanYellow> version :
         </p>
-        <JavaHighlight javaCode={_3_} />
+        <Highlight_JAVA code={_3_} />
       </section>
     </MainChildArea>
   );

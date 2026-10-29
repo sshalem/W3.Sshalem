@@ -8,7 +8,7 @@ import Li from "../../../../../components/ui/Li";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Question from "../../../../../components/ui/Question";
 import Answer from "../../../../../components/ui/Answer";
-import { JsxHighlight } from "../../../../../components/Highlight";
+import { Highlight_JSX } from "../../../../../components/Highlight";
 import { Link } from "react-router-dom";
 
 const O2_ParentChildProps = ({ anchor }: { anchor: string }) => {
@@ -50,9 +50,9 @@ const O2_ParentChildProps = ({ anchor }: { anchor: string }) => {
             </article>
           </Answer>
           <p className="text-lg font-semibold"> ✅ Parent Component</p>
-          <JsxHighlight jsxCode={parent}></JsxHighlight>
+          <Highlight_JSX code={parent}></Highlight_JSX>
           <p className="text-lg font-semibold">🧒 Child Component</p>
-          <JsxHighlight jsxCode={child}></JsxHighlight>
+          <Highlight_JSX code={child}></Highlight_JSX>
         </article>
       </section>
       <hr />

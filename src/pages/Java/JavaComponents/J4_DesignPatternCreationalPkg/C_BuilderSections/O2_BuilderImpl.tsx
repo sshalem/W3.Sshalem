@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_BuilderImpl = ({ anchor }: { anchor: string }) => {
   return (
@@ -24,9 +24,9 @@ const O2_BuilderImpl = ({ anchor }: { anchor: string }) => {
             assign the fields of the <SpanYellow>Builder</SpanYellow> to the fields to the <SpanYellow>User</SpanYellow> , respectevly
           </Li>
         </ULdisc>
-        <JavaHighlight javaCode={_1_} />
+        <Highlight_JAVA code={_1_} />
         Here is how to use :
-        <JavaHighlight javaCode={_2_} />
+        <Highlight_JAVA code={_2_} />
       </section>
     </MainChildArea>
   );

@@ -1,5 +1,5 @@
 import { IMG, Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, Redtext, SpanYellow } from "../../../../../components/Highlight";
 import microservice_28 from "../../../../../assets/microservice_28.jpg";
 import microservice_29 from "../../../../../assets/microservice_29.jpg";
 import microservice_30 from "../../../../../assets/microservice_30.jpg";
@@ -23,7 +23,7 @@ const O4_SZ_download_ZipkinServer2718 = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             run it as
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
         </ULdisc>
 

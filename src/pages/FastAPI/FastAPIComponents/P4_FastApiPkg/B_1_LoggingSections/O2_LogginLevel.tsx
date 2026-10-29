@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JsxHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JSX, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_LogginLevel = ({ anchor }: { anchor: string }) => {
   return (
@@ -30,7 +30,7 @@ const O2_LogginLevel = ({ anchor }: { anchor: string }) => {
         </ULdisc>
         <div className="my-8">I can log everything globally but restrict noisy libraries:</div>
         <ULdisc>
-          <JsxHighlight jsxCode={_1_} />
+          <Highlight_JSX code={_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

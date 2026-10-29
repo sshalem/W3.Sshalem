@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { DivDoubleBorder, JavaHighlight } from "../../../../../components/Highlight";
+import { DivDoubleBorder, Highlight_JAVA } from "../../../../../components/Highlight";
 import SpanYellow from "./../../../../../components/Highlight/SpanYellow";
 
 const O4_RestTemplateCommunication = ({ anchor }: { anchor: string }) => {
@@ -40,7 +40,7 @@ const O4_RestTemplateCommunication = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Create a configuration class in <SpanYellow>CustomerService</SpanYellow> and expose a <SpanYellow>RestTemplate bean</SpanYellow>
-            <JavaHighlight javaCode={_1_}></JavaHighlight>
+            <Highlight_JAVA code={_1_}></Highlight_JAVA>
           </Li>
         </ULdisc>
         <DivDoubleBorder>Step 2: use RestTemplate bean in service layer</DivDoubleBorder>
@@ -52,7 +52,7 @@ const O4_RestTemplateCommunication = ({ anchor }: { anchor: string }) => {
           <Li>
             Autowire <SpanYellow>RestTemplate</SpanYellow> to CustomerServiceImpl class , Or my preferation , config it in{" "}
             <strong>constructor</strong>
-            <JavaHighlight javaCode={_2_}></JavaHighlight>
+            <Highlight_JAVA code={_2_}></Highlight_JAVA>
           </Li>
           <Li>
             I have a method that uses <SpanYellow>RestTemplate</SpanYellow>
@@ -70,10 +70,10 @@ const O4_RestTemplateCommunication = ({ anchor }: { anchor: string }) => {
                   <Li>Use the API url and sent POST request using RestTemplate</Li>
                 </ULdisc>
               </Li>
-              <JavaHighlight javaCode={_4_}></JavaHighlight>
+              <Highlight_JAVA code={_4_}></Highlight_JAVA>
               <Li>here is the method Implemantation</Li>
             </ULdisc>
-            <JavaHighlight javaCode={_3_}></JavaHighlight>
+            <Highlight_JAVA code={_3_}></Highlight_JAVA>
           </Li>
         </ULdisc>
       </section>

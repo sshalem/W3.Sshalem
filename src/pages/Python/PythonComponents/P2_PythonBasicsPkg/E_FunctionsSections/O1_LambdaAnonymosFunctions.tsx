@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { JavaHighlight, PythonHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Highlight_PYTHON } from "../../../../../components/Highlight";
 
 const O1_LambdaAnonymosFunctions = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O1_LambdaAnonymosFunctions = ({ anchor }: { anchor: string }) => {
           <Li>No function name</Li>
           <Li>One expression only (no statements like if/for/while blocks)</Li>
           <Li>Automatically returns the result</Li>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </ULdisc>
         <hr />
         <div className="my-8 font-semibold">❌ Code without lambda</div>
@@ -23,7 +23,7 @@ const O1_LambdaAnonymosFunctions = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>We have a function with one line only that perfoms add operation </Li>
           <Li>I call the function , then print it</Li>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </ULdisc>
 
         <hr />
@@ -33,9 +33,9 @@ const O1_LambdaAnonymosFunctions = ({ anchor }: { anchor: string }) => {
           <Li>I don't need a function with one line</Li>
           <Li>with lambda expression, I implement write away the expression I want </Li>
           <Li>(Unlike in java where I must have a Functionl Interface , before I can use it with lambda)</Li>
-          <PythonHighlight pythonCode={_3_} />
+          <Highlight_PYTHON code={_3_} />
           Java Comparison (Since I Know Spring Boot 😉)
-          <JavaHighlight javaCode={_4_} />
+          <Highlight_JAVA code={_4_} />
         </ULdisc>
       </section>
     </MainChildArea>

@@ -5,7 +5,7 @@ connect_to_server_ssh --> (DEVOPS)(LINUX)(connect with SSH)
 import { IMG, MainChildArea } from "../../../../../components";
 import { Redtext, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 import linode_5 from "../../../../../assets/linode_5.jpg";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
   return (
@@ -19,7 +19,7 @@ const O1_ConnectWithSsh = ({ anchor }: { anchor: string }) => {
           Take the server IP from <SpanYellow>KAMATERA</SpanYellow> Web site
         </li>
         <li className="my-1">Open CMD on windows, then type command</li>
-        <LinuxHighlight bashCode={ssh_connect}></LinuxHighlight>
+        <LinuxHighlight code={ssh_connect}></LinuxHighlight>
         <li className="my-1">
           When I setup create LINUX server on <SpanYellow>KAMATERA</SpanYellow> , these are username and password :
           <ul className="my-4 ml-8 list-disc">

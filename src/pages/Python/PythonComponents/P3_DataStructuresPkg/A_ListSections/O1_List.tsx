@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O1_List = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O1_List = ({ anchor }: { anchor: string }) => {
           <Li>Most commonly used structure</Li>
           <Li>
             Java Equivalent
-            <JavaHighlight javaCode={_1_} />
+            <Highlight_JAVA code={_1_} />
           </Li>
           <Li>
             Since I'm coming from Java/Spring background, I can think:

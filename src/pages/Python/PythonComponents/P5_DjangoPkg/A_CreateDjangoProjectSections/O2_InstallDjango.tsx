@@ -3,7 +3,7 @@
 
 */
 import { IMG, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanGrey } from "../../../../../components/Highlight";
 import python_15 from "../../../../../assets/python_15.jpg";
 
 const O2_InstallDjango = ({ anchor }: { anchor: string }) => {
@@ -17,11 +17,11 @@ const O2_InstallDjango = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>
             Install Django
-            <ApplicationPropertiesHighlight propertiesCode={_1_} />
+            <Highlight_ApplicationProperties code={_1_} />
           </Li>
           <Li>
             Check installed packages <SpanGrey>asgiref , Django, sqlparse, tzdata </SpanGrey>
-            <ApplicationPropertiesHighlight propertiesCode={_2_} />
+            <Highlight_ApplicationProperties code={_2_} />
           </Li>
           <Li>
             Project structure , inside <SpanGrey>Scripts</SpanGrey> we can see django scripts (like <strong>django-admin</strong> )

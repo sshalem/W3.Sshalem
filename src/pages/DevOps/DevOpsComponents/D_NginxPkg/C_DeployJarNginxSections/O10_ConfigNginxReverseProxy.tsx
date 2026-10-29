@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O10_ConfigNginxReverseProxy = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,12 +13,12 @@ const O10_ConfigNginxReverseProxy = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             Check NGINX status
-            <ApplicationPropertiesHighlight propertiesCode={_10_} />
+            <Highlight_ApplicationProperties code={_10_} />
           </Li>
           <Li>
             Create Config file <SpanYellow>springboot</SpanYellow> inside directory of <SpanYellow>/etc/nginx/sites-available/</SpanYellow>:
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_11_} />
+          <Highlight_ApplicationProperties code={_11_} />
           <Li>
             Paste this :
             <ULdisc>
@@ -31,11 +31,11 @@ const O10_ConfigNginxReverseProxy = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
-          <ApplicationPropertiesHighlight propertiesCode={_12_} />
+          <Highlight_ApplicationProperties code={_12_} />
           <ULdisc>
             <Li>Run Following commands :</Li>
           </ULdisc>
-          <ApplicationPropertiesHighlight propertiesCode={_12_1_} />
+          <Highlight_ApplicationProperties code={_12_1_} />
         </ULdisc>
       </section>
     </MainChildArea>

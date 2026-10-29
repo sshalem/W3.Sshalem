@@ -4,7 +4,7 @@
 */
 import { MainChildArea } from "../../../../../components";
 import { SpanGreen, SpanGrey } from "../../../../../components/Highlight";
-import LinuxHighlight from "../../../../../components/Highlight/LinuxHighlight";
+import LinuxHighlight from "../../../../../components/Highlight/Highlight_LINUX";
 
 const O3_Jdk21Install = ({ anchor }: { anchor: string }) => {
   return (
@@ -15,7 +15,7 @@ const O3_Jdk21Install = ({ anchor }: { anchor: string }) => {
       <SpanGreen>Note</SpanGreen> : <SpanGrey>sudo apt update</SpanGrey> refreshes your system's local list of available software packages and their
       versions from online repositories, acting like a catalog update;
       <br />
-      <LinuxHighlight bashCode={jdk_install}></LinuxHighlight>
+      <LinuxHighlight code={jdk_install}></LinuxHighlight>
       <div>
         Some <SpanGrey>Ubuntu 22.04</SpanGrey> images don’t include JDK 21 by default yet.
       </div>

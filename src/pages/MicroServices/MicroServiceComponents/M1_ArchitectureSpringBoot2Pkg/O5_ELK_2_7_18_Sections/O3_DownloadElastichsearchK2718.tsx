@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_DownloadElastichsearchK2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -46,7 +46,7 @@ const O3_DownloadElastichsearchK2718 = ({ anchor }: { anchor: string }) => {
             </Li>
             <Li>
               Set to <SpanYellow>false</SpanYellow> the following security features (they were true by default)
-              <ApplicationPropertiesHighlight propertiesCode={_1_} />
+              <Highlight_ApplicationProperties code={_1_} />
             </Li>
           </ULdisc>
         </article>

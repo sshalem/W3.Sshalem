@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JsxHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JSX, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O1_CreateBrowserRouter = ({ anchor }: { anchor: string }) => {
   return (
@@ -34,7 +34,7 @@ const O1_CreateBrowserRouter = ({ anchor }: { anchor: string }) => {
         </Li>
         <Li>
           Create <SpanYellow>Navbar</SpanYellow> component, these are the tabs that will be shown on the navbar
-          <JsxHighlight jsxCode={navbar}></JsxHighlight>
+          <Highlight_JSX code={navbar}></Highlight_JSX>
         </Li>
         <Li>
           Create <SpanYellow>MainLayout</SpanYellow> component, will be the main page , that will display the
@@ -47,7 +47,7 @@ const O1_CreateBrowserRouter = ({ anchor }: { anchor: string }) => {
               <Redtext>NavLink , Link</Redtext> on the nav tab (Home, Products, About).
             </Li>
           </ULdisc>
-          <JsxHighlight jsxCode={main_layout}></JsxHighlight>
+          <Highlight_JSX code={main_layout}></Highlight_JSX>
         </Li>
         <Li>
           in <SpanYellow>App.tsx</SpanYellow> , now I config the router
@@ -85,7 +85,7 @@ const O1_CreateBrowserRouter = ({ anchor }: { anchor: string }) => {
             </Li>
           </ULdisc>
         </Li>
-        <JsxHighlight jsxCode={browser_router}></JsxHighlight>
+        <Highlight_JSX code={browser_router}></Highlight_JSX>
       </ULDecimal>
     </MainChildArea>
   );

@@ -3,7 +3,7 @@
 CommandLineRunner example --> (SPRING)(ApplicationProperties)(CommlineRunner example)
 */
 import { MainChildArea } from "../../../../../components";
-import { JavaHighlight } from "../../../../../components/Highlight";
+import { Highlight_JAVA } from "../../../../../components/Highlight";
 import Li from "../../../../../components/ui/Li";
 import ULDecimal from "../../../../../components/ui/ULDecimal";
 import ULdisc from "../../../../../components/ui/ULdisc";
@@ -45,7 +45,7 @@ const O2_CommLineImpl = ({ anchor }: { anchor: string }) => {
                 <Li>App is ready to accept requests</Li>
               </ULDecimal>
             </div>
-            <JavaHighlight javaCode={post_construct}></JavaHighlight>
+            <Highlight_JAVA code={post_construct}></Highlight_JAVA>
           </div>
         </div>
       </section>

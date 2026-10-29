@@ -4,7 +4,7 @@
 */
 
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_RaiseExceptionInService = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O4_RaiseExceptionInService = ({ anchor }: { anchor: string }) => {
         <ULdisc>
           <Li>
             create some logic in and raise <SpanYellow>UserNotFoundError</SpanYellow>
-            <PythonHighlight pythonCode={_1_} />
+            <Highlight_PYTHON code={_1_} />
           </Li>
           <Li>In router call the function form srvice layer, Surraound with try/except block </Li>
         </ULdisc>

@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O1_PythonicFastAPIStructure = ({ anchor }: { anchor: string }) => {
   return (
@@ -17,7 +17,7 @@ const O1_PythonicFastAPIStructure = ({ anchor }: { anchor: string }) => {
           <Li>Low ceremony</Li>
         </ULdisc>
         Equivalent to one Spring package.
-        <ApplicationPropertiesHighlight propertiesCode={_1_} />
+        <Highlight_ApplicationProperties code={_1_} />
       </section>
     </MainChildArea>
   );

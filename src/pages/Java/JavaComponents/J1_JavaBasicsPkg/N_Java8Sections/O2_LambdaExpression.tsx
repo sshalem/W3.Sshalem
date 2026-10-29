@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { JavaHighlight, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_LambdaExpression = ({ anchor }: { anchor: string }) => {
   return (
@@ -40,7 +40,7 @@ const O2_LambdaExpression = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULDecimal>
       </section>
-      <JavaHighlight javaCode={_1_} />
+      <Highlight_JAVA code={_1_} />
 
       <hr />
       <section className="my-8">
@@ -51,7 +51,7 @@ const O2_LambdaExpression = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
       </section>
-      <JavaHighlight javaCode={_2_} />
+      <Highlight_JAVA code={_2_} />
     </MainChildArea>
   );
 };

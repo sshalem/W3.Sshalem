@@ -3,7 +3,7 @@
 
 */
 import { Anchor, Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { JavaHighlight, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanGrey } from "../../../../../components/Highlight";
 
 const O3_PagableCountQuery = ({ anchor }: { anchor: string }) => {
   return (
@@ -21,7 +21,7 @@ const O3_PagableCountQuery = ({ anchor }: { anchor: string }) => {
                 Count query → calculates the total number of records matching your query (used for totalElements and totalPages in{" "}
                 <SpanGrey>{"Page<T>"} </SpanGrey> )
               </Li>
-              <JavaHighlight javaCode={generated_sql}></JavaHighlight>
+              <Highlight_JAVA code={generated_sql}></Highlight_JAVA>
             </ULDecimal>
           </div>
         </article>
@@ -37,9 +37,9 @@ const O3_PagableCountQuery = ({ anchor }: { anchor: string }) => {
           automatically generates both the main query and the count query.
           <div className="my-4">
             ✅ Example:
-            <JavaHighlight javaCode={example_code}></JavaHighlight>
+            <Highlight_JAVA code={example_code}></Highlight_JAVA>
             Spring auto-generates:
-            <JavaHighlight javaCode={generate_sql}></JavaHighlight>
+            <Highlight_JAVA code={generate_sql}></Highlight_JAVA>
           </div>
         </article>
       </section>
@@ -71,7 +71,7 @@ const O3_PagableCountQuery = ({ anchor }: { anchor: string }) => {
                 description="Jobify Full Stack (see GitHub code)"
                 href="https://github.com/sshalem/FullStack/blob/main/06_FullStack_jobify_V2/jobify-backend-v2-Multipart-File-upload/src/main/java/com/jobify/v2/repository/JobRepository.java"
               ></Anchor>
-              <JavaHighlight javaCode={native_count_query}></JavaHighlight>
+              <Highlight_JAVA code={native_count_query}></Highlight_JAVA>
             </p>
           </div>
         </article>

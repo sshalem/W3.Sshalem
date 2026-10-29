@@ -3,14 +3,14 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { JsxHighlight } from "../../../../../components/Highlight";
+import { Highlight_JSX } from "../../../../../components/Highlight";
 
 const O6_SearchComponent = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <article className="my-4 text-xl font-semibold"> 🧠 React Search Component</article>
-        <JsxHighlight jsxCode={code}></JsxHighlight>
+        <Highlight_JSX code={code}></Highlight_JSX>
       </section>
     </MainChildArea>
   );

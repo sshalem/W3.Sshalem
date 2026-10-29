@@ -7,7 +7,7 @@ import security_2 from "../../../../../assets/security_2.jpg";
 import security_7 from "../../../../../assets/security_7.jpg";
 import ULdisc from "../../../../../components/ui/ULdisc";
 import Li from "../../../../../components/ui/Li";
-import { JavaHighlight, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanGreen, SpanYellow } from "../../../../../components/Highlight";
 
 const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
   return (
@@ -38,7 +38,7 @@ const O4_JwtAuthFlow = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>On JWT token is valid , Server will continue processing the request.</Li>
         </ULdisc>
-        <JavaHighlight javaCode={jwt_login}></JavaHighlight>
+        <Highlight_JAVA code={jwt_login}></Highlight_JAVA>
       </section>
       <hr />
       <IMG img_name={security_2}></IMG>

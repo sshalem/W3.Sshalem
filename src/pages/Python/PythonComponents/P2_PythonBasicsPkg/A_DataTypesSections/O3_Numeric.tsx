@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { PythonHighlight, Redtext, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, Redtext, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_Numeric = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,7 +12,7 @@ const O3_Numeric = ({ anchor }: { anchor: string }) => {
             Int (or integer), is a whole number, <SpanYellow>positive</SpanYellow> or <SpanYellow>negative</SpanYellow>, without decimals, of
             unlimited length.
           </p>
-          <PythonHighlight pythonCode={_1_} />
+          <Highlight_PYTHON code={_1_} />
         </article>
         {/*  */}
         <article className="my-8">
@@ -21,7 +21,7 @@ const O3_Numeric = ({ anchor }: { anchor: string }) => {
             <Li>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</Li>
             <Li>Float can also be scientific numbers with an "e" to indicate the power of 10.</Li>
           </ULdisc>
-          <PythonHighlight pythonCode={_2_} />
+          <Highlight_PYTHON code={_2_} />
         </article>
         {/*  */}
         <article className="my-8">
@@ -30,7 +30,7 @@ const O3_Numeric = ({ anchor }: { anchor: string }) => {
             <Li>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</Li>
             <Li>Float can also be scientific numbers with an "e" to indicate the power of 10.</Li>
           </ULdisc>
-          <PythonHighlight pythonCode={_3_} />
+          <Highlight_PYTHON code={_3_} />
         </article>
         {/*  */}
         <article className="my-8">
@@ -41,7 +41,7 @@ const O3_Numeric = ({ anchor }: { anchor: string }) => {
               methods:
             </Li>
           </ULdisc>
-          <PythonHighlight pythonCode={_4_} />
+          <Highlight_PYTHON code={_4_} />
         </article>
       </section>
     </MainChildArea>

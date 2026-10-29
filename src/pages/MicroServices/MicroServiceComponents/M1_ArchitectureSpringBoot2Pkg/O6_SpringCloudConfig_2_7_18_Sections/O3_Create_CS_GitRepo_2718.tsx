@@ -1,5 +1,5 @@
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { ApplicationPropertiesHighlight, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanYellow } from "../../../../../components/Highlight";
 
 const O3_Create_CS_GitRepo_2718 = ({ anchor }: { anchor: string }) => {
   return (
@@ -63,7 +63,7 @@ const O3_Create_CS_GitRepo_2718 = ({ anchor }: { anchor: string }) => {
               <Li>⚠️ Copy it immediately — GitHub shows it only once.</Li>
               <Li>
                 Then use in application.properties
-                <ApplicationPropertiesHighlight propertiesCode={_1_} />
+                <Highlight_ApplicationProperties code={_1_} />
               </Li>
             </ULdisc>
           </Li>
