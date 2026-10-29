@@ -3,16 +3,16 @@
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import batch from "react-syntax-highlighter/dist/esm/languages/prism/batch";
-import { prism as BATCH_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import java from "react-syntax-highlighter/dist/esm/languages/prism/java";
+import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("batch", batch);
+PrismLightSyntaxHighlighter.registerLanguage("java", java);
 
-const BatchHighlight = ({ batchCode }: { batchCode: string }) => {
+const Highlight_JAVA = ({ javaCode }: { javaCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(batchCode);
+    navigator.clipboard.writeText(javaCode);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -28,12 +28,12 @@ const BatchHighlight = ({ batchCode }: { batchCode: string }) => {
       </button>
       <div>
         <PrismLightSyntaxHighlighter
-          language="batch"
-          style={BATCH_STYLE}
+          language="java"
+          style={JAVA_STYLE}
           // showLineNumbers={true}
           customStyle={{
             fontSize: "0.85rem",
-            backgroundColor: "#fbfbfb",
+            // backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
@@ -41,11 +41,11 @@ const BatchHighlight = ({ batchCode }: { batchCode: string }) => {
             display: "flex",
           }}
         >
-          {batchCode}
+          {javaCode}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default BatchHighlight;
+export default Highlight_JAVA;

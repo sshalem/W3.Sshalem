@@ -8,7 +8,7 @@ import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark
 
 PrismLightSyntaxHighlighter.registerLanguage("jsx", jsx);
 
-const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
+const Highlight_JSX = ({ jsxCode }: { jsxCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
@@ -46,4 +46,4 @@ const JsxHighlight = ({ jsxCode }: { jsxCode: string }) => {
   );
 };
 
-export default JsxHighlight;
+export default Highlight_JSX;

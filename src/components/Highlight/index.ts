@@ -1,8 +1,8 @@
-export { default as JavaHighlight } from "./JavaHighlight";
-export { default as JsxHighlight } from "./JsxHighlight";
+export { default as JavaHighlight } from "./Highlight_JAVA";
+export { default as JsxHighlight } from "./Highlight_JSX";
 export { default as XmlHighlight } from "./XmlHighlight";
-export { default as ApplicationPropertiesHighlight } from "./ApplicationPropertiesHighlight";
-export { default as BatchHighlight } from "./BatchHighlight";
+export { default as ApplicationPropertiesHighlight } from "./Highlight_ApplicationProperties";
+export { default as BatchHighlight } from "./Highlight_BATCH";
 export { default as PythonHighlight } from "./PythonHighlight";
 export { default as Span } from "./Span";
 export { default as SpanText } from "./SpanText";

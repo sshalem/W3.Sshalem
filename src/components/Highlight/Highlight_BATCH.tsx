@@ -3,16 +3,16 @@
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import properties from "react-syntax-highlighter/dist/esm/languages/prism/properties";
-import { vscDarkPlus as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import batch from "react-syntax-highlighter/dist/esm/languages/prism/batch";
+import { prism as BATCH_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
+PrismLightSyntaxHighlighter.registerLanguage("batch", batch);
 
-const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: string }) => {
+const Highlight_BATCH = ({ batchCode }: { batchCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(propertiesCode);
+    navigator.clipboard.writeText(batchCode);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -28,28 +28,24 @@ const ApplicationPropertiesHighlight = ({ propertiesCode }: { propertiesCode: st
       </button>
       <div>
         <PrismLightSyntaxHighlighter
-          language="properties"
-          style={PROPERTIES_STYLE}
+          language="batch"
+          style={BATCH_STYLE}
           // showLineNumbers={true}
           customStyle={{
-            // fontSize: "0.8rem",
-            fontSizeAdjust: "0.53",
-            // backgroundColor: "#fbfbfb",
+            fontSize: "0.85rem",
+            backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
             // width: "60rem",
             display: "flex",
-            borderRadius: "5px",
-
-            // height: "20rem",
           }}
         >
-          {propertiesCode}
+          {batchCode}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default ApplicationPropertiesHighlight;
+export default Highlight_BATCH;

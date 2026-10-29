@@ -3,16 +3,16 @@
 
 import { useState } from "react";
 import { PrismLight as PrismLightSyntaxHighlighter } from "react-syntax-highlighter";
-import java from "react-syntax-highlighter/dist/esm/languages/prism/java";
-import { oneDark as JAVA_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
+import properties from "react-syntax-highlighter/dist/esm/languages/prism/properties";
+import { vscDarkPlus as PROPERTIES_STYLE } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-PrismLightSyntaxHighlighter.registerLanguage("java", java);
+PrismLightSyntaxHighlighter.registerLanguage("properties", properties);
 
-const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
+const Highlight_ApplicationProperties = ({ propertiesCode }: { propertiesCode: string }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   function handleCopied() {
-    navigator.clipboard.writeText(javaCode);
+    navigator.clipboard.writeText(propertiesCode);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -28,24 +28,28 @@ const JavaHighlight = ({ javaCode }: { javaCode: string }) => {
       </button>
       <div>
         <PrismLightSyntaxHighlighter
-          language="java"
-          style={JAVA_STYLE}
+          language="properties"
+          style={PROPERTIES_STYLE}
           // showLineNumbers={true}
           customStyle={{
-            fontSize: "0.85rem",
+            // fontSize: "0.8rem",
+            fontSizeAdjust: "0.53",
             // backgroundColor: "#fbfbfb",
             outlineStyle: "solid",
             outlineWidth: "1px",
             outlineColor: "#dddddd",
             // width: "60rem",
             display: "flex",
+            borderRadius: "5px",
+
+            // height: "20rem",
           }}
         >
-          {javaCode}
+          {propertiesCode}
         </PrismLightSyntaxHighlighter>
       </div>
     </div>
   );
 };
 
-export default JavaHighlight;
+export default Highlight_ApplicationProperties;
