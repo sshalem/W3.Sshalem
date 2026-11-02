@@ -4,6 +4,8 @@ import O1_CreatePostgresDB from "./O1_CreatePostgresDB";
 import O2_ProjectFolderStructure from "./O2_ProjectFolderStructure";
 import O3_ConfigDataBaseCredentials from "./O3_ConfigDataBaseCredentials";
 import O4_ConfigSqlAlchemy from "./O4_ConfigSqlAlchemy";
+import O5_DatabaseHealthHheck from "./O5_DatabaseHealthHheck";
+import O6_RunApp from "./O6_RunApp";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -13,12 +15,21 @@ const o1_CreatePostgresDB = "1. Create PostgresDB";
 const o2_ProjectFolderStructure = "2. Project Folder Structure";
 const o3_ConfigDataBaseCredentials = "3. Config Database Credentials";
 const o4_ConfigSqlAlchemy = "4. Config SqlAlchemy";
+const o5_DatabaseHealthHheck = "5. Database Health check";
+const o6_RunApp = "6. Run App";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreatePostgresDB, o2_ProjectFolderStructure, o3_ConfigDataBaseCredentials, o4_ConfigSqlAlchemy];
+const anchorList: string[] = [
+  o1_CreatePostgresDB,
+  o2_ProjectFolderStructure,
+  o3_ConfigDataBaseCredentials,
+  o4_ConfigSqlAlchemy,
+  o5_DatabaseHealthHheck,
+  o6_RunApp,
+];
 
 // ============================================
 // ============================================
@@ -76,6 +87,8 @@ const ConfigSQLAlchemyMain = () => {
       <O2_ProjectFolderStructure anchor={o2_ProjectFolderStructure} />
       <O3_ConfigDataBaseCredentials anchor={o3_ConfigDataBaseCredentials} />
       <O4_ConfigSqlAlchemy anchor={o4_ConfigSqlAlchemy} />
+      <O5_DatabaseHealthHheck anchor={o5_DatabaseHealthHheck} />
+      <O6_RunApp anchor={o6_RunApp} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

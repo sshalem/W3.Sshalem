@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { Highlight_ApplicationProperties, SpanEmerald } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
 const O4_ConfigSqlAlchemy = ({ anchor }: { anchor: string }) => {
   return (
@@ -13,7 +13,7 @@ const O4_ConfigSqlAlchemy = ({ anchor }: { anchor: string }) => {
         <ULDecimal>
           <Li>
             create <SpanEmerald>app/database/database.py</SpanEmerald>
-            <Highlight_ApplicationProperties code={_1_}></Highlight_ApplicationProperties>
+            <Highlight_PYTHON code={_1_}></Highlight_PYTHON>
           </Li>
         </ULDecimal>
         Let's understand the Java equivalents.
