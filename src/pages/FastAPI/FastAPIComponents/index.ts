@@ -47,3 +47,4 @@ export { default as SqlAlchemyConfigMain } from "./F5_FastAPISQLAlchemyPkg/B_SQL
 export { default as SyncFastApiBackend } from "./F9_SynchronousBackendPkg/SyncFastApiBackend";
 export { default as SyncBackendMain } from "./F9_SynchronousBackendPkg/A_IntroSyncBackendSection/SyncBackendMain";
 export { default as CreateFastApiMain } from "./F9_SynchronousBackendPkg/B_CreateFastAPISection/CreateFastApiMain";
+export { default as ConfigSQLAlchemyMain } from "./F9_SynchronousBackendPkg/C_ConfigureSQLAlchemySection/ConfigSQLAlchemyMain";

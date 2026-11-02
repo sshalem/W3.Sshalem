@@ -2,9 +2,9 @@
 
 
 */
-
 import { IMG, Li, MainChildArea, ULDecimal, ULdisc } from "../../../../../components";
-import { Highlight_ApplicationProperties, Highlight_PYTHON, SpanEmerald, SpanRed, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_ApplicationProperties, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
+import fastApi_4 from "../../../../../assets/fastApi_4.jpg";
 
 const O2_InstallDependencies = ({ anchor }: { anchor: string }) => {
   return (
@@ -27,6 +27,17 @@ const O2_InstallDependencies = ({ anchor }: { anchor: string }) => {
           <Li>
             Now generate our dependency file:
             <Highlight_ApplicationProperties code={_4_}></Highlight_ApplicationProperties>
+            <ULdisc>
+              <Li>
+                The command created a file of <SpanEmerald>requirements.txt</SpanEmerald> with all the dependencies packages
+              </Li>
+              <Li>This is similar to maintaining your Maven dependency configuration</Li>
+              <Li>
+                although <SpanEmerald>requirements.txt</SpanEmerald> records <em className="font-semibold">installed package versions</em> rather than
+                declaring dependency constraints like <SpanYellow>Maven's</SpanYellow> <SpanYellow>pom.xml</SpanYellow>.
+              </Li>
+            </ULdisc>
+            <IMG img_name={fastApi_4}></IMG>
           </Li>
           <Li>
             Here is what each dependency does:
