@@ -23,7 +23,6 @@ const O1_CreatePythonProject = ({ anchor }: { anchor: string }) => {
             this is how folder structure looks, It created a <SpanGrey>main.py</SpanGrey> file
           </Li>
           <IMG img_name={python_24}></IMG>
-          <Li>Delete its content</Li>
           <Li>
             Open Terminal and verify we are inside the <SpanGrey>(.venv)</SpanGrey> enviroment.
             <IMG img_name={python_22}></IMG>

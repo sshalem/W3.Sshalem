@@ -507,6 +507,7 @@ const router = createBrowserRouter(
               element: <FastAPIComponents.SyncFastApiBackend />,
               children: [
                 { path: "projectFolderStructure", element: <FastAPIComponents.SyncBackendMain /> },
+                { path: "createFastApi", element: <FastAPIComponents.CreateFastApiMain /> },
                 // folder-structure
               ],
             },

@@ -41,8 +41,8 @@ const D9_DropDownSyncBackend = () => {
         className={`overflow-hidden bg-white transition-[height] duration-100 ease-in-out`}
         ref={divRef}
       >
-        <SideDropdownLink sideDropDownNavName="Project Folder Structure" internalLink="/fastapi/synchronous/projectFolderStructure" />
-        <SideDropdownLink sideDropDownNavName="VsCode" internalLink="/fastapi/synchronous/vscode" />
+        <SideDropdownLink sideDropDownNavName="1. Project Folder Structure" internalLink="/fastapi/synchronous/projectFolderStructure" />
+        <SideDropdownLink sideDropDownNavName="2. Create FastAPI" internalLink="/fastapi/synchronous/createFastApi" />
       </div>
     </section>
   );

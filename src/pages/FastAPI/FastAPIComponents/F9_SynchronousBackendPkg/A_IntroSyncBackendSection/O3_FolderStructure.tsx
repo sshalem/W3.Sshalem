@@ -3,8 +3,8 @@
 
 */
 
-import { Li, MainChildArea, ULDecimal } from "../../../../../components";
-import { Highlight_ApplicationProperties, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
+import { MainChildArea } from "../../../../../components";
+import { Highlight_ApplicationProperties } from "../../../../../components/Highlight";
 
 const O3_FolderStructure = ({ anchor }: { anchor: string }) => {
   return (
