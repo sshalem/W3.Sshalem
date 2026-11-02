@@ -28,37 +28,29 @@ const _1_ = `app/
 ├── main.py                    # like SpringBootApplication
 │
 ├── core/
-│   ├── __init__.py
 │   ├── config.py              # application.properties / application.yml
 │   ├── logging.py             # Logging setup
 │   └── database.py            # DataSource + EntityManagerFactory
 │
 ├── models/                    # @Entity
-│   ├── __init__.py
 │   └── user.py
 │
 ├── schemas/                   # DTOs
-│   ├── __init__.py
 │   └── user.py
 │
 ├── repositories/              # JPA Repositories
-│   ├── __init__.py
 │   └── user_repository.py
 │
 ├── services/                  # @Service
-│   ├── __init__.py
 │   └── user_service.py
 │
 ├── routers/                   # @RestController
-│   ├── __init__.py
 │   └── user_controller.py
 │
 ├── utils/                     # Helper functions / Reusable helpers / validators / converters
-│   ├── __init__.py
 │   └── common.py
 │
 ├── exceptions/
-│   ├── __init__.py
 │   └── user_exceptions.py
 │
 └── requirements.txt           # Python dependencies

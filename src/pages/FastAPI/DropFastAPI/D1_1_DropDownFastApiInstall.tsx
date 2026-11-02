@@ -39,7 +39,7 @@ const D1_1_DropDownFastApiInstall = () => {
         showList={showList}
         handleOpenList={handleOpenList}
         internalLink="/fastapi/install"
-        topicName="Insatll Fast API"
+        topicName="Create Fast API"
       />
 
       <div

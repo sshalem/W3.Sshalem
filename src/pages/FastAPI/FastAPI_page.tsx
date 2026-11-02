@@ -16,6 +16,7 @@ import D6_DropDownFastApiAuditing from "./DropFastAPI/D6_DropDownFastApiAuditing
 import D7_DropDownFastApiSecurity from "./DropFastAPI/D7_DropDownFastApiSecurity";
 import D8_DropDownFastApiCaching from "./DropFastAPI/D8_DropDownFastApiCaching";
 import D1_1_DropDownFastApiInstall from "./DropFastAPI/D1_1_DropDownFastApiInstall";
+import D9_DropDownSyncBackend from "./DropFastAPI/D9_DropDownSyncBackend";
 
 const FastAPI_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -55,6 +56,7 @@ const FastAPI_page = () => {
           <D6_DropDownFastApiAuditing />
           <D7_DropDownFastApiSecurity />
           <D8_DropDownFastApiCaching />
+          <D9_DropDownSyncBackend />
         </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
