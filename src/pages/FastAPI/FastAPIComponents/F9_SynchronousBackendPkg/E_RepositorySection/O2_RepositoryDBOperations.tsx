@@ -3,19 +3,13 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { Highlight_JAVA, Highlight_PYTHON, SpanEmerald, SpanGrey, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_JAVA, Highlight_PYTHON, SpanEmerald, SpanGrey, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
 const O2_RepositoryDBOperations = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <div className="mb-8 text-2xl font-semibold">Repository — Database operations</div>
-        <Highlight_JAVA code={_1_}></Highlight_JAVA>
-        <div className="my-4">Now let's implement the Repository layer.</div>
-        <div>
-          Create: <SpanEmerald>app/repositories/CustomerRepository.py</SpanEmerald>
-        </div>
-
         <ULdisc>
           <Li>In Spring Boot, you have:</Li>
           <Li>
@@ -24,11 +18,37 @@ const O2_RepositoryDBOperations = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
 
+        <div className="my-4">Now let's implement the Repository layer.</div>
+        <div>
+          Create: <SpanEmerald>app/repositories/CustomerRepository.py</SpanEmerald>
+        </div>
+
         <ULdisc>
-          <Li>SQLAlchemy works differently. </Li>
-          <Li>We explicitly implement our repository methods.</Li>
+          <Li>The Repository is responsible only for database operations.</Li>
           <Li>
             Create: <SpanGrey>app/repositories/customer_repository.py</SpanGrey>
+          </Li>
+          <Li>It is a regular Python class.</Li>
+          <Li>
+            It receives <SpanEmerald>Session</SpanEmerald> through its <SpanYellow>constructor</SpanYellow> .
+          </Li>
+          <Li>It has regular instance methods.</Li>
+          <Li>It does not commit or roll back transactions.</Li>
+          <Li>
+            That responsibility belongs to the <SpanEmerald>Service</SpanEmerald> .
+          </Li>
+          <Li>
+            Java comparison:
+            <ULdisc>
+              <Li>
+                Think of this as a Spring Data repository implementation, except we're explicitly writing the SQLAlchemy operations rather than
+                relying on Spring Data JPA's generated repository methods.
+              </Li>
+              <Li>
+                One important detail: <SpanRed>flush()</SpanRed> sends pending SQL statements to the database, but it does not{" "}
+                <SpanRed>commit</SpanRed> the transaction.
+              </Li>
+            </ULdisc>
           </Li>
         </ULdisc>
         <div className="my-8 text-2xl font-semibold">Understanding the repository</div>
@@ -98,48 +118,46 @@ const _2_ = `from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.customer import Customer
+from app.schemas.customer import CustomerCreate, CustomerUpdate
 
 
 class CustomerRepository:
 
-    # INSERT
-    @staticmethod
-    def create(db: Session, customer: Customer):
-        db.add(customer)
-        db.flush()
+    def __init__(self, db: Session):
+        self.db = db
+
+    def create(self, customer_data: CustomerCreate) -> Customer:
+        customer = Customer(**customer_data.model_dump())
+        self.db.add(customer)
+        self.db.flush()
+        self.db.refresh(customer)
         return customer
 
-    # SELECT BY ID
-    @staticmethod
-    def find_by_id(db: Session, customer_id: int):
+    def find_by_id(self, customer_id: int) -> Customer | None:
         statement = select(Customer).where(Customer.id == customer_id)
-        return db.scalar(statement)
+        return self.db.execute(statement).scalar_one_or_none()
 
-    # SELECT ALL
-    @staticmethod
-    def find_all(db: Session):
-        statement = select(Customer).order_by(Customer.id)
-        return list(db.scalars(statement).all())
-
-    # SELECT BY EMAIL
-    @staticmethod
-    def find_by_email(db: Session, email: str):
+    def find_by_email(self, email: str) -> Customer | None:
         statement = select(Customer).where(Customer.email == email)
-        return db.scalar(statement)
+        return self.db.execute(statement).scalar_one_or_none()
 
-    # UPDATE
-    @staticmethod
-    def update(db: Session, customer: Customer, data: dict):
-        for key, value in data.items():
-            setattr(customer, key, value)
-        db.flush()
+    def find_all(self) -> list[Customer]:
+        statement = select(Customer).order_by(Customer.id)
+        return list(self.db.execute(statement).scalars().all())
+
+    def update(self, customer: Customer, customer_data: CustomerUpdate) -> Customer:
+        update_data = customer_data.model_dump()
+        for field, value in update_data.items():
+            setattr(customer, field, value)
+
+        self.db.flush()
+        self.db.refresh(customer)
         return customer
 
-    # DELETE
-    @staticmethod
-    def delete(db: Session, customer: Customer):
-        db.delete(customer)
-        db.flush()`;
+    def delete(self, customer: Customer) -> None:
+        self.db.delete(customer)
+        self.db.flush()
+`;
 
 const _3_ = `db.add(customer)
 db.flush()`;

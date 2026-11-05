@@ -512,6 +512,7 @@ const router = createBrowserRouter(
                 { path: "entity", element: <FastAPIComponents.EntityMain /> },
                 { path: "repository", element: <FastAPIComponents.RepositoryMain /> },
                 { path: "dependencyinjection", element: <FastAPIComponents.DependencyInjectionMain /> },
+                { path: "schema", element: <FastAPIComponents.SchemaMain /> },
                 { path: "service", element: <FastAPIComponents.ServiceMain /> },
                 { path: "controller", element: <FastAPIComponents.ControllerMain /> },
 
