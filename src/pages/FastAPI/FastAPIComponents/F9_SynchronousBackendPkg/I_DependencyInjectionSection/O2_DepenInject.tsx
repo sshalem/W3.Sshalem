@@ -40,7 +40,6 @@ from app.services.customer_service import CustomerService
 def get_customer_repository(db: Session = Depends(get_db)) -> CustomerRepository:
     return CustomerRepository(db)
 
-
-def get_customer_service(repository: CustomerRepository = Depends(get_customer_repository)) -> CustomerService:
-    return CustomerService(repository)
+def get_customer_service(db: Session = Depends(get_db), repository: CustomerRepository = Depends(get_customer_repository)) -> CustomerService:
+    return CustomerService(repository, db)
 `;

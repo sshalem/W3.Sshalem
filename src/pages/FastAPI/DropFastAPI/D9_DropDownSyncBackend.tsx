@@ -52,6 +52,7 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="9. Dependency Injection" internalLink="/fastapi/synchronous/dependencyinjection" />
         <SideDropdownLink sideDropDownNavName="10. Service" internalLink="/fastapi/synchronous/service" />
         <SideDropdownLink sideDropDownNavName="11. Controller" internalLink="/fastapi/synchronous/controller" />
+        <SideDropdownLink sideDropDownNavName="12. main.py" internalLink="/fastapi/synchronous/main" />
       </div>
     </section>
   );

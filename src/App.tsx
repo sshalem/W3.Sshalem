@@ -517,8 +517,7 @@ const router = createBrowserRouter(
                 { path: "dependencyinjection", element: <FastAPIComponents.DependencyInjectionMain /> },
                 { path: "service", element: <FastAPIComponents.ServiceMain /> },
                 { path: "controller", element: <FastAPIComponents.ControllerMain /> },
-
-                // folder-structure
+                { path: "main", element: <FastAPIComponents.RooAppMain /> },
               ],
             },
           ],

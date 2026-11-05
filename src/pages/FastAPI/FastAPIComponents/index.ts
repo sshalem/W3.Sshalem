@@ -56,3 +56,4 @@ export { default as ExceptionMain } from "./F9_SynchronousBackendPkg/H_Exception
 export { default as DependencyInjectionMain } from "./F9_SynchronousBackendPkg/I_DependencyInjectionSection/DependencyInjectionMain";
 export { default as ServiceMain } from "./F9_SynchronousBackendPkg/J_ServiceSection/ServiceMain";
 export { default as ControllerMain } from "./F9_SynchronousBackendPkg/K_ControllerSerction/ControllerMain";
+export { default as RooAppMain } from "./F9_SynchronousBackendPkg/L_MainAppSerction/RooAppMain";

@@ -78,8 +78,9 @@ from app.exceptions.custom_exceptions import (CustomerNotFoundError, CustomerCon
 
 class CustomerService:
 
-    def __init__(self, repository: CustomerRepository):
+    def __init__(self, repository: CustomerRepository, db: Session):
         self.repository = repository
+        self.db = db
 
     def create_customer(self, data: CustomerCreate) -> Customer:
         try:
@@ -92,9 +93,7 @@ class CustomerService:
             return customer
         except IntegrityError as exc:
             self.repository.db.rollback()
-            raise CustomerConflictError(
-                "A customer with this email already exists"
-            ) from exc
+            raise CustomerConflictError("A customer with this email already exists") from exc
 
         except Exception:
             self.repository.db.rollback()
