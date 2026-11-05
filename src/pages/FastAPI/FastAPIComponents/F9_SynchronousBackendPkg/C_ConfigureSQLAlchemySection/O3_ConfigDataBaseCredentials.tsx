@@ -45,7 +45,7 @@ const O3_ConfigDataBaseCredentials = ({ anchor }: { anchor: string }) => {
 
 export default O3_ConfigDataBaseCredentials;
 
-const _1_ = `APP_NAME=Customer Management API
+const _1_ = `APP_NAME=Customer_Management_API
 
 DATABASE_HOST=localhost
 DATABASE_PORT=5432

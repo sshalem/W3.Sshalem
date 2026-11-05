@@ -44,4 +44,4 @@ const O6_RunApp = ({ anchor }: { anchor: string }) => {
 
 export default O6_RunApp;
 
-const _1_ = `uvicorn app.main:app --reload`;
+const _1_ = `uvicorn app.main:customeApp --reload`;

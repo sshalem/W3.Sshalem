@@ -32,20 +32,17 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.config.settings import settings
 from app.database.database import test_connection
 
-app = FastAPI(
-    title=settings.APP_NAME,
-    version="1.0.0"
-)
+customeApp = FastAPI(title=settings.APP_NAME, version="1.0.0")
 
 
-@app.get("/")
+@customeApp.get("/")
 def root():
     return {
         "message": "Customer Management API is running"
     }
 
 
-@app.get("/health/db")
+@customeApp.get("/health/db")
 def database_health():
     try:
         result = test_connection()
