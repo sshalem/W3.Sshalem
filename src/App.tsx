@@ -509,6 +509,8 @@ const router = createBrowserRouter(
                 { path: "projectFolderStructure", element: <FastAPIComponents.SyncBackendMain /> },
                 { path: "createFastApi", element: <FastAPIComponents.CreateFastApiMain /> },
                 { path: "configSqlAlchemy", element: <FastAPIComponents.ConfigSQLAlchemyMain /> },
+                { path: "controllerservice", element: <FastAPIComponents.ControllerServiceMain /> },
+
                 // folder-structure
               ],
             },

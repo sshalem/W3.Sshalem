@@ -48,3 +48,4 @@ export { default as SyncFastApiBackend } from "./F9_SynchronousBackendPkg/SyncFa
 export { default as SyncBackendMain } from "./F9_SynchronousBackendPkg/A_IntroSyncBackendSection/SyncBackendMain";
 export { default as CreateFastApiMain } from "./F9_SynchronousBackendPkg/B_CreateFastAPISection/CreateFastApiMain";
 export { default as ConfigSQLAlchemyMain } from "./F9_SynchronousBackendPkg/C_ConfigureSQLAlchemySection/ConfigSQLAlchemyMain";
+export { default as ControllerServiceMain } from "./F9_SynchronousBackendPkg/D_ControllerServiceSerction/ControllerServiceMain";

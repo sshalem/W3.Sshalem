@@ -44,6 +44,7 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="1. Intro" internalLink="/fastapi/synchronous/projectFolderStructure" />
         <SideDropdownLink sideDropDownNavName="2. Create FastAPI" internalLink="/fastapi/synchronous/createFastApi" />
         <SideDropdownLink sideDropDownNavName="3. Config SQLAlchemy" internalLink="/fastapi/synchronous/configSqlAlchemy" />
+        <SideDropdownLink sideDropDownNavName="4. Controller Service" internalLink="/fastapi/synchronous/controllerservice" />
       </div>
     </section>
   );
