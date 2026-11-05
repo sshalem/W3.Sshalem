@@ -50,5 +50,6 @@ export { default as CreateFastApiMain } from "./F9_SynchronousBackendPkg/B_Creat
 export { default as ConfigSQLAlchemyMain } from "./F9_SynchronousBackendPkg/C_ConfigureSQLAlchemySection/ConfigSQLAlchemyMain";
 export { default as EntityMain } from "./F9_SynchronousBackendPkg/D_EntitySerction/EntityMain";
 export { default as RepositoryMain } from "./F9_SynchronousBackendPkg/E_RepositorySection/RepositoryMain";
-export { default as ServiceMain } from "./F9_SynchronousBackendPkg/F_ServiceSection/ServiceMain";
-export { default as ControllerMain } from "./F9_SynchronousBackendPkg/G_ControllerSerction/ControllerMain";
+export { default as DependencyInjectionMain } from "./F9_SynchronousBackendPkg/F_DependencyInjectionSection/DependencyInjectionMain";
+export { default as ServiceMain } from "./F9_SynchronousBackendPkg/G_ServiceSection/ServiceMain";
+export { default as ControllerMain } from "./F9_SynchronousBackendPkg/H_ControllerSerction/ControllerMain";

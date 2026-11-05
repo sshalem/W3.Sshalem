@@ -12,22 +12,11 @@ const O1_ProjectFolderStructure = ({ anchor }: { anchor: string }) => {
         <div className="mb-8 text-2xl font-semibold">Let's add the following packages.</div>
 
         <ULDecimal>
-          <Li>Create these Python Packages and files:</Li>
+          <Li>Create this Python Package and files:</Li>
           <Li>
             <SpanEmerald>models</SpanEmerald> as Python package (<SpanYellow>entity</SpanYellow> package in JAVA)
           </Li>
-          <Li>
-            <SpanEmerald>schemas</SpanEmerald> as Python package (<SpanYellow>dto</SpanYellow> package in JAVA)
-          </Li>
-          <Li>
-            <SpanEmerald>repositories</SpanEmerald> as Python package
-          </Li>
-          <Li>
-            <SpanEmerald>services</SpanEmerald> as Python package
-          </Li>
-          <Li>
-            <SpanEmerald>controllers</SpanEmerald> as Python package
-          </Li>
+
           <Highlight_ApplicationProperties code={_1_}></Highlight_ApplicationProperties>
         </ULDecimal>
       </section>
@@ -51,25 +40,9 @@ const _1_ = `customer-management/
 │   │   ├── __init__.py
 │   │   └── database.py
 │   │
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── customer.py
-│   │
-│   ├── schemas/
-│   │   ├── __init__.py
-│   │   └── customer.py
-│   │
-│   ├── repositories/
-│   │   ├── __init__.py
-│   │   └── customer_repository.py
-│   │
-│   ├── services/
-│   │   ├── __init__.py
-│   │   └── customer_service.py
-│   │
-│   └── controllers/
+│   └── models/
 │       ├── __init__.py
-│       └── customer_controller.py
+│       └── customer.py
 │
 ├── .env
 ├── .gitignore

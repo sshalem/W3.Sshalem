@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { Highlight_JAVA, SpanEmerald } from "../../../../../components/Highlight";
+import { Highlight_JAVA, SpanEmerald, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
   return (
@@ -18,25 +18,36 @@ const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
         <div className="my-4 font-semibold">Understanding the syntax: -</div>
         <ULdisc>
           <Li>
-            <SpanEmerald>Base</SpanEmerald>: Our common declarative base.
+            <SpanGrey>Base</SpanGrey>: Our common declarative base.
           </Li>
           <Li>
-            <SpanEmerald>__tablename__</SpanEmerald>: Database table name.
+            <SpanGrey>__tablename__</SpanGrey>: Database table name.
           </Li>
           <Li>
-            <SpanEmerald>Mapped[int]</SpanEmerald>: Indicates the Python type of the mapped attribute.
+            <SpanGrey>Mapped[int]</SpanGrey>: Indicates the Python type of the mapped attribute.
           </Li>
           <Li>
-            <SpanEmerald>mapped_column()</SpanEmerald>: Defines the database column.
+            <SpanGrey>mapped_column()</SpanGrey>: Defines the database column.
           </Li>
           <Li>
-            <SpanEmerald>nullable=False</SpanEmerald>: SQL NOT NULL.
+            <SpanGrey>nullable=False</SpanGrey>: SQL NOT NULL.
           </Li>
           <Li>
-            <SpanEmerald>unique=True</SpanEmerald>: SQL UNIQUE constraint.
+            <SpanGrey>unique=True</SpanGrey>: SQL UNIQUE constraint.
           </Li>
           <Li>
-            <SpanEmerald>primary_key=True</SpanEmerald>: Primary key.
+            <SpanGrey>primary_key=True</SpanGrey>: Primary key.
+          </Li>
+          <Li>
+            Notice something important:
+            <ULdisc>
+              <Li>
+                <SpanGrey>Mapped[int | None]</SpanGrey> This is Python's type union syntax. It means the value can be either an integer or None.
+              </Li>
+              <Li>
+                Conceptually, this corresponds to: <SpanGrey>private Integer age</SpanGrey>
+              </Li>
+            </ULdisc>
           </Li>
         </ULdisc>
         <Highlight_JAVA code={_2_}></Highlight_JAVA>

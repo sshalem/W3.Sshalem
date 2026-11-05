@@ -73,6 +73,7 @@ const O4_ConfigSqlAlchemy = ({ anchor }: { anchor: string }) => {
                 <Li>
                   <SpanEmerald>Base</SpanEmerald> will be inherited by our SQLAlchemy entities.
                 </Li>
+                <Li>See section Dependency Injection</Li>
                 <Li>
                   <SpanEmerald>echo=True</SpanEmerald> prints SQL statements to the console. Useful during development.
                 </Li>
@@ -112,6 +113,15 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 # Base class for SQLAlchemy models
 Base = declarative_base()
+
+
+# same as  @PersistenceContext , EntityManager em ,  Used for Dependency Injection
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
 # Test database connection
