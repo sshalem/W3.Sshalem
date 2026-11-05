@@ -51,6 +51,10 @@ const _1_ = `customer-management/
 │   │   ├── __init__.py
 │   │   └── customer.py
 │   │
+│   ├── exceptions/
+│   |   ├── __init__.py
+│   |   └── custom_exceptions.py
+│   │
 │   └── services/
 │       ├── __init__.py
 │       └── customer_service.py

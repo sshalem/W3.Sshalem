@@ -511,8 +511,10 @@ const router = createBrowserRouter(
                 { path: "configSqlAlchemy", element: <FastAPIComponents.ConfigSQLAlchemyMain /> },
                 { path: "entity", element: <FastAPIComponents.EntityMain /> },
                 { path: "repository", element: <FastAPIComponents.RepositoryMain /> },
-                { path: "dependencyinjection", element: <FastAPIComponents.DependencyInjectionMain /> },
+                { path: "dbsession", element: <FastAPIComponents.DatabaseSessionMain /> },
                 { path: "schema", element: <FastAPIComponents.SchemaMain /> },
+                { path: "exceptions", element: <FastAPIComponents.ExceptionMain /> },
+                { path: "dependencyinjection", element: <FastAPIComponents.DependencyInjectionMain /> },
                 { path: "service", element: <FastAPIComponents.ServiceMain /> },
                 { path: "controller", element: <FastAPIComponents.ControllerMain /> },
 

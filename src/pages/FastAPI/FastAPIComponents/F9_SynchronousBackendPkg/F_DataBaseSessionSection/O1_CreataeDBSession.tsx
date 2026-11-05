@@ -3,16 +3,29 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { Highlight_PYTHON, SpanEmerald, SpanGrey, SpanRed } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanEmerald, SpanGrey, SpanRed, SpanYellow } from "../../../../../components/Highlight";
 
-const O1_DB_DepenInject = ({ anchor }: { anchor: string }) => {
+const O1_CreataeDBSession = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
         <div className="mb-8 text-2xl font-semibold">Database Dependency Injection</div>
 
+        <div className="my-8 text-lg font-semibold"></div>
         <ULdisc>
-          <Li>Before implementing the Service, we need to understand how FastAPI manages database sessions.</Li>
+          <Li>
+            <SpanEmerald>database.py</SpanEmerald> Creates and manages the SQLAlchemy database session
+          </Li>
+          <Li>
+            <SpanEmerald>dependencies.py</SpanEmerald> Constructs and injects Repository and Service objects (see Section
+            <SpanYellow>dependencies</SpanYellow>)
+          </Li>
+        </ULdisc>
+
+        <div className="my-8 text-base font-semibold">
+          Before implementing the Service, we need to understand how FastAPI manages database sessions.
+        </div>
+        <ULdisc>
           <Li>In Spring Boot, you usually inject a repository or service using Spring Dependency Injection.</Li>
           <Li>
             <SpanEmerald>Depends()</SpanEmerald> In FastAPI, we'll use it for dependency Injection .
@@ -33,18 +46,21 @@ const O1_DB_DepenInject = ({ anchor }: { anchor: string }) => {
         </ULdisc>
 
         <article>
-          <div className="my-4">This function is a generator. Here's what happens: 1.</div>
+          <div className="my-4">This function is a generator. Here's what happens: </div>
           <ULdisc>
-            <Li>A new SQLAlchemy session is created.</Li>
-            <Li>The session is provided to the endpoint through dependency injection.</Li>
+            <Li>
+              A new SQLAlchemy <SpanGrey>session</SpanGrey> is created.
+            </Li>
+            <Li>
+              The <SpanGrey>session</SpanGrey> is provided to the endpoint through dependency injection.
+            </Li>
             <Li>The request executes.</Li>
             <Li>
-              The session is closed in <SpanGrey>finally</SpanGrey>, even if an exception occurs.
+              The <SpanGrey>session</SpanGrey> is closed in <SpanGrey>finally</SpanGrey>, even if an exception occurs.
             </Li>
             <Li>
-              Our controller will eventually use: <SpanGrey>db: Session = Depends(get_db)</SpanGrey>
+              <SpanGrey>db: Session = Depends(get_db)</SpanGrey>
             </Li>
-            <Li>Best practice to use only at controller level</Li>
           </ULdisc>
         </article>
         <div className="my-8 text-lg font-semibold">
@@ -56,7 +72,7 @@ const O1_DB_DepenInject = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O1_DB_DepenInject;
+export default O1_CreataeDBSession;
 
 const _1_ = `
 def get_db():

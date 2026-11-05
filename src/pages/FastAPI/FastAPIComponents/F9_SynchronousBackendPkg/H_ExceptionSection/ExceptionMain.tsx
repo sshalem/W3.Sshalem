@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_DB_DepenInject from "./O1_DB_DepenInject";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_CustomExceptions from "./O2_CustomExceptions";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_DB_DepenInject = "1. Project Folder Structure";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_CustomExceptions = "2. Custom Exceptions";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_DB_DepenInject];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomExceptions];
 
 // ============================================
 // ============================================
 
-const DependencyInjectionMain = () => {
+const ExceptionMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -66,11 +68,12 @@ const DependencyInjectionMain = () => {
       />
       {/* End Contents */}
 
-      <O1_DB_DepenInject anchor={o1_DB_DepenInject} />
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_CustomExceptions anchor={o2_CustomExceptions} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DependencyInjectionMain;
+export default ExceptionMain;

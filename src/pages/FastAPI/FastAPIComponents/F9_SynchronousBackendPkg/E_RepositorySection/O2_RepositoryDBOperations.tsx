@@ -52,51 +52,6 @@ const O2_RepositoryDBOperations = ({ anchor }: { anchor: string }) => {
           </Li>
         </ULdisc>
         <div className="my-8 text-2xl font-semibold">Understanding the repository</div>
-        <article className="my-4">
-          <div className="text-lg font-semibold">INSERT</div>
-          <ULdisc>
-            <Li>
-              <SpanGrey>add()</SpanGrey> registers the entity with the session.
-            </Li>
-            <Li>
-              <SpanGrey>flush()</SpanGrey> sends pending SQL statements to the database without committing the transaction.
-            </Li>
-            <Li>This is important because we want the Service layer to control transactions.</Li>
-            <Highlight_PYTHON code={_3_}></Highlight_PYTHON>
-          </ULdisc>
-        </article>
-
-        <article className="my-4">
-          <div className="text-lg font-semibold">SELECT</div>
-          <ULdisc>
-            <Li>This is SQLAlchemy's modern query syntax.</Li>
-            <Li>
-              Equivalent SQL: <SpanYellow>SELECT * FROM customers WHERE id = ?</SpanYellow>
-            </Li>
-            <Highlight_PYTHON code={_4_}></Highlight_PYTHON>
-          </ULdisc>
-        </article>
-
-        <article className="my-4">
-          <div className="text-lg font-semibold">UPDATE</div>
-          <ULdisc>
-            <Li>
-              Python's <SpanYellow>setattr()</SpanYellow> dynamically assigns an object's attribute.
-            </Li>
-            <Li>
-              Equivalent Java concept: <SpanYellow>customer.setFirstName(data.getFirstName());</SpanYellow>
-            </Li>
-            <Highlight_PYTHON code={_5_}></Highlight_PYTHON>
-          </ULdisc>
-        </article>
-
-        <article className="my-4">
-          <div className="text-lg font-semibold">DELETE</div>
-          <ULdisc>
-            <Li>Marks the entity for deletion. The SQL is executed on flush or commit.</Li>
-            <Highlight_PYTHON code={_6_}></Highlight_PYTHON>
-          </ULdisc>
-        </article>
 
         <article className="my-4 text-lg font-semibold">
           <div>FUll code</div>
@@ -158,14 +113,3 @@ class CustomerRepository:
         self.db.delete(customer)
         self.db.flush()
 `;
-
-const _3_ = `db.add(customer)
-db.flush()`;
-
-const _4_ = `statement = select(Customer).where(Customer.id == customer_id)
-return db.scalar(statement)`;
-
-const _5_ = `for key, value in data.items():
-    setattr(customer, key, value)`;
-
-const _6_ = `db.delete(customer)`;

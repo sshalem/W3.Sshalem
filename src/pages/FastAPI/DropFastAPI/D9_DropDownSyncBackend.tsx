@@ -46,10 +46,12 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="3. Config SQLAlchemy" internalLink="/fastapi/synchronous/configSqlAlchemy" />
         <SideDropdownLink sideDropDownNavName="4. Model (Entity)" internalLink="/fastapi/synchronous/entity" />
         <SideDropdownLink sideDropDownNavName="5. Repository" internalLink="/fastapi/synchronous/repository" />
-        <SideDropdownLink sideDropDownNavName="6. Dependency Injection" internalLink="/fastapi/synchronous/dependencyinjection" />
+        <SideDropdownLink sideDropDownNavName="6. Create DB session" internalLink="/fastapi/synchronous/dbsession" />
         <SideDropdownLink sideDropDownNavName="7. Schema (DTO)" internalLink="/fastapi/synchronous/schema" />
-        <SideDropdownLink sideDropDownNavName="8. Service" internalLink="/fastapi/synchronous/service" />
-        <SideDropdownLink sideDropDownNavName="9. Controller" internalLink="/fastapi/synchronous/controller" />
+        <SideDropdownLink sideDropDownNavName="8. Exceptions" internalLink="/fastapi/synchronous/exceptions" />
+        <SideDropdownLink sideDropDownNavName="9. Dependency Injection" internalLink="/fastapi/synchronous/dependencyinjection" />
+        <SideDropdownLink sideDropDownNavName="10. Service" internalLink="/fastapi/synchronous/service" />
+        <SideDropdownLink sideDropDownNavName="11. Controller" internalLink="/fastapi/synchronous/controller" />
       </div>
     </section>
   );
