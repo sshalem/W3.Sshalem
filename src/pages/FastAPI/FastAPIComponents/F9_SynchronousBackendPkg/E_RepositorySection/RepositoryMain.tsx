@@ -23,7 +23,7 @@ const anchorList: string[] = [o1_ProjectFolderStructure, o2_EntitySqlalchemyMode
 // ============================================
 // ============================================
 
-const ControllerServiceMain = () => {
+const RepositoryMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -82,4 +82,4 @@ const ControllerServiceMain = () => {
   );
 };
 
-export default ControllerServiceMain;
+export default RepositoryMain;

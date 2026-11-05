@@ -94,7 +94,6 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 from app.config.settings import settings
 
-
 # Database connection URL
 DATABASE_URL = (
     f"postgresql+psycopg://"
@@ -105,21 +104,11 @@ DATABASE_URL = (
     f"{settings.DATABASE_NAME}"
 )
 
-
 # Create SQLAlchemy Engine
-engine = create_engine(
-    DATABASE_URL,
-    echo=True
-)
-
+engine = create_engine(DATABASE_URL, echo=True)
 
 # Create Session Factory
-SessionLocal = sessionmaker(
-    bind=engine,
-    autoflush=False,
-    autocommit=False
-)
-
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 # Base class for SQLAlchemy models
 Base = declarative_base()
@@ -127,10 +116,9 @@ Base = declarative_base()
 
 # Test database connection
 def test_connection():
-
     with engine.connect() as connection:
-
         result = connection.execute(text("SELECT 1"))
 
         print("Database connection successful!")
-        print("Result:", result.scalar())`;
+        print("Result:", result.scalar())
+`;

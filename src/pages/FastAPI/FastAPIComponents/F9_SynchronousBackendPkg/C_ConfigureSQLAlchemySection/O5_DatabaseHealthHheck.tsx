@@ -32,7 +32,6 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.config.settings import settings
 from app.database.database import test_connection
 
-
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.0.0"
@@ -48,7 +47,6 @@ def root():
 
 @app.get("/health/db")
 def database_health():
-
     try:
         result = test_connection()
 
@@ -59,8 +57,4 @@ def database_health():
         }
 
     except SQLAlchemyError:
-        raise HTTPException(
-            status_code=503,
-            detail="Database connection failed"
-        )
-`;
+        raise HTTPException(status_code=503, detail="Database connection failed")`;

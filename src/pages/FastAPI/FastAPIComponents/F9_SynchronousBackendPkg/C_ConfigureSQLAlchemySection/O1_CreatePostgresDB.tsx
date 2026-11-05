@@ -30,6 +30,4 @@ export default O1_CreatePostgresDB;
 
 const _1_ = `CREATE DATABASE customer_management;`;
 
-const _2_ = `SELECT datname
-FROM pg_database
-WHERE datname = 'customer_management';`;
+const _2_ = `SELECT datname FROM pg_database WHERE datname = 'customer_management';`;

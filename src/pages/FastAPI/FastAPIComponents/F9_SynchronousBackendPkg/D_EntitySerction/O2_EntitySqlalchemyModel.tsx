@@ -68,33 +68,9 @@ from app.database.database import Base
 
 
 class Customer(Base):
-
     __tablename__ = "customers"
-
-    id: Mapped[int] = mapped_column(
-        primary_key=True,
-        index=True
-    )
-
-    first_name: Mapped[str] = mapped_column(
-        String(100),
-        nullable=False
-    )
-
-    last_name: Mapped[str] = mapped_column(
-        String(100),
-        nullable=False
-    )
-
-    email: Mapped[str] = mapped_column(
-        String(150),
-        unique=True,
-        nullable=False,
-        index=True
-    )
-
-    age: Mapped[int | None] = mapped_column(
-        Integer,
-        nullable=True
-    )
-`;
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    first_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    last_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    email: Mapped[str] = mapped_column(String(150), unique=True, nullable=False, index=True)
+    age: Mapped[int | None] = mapped_column(Integer, nullable=True)`;
