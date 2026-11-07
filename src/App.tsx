@@ -518,6 +518,7 @@ const router = createBrowserRouter(
                 { path: "service", element: <FastAPIComponents.ServiceMain /> },
                 { path: "controller", element: <FastAPIComponents.ControllerMain /> },
                 { path: "main", element: <FastAPIComponents.RooAppMain /> },
+                { path: "initDB", element: <FastAPIComponents.InitDBMain /> },
               ],
             },
           ],

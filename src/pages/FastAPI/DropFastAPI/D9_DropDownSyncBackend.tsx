@@ -34,7 +34,7 @@ const D9_DropDownSyncBackend = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/synchronous" topicName="Synchronous Backend" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/synchronous" topicName="1. Synchronous Backend" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
@@ -53,6 +53,7 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="10. Service" internalLink="/fastapi/synchronous/service" />
         <SideDropdownLink sideDropDownNavName="11. Controller" internalLink="/fastapi/synchronous/controller" />
         <SideDropdownLink sideDropDownNavName="12. main.py" internalLink="/fastapi/synchronous/main" />
+        <SideDropdownLink sideDropDownNavName="13. Init DB" internalLink="/fastapi/synchronous/initDB" />
       </div>
     </section>
   );
