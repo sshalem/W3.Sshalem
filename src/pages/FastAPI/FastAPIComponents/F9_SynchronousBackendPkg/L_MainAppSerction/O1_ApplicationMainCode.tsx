@@ -22,49 +22,28 @@ const O1_ApplicationMainCode = ({ anchor }: { anchor: string }) => {
 
 export default O1_ApplicationMainCode;
 
-const _1_ = `from fastapi import FastAPI, Request
+const _1_ = `from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
 from app.config.settings import settings
 from app.database.database import engine, Base, test_connection
-from app.models.customer import Customer
 from app.controller.customer_controller import router as customer_router
-from app.exceptions.custom_exceptions import (CustomerNotFoundError, CustomerConflictError)
+from app.exceptions.exception_handlers import register_exception_handlers
 
-customeApp = FastAPI(title=settings.APP_NAME, version="1.0.0")
+# Create FastAPI application
+customer_app = FastAPI(title=settings.APP_NAME, version="1.0.0")
 
-# Temporary table creation for our learning project.
-# We will replace this with Alembic migrations later.
+# Create database tables (temporary - until we introduce Alembic)
 Base.metadata.create_all(bind=engine)
 
-customeApp.include_router(customer_router)
+# Register global exception handlers
+register_exception_handlers(customer_app)
+
+# Register API controllers
+customer_app.include_router(customer_router)
 
 
-@customeApp.exception_handler(CustomerNotFoundError)
-async def customer_not_found_handler(request: Request, exc: CustomerNotFoundError):
-    return JSONResponse(status_code=404, content={"detail": str(exc)})
-
-
-@customeApp.exception_handler(CustomerConflictError)
-async def customer_conflict_handler(request: Request, exc: CustomerConflictError):
-    return JSONResponse(status_code=409, content={"detail": str(exc)})
-
-
-@customeApp.get("/")
+@customer_app.get("/")
 def root():
-    return {
-        "message": "Customer Management API is running"
-    }
-
-
-@customeApp.get("/health/db")
-def database_health():
-    try:
-        result = test_connection()
-        return {
-            "database": "connected",
-            "result": result
-        }
-    except Exception:
-        return JSONResponse(status_code=503, content={"database": "unavailable"})
+    return {"message": "Customer Management API is running"}
 `;

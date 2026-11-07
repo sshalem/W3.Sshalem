@@ -53,7 +53,8 @@ const _1_ = `customer-management/
 │   │
 │   └── exceptions/
 │       ├── __init__.py
-│       └── custom_exceptions.py
+│       ├── custom_exceptions.py
+│       └── exception_handlers.py
 │
 ├── .env
 ├── .gitignore

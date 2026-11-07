@@ -49,10 +49,15 @@ const _1_ = `customer-management/
 │   │   ├── __init__.py
 │   │   └── customer_repository.py
 │   │
-│   └── schemas/
+│   ├── schemas/
+│   |   ├── __init__.py
+│   |   └── customer.py
+│   │
+│   └── exceptions/
 │       ├── __init__.py
-│       └── customer.py
-│
+│       ├── custom_exceptions.py
+│       └── exception_handlers.py
+│   
 ├── .env
 ├── .gitignore
 └── requirements.txt`;
