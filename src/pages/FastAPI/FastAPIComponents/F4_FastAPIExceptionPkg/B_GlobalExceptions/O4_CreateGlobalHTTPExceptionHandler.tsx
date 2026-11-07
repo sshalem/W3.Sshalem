@@ -22,8 +22,10 @@ const O4_CreateGlobalHTTPExceptionHandler = ({ anchor }: { anchor: string }) => 
           </Li>
           <Li>
             🔥 I call this function from <SpanYellow>main.py</SpanYellow>
+            <Highlight_PYTHON code={_1_} />
           </Li>
-          <Highlight_PYTHON code={_1_} />
+          <Li></Li>
+          <Highlight_PYTHON code={_2_} />
         </ULdisc>
       </section>
     </MainChildArea>
@@ -32,7 +34,9 @@ const O4_CreateGlobalHTTPExceptionHandler = ({ anchor }: { anchor: string }) => 
 
 export default O4_CreateGlobalHTTPExceptionHandler;
 
-const _1_ = `from fastapi import Request, HTTPException, FastAPI
+const _1_ = ``;
+
+const _2_ = `from fastapi import Request, HTTPException, FastAPI
 from fastapi.responses import JSONResponse
 from datetime import datetime
 from http import HTTPStatus
