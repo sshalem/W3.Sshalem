@@ -34,7 +34,7 @@ const D9_DropDownSyncBackend = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/synchronous" topicName="1. Synchronous Backend" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/synchronous" topicName="1. Sync Single Entity" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}
