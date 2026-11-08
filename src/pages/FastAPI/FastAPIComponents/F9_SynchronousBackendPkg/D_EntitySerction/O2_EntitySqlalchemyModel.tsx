@@ -49,6 +49,9 @@ const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
               </Li>
             </ULdisc>
           </Li>
+          <Li>
+            <SpanEmerald>created_at</SpanEmerald> and <SpanEmerald>created_at</SpanEmerald> are for auditing
+          </Li>
         </ULdisc>
         <Highlight_JAVA code={_2_}></Highlight_JAVA>
       </section>

@@ -55,14 +55,8 @@ VALUES
     ('David', 'Cohen', 'david@example.com', 35);`;
 
 const _2_ = `def init_db():
-    # Drop/Create tables
     Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
-
-    # Locate data.sql relative to the project root / "scripts" / "data.sql"
-    # sql_file = Path(__file__).resolve().parent.parent
-
-    # another way
     sql_file = Path("app/database/data.sql")
     with engine.begin() as connection:
         connection.exec_driver_sql(sql_file.read_text(encoding="utf-8"))
