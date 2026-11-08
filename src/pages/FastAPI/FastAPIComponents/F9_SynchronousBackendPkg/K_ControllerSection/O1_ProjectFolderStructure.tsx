@@ -66,4 +66,5 @@ const _1_ = `customer-management/
 |
 ├── .env
 ├── .gitignore
-└── requirements.txt`;
+├── requirements.txt
+└── scripts.txt`;
