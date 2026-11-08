@@ -56,6 +56,7 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="13. Init DB" internalLink="/fastapi/synchronous/initDB" />
         <SideDropdownLink sideDropDownNavName="14. Pagination" internalLink="/fastapi/synchronous/pagination" />
         <SideDropdownLink sideDropDownNavName="15. Sorting" internalLink="/fastapi/synchronous/sorting" />
+        <SideDropdownLink sideDropDownNavName="16. Dynamic Filtering" internalLink="/fastapi/synchronous/dynamic-filtering" />
       </div>
     </section>
   );

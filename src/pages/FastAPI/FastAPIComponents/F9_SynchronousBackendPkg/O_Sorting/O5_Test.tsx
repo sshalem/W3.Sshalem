@@ -24,4 +24,6 @@ const O5_Test = ({ anchor }: { anchor: string }) => {
 
 export default O5_Test;
 
-const _1_ = `localhost:8000/api/customers/paginated/sorted?page=1&size=5&sort_by=last_name&direction=desc`;
+const _1_ = `GET /api/customers/paginated/sorted?page=1&size=5&sort_by=first_name&direction=asc
+GET /api/customers/paginated/sorted?page=1&size=5&sort_by=age&direction=desc
+GET /api/customers/paginated/sorted?page=2&size=10&sort_by=email&direction=asc`;

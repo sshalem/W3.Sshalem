@@ -60,3 +60,4 @@ export { default as RooAppMain } from "./F9_SynchronousBackendPkg/L_MainAppSecti
 export { default as InitDBMain } from "./F9_SynchronousBackendPkg/M_InitDBSection/InitDBMain";
 export { default as PaginationMain } from "./F9_SynchronousBackendPkg/N_Pagination/PaginationMain";
 export { default as SortingMain } from "./F9_SynchronousBackendPkg/O_Sorting/SortingMain";
+export { default as DynamicFilteringMain } from "./F9_SynchronousBackendPkg/P_DynamicFilternig/DynamicFilteringMain";

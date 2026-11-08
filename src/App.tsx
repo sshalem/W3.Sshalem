@@ -521,6 +521,7 @@ const router = createBrowserRouter(
                 { path: "initDB", element: <FastAPIComponents.InitDBMain /> },
                 { path: "pagination", element: <FastAPIComponents.PaginationMain /> },
                 { path: "sorting", element: <FastAPIComponents.SortingMain /> },
+                { path: "dynamic-filtering", element: <FastAPIComponents.DynamicFilteringMain /> },
               ],
             },
           ],
