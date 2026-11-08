@@ -72,7 +72,9 @@ public class Customer {
     private Integer age;
 }`;
 
-const _2_ = `from sqlalchemy import String, Integer
+const _2_ = `from datetime import datetime
+
+from sqlalchemy import String, Integer, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.database import Base
@@ -84,4 +86,12 @@ class Customer(Base):
     first_name: Mapped[str] = mapped_column(String(100), nullable=False)
     last_name: Mapped[str] = mapped_column(String(100), nullable=False)
     email: Mapped[str] = mapped_column(String(150), unique=True, nullable=False, index=True)
-    age: Mapped[int | None] = mapped_column(Integer, nullable=True)`;
+    age: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
+
+    def __str__(self):
+        return f"Customer({self.first_name}, {self.last_name}, {self.email}, {self.age})"
+
+    def __repr__(self):
+        return f"Customer({self.first_name}, {self.last_name}, {self.email}, {self.age})"`;
