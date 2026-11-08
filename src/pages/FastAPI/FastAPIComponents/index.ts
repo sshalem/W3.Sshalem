@@ -58,3 +58,4 @@ export { default as ServiceMain } from "./F9_SynchronousBackendPkg/J_ServiceSect
 export { default as ControllerMain } from "./F9_SynchronousBackendPkg/K_ControllerSection/ControllerMain";
 export { default as RooAppMain } from "./F9_SynchronousBackendPkg/L_MainAppSection/RooAppMain";
 export { default as InitDBMain } from "./F9_SynchronousBackendPkg/M_InitDBSection/InitDBMain";
+export { default as RepoAdvancedMain } from "./F9_SynchronousBackendPkg/N_RepositoryAdvnaced/RepoAdvancedMain";

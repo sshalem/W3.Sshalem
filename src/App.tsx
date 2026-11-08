@@ -519,6 +519,7 @@ const router = createBrowserRouter(
                 { path: "controller", element: <FastAPIComponents.ControllerMain /> },
                 { path: "main", element: <FastAPIComponents.RooAppMain /> },
                 { path: "initDB", element: <FastAPIComponents.InitDBMain /> },
+                { path: "repo-advanced", element: <FastAPIComponents.RepoAdvancedMain /> },
               ],
             },
           ],
