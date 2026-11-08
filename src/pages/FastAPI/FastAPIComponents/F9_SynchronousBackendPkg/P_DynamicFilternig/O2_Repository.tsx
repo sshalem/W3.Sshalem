@@ -3,7 +3,7 @@
 
 */
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
-import { Highlight_PYTHON } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanEmerald, SpanGrey } from "../../../../../components/Highlight";
 
 const O2_Repository = ({ anchor }: { anchor: string }) => {
   return (
@@ -12,18 +12,31 @@ const O2_Repository = ({ anchor }: { anchor: string }) => {
         <div className="mb-8 text-2xl font-semibold">Repository — build dynamic conditions</div>
         <ULdisc>
           <Li>The important idea is that we build a list of SQLAlchemy conditions and apply only the conditions whose parameters were supplied.</Li>
-          <Li></Li>
+          <Li>
+            Important concepts:
+            <ULdisc>
+              <Li>
+                <SpanEmerald>_build_conditions()</SpanEmerald> is a private helper method. It centralizes the filtering logic so the data query and
+                count query use exactly the same conditions.
+              </Li>
+              <Li>
+                <SpanEmerald>conditions.append(...)</SpanEmerald> - adds a condition only when its corresponding parameter was provided.
+              </Li>
+              <Li>
+                <SpanEmerald>.where(*conditions)</SpanEmerald> - applies all conditions using <SpanGrey>AND</SpanGrey> .
+              </Li>
+              <Li>If the list is empty, no filtering is applied.</Li>
+              <Li>
+                <SpanEmerald>if first_name is not None</SpanEmerald> - distinguishes an omitted parameter from an explicitly supplied empty string.
+              </Li>
+              <Li>
+                <SpanEmerald>count_all_dynamic()</SpanEmerald> now counts only records matching the filters, not the entire table.
+              </Li>
+            </ULdisc>
+          </Li>
           <Li>
             create the following methods:
             <Highlight_PYTHON code={_1_} />
-          </Li>
-          <Li>
-            Why do we need two queries?
-            <ULdisc>
-              <Li>First query retrieves the requested page.</Li>
-              <Li>Second query determines how many customers exist in total.</Li>
-            </ULdisc>
-            This allows us to calculate the total number of pages.
           </Li>
         </ULdisc>
       </section>

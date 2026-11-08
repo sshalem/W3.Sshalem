@@ -24,7 +24,7 @@ const O5_Test = ({ anchor }: { anchor: string }) => {
 
 export default O5_Test;
 
-const _1_ = `GET /api/customers/paginated?first_name=John
-GET /api/customers/paginated?min_age=25&max_age=50
-GET /api/customers/paginated?first_name=John&min_age=25&max_age=50
-GET /api/customers/paginated?first_name=John&min_age=25&max_age=50&page=1&size=5&sort_by=age&direction=desc`;
+const _1_ = `GET /api/customers/dynamicFilter?first_name=John
+GET /api/customers/dynamicFilter?min_age=25&max_age=50
+GET /api/customers/dynamicFilter?first_name=John&min_age=25&max_age=50
+GET /api/customers/dynamicFilter?first_name=John&min_age=25&max_age=50&page=1&size=5&sort_by=age&direction=desc`;

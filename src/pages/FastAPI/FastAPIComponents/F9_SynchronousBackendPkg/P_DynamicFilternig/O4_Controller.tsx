@@ -22,7 +22,7 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
           </Li>
           <Li>It restricts, so I we can have only the accepted values.</Li>
           <Li>
-            Unlike Spring boot Controller, here, For astAPI project, must establish this order convention of API's:
+            Unlike Spring boot Controller, here, For FastAPI project, must establish this order convention of API's:
             <Highlight_PYTHON code={_0_} />
           </Li>
           <Highlight_PYTHON code={_1_} />
@@ -44,11 +44,27 @@ const _0_ = `# Static routes first
 # Dynamic routes last
 @router.get("/{customer_id}")`;
 
-const _1_ = `@router.get("/paginated/sorted", response_model=CustomerPageResponse)
-def get_all_customers_pagination_sorting(page: int = Query(default=1, ge=1),
-                                         size: int = Query(default=10, ge=1, le=100),
-                                         sort_by: Literal["id", "first_name", "last_name", "email", "age"] = Query(default="id"),
-                                         direction: Literal["asc", "desc"] = Query(default="asc"),
-                                         service: CustomerService = Depends(get_customer_service)):
-    return service.get_all_customers_pagination_sorting(page, size, sort_by, direction)
+const _1_ = `@router.get("/dynamicFilter", response_model=CustomerPageResponse)
+def get_all_customers_dynamic_pagination_sorting(page: int = Query(default=1, ge=1),
+                                                 size: int = Query(default=10, ge=1, le=100),
+                                                 sort_by: Literal["id", "first_name", "last_name", "email", "age"] = Query(default="id"),
+                                                 direction: Literal["asc", "desc"] = Query(default="asc"),
+                                                 first_name: str | None = Query(default=None, min_length=2, max_length=100),
+                                                 last_name: str | None = Query(default=None, min_length=2, max_length=100),
+                                                 email: EmailStr | None = Query(default=None),
+                                                 min_age: int | None = Query(default=None, ge=18, le=120),
+                                                 max_age: int | None = Query(default=None, ge=18, le=120),
+                                                 service: CustomerService = Depends(get_customer_service)):
+    if min_age is not None and max_age is not None and min_age > max_age:
+        raise HTTPException(status_code=422, detail="min_age cannot be greater than max_age")
+
+    return service.get_all_customers_dynamic_pagination_sort(page=page,
+                                                             size=size,
+                                                             sort_by=sort_by,
+                                                             direction=direction,
+                                                             first_name=first_name,
+                                                             last_name=last_name,
+                                                             email=str(email) if email is not None else None,
+                                                             min_age=min_age,
+                                                             max_age=max_age)
 `;
