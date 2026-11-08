@@ -44,7 +44,7 @@ class CustomerRepository:
 
     # Existing methods ...
 
-    def find_all_paginated(self, offset: int, limit: int, sort_by: str, direction: str) -> list[Customer]:
+    def find_all_paginated_sorting(self, offset: int, limit: int, sort_by: str, direction: str) -> list[Customer]:
 
         # The sorting dictionary, Allowed sorting columns
         sort_columns = {

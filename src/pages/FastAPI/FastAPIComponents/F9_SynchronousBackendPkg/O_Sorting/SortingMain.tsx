@@ -4,6 +4,8 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_IntroSorting from "./O1_IntroSorting";
 import O2_Repository from "./O2_Repository";
 import O3_Service from "./O3_Service";
+import O4_Controller from "./O4_Controller";
+import O5_Test from "./O5_Test";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -12,12 +14,14 @@ import O3_Service from "./O3_Service";
 const o1_IntroSorting = "1. Intro Sorting";
 const o2_Repository = "2. Repository";
 const o3_Service = "3. Service";
+const o4_Controller = "4. Controller";
+const o5_Test = "5. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroSorting, o2_Repository, o3_Service];
+const anchorList: string[] = [o1_IntroSorting, o2_Repository, o3_Service, o4_Controller, o5_Test];
 
 // ============================================
 // ============================================
@@ -73,6 +77,8 @@ const SortingMain = () => {
       <O1_IntroSorting anchor={o1_IntroSorting} />
       <O2_Repository anchor={o2_Repository} />
       <O3_Service anchor={o3_Service} />
+      <O4_Controller anchor={o4_Controller} />
+      <O5_Test anchor={o5_Test} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

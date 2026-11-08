@@ -15,7 +15,7 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
             Open <SpanEmerald>customer_controller.py</SpanEmerald> and Add this schema to it
           </Li>
           <Li>
-            Unlike Spring boot Controller, here, For astAPI project, must establish this convention:
+            Unlike Spring boot Controller, here, For astAPI project, must establish this order convention of API's:
             <Highlight_PYTHON code={_0_} />
           </Li>
           <Highlight_PYTHON code={_1_} />
