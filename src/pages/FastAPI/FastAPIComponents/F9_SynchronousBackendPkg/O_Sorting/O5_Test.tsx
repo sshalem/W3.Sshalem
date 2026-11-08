@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
-const O4_Controller = ({ anchor }: { anchor: string }) => {
+const O5_Test = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -24,7 +24,7 @@ const O4_Controller = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_Controller;
+export default O5_Test;
 
 const _1_ = `class CustomerPageResponse(BaseModel):
     items: list[CustomerResponse]

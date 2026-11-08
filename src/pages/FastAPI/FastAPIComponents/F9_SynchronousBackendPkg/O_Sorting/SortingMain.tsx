@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
-import O3_Service from "./O3_Service";
-import O1_IntroRepoAdv from "./O1_IntroRepoAdv";
+import O1_IntroSorting from "./O1_IntroSorting";
 import O2_Repository from "./O2_Repository";
+import O3_Service from "./O3_Service";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroRepoAdv = "1. Intro";
+const o1_IntroSorting = "1. Intro Sorting";
 const o2_Repository = "2. Repository";
 const o3_Service = "3. Service";
 
@@ -17,12 +17,12 @@ const o3_Service = "3. Service";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroRepoAdv, o2_Repository, o3_Service];
+const anchorList: string[] = [o1_IntroSorting, o2_Repository, o3_Service];
 
 // ============================================
 // ============================================
 
-const RepoAdvancedMain = () => {
+const SortingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,7 +70,7 @@ const RepoAdvancedMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_IntroRepoAdv anchor={o1_IntroRepoAdv} />
+      <O1_IntroSorting anchor={o1_IntroSorting} />
       <O2_Repository anchor={o2_Repository} />
       <O3_Service anchor={o3_Service} />
 
@@ -79,4 +79,4 @@ const RepoAdvancedMain = () => {
   );
 };
 
-export default RepoAdvancedMain;
+export default SortingMain;

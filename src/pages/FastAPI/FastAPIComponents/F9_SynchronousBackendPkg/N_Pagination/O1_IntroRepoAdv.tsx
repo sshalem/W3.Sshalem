@@ -9,7 +9,7 @@ const O1_IntroRepoAdv = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <div className="mb-8 text-2xl font-semibold">Advanced Repository</div>
+        <div className="mb-8 text-2xl font-semibold">Pagination</div>
         <div>
           Let's implement Pagination in our existing FastAPI Customer Management project, following the same layered architecture we've been using:
         </div>
