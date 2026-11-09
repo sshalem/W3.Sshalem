@@ -9,7 +9,7 @@ const O4_scriptsTxtfile = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <div className="text-lg font-semibold">Create scripts.txt file</div>
+        <div className="text-lg font-semibold">Create scripts.md file</div>
         <div></div>
         <ULDecimal>
           <Li>Since I use the cli to run commands , thus , I place here all the relavant commands I am going to use</Li>
@@ -34,7 +34,7 @@ const _1_ = `customer-management/
 ├── .venv/
 ├── .gitignore
 ├── requirements.txt
-└── scripts.txt`;
+└── scripts.md`;
 
 const _2_ = `# shows list of dependencies
 pip freeze
