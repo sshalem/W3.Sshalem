@@ -28,6 +28,6 @@ const O1_CreatePostgresDB = ({ anchor }: { anchor: string }) => {
 
 export default O1_CreatePostgresDB;
 
-const _1_ = `CREATE DATABASE customer_management;`;
+const _1_ = `CREATE DATABASE python_db;`;
 
-const _2_ = `SELECT datname FROM pg_database WHERE datname = 'customer_management';`;
+const _2_ = `SELECT datname FROM pg_database WHERE datname = 'python_db';`;
