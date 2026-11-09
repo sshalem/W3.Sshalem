@@ -26,38 +26,42 @@ export default O3_FolderStructure;
 const _1_ = `customer-management/
 │
 ├── app/
+│   ├── __init__.py
 │   ├── main.py
+|   ├── dependencies.py
 │   │
-|   ├── core/
-│   │    ├── config.py              # application.properties / application.yml
-│   │    ├── logging.py             # Logging setup
-│   │    └── database.py            # DataSource + EntityManagerFactory
+│   ├── config/
+│   │   ├── __init__.py
+│   │   └── settings.py
 │   │
-│   ├── models/   # @Entity
-│   │   └── customer.py
+│   ├── database/
+│   │   ├── __init__.py
+│   │   └── database.py
 │   │
-│   ├── schemas/  # DTOs
+│   ├── models/
+│   │   ├── __init__.py
 │   │   └── customer.py
 │   │
 │   ├── repositories/
+│   │   ├── __init__.py
 │   │   └── customer_repository.py
 │   │
-│   ├── services/
-│   │   └── customer_service.py
-│   │
-│   ├── controllers/
-│   │   └── customer_controller.py
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── customer.py
 │   │
 │   ├── exceptions/
-│   │   └── custom_exceptions.py
+│   |   ├── __init__.py
+│   |   └── custom_exceptions.py
 │   │
-|   └── utils/   # Helper functions / Reusable helpers / validators / converters
+│   ├── services/
+│   |   ├── __init__.py
+│   |   └── customer_service.py
+│   │
+│   └── controller/
 │       ├── __init__.py
-│       └── common.py
-│
-├── tests/
-│   └── test_customers.py
-│
+│       └── customer_controller.py
+|
 ├── .env
 ├── .gitignore
 ├── requirements.txt

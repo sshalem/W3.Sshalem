@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_JAVA, SpanEmerald, SpanGrey } from "../../../../../components/Highlight";
 
-const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
+const O2_CustomerEntityModel = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -59,7 +59,7 @@ const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_EntitySqlalchemyModel;
+export default O2_CustomerEntityModel;
 
 const _1_ = `@Entity
 @Table(name = "customers")

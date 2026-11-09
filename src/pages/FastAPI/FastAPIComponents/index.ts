@@ -64,19 +64,19 @@ export { default as DynamicFilteringMain } from "./F9_SyncSingleEntityPkg/P_Dyna
 
 //
 export { default as SyncOne2Many } from "./F10_SyncOne2ManyPkg/SyncOne2Many";
-// export { default as SyncBackendMain } from "./F9_SyncSingleEntityPkg/A_IntroSyncBackendSection/SyncBackendMain";
-// export { default as CreateFastApiMain } from "./F9_SyncSingleEntityPkg/B_CreateFastAPISection/CreateFastApiMain";
-// export { default as ConfigSQLAlchemyMain } from "./F9_SyncSingleEntityPkg/C_ConfigureSQLAlchemySection/ConfigSQLAlchemyMain";
-// export { default as EntityMain } from "./F9_SyncSingleEntityPkg/D_EntitySerction/EntityMain";
-// export { default as RepositoryMain } from "./F9_SyncSingleEntityPkg/E_RepositorySection/RepositoryMain";
-// export { default as DatabaseSessionMain } from "./F9_SyncSingleEntityPkg/F_DataBaseSessionSection/DatabaseSessionMain";
-// export { default as SchemaMain } from "./F9_SyncSingleEntityPkg/G_SchemaSection/SchemaMain";
-// export { default as ExceptionMain } from "./F9_SyncSingleEntityPkg/H_ExceptionSection/ExceptionMain";
-// export { default as DependencyInjectionMain } from "./F9_SyncSingleEntityPkg/I_DependencyInjectionSection/DependencyInjectionMain";
-// export { default as ServiceMain } from "./F9_SyncSingleEntityPkg/J_ServiceSection/ServiceMain";
-// export { default as ControllerMain } from "./F9_SyncSingleEntityPkg/K_ControllerSection/ControllerMain";
-// export { default as RooAppMain } from "./F9_SyncSingleEntityPkg/L_MainAppSection/RooAppMain";
-// export { default as InitDBMain } from "./F9_SyncSingleEntityPkg/M_InitDBSection/InitDBMain";
-// export { default as PaginationMain } from "./F9_SyncSingleEntityPkg/N_Pagination/PaginationMain";
-// export { default as SortingMain } from "./F9_SyncSingleEntityPkg/O_Sorting/SortingMain";
-// export { default as DynamicFilteringMain } from "./F9_SyncSingleEntityPkg/P_DynamicFilternig/DynamicFilteringMain";
+export { default as One2ManySyncMain } from "./F10_SyncOne2ManyPkg/A_IntroSyncBackendSection/One2ManySyncMain";
+export { default as One2ManyCreateFastApiMain } from "./F10_SyncOne2ManyPkg/B_CreateFastAPISection/One2ManyCreateFastApiMain";
+// export { default as ConfigSQLAlchemyMain } from "./F10_SyncOne2ManyPkg/C_ConfigureSQLAlchemySection/ConfigSQLAlchemyMain";
+// export { default as EntityMain } from "./F10_SyncOne2ManyPkg/D_EntitySerction/EntityMain";
+// export { default as RepositoryMain } from "./F10_SyncOne2ManyPkg/E_RepositorySection/RepositoryMain";
+// export { default as DatabaseSessionMain } from "./F10_SyncOne2ManyPkg/F_DataBaseSessionSection/DatabaseSessionMain";
+// export { default as SchemaMain } from "./F10_SyncOne2ManyPkg/G_SchemaSection/SchemaMain";
+// export { default as ExceptionMain } from "./F10_SyncOne2ManyPkg/H_ExceptionSection/ExceptionMain";
+// export { default as DependencyInjectionMain } from "./F10_SyncOne2ManyPkg/I_DependencyInjectionSection/DependencyInjectionMain";
+// export { default as ServiceMain } from "./F10_SyncOne2ManyPkg/J_ServiceSection/ServiceMain";
+// export { default as ControllerMain } from "./F10_SyncOne2ManyPkg/K_ControllerSection/ControllerMain";
+// export { default as RooAppMain } from "./F10_SyncOne2ManyPkg/L_MainAppSection/RooAppMain";
+// export { default as InitDBMain } from "./F10_SyncOne2ManyPkg/M_InitDBSection/InitDBMain";
+// export { default as PaginationMain } from "./F10_SyncOne2ManyPkg/N_Pagination/PaginationMain";
+// export { default as SortingMain } from "./F10_SyncOne2ManyPkg/O_Sorting/SortingMain";
+// export { default as DynamicFilteringMain } from "./F10_SyncOne2ManyPkg/P_DynamicFilternig/DynamicFilteringMain";

@@ -23,7 +23,7 @@ const anchorList: string[] = [o1_CreateFastAPI, o2_InstallDependencies, o3_Requi
 // ============================================
 // ============================================
 
-const CreateFastApiMain = () => {
+const One2ManyCreateFastApiMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -82,4 +82,4 @@ const CreateFastApiMain = () => {
   );
 };
 
-export default CreateFastApiMain;
+export default One2ManyCreateFastApiMain;

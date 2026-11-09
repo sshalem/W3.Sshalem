@@ -1,29 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_IntroSycnBackend from "./O1_IntroSycnBackend";
-import O2_SpringVsFastApi from "./O2_SpringVsFastApi";
-import O3_FolderStructure from "./O3_FolderStructure";
-import O4_TopicsToCover from "./O4_TopicsToCover";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_CustomerEntityModel from "./O2_CustomerEntityModel";
+import O3_OrderEntityModel from "./O3_OrderEntityModel";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroSycnBackend = "1. Intro Synchronus Backend";
-const o2_SpringVsFastApi = "2. Spring Vs FastApi";
-const o3_FolderStructure = "3. Project Folder Structure";
-const o4_TopicsToCover = "4. Topics to cover";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_CustomerEntityModel = "2. Customer Entity - (Model)";
+const o3_OrderEntityModel = "3. Order Entity - (Model)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroSycnBackend, o2_SpringVsFastApi, o3_FolderStructure, o4_TopicsToCover];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerEntityModel, o3_OrderEntityModel];
 
 // ============================================
 // ============================================
 
-const SyncBackendMain = () => {
+const EntityMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -72,14 +70,13 @@ const SyncBackendMain = () => {
       />
       {/* End Contents */}
 
-      <O1_IntroSycnBackend anchor={o1_IntroSycnBackend} />
-      <O2_SpringVsFastApi anchor={o2_SpringVsFastApi} />
-      <O3_FolderStructure anchor={o3_FolderStructure} />
-      <O4_TopicsToCover anchor={o4_TopicsToCover} />
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_CustomerEntityModel anchor={o2_CustomerEntityModel} />
+      <O3_OrderEntityModel anchor={o3_OrderEntityModel} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default SyncBackendMain;
+export default EntityMain;
