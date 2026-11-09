@@ -503,7 +503,7 @@ const router = createBrowserRouter(
             { path: "security", element: <FastAPIComponents.FastAPISecurity /> },
             { path: "caching", element: <FastAPIComponents.FastAPICaching /> },
             {
-              path: "synchronous",
+              path: "sync-single",
               element: <FastAPIComponents.SyncFastApiBackend />,
               children: [
                 { path: "projectFolderStructure", element: <FastAPIComponents.SyncBackendMain /> },
