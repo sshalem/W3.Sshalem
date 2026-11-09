@@ -8,6 +8,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D0_DropDownFastAPIIde from "./DropFastAPI/D0_DropDownFastAPIIde";
 import D1_DropDownFastApiConfigEnvProfiles from "./DropFastAPI/D1_DropDownFastApiConfigEnvProfiles";
+import D1_1_DropDownFastApiInstall from "./DropFastAPI/D1_1_DropDownFastApiInstall";
 import D2_DropDownFastApiLogging from "./DropFastAPI/D2_DropDownFastApiLogging";
 import D3_DropDownFastApiRouter from "./DropFastAPI/D3_DropDownFastApiRouter";
 import D4_DropDownFastApiExceptions from "./DropFastAPI/D4_DropDownFastApiExceptions";
@@ -15,8 +16,8 @@ import D5_DropDownFastApiSQLAlchemy from "./DropFastAPI/D5_DropDownFastApiSQLAlc
 import D6_DropDownFastApiAuditing from "./DropFastAPI/D6_DropDownFastApiAuditing";
 import D7_DropDownFastApiSecurity from "./DropFastAPI/D7_DropDownFastApiSecurity";
 import D8_DropDownFastApiCaching from "./DropFastAPI/D8_DropDownFastApiCaching";
-import D1_1_DropDownFastApiInstall from "./DropFastAPI/D1_1_DropDownFastApiInstall";
 import D9_DropDownSyncBackend from "./DropFastAPI/D9_DropDownSyncBackend";
+import D10_DropDownSyncOne2Many from "./DropFastAPI/D10_DropDownSyncOne2Many";
 
 const FastAPI_page = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -57,6 +58,7 @@ const FastAPI_page = () => {
           <D7_DropDownFastApiSecurity />
           <D8_DropDownFastApiCaching />
           <D9_DropDownSyncBackend />
+          <D10_DropDownSyncOne2Many />
         </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
