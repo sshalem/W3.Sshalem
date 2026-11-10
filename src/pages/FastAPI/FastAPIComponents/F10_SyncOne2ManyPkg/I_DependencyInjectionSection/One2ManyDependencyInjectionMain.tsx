@@ -19,7 +19,7 @@ const anchorList: string[] = [o1_ProjectFolderStructure, o2_DepenInject];
 // ============================================
 // ============================================
 
-const DependencyInjectionMain = () => {
+const One2ManyDependencyInjectionMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -76,4 +76,4 @@ const DependencyInjectionMain = () => {
   );
 };
 
-export default DependencyInjectionMain;
+export default One2ManyDependencyInjectionMain;

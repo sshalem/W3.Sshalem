@@ -1,40 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_RepositoryDBOperations from "./O2_RepositoryDBOperations";
-import O3_CreateCustomer from "./O3_CreateCustomer";
-import O4_FindById from "./O4_FindById";
-import OX_FullCode from "./OX_FullCode";
-import O5_SelectWith2Parameters from "./O5_SelectWith2Parameters";
+import O2_CustomerEntityModel from "./O2_CustomerEntityModel";
+import O3_OrderEntityModel from "./O3_OrderEntityModel";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_RepositoryDBOperations = "2. Repository";
-const o3_CreateCustomer = "3. Create Customer";
-const o4_FindById = "4. Find By Id";
-const o5_SelectWith2Parameters = "5. Select With 2 Parameters";
-const oX_FullCode = "x. Repository Full Code";
+const o2_CustomerEntityModel = "2. Customer Entity - (Model)";
+const o3_OrderEntityModel = "3. Order Entity - (Model)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [
-  o1_ProjectFolderStructure,
-  o2_RepositoryDBOperations,
-  o3_CreateCustomer,
-  o4_FindById,
-  o5_SelectWith2Parameters,
-  oX_FullCode,
-];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerEntityModel, o3_OrderEntityModel];
 
 // ============================================
 // ============================================
 
-const RepositoryMain = () => {
+const One2ManyEntityMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -84,15 +71,12 @@ const RepositoryMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_RepositoryDBOperations anchor={o2_RepositoryDBOperations} />
-      <O3_CreateCustomer anchor={o3_CreateCustomer} />
-      <O4_FindById anchor={o4_FindById} />
-      <O5_SelectWith2Parameters anchor={o5_SelectWith2Parameters} />
-      <OX_FullCode anchor={oX_FullCode} />
+      <O2_CustomerEntityModel anchor={o2_CustomerEntityModel} />
+      <O3_OrderEntityModel anchor={o3_OrderEntityModel} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default RepositoryMain;
+export default One2ManyEntityMain;

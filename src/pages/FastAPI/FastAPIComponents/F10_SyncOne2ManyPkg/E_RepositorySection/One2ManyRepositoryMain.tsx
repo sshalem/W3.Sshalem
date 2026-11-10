@@ -1,32 +1,40 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-
-import O1_IntroFiltering from "./O1_IntroFiltering";
-import O2_Repository from "./O2_Repository";
-import O3_Service from "./O3_Service";
-import O4_Controller from "./O4_Controller";
-import O5_Test from "./O5_Test";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_RepositoryDBOperations from "./O2_RepositoryDBOperations";
+import O3_CreateCustomer from "./O3_CreateCustomer";
+import O4_FindById from "./O4_FindById";
+import OX_FullCode from "./OX_FullCode";
+import O5_SelectWith2Parameters from "./O5_SelectWith2Parameters";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroFiltering = "1. Intro Dynamic Filtering";
-const o2_Repository = "2. Repository";
-const o3_Service = "3. Service";
-const o4_Controller = "4. Controller";
-const o5_Test = "5. Test";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_RepositoryDBOperations = "2. Repository";
+const o3_CreateCustomer = "3. Create Customer";
+const o4_FindById = "4. Find By Id";
+const o5_SelectWith2Parameters = "5. Select With 2 Parameters";
+const oX_FullCode = "x. Repository Full Code";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroFiltering, o2_Repository, o3_Service, o4_Controller, o5_Test];
+const anchorList: string[] = [
+  o1_ProjectFolderStructure,
+  o2_RepositoryDBOperations,
+  o3_CreateCustomer,
+  o4_FindById,
+  o5_SelectWith2Parameters,
+  oX_FullCode,
+];
 
 // ============================================
 // ============================================
 
-const DynamicFilteringMain = () => {
+const One2ManyRepositoryMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -74,15 +82,17 @@ const DynamicFilteringMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_IntroFiltering anchor={o1_IntroFiltering} />
-      <O2_Repository anchor={o2_Repository} />
-      <O3_Service anchor={o3_Service} />
-      <O4_Controller anchor={o4_Controller} />
-      <O5_Test anchor={o5_Test} />
+
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_RepositoryDBOperations anchor={o2_RepositoryDBOperations} />
+      <O3_CreateCustomer anchor={o3_CreateCustomer} />
+      <O4_FindById anchor={o4_FindById} />
+      <O5_SelectWith2Parameters anchor={o5_SelectWith2Parameters} />
+      <OX_FullCode anchor={oX_FullCode} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DynamicFilteringMain;
+export default One2ManyRepositoryMain;

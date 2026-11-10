@@ -1,27 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_InitDB from "./O1_InitDB";
-import O2_SQLScript from "./O2_SQLScript";
-import O3_dataSqlWay from "./O3_dataSqlWay";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_CustomExceptions from "./O2_CustomExceptions";
+import O3_GlobalExceptionHandler from "./O3_GlobalExceptionHandler";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_InitDB = "1. Init DB";
-const o2_SQLScript = "2. Run SQL Script";
-const o3_dataSqlWay = "3. data.sql";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_CustomExceptions = "2. Custom Exceptions";
+const o3_GlobalExceptionHandler = "3. Global Exception Handler";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_InitDB, o2_SQLScript, o3_dataSqlWay];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomExceptions, o3_GlobalExceptionHandler];
 
 // ============================================
 // ============================================
 
-const InitDBMain = () => {
+const One2ManyExceptionMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,13 +70,13 @@ const InitDBMain = () => {
       />
       {/* End Contents */}
 
-      <O1_InitDB anchor={o1_InitDB} />
-      <O2_SQLScript anchor={o2_SQLScript} />
-      <O3_dataSqlWay anchor={o3_dataSqlWay} />
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_CustomExceptions anchor={o2_CustomExceptions} />
+      <O3_GlobalExceptionHandler anchor={o3_GlobalExceptionHandler} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default InitDBMain;
+export default One2ManyExceptionMain;

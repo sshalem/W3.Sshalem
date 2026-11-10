@@ -1,25 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_BusinessLogic from "./O2_BusinessLogic";
+
+import O1_IntroSorting from "./O1_IntroSorting";
+import O2_Repository from "./O2_Repository";
+import O3_Service from "./O3_Service";
+import O4_Controller from "./O4_Controller";
+import O5_Test from "./O5_Test";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_BusinessLogic = "2. Service — Business Logic";
+const o1_IntroSorting = "1. Intro Sorting";
+const o2_Repository = "2. Repository";
+const o3_Service = "3. Service";
+const o4_Controller = "4. Controller";
+const o5_Test = "5. Test";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_BusinessLogic];
+const anchorList: string[] = [o1_IntroSorting, o2_Repository, o3_Service, o4_Controller, o5_Test];
 
 // ============================================
 // ============================================
 
-const ServiceMain = () => {
+const One2ManySortingMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -67,13 +74,15 @@ const ServiceMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-
-      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_BusinessLogic anchor={o2_BusinessLogic} />
+      <O1_IntroSorting anchor={o1_IntroSorting} />
+      <O2_Repository anchor={o2_Repository} />
+      <O3_Service anchor={o3_Service} />
+      <O4_Controller anchor={o4_Controller} />
+      <O5_Test anchor={o5_Test} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ServiceMain;
+export default One2ManySortingMain;

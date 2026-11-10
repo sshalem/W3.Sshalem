@@ -1,27 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_CustomExceptions from "./O2_CustomExceptions";
-import O3_GlobalExceptionHandler from "./O3_GlobalExceptionHandler";
+import O1_CreataeDBSession from "./O1_CreataeDBSession";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_CustomExceptions = "2. Custom Exceptions";
-const o3_GlobalExceptionHandler = "3. Global Exception Handler";
+const o1_CreataeDBSession = "1. Creatae DB Session";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomExceptions, o3_GlobalExceptionHandler];
+const anchorList: string[] = [o1_CreataeDBSession];
 
 // ============================================
 // ============================================
 
-const ExceptionMain = () => {
+const One2ManyDatabaseSessionMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -70,13 +66,11 @@ const ExceptionMain = () => {
       />
       {/* End Contents */}
 
-      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_CustomExceptions anchor={o2_CustomExceptions} />
-      <O3_GlobalExceptionHandler anchor={o3_GlobalExceptionHandler} />
+      <O1_CreataeDBSession anchor={o1_CreataeDBSession} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default ExceptionMain;
+export default One2ManyDatabaseSessionMain;

@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_CreataeDBSession from "./O1_CreataeDBSession";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_Controller from "./O2_Controller";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_CreataeDBSession = "1. Creatae DB Session";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_Controller = "2. controller";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_CreataeDBSession];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_Controller];
 
 // ============================================
 // ============================================
 
-const DatabaseSessionMain = () => {
+const One2ManyControllerMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -66,11 +68,12 @@ const DatabaseSessionMain = () => {
       />
       {/* End Contents */}
 
-      <O1_CreataeDBSession anchor={o1_CreataeDBSession} />
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_Controller anchor={o2_Controller} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default DatabaseSessionMain;
+export default One2ManyControllerMain;

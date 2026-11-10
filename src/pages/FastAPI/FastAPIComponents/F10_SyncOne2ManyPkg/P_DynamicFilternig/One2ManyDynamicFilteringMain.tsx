@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 
-import O1_IntroSorting from "./O1_IntroSorting";
+import O1_IntroFiltering from "./O1_IntroFiltering";
 import O2_Repository from "./O2_Repository";
 import O3_Service from "./O3_Service";
 import O4_Controller from "./O4_Controller";
@@ -11,7 +11,7 @@ import O5_Test from "./O5_Test";
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroSorting = "1. Intro Sorting";
+const o1_IntroFiltering = "1. Intro Dynamic Filtering";
 const o2_Repository = "2. Repository";
 const o3_Service = "3. Service";
 const o4_Controller = "4. Controller";
@@ -21,12 +21,12 @@ const o5_Test = "5. Test";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroSorting, o2_Repository, o3_Service, o4_Controller, o5_Test];
+const anchorList: string[] = [o1_IntroFiltering, o2_Repository, o3_Service, o4_Controller, o5_Test];
 
 // ============================================
 // ============================================
 
-const SortingMain = () => {
+const One2ManyDynamicFilteringMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -74,7 +74,7 @@ const SortingMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_IntroSorting anchor={o1_IntroSorting} />
+      <O1_IntroFiltering anchor={o1_IntroFiltering} />
       <O2_Repository anchor={o2_Repository} />
       <O3_Service anchor={o3_Service} />
       <O4_Controller anchor={o4_Controller} />
@@ -85,4 +85,4 @@ const SortingMain = () => {
   );
 };
 
-export default SortingMain;
+export default One2ManyDynamicFilteringMain;

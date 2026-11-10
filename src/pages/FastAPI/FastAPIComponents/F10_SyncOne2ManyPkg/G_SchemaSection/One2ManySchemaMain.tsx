@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-import O1_ApplicationMainCode from "./O1_ApplicationMainCode";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_SchemaPydanticDTO from "./O2_SchemaPydanticDTO";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_ApplicationMainCode = "1. main.py code";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_SchemaPydanticDTO = "2. Schema — Pydantic DTO";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ApplicationMainCode];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_SchemaPydanticDTO];
 
 // ============================================
 // ============================================
 
-const RooAppMain = () => {
+const One2ManySchemaMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -66,11 +68,12 @@ const RooAppMain = () => {
       />
       {/* End Contents */}
 
-      <O1_ApplicationMainCode anchor={o1_ApplicationMainCode} />
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_SchemaPydanticDTO anchor={o2_SchemaPydanticDTO} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default RooAppMain;
+export default One2ManySchemaMain;

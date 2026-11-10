@@ -1,32 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
-
-import O3_Service from "./O3_Service";
-import O1_IntroRepoAdv from "./O1_IntroRepoAdv";
-import O2_Repository from "./O2_Repository";
-import O4_Controller from "./O4_Controller";
-import O5_Test from "./O5_Test";
+import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
+import O2_BusinessLogic from "./O2_BusinessLogic";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
-const o1_IntroRepoAdv = "1. Intro";
-const o2_Repository = "2. Repository";
-const o3_Service = "3. Service";
-const o4_Controller = "4. Controller";
-const o5_Test = "5. Test";
+const o1_ProjectFolderStructure = "1. Project Folder Structure";
+const o2_BusinessLogic = "2. Service — Business Logic";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_IntroRepoAdv, o2_Repository, o3_Service, o4_Controller, o5_Test];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_BusinessLogic];
 
 // ============================================
 // ============================================
 
-const PaginationMain = () => {
+const One2ManyServiceMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -74,15 +67,13 @@ const PaginationMain = () => {
         ulRef={ulRef}
       />
       {/* End Contents */}
-      <O1_IntroRepoAdv anchor={o1_IntroRepoAdv} />
-      <O2_Repository anchor={o2_Repository} />
-      <O3_Service anchor={o3_Service} />
-      <O4_Controller anchor={o4_Controller} />
-      <O5_Test anchor={o5_Test} />
+
+      <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
+      <O2_BusinessLogic anchor={o2_BusinessLogic} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
   );
 };
 
-export default PaginationMain;
+export default One2ManyServiceMain;
