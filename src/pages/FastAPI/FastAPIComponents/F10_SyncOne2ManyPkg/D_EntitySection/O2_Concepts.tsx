@@ -3,7 +3,7 @@
 
 */
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
-import { Highlight_PYTHON, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
 const O2_Concepts = ({ anchor }: { anchor: string }) => {
   return (
