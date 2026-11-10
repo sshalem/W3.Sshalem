@@ -54,7 +54,7 @@ class Customer(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
     # Bidirectional One-to-Many relationship
-    orders: Mapped[list["Order"]] = relationship("Order", back_populates="customer")
+    orders: Mapped[list["Order"]] = relationship(back_populates="customer", cascade="all, delete-orphan", lazy="select")
 
     def __str__(self) -> str:
         return (
@@ -65,4 +65,5 @@ class Customer(Base):
             f"age={self.age}, "
             f"created_at={self.created_at}, "
             f"updated_at={self.updated_at})"
-        )`;
+        )
+`;

@@ -4,6 +4,7 @@ import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
 import O3_CustomerEntityModel from "./O3_CustomerEntityModel";
 import O4_OrderEntityModel from "./O4_OrderEntityModel";
 import O2_Concepts from "./O2_Concepts";
+import O3_Cascade from "./O3_Cascade";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -11,6 +12,7 @@ import O2_Concepts from "./O2_Concepts";
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
 const o2_Concepts = "2. Concepts";
+const o3_Cascade = "3. Cascade";
 const o3_CustomerEntityModel = "3. Customer Entity - (Model)";
 const o4_OrderEntityModel = "4. Order Entity - (Model)";
 
@@ -18,7 +20,7 @@ const o4_OrderEntityModel = "4. Order Entity - (Model)";
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_Concepts, o3_CustomerEntityModel, o4_OrderEntityModel];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_Concepts, o3_Cascade, o3_CustomerEntityModel, o4_OrderEntityModel];
 
 // ============================================
 // ============================================
@@ -74,6 +76,7 @@ const One2ManyEntityMain = () => {
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
       <O2_Concepts anchor={o2_Concepts} />
+      <O3_Cascade anchor={o3_Cascade} />
       <O3_CustomerEntityModel anchor={o3_CustomerEntityModel} />
       <O4_OrderEntityModel anchor={o4_OrderEntityModel} />
 

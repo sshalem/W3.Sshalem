@@ -62,13 +62,13 @@ class Order(Base):
     __tablename__ = "orders"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     # This is the actual database foreign key:
-    customer_id: Mapped[int] = mapped_column(Integer, ForeignKey("customers.id"), nullable=False, index=True)
+    customer_id: Mapped[int] = mapped_column(ForeignKey("customers.id", ondelete="CASCADE"), nullable=False, index=True)
     order_date: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     total_amount: Mapped[Decimal] = mapped_column(Numeric(10, 2), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
-    # Many-to-One side of the relationship at the database level.
-    customer: Mapped["Customer"] = relationship("Customer", back_populates="orders")
+    # Many Orders -> One Customer
+    customer: Mapped["Customer"] = relationship(back_populates="orders", lazy="select")
 
     def __str__(self) -> str:
         return (
