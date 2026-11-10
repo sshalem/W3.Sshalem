@@ -49,16 +49,16 @@ const D2_DropDownApplicationProperties = () => {
       >
         {/* for unknown reason, transition does not work , when I set the Height from refDiv (scrollHeight)  */}
         {/* <div className={`${showList ? `h-[${listHeight}px]` : `h-0`} overflow-hidden bg-white transition-[height] duration-500 ease-in-out`} ref={divRef}> */}
-        <SideDropdownLink sideDropDownNavName="H2" internalLink="/spring/application-properties/h2" />
-        <SideDropdownLink sideDropDownNavName="MySql" internalLink="/spring/application-properties/mysql" />
-        <SideDropdownLink sideDropDownNavName="Postgresql" internalLink="/spring/application-properties/postgresql" />
-        <SideDropdownLink sideDropDownNavName="MongoDB" internalLink="/spring/application-properties/mongodb" />
-        <SideDropdownLink sideDropDownNavName="DBeaver" internalLink="/spring/application-properties/dbeaver" />
-        <SideDropdownLink sideDropDownNavName="Profiles" internalLink="/spring/application-properties/profiles" />
-        <SideDropdownLink sideDropDownNavName="DB Init data.sql" internalLink="/spring/application-properties/db-initialization" />
-        <SideDropdownLink sideDropDownNavName="DB Init @PostConstruct" internalLink="/spring/application-properties/post-construct-initialization" />
-        <SideDropdownLink sideDropDownNavName="DB Init CommandLineRunner" internalLink="/spring/application-properties/command-line-initialization" />
-        <SideDropdownLink sideDropDownNavName="Read from Properties" internalLink="/spring/application-properties/read-from-properties" />
+        <SideDropdownLink sideDropDownNavName="1. H2" internalLink="/spring/application-properties/h2" />
+        <SideDropdownLink sideDropDownNavName="2. MySql" internalLink="/spring/application-properties/mysql" />
+        <SideDropdownLink sideDropDownNavName="3. Postgresql" internalLink="/spring/application-properties/postgresql" />
+        <SideDropdownLink sideDropDownNavName="4. MongoDB" internalLink="/spring/application-properties/mongodb" />
+        <SideDropdownLink sideDropDownNavName="5. DBeaver" internalLink="/spring/application-properties/dbeaver" />
+        <SideDropdownLink sideDropDownNavName="6. Profiles" internalLink="/spring/application-properties/profiles" />
+        <SideDropdownLink sideDropDownNavName="7. Init data.sql" internalLink="/spring/application-properties/db-initialization" />
+        <SideDropdownLink sideDropDownNavName="8. Init @PostConstruct" internalLink="/spring/application-properties/post-construct-initialization" />
+        <SideDropdownLink sideDropDownNavName="9. Init CommandLineRunner" internalLink="/spring/application-properties/command-line-initialization" />
+        <SideDropdownLink sideDropDownNavName="10. Read from Properties" internalLink="/spring/application-properties/read-from-properties" />
       </div>
     </section>
   );
