@@ -9,9 +9,9 @@ const O2_EntitySqlalchemyModel = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <div className="mb-8 text-2xl font-semibold">In Spring Boot, you might write:</div>
+        <div className="mb-8 text-2xl font-semibold">In Spring Boot ( JPA/Hibernate), you write:</div>
         <Highlight_JAVA code={_1_}></Highlight_JAVA>
-        <div className="mb-8 text-2xl font-semibold">In FastAPI, we'll use SQLAlchemy.</div>
+        <div className="mb-8 text-2xl font-semibold">In FastAPI, we'll use SQLAlchemy. </div>
         <div>
           Create: <SpanEmerald>app/models/customer.py</SpanEmerald>
         </div>
@@ -93,8 +93,13 @@ class Customer(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
 
-    def __str__(self):
-        return f"Customer({self.first_name}, {self.last_name}, {self.email}, {self.age})"
-
-    def __repr__(self):
-        return f"Customer({self.first_name}, {self.last_name}, {self.email}, {self.age})"`;
+    def __str__(self) -> str:
+        return (
+            f"Customer(id={self.id}, "
+            f"first_name='{self.first_name}', "
+            f"last_name='{self.last_name}', "
+            f"email='{self.email}', "
+            f"age={self.age}, "
+            f"created_at={self.created_at}, "
+            f"updated_at={self.updated_at})"
+        )`;

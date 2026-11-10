@@ -1,22 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_CustomerEntityModel from "./O2_CustomerEntityModel";
-import O3_OrderEntityModel from "./O3_OrderEntityModel";
+import O3_CustomerEntityModel from "./O3_CustomerEntityModel";
+import O4_OrderEntityModel from "./O4_OrderEntityModel";
+import O2_Concepts from "./O2_Concepts";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_CustomerEntityModel = "2. Customer Entity - (Model)";
-const o3_OrderEntityModel = "3. Order Entity - (Model)";
+const o2_Concepts = "2. Concepts";
+const o3_CustomerEntityModel = "3. Customer Entity - (Model)";
+const o4_OrderEntityModel = "4. Order Entity - (Model)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerEntityModel, o3_OrderEntityModel];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_Concepts, o3_CustomerEntityModel, o4_OrderEntityModel];
 
 // ============================================
 // ============================================
@@ -71,8 +73,9 @@ const One2ManyEntityMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_CustomerEntityModel anchor={o2_CustomerEntityModel} />
-      <O3_OrderEntityModel anchor={o3_OrderEntityModel} />
+      <O2_Concepts anchor={o2_Concepts} />
+      <O3_CustomerEntityModel anchor={o3_CustomerEntityModel} />
+      <O4_OrderEntityModel anchor={o4_OrderEntityModel} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

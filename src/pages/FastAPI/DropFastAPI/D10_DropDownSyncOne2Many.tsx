@@ -34,7 +34,7 @@ const D10_DropDownSyncOne2Many = () => {
 
   return (
     <section>
-      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/sync-one2many" topicName="1. Sync One2Many" />
+      <SideDropDownTopic showList={showList} handleOpenList={handleOpenList} internalLink="/fastapi/sync-one2many" topicName="2. Sync One2Many" />
 
       <div
         style={showList ? { height: `${listHeight}px` } : { height: "0px" }}

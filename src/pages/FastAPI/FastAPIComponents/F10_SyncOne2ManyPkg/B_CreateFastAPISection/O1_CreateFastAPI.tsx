@@ -16,7 +16,9 @@ const O1_CreateFastAPI = ({ anchor }: { anchor: string }) => {
 
         <ULDecimal>
           <Li>
-            Open PyCharm and create a new projec, Project name: <SpanEmerald>customer-management</SpanEmerald> <IMG img_name={fastApi_1}></IMG>
+            Open PyCharm and create a new projec, Project name: <SpanEmerald>One2Many</SpanEmerald>(instead of <SpanRed>customer-management</SpanRed>{" "}
+            the IMG is from previous section)
+            <IMG img_name={fastApi_1}></IMG>
           </Li>
           <Li>
             For the Python interpreter:
