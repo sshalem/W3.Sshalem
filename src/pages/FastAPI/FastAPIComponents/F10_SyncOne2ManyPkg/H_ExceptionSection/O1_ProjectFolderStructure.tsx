@@ -41,15 +41,18 @@ const _1_ = `customer-management/
 │   │
 │   ├── models/
 │   │   ├── __init__.py
-│   │   └── customer.py
+│   │   ├── customer.py
+│   │   └── order.py
 │   │
 │   ├── repositories/
-│   │   ├── __init__.py
-│   │   └── customer_repository.py
+│   │  ├── __init__.py
+│   │  ├── customer_repository.py
+│   │  └── order_repository.py
 │   │
 │   ├── schemas/
 │   │   ├── __init__.py
-│   │   └── customer.py
+│   │   ├── customer.py
+│   │   └── order.py
 │   │
 │   └── exceptions/
 │       ├── __init__.py

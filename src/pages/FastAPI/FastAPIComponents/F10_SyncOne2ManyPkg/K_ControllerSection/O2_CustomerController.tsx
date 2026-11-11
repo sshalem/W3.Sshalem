@@ -5,11 +5,11 @@
 import { MainChildArea } from "../../../../../components";
 import { Highlight_JAVA, SpanEmerald } from "../../../../../components/Highlight";
 
-const O2_Controller = ({ anchor }: { anchor: string }) => {
+const O2_CustomerController = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
-        <div className="mb-8 text-2xl font-semibold">Controller</div>
+        <div className="mb-8 text-2xl font-semibold">Customer Controller</div>
         <div>The Controller is now very thin, just as we generally want a Spring Boot Controller to be.</div>
         <div>
           Create a new file: <SpanEmerald>app/controllers/customer_controller.py</SpanEmerald> with code below
@@ -20,7 +20,7 @@ const O2_Controller = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_Controller;
+export default O2_CustomerController;
 
 const _1_ = `from fastapi import APIRouter, Depends, Response, status
 

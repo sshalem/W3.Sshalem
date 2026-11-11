@@ -1,20 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_Controller from "./O2_Controller";
+import O2_CustomerController from "./O2_CustomerController";
+import O3_OrderController from "./O3_OrderController";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_Controller = "2. controller";
+const o2_CustomerController = "2. CustomerController";
+const o3_OrderController = "2. CustomerController";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_Controller];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerController, o3_OrderController];
 
 // ============================================
 // ============================================
@@ -69,7 +71,8 @@ const One2ManyControllerMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_Controller anchor={o2_Controller} />
+      <O2_CustomerController anchor={o2_CustomerController} />
+      <O3_OrderController anchor={o3_OrderController} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

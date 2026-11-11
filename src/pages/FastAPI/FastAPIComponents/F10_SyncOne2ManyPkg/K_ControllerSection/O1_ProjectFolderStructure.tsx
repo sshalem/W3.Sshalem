@@ -42,27 +42,33 @@ const _1_ = `customer-management/
 │   │
 │   ├── models/
 │   │   ├── __init__.py
-│   │   └── customer.py
+│   │   ├── customer.py
+│   │   └── order.py
 │   │
 │   ├── repositories/
-│   │   ├── __init__.py
-│   │   └── customer_repository.py
+│   │  ├── __init__.py
+│   │  ├── customer_repository.py
+│   │  └── order_repository.py
 │   │
 │   ├── schemas/
 │   │   ├── __init__.py
-│   │   └── customer.py
+│   │   ├── customer.py
+│   │   └── order.py
 │   │
 │   ├── exceptions/
 │   |   ├── __init__.py
-│   |   └── custom_exceptions.py
+│   |   ├── custom_exceptions.py
+│   |   └── exception_handlers.py
 │   │
 │   ├── services/
-│   |   ├── __init__.py
-│   |   └── customer_service.py
+│   │   ├── __init__.py
+│   │   ├── customer_service.py
+│   │   └── order_service.py
 │   │
 │   └── controller/
 │       ├── __init__.py
-│       └── customer_controller.py
+│       ├── customer_controller.py
+│       └── order_controller.py
 |
 ├── .env
 ├── .gitignore
