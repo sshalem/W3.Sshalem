@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O3_CustomerEntityModel from "./O5_CustomerEntityModel";
-import O4_OrderEntityModel from "./O6_OrderEntityModel";
-import O2_Concepts from "./O3_Concepts";
-import O3_Cascade from "./O4_Cascade";
 import O2_RegisterModelImports from "./O2_RegisterModelImports";
+import O3_Concepts from "./O3_Concepts";
+import O4_Cascade from "./O4_Cascade";
+import O5_CustomerEntityModel from "./O5_CustomerEntityModel";
+import O6_OrderEntityModel from "./O6_OrderEntityModel";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -25,10 +25,10 @@ const o6_OrderEntityModel = "6. Order Entity - (Model)";
 const anchorList: string[] = [
   o1_ProjectFolderStructure,
   o2_RegisterModelImports,
-  o2_Concepts,
-  o3_Cascade,
-  o3_CustomerEntityModel,
-  o4_OrderEntityModel,
+  o3_Concepts,
+  o4_Cascade,
+  o5_CustomerEntityModel,
+  o6_OrderEntityModel,
 ];
 
 // ============================================
@@ -85,7 +85,10 @@ const One2ManyEntityMain = () => {
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
       <O2_RegisterModelImports anchor={o2_RegisterModelImports} />
-      <O3
+      <O3_Concepts anchor={o3_Concepts} />
+      <O4_Cascade anchor={o4_Cascade} />
+      <O5_CustomerEntityModel anchor={o5_CustomerEntityModel} />
+      <O6_OrderEntityModel anchor={o6_OrderEntityModel} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

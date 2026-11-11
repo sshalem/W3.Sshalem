@@ -62,7 +62,8 @@ const O2_RegisterModelImports = ({ anchor }: { anchor: string }) => {
 
 export default O2_RegisterModelImports;
 
-const _1_ = `from app.models.customer import Customer`;
+const _1_ = `from app.models.customer import Customer
+from app.models.order import Order`;
 
 const _2_ = `# Both model classes register their tables in Base.metadata.
 from app.models import Customer, Order`;

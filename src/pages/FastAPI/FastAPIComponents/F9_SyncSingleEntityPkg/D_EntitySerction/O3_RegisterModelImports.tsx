@@ -64,8 +64,8 @@ export default O3_RegisterModelImports;
 
 const _1_ = `from app.models.customer import Customer`;
 
-const _2_ = `# Both model classes register their tables in Base.metadata.
-from app.models import Customer, Order`;
+const _2_ = `# model classes register their tables in Base.metadata.
+from app.models import Customer`;
 
 const _3_ = `# Create all registered tables (In Database) (temporary - until we introduce Alembic)
 Base.metadata.create_all(bind=engine)
