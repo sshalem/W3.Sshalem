@@ -78,7 +78,8 @@ const O2_SchemaPydanticDTO = ({ anchor }: { anchor: string }) => {
 
 export default O2_SchemaPydanticDTO;
 
-const _1_ = `from pydantic import BaseModel, ConfigDict, EmailStr, Field
+const _1_ = `from datetime import datetime
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
 # Incoming request for creating a customer
@@ -104,6 +105,8 @@ class CustomerResponse(BaseModel):
     last_name: str
     email: EmailStr
     age: int | None
+    created_at: datetime
+    updated_at: datetime
     model_config = ConfigDict(from_attributes=True)
 `;
 

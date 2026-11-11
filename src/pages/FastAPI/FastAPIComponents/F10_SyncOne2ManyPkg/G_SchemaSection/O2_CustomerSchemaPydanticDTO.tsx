@@ -5,7 +5,7 @@
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_ApplicationProperties, Highlight_PYTHON, Redtext, SpanEmerald, SpanGrey, SpanYellow } from "../../../../../components/Highlight";
 
-const O2_SchemaPydanticDTO = ({ anchor }: { anchor: string }) => {
+const O2_CustomerSchemaPydanticDTO = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -68,6 +68,15 @@ const O2_SchemaPydanticDTO = ({ anchor }: { anchor: string }) => {
           <Li>
             <SpanYellow>CustomerCreate</SpanYellow> Outgoing response.
           </Li>
+          <Li>
+            Notice <SpanEmerald>orders: list[OrderResponse] = Field(default_factory=list)</SpanEmerald>
+            <ULdisc>
+              <Li>
+                This means that when you return a <SpanYellow>Customer</SpanYellow>, Pydantic can also serialize its associated{" "}
+                <SpanYellow>Orders</SpanYellow> .
+              </Li>
+            </ULdisc>
+          </Li>
         </ULdisc>
         Create:<SpanEmerald>app/schemas/customer.py</SpanEmerald>
         <Highlight_PYTHON code={_1_}></Highlight_PYTHON>
@@ -76,12 +85,14 @@ const O2_SchemaPydanticDTO = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_SchemaPydanticDTO;
+export default O2_CustomerSchemaPydanticDTO;
 
-const _1_ = `from pydantic import BaseModel, ConfigDict, EmailStr, Field
+const _1_ = `from datetime import datetime
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
+
+from app.schemas.order import OrderResponse
 
 
-# Incoming request for creating a customer
 class CustomerCreate(BaseModel):
     first_name: str = Field(min_length=2, max_length=100)
     last_name: str = Field(min_length=2, max_length=100)
@@ -89,22 +100,31 @@ class CustomerCreate(BaseModel):
     age: int | None = Field(default=None, ge=18, le=120)
 
 
-# Incoming request for updating a customer
-class CustomerUpdate(BaseModel):
-    first_name: str = Field(min_length=2, max_length=100)
-    last_name: str = Field(min_length=2, max_length=100)
-    email: EmailStr
-    age: int | None = Field(default=None, ge=18, le=120)
-
-
-# Outgoing response
 class CustomerResponse(BaseModel):
     id: int
     first_name: str
     last_name: str
     email: EmailStr
     age: int | None
+    created_at: datetime
+    updated_at: datetime
+    orders: list[OrderResponse] = Field(default_factory=list)
     model_config = ConfigDict(from_attributes=True)
+
+
+class CustomerUpdate(BaseModel):
+    first_name: str | None = Field(default=None, min_length=2, max_length=100)
+    last_name: str | None = Field(default=None, min_length=2, max_length=100)
+    email: EmailStr | None = None
+    age: int | None = Field(default=None, ge=18, le=120)
+
+
+class CustomerPageResponse(BaseModel):
+    items: list[CustomerResponse]
+    page: int
+    size: int
+    total_items: int
+    total_pages: int
 `;
 
 const _2_ = `pip install email-validator`;

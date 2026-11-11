@@ -1,20 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_SchemaPydanticDTO from "./O2_SchemaPydanticDTO";
+import O2_CustomerSchemaPydanticDTO from "./O2_CustomerSchemaPydanticDTO";
+import O3_OrderSchemaPydanticDTO from "./O3_OrderSchemaPydanticDTO";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_SchemaPydanticDTO = "2. Schema — Pydantic DTO";
+const o2_CustomerSchemaPydanticDTO = "2. Customer Schema — Pydantic DTO";
+const o3_OrderSchemaPydanticDTO = "3. Order Schema - Pydantic DTO";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_SchemaPydanticDTO];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerSchemaPydanticDTO, o3_OrderSchemaPydanticDTO];
 
 // ============================================
 // ============================================
@@ -69,7 +71,8 @@ const One2ManySchemaMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_SchemaPydanticDTO anchor={o2_SchemaPydanticDTO} />
+      <O2_CustomerSchemaPydanticDTO anchor={o2_CustomerSchemaPydanticDTO} />
+      <O3_OrderSchemaPydanticDTO anchor={o3_OrderSchemaPydanticDTO} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
