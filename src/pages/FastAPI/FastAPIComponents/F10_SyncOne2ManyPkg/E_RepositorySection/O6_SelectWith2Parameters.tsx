@@ -5,7 +5,7 @@
 import { MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_PYTHON, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
 
-const O5_SelectWith2Parameters = ({ anchor }: { anchor: string }) => {
+const O6_SelectWith2Parameters = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -47,7 +47,7 @@ const O5_SelectWith2Parameters = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O5_SelectWith2Parameters;
+export default O6_SelectWith2Parameters;
 
 const _1_ = `from sqlalchemy import select
 

@@ -23,7 +23,7 @@ const results = [
   },
 ];
 
-const O4_FindById = ({ anchor }: { anchor: string }) => {
+const O5_NativeSqlQuery = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -108,7 +108,7 @@ const O4_FindById = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_FindById;
+export default O5_NativeSqlQuery;
 
 const _1_ = `def find_by_id(self, customer_id: int) -> Customer | None:
         statement = select(Customer).where(Customer.id == customer_id)

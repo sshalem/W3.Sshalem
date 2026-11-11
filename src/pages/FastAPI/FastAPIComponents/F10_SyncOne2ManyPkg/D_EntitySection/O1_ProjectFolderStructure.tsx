@@ -42,7 +42,8 @@ const _1_ = `customer-management/
 │   │
 │   └── models/
 │       ├── __init__.py
-│       └── customer.py
+│       ├── customer.py
+│       └── order.py
 │
 ├── .env
 ├── .gitignore

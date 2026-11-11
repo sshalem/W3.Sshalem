@@ -1,21 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O2_RepositoryDBOperations from "./O2_RepositoryDBOperations";
+import O2_CustomerRepository from "./O2_CustomerRepository";
 import O3_CreateCustomer from "./O3_CreateCustomer";
-import O4_FindById from "./O4_FindById";
+import O4_OrderRepository from "./O4_OrderRepository";
+import O5_NativeSqlQuery from "./O5_NativeSqlQuery";
+import O6_SelectWith2Parameters from "./O6_SelectWith2Parameters";
 import OX_FullCode from "./OX_FullCode";
-import O5_SelectWith2Parameters from "./O5_SelectWith2Parameters";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_RepositoryDBOperations = "2. Repository";
-const o3_CreateCustomer = "3. Create Customer";
-const o4_FindById = "4. Find By Id";
-const o5_SelectWith2Parameters = "5. Select With 2 Parameters";
+const o2_CustomerRepository = "2. Customer Repository";
+const o3_CreateCustomer = "3. Create Customer explained";
+const o4_OrderRepository = "4. Order Repository";
+const o5_NativeSqlQuery = "5. Native Sql Query";
+const o6_SelectWith2Parameters = "6. Select With 2 Parameters";
 const oX_FullCode = "x. Repository Full Code";
 
 // ===========================================
@@ -24,10 +26,11 @@ const oX_FullCode = "x. Repository Full Code";
 
 const anchorList: string[] = [
   o1_ProjectFolderStructure,
-  o2_RepositoryDBOperations,
+  o2_CustomerRepository,
   o3_CreateCustomer,
-  o4_FindById,
-  o5_SelectWith2Parameters,
+  o4_OrderRepository,
+  o5_NativeSqlQuery,
+  o6_SelectWith2Parameters,
   oX_FullCode,
 ];
 
@@ -84,10 +87,11 @@ const One2ManyRepositoryMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_RepositoryDBOperations anchor={o2_RepositoryDBOperations} />
+      <O2_CustomerRepository anchor={o2_CustomerRepository} />
       <O3_CreateCustomer anchor={o3_CreateCustomer} />
-      <O4_FindById anchor={o4_FindById} />
-      <O5_SelectWith2Parameters anchor={o5_SelectWith2Parameters} />
+      <O4_OrderRepository anchor={o4_OrderRepository} />
+      <O5_NativeSqlQuery anchor={o5_NativeSqlQuery} />
+      <O6_SelectWith2Parameters anchor={o6_SelectWith2Parameters} />
       <OX_FullCode anchor={oX_FullCode} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>

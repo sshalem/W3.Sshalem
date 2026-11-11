@@ -33,13 +33,30 @@ const _1_ = `from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.database.database import get_db
-from app.repositories.customer_repository import CustomerRepository
-from app.services.customer_service import CustomerService
+from app.repositories import CustomerRepository, OrderRepository
+from app.services import CustomerService, OrderService
 
 
+# ==========================================
+# Customer Dependencies
+# ==========================================
 def get_customer_repository(db: Session = Depends(get_db)) -> CustomerRepository:
     return CustomerRepository(db)
 
+
 def get_customer_service(db: Session = Depends(get_db), repository: CustomerRepository = Depends(get_customer_repository)) -> CustomerService:
     return CustomerService(repository, db)
+
+
+# ==========================================
+# Order Dependencies
+# ==========================================
+def get_order_repository(db: Session = Depends(get_db)) -> OrderRepository:
+    return OrderRepository(db)
+
+
+def get_order_service(db: Session = Depends(get_db),
+                      order_repository: OrderRepository = Depends(get_order_repository),
+                      customer_repository: CustomerRepository = Depends(get_customer_repository)) -> OrderService:
+    return OrderService(order_repository, customer_repository, db)
 `;
