@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_PYTHON, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
 
-const O3_CustomerEntityModel = ({ anchor }: { anchor: string }) => {
+const O5_CustomerEntityModel = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -34,7 +34,7 @@ const O3_CustomerEntityModel = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_CustomerEntityModel;
+export default O5_CustomerEntityModel;
 
 const _2_ = `from datetime import datetime
 

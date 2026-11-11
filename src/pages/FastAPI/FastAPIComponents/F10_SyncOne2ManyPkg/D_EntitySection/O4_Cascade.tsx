@@ -15,7 +15,7 @@ const data = [
   { option: "delete-orphan", behavior: "Removing an Order from Customer's collection deletes that Order." },
 ];
 
-const O3_Cascade = ({ anchor }: { anchor: string }) => {
+const O4_Cascade = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -54,6 +54,6 @@ const O3_Cascade = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O3_Cascade;
+export default O4_Cascade;
 
 const _1_ = `cascade="all, delete-orphan"`;

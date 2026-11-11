@@ -6,7 +6,7 @@ import { Li, MainChildArea, ULdisc } from "../../../../../components";
 import { Highlight_PYTHON, Redtext, SpanEmerald, SpanYellow } from "../../../../../components/Highlight";
 import Greentext from "../../../../../components/Highlight/Greentext";
 
-const O4_OrderEntityModel = ({ anchor }: { anchor: string }) => {
+const O6_OrderEntityModel = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -47,7 +47,7 @@ const O4_OrderEntityModel = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O4_OrderEntityModel;
+export default O6_OrderEntityModel;
 
 const _1_ = `from datetime import datetime
 from decimal import Decimal

@@ -5,7 +5,7 @@
 import { Answer, Li, MainChildArea, Question, ULdisc } from "../../../../../components";
 import { Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
-const O2_Concepts = ({ anchor }: { anchor: string }) => {
+const O3_Concepts = ({ anchor }: { anchor: string }) => {
   return (
     <MainChildArea anchor={anchor}>
       <section className="my-8">
@@ -31,7 +31,7 @@ const O2_Concepts = ({ anchor }: { anchor: string }) => {
   );
 };
 
-export default O2_Concepts;
+export default O3_Concepts;
 
 const _1_ = `  # Customer
 orders = relationship("Order", back_populates="customer")

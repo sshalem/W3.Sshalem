@@ -1,26 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
-import O3_CustomerEntityModel from "./O3_CustomerEntityModel";
-import O4_OrderEntityModel from "./O4_OrderEntityModel";
-import O2_Concepts from "./O2_Concepts";
-import O3_Cascade from "./O3_Cascade";
+import O3_CustomerEntityModel from "./O5_CustomerEntityModel";
+import O4_OrderEntityModel from "./O6_OrderEntityModel";
+import O2_Concepts from "./O3_Concepts";
+import O3_Cascade from "./O4_Cascade";
+import O2_RegisterModelImports from "./O2_RegisterModelImports";
 
 // ===========================================
 // ==     content menu (title name)         ==
 // ===========================================
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
-const o2_Concepts = "2. Concepts";
-const o3_Cascade = "3. Cascade";
-const o3_CustomerEntityModel = "3. Customer Entity - (Model)";
-const o4_OrderEntityModel = "4. Order Entity - (Model)";
+const o2_RegisterModelImports = "2. Register Model Imports";
+const o3_Concepts = "3. Concepts";
+const o4_Cascade = "4. Cascade";
+const o5_CustomerEntityModel = "5. Customer Entity - (Model)";
+const o6_OrderEntityModel = "6. Order Entity - (Model)";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_Concepts, o3_Cascade, o3_CustomerEntityModel, o4_OrderEntityModel];
+const anchorList: string[] = [
+  o1_ProjectFolderStructure,
+  o2_RegisterModelImports,
+  o2_Concepts,
+  o3_Cascade,
+  o3_CustomerEntityModel,
+  o4_OrderEntityModel,
+];
 
 // ============================================
 // ============================================
@@ -75,10 +84,8 @@ const One2ManyEntityMain = () => {
       {/* End Contents */}
 
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
-      <O2_Concepts anchor={o2_Concepts} />
-      <O3_Cascade anchor={o3_Cascade} />
-      <O3_CustomerEntityModel anchor={o3_CustomerEntityModel} />
-      <O4_OrderEntityModel anchor={o4_OrderEntityModel} />
+      <O2_RegisterModelImports anchor={o2_RegisterModelImports} />
+      <O3
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>
