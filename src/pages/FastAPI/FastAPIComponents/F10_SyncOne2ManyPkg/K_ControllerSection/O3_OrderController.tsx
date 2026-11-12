@@ -22,37 +22,36 @@ const O3_OrderController = ({ anchor }: { anchor: string }) => {
 
 export default O3_OrderController;
 
-const _1_ = `from fastapi import APIRouter, Depends, Response, status
+const _1_ = `from typing import Annotated
 
-from app.dependencies import get_customer_service
-from app.schemas.customer import (CustomerCreate, CustomerUpdate, CustomerResponse)
-from app.services.customer_service import CustomerService
+from fastapi import APIRouter, Depends, status
 
-router = APIRouter(prefix="/api/customers", tags=["Customers"])
+from app.dependencies import get_order_service
+from app.schemas import OrderCreate, OrderResponse
+from app.services import OrderService
 
+# Dependencies
+OrderServiceDep = Annotated[OrderService, Depends(get_order_service)]
 
-@router.post("", response_model=CustomerResponse, status_code=status.HTTP_201_CREATED)
-def create_customer(data: CustomerCreate, service: CustomerService = Depends(get_customer_service)):
-    return service.create_customer(data)
-
-
-@router.get("", response_model=list[CustomerResponse])
-def get_all_customers(service: CustomerService = Depends(get_customer_service)):
-    return service.get_all_customers()
+router = APIRouter(prefix="/api/orders", tags=["Orders"])
 
 
-@router.get("/{customer_id}", response_model=CustomerResponse)
-def get_customer(customer_id: int, service: CustomerService = Depends(get_customer_service)):
-    return service.get_customer(customer_id)
+@router.post("", response_model=OrderResponse, status_code=status.HTTP_201_CREATED)
+def create_order(order_service: OrderServiceDep, order_data: OrderCreate):
+    return order_service.create_order(order_data)
 
 
-@router.put("/{customer_id}", response_model=CustomerResponse)
-def update_customer(customer_id: int, data: CustomerUpdate, service: CustomerService = Depends(get_customer_service)):
-    return service.update_customer(customer_id, data)
+@router.get("/{order_id}", response_model=OrderResponse, status_code=status.HTTP_200_OK)
+def get_order(order_service: OrderServiceDep, order_id: int):
+    return order_service.get_order_by_id(order_id)
 
 
-@router.delete("/{customer_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_customer(customer_id: int, service: CustomerService = Depends(get_customer_service)):
-    service.delete_customer(customer_id)
-    return Response(status_code=status.HTTP_204_NO_CONTENT)
+@router.get("/customer/{customer_id}", response_model=list[OrderResponse], status_code=status.HTTP_200_OK)
+def get_orders_by_customer(order_service: OrderServiceDep, customer_id: int):
+    return order_service.get_customer_orders(customer_id)
+
+
+@router.delete("/{order_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_order(order_service: OrderServiceDep, order_id: int):
+    order_service.delete_order(order_id)
 `;

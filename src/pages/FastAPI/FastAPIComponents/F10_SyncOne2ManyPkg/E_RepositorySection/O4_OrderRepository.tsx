@@ -60,5 +60,5 @@ class OrderRepository:
 
     def delete(self, order: Order) -> None:
         self.db.delete(order)
-        self.db.flush()        
+        self.db.flush()     
 `;

@@ -25,6 +25,7 @@ const _1_ = `from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.exceptions import ResourceNotFoundException, DuplicateResourceException
+from app.exceptions.custom_exceptions import OrderNotFoundException
 from app.models import Order
 from app.repositories import OrderRepository, CustomerRepository
 from app.schemas import OrderCreate, OrderResponse
@@ -37,7 +38,7 @@ class OrderService:
         self.customer_repository = customer_repository
         self.db = db
 
-    def create_order(self, order_data: OrderCreate) -> OrderResponse:
+    def create_order(self, order_data: OrderCreate) -> Order:
         # 1. Validate Customer existence
         # 2. Create Order
         # 3. Persist Order
@@ -51,7 +52,7 @@ class OrderService:
             self.order_repository.create(order)
             self.db.commit()
             self.db.refresh(order)
-            return OrderResponse.model_validate(order)
+            return order
         except IntegrityError as exc:
             self.db.rollback()
             raise DuplicateResourceException("Could not create Order due to a database constraint.") from exc
@@ -59,21 +60,17 @@ class OrderService:
             self.db.rollback()
             raise
 
-    def get_order_by_id(self, order_id: int) -> OrderResponse:
+    def get_order_by_id(self, order_id: int) -> Order:
         order = self.order_repository.get_order_by_id(order_id)
         if order is None:
-            raise ResourceNotFoundException("Order", order_id)
-        return OrderResponse.model_validate(order)
+            raise OrderNotFoundException(order_id)
+        return order
 
-    def get_customer_orders(self, customer_id: int) -> list[OrderResponse]:
+    def get_customer_orders(self, customer_id: int) -> list[Order]:
         customer = self.customer_repository.find_by_id(customer_id)
         if customer is None:
             raise ResourceNotFoundException("Customer", customer_id)
-        orders = self.order_repository.get_all_orders_by_customer_id(customer_id)
-        return [
-            OrderResponse.model_validate(order)
-            for order in orders
-        ]
+        return self.order_repository.get_all_orders_by_customer_id(customer_id)
 
     def delete_order(self, order_id: int) -> None:
         try:
