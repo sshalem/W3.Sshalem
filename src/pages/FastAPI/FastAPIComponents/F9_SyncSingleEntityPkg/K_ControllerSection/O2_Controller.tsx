@@ -2,8 +2,8 @@
 
 
 */
-import { MainChildArea } from "../../../../../components";
-import { Highlight_JAVA, SpanEmerald } from "../../../../../components/Highlight";
+import { Li, MainChildArea, ULdisc } from "../../../../../components";
+import { Highlight_JAVA, Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
 const O2_Controller = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,6 +14,16 @@ const O2_Controller = ({ anchor }: { anchor: string }) => {
         <div>
           Create a new file: <SpanEmerald>app/controllers/customer_controller.py</SpanEmerald> with code below
         </div>
+        <ULdisc>
+          <Li>
+            I added new method <SpanEmerald>get_customer_orders()</SpanEmerald>
+          </Li>
+          <Li>and I implement it here in Customer Controller</Li>
+          <Li>
+            A better options is , at the top create all dependencies needed , by using <SpanEmerald>Annotated</SpanEmerald>
+            <Highlight_PYTHON code={_3_}></Highlight_PYTHON>
+          </Li>
+        </ULdisc>
         <Highlight_JAVA code={_1_}></Highlight_JAVA>
       </section>
     </MainChildArea>
@@ -21,6 +31,9 @@ const O2_Controller = ({ anchor }: { anchor: string }) => {
 };
 
 export default O2_Controller;
+
+const _3_ = `# Dependencies
+CustomerServiceDep = Annotated[CustomerService, Depends(get_customer_service)]`;
 
 const _1_ = `from fastapi import APIRouter, Depends, Response, status
 

@@ -50,11 +50,11 @@ class OrderRepository:
         self.db.refresh(order)
         return order
 
-    def get_by_if(self, order_id: int) -> Order | None:
+    def get_order_by_id(self, order_id: int) -> Order | None:
         statement = select(Order).where(Order.id == order_id)
         return self.db.scalar(statement)
 
-    def get_all_by_customer_id(self, customer_id: int) -> list[Order]:
+    def get_all_orders_by_customer_id(self, customer_id: int) -> list[Order]:
         statement = select(Order).where(Order.customer_id == customer_id).order_by(Order.order_date.desc())
         return list(self.db.scalars(statement).all())
 

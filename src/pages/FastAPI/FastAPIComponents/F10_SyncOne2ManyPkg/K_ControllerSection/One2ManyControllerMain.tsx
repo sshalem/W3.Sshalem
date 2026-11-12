@@ -3,6 +3,7 @@ import { ContentMenu, Loading } from "../../../../../components";
 import O1_ProjectFolderStructure from "./O1_ProjectFolderStructure";
 import O2_CustomerController from "./O2_CustomerController";
 import O3_OrderController from "./O3_OrderController";
+import O4_RegisterInMainPy from "./O4_RegisterInMainPy";
 
 // ===========================================
 // ==     content menu (title name)         ==
@@ -10,13 +11,14 @@ import O3_OrderController from "./O3_OrderController";
 
 const o1_ProjectFolderStructure = "1. Project Folder Structure";
 const o2_CustomerController = "2. CustomerController";
-const o3_OrderController = "2. CustomerController";
+const o3_OrderController = "3. CustomerController";
+const o4_RegisterInMainPy = "4. Register In main.py";
 
 // ===========================================
 // == Update anchorList with  content menu  ==
 // ===========================================
 
-const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerController, o3_OrderController];
+const anchorList: string[] = [o1_ProjectFolderStructure, o2_CustomerController, o3_OrderController, o4_RegisterInMainPy];
 
 // ============================================
 // ============================================
@@ -73,6 +75,7 @@ const One2ManyControllerMain = () => {
       <O1_ProjectFolderStructure anchor={o1_ProjectFolderStructure} />
       <O2_CustomerController anchor={o2_CustomerController} />
       <O3_OrderController anchor={o3_OrderController} />
+      <O4_RegisterInMainPy anchor={o4_RegisterInMainPy} />
 
       <div className="my-8 h-4">{/* {this div is only for dividing} */}</div>
     </section>

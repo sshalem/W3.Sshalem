@@ -3,7 +3,7 @@
 
 */
 import { MainChildArea } from "../../../../../components";
-import { Highlight_JAVA, SpanEmerald } from "../../../../../components/Highlight";
+import { Highlight_PYTHON, SpanEmerald } from "../../../../../components/Highlight";
 
 const O3_OrderController = ({ anchor }: { anchor: string }) => {
   return (
@@ -14,7 +14,7 @@ const O3_OrderController = ({ anchor }: { anchor: string }) => {
         <div>
           Create a new file: <SpanEmerald>app/controllers/order_controller.py</SpanEmerald> with code below
         </div>
-        <Highlight_JAVA code={_1_}></Highlight_JAVA>
+        <Highlight_PYTHON code={_1_}></Highlight_PYTHON>
       </section>
     </MainChildArea>
   );
