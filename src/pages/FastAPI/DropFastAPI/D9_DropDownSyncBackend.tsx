@@ -57,6 +57,7 @@ const D9_DropDownSyncBackend = () => {
         <SideDropdownLink sideDropDownNavName="14. Pagination" internalLink="/fastapi/sync-single/pagination" />
         <SideDropdownLink sideDropDownNavName="15. Sorting" internalLink="/fastapi/sync-single/sorting" />
         <SideDropdownLink sideDropDownNavName="16. Dynamic Filtering" internalLink="/fastapi/sync-single/dynamic-filtering" />
+        <SideDropdownLink sideDropDownNavName="17. Logging" internalLink="/fastapi/sync-single/logging" />
       </div>
     </section>
   );

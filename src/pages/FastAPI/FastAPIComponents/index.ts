@@ -61,6 +61,7 @@ export { default as InitDBMain } from "./F9_SyncSingleEntityPkg/M_InitDBSection/
 export { default as PaginationMain } from "./F9_SyncSingleEntityPkg/N_Pagination/PaginationMain";
 export { default as SortingMain } from "./F9_SyncSingleEntityPkg/O_Sorting/SortingMain";
 export { default as DynamicFilteringMain } from "./F9_SyncSingleEntityPkg/P_DynamicFilternig/DynamicFilteringMain";
+export { default as LoggingMain } from "./F9_SyncSingleEntityPkg/Q_Logging/LoggingMain";
 
 //
 export { default as SyncOne2Many } from "./F10_SyncOne2ManyPkg/SyncOne2Many";
